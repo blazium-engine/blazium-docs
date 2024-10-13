@@ -7,9 +7,9 @@ WORKDIR /docs
 # Install necessary dependencies
 RUN apt-get update && apt-get install -y \
     python3-pip \
-    pdate \
     make \
-    install dos2unix recode \
+    dos2unix \
+    recode \
     parallel \
     libwebp7 \
     && apt-get clean \
@@ -24,6 +24,7 @@ RUN pip3 install codespell
 # Copy the rest of the documentation files
 COPY . .
 
+# Create the output directory
 RUN mkdir -p _build/html
 
 # Build HTML documentation using Sphinx
