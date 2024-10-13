@@ -34,7 +34,7 @@ RUN make SPHINXOPTS='--color' html
 FROM nginx:alpine
 
 # Copy built HTML documentation from the previous stage
-COPY --from=sphinx-build /docs/build/html /usr/share/nginx/html
+COPY --from=sphinx-build /docs/_build/html /usr/share/nginx/html
 
 # Expose port 8080 for serving
 EXPOSE 8080
