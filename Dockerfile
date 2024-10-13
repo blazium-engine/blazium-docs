@@ -36,8 +36,15 @@ FROM nginx:alpine
 # Copy built HTML documentation from the previous stage
 COPY --from=sphinx-build /docs/_build/html /usr/share/nginx/html
 
+# Add custom Nginx config for health check
+COPY nginx.conf /etc/nginx/nginx.conf
+
 # Expose port 8080 for serving
 EXPOSE 8080
+
+# Healthcheck to ensure Nginx is serving correctly
+HEALTHCHECK --interval=30s --timeout=10s --start-period=10s --retries=3 \
+  CMD curl -f http://localhost:8080/health || exit 1
 
 # Start Nginx
 CMD ["nginx", "-g", "daemon off;"]
