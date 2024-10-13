@@ -7,7 +7,9 @@ WORKDIR /docs
 # Install necessary dependencies
 RUN apt-get update && apt-get install -y \
     python3-pip \
+    pdate \
     make \
+    install dos2unix recode \
     parallel \
     libwebp7 \
     && apt-get clean \
@@ -17,9 +19,12 @@ RUN apt-get update && apt-get install -y \
 COPY requirements.txt .
 
 RUN pip3 install -r requirements.txt
+RUN pip3 install codespell
 
 # Copy the rest of the documentation files
 COPY . .
+
+RUN mkdir -p _build/html
 
 # Build HTML documentation using Sphinx
 RUN make SPHINXOPTS='--color' html
@@ -30,8 +35,8 @@ FROM nginx:alpine
 # Copy built HTML documentation from the previous stage
 COPY --from=sphinx-build /docs/build/html /usr/share/nginx/html
 
-# Expose port 80 for serving
-EXPOSE 80
+# Expose port 8080 for serving
+EXPOSE 8080
 
 # Start Nginx
 CMD ["nginx", "-g", "daemon off;"]
