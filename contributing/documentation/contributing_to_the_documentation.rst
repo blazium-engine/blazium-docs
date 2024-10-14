@@ -16,7 +16,7 @@ Getting started
 
 To modify or create pages in the reference manual, you need to edit ``.rst``
 files in the `godot-docs GitHub repository
-<https://github.com/godotengine/godot-docs>`_. Modifying those pages in a pull
+<https://github.com/blazium-engine/blazium-docs>`_. Modifying those pages in a pull
 request triggers a rebuild of the online documentation upon merging.
 
 .. seealso:: For details on Git usage and the pull request workflow, please
@@ -104,7 +104,7 @@ Adding new pages
 Before adding a new page, please ensure that it fits in the documentation:
 
 1. Look for `existing issues
-   <https://github.com/godotengine/godot-docs/issues>`_ or open a new one to see
+   <https://github.com/blazium-engine/blazium-docs/issues>`_ or open a new one to see
    if the page is necessary.
 2. Ensure there isn't a page that already covers the topic.
 3. Read our :ref:`doc_content_guidelines`.
@@ -182,7 +182,7 @@ into a ``files/`` folder next to the ``.rst`` file, and using this inline markup
 
    :download:`file_name.zip <files/file_name.zip>`
 
-Consider using the `godot-docs-project-starters <https://github.com/godotengine/godot-docs-project-starters>`
+Consider using the `godot-docs-project-starters <https://github.com/blazium-engine/blazium-docs-project-starters>`
 repository for hosting support materials, such as project templates and asset packs.
 You can use a direct link to the generated archive from that repository with the regular
 link markup:

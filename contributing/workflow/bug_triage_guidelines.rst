@@ -61,7 +61,7 @@ The following labels are currently defined in the Godot repository:
 -  *Documentation*: issue related to the documentation. Mainly to request
    enhancements in the API documentation. Issues related to the ReadTheDocs
    documentation should be filed on the
-   `godot-docs <https://github.com/godotengine/godot-docs>`_ repository.
+   `godot-docs <https://github.com/blazium-engine/blazium-docs>`_ repository.
 -  *Enhancement*: describes a proposed enhancement to an existing
    functionality.
 -  *Feature proposal*: describes a wish for a new feature to be
@@ -69,7 +69,7 @@ The following labels are currently defined in the Godot repository:
    feature requests. Please use
    `godot-proposals <https://github.com/godotengine/godot-proposals>`__ instead.
 -  *For PR meeting*: the issue needs to be discussed in a pull request meeting.
-   These meetings are public and are held on the `Godot Contributors Chat <https://chat.godotengine.org/>`_.
+   These meetings are public and are held on the `Godot Contributors Chat <https://chat.blazium.app/>`_.
 -  *Good first issue*: the issue is *assumed* to be an easy one to fix, which makes
    it a great fit for new contributors who want to become familiar with
    the code base. It should be removed while an active PR is available, that
@@ -152,7 +152,7 @@ Android and Linux exclusively, select those two platforms).
 Documentation labels
 ~~~~~~~~~~~~~~~~~~~~
 
-In the `documentation repository <https://github.com/godotengine/godot-docs>`__, we
+In the `documentation repository <https://github.com/blazium-engine/blazium-docs>`__, we
 use the following labels:
 
 -  *Archived*: either a duplicate of another issue, or invalid. Such an

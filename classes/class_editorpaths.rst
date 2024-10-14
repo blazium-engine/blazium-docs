@@ -157,7 +157,7 @@ Returns ``true`` if the editor is marked as self-contained, ``false`` otherwise.
 
 Self-contained mode can be enabled by creating a file named ``._sc_`` or ``_sc_`` in the same folder as the editor binary or macOS .app bundle while the editor is not running. See also :ref:`get_self_contained_file<class_EditorPaths_method_get_self_contained_file>`.
 
-\ **Note:** On macOS, quarantine flag should be manually removed before using self-contained mode, see `Running on macOS <https://docs.godotengine.org/en/stable/tutorials/export/running_on_macos.html>`__.
+\ **Note:** On macOS, quarantine flag should be manually removed before using self-contained mode, see `Running on macOS <https://docs.blazium.app/tutorials/export/running_on_macos.html>`__.
 
 \ **Note:** On macOS, placing ``_sc_`` or any other file inside .app bundle will break digital signature and make it non-portable, consider placing it in the same folder as the .app bundle instead.
 

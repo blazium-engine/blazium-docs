@@ -403,7 +403,7 @@ The best way to start contributing to Godot is by using it and reporting
 any `issues <https://github.com/godotengine/godot/issues>`_ that you might experience.
 A good bug report with clear reproduction steps helps your fellow contributors
 fix bugs quickly and efficiently. You can also report issues you find in the
-`online documentation <https://github.com/godotengine/godot-docs/issues>`_.
+`online documentation <https://github.com/blazium-engine/blazium-docs/issues>`_.
 
 If you feel ready to submit your first PR, pick any issue that resonates with you from
 one of the links above and try your hand at fixing it. You will need to learn how to

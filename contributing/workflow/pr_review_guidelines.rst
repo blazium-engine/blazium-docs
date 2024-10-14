@@ -189,7 +189,7 @@ contributor:
 
 And ultimately, don't feel pressured to deal with the PR all alone. Feel free to
 ask for a helping hand on the `Godot Contributors Chat
-<https://chat.godotengine.org>`_, in the appropriate channel or in #general.
+<https://chat.blazium.app>`_, in the appropriate channel or in #general.
 Other teams may already be tagged for review, so you can also wait or ask for
 their assistance.
 

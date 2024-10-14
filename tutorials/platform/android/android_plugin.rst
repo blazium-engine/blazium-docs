@@ -53,7 +53,7 @@ v2 Packaging format
 
 v1 Android plugins required a custom ``gdap`` configuration file that was used by the Godot Editor to detect and load them.
 However this approach had several drawbacks, primary ones being that it lacked flexibility and departed from the `existing
-Godot EditorExportPlugin format, delivery and installation flow <https://docs.godotengine.org/en/stable/tutorials/plugins/editor/installing_plugins.html>`_.
+Godot EditorExportPlugin format, delivery and installation flow <https://docs.blazium.app/tutorials/plugins/editor/installing_plugins.html>`_.
 
 This has been resolved for v2 Android plugins by deprecating the ``gdap`` packaging and configuration mechanism in favor of
 the existing Godot ``EditorExportPlugin`` packaging format.
@@ -88,7 +88,7 @@ To provide further understanding, here is a break-down of the steps used to crea
               var singleton = Engine.get_singleton("MyPlugin")
               print(singleton.myPluginFunction("World"))
 
-    - If the plugin uses `signals <https://docs.godotengine.org/en/stable/getting_started/step_by_step/signals.html>`_, the init class must return the set of signals used by overriding `GodotPlugin::getPluginSignals() <https://github.com/godotengine/godot/blob/fa3428ff25bc577d2a3433090478a6d615567056/platform/android/java/lib/src/org/godotengine/godot/plugin/GodotPlugin.java#L302>`_. To emit signals, the plugin can use the `GodotPlugin::emitSignal(...) method <https://github.com/godotengine/godot/blob/0a7f75ec7b465604b6496c8f5f1d638aed250d6d/platform/android/java/lib/src/org/godotengine/godot/plugin/GodotPlugin.java#L317>`_.
+    - If the plugin uses `signals <https://docs.blazium.app/getting_started/step_by_step/signals.html>`_, the init class must return the set of signals used by overriding `GodotPlugin::getPluginSignals() <https://github.com/godotengine/godot/blob/fa3428ff25bc577d2a3433090478a6d615567056/platform/android/java/lib/src/org/godotengine/godot/plugin/GodotPlugin.java#L302>`_. To emit signals, the plugin can use the `GodotPlugin::emitSignal(...) method <https://github.com/godotengine/godot/blob/0a7f75ec7b465604b6496c8f5f1d638aed250d6d/platform/android/java/lib/src/org/godotengine/godot/plugin/GodotPlugin.java#L317>`_.
 
 4. Update the plugin ``AndroidManifest.xml`` `file <https://github.com/m4gr3d/Godot-Android-Plugin-Template/blob/main/plugin/src/main/AndroidManifest.xml>`_ with the following meta-data::
 
@@ -143,11 +143,11 @@ Use the following steps if you have a v1 Android plugin you want to migrate to v
 Packaging a v2 Android plugin
 -----------------------------
 
-As mentioned, a v2 Android plugin is now provided to the Godot Editor as an ``EditorExportPlugin`` plugin, so it shares a lot of the `same packaging steps <https://docs.godotengine.org/en/stable/tutorials/plugins/editor/making_plugins.html#creating-a-plugin>`_.
+As mentioned, a v2 Android plugin is now provided to the Godot Editor as an ``EditorExportPlugin`` plugin, so it shares a lot of the `same packaging steps <https://docs.blazium.app/tutorials/plugins/editor/making_plugins.html#creating-a-plugin>`_.
 
 1. Add the plugin output binaries within the plugin directory (e.g: in ``addons/<plugin_name>/``)
 
-2. Add the `tool script <https://docs.godotengine.org/en/stable/tutorials/plugins/editor/making_plugins.html#the-script-file>`_ for the export functionality within the plugin directory (e.g: in ``addons/<plugin_name>/``)
+2. Add the `tool script <https://docs.blazium.app/tutorials/plugins/editor/making_plugins.html#the-script-file>`_ for the export functionality within the plugin directory (e.g: in ``addons/<plugin_name>/``)
 
     - The created script must be a ``@tool`` script, or else it will not work properly
     - The export tool script is used to configure the Android plugin and hook it within the Godot Editor's export process. It should look something like this::
@@ -192,15 +192,15 @@ As mentioned, a v2 Android plugin is now provided to the Godot Editor as an ``Ed
                 return _plugin_name
 
 
-    - Here are the set of `EditorExportPlugin APIs <https://docs.godotengine.org/en/stable/classes/class_editorexportplugin.html>`_ most relevant to use in this tool script:
+    - Here are the set of `EditorExportPlugin APIs <https://docs.blazium.app/classes/class_editorexportplugin.html>`_ most relevant to use in this tool script:
 
-        - `_supports_platform <https://docs.godotengine.org/en/latest/classes/class_editorexportplugin.html#class-editorexportplugin-method-supports-platform>`_: returns ``true`` if the plugin supports the given platform. For Android plugins, this must return ``true`` when ``platform`` is `EditorExportPlatformAndroid <https://docs.godotengine.org/en/stable/classes/class_editorexportplatformandroid.html>`_
-        - `_get_android_libraries <https://docs.godotengine.org/en/latest/classes/class_editorexportplugin.html#class-editorexportplugin-method-get-android-libraries>`_: retrieve the local paths of the Android libraries binaries (AAR files) provided by the plugin
-        - `_get_android_dependencies <https://docs.godotengine.org/en/latest/classes/class_editorexportplugin.html#class-editorexportplugin-method-get-android-dependencies>`_: retrieve the set of Android maven dependencies (e.g: `org.godot.example:my-plugin:0.0.0`) provided by the plugin
-        - `_get_android_dependencies_maven_repos <https://docs.godotengine.org/en/latest/classes/class_editorexportplugin.html#class-editorexportplugin-method-get-android-dependencies-maven-repos>`_: retrieve the urls of the maven repos for the android dependencies provided by ``_get_android_dependencies``
-        - `_get_android_manifest_activity_element_contents <https://docs.godotengine.org/en/latest/classes/class_editorexportplugin.html#class-editorexportplugin-method-get-android-manifest-activity-element-contents>`_: update the contents of the `<activity>` element in the generated Android manifest
-        - `_get_android_manifest_application_element_contents <https://docs.godotengine.org/en/latest/classes/class_editorexportplugin.html#class-editorexportplugin-method-get-android-manifest-application-element-contents>`_: update the contents of the `<application>` element in the generated Android manifest
-        - `_get_android_manifest_element_contents <https://docs.godotengine.org/en/latest/classes/class_editorexportplugin.html#class-editorexportplugin-method-get-android-manifest-element-contents>`_: update the contents of the `<manifest>` element in the generated Android manifest
+        - `_supports_platform <https://docs.blazium.app/classes/class_editorexportplugin.html#class-editorexportplugin-method-supports-platform>`_: returns ``true`` if the plugin supports the given platform. For Android plugins, this must return ``true`` when ``platform`` is `EditorExportPlatformAndroid <https://docs.blazium.app/classes/class_editorexportplatformandroid.html>`_
+        - `_get_android_libraries <https://docs.blazium.app/classes/class_editorexportplugin.html#class-editorexportplugin-method-get-android-libraries>`_: retrieve the local paths of the Android libraries binaries (AAR files) provided by the plugin
+        - `_get_android_dependencies <https://docs.blazium.app/classes/class_editorexportplugin.html#class-editorexportplugin-method-get-android-dependencies>`_: retrieve the set of Android maven dependencies (e.g: `org.godot.example:my-plugin:0.0.0`) provided by the plugin
+        - `_get_android_dependencies_maven_repos <https://docs.blazium.app/classes/class_editorexportplugin.html#class-editorexportplugin-method-get-android-dependencies-maven-repos>`_: retrieve the urls of the maven repos for the android dependencies provided by ``_get_android_dependencies``
+        - `_get_android_manifest_activity_element_contents <https://docs.blazium.app/classes/class_editorexportplugin.html#class-editorexportplugin-method-get-android-manifest-activity-element-contents>`_: update the contents of the `<activity>` element in the generated Android manifest
+        - `_get_android_manifest_application_element_contents <https://docs.blazium.app/classes/class_editorexportplugin.html#class-editorexportplugin-method-get-android-manifest-application-element-contents>`_: update the contents of the `<application>` element in the generated Android manifest
+        - `_get_android_manifest_element_contents <https://docs.blazium.app/classes/class_editorexportplugin.html#class-editorexportplugin-method-get-android-manifest-element-contents>`_: update the contents of the `<manifest>` element in the generated Android manifest
 
         The ``_get_android_manifest_*`` methods allow the plugin to automatically provide changes
         to the app's manifest which are preserved when the Godot Editor is updated, resolving a long standing issue with v1 Android plugins.
@@ -231,7 +231,7 @@ At build time, the contents of the ``export_scripts_template`` directory as well
 Packaging a v2 Android plugin with GDExtension capabilities
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-For GDExtension, we follow the same steps as for `Packaging a v2 Android plugin`_ and add the `GDExtension config file <https://docs.godotengine.org/en/stable/tutorials/scripting/gdextension/gdextension_cpp_example.html#using-the-gdextension-module>`_ in
+For GDExtension, we follow the same steps as for `Packaging a v2 Android plugin`_ and add the `GDExtension config file <https://docs.blazium.app/tutorials/scripting/gdextension/gdextension_cpp_example.html#using-the-gdextension-module>`_ in
 the same location as ``plugin.cfg``.
 
 For reference, here is the `folder structure for the GDExtension Android plugin project template <https://github.com/m4gr3d/GDExtension-Android-Plugin-Template/tree/main/plugin/export_scripts_template>`_.
@@ -279,7 +279,7 @@ Using a v2 Android plugin
 
     - Godot 4.2 or higher is required
 
-    - v2 Android plugin requires the use of the `Gradle build process <https://docs.godotengine.org/en/stable/classes/class_editorexportplatformandroid.html#class-editorexportplatformandroid-property-gradle-build-use-gradle-build>`_.
+    - v2 Android plugin requires the use of the `Gradle build process <https://docs.blazium.app/classes/class_editorexportplatformandroid.html#class-editorexportplatformandroid-property-gradle-build-use-gradle-build>`_.
 
     - The provided github project templates include demo Godot projects for quick testing.
 

@@ -31,7 +31,7 @@ The `repository on GitHub <https://github.com/godotengine/godot>`_ is a
 issue tracker and PR system.
 
 .. note:: If you are contributing to the documentation, its repository can
-          be found `here <https://github.com/godotengine/godot-docs>`_.
+          be found `here <https://github.com/blazium-engine/blazium-docs>`_.
 
 The Git version control system is the tool used to keep track of successive
 edits to the source code - to contribute efficiently to Godot, learning the
@@ -373,7 +373,7 @@ that will let you issue a pull request on the ``godotengine/godot`` upstream
 repository. It should show you your two commits, and state "Able to merge".
 If not (e.g. it has way more commits, or says there are merge conflicts),
 don't create the PR yet, something went wrong. Go to our
-`Godot Contributors Chat <https://chat.godotengine.org/>`_ and ask for support :)
+`Godot Contributors Chat <https://chat.blazium.app/>`_ and ask for support :)
 
 Use an explicit title for the PR and put the necessary details in the comment
 area. You can drag and drop screenshots, GIFs or zipped projects if relevant,

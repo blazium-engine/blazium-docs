@@ -56,7 +56,7 @@ To make sure that your time and efforts aren't wasted, it is recommended to vet 
 first before implementing it and putting it for a review as a PR. To that end, Godot
 has a `proposal system <https://github.com/godotengine/godot-proposals>`_. Its
 usage is encouraged to plan changes and discuss them with the community. Implementation
-details can also be discussed with other contributors on the `Godot Contributors Chat <https://chat.godotengine.org/>`_.
+details can also be discussed with other contributors on the `Godot Contributors Chat <https://chat.blazium.app/>`_.
 
 .. note:: Proposals are only required when working on an enhancement or a new feature.
           Bug reports are sufficient for fixing issues.
@@ -115,7 +115,7 @@ There are two separate resources referred to as "documentation" in Godot:
   This is the part you are reading now, which is distributed in the HTML format.
   Its contents are generated from plain text files in the reStructured Text
   (rst) format, to which you can contribute via pull requests on the
-  `godot-docs <https://github.com/godotengine/godot-docs>`_ GitHub repository.
+  `godot-docs <https://github.com/blazium-engine/blazium-docs>`_ GitHub repository.
   See :ref:`doc_contributing_to_the_documentation` for more details.
 
 Contributing translations

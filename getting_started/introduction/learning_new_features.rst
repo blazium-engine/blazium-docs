@@ -53,7 +53,7 @@ A class reference's page tells you:
 
 .. note:: If the manual or class reference is missing or has insufficient
           information, please open an Issue in the official `godot-docs
-          <https://github.com/godotengine/godot-docs/issues>`_ GitHub repository
+          <https://github.com/blazium-engine/blazium-docs/issues>`_ GitHub repository
           to report it.
 
 You can hold :kbd:`Ctrl` (macOS :kbd:`Cmd`) and then mouseover text like the name of a class, property,

@@ -95,7 +95,7 @@ contribute by opening Github issues or translating the documentation into your l
 If you are interested in helping, see :ref:`Ways to contribute <doc_ways_to_contribute>`
 and :ref:`Writing documentation <doc_contributing_writing_documentation>`,
 or get in touch with the `Documentation team <https://godotengine.org/teams/#documentation>`_
-on `Godot Contributors Chat <https://chat.godotengine.org/>`_.
+on `Godot Contributors Chat <https://chat.blazium.app/>`_.
 
 All documentation content is licensed under the permissive Creative Commons Attribution 3.0
 (`CC BY 3.0 <https://creativecommons.org/licenses/by/3.0/>`_) license,

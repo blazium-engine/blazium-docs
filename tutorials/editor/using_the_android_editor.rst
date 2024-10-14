@@ -39,7 +39,7 @@ Here are the known limitations and issues of the Android editor:
 - No support for external script editors
 - While available, the *Vulkan Forward+* renderer is not recommended due to severe performance issues
 - No support for building and exporting an Android APK binary.
-  As a workaround, you can generate and export a `Godot PCK or ZIP file <https://docs.godotengine.org/en/stable/tutorials/export/exporting_projects.html#pck-versus-zip-pack-file-formats>`__
+  As a workaround, you can generate and export a `Godot PCK or ZIP file <https://docs.blazium.app/tutorials/export/exporting_projects.html#pck-versus-zip-pack-file-formats>`__
 - No support for building and exporting binaries for other platforms
 - UX not optimized for Android phones form-factor
 - `Android Go devices <https://developer.android.com/guide/topics/androidgo>`__ lacks

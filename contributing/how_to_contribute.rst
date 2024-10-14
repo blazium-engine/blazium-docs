@@ -45,7 +45,7 @@ Technical contributions
   To let us know about your findings, fill out this `bug report form <https://github.com/godotengine/godot/issues/new/choose>`_ on our GitHub.
   Make sure to include as much information as possible to ensure these issues can easily be reproduced by others.
 
-  If you are interested in helping keep our bug tracker organized, you can even join the `bugsquad <https://chat.godotengine.org/channel/bugsquad>`_!
+  If you are interested in helping keep our bug tracker organized, you can even join the `bugsquad <https://chat.blazium.app/channel/bugsquad>`_!
 
 - **Test Development Versions**
   While it is recommended to use the stable releases for your projects, you can help us test dev releases, betas, and release candidates
@@ -55,7 +55,7 @@ Technical contributions
   Find recent `development versions <https://godotengine.org/download/preview/>`_ directly on our download page, or linked in their own blog posts.
 
 - **Contribute Engine Code (mainly C++)**
-  The engine development is mainly coordinated on our `Contributor RocketChat <https://chat.godotengine.org/>`_,
+  The engine development is mainly coordinated on our `Contributor Discord Chat <https://chat.blazium.app/>`_,
   so if you are serious about making PRs you should join us there!
 
   Read more about the **technical submission process**: :ref:`doc_first_steps`
@@ -80,7 +80,7 @@ Technical contributions
 - **Demo projects (GDScript, C#, and making Assets)**
   We provide new users with `demo projects <https://github.com/godotengine/godot-demo-projects/>`_ so they can quickly test new features or get familiar with the engine in the first place.
   At industry events, we might even exhibit these demo projects to showcase what Godot can do!
-  Help improve existing projects or supply your own to be added to the pool, and join the `demo channel <https://chat.godotengine.org/channel/demo-content>`_ in the Contributor RocketChat to talk about it.
+  Help improve existing projects or supply your own to be added to the pool, and join the `demo channel <https://chat.godotengine.org/channel/demo-content>`_ in the Contributor Discord Chat to talk about it.
 
 - **Documentation**
   The documentation is one of the most essential parts of any tech project, yet the need to document new features and substantial changes often gets overlooked.

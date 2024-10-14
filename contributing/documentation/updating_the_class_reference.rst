@@ -27,7 +27,7 @@ is picked as the source of truth, and the documentation for the class reference 
 .. warning::
 
     You should **not** edit ``.rst`` files in the ``classes/`` folder of the
-    `documentation repository <https://github.com/godotengine/godot-docs/>`_.
+    `documentation repository <https://github.com/blazium-engine/blazium-docs/>`_.
     These files are generated automatically and are synced manually by project
     maintainers. Read further to learn how to correctly edit the class reference.
 
@@ -48,7 +48,7 @@ directory. To learn more about editing XML files refer to :ref:`doc_class_refere
     <https://www.youtube.com/watch?v=5jeHXxeX-JY>`_.
 
 **Important:** If you plan to make large changes, you should create an issue on
-the `godot-docs repository <https://github.com/godotengine/godot-docs/>`_
+the `godot-docs repository <https://github.com/blazium-engine/blazium-docs/>`_
 or comment on an existing issue. Doing so lets others know you're already
 taking care of a given class.
 
@@ -73,7 +73,7 @@ with your changes. Another writer will take care of it.
 
 You can still look at the methods' implementation in Godot's source code on GitHub.
 If you have doubts, feel free to ask on the `Q&A website <https://ask.godotengine.org/>`_
-and `Godot Contributors Chat <https://chat.godotengine.org/>`_.
+and `Godot Contributors Chat <https://chat.blazium.app/>`_.
 
 .. warning::
 

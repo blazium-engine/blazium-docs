@@ -255,14 +255,14 @@ which also use their own markup syntax to style text, create internal and
 external links, etc. Here are some examples::
 
     # "development" is styled bold.
-    # "Have a look here" is a link pointing to https://docs.godotengine.org/en/latest.
+    # "Have a look here" is a link pointing to https://docs.blazium.app.
     # You should translate "Have a look here", but not the URL, unless there is
     # a matching URL for the same content in your language.
     # Note: The `, <, >, and _ characters all have a meaning in the hyperlink
     # syntax and should be preserved.
 
     Looking for the documentation of the current **development** branch?
-    `Have a look here <https://docs.godotengine.org/en/latest>`_.
+    `Have a look here <https://docs.blazium.app>`_.
 
     # "|supported|" is an inline reference to an image and should stay unchanged.
     # "master" uses the markup for inline code, and will be styled as such.

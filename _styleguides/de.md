@@ -332,7 +332,7 @@ Achte bei der Übersetzung der Anleitung darauf, nur den Originaltext zu
 übersetzen, ohne eigene Ergänzungen oder Erläuterungen vorzunehmen. Sollte
 der Originaltext unvollständig oder erklärungswürdig sein, so beantrage zuerst
 eine Änderung am Original oder stelle selbst einen Pull-Request in
-[godot-docs](https://github.com/godotengine/godot-docs).
+[godot-docs](https://github.com/blazium-engine/blazium-docs).
 Wir sollten uns auf Weblate ausschließlich als Übersetzer und nicht als
 Autoren verstehen.
 

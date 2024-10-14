@@ -94,7 +94,7 @@ Below we break-down the steps used to create the GLTF Viewer app.
 
 - If using ``gradle``, include the following ``aaptOptions`` configuration under the ``android > defaultConfig`` section of the app's gradle build file. Doing so allows ``gradle`` to include Godot's hidden directories when building the app binary.
 
-  - If your build system does not support including hidden directories, you can `configure the Godot project to not use hidden directories <https://docs.godotengine.org/en/stable/classes/class_projectsettings.html#class-projectsettings-property-application-config-use-hidden-project-data-directory>`_ by deselecting ``Project Settings... > Application > Config > Use Hidden Project Data Directory``.
+  - If your build system does not support including hidden directories, you can `configure the Godot project to not use hidden directories <https://docs.blazium.app/classes/class_projectsettings.html#class-projectsettings-property-application-config-use-hidden-project-data-directory>`_ by deselecting ``Project Settings... > Application > Config > Use Hidden Project Data Directory``.
 
 .. code-block:: groovy
 
@@ -172,7 +172,7 @@ Below we break-down the steps used to create the GLTF Viewer app.
 
   We leverage that architecture to bind our Android app and Godot project together by creating the Godot project in the Android app's ``assets`` directory.
 
-  Note that it's also possible to create the Godot project in a separate directory and export it as a `PCK or ZIP file <https://docs.godotengine.org/en/stable/tutorials/export/exporting_projects.html#pck-versus-zip-pack-file-formats>`_
+  Note that it's also possible to create the Godot project in a separate directory and export it as a `PCK or ZIP file <https://docs.blazium.app/tutorials/export/exporting_projects.html#pck-versus-zip-pack-file-formats>`_
   to the Android app's ``assets`` directory.
   Using this approach requires passing the ``--main-pack <pck_or_zip_filepath_relative_to_assets_dir>`` argument to the hosted Godot Engine instance using `GodotHost#getCommandLine() <https://github.com/godotengine/godot/blob/6916349697a4339216469e9bf5899b983d78db07/platform/android/java/lib/src/org/godotengine/godot/GodotHost.java#L45>`_.
 
@@ -185,8 +185,8 @@ Below we break-down the steps used to create the GLTF Viewer app.
 
 - Configure the Godot project as desired
 
-  - Make sure the `orientation <https://docs.godotengine.org/en/stable/classes/class_projectsettings.html#class-projectsettings-property-display-window-handheld-orientation>`_ set for the Godot project matches the one set in the Android app's manifest
-  - For Android, make sure `textures/vram_compression/import_etc2_astc <https://docs.godotengine.org/en/stable/classes/class_projectsettings.html#class-projectsettings-property-rendering-textures-vram-compression-import-etc2-astc>`_ is set to `true`
+  - Make sure the `orientation <https://docs.blazium.app/classes/class_projectsettings.html#class-projectsettings-property-display-window-handheld-orientation>`_ set for the Godot project matches the one set in the Android app's manifest
+  - For Android, make sure `textures/vram_compression/import_etc2_astc <https://docs.blazium.app/classes/class_projectsettings.html#class-projectsettings-property-rendering-textures-vram-compression-import-etc2-astc>`_ is set to `true`
 
 - Update the Godot project script logic as needed
 

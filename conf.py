@@ -184,7 +184,7 @@ html_context = {
     "godot_inject_language_links": True,
     "godot_docs_supported_languages": list(supported_languages.keys()),
     "godot_docs_title": supported_languages[language],
-    "godot_docs_basepath": "https://docs.godotengine.org/",
+    "godot_docs_basepath": "https://docs.blazium.app/",
     "godot_docs_suffix": ".html",
     "godot_default_lang": "en",
     "godot_canonical_version": "stable",
@@ -255,7 +255,7 @@ linkcheck_timeout = 10
 
 # -- I18n settings --------------------------------------------------------
 
-# Godot localization is handled via https://github.com/godotengine/godot-docs-l10n
+# Godot localization is handled via https://github.com/blazium-engine/blazium-docs-l10n
 # where the main docs repo is a submodule. Therefore the translated material is
 # actually in the parent folder of this conf.py, hence the "../".
 

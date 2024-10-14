@@ -43,10 +43,10 @@ tutorials and class reference. If you don't understand something, or cannot find
 what you are looking for in the docs, help us make the documentation better
 by letting us know!
 
-Submit an issue or pull request on the `GitHub repository <https://github.com/godotengine/godot-docs/issues>`_,
+Submit an issue or pull request on the `GitHub repository <https://github.com/blazium-engine/blazium-docs/issues>`_,
 help us `translate the documentation <https://hosted.weblate.org/engage/godot-engine/>`_
 into your language, or talk to us on the ``#documentation`` channel on the
-`Godot Contributors Chat <https://chat.godotengine.org/>`_!
+`Godot Contributors Chat <https://chat.blazium.app/>`_!
 
 .. centered:: |weblate_widget|
 
