@@ -41,7 +41,7 @@ especially the Godot `Discord <https://discord.gg/godotengine>`_ community and
 `Forum <https://forum.godotengine.org/>`_.
 
 About Blazium Engine
-------------------
+--------------------
 
 A game engine is a complex tool and difficult to present in a few words.
 Here's a quick synopsis, which you are free to reuse
