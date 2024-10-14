@@ -187,7 +187,7 @@ html_context = {
     "github_version": "master",  # Version for Edit on GitHub - keep `master` for 4.x branches
     "conf_py_path": "/",  # Path in the checkout to the docs root
     "godot_docs_title": supported_languages[language],
-    "godot_docs_basepath": "https://docs.godotengine.org/",
+    "godot_docs_basepath": "https://docs.blazium.app/",
     "godot_docs_suffix": ".html",
     # Distinguish local development website from production website.
     # This prevents people from looking for changes on the production website after making local changes :)
@@ -256,7 +256,7 @@ linkcheck_timeout = 10
 
 # -- I18n settings --------------------------------------------------------
 
-# Godot localization is handled via https://github.com/godotengine/godot-docs-l10n
+# Godot localization is handled via https://github.com/blazium-engine/blazium-docs-l10n
 # where the main docs repo is a submodule. Therefore the translated material is
 # actually in the parent folder of this conf.py, hence the "../".
 

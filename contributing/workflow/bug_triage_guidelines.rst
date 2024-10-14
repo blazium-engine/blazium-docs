@@ -82,7 +82,7 @@ Categories:
    class reference. Issues with this label are either for wrong documentation, or
    are user-reported "bugs" that are actually limitations to be further documented.
    Often paired with *Discussion*. Issues related to the ReadTheDocs documentation
-   should be filed on the `godot-docs <https://github.com/godotengine/godot-docs>`_ repository.
+   should be filed on the `blazium-docs <https://github.com/blazium-engine/blazium-docs>`_ repository.
 -  *Enhancement*: describes a proposed enhancement to an existing
    functionality.
 -  *Feature proposal*: used for PRs adding new features which do not have a
@@ -91,7 +91,7 @@ Categories:
    feature requests as issues. Please use the `godot-proposals
    <https://github.com/godotengine/godot-proposals>`__ repository instead.
 -  *For PR meeting*: the issue needs to be discussed in a pull request meeting.
-   These meetings are public and are held on the `Godot Contributors Chat <https://chat.godotengine.org/>`_.
+   These meetings are public and are held on the `Godot Contributors Chat <https://chat.blazium.app/>`_.
 -  *Good first issue*: the issue is *assumed* to be an easy one to fix, which makes
    it a great fit for new contributors who want to become familiar with
    the code base. It should be removed while an active PR is available, that
@@ -181,8 +181,8 @@ Android and Linux exclusively, select those two platforms).
 Documentation labels
 ~~~~~~~~~~~~~~~~~~~~
 
-In the `documentation repository <https://github.com/godotengine/godot-docs>`__, we
-use the following `labels <https://github.com/godotengine/godot-docs/labels>`__:
+In the `documentation repository <https://github.com/blazium-engine/blazium-docs>`__, we
+use the following `labels <https://github.com/blazium-engine/blaizum-docs/labels>`__:
 
 -  *Archived*: either a duplicate of another issue, or invalid. Such an
    issue would also be closed.

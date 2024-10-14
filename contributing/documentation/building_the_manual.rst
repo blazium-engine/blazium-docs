@@ -74,7 +74,7 @@ Before you get started, make sure that you have:
 
     .. code:: sh
 
-        git clone https://github.com/godotengine/godot-docs.git
+        git clone https://github.com/blazium-engine/blazium-docs.git
 
 3.  Change directory into the docs repo:
 
