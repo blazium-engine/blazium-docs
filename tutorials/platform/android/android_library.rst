@@ -3,7 +3,7 @@
 Godot Android library
 =====================
 
-The Godot Engine for Android platforms is designed to be used as an `Android library <https://developer.android.com/studio/projects/android-library>`_.
+The Blazium Engine for Android platforms is designed to be used as an `Android library <https://developer.android.com/studio/projects/android-library>`_.
 This architecture enables several key features on Android platforms:
 
 - Ability to integrate the Gradle build system within the Godot Editor, which provides the ability to leverage more components from the Android ecosystem such as libraries and tools
@@ -25,7 +25,7 @@ It provides access to Godot APIs and capabilities on Android platforms for the f
 Godot Android plugins
 ---------------------
 
-Android plugins are powerful tools to extend the capabilities of the Godot Engine
+Android plugins are powerful tools to extend the capabilities of the Blazium Engine
 by tapping into the functionality provided by Android platforms and ecosystem.
 
 An Android plugin is an Android library with a dependency on the Godot Android library
@@ -37,19 +37,19 @@ For more information, see :ref:`Godot Android plugins <doc_android_plugin>`.
 Embedding Godot in existing Android projects
 --------------------------------------------
 
-The Godot Engine can be embedded within existing Android applications or libraries,
+The Blazium Engine can be embedded within existing Android applications or libraries,
 allowing developers to leverage mature and battle-tested code and libraries better suited to a specific task.
 
 The hosting component is responsible for driving the engine lifecycle via Godot's Android APIs.
 These APIs can also be used to provide bidirectional communication between the host and the embedded
 Godot instance allowing for greater control over the desired experience.
 
-We showcase how this is done using a sample Android app that embeds the Godot Engine as an Android view,
+We showcase how this is done using a sample Android app that embeds the Blazium Engine as an Android view,
 and uses it to render 3D glTF models.
 
 The `GLTF Viewer <https://github.com/m4gr3d/Godot-Android-Samples/tree/master/apps/gltf_viewer>`_ sample app uses an `Android RecyclerView component <https://developer.android.com/develop/ui/views/layout/recyclerview>`_ to create
 a list of glTF items, populated from `Kenney's Food Kit pack <https://kenney.nl/assets/food-kit>`_.
-When an item on the list is selected, the app's logic interacts with the embedded Godot Engine to render the selected glTF item as a 3D model.
+When an item on the list is selected, the app's logic interacts with the embedded Blazium Engine to render the selected glTF item as a 3D model.
 
 .. image:: img/gltf_viewer_sample_app_screenshot.webp
 
@@ -60,7 +60,7 @@ Below we break-down the steps used to create the GLTF Viewer app.
 
 .. warning::
 
-  Currently only a single instance of the Godot Engine is supported per process.
+  Currently only a single instance of the Blazium Engine is supported per process.
   You can configure the process the Android Activity runs under using the `android:process attribute <https://developer.android.com/guide/topics/manifest/activity-element#proc>`_.
 
 .. warning::
@@ -108,10 +108,10 @@ Below we break-down the steps used to create the GLTF Viewer app.
         }
       ...
 
-- Create / update the application's Activity that will be hosting the Godot Engine instance. For the sample app, this is `MainActivity <https://github.com/m4gr3d/Godot-Android-Samples/blob/master/apps/gltf_viewer/src/main/java/fhuyakou/godot/app/android/gltfviewer/MainActivity.kt>`_
+- Create / update the application's Activity that will be hosting the Blazium Engine instance. For the sample app, this is `MainActivity <https://github.com/m4gr3d/Godot-Android-Samples/blob/master/apps/gltf_viewer/src/main/java/fhuyakou/godot/app/android/gltfviewer/MainActivity.kt>`_
 
   - The host Activity should implement the `GodotHost interface <https://github.com/godotengine/godot/blob/master/platform/android/java/lib/src/org/godotengine/godot/GodotHost.java>`_
-  - The sample app uses `Fragments <https://developer.android.com/guide/fragments>`_ to organize its UI, so it uses `GodotFragment <https://github.com/godotengine/godot/blob/master/platform/android/java/lib/src/org/godotengine/godot/GodotFragment.java>`_, a fragment component provided by the Godot Android library to automatically host and manage the Godot Engine instance.
+  - The sample app uses `Fragments <https://developer.android.com/guide/fragments>`_ to organize its UI, so it uses `GodotFragment <https://github.com/godotengine/godot/blob/master/platform/android/java/lib/src/org/godotengine/godot/GodotFragment.java>`_, a fragment component provided by the Godot Android library to automatically host and manage the Blazium Engine instance.
 
   .. code-block:: kotlin
 
@@ -174,7 +174,7 @@ Below we break-down the steps used to create the GLTF Viewer app.
 
   Note that it's also possible to create the Godot project in a separate directory and export it as a `PCK or ZIP file <https://docs.blazium.app/tutorials/export/exporting_projects.html#pck-versus-zip-pack-file-formats>`_
   to the Android app's ``assets`` directory.
-  Using this approach requires passing the ``--main-pack <pck_or_zip_filepath_relative_to_assets_dir>`` argument to the hosted Godot Engine instance using `GodotHost#getCommandLine() <https://github.com/godotengine/godot/blob/6916349697a4339216469e9bf5899b983d78db07/platform/android/java/lib/src/org/godotengine/godot/GodotHost.java#L45>`_.
+  Using this approach requires passing the ``--main-pack <pck_or_zip_filepath_relative_to_assets_dir>`` argument to the hosted Blazium Engine instance using `GodotHost#getCommandLine() <https://github.com/godotengine/godot/blob/6916349697a4339216469e9bf5899b983d78db07/platform/android/java/lib/src/org/godotengine/godot/GodotHost.java#L45>`_.
 
   The instructions below and the sample app follow the first approach of creating the Godot project in the Android app's ``assets`` directory.
 
@@ -228,8 +228,8 @@ Below we break-down the steps used to create the GLTF Viewer app.
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
 Once you complete configuration of your Godot project, build and run the Android app.
-If set up correctly, the host Activity will initialize the embedded Godot Engine on startup.
-The Godot Engine will check the ``assets`` directory for project files to load (unless configured to look for a ``main pack``), and will proceed to run the project.
+If set up correctly, the host Activity will initialize the embedded Blazium Engine on startup.
+The Blazium Engine will check the ``assets`` directory for project files to load (unless configured to look for a ``main pack``), and will proceed to run the project.
 
 While the app is running on device, you can check `Android logcat <https://developer.android.com/studio/debug/logcat>`_ to investigate any errors or crashes.
 

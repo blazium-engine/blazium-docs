@@ -72,7 +72,7 @@ process will build that type of file for the chosen platform.
     its scripts, then either...
 
     1. The developer must publicize documentation of these expected structures/
-       interfaces, expect modders to install Godot Engine, and then also expect
+       interfaces, expect modders to install Blazium Engine, and then also expect
        those modders to conform to the documentation's defined API when building
        mod content for the game (so that it will work). Users would then use
        Godot's built in exporting tools to create a PCK file, as detailed

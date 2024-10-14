@@ -6,7 +6,7 @@ Introduction to GUI skinning
 It is essential for a game to provide clear, informative, and yet visually
 pleasing user interface to its players. While :ref:`Control <class_Control>`
 nodes come with a decently functional look out of the box, there is always
-room for uniqueness and case-specific tuning. For this purpose Godot engine
+room for uniqueness and case-specific tuning. For this purpose Blazium Engine
 includes a system for GUI skinning (or theming), which allows you to customize
 the look of every control in your user interface, including your custom controls.
 

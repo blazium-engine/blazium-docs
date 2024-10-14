@@ -9,7 +9,7 @@ Exporting for the Web
     If you're looking to compile editor or export template binaries from source instead,
     read :ref:`doc_compiling_for_web`.
 
-HTML5 export allows publishing games made in Godot Engine to the browser.
+HTML5 export allows publishing games made in Blazium Engine to the browser.
 This requires support for `WebAssembly
 <https://webassembly.org/>`__, `WebGL <https://www.khronos.org/webgl/>`__ and
 `SharedArrayBuffer <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer>`_

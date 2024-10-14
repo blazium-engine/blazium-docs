@@ -103,7 +103,7 @@ with the ``--doctool`` option. For example, if you're on 64-bit Linux, the comma
 The exact set of suffixes may be different. Carefully read through the linked article to
 learn more about that.
 
-The XML files in ``doc/classes/`` should then be up-to-date with current Godot Engine
+The XML files in ``doc/classes/`` should then be up-to-date with current Blazium Engine
 features. You can then check what changed using the ``git diff`` command.
 
 Please only include changes that are relevant to your work on the API in your commits.

@@ -317,7 +317,7 @@ Overriding the build options
 Using a file
 ^^^^^^^^^^^^
 
-The default ``custom.py`` file can be created at the root of the Godot Engine
+The default ``custom.py`` file can be created at the root of the Blazium Engine
 source to initialize any SCons build options passed via the command line:
 
 .. code-block:: python
@@ -409,7 +409,7 @@ To perform an SCU build, use the ``scu_build=yes`` SCons option.
 Export templates
 ----------------
 
-Official export templates are downloaded from the Godot Engine site:
+Official export templates are downloaded from the Blazium Engine site:
 `godotengine.org <https://godotengine.org/>`__. However, you might want
 to build them yourself (in case you want newer ones, you are using custom
 modules, or simply don't trust your own shadow).

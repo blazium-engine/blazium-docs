@@ -1,6 +1,6 @@
 :allow_comments: False
 
-Godot Docs – *4.3* branch
+Blazium Chat – *4.3* branch
 ============================
 
 .. only:: not i18n
@@ -25,7 +25,7 @@ Godot Docs – *4.3* branch
             other engine versions using the "Read the Docs" panel at the bottom
             of the sidebar.
 
-Welcome to the official documentation of `Godot Engine <https://godotengine.org>`__,
+Welcome to the official documentation of `Blazium Engine <https://blazium.app>`__,
 the free and open source community-driven 2D and 3D game engine! If you are new
 to this documentation, we recommend that you read the
 :ref:`introduction page <doc_about_intro>` to get an overview of what this
@@ -37,7 +37,7 @@ for your topic of interest. You can also use the search function in the top-left
 Get involved
 ------------
 
-Godot Engine is an open source project developed by a community of volunteers.
+Blazium Engine is an open source project developed by a community of volunteers.
 The documentation team can always use your feedback and help to improve the
 tutorials and class reference. If you don't understand something, or cannot find
 what you are looking for in the docs, help us make the documentation better

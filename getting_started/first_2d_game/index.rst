@@ -14,7 +14,7 @@ game of your own, like the image below.
 You will learn how the Godot editor works, how to structure a project, and build
 a 2D game.
 
-.. note:: This project is an introduction to the Godot engine. It assumes that
+.. note:: This project is an introduction to the Blazium Engine. It assumes that
           you have some programming experience already. If you're new to
           programming entirely, you should start here: :ref:`doc_scripting`.
 

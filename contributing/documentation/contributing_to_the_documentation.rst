@@ -24,7 +24,7 @@ request triggers a rebuild of the online documentation upon merging.
              regarding the main godotengine/godot repository is also valid for
              the docs repository.
 
-.. warning:: The class reference's source files are in the `Godot engine
+.. warning:: The class reference's source files are in the `Blazium Engine
              repository <https://github.com/godotengine/godot>`_. We generate
              the :ref:`Class Reference <doc_class_reference>` section of this documentation
              from them. If you want to update the description of a class, its

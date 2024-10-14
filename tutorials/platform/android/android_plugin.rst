@@ -6,7 +6,7 @@ Godot Android plugins
 Introduction
 ------------
 
-Android plugins are powerful tools to extend the capabilities of the Godot engine
+Android plugins are powerful tools to extend the capabilities of the Blazium Engine
 by tapping into the functionality provided by Android platforms and ecosystem.
 
 For example in Godot 4, Android plugins are used to support multiple Android-based
@@ -16,7 +16,7 @@ Android plugin
 --------------
 
 **Version 1 (v1)** of the Android plugin system was introduced in Godot 3 and compatible with Godot 4.0 and 4.1.
-That version allowed developers to augment the Godot engine with Java, Kotlin and native functionality.
+That version allowed developers to augment the Blazium Engine with Java, Kotlin and native functionality.
 
 Starting in Godot 4.2, Android plugins built on the v1 architecture are now deprecated.
 Instead, Godot 4.2 introduces a new **Version 2 (v2)** architecture for Android plugins.
@@ -46,7 +46,7 @@ This architecture allows Android plugins to extend the functionality of the engi
 Each plugin has an init class extending from the `GodotPlugin <https://github.com/godotengine/godot/blob/0a7f75ec7b465604b6496c8f5f1d638aed250d6d/platform/android/java/lib/src/org/godotengine/godot/plugin/GodotPlugin.java#L80>`_ class
 which is provided by the :ref:`Godot Android library <doc_android_library>`.
 
-The ``GodotPlugin`` class provides APIs to access the running Godot instance and hook into its lifecycle. It is loaded at runtime by the Godot engine.
+The ``GodotPlugin`` class provides APIs to access the running Godot instance and hook into its lifecycle. It is loaded at runtime by the Blazium Engine.
 
 v2 Packaging format
 ^^^^^^^^^^^^^^^^^^^
@@ -270,7 +270,7 @@ For GDExtension Android plugins, the plugin init class must override `GodotPlugi
 and return the paths to the bundled GDExtension libraries config files (``*.gdextension``).
 
 The paths must be relative to the Android library's ``assets`` directory.
-At runtime, the plugin will provide these paths to the Godot engine which will use them to load and initialize the bundled GDExtension libraries.
+At runtime, the plugin will provide these paths to the Blazium Engine which will use them to load and initialize the bundled GDExtension libraries.
 
 Using a v2 Android plugin
 -------------------------

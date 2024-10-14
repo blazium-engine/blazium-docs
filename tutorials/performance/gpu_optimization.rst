@@ -8,7 +8,7 @@ Introduction
 
 The demand for new graphics features and progress almost guarantees that you
 will encounter graphics bottlenecks. Some of these can be on the CPU side, for
-instance in calculations inside the Godot engine to prepare objects for
+instance in calculations inside the Blazium Engine to prepare objects for
 rendering. Bottlenecks can also occur on the CPU in the graphics driver, which
 sorts instructions to pass to the GPU, and in the transfer of these
 instructions. And finally, bottlenecks also occur on the GPU itself.

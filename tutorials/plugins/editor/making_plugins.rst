@@ -48,7 +48,7 @@ To continue with the example, use the following values:
 
     Plugin Name: My Custom Node
     Subfolder: my_custom_node
-    Description: A custom node made to extend the Godot Engine.
+    Description: A custom node made to extend the Blazium Engine.
     Author: Your Name Here
     Version: 1.0.0
     Language: GDScript
@@ -59,7 +59,7 @@ To continue with the example, use the following values:
 
     Plugin Name: My Custom Node
     Subfolder: MyCustomNode
-    Description: A custom node made to extend the Godot Engine.
+    Description: A custom node made to extend the Blazium Engine.
     Author: Your Name Here
     Version: 1.0.0
     Language: C#

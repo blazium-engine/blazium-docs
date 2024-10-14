@@ -244,7 +244,7 @@ on both GDScript and C#. See
 Example 1: drawing a custom shape
 ---------------------------------
 
-We will now use the custom drawing functionality of the Godot Engine to draw
+We will now use the custom drawing functionality of the Blazium Engine to draw
 something that Godot doesn't provide functions for. We will recreate the Godot
 logo but with code- only using drawing functions.
 

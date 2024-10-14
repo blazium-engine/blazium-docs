@@ -1,6 +1,6 @@
-# Godot Engine documentation
+# Blazium Engine documentation
 
-This repository contains the source files of [Godot Engine](https://godotengine.org)'s documentation, in reStructuredText markup language (reST).
+This repository contains the source files of [Blazium Engine](https://blazium.app)'s documentation, in reStructuredText markup language (reST).
 
 They are meant to be parsed with the [Sphinx](https://www.sphinx-doc.org/) documentation builder to build the HTML documentation on [Godot's website](https://docs.blazium.app).
 
@@ -49,4 +49,4 @@ Here are some quick links to the areas you might be interested in:
 With the exception of the `classes/` folder, all the content of this repository is licensed under the Creative Commons Attribution 3.0 Unported license ([CC BY 3.0](https://creativecommons.org/licenses/by/3.0/)) and is to be attributed to "Juan Linietsky, Ariel Manzur and the Godot community".
 See [LICENSE.txt](/LICENSE.txt) for details.
 
-The files in the `classes/` folder are derived from [Godot's main source repository](https://github.com/godotengine/godot) and are distributed under the MIT license, with the same authors as above.
+The files in the `classes/` folder are derived from [Godot's main source repository](https://github.com/blazium-engine/blazium) and are distributed under the MIT license, with the same authors as above.

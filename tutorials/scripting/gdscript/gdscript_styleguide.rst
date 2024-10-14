@@ -618,7 +618,7 @@ readable.
 Naming conventions
 ------------------
 
-These naming conventions follow the Godot Engine style. Breaking these will make
+These naming conventions follow the Blazium Engine style. Breaking these will make
 your code clash with the built-in naming conventions, leading to inconsistent
 code.
 

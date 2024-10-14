@@ -9,7 +9,7 @@ GDScript reference
 <https://en.wikipedia.org/wiki/Gradual_typing>`_ programming language built for Godot.
 It uses an indentation-based syntax similar to languages like
 `Python <https://en.wikipedia.org/wiki/Python_%28programming_language%29>`_.
-Its goal is to be optimized for and tightly integrated with Godot Engine,
+Its goal is to be optimized for and tightly integrated with Blazium Engine,
 allowing great flexibility for content creation and integration.
 
 GDScript is entirely independent from Python and is not based on it.
@@ -455,7 +455,7 @@ Annotations
 ~~~~~~~~~~~
 
 Annotations are special tokens in GDScript that act as modifiers to a script or
-its code and may affect how the script is treated by the Godot engine or
+its code and may affect how the script is treated by the Blazium Engine or
 editor.
 
 Every annotation starts with the ``@`` character and is specified by a name. A
