@@ -43,7 +43,7 @@ every element. Prefer using the instance methods of the Godot collections when p
 
 To choose which collection type to use for each situation, consider the following questions:
 
-* Does your collection need to interact with the Godot engine?
+* Does your collection need to interact with the Blazium Engine?
   (e.g.: the type of an exported property, calling a Godot method).
 
    * If yes, since Godot only supports :ref:`c_sharp_variant_compatible_types`,

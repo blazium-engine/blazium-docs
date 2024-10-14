@@ -3,7 +3,7 @@
 Engine core and modules
 =======================
 
-The following pages are meant to introduce the global organization of Godot Engine's
+The following pages are meant to introduce the global organization of Blazium Engine's
 source code, and give useful tips for extending and fixing the engine on the C++ side.
 
 .. rubric:: Getting started with Godot's source code

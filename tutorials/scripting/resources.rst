@@ -177,13 +177,13 @@ and :ref:`Resource <class_Resource>` features:
 
 - They have defined properties, so users know 100% that their data will exist.
 
-- Resource auto-serialization and deserialization is a built-in Godot Engine feature. Users do not need to implement custom logic to import/export a resource file's data.
+- Resource auto-serialization and deserialization is a built-in Blazium Engine feature. Users do not need to implement custom logic to import/export a resource file's data.
 
 - Resources can even serialize sub-Resources recursively, meaning users can design even more sophisticated data structures.
 
 - Users can save Resources as version-control-friendly text files (\*.tres). Upon exporting a game, Godot serializes resource files as binary files (\*.res) for increased speed and compression.
 
-- Godot Engine's Inspector renders and edits Resource files out-of-the-box. As such, users often do not need to implement custom logic to visualize or edit their data. To do so, double-click the resource file in the FileSystem dock or click the folder icon in the Inspector and open the file in the dialog.
+- Blazium Engine's Inspector renders and edits Resource files out-of-the-box. As such, users often do not need to implement custom logic to visualize or edit their data. To do so, double-click the resource file in the FileSystem dock or click the folder icon in the Inspector and open the file in the dialog.
 
 - They can extend **other** resource types besides just the base Resource.
 

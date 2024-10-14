@@ -3,7 +3,7 @@
 Unit testing
 ============
 
-Godot Engine allows to write unit tests directly in C++. The engine integrates
+Blazium Engine allows to write unit tests directly in C++. The engine integrates
 the `doctest <https://github.com/onqtam/doctest>`_ unit testing framework which
 gives ability to write test suites and test cases next to production code, but
 since the tests in Godot go through a different ``main`` entry point, the tests

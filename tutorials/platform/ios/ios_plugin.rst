@@ -37,7 +37,7 @@ Creating an iOS plugin
 
 At its core, a Godot iOS plugin is an iOS library (*.a* archive file or *.xcframework* containing static libraries) with the following requirements:
 
-- The library must have a dependency on the Godot engine headers.
+- The library must have a dependency on the Blazium Engine headers.
 
 - The library must come with a ``.gdip`` configuration file.
 
@@ -54,9 +54,9 @@ To build an iOS plugin:
 
 1. Create an Objective-C static library for your plugin inside Xcode.
 
-2. Add the Godot engine header files as a dependency for your plugin library in ``HEADER_SEARCH_PATHS``. You can find the setting inside the ``Build Settings`` tab:
+2. Add the Blazium Engine header files as a dependency for your plugin library in ``HEADER_SEARCH_PATHS``. You can find the setting inside the ``Build Settings`` tab:
 
-    - Download the Godot engine source from the `Godot GitHub page <https://github.com/godotengine/godot>`_.
+    - Download the Blazium Engine source from the `Godot GitHub page <https://github.com/godotengine/godot>`_.
 
     - Run SCons to generate headers. You can learn the process by reading :ref:`doc_compiling_for_ios`. You don't have to wait for compilation to complete to move forward as headers are generated before the engine starts to compile.
 

@@ -17,10 +17,10 @@ GitHub proposes various features to manage issues:
 -  Set one or several labels from a predefined list
 -  Set one milestone from a predefined list
 -  Keep track of the issue in the project dashboard
--  Define one contributor as "assignee" among the Godot engine
+-  Define one contributor as "assignee" among the Blazium Engine
    organization members
 
-As the Godot engine organization on GitHub currently has a restricted
+As the Blazium Engine organization on GitHub currently has a restricted
 number of contributors, we do not use assignees extensively for now. All
 contributors are welcome to take on any issue, if relevant after mentioning
 it on the issue ticket and/or discussing the best way to resolve it with
