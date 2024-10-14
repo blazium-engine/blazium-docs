@@ -14,15 +14,17 @@ Issues management
 
 For issue management, we use the following GitHub processes:
 
-- Each issue and pull request (PR) is categorized with a set of *labels*,
-  sometimes called "tags".
-- Each PR is assigned to a *milestone*. Some issues can also be assigned to a
-  *milestone* (see below).
-- Issues can have an *assignee*, who is a contributor among Godot maintainers.
-- Issues can be put in one or more *projects*.
-- PRs can be *linked* to one or more issues which they "fix" or "close".
+-  Set one or several labels from a predefined list
+-  Set one milestone from a predefined list
+-  Keep track of the issue in the project dashboard
+-  Define one contributor as "assignee" among the Blazium Engine
+   organization members
 
-We don't yet extensively use or rely on some other GitHub processes:
+As the Blazium Engine organization on GitHub currently has a restricted
+number of contributors, we do not use assignees extensively for now. All
+contributors are welcome to take on any issue, if relevant after mentioning
+it on the issue ticket and/or discussing the best way to resolve it with
+other developers.
 
 - Issue close reasons (completed, not planned, duplicate). While we use these,
   it is not consistent, and older issues are all closed as "completed", so the

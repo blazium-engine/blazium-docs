@@ -10,5 +10,5 @@ contact_links:
     about: Please submit engine feature proposals on the Godot proposals repository, not here.
 
   - name: Main Godot repository
-    url: https://github.com/godotengine/godot
+    url: https://github.com/blazium-engine/blazium
     about: Report engine bugs on the main Godot repository

@@ -18,7 +18,7 @@ Introduction
         GD.Print("Hello world!");
     }
 
-Welcome to the official documentation of **Godot Engine**, the free and open source
+Welcome to the official documentation of **Blazium Engine**, the free and open source
 community-driven 2D and 3D game engine! Behind this mouthful, you will find a
 powerful yet user-friendly tool that you can use to develop any kind of game,
 for any platform and with no usage restriction whatsoever.
@@ -40,14 +40,14 @@ you can find help on the various `Community channels <https://godotengine.org/co
 especially the Godot `Discord <https://discord.gg/godotengine>`_ community and
 `Forum <https://forum.godotengine.org/>`_.
 
-About Godot Engine
+About Blazium Engine
 ------------------
 
 A game engine is a complex tool and difficult to present in a few words.
 Here's a quick synopsis, which you are free to reuse
-if you need a quick write-up about Godot Engine:
+if you need a quick write-up about Blazium Engine:
 
-    Godot Engine is a feature-packed, cross-platform game engine to create 2D
+    Blazium Engine is a feature-packed, cross-platform game engine to create 2D
     and 3D games from a unified interface. It provides a comprehensive set of
     common tools, so that users can focus on making games without having to
     reinvent the wheel. Games can be exported with one click to a number of
@@ -97,7 +97,7 @@ various `Godot demo projects <https://github.com/godotengine/godot-demo-projects
 About this documentation
 ------------------------
 
-Members of the Godot Engine community continuously write, correct, edit, and
+Members of the Blazium Engine community continuously write, correct, edit, and
 improve this documentation. We are always looking for more help. You can also
 contribute by opening Github issues or translating the documentation into your language.
 If you are interested in helping, see :ref:`Ways to contribute <doc_ways_to_contribute>`
@@ -110,4 +110,4 @@ All documentation content is licensed under the permissive Creative Commons Attr
 with attribution to "*Juan Linietsky, Ariel Manzur, and the Godot Engine community*"
 unless otherwise noted.
 
-*Have fun reading and making games with Godot Engine!*
+*Have fun reading and making games with Blazium Engine!*

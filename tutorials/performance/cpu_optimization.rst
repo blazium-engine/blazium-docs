@@ -52,7 +52,7 @@ External profilers
 ------------------
 
 Although the Godot IDE profiler is very convenient and useful, sometimes you
-need more power, and the ability to profile the Godot engine source code itself.
+need more power, and the ability to profile the Blazium Engine source code itself.
 
 You can :ref:`use a number of third-party C++ profilers <doc_using_cpp_profilers>`
 to do this.
