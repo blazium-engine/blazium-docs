@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# Godot Engine documentation build configuration file
+# Blazium Engine documentation build configuration file
 
 import sphinx
 import sphinx_rtd_theme
@@ -62,7 +62,7 @@ if not on_rtd:
     notfound_urls_prefix = ''
 
 # Specify the site name for the Open Graph extension.
-ogp_site_name = "Godot Engine documentation"
+ogp_site_name = "Blazium Engine documentation"
 
 if not os.getenv("SPHINX_NO_GDSCRIPT"):
     extensions.append("gdscript")
@@ -80,11 +80,11 @@ source_encoding = "utf-8-sig"
 master_doc = "index"
 
 # General information about the project
-project = "Godot Engine"
+project = "Blazium Engine"
 copyright = (
-    "2014-present Juan Linietsky, Ariel Manzur and the Godot community (CC BY 3.0)"
+    "2024-present Blazium community, 2014-present Juan Linietsky, Ariel Manzur and the Godot community (CC BY 3.0)"
 )
-author = "Juan Linietsky, Ariel Manzur and the Godot community"
+author = "2024-present Blazium community, Juan Linietsky, Ariel Manzur and the Godot community"
 
 # Version info for the project, acts as replacement for |version| and |release|
 # The short X.Y version
@@ -102,20 +102,20 @@ if env_tags is not None:
 # Language / i18n
 
 supported_languages = {
-    "en": "Godot Engine %s documentation in English",
-    "de": "Godot Engine %s Dokumentation auf Deutsch",
-    "es": "Documentación de Godot Engine %s en español",
-    "fr": "Documentation de Godot Engine %s en français",
-    "fi": "Godot Engine %s dokumentaatio suomeksi",
-    "it": "Godot Engine %s documentazione in italiano",
-    "ja": "Godot Engine %sの日本語のドキュメント",
-    "ko": "Godot Engine %s 문서 (한국어)",
-    "pl": "Dokumentacja Godot Engine %s w języku polskim",
-    "pt_BR": "Documentação da Godot Engine %s em Português Brasileiro",
-    "ru": "Документация Godot Engine %s на русском языке",
-    "uk": "Документація до Godot Engine %s українською мовою",
-    "zh_CN": "Godot Engine %s 简体中文文档",
-    "zh_TW": "Godot Engine %s 正體中文 (台灣) 文件",
+    "en": "Blazium Engine %s documentation in English",
+    "de": "Blazium Engine %s Dokumentation auf Deutsch",
+    "es": "Documentación de Blazium Engine %s en español",
+    "fr": "Documentation de Blazium Engine %s en français",
+    "fi": "Blazium Engine %s dokumentaatio suomeksi",
+    "it": "Blazium Engine %s documentazione in italiano",
+    "ja": "Blazium Engine %sの日本語のドキュメント",
+    "ko": "Blazium Engine %s 문서 (한국어)",
+    "pl": "Dokumentacja Blazium Engine %s w języku polskim",
+    "pt_BR": "Documentação da Blazium Engine %s em Português Brasileiro",
+    "ru": "Документация Blazium Engine %s на русском языке",
+    "uk": "Документація до Blazium Engine %s українською мовою",
+    "zh_CN": "Blazium Engine %s 简体中文文档",
+    "zh_TW": "Blazium Engine %s 正體中文 (台灣) 文件",
 }
 
 # RTD normalized their language codes to ll-cc (e.g. zh-cn),
@@ -177,14 +177,14 @@ html_title = supported_languages[language] % ( "(" + version + ")" )
 # VCS options: https://docs.readthedocs.io/en/latest/vcs.html#github
 html_context = {
     "display_github": not is_i18n,  # Integrate GitHub
-    "github_user": "godotengine",  # Username
-    "github_repo": "godot-docs",  # Repo name
+    "github_user": "blazium-engine",  # Username
+    "github_repo": "blazium-docs",  # Repo name
     "github_version": "4.3",  # Version
     "conf_py_path": "/",  # Path in the checkout to the docs root
     "godot_inject_language_links": True,
     "godot_docs_supported_languages": list(supported_languages.keys()),
     "godot_docs_title": supported_languages[language],
-    "godot_docs_basepath": "https://docs.godotengine.org/",
+    "godot_docs_basepath": "https://docs.blazium.app/",
     "godot_docs_suffix": ".html",
     "godot_default_lang": "en",
     "godot_canonical_version": "stable",
@@ -224,7 +224,7 @@ html_js_files = [
 ]
 
 # Output file base name for HTML help builder
-htmlhelp_basename = "GodotEnginedoc"
+htmlhelp_basename = "BlaziumEnginedoc"
 
 # -- Options for reStructuredText parser ----------------------------------
 
@@ -239,9 +239,9 @@ file_insertion_enabled = False
 latex_documents = [
     (
         master_doc,
-        "GodotEngine.tex",
-        "Godot Engine Documentation",
-        "Juan Linietsky, Ariel Manzur and the Godot community",
+        "BlaziumEngine.tex",
+        "Blazium Engine Documentation",
+        "Blazium community, Juan Linietsky, Ariel Manzur and the Godot community",
         "manual",
     ),
 ]
