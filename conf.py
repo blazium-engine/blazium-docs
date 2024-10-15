@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# Godot Engine documentation build configuration file
+# Blazium Engine documentation build configuration file
 
 import sphinx
 import sphinx_rtd_theme
@@ -82,9 +82,9 @@ master_doc = "index"
 # General information about the project
 project = "Blazium Engine"
 copyright = (
-    "2014-present Juan Linietsky, Ariel Manzur and the Godot community (CC BY 3.0)"
+    "2024-present Blazium community, 2014-present Juan Linietsky, Ariel Manzur and the Godot community (CC BY 3.0)"
 )
-author = "Juan Linietsky, Ariel Manzur and the Godot community"
+author = "Blazium community, Juan Linietsky, Ariel Manzur and the Godot community"
 
 # Version info for the project, acts as replacement for |version| and |release|
 # The short X.Y version
@@ -177,8 +177,8 @@ html_title = supported_languages[language] % ( "(" + version + ")" )
 # VCS options: https://docs.readthedocs.io/en/latest/vcs.html#github
 html_context = {
     "display_github": not is_i18n,  # Integrate GitHub
-    "github_user": "godotengine",  # Username
-    "github_repo": "godot-docs",  # Repo name
+    "github_user": "blazium-engine",  # Username
+    "github_repo": "blazium-docs",  # Repo name
     "github_version": "4.3",  # Version
     "conf_py_path": "/",  # Path in the checkout to the docs root
     "godot_inject_language_links": True,
@@ -224,7 +224,7 @@ html_js_files = [
 ]
 
 # Output file base name for HTML help builder
-htmlhelp_basename = "GodotEnginedoc"
+htmlhelp_basename = "BlaziumEnginedoc"
 
 # -- Options for reStructuredText parser ----------------------------------
 
@@ -239,9 +239,9 @@ file_insertion_enabled = False
 latex_documents = [
     (
         master_doc,
-        "GodotEngine.tex",
+        "BlaziumEngine.tex",
         "Blazium Engine Documentation",
-        "Juan Linietsky, Ariel Manzur and the Godot community",
+        "Blazium community, Juan Linietsky, Ariel Manzur and the Godot community",
         "manual",
     ),
 ]
