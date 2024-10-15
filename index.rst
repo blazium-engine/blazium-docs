@@ -1,6 +1,6 @@
 :allow_comments: False
 
-Godot Docs – *4.3* branch
+Blazium Docs – *4.3* branch
 ============================
 
 .. only:: not i18n
@@ -14,6 +14,7 @@ Godot Docs – *4.3* branch
   .. note:: This documentation is translated from the `original English one
             <https://docs.godotengine.org/en/stable>`_ by community members
             on `Weblate <https://hosted.weblate.org/projects/godot-engine/godot-docs>`_.
+            The Blazium team may or may not have it's own version.
 
             Depending on the translation effort's completion level, you may
             find paragraphs or whole pages which are still in English. You can
@@ -25,7 +26,7 @@ Godot Docs – *4.3* branch
             other engine versions using the "Read the Docs" panel at the bottom
             of the sidebar.
 
-Welcome to the official documentation of `Godot Engine <https://godotengine.org>`__,
+Welcome to the official documentation of `Blazium Engine <https://blazium.app/>`__,
 the free and open source community-driven 2D and 3D game engine! If you are new
 to this documentation, we recommend that you read the
 :ref:`introduction page <doc_about_intro>` to get an overview of what this
