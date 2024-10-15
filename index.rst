@@ -1,6 +1,6 @@
 :allow_comments: False
 
-Blazium Chat – *4.3* branch
+Blazium Docs – *4.3* branch
 ============================
 
 .. only:: not i18n
@@ -14,6 +14,7 @@ Blazium Chat – *4.3* branch
   .. note:: This documentation is translated from the `original English one
             <https://docs.godotengine.org/en/stable>`_ by community members
             on `Weblate <https://hosted.weblate.org/projects/godot-engine/godot-docs>`_.
+            The Blazium team may or may not have it's own version.
 
             Depending on the translation effort's completion level, you may
             find paragraphs or whole pages which are still in English. You can
