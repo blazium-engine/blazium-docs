@@ -1,6 +1,6 @@
 :allow_comments: False
 
-Blazium Chat – *4.3* branch
+Blazium Docs – *4.3* branch
 ============================
 
 .. only:: not i18n
@@ -14,6 +14,7 @@ Blazium Chat – *4.3* branch
   .. note:: This documentation is translated from the `original English one
             <https://docs.godotengine.org/en/stable>`_ by community members
             on `Weblate <https://hosted.weblate.org/projects/godot-engine/godot-docs>`_.
+            The Blazium team may or may not have it's own version.
 
             Depending on the translation effort's completion level, you may
             find paragraphs or whole pages which are still in English. You can
@@ -43,20 +44,20 @@ tutorials and class reference. If you don't understand something, or cannot find
 what you are looking for in the docs, help us make the documentation better
 by letting us know!
 
-Submit an issue or pull request on the `GitHub repository <https://github.com/blazium-engine/blazium-docs/issues>`_,
-help us `translate the documentation <https://hosted.weblate.org/engage/godot-engine/>`_
-into your language, or talk to us on the ``#documentation`` channel on the
-`Godot Contributors Chat <https://chat.blazium.app/>`_!
+We haven't set up translated docs yet, so either submit an issue or pull request on the `GitHub repository <https://github.com/blazium-engine/blazium-docs/issues>`_
+or check the `Godot translated documentation <https://hosted.weblate.org/engage/godot-engine/>`_.
+Help them and us translate docs into your language over there or talk to us on the ``#documentation`` channel on the
+`Blazium Discord <https://chat.blazium.app/>`_!
 
 .. centered:: |weblate_widget|
 
 Offline documentation
 ---------------------
 
-To browse the documentation offline, you can download an HTML copy (updated every Monday): `stable <https://nightly.link/godotengine/godot-docs/workflows/build_offline_docs/master/godot-docs-html-stable.zip>`__, `latest <https://nightly.link/godotengine/godot-docs/workflows/build_offline_docs/master/godot-docs-html-master.zip>`__, `3.6 <https://nightly.link/godotengine/godot-docs/workflows/build_offline_docs/master/godot-docs-html-3.6.zip>`__. Extract the ZIP archive then open
+To browse the documentation offline, for now you can download an HTML copy from Godot (updated every Monday): `stable <https://nightly.link/godotengine/godot-docs/workflows/build_offline_docs/master/godot-docs-html-stable.zip>`__, `latest <https://nightly.link/godotengine/godot-docs/workflows/build_offline_docs/master/godot-docs-html-master.zip>`__, `3.6 <https://nightly.link/godotengine/godot-docs/workflows/build_offline_docs/master/godot-docs-html-3.6.zip>`__. Extract the ZIP archive then open
 the top-level ``index.html`` in a web browser.
 
-For mobile devices or e-readers, you can also download an ePub copy (updated every Monday): `stable <https://nightly.link/godotengine/godot-docs/workflows/build_offline_docs/master/godot-docs-epub-stable.zip>`__, `latest <https://nightly.link/godotengine/godot-docs/workflows/build_offline_docs/master/godot-docs-epub-master.zip>`__, `3.6 <https://nightly.link/godotengine/godot-docs/workflows/build_offline_docs/master/godot-docs-epub-3.6.zip>`__. Extract the ZIP archive then open
+For mobile devices or e-readers, you can also download an ePub copy from Godot (updated every Monday): `stable <https://nightly.link/godotengine/godot-docs/workflows/build_offline_docs/master/godot-docs-epub-stable.zip>`__, `latest <https://nightly.link/godotengine/godot-docs/workflows/build_offline_docs/master/godot-docs-epub-master.zip>`__, `3.6 <https://nightly.link/godotengine/godot-docs/workflows/build_offline_docs/master/godot-docs-epub-3.6.zip>`__. Extract the ZIP archive then open
 the ``GodotEngine.epub`` file in an e-book reader application.
 
 .. Below is the main table-of-content tree of the documentation website.
