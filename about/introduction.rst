@@ -18,7 +18,7 @@ Introduction
         GD.Print("Hello world!");
     }
 
-Welcome to the official documentation of **Godot Engine**, the free and open source
+Welcome to the official documentation of **Blazium Engine**, the free and open source
 community-driven 2D and 3D game engine! Behind this mouthful, you will find a
 powerful yet user-friendly tool that you can use to develop any kind of game,
 for any platform and with no usage restriction whatsoever.
@@ -36,11 +36,9 @@ consider checking them out. Otherwise, :ref:`Getting Started <doc_getting_starte
 is a great starting point.
 
 In case you have trouble with one of the tutorials or your project,
-you can find help on the various `Community channels <https://godotengine.org/community/>`_,
-especially the Godot `Discord <https://discord.gg/bdcfAYM4W9>`_ community and
-`Forum <https://forum.godotengine.org/>`_.
+you can find help on the Blazium `Discord <https://chat.blazium.app/>`_ .
 
-About Godot Engine
+About Blazium Engine
 ------------------
 
 A game engine is a complex tool and difficult to present in a few words.
