@@ -54,13 +54,11 @@ if you need a quick write-up about Godot Engine:
     platforms, including the major desktop platforms (Linux, macOS, Windows),
     mobile platforms (Android, iOS), as well as Web-based platforms and consoles.
 
-    Godot is completely free and open source under the :ref:`permissive MIT
+    Blazium is a fork of Godot and are completely free and open source under the :ref:`permissive MIT
     license <doc_complying_with_licenses>`. No strings attached, no royalties,
     nothing. Users' games are theirs, down to the last line of engine code.
-    Godot's development is fully independent and community-driven, empowering
+    Blazium's development is fully independent and community-driven, empowering
     users to help shape their engine to match their expectations.
-    It is supported by the `Godot Foundation <https://godot.foundation/>`_
-    not-for-profit.
 
 
 Organization of the documentation
@@ -78,36 +76,35 @@ This documentation is organized into several sections:
 - The **Manual** can be read or referenced as needed,
   in any order. It contains feature-specific tutorials and documentation.
 - **Contributing** gives information related to contributing to
-  Godot, whether to the core engine, documentation, demos or other parts.
+  Blazium, whether to the core engine, documentation, demos or other parts.
   It describes how to report bugs, how contributor workflows are organized, etc.
   It also contains sections intended for advanced users and contributors,
   with information on compiling the engine, contributing to the editor,
   or developing C++ modules.
-- **Community** is dedicated to the life of Godot's community and contains a list of
+- **Community** is dedicated to the life of Blazium's community and contains a list of
   recommended third-party tutorials and materials outside of this documentation.
-  It also provides details on the Asset Library. It also used to list Godot
-  communities, which are now listed on the `Godot website <https://godotengine.org/community/>`_.
+  It also provides details on the Asset Library. It also used to list Blazium
+  communities, which are now listed on the `Blazium website <https://blazium.app/>`_.
 - Finally, the **Class reference** documents the full Godot API,
   also available directly within the engine's script editor.
   You can find information on all classes, functions, signals and so on here.
 
 In addition to this documentation, you may also want to take a look at the
-various `Godot demo projects <https://github.com/godotengine/godot-demo-projects>`_.
+various `Blazium demo projects <https://blazium.app/>`_ - Work in progress.
 
 About this documentation
 ------------------------
 
-Members of the Godot Engine community continuously write, correct, edit, and
+Members of the Blazium Engine community continuously write, correct, edit, and
 improve this documentation. We are always looking for more help. You can also
 contribute by opening Github issues or translating the documentation into your language.
 If you are interested in helping, see :ref:`Ways to contribute <doc_ways_to_contribute>`
 and :ref:`Writing documentation <doc_contributing_writing_documentation>`,
-or get in touch with the `Documentation team <https://godotengine.org/teams/#documentation>`_
-on `Godot Contributors Chat <https://chat.godotengine.org/>`_.
+or get in touch with the documentation team on `Blazium Discord <https://chat.blazium.app/>`_.
 
 All documentation content is licensed under the permissive Creative Commons Attribution 3.0
 (`CC BY 3.0 <https://creativecommons.org/licenses/by/3.0/>`_) license,
-with attribution to "*Juan Linietsky, Ariel Manzur, and the Godot Engine community*"
+with attribution to "*Blazium Community, Juan Linietsky, Ariel Manzur, and the Godot Engine community*"
 unless otherwise noted.
 
-*Have fun reading and making games with Godot Engine!*
+*Have fun reading and making games with Blazium Engine!*
