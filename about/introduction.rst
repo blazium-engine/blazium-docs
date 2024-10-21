@@ -39,7 +39,7 @@ In case you have trouble with one of the tutorials or your project,
 you can find help on the Blazium `Discord <https://chat.blazium.app/>`_ .
 
 About Blazium Engine
-------------------
+--------------------
 
 A game engine is a complex tool and difficult to present in a few words.
 Here's a quick synopsis, which you are free to reuse
