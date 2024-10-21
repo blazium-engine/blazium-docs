@@ -261,7 +261,7 @@ Linux
   to make the shortcut available for all users.
 
 Is the Blazium editor a portable application?
--------------------------------------------
+---------------------------------------------
 
 In its default configuration, Blazium is *semi-portable*. Its executable can run
 from any location (including non-writable locations) and never requires
