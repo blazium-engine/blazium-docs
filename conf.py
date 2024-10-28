@@ -9,7 +9,7 @@ import os
 
 # -- General configuration ------------------------------------------------
 
-needs_sphinx = "1.3"
+needs_sphinx = "8.1"
 
 # Sphinx extension module names and templates location
 sys.path.append(os.path.abspath("_extensions"))
@@ -64,6 +64,9 @@ if not on_rtd:
 
 # Specify the site name for the Open Graph extension.
 ogp_site_name = "Blazium Engine documentation"
+ogp_social_cards = {
+    "enable": False
+}
 
 if not os.getenv("SPHINX_NO_GDSCRIPT"):
     extensions.append("gdscript")
@@ -159,7 +162,6 @@ highlight_language = "gdscript"
 # -- Options for HTML output ----------------------------------------------
 
 html_theme = "sphinx_rtd_theme"
-html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 if on_rtd:
     using_rtd_theme = True
 
@@ -169,8 +171,6 @@ html_theme_options = {
     "logo_only": True,
     # Collapse navigation (False makes it tree-like)
     "collapse_navigation": False,
-    # Hide the documentation version name/number under the logo
-    "display_version": False,
 }
 
 # VCS options: https://docs.readthedocs.io/en/latest/vcs.html#github
@@ -213,16 +213,14 @@ html_extra_path = ["robots.txt", "img/favicon.ico"]
 # These paths are either relative to html_static_path
 # or fully qualified paths (e.g. https://...)
 html_css_files = [
-    'css/algolia.css',
-    'https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css',
-    "css/custom.css?10", # Increment the number at the end when the file changes to bust the cache.
+    "css/custom.css",
 ]
 
 if not on_rtd:
     html_css_files.append("css/dev.css")
 
 html_js_files = [
-    "js/custom.js?7", # Increment the number at the end when the file changes to bust the cache.
+    "js/custom.js",
 ]
 
 # Output file base name for HTML help builder
