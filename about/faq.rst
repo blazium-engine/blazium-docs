@@ -8,36 +8,34 @@
 Frequently asked questions
 ==========================
 
-What can I do with Godot? How much does it cost? What are the license terms?
-----------------------------------------------------------------------------
+What can I do with Blazium? How much does it cost? What are the license terms?
+------------------------------------------------------------------------------
 
-Godot is `Free and open source Software <https://en.wikipedia.org/wiki/Free_and_open_source_software>`_
+Blazium is `Free and open source Software <https://en.wikipedia.org/wiki/Free_and_open_source_software>`_
 available under the `OSI-approved <https://opensource.org/licenses/MIT>`_ MIT license. This means it is
 free as in "free speech" as well as in "free beer."
 
 In short:
 
-* You are free to download and use Godot for any purpose: personal, non-profit, commercial, or otherwise.
-* You are free to modify, distribute, redistribute, and remix Godot to your heart's content, for any reason,
+* You are free to download and use Blazium for any purpose: personal, non-profit, commercial, or otherwise.
+* You are free to modify, distribute, redistribute, and remix Blazium to your heart's content, for any reason,
   both non-commercially and commercially.
 
 All the contents of this accompanying documentation are published under the permissive Creative Commons
 Attribution 3.0 (`CC BY 3.0 <https://creativecommons.org/licenses/by/3.0/>`_) license, with attribution
-to "Juan Linietsky, Ariel Manzur and the Godot Engine community."
+to "Blazium Engine community, Juan Linietsky, Ariel Manzur and the Godot Engine community."
 
 Logos and icons are generally under the same Creative Commons license. Note
-that some third-party libraries included with Godot's source code may have
+that some third-party libraries included with Blazium's & Godot's source code may have
 different licenses.
 
-For full details, look at the `COPYRIGHT.txt <https://github.com/godotengine/godot/blob/master/COPYRIGHT.txt>`_
-as well as the `LICENSE.txt <https://github.com/godotengine/godot/blob/master/LICENSE.txt>`_
-and `LOGO_LICENSE.txt <https://github.com/godotengine/godot/blob/master/LOGO_LICENSE.txt>`_ files
-in the Godot repository.
+For full details, look at the `COPYRIGHT.txt <https://github.com/blazium-engine/blazium/blob/master/COPYRIGHT.txt>`_
+as well as the `LICENSE.txt <https://github.com/blazium-engine/blazium/blob/master/LICENSE.txt>`_
+and `LOGO_LICENSE.txt <https://github.com/blazium-engine/blazium/blob/master/LOGO_LICENSE.txt>`_ files
+in the Blazium repository.
 
-Also, see `the license page on the Godot website <https://godotengine.org/license>`_.
-
-Which platforms are supported by Godot?
----------------------------------------
+Which platforms are supported by Blazium?
+-----------------------------------------
 
 **For the editor:**
 
@@ -45,7 +43,7 @@ Which platforms are supported by Godot?
 * macOS
 * Linux, \*BSD
 * Android (experimental)
-* `Web <https://editor.godotengine.org/>`__ (experimental)
+* `Web <https://editor.blazium.app/>`__ (experimental)
 
 **For exporting your games:**
 
@@ -59,7 +57,7 @@ Which platforms are supported by Godot?
 Both 32- and 64-bit binaries are supported where it makes sense, with 64
 being the default. Official macOS builds support Apple Silicon natively as well as x86_64.
 
-Some users also report building and using Godot successfully on ARM-based
+Some users also report building and using Blazium successfully on ARM-based
 systems with Linux, like the Raspberry Pi.
 
 The Godot team can't provide an open source console export due to the licensing
@@ -68,7 +66,7 @@ though, releasing games on consoles is always a lot of work. You can read more
 about :ref:`doc_consoles`.
 
 For more on this, see the sections on :ref:`exporting <toc-learn-workflow-export>`
-and :ref:`compiling Godot yourself <toc-devel-compiling>`.
+and :ref:`compiling Blazium yourself <toc-devel-compiling>`.
 
 .. note::
 
@@ -77,14 +75,14 @@ and :ref:`compiling Godot yourself <toc-devel-compiling>`.
     deprecated by Microsoft. It is still available in the current stable release
     of Godot 3 for interested users.
 
-Which programming languages are supported in Godot?
----------------------------------------------------
+Which programming languages are supported in Blazium?
+-----------------------------------------------------
 
-The officially supported languages for Godot are GDScript, C#, and C++.
+The officially supported languages for Blazium are GDScript, C#, and C++.
 See the subcategories for each language in the :ref:`scripting <toc-learn-scripting>` section.
 
-If you are just starting out with either Godot or game development in general,
-GDScript is the recommended language to learn and use since it is native to Godot.
+If you are just starting out with either Blazium or game development in general,
+GDScript is the recommended language to learn and use since it is native to Blazium.
 While scripting languages tend to be less performant than lower-level languages in
 the long run, for prototyping, developing Minimum Viable Products (MVPs), and
 focusing on Time-To-Market (TTM), GDScript will provide a fast, friendly, and capable
@@ -96,7 +94,7 @@ platform. Our friendly and hard-working development community is always
 ready to tackle new problems as they arise, but since this is an open source
 project, we recommend that you first do some due diligence yourself. Searching
 through discussions on
-`open issues <https://github.com/godotengine/godot/issues?q=is%3Aopen+is%3Aissue+label%3Atopic%3Adotnet>`__
+`open issues <https://github.com/blazium-engine/blazium/issues>`__
 is a great way to start your troubleshooting.
 
 As for new languages, support is possible via third parties with GDExtensions. (See the question
@@ -108,9 +106,9 @@ to `Python <https://github.com/touilleMan/godot-python>`_ and `Nim <https://gith
 What is GDScript and why should I use it?
 -----------------------------------------
 
-GDScript is Godot's integrated scripting language. It was built from the ground
-up to maximize Godot's potential in the least amount of code, affording both novice
-and expert developers alike to capitalize on Godot's strengths as fast as possible.
+GDScript is Blazium's integrated scripting language. It was built from the ground
+up to maximize Blazium's potential in the least amount of code, affording both novice
+and expert developers alike to capitalize on Blazium's strengths as fast as possible.
 If you've ever written anything in a language like Python before, then you'll feel
 right at home. For examples and a complete overview of the power GDScript offers
 you, check out the :ref:`GDScript scripting guide <doc_gdscript>`.
@@ -119,18 +117,18 @@ There are several reasons to use GDScript, but the most salient reason is the ov
 **reduction of complexity**.
 
 The original intent of creating a tightly integrated, custom scripting language for
-Godot was two-fold: first, it reduces the amount of time necessary to get up and running
-with Godot, giving developers a rapid way of exposing themselves to the engine with a
+Blazium was two-fold: first, it reduces the amount of time necessary to get up and running
+with Blazium, giving developers a rapid way of exposing themselves to the engine with a
 focus on productivity; second, it reduces the overall burden of maintenance, attenuates
 the dimensionality of issues, and allows the developers of the engine to focus on squashing
 bugs and improving features related to the engine core, rather than spending a lot of time
 trying to get a small set of incremental features working across a large set of languages.
 
-Since Godot is an open source project, it was imperative from the start to prioritize a
+Since Blazium is an open source project, it was imperative from the start to prioritize a
 more integrated and seamless experience over attracting additional users by supporting
 more familiar programming languages, especially when supporting those more familiar
 languages would result in a worse experience. We understand if you would rather use
-another language in Godot (see the list of supported options above). That being said, if
+another language in Blazium (see the list of supported options above). That being said, if
 you haven't given GDScript a try, try it for **three days**. Just like Godot,
 once you see how powerful it is and how rapid your development becomes, we think GDScript
 will grow on you.
@@ -167,37 +165,37 @@ The main reasons for creating a custom scripting language for Godot were:
 
 GDScript was designed to curtail the issues above, and more.
 
-What 3D model formats does Godot support?
------------------------------------------
+What 3D model formats does Blazium support?
+-------------------------------------------
 
 You can find detailed information on supported formats, how to export them from
-your 3D modeling software, and how to import them for Godot in the
+your 3D modeling software, and how to import them for Blazium in the
 :ref:`doc_importing_3d_scenes` documentation.
 
-Will [insert closed SDK such as FMOD, GameWorks, etc.] be supported in Godot?
------------------------------------------------------------------------------
+Will [insert closed SDK such as FMOD, GameWorks, etc.] be supported in Blazium?
+-------------------------------------------------------------------------------
 
-The aim of Godot is to create a free and open source MIT-licensed engine that
+The aim of Blazium is to create a free and open source MIT-licensed engine that
 is modular and extendable. There are no plans for the core engine development
 community to support any third-party, closed-source/proprietary SDKs, as integrating
-with these would go against Godot's ethos.
+with these would go against Blazium's ethos.
 
-That said, because Godot is open source and modular, nothing prevents you or
+That said, because Blazium is open source and modular, nothing prevents you or
 anyone else interested in adding those libraries as a module and shipping your
 game with them, as either open- or closed-source.
 
 To see how support for your SDK of choice could still be provided, look at the
 Plugins question below.
 
-If you know of a third-party SDK that is not supported by Godot but that offers
+If you know of a third-party SDK that is not supported by Blazium but that offers
 free and open source integration, consider starting the integration work yourself.
-Godot is not owned by one person; it belongs to the community, and it grows along
+Blazium is not owned by one person; it belongs to the community, and it grows along
 with ambitious community contributors like you.
 
-How can I extend Godot?
------------------------
+How can I extend Blazium?
+-------------------------
 
-For extending Godot, like creating Godot Editor plugins or adding support
+For extending Blazium, like creating Blazium Editor plugins or adding support
 for additional languages, take a look at :ref:`EditorPlugins <doc_making_plugins>`
 and tool scripts.
 
@@ -210,12 +208,12 @@ as well as the `Jolt physics engine integration <https://github.com/godot-jolt/g
 for Godot. This would be a good starting point to see how another
 third-party library integrates with Godot.
 
-How do I install the Godot editor on my system (for desktop integration)?
--------------------------------------------------------------------------
+How do I install the Blazium editor on my system (for desktop integration)?
+---------------------------------------------------------------------------
 
-Since you don't need to actually install Godot on your system to run it,
+Since you don't need to actually install Blazium on your system to run it,
 this means desktop integration is not performed automatically.
-There are two ways to overcome this. You can install Godot from
+There are two ways to overcome this. You can install Blazium from
 `Steam <https://store.steampowered.com/app/404790/Godot_Engine/>`__ (all platforms),
 `Scoop <https://scoop.sh/>`__ (Windows), `Homebrew <https://brew.sh/>`__ (macOS)
 or `Flathub <https://flathub.org/apps/details/org.godotengine.Godot>`__ (Linux).
@@ -226,52 +224,52 @@ Alternatively, you can manually perform the steps that an installer would do for
 Windows
 ^^^^^^^
 
-- Move the Godot executable to a stable location (i.e. outside of your Downloads folder),
+- Move the Blazium executable to a stable location (i.e. outside of your Downloads folder),
   so you don't accidentally move it and break the shortcut in the future.
-- Right-click the Godot executable and choose **Create Shortcut**.
+- Right-click the Blazium executable and choose **Create Shortcut**.
 - Move the created shortcut to ``%APPDATA%\Microsoft\Windows\Start Menu\Programs``.
   This is the user-wide location for shortcuts that will appear in the Start menu.
-  You can also pin Godot in the task bar by right-clicking the executable and choosing
+  You can also pin Blazium in the task bar by right-clicking the executable and choosing
   **Pin to Task Bar**.
 
 macOS
 ^^^^^
 
-Drag the extracted Godot application to ``/Applications/Godot.app``, then drag it
-to the Dock if desired. Spotlight will be able to find Godot as long as it's in
+Drag the extracted Blazium application to ``/Applications/Blazium.app``, then drag it
+to the Dock if desired. Spotlight will be able to find Blazium as long as it's in
 ``/Applications`` or ``~/Applications``.
 
 Linux
 ^^^^^
 
-- Move the Godot binary to a stable location (i.e. outside of your Downloads folder),
+- Move the Blazium binary to a stable location (i.e. outside of your Downloads folder),
   so you don't accidentally move it and break the shortcut in the future.
-- Rename and move the Godot binary to a location present in your ``PATH`` environment variable.
-  This is typically ``/usr/local/bin/godot`` or ``/usr/bin/godot``.
+- Rename and move the Blazium binary to a location present in your ``PATH`` environment variable.
+  This is typically ``/usr/local/bin/blazium`` or ``/usr/bin/blazium``.
   Doing this requires administrator privileges,
   but this also allows you to
-  :ref:`run the Godot editor from a terminal <doc_command_line_tutorial>` by entering ``godot``.
+  :ref:`run the Blazium editor from a terminal <doc_command_line_tutorial>` by entering ``blazium``.
 
-  - If you cannot move the Godot editor binary to a protected location, you can
+  - If you cannot move the Blazium editor binary to a protected location, you can
     keep the binary somewhere in your home directory, and modify the ``Path=``
     line in the ``.desktop`` file linked below to contain the full *absolute* path
-    to the Godot binary.
+    to the Blazium binary.
 
 - Save `this .desktop file <https://raw.githubusercontent.com/godotengine/godot/master/misc/dist/linux/org.godotengine.Godot.desktop>`__
   to ``$HOME/.local/share/applications/``. If you have administrator privileges,
   you can also save the ``.desktop`` file to ``/usr/local/share/applications``
   to make the shortcut available for all users.
 
-Is the Godot editor a portable application?
--------------------------------------------
+Is the Blazium editor a portable application?
+---------------------------------------------
 
-In its default configuration, Godot is *semi-portable*. Its executable can run
+In its default configuration, Blazium is *semi-portable*. Its executable can run
 from any location (including non-writable locations) and never requires
 administrator privileges.
 
 However, configuration files will be written to the user-wide configuration or
 data directory. This is usually a good approach, but this means configuration files
-will not carry across machines if you copy the folder containing the Godot executable.
+will not carry across machines if you copy the folder containing the Blazium executable.
 See :ref:`doc_data_paths` for more information.
 
 If *true* portable operation is desired (e.g. for use on a USB stick),
