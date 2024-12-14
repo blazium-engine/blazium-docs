@@ -151,6 +151,7 @@ Nodes
     class_lineedit
     class_linkbutton
     class_lobbyclient
+    class_loginclient
     class_margincontainer
     class_marker2d
     class_marker3d
@@ -803,6 +804,8 @@ Other objects
     class_lobbycallresult
     class_lobbyresponse
     class_lobbyresult
+    class_loginresponse
+    class_loginresult
     class_mainloop
     class_marshalls
     class_masterserverlistresponse
