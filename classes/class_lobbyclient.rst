@@ -12,8 +12,6 @@ LobbyClient
 
 **Inherits:** :ref:`BlaziumClient<class_BlaziumClient>` **<** :ref:`Node<class_Node>` **<** :ref:`Object<class_Object>`
 
-**Inherited By:** :ref:`AuthoritativeClient<class_AuthoritativeClient>`
-
 Node for connecting to the Blazium Lobby service. Offers non-authoritative lobby making features.
 
 .. rst-class:: classref-introduction-group

@@ -722,6 +722,8 @@ Other objects
     class_audiostreamplaybackpolyphonic
     class_audiostreamplaybackresampled
     class_audiostreamplaybacksynchronized
+    class_authoritativeresponse
+    class_authoritativeresult
     class_callbacktweener
     class_camerafeed
     class_cameraserver
@@ -800,8 +802,6 @@ Other objects
     class_lightmapperrd
     class_listlobbyresponse
     class_listlobbyresult
-    class_lobbycallresponse
-    class_lobbycallresult
     class_lobbyresponse
     class_lobbyresult
     class_loginresponse
