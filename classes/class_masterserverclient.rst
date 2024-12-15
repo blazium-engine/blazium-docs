@@ -12,14 +12,16 @@ MasterServerClient
 
 **Inherits:** :ref:`BlaziumClient<class_BlaziumClient>` **<** :ref:`Node<class_Node>` **<** :ref:`Object<class_Object>`
 
-A node used to connect to a master server.
+Node for connecting to the Blazium Master Server service. Offers a centralized location for game server association.
 
 .. rst-class:: classref-introduction-group
 
 Description
 -----------
 
-A node used to connect to a master server.
+The **MasterServerClient** node provides an interface for connecting to the Blazium Master Server service. There is a free instance hosted on the `blazium.app <https://blazium.app>`__ domain that is used by default.
+
+\ **Note:** All methods are non blocking and can be awaited in order to get the result.
 
 .. rst-class:: classref-reftable-group
 
@@ -71,7 +73,9 @@ Property Descriptions
 - |void| **set_game_id**\ (\ value\: :ref:`String<class_String>`\ )
 - :ref:`String<class_String>` **get_game_id**\ (\ )
 
-Game id of the game server.
+Set what game id this client should use when connecting to the server. If this is missing connection will error.
+
+Can only contain alphanumeric characters.
 
 .. rst-class:: classref-item-separator
 
@@ -88,7 +92,7 @@ Game id of the game server.
 - |void| **set_server_url**\ (\ value\: :ref:`String<class_String>`\ )
 - :ref:`String<class_String>` **get_server_url**\ (\ )
 
-Set to what url this master server should connect to.
+Set to what url this client should connect to.
 
 .. rst-class:: classref-section-separator
 
@@ -107,6 +111,8 @@ Method Descriptions
 
 Create a game server.
 
+Returns a :ref:`MasterServerResponse<class_MasterServerResponse>` object that has a :ref:`MasterServerResponse.finished<class_MasterServerResponse_signal_finished>` signal that is emitted when finished.
+
 .. rst-class:: classref-item-separator
 
 ----
@@ -119,6 +125,8 @@ Create a game server.
 
 Get a list of recent games.
 
+Returns a :ref:`MasterServerListResponse<class_MasterServerListResponse>` object that has a :ref:`MasterServerListResponse.finished<class_MasterServerListResponse_signal_finished>` signal that is emitted when finished.
+
 .. rst-class:: classref-item-separator
 
 ----
@@ -130,6 +138,8 @@ Get a list of recent games.
 :ref:`MasterServerResponse<class_MasterServerResponse>` **update_game**\ (\ game_server_info\: :ref:`GameServerInfo<class_GameServerInfo>`\ ) :ref:`🔗<class_MasterServerClient_method_update_game>`
 
 Update a game server.
+
+Returns a :ref:`MasterServerResponse<class_MasterServerResponse>` object that has a :ref:`MasterServerResponse.finished<class_MasterServerResponse_signal_finished>` signal that is emitted when finished.
 
 .. |virtual| replace:: :abbr:`virtual (This method should typically be overridden by the user to have any effect.)`
 .. |const| replace:: :abbr:`const (This method has no side effects. It doesn't modify any of the instance's member variables.)`

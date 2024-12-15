@@ -19,7 +19,7 @@ Game server info used by the :ref:`MasterServerClient<class_MasterServerClient>`
 Description
 -----------
 
-Game server info used by the :ref:`MasterServerClient<class_MasterServerClient>`. Used to create or update a game server.
+Game server info used by the :ref:`MasterServerClient<class_MasterServerClient>`. Used to :ref:`MasterServerClient.create_game<class_MasterServerClient_method_create_game>` or :ref:`MasterServerClient.update_game<class_MasterServerClient_method_update_game>`.
 
 .. rst-class:: classref-reftable-group
 
@@ -101,7 +101,7 @@ Name of the game server.
 - |void| **set_id**\ (\ value\: :ref:`String<class_String>`\ )
 - :ref:`String<class_String>` **get_id**\ (\ )
 
-Id of the game server. Generated after call to create game server.
+Id of the game server. Generated after call to :ref:`MasterServerClient.create_game<class_MasterServerClient_method_create_game>`.
 
 .. rst-class:: classref-item-separator
 

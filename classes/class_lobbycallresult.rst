@@ -19,7 +19,7 @@ A result from a :ref:`LobbyCallResponse<class_LobbyCallResponse>`.
 Description
 -----------
 
-A result from a :ref:`LobbyCallResponse<class_LobbyCallResponse>`.
+A result from a :ref:`LobbyCallResponse<class_LobbyCallResponse>`. Contains either result or error.
 
 .. rst-class:: classref-reftable-group
 

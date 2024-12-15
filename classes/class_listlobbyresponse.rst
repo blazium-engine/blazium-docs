@@ -12,14 +12,14 @@ ListLobbyResponse
 
 **Inherits:** :ref:`RefCounted<class_RefCounted>` **<** :ref:`Object<class_Object>`
 
-Response from a list lobby request.
+Response from a :ref:`LobbyClient.list_lobbies<class_LobbyClient_method_list_lobbies>` call.
 
 .. rst-class:: classref-introduction-group
 
 Description
 -----------
 
-Response from a list lobby request. Await on finished to get the :ref:`ListLobbyResult<class_ListLobbyResult>`.
+Response from a :ref:`LobbyClient.list_lobbies<class_LobbyClient_method_list_lobbies>` call. Await on :ref:`finished<class_ListLobbyResponse_signal_finished>` signal to get the :ref:`ListLobbyResult<class_ListLobbyResult>`.
 
 .. rst-class:: classref-section-separator
 

@@ -12,14 +12,14 @@ LobbyCallResponse
 
 **Inherits:** :ref:`RefCounted<class_RefCounted>` **<** :ref:`Object<class_Object>`
 
-Response from a lobby call function.
+Response from a :ref:`AuthoritativeClient.lobby_call<class_AuthoritativeClient_method_lobby_call>` call.
 
 .. rst-class:: classref-introduction-group
 
 Description
 -----------
 
-Response from a lobby call function. Await on finished to get the :ref:`LobbyCallResult<class_LobbyCallResult>`.
+Response from a :ref:`AuthoritativeClient.lobby_call<class_AuthoritativeClient_method_lobby_call>` call. Await on :ref:`finished<class_LobbyCallResponse_signal_finished>` signal to get the :ref:`LobbyCallResult<class_LobbyCallResult>`.
 
 .. rst-class:: classref-section-separator
 

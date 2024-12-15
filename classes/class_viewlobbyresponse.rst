@@ -12,14 +12,14 @@ ViewLobbyResponse
 
 **Inherits:** :ref:`RefCounted<class_RefCounted>` **<** :ref:`Object<class_Object>`
 
-View response from a lobby request.
+Response from a :ref:`LobbyClient<class_LobbyClient>` call.
 
 .. rst-class:: classref-introduction-group
 
 Description
 -----------
 
-View response from a lobby request. Await on finished to get the result.
+Response from a :ref:`LobbyClient<class_LobbyClient>` call. Await on :ref:`finished<class_ViewLobbyResponse_signal_finished>` signal to get the :ref:`ViewLobbyResult<class_ViewLobbyResult>`.
 
 .. rst-class:: classref-section-separator
 

@@ -12,14 +12,14 @@ POGRResponse
 
 **Inherits:** :ref:`RefCounted<class_RefCounted>` **<** :ref:`Object<class_Object>`
 
-A response from a pogr.io request.
+Response from a :ref:`POGRClient<class_POGRClient>` call.
 
 .. rst-class:: classref-introduction-group
 
 Description
 -----------
 
-A response from a pogr.io request.
+Response from a :ref:`POGRClient<class_POGRClient>` call. Await on :ref:`finished<class_POGRResponse_signal_finished>` signal to get the :ref:`POGRResult<class_POGRResult>`.
 
 .. rst-class:: classref-section-separator
 

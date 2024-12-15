@@ -19,7 +19,7 @@ A result from a :ref:`LoginResponse<class_LoginResponse>`.
 Description
 -----------
 
-A result from a :ref:`LoginResponse<class_LoginResponse>`.
+A result from a :ref:`LoginResponse<class_LoginResponse>`. Contains either result or error.
 
 .. rst-class:: classref-reftable-group
 

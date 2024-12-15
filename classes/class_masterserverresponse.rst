@@ -12,14 +12,14 @@ MasterServerResponse
 
 **Inherits:** :ref:`RefCounted<class_RefCounted>` **<** :ref:`Object<class_Object>`
 
-Response from a create or update game request.
+Response from a :ref:`MasterServerClient.create_game<class_MasterServerClient_method_create_game>` or :ref:`MasterServerClient.update_game<class_MasterServerClient_method_update_game>` call.
 
 .. rst-class:: classref-introduction-group
 
 Description
 -----------
 
-Response from a create or update game request.
+Response from a :ref:`MasterServerClient.create_game<class_MasterServerClient_method_create_game>` or :ref:`MasterServerClient.update_game<class_MasterServerClient_method_update_game>` call. Await on :ref:`finished<class_MasterServerResponse_signal_finished>` signal to get the :ref:`MasterServerResult<class_MasterServerResult>`.
 
 .. rst-class:: classref-section-separator
 

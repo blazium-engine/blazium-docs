@@ -12,14 +12,24 @@ POGRClient
 
 **Inherits:** :ref:`BlaziumClient<class_BlaziumClient>` **<** :ref:`Node<class_Node>` **<** :ref:`Object<class_Object>`
 
-Client for the pogr.io analytics website.
+Node for connecting to the POGR analytics service.
 
 .. rst-class:: classref-introduction-group
 
 Description
 -----------
 
-Client for the pogr.io analytics website.
+The **POGRClient** node provides an interface for connecting to the POGR analytics service. Find out more on the `pogr.gg <https://pogr.gg>`__ website.
+
+The normal flow is as follows:
+
+1. Initiate a session using :ref:`init<class_POGRClient_method_init>` method.
+
+2. Send data using :ref:`data<class_POGRClient_method_data>`, :ref:`event<class_POGRClient_method_event>`, :ref:`logs<class_POGRClient_method_logs>`, :ref:`metrics<class_POGRClient_method_metrics>` and :ref:`monitor<class_POGRClient_method_monitor>` methods, depending on use case.
+
+3. Close the session using :ref:`end<class_POGRClient_method_end>` method at the end of the game.
+
+\ **Note:** All methods are non blocking and can be awaited in order to get the result.
 
 .. rst-class:: classref-reftable-group
 
@@ -31,6 +41,8 @@ Methods
 
    +-----------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`POGRResponse<class_POGRResponse>` | :ref:`data<class_POGRClient_method_data>`\ (\ data\: :ref:`Dictionary<class_Dictionary>`\ )                                                                                                                                                                                                                                              |
+   +-----------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`POGRResponse<class_POGRResponse>` | :ref:`end<class_POGRClient_method_end>`\ (\ )                                                                                                                                                                                                                                                                                            |
    +-----------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`POGRResponse<class_POGRResponse>` | :ref:`event<class_POGRClient_method_event>`\ (\ event_name\: :ref:`String<class_String>`, event_data\: :ref:`Dictionary<class_Dictionary>`, event_flag\: :ref:`String<class_String>`, event_key\: :ref:`String<class_String>`, event_type\: :ref:`String<class_String>`, event_sub_type\: :ref:`String<class_String>`\ )                 |
    +-----------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -68,6 +80,22 @@ Method Descriptions
 
 Send unstructured data.
 
+Returns a :ref:`POGRResponse<class_POGRResponse>` object that has a :ref:`POGRResponse.finished<class_POGRResponse_signal_finished>` signal that is emitted when finished.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_POGRClient_method_end:
+
+.. rst-class:: classref-method
+
+:ref:`POGRResponse<class_POGRResponse>` **end**\ (\ ) :ref:`🔗<class_POGRClient_method_end>`
+
+Send end request.
+
+Returns a :ref:`POGRResponse<class_POGRResponse>` object that has a :ref:`POGRResponse.finished<class_POGRResponse_signal_finished>` signal that is emitted when finished.
+
 .. rst-class:: classref-item-separator
 
 ----
@@ -79,6 +107,8 @@ Send unstructured data.
 :ref:`POGRResponse<class_POGRResponse>` **event**\ (\ event_name\: :ref:`String<class_String>`, event_data\: :ref:`Dictionary<class_Dictionary>`, event_flag\: :ref:`String<class_String>`, event_key\: :ref:`String<class_String>`, event_type\: :ref:`String<class_String>`, event_sub_type\: :ref:`String<class_String>`\ ) :ref:`🔗<class_POGRClient_method_event>`
 
 Send event with unstructured data.
+
+Returns a :ref:`POGRResponse<class_POGRResponse>` object that has a :ref:`POGRResponse.finished<class_POGRResponse_signal_finished>` signal that is emitted when finished.
 
 .. rst-class:: classref-item-separator
 
@@ -126,7 +156,7 @@ Get the pogr url.
 
 :ref:`String<class_String>` **get_session_id**\ (\ ) :ref:`🔗<class_POGRClient_method_get_session_id>`
 
-Get the session id.
+Get the session id. This is a unique identifier for the current session generated after :ref:`init<class_POGRClient_method_init>` is called.
 
 .. rst-class:: classref-item-separator
 
@@ -140,6 +170,8 @@ Get the session id.
 
 Send init request. Needs to be called first.
 
+Returns a :ref:`POGRResponse<class_POGRResponse>` object that has a :ref:`POGRResponse.finished<class_POGRResponse_signal_finished>` signal that is emitted when finished.
+
 .. rst-class:: classref-item-separator
 
 ----
@@ -151,6 +183,8 @@ Send init request. Needs to be called first.
 :ref:`POGRResponse<class_POGRResponse>` **logs**\ (\ tags\: :ref:`Dictionary<class_Dictionary>`, data\: :ref:`Dictionary<class_Dictionary>`, environment\: :ref:`String<class_String>`, log\: :ref:`String<class_String>`, service\: :ref:`String<class_String>`, severity\: :ref:`String<class_String>`, type\: :ref:`String<class_String>`\ ) :ref:`🔗<class_POGRClient_method_logs>`
 
 Add logs to the analytics.
+
+Returns a :ref:`POGRResponse<class_POGRResponse>` object that has a :ref:`POGRResponse.finished<class_POGRResponse_signal_finished>` signal that is emitted when finished.
 
 .. rst-class:: classref-item-separator
 
@@ -164,6 +198,8 @@ Add logs to the analytics.
 
 Add metrics to the analytics.
 
+Returns a :ref:`POGRResponse<class_POGRResponse>` object that has a :ref:`POGRResponse.finished<class_POGRResponse_signal_finished>` signal that is emitted when finished.
+
 .. rst-class:: classref-item-separator
 
 ----
@@ -175,6 +211,8 @@ Add metrics to the analytics.
 :ref:`POGRResponse<class_POGRResponse>` **monitor**\ (\ settings\: :ref:`Dictionary<class_Dictionary>`\ ) :ref:`🔗<class_POGRClient_method_monitor>`
 
 Send monitor request.
+
+Returns a :ref:`POGRResponse<class_POGRResponse>` object that has a :ref:`POGRResponse.finished<class_POGRResponse_signal_finished>` signal that is emitted when finished.
 
 .. |virtual| replace:: :abbr:`virtual (This method should typically be overridden by the user to have any effect.)`
 .. |const| replace:: :abbr:`const (This method has no side effects. It doesn't modify any of the instance's member variables.)`

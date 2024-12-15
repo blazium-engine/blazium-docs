@@ -12,14 +12,14 @@ MasterServerListResponse
 
 **Inherits:** :ref:`RefCounted<class_RefCounted>` **<** :ref:`Object<class_Object>`
 
-Response from a list games request.
+Response from a :ref:`MasterServerClient.recent_games<class_MasterServerClient_method_recent_games>` call.
 
 .. rst-class:: classref-introduction-group
 
 Description
 -----------
 
-Response from a list games request.
+Response from a :ref:`MasterServerClient.recent_games<class_MasterServerClient_method_recent_games>` call. Await on :ref:`finished<class_MasterServerListResponse_signal_finished>` signal to get the :ref:`MasterServerListResult<class_MasterServerListResult>`.
 
 .. rst-class:: classref-section-separator
 
@@ -34,7 +34,7 @@ Signals
 
 .. rst-class:: classref-signal
 
-**finished**\ (\ result\: :ref:`MasterServerResult<class_MasterServerResult>`\ ) :ref:`🔗<class_MasterServerListResponse_signal_finished>`
+**finished**\ (\ result\: :ref:`MasterServerListResult<class_MasterServerListResult>`\ ) :ref:`🔗<class_MasterServerListResponse_signal_finished>`
 
 Signal emitted when the request is finished.
 
