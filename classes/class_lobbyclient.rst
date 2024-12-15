@@ -14,14 +14,38 @@ LobbyClient
 
 **Inherited By:** :ref:`AuthoritativeClient<class_AuthoritativeClient>`
 
-A node used to connect to a lobby server.
+Node for connecting to the Blazium Lobby service. Offers non-authoritative lobby making features.
 
 .. rst-class:: classref-introduction-group
 
 Description
 -----------
 
-A node used to connect to a lobby server. It can be used to do matchmaking. You can do operations such as create lobby, join lobby, etc. The server is configurable and can either be self deployed or you can use the blazium free matchmaking server.
+The **LobbyClient** node provides an interface for connecting to the Blazium Lobby service. There is a free instance hosted on the `blazium.app <https://blazium.app>`__ domain that is used by default.
+
+The normal flow is as follows:
+
+1. Listen to all the signals you are interested in.
+
+2. Connect to the server using :ref:`connect_to_lobby<class_LobbyClient_method_connect_to_lobby>` method.
+
+3. Call any other methods to create, view or join lobbies, as well as add data to them.
+
+4. Close the session using :ref:`disconnect_from_lobby<class_LobbyClient_method_disconnect_from_lobby>` method at the end of the game.
+
+\ **Note:** Some methods are non blocking and can be awaited in order to get the result.
+
+There are also members on this class that are automatically updated as the lobby gets updated, such as:
+
+- :ref:`peer<class_LobbyClient_property_peer>`: The current peer. Reflects changes to the self peer.
+
+- :ref:`peers<class_LobbyClient_property_peers>`: The lobby peers. Reflects changes to all peers.
+
+- :ref:`lobby<class_LobbyClient_property_lobby>`: The lobby. Reflects changes to the lobby.
+
+- :ref:`host_data<class_LobbyClient_property_host_data>`: The current lobby private data. Only works if you are host.
+
+- :ref:`peer_data<class_LobbyClient_property_peer_data>`: The current peer private data.
 
 .. rst-class:: classref-reftable-group
 
@@ -497,6 +521,8 @@ Method Descriptions
 
 Add data to the lobby. Only works if you are host.
 
+Returns a :ref:`LobbyResponse<class_LobbyResponse>` object that has a :ref:`LobbyResponse.finished<class_LobbyResponse_signal_finished>` signal that is emitted when finished.
+
 Generates :ref:`received_lobby_data<class_LobbyClient_signal_received_lobby_data>`.
 
 .. rst-class:: classref-item-separator
@@ -510,6 +536,8 @@ Generates :ref:`received_lobby_data<class_LobbyClient_signal_received_lobby_data
 :ref:`LobbyResponse<class_LobbyResponse>` **add_lobby_tags**\ (\ tags\: :ref:`Dictionary<class_Dictionary>`\ ) :ref:`🔗<class_LobbyClient_method_add_lobby_tags>`
 
 Add tags to the lobby. Only works if you are host.
+
+Returns a :ref:`LobbyResponse<class_LobbyResponse>` object that has a :ref:`LobbyResponse.finished<class_LobbyResponse_signal_finished>` signal that is emitted when finished.
 
 Generates :ref:`lobby_tagged<class_LobbyClient_signal_lobby_tagged>`.
 
@@ -525,6 +553,8 @@ Generates :ref:`lobby_tagged<class_LobbyClient_signal_lobby_tagged>`.
 
 Add data to a peer. Only works if you are host.
 
+Returns a :ref:`LobbyResponse<class_LobbyResponse>` object that has a :ref:`LobbyResponse.finished<class_LobbyResponse_signal_finished>` signal that is emitted when finished.
+
 Generates :ref:`received_peer_data<class_LobbyClient_signal_received_peer_data>`.
 
 .. rst-class:: classref-item-separator
@@ -538,6 +568,8 @@ Generates :ref:`received_peer_data<class_LobbyClient_signal_received_peer_data>`
 :ref:`LobbyResponse<class_LobbyResponse>` **add_peers_data**\ (\ data\: :ref:`Dictionary<class_Dictionary>`, is_private\: :ref:`bool<class_bool>` = false\ ) :ref:`🔗<class_LobbyClient_method_add_peers_data>`
 
 Add data to all peers. Only works if you are host.
+
+Returns a :ref:`LobbyResponse<class_LobbyResponse>` object that has a :ref:`LobbyResponse.finished<class_LobbyResponse_signal_finished>` signal that is emitted when finished.
 
 Generates :ref:`received_peer_data<class_LobbyClient_signal_received_peer_data>`.
 
@@ -553,6 +585,8 @@ Generates :ref:`received_peer_data<class_LobbyClient_signal_received_peer_data>`
 
 Connect to a Blazium Lobby Server using the :ref:`game_id<class_LobbyClient_property_game_id>` and :ref:`server_url<class_LobbyClient_property_server_url>`.
 
+Generates :ref:`connected_to_lobby<class_LobbyClient_signal_connected_to_lobby>` signal if successful.
+
 .. rst-class:: classref-item-separator
 
 ----
@@ -566,6 +600,8 @@ Connect to a Blazium Lobby Server using the :ref:`game_id<class_LobbyClient_prop
 Create a lobby and become host. If you are already in a lobby, you cannot create one. You need to leave first.
 
 The new lobby can have a title, tags, max players and password. 0 max players means unlimited.
+
+Returns a :ref:`ViewLobbyResponse<class_ViewLobbyResponse>` object that has a :ref:`ViewLobbyResponse.finished<class_ViewLobbyResponse_signal_finished>` signal that is emitted when finished.
 
 Generates :ref:`lobby_created<class_LobbyClient_signal_lobby_created>` signal.
 
@@ -581,6 +617,8 @@ Generates :ref:`lobby_created<class_LobbyClient_signal_lobby_created>` signal.
 
 Delete one or more keys from the lobby data. Only works if you are host.
 
+Returns a :ref:`LobbyResponse<class_LobbyResponse>` object that has a :ref:`LobbyResponse.finished<class_LobbyResponse_signal_finished>` signal that is emitted when finished.
+
 Generates :ref:`received_lobby_data<class_LobbyClient_signal_received_lobby_data>`.
 
 .. rst-class:: classref-item-separator
@@ -595,6 +633,8 @@ Generates :ref:`received_lobby_data<class_LobbyClient_signal_received_lobby_data
 
 Delete one or more keys from the lobby tags. Only works if you are host.
 
+Returns a :ref:`LobbyResponse<class_LobbyResponse>` object that has a :ref:`LobbyResponse.finished<class_LobbyResponse_signal_finished>` signal that is emitted when finished.
+
 Generates :ref:`lobby_tagged<class_LobbyClient_signal_lobby_tagged>`.
 
 .. rst-class:: classref-item-separator
@@ -607,7 +647,9 @@ Generates :ref:`lobby_tagged<class_LobbyClient_signal_lobby_tagged>`.
 
 :ref:`LobbyResponse<class_LobbyResponse>` **del_peer_data**\ (\ keys\: :ref:`Array<class_Array>`\[:ref:`String<class_String>`\], target_peer\: :ref:`String<class_String>`, is_private\: :ref:`bool<class_bool>` = false\ ) :ref:`🔗<class_LobbyClient_method_del_peer_data>`
 
-one or more keys from the peer data. Only works if you are host.
+Delete one or more keys from the peer data. Only works if you are host.
+
+Returns a :ref:`LobbyResponse<class_LobbyResponse>` object that has a :ref:`LobbyResponse.finished<class_LobbyResponse_signal_finished>` signal that is emitted when finished.
 
 Generates :ref:`received_peer_data<class_LobbyClient_signal_received_peer_data>`.
 
@@ -621,7 +663,9 @@ Generates :ref:`received_peer_data<class_LobbyClient_signal_received_peer_data>`
 
 :ref:`LobbyResponse<class_LobbyResponse>` **del_peers_data**\ (\ keys\: :ref:`Array<class_Array>`\[:ref:`String<class_String>`\], is_private\: :ref:`bool<class_bool>` = false\ ) :ref:`🔗<class_LobbyClient_method_del_peers_data>`
 
-one or more keys from the peers data. Only works if you are host.
+Delete one or more keys from the peers data. Only works if you are host.
+
+Returns a :ref:`LobbyResponse<class_LobbyResponse>` object that has a :ref:`LobbyResponse.finished<class_LobbyResponse_signal_finished>` signal that is emitted when finished.
 
 Generates :ref:`received_peer_data<class_LobbyClient_signal_received_peer_data>`.
 
@@ -636,6 +680,8 @@ Generates :ref:`received_peer_data<class_LobbyClient_signal_received_peer_data>`
 |void| **disconnect_from_lobby**\ (\ ) :ref:`🔗<class_LobbyClient_method_disconnect_from_lobby>`
 
 Disconnect from the lobby server.
+
+Generates :ref:`disconnected_from_lobby<class_LobbyClient_signal_disconnected_from_lobby>` signal.
 
 .. rst-class:: classref-item-separator
 
@@ -663,6 +709,8 @@ Join a lobby. If you are already in a lobby, you cannot join another one. You ne
 
 If the lobby you want to join is password protected, you need to provide the password.
 
+Returns a :ref:`ViewLobbyResponse<class_ViewLobbyResponse>` object that has a :ref:`ViewLobbyResponse.finished<class_ViewLobbyResponse_signal_finished>` signal that is emitted when finished.
+
 Generates :ref:`lobby_joined<class_LobbyClient_signal_lobby_joined>`.
 
 .. rst-class:: classref-item-separator
@@ -677,6 +725,8 @@ Generates :ref:`lobby_joined<class_LobbyClient_signal_lobby_joined>`.
 
 Kick a peer. You need to be host to do so.
 
+Returns a :ref:`LobbyResponse<class_LobbyResponse>` object that has a :ref:`LobbyResponse.finished<class_LobbyResponse_signal_finished>` signal that is emitted when finished.
+
 Generates :ref:`peer_left<class_LobbyClient_signal_peer_left>` signal with kicked set to true.
 
 .. rst-class:: classref-item-separator
@@ -690,6 +740,8 @@ Generates :ref:`peer_left<class_LobbyClient_signal_peer_left>` signal with kicke
 :ref:`LobbyResponse<class_LobbyResponse>` **leave_lobby**\ (\ ) :ref:`🔗<class_LobbyClient_method_leave_lobby>`
 
 Leave a lobby. You need to be in a lobby to leave one.
+
+Returns a :ref:`LobbyResponse<class_LobbyResponse>` object that has a :ref:`LobbyResponse.finished<class_LobbyResponse_signal_finished>` signal that is emitted when finished.
 
 Generates :ref:`lobby_left<class_LobbyClient_signal_lobby_left>`.
 
@@ -717,6 +769,8 @@ Lists all lobbies. Lobbies that are sealed won't show in the list, except if you
 
 Send a notification either to the host, or if you are host send data to all peers.
 
+Returns a :ref:`LobbyResponse<class_LobbyResponse>` object that has a :ref:`LobbyResponse.finished<class_LobbyResponse_signal_finished>` signal that is emitted when finished.
+
 Generates :ref:`lobby_notified<class_LobbyClient_signal_lobby_notified>` signal.
 
 .. rst-class:: classref-item-separator
@@ -730,6 +784,8 @@ Generates :ref:`lobby_notified<class_LobbyClient_signal_lobby_notified>` signal.
 :ref:`LobbyResponse<class_LobbyResponse>` **notify_peer**\ (\ data\: :ref:`Variant<class_Variant>`, target_peer\: :ref:`String<class_String>`\ ) :ref:`🔗<class_LobbyClient_method_notify_peer>`
 
 Send a notification to a peer, works only if you are host.
+
+Returns a :ref:`LobbyResponse<class_LobbyResponse>` object that has a :ref:`LobbyResponse.finished<class_LobbyResponse_signal_finished>` signal that is emitted when finished.
 
 Generates :ref:`lobby_notified<class_LobbyClient_signal_lobby_notified>` signal.
 
@@ -745,6 +801,8 @@ Generates :ref:`lobby_notified<class_LobbyClient_signal_lobby_notified>` signal.
 
 Send a chat message. Only works if you are in a lobby.
 
+Returns a :ref:`LobbyResponse<class_LobbyResponse>` object that has a :ref:`LobbyResponse.finished<class_LobbyResponse_signal_finished>` signal that is emitted when finished.
+
 Generates :ref:`peer_messaged<class_LobbyClient_signal_peer_messaged>`.
 
 .. rst-class:: classref-item-separator
@@ -758,6 +816,8 @@ Generates :ref:`peer_messaged<class_LobbyClient_signal_peer_messaged>`.
 :ref:`LobbyResponse<class_LobbyResponse>` **set_lobby_ready**\ (\ ready\: :ref:`bool<class_bool>`\ ) :ref:`🔗<class_LobbyClient_method_set_lobby_ready>`
 
 Ready up in the lobby. You need to be in a lobby and unready to run this.
+
+Returns a :ref:`LobbyResponse<class_LobbyResponse>` object that has a :ref:`LobbyResponse.finished<class_LobbyResponse_signal_finished>` signal that is emitted when finished.
 
 Generates :ref:`peer_ready<class_LobbyClient_signal_peer_ready>`.
 
@@ -773,6 +833,8 @@ Generates :ref:`peer_ready<class_LobbyClient_signal_peer_ready>`.
 
 Seals the lobby. You need to be the host to do this and the lobby needs to be unsealed.
 
+Returns a :ref:`LobbyResponse<class_LobbyResponse>` object that has a :ref:`LobbyResponse.finished<class_LobbyResponse_signal_finished>` signal that is emitted when finished.
+
 Generates :ref:`lobby_sealed<class_LobbyClient_signal_lobby_sealed>`.
 
 .. rst-class:: classref-item-separator
@@ -787,6 +849,8 @@ Generates :ref:`lobby_sealed<class_LobbyClient_signal_lobby_sealed>`.
 
 Set your peer name.
 
+Returns a :ref:`LobbyResponse<class_LobbyResponse>` object that has a :ref:`LobbyResponse.finished<class_LobbyResponse_signal_finished>` signal that is emitted when finished.
+
 Generates :ref:`peer_named<class_LobbyClient_signal_peer_named>` signal if you are in lobby.
 
 .. rst-class:: classref-item-separator
@@ -800,6 +864,8 @@ Generates :ref:`peer_named<class_LobbyClient_signal_peer_named>` signal if you a
 :ref:`ViewLobbyResponse<class_ViewLobbyResponse>` **view_lobby**\ (\ lobby_id\: :ref:`String<class_String>` = "", password\: :ref:`String<class_String>` = ""\ ) :ref:`🔗<class_LobbyClient_method_view_lobby>`
 
 View data from a lobby. Returns lobby settings and peers.
+
+Returns a :ref:`ViewLobbyResponse<class_ViewLobbyResponse>` object that has a :ref:`ViewLobbyResponse.finished<class_ViewLobbyResponse_signal_finished>` signal that is emitted when finished.
 
 .. |virtual| replace:: :abbr:`virtual (This method should typically be overridden by the user to have any effect.)`
 .. |const| replace:: :abbr:`const (This method has no side effects. It doesn't modify any of the instance's member variables.)`

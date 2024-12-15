@@ -12,14 +12,14 @@ LobbyInfo
 
 **Inherits:** :ref:`Resource<class_Resource>` **<** :ref:`RefCounted<class_RefCounted>` **<** :ref:`Object<class_Object>`
 
-Lobby information returned after a view lobby request.
+Lobby information returned after a :ref:`LobbyClient<class_LobbyClient>` request that returns a lobby.
 
 .. rst-class:: classref-introduction-group
 
 Description
 -----------
 
-Lobby information returned after a view lobby request.
+Lobby information returned after a :ref:`LobbyClient<class_LobbyClient>` request that returns a lobby.
 
 .. rst-class:: classref-reftable-group
 
@@ -166,9 +166,7 @@ The maximum number of players allowed in the lobby. 0 = unlimited
 
 - :ref:`bool<class_bool>` **is_password_protected**\ (\ )
 
-.. container:: contribute
-
-	There is currently no description for this property. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
+Whether the lobby is password protected.
 
 .. rst-class:: classref-item-separator
 

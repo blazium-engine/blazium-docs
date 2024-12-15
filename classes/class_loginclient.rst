@@ -12,14 +12,28 @@ LoginClient
 
 **Inherits:** :ref:`BlaziumClient<class_BlaziumClient>` **<** :ref:`Node<class_Node>` **<** :ref:`Object<class_Object>`
 
-A node used to connect to a login server.
+Node for connecting to the Blazium Login service. Offers authentication mechanism.
 
 .. rst-class:: classref-introduction-group
 
 Description
 -----------
 
-A node used to connect to a login server.
+The **LoginClient** node provides an interface for connecting to the Blazium Login service. There is a free instance hosted on the `blazium.app <https://blazium.app>`__ domain that is used by default.
+
+The authentication flow is as follows:
+
+1. Listen to all the signals you are interested in.
+
+2. Connect to the server using the :ref:`connect_to_server<class_LoginClient_method_connect_to_server>` method.
+
+3. Then you can request login info using the :ref:`request_login_info<class_LoginClient_method_request_login_info>` method.
+
+4. Open the resulting login url received after awaiting on the :ref:`LoginResponse.finished<class_LoginResponse_signal_finished>` signal.
+
+5. Obtain the jwt from the :ref:`received_jwt<class_LoginClient_signal_received_jwt>` signal.
+
+\ **Note:** Some methods are non blocking and can be awaited in order to get the result.
 
 .. rst-class:: classref-reftable-group
 
@@ -125,7 +139,7 @@ Property Descriptions
 
 - :ref:`bool<class_bool>` **get_connected**\ (\ )
 
-True if the client is connected, else false.
+Client connected state.
 
 .. rst-class:: classref-item-separator
 
@@ -142,7 +156,9 @@ True if the client is connected, else false.
 - |void| **set_game_id**\ (\ value\: :ref:`String<class_String>`\ )
 - :ref:`String<class_String>` **get_game_id**\ (\ )
 
-The game id.
+Set what game id this client should use when connecting to the server. If this is missing connection will error.
+
+Can only contain alphanumeric characters.
 
 .. rst-class:: classref-item-separator
 
@@ -159,7 +175,7 @@ The game id.
 - |void| **set_server_url**\ (\ value\: :ref:`String<class_String>`\ )
 - :ref:`String<class_String>` **get_server_url**\ (\ )
 
-Set to what url this login should connect to.
+Set to what url this client should connect to.
 
 .. rst-class:: classref-section-separator
 
@@ -176,7 +192,9 @@ Method Descriptions
 
 :ref:`bool<class_bool>` **connect_to_server**\ (\ ) :ref:`🔗<class_LoginClient_method_connect_to_server>`
 
-Connect to the server.
+Connects to the server specified in :ref:`server_url<class_LoginClient_property_server_url>` using the game id specified in :ref:`game_id<class_LoginClient_property_game_id>`. Must be done before requesting login info.
+
+Generates :ref:`connected_to_server<class_LoginClient_signal_connected_to_server>` when connected.
 
 .. rst-class:: classref-item-separator
 
@@ -202,7 +220,9 @@ Generates :ref:`disconnected_from_server<class_LoginClient_signal_disconnected_f
 
 :ref:`LoginResponse<class_LoginResponse>` **request_login_info**\ (\ login_type\: :ref:`String<class_String>`\ ) :ref:`🔗<class_LoginClient_method_request_login_info>`
 
-Request login info.
+Request login info using the login type specified.
+
+Returns a :ref:`LoginResponse<class_LoginResponse>` object that has a :ref:`LoginResponse.finished<class_LoginResponse_signal_finished>` signal that is emitted when finished.
 
 .. |virtual| replace:: :abbr:`virtual (This method should typically be overridden by the user to have any effect.)`
 .. |const| replace:: :abbr:`const (This method has no side effects. It doesn't modify any of the instance's member variables.)`

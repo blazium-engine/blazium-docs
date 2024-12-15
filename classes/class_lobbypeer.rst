@@ -12,14 +12,14 @@ LobbyPeer
 
 **Inherits:** :ref:`Resource<class_Resource>` **<** :ref:`RefCounted<class_RefCounted>` **<** :ref:`Object<class_Object>`
 
-Lobby peers information returned after a view lobby request.
+Lobby information returned after a :ref:`LobbyClient<class_LobbyClient>` request that returns peers.
 
 .. rst-class:: classref-introduction-group
 
 Description
 -----------
 
-Lobby peers information returned after a view lobby request.
+Lobby information returned after a :ref:`LobbyClient<class_LobbyClient>` request that returns peers.
 
 .. rst-class:: classref-reftable-group
 
@@ -58,9 +58,7 @@ Property Descriptions
 
 - :ref:`Dictionary<class_Dictionary>` **get_data**\ (\ )
 
-.. container:: contribute
-
-	There is currently no description for this property. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
+Public data of the peer.
 
 .. rst-class:: classref-item-separator
 

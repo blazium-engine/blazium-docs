@@ -12,14 +12,14 @@ POGRResult
 
 **Inherits:** :ref:`RefCounted<class_RefCounted>` **<** :ref:`Object<class_Object>`
 
-A result from a response from a pogr.io request.
+A result from a :ref:`POGRResponse<class_POGRResponse>`.
 
 .. rst-class:: classref-introduction-group
 
 Description
 -----------
 
-A result from a response from a pogr.io request.
+A result from a :ref:`POGRResponse<class_POGRResponse>`. Contains either result or error.
 
 .. rst-class:: classref-reftable-group
 
@@ -66,7 +66,7 @@ Property Descriptions
 
 - :ref:`String<class_String>` **get_error**\ (\ )
 
-The error message, if any.
+The error message.
 
 .. rst-class:: classref-item-separator
 
@@ -82,7 +82,7 @@ The error message, if any.
 
 - :ref:`String<class_String>` **get_result**\ (\ )
 
-The result, if any.
+The result.
 
 .. rst-class:: classref-section-separator
 

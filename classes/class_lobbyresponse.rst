@@ -12,14 +12,14 @@ LobbyResponse
 
 **Inherits:** :ref:`RefCounted<class_RefCounted>` **<** :ref:`Object<class_Object>`
 
-Generic response from a lobby request.
+Generic response from a :ref:`LobbyClient<class_LobbyClient>` call.
 
 .. rst-class:: classref-introduction-group
 
 Description
 -----------
 
-Generic response from a lobby request. Await on finished to get the result.
+Generic response from a :ref:`LobbyClient<class_LobbyClient>` call. Await on :ref:`finished<class_LobbyResponse_signal_finished>` signal to get the :ref:`LobbyResult<class_LobbyResult>`.
 
 .. rst-class:: classref-section-separator
 

@@ -14,14 +14,31 @@ BlaziumClient
 
 **Inherited By:** :ref:`LobbyClient<class_LobbyClient>`, :ref:`LoginClient<class_LoginClient>`, :ref:`MasterServerClient<class_MasterServerClient>`, :ref:`POGRClient<class_POGRClient>`
 
-An abstract base node used to connect to Blazium services.
+Base node for connecting to the Blazium services.
 
 .. rst-class:: classref-introduction-group
 
 Description
 -----------
 
-An abstract base node used to connect to Blazium services.
+The **BlaziumClient** node provides an interface for connecting to the Blazium services. These services are designed to simplify game development with aspects such as multiplayer, authentication, etc.
+
+Developers have the flexibility to either:
+
+- Connect to the free Blazium services hosted on the `blazium.app <https://blazium.app>`__ domain.
+
+- Self-deploy the Blazium services on their own infrastructure for full control and customization.
+
+.. code:: text
+
+    
+    +---------------------+               +---------------------+
+    | Blazium Engine      |   HTTP and    | Blazium Service     |
+    |---------------------|   WebSocket   |---------------------|
+    | - Send requests     |  <--------->  | - Handle requests   |
+    | - Receive responses |               | - Send responses    |
+    +---------------------+               +---------------------+
+    
 
 .. |virtual| replace:: :abbr:`virtual (This method should typically be overridden by the user to have any effect.)`
 .. |const| replace:: :abbr:`const (This method has no side effects. It doesn't modify any of the instance's member variables.)`
