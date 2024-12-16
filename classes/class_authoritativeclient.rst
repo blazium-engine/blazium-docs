@@ -41,6 +41,16 @@ There are also members on this class that are automatically updated as the lobby
 
 - :ref:`lobby<class_AuthoritativeClient_property_lobby>`: The lobby. Reflects changes to the lobby.
 
+- :ref:`peer_data<class_AuthoritativeClient_property_peer_data>`: The current peer private data.
+
+
+
+\ **Note:** The main difference between this service and the non authoritative :ref:`LobbyClient<class_LobbyClient>` are:
+
+- The host cannot set any data or notify peer_disconnected.
+
+- The :ref:`received_lobby_data<class_AuthoritativeClient_signal_received_lobby_data>` signal doesn't have the ``is_private`` parameter.
+
 .. rst-class:: classref-reftable-group
 
 Properties
@@ -57,6 +67,8 @@ Properties
    | :ref:`LobbyInfo<class_LobbyInfo>`                              | :ref:`lobby<class_AuthoritativeClient_property_lobby>`                           |                                           |
    +----------------------------------------------------------------+----------------------------------------------------------------------------------+-------------------------------------------+
    | :ref:`LobbyPeer<class_LobbyPeer>`                              | :ref:`peer<class_AuthoritativeClient_property_peer>`                             |                                           |
+   +----------------------------------------------------------------+----------------------------------------------------------------------------------+-------------------------------------------+
+   | :ref:`Dictionary<class_Dictionary>`                            | :ref:`peer_data<class_AuthoritativeClient_property_peer_data>`                   | ``{}``                                    |
    +----------------------------------------------------------------+----------------------------------------------------------------------------------+-------------------------------------------+
    | :ref:`Array<class_Array>`\[:ref:`LobbyPeer<class_LobbyPeer>`\] | :ref:`peers<class_AuthoritativeClient_property_peers>`                           | ``[]``                                    |
    +----------------------------------------------------------------+----------------------------------------------------------------------------------+-------------------------------------------+
@@ -103,8 +115,6 @@ Methods
    | :ref:`LobbyResponse<class_LobbyResponse>`                 | :ref:`set_lobby_sealed<class_AuthoritativeClient_method_set_lobby_sealed>`\ (\ seal\: :ref:`bool<class_bool>`\ )                                                                                                                                     |
    +-----------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`LobbyResponse<class_LobbyResponse>`                 | :ref:`set_peer_name<class_AuthoritativeClient_method_set_peer_name>`\ (\ peer_name\: :ref:`String<class_String>`\ )                                                                                                                                  |
-   +-----------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | :ref:`ViewLobbyResponse<class_ViewLobbyResponse>`         | :ref:`view_lobby<class_AuthoritativeClient_method_view_lobby>`\ (\ lobby_id\: :ref:`String<class_String>` = "", password\: :ref:`String<class_String>` = ""\ )                                                                                       |
    +-----------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 .. rst-class:: classref-section-separator
@@ -324,7 +334,7 @@ Signal generated after data is sent to the lobby.
 
 .. rst-class:: classref-signal
 
-**received_peer_data**\ (\ data\: :ref:`Object<class_Object>`, to_peer\: :ref:`LobbyPeer<class_LobbyPeer>`\ ) :ref:`🔗<class_AuthoritativeClient_signal_received_peer_data>`
+**received_peer_data**\ (\ data\: :ref:`Object<class_Object>`, to_peer\: :ref:`LobbyPeer<class_LobbyPeer>`, is_private\: :ref:`bool<class_bool>`\ ) :ref:`🔗<class_AuthoritativeClient_signal_received_peer_data>`
 
 Signal generated after data is sent to peer.
 
@@ -397,6 +407,22 @@ The current lobby. Reflects changes to the lobby.
 - :ref:`LobbyPeer<class_LobbyPeer>` **get_peer**\ (\ )
 
 The current peer. Reflects changes to the self peer.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_AuthoritativeClient_property_peer_data:
+
+.. rst-class:: classref-property
+
+:ref:`Dictionary<class_Dictionary>` **peer_data** = ``{}`` :ref:`🔗<class_AuthoritativeClient_property_peer_data>`
+
+.. rst-class:: classref-property-setget
+
+- :ref:`Dictionary<class_Dictionary>` **get_peer_data**\ (\ )
+
+The current peer private data.
 
 .. rst-class:: classref-item-separator
 
@@ -680,20 +706,6 @@ Set your peer name.
 Returns a :ref:`LobbyResponse<class_LobbyResponse>` object that has a :ref:`LobbyResponse.finished<class_LobbyResponse_signal_finished>` signal that is emitted when finished.
 
 Generates :ref:`peer_named<class_AuthoritativeClient_signal_peer_named>` signal if you are in lobby.
-
-.. rst-class:: classref-item-separator
-
-----
-
-.. _class_AuthoritativeClient_method_view_lobby:
-
-.. rst-class:: classref-method
-
-:ref:`ViewLobbyResponse<class_ViewLobbyResponse>` **view_lobby**\ (\ lobby_id\: :ref:`String<class_String>` = "", password\: :ref:`String<class_String>` = ""\ ) :ref:`🔗<class_AuthoritativeClient_method_view_lobby>`
-
-View data from a lobby. Returns lobby settings and peers.
-
-Returns a :ref:`ViewLobbyResponse<class_ViewLobbyResponse>` object that has a :ref:`ViewLobbyResponse.finished<class_ViewLobbyResponse_signal_finished>` signal that is emitted when finished.
 
 .. |virtual| replace:: :abbr:`virtual (This method should typically be overridden by the user to have any effect.)`
 .. |const| replace:: :abbr:`const (This method has no side effects. It doesn't modify any of the instance's member variables.)`
