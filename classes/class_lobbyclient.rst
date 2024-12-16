@@ -45,6 +45,13 @@ There are also members on this class that are automatically updated as the lobby
 
 - :ref:`peer_data<class_LobbyClient_property_peer_data>`: The current peer private data.
 
+.. rst-class:: classref-introduction-group
+
+Tutorials
+---------
+
+- `Lobby SDK Demo <https://github.com/blazium-engine/blazium-lobby-sdk>`__
+
 .. rst-class:: classref-reftable-group
 
 Properties

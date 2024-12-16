@@ -51,6 +51,13 @@ There are also members on this class that are automatically updated as the lobby
 
 - The :ref:`received_lobby_data<class_AuthoritativeClient_signal_received_lobby_data>` signal doesn't have the ``is_private`` parameter.
 
+.. rst-class:: classref-introduction-group
+
+Tutorials
+---------
+
+- `Lobby SDK Demo <https://github.com/blazium-engine/blazium-lobby-sdk>`__
+
 .. rst-class:: classref-reftable-group
 
 Properties
