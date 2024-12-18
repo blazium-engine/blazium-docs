@@ -44,7 +44,7 @@ Nodes
     class_audiostreamplayer
     class_audiostreamplayer2d
     class_audiostreamplayer3d
-    class_authoritativeclient
+    class_authoritativelobbyclient
     class_backbuffercopy
     class_basebutton
     class_blaziumclient
@@ -722,8 +722,8 @@ Other objects
     class_audiostreamplaybackpolyphonic
     class_audiostreamplaybackresampled
     class_audiostreamplaybacksynchronized
-    class_authoritativeresponse
-    class_authoritativeresult
+    class_authoritativelobbyresponse
+    class_authoritativelobbyresult
     class_callbacktweener
     class_camerafeed
     class_cameraserver
