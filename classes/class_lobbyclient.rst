@@ -45,6 +45,13 @@ There are also members on this class that are automatically updated as the lobby
 
 - :ref:`peer_data<class_LobbyClient_property_peer_data>`: The current peer private data.
 
+.. rst-class:: classref-introduction-group
+
+Tutorials
+---------
+
+- `Lobby SDK Demo <https://github.com/blazium-engine/blazium-lobby-sdk>`__
+
 .. rst-class:: classref-reftable-group
 
 Properties
@@ -125,8 +132,6 @@ Methods
    | :ref:`LobbyResponse<class_LobbyResponse>`         | :ref:`set_lobby_sealed<class_LobbyClient_method_set_lobby_sealed>`\ (\ seal\: :ref:`bool<class_bool>`\ )                                                                                                                                     |
    +---------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`LobbyResponse<class_LobbyResponse>`         | :ref:`set_peer_name<class_LobbyClient_method_set_peer_name>`\ (\ peer_name\: :ref:`String<class_String>`\ )                                                                                                                                  |
-   +---------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | :ref:`ViewLobbyResponse<class_ViewLobbyResponse>` | :ref:`view_lobby<class_LobbyClient_method_view_lobby>`\ (\ lobby_id\: :ref:`String<class_String>` = "", password\: :ref:`String<class_String>` = ""\ )                                                                                       |
    +---------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 .. rst-class:: classref-section-separator
@@ -850,20 +855,6 @@ Set your peer name.
 Returns a :ref:`LobbyResponse<class_LobbyResponse>` object that has a :ref:`LobbyResponse.finished<class_LobbyResponse_signal_finished>` signal that is emitted when finished.
 
 Generates :ref:`peer_named<class_LobbyClient_signal_peer_named>` signal if you are in lobby.
-
-.. rst-class:: classref-item-separator
-
-----
-
-.. _class_LobbyClient_method_view_lobby:
-
-.. rst-class:: classref-method
-
-:ref:`ViewLobbyResponse<class_ViewLobbyResponse>` **view_lobby**\ (\ lobby_id\: :ref:`String<class_String>` = "", password\: :ref:`String<class_String>` = ""\ ) :ref:`🔗<class_LobbyClient_method_view_lobby>`
-
-View data from a lobby. Returns lobby settings and peers.
-
-Returns a :ref:`ViewLobbyResponse<class_ViewLobbyResponse>` object that has a :ref:`ViewLobbyResponse.finished<class_ViewLobbyResponse_signal_finished>` signal that is emitted when finished.
 
 .. |virtual| replace:: :abbr:`virtual (This method should typically be overridden by the user to have any effect.)`
 .. |const| replace:: :abbr:`const (This method has no side effects. It doesn't modify any of the instance's member variables.)`
