@@ -69,6 +69,8 @@ Properties
    +---------------------------------------------------------------+-------------------------------------------------------------------------------------+
    | :ref:`InputMap<class_InputMap>`                               | :ref:`InputMap<class_@GlobalScope_property_InputMap>`                               |
    +---------------------------------------------------------------+-------------------------------------------------------------------------------------+
+   | :ref:`JWT<class_JWT>`                                         | :ref:`JWT<class_@GlobalScope_property_JWT>`                                         |
+   +---------------------------------------------------------------+-------------------------------------------------------------------------------------+
    | :ref:`JavaClassWrapper<class_JavaClassWrapper>`               | :ref:`JavaClassWrapper<class_@GlobalScope_property_JavaClassWrapper>`               |
    +---------------------------------------------------------------+-------------------------------------------------------------------------------------+
    | :ref:`JavaScriptBridge<class_JavaScriptBridge>`               | :ref:`JavaScriptBridge<class_@GlobalScope_property_JavaScriptBridge>`               |
@@ -4908,6 +4910,18 @@ The :ref:`Input<class_Input>` singleton.
 :ref:`InputMap<class_InputMap>` **InputMap** :ref:`🔗<class_@GlobalScope_property_InputMap>`
 
 The :ref:`InputMap<class_InputMap>` singleton.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_@GlobalScope_property_JWT:
+
+.. rst-class:: classref-property
+
+:ref:`JWT<class_JWT>` **JWT** :ref:`🔗<class_@GlobalScope_property_JWT>`
+
+The :ref:`JWT<class_JWT>` singleton.
 
 .. rst-class:: classref-item-separator
 

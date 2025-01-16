@@ -29,15 +29,19 @@ Properties
 .. table::
    :widths: auto
 
-   +-------------------------------------+------------------------------------------------------+-----------+
-   | :ref:`Dictionary<class_Dictionary>` | :ref:`data<class_LobbyPeer_property_data>`           | ``{}``    |
-   +-------------------------------------+------------------------------------------------------+-----------+
-   | :ref:`String<class_String>`         | :ref:`id<class_LobbyPeer_property_id>`               | ``""``    |
-   +-------------------------------------+------------------------------------------------------+-----------+
-   | :ref:`String<class_String>`         | :ref:`peer_name<class_LobbyPeer_property_peer_name>` | ``""``    |
-   +-------------------------------------+------------------------------------------------------+-----------+
-   | :ref:`bool<class_bool>`             | :ref:`ready<class_LobbyPeer_property_ready>`         | ``false`` |
-   +-------------------------------------+------------------------------------------------------+-----------+
+   +-------------------------------------+------------------------------------------------------------+-----------+
+   | :ref:`Dictionary<class_Dictionary>` | :ref:`data<class_LobbyPeer_property_data>`                 | ``{}``    |
+   +-------------------------------------+------------------------------------------------------------+-----------+
+   | :ref:`bool<class_bool>`             | :ref:`disconnected<class_LobbyPeer_property_disconnected>` | ``false`` |
+   +-------------------------------------+------------------------------------------------------------+-----------+
+   | :ref:`String<class_String>`         | :ref:`id<class_LobbyPeer_property_id>`                     | ``""``    |
+   +-------------------------------------+------------------------------------------------------------+-----------+
+   | :ref:`int<class_int>`               | :ref:`order_id<class_LobbyPeer_property_order_id>`         | ``-1``    |
+   +-------------------------------------+------------------------------------------------------------+-----------+
+   | :ref:`bool<class_bool>`             | :ref:`ready<class_LobbyPeer_property_ready>`               | ``false`` |
+   +-------------------------------------+------------------------------------------------------------+-----------+
+   | :ref:`Dictionary<class_Dictionary>` | :ref:`user_data<class_LobbyPeer_property_user_data>`       | ``{}``    |
+   +-------------------------------------+------------------------------------------------------------+-----------+
 
 .. rst-class:: classref-section-separator
 
@@ -64,6 +68,22 @@ Public data of the peer.
 
 ----
 
+.. _class_LobbyPeer_property_disconnected:
+
+.. rst-class:: classref-property
+
+:ref:`bool<class_bool>` **disconnected** = ``false`` :ref:`🔗<class_LobbyPeer_property_disconnected>`
+
+.. rst-class:: classref-property-setget
+
+- :ref:`bool<class_bool>` **is_disconnected**\ (\ )
+
+Whether the peer is disconnected.
+
+.. rst-class:: classref-item-separator
+
+----
+
 .. _class_LobbyPeer_property_id:
 
 .. rst-class:: classref-property
@@ -80,17 +100,17 @@ Identifier of the peer.
 
 ----
 
-.. _class_LobbyPeer_property_peer_name:
+.. _class_LobbyPeer_property_order_id:
 
 .. rst-class:: classref-property
 
-:ref:`String<class_String>` **peer_name** = ``""`` :ref:`🔗<class_LobbyPeer_property_peer_name>`
+:ref:`int<class_int>` **order_id** = ``-1`` :ref:`🔗<class_LobbyPeer_property_order_id>`
 
 .. rst-class:: classref-property-setget
 
-- :ref:`String<class_String>` **get_peer_name**\ (\ )
+- :ref:`int<class_int>` **get_order_id**\ (\ )
 
-Name of the peer.
+Order when the peer joined the lobby server.
 
 .. rst-class:: classref-item-separator
 
@@ -107,6 +127,22 @@ Name of the peer.
 - :ref:`bool<class_bool>` **is_ready**\ (\ )
 
 Whether the peer is ready.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_LobbyPeer_property_user_data:
+
+.. rst-class:: classref-property
+
+:ref:`Dictionary<class_Dictionary>` **user_data** = ``{}`` :ref:`🔗<class_LobbyPeer_property_user_data>`
+
+.. rst-class:: classref-property-setget
+
+- :ref:`Dictionary<class_Dictionary>` **get_user_data**\ (\ )
+
+Public user data of the peer.
 
 .. |virtual| replace:: :abbr:`virtual (This method should typically be overridden by the user to have any effect.)`
 .. |const| replace:: :abbr:`const (This method has no side effects. It doesn't modify any of the instance's member variables.)`

@@ -45,6 +45,13 @@ There are also members on this class that are automatically updated as the lobby
 
 - :ref:`peer_data<class_LobbyClient_property_peer_data>`: The current peer private data.
 
+.. rst-class:: classref-introduction-group
+
+Tutorials
+---------
+
+- `Lobby SDK Demo <https://github.com/blazium-engine/blazium-lobby-sdk>`__
+
 .. rst-class:: classref-reftable-group
 
 Properties
@@ -81,53 +88,53 @@ Methods
 .. table::
    :widths: auto
 
-   +---------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | :ref:`LobbyResponse<class_LobbyResponse>`         | :ref:`add_lobby_data<class_LobbyClient_method_add_lobby_data>`\ (\ data\: :ref:`Dictionary<class_Dictionary>`, is_private\: :ref:`bool<class_bool>` = false\ )                                                                               |
-   +---------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | :ref:`LobbyResponse<class_LobbyResponse>`         | :ref:`add_lobby_tags<class_LobbyClient_method_add_lobby_tags>`\ (\ tags\: :ref:`Dictionary<class_Dictionary>`\ )                                                                                                                             |
-   +---------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | :ref:`LobbyResponse<class_LobbyResponse>`         | :ref:`add_peer_data<class_LobbyClient_method_add_peer_data>`\ (\ data\: :ref:`Dictionary<class_Dictionary>`, target_peer\: :ref:`String<class_String>`, is_private\: :ref:`bool<class_bool>` = false\ )                                      |
-   +---------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | :ref:`LobbyResponse<class_LobbyResponse>`         | :ref:`add_peers_data<class_LobbyClient_method_add_peers_data>`\ (\ data\: :ref:`Dictionary<class_Dictionary>`, is_private\: :ref:`bool<class_bool>` = false\ )                                                                               |
-   +---------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | :ref:`bool<class_bool>`                           | :ref:`connect_to_lobby<class_LobbyClient_method_connect_to_lobby>`\ (\ )                                                                                                                                                                     |
-   +---------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | :ref:`ViewLobbyResponse<class_ViewLobbyResponse>` | :ref:`create_lobby<class_LobbyClient_method_create_lobby>`\ (\ title\: :ref:`String<class_String>`, tags\: :ref:`Dictionary<class_Dictionary>` = {}, max_players\: :ref:`int<class_int>` = 4, password\: :ref:`String<class_String>` = ""\ ) |
-   +---------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | :ref:`LobbyResponse<class_LobbyResponse>`         | :ref:`del_lobby_data<class_LobbyClient_method_del_lobby_data>`\ (\ keys\: :ref:`Array<class_Array>`\[:ref:`String<class_String>`\], is_private\: :ref:`bool<class_bool>` = false\ )                                                          |
-   +---------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | :ref:`LobbyResponse<class_LobbyResponse>`         | :ref:`del_lobby_tags<class_LobbyClient_method_del_lobby_tags>`\ (\ keys\: :ref:`Array<class_Array>`\[:ref:`String<class_String>`\]\ )                                                                                                        |
-   +---------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | :ref:`LobbyResponse<class_LobbyResponse>`         | :ref:`del_peer_data<class_LobbyClient_method_del_peer_data>`\ (\ keys\: :ref:`Array<class_Array>`\[:ref:`String<class_String>`\], target_peer\: :ref:`String<class_String>`, is_private\: :ref:`bool<class_bool>` = false\ )                 |
-   +---------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | :ref:`LobbyResponse<class_LobbyResponse>`         | :ref:`del_peers_data<class_LobbyClient_method_del_peers_data>`\ (\ keys\: :ref:`Array<class_Array>`\[:ref:`String<class_String>`\], is_private\: :ref:`bool<class_bool>` = false\ )                                                          |
-   +---------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | |void|                                            | :ref:`disconnect_from_lobby<class_LobbyClient_method_disconnect_from_lobby>`\ (\ )                                                                                                                                                           |
-   +---------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | :ref:`bool<class_bool>`                           | :ref:`is_host<class_LobbyClient_method_is_host>`\ (\ )                                                                                                                                                                                       |
-   +---------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | :ref:`ViewLobbyResponse<class_ViewLobbyResponse>` | :ref:`join_lobby<class_LobbyClient_method_join_lobby>`\ (\ lobby_id\: :ref:`String<class_String>`, password\: :ref:`String<class_String>` = ""\ )                                                                                            |
-   +---------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | :ref:`LobbyResponse<class_LobbyResponse>`         | :ref:`kick_peer<class_LobbyClient_method_kick_peer>`\ (\ peer_id\: :ref:`String<class_String>`\ )                                                                                                                                            |
-   +---------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | :ref:`LobbyResponse<class_LobbyResponse>`         | :ref:`leave_lobby<class_LobbyClient_method_leave_lobby>`\ (\ )                                                                                                                                                                               |
-   +---------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | :ref:`ListLobbyResponse<class_ListLobbyResponse>` | :ref:`list_lobbies<class_LobbyClient_method_list_lobbies>`\ (\ tags\: :ref:`Dictionary<class_Dictionary>` = {}, start\: :ref:`int<class_int>` = 0, count\: :ref:`int<class_int>` = 10\ )                                                     |
-   +---------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | :ref:`LobbyResponse<class_LobbyResponse>`         | :ref:`notify_lobby<class_LobbyClient_method_notify_lobby>`\ (\ data\: :ref:`Variant<class_Variant>`\ )                                                                                                                                       |
-   +---------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | :ref:`LobbyResponse<class_LobbyResponse>`         | :ref:`notify_peer<class_LobbyClient_method_notify_peer>`\ (\ data\: :ref:`Variant<class_Variant>`, target_peer\: :ref:`String<class_String>`\ )                                                                                              |
-   +---------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | :ref:`LobbyResponse<class_LobbyResponse>`         | :ref:`send_chat_message<class_LobbyClient_method_send_chat_message>`\ (\ chat_message\: :ref:`String<class_String>`\ )                                                                                                                       |
-   +---------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | :ref:`LobbyResponse<class_LobbyResponse>`         | :ref:`set_lobby_ready<class_LobbyClient_method_set_lobby_ready>`\ (\ ready\: :ref:`bool<class_bool>`\ )                                                                                                                                      |
-   +---------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | :ref:`LobbyResponse<class_LobbyResponse>`         | :ref:`set_lobby_sealed<class_LobbyClient_method_set_lobby_sealed>`\ (\ seal\: :ref:`bool<class_bool>`\ )                                                                                                                                     |
-   +---------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | :ref:`LobbyResponse<class_LobbyResponse>`         | :ref:`set_peer_name<class_LobbyClient_method_set_peer_name>`\ (\ peer_name\: :ref:`String<class_String>`\ )                                                                                                                                  |
-   +---------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | :ref:`ViewLobbyResponse<class_ViewLobbyResponse>` | :ref:`view_lobby<class_LobbyClient_method_view_lobby>`\ (\ lobby_id\: :ref:`String<class_String>` = "", password\: :ref:`String<class_String>` = ""\ )                                                                                       |
-   +---------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   +---------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`LobbyResponse<class_LobbyResponse>`         | :ref:`add_lobby_data<class_LobbyClient_method_add_lobby_data>`\ (\ data\: :ref:`Dictionary<class_Dictionary>`, is_private\: :ref:`bool<class_bool>` = false\ )                                                                                                                 |
+   +---------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`LobbyResponse<class_LobbyResponse>`         | :ref:`add_lobby_tags<class_LobbyClient_method_add_lobby_tags>`\ (\ tags\: :ref:`Dictionary<class_Dictionary>`\ )                                                                                                                                                               |
+   +---------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`LobbyResponse<class_LobbyResponse>`         | :ref:`add_peer_data<class_LobbyClient_method_add_peer_data>`\ (\ data\: :ref:`Dictionary<class_Dictionary>`, target_peer\: :ref:`String<class_String>`, is_private\: :ref:`bool<class_bool>` = false\ )                                                                        |
+   +---------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`LobbyResponse<class_LobbyResponse>`         | :ref:`add_peer_user_data<class_LobbyClient_method_add_peer_user_data>`\ (\ data\: :ref:`Dictionary<class_Dictionary>`\ )                                                                                                                                                       |
+   +---------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`LobbyResponse<class_LobbyResponse>`         | :ref:`add_peers_data<class_LobbyClient_method_add_peers_data>`\ (\ data\: :ref:`Dictionary<class_Dictionary>`, is_private\: :ref:`bool<class_bool>` = false\ )                                                                                                                 |
+   +---------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`LobbyResponse<class_LobbyResponse>`         | :ref:`connect_to_lobby<class_LobbyClient_method_connect_to_lobby>`\ (\ )                                                                                                                                                                                                       |
+   +---------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`ViewLobbyResponse<class_ViewLobbyResponse>` | :ref:`create_lobby<class_LobbyClient_method_create_lobby>`\ (\ title\: :ref:`String<class_String>`, sealed\: :ref:`bool<class_bool>`, tags\: :ref:`Dictionary<class_Dictionary>` = {}, max_players\: :ref:`int<class_int>` = 4, password\: :ref:`String<class_String>` = ""\ ) |
+   +---------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`LobbyResponse<class_LobbyResponse>`         | :ref:`del_lobby_data<class_LobbyClient_method_del_lobby_data>`\ (\ keys\: :ref:`Array<class_Array>`\[:ref:`String<class_String>`\], is_private\: :ref:`bool<class_bool>` = false\ )                                                                                            |
+   +---------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`LobbyResponse<class_LobbyResponse>`         | :ref:`del_lobby_tags<class_LobbyClient_method_del_lobby_tags>`\ (\ keys\: :ref:`Array<class_Array>`\[:ref:`String<class_String>`\]\ )                                                                                                                                          |
+   +---------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`LobbyResponse<class_LobbyResponse>`         | :ref:`del_peer_data<class_LobbyClient_method_del_peer_data>`\ (\ keys\: :ref:`Array<class_Array>`\[:ref:`String<class_String>`\], target_peer\: :ref:`String<class_String>`, is_private\: :ref:`bool<class_bool>` = false\ )                                                   |
+   +---------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`LobbyResponse<class_LobbyResponse>`         | :ref:`del_peer_user_data<class_LobbyClient_method_del_peer_user_data>`\ (\ keys\: :ref:`Array<class_Array>`\[:ref:`String<class_String>`\]\ )                                                                                                                                  |
+   +---------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`LobbyResponse<class_LobbyResponse>`         | :ref:`del_peers_data<class_LobbyClient_method_del_peers_data>`\ (\ keys\: :ref:`Array<class_Array>`\[:ref:`String<class_String>`\], is_private\: :ref:`bool<class_bool>` = false\ )                                                                                            |
+   +---------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`LobbyResponse<class_LobbyResponse>`         | :ref:`disconnect_from_lobby<class_LobbyClient_method_disconnect_from_lobby>`\ (\ )                                                                                                                                                                                             |
+   +---------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`bool<class_bool>`                           | :ref:`is_host<class_LobbyClient_method_is_host>`\ (\ )                                                                                                                                                                                                                         |
+   +---------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`ViewLobbyResponse<class_ViewLobbyResponse>` | :ref:`join_lobby<class_LobbyClient_method_join_lobby>`\ (\ lobby_id\: :ref:`String<class_String>`, password\: :ref:`String<class_String>` = ""\ )                                                                                                                              |
+   +---------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`LobbyResponse<class_LobbyResponse>`         | :ref:`kick_peer<class_LobbyClient_method_kick_peer>`\ (\ peer_id\: :ref:`String<class_String>`\ )                                                                                                                                                                              |
+   +---------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`LobbyResponse<class_LobbyResponse>`         | :ref:`leave_lobby<class_LobbyClient_method_leave_lobby>`\ (\ )                                                                                                                                                                                                                 |
+   +---------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`LobbyResponse<class_LobbyResponse>`         | :ref:`list_lobbies<class_LobbyClient_method_list_lobbies>`\ (\ )                                                                                                                                                                                                               |
+   +---------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`LobbyResponse<class_LobbyResponse>`         | :ref:`notify_lobby<class_LobbyClient_method_notify_lobby>`\ (\ data\: :ref:`Variant<class_Variant>`\ )                                                                                                                                                                         |
+   +---------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`LobbyResponse<class_LobbyResponse>`         | :ref:`notify_peer<class_LobbyClient_method_notify_peer>`\ (\ data\: :ref:`Variant<class_Variant>`, target_peer\: :ref:`String<class_String>`\ )                                                                                                                                |
+   +---------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`LobbyResponse<class_LobbyResponse>`         | :ref:`send_chat_message<class_LobbyClient_method_send_chat_message>`\ (\ chat_message\: :ref:`String<class_String>`\ )                                                                                                                                                         |
+   +---------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`LobbyResponse<class_LobbyResponse>`         | :ref:`set_lobby_ready<class_LobbyClient_method_set_lobby_ready>`\ (\ ready\: :ref:`bool<class_bool>`\ )                                                                                                                                                                        |
+   +---------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`LobbyResponse<class_LobbyResponse>`         | :ref:`set_lobby_sealed<class_LobbyClient_method_set_lobby_sealed>`\ (\ seal\: :ref:`bool<class_bool>`\ )                                                                                                                                                                       |
+   +---------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 .. rst-class:: classref-section-separator
 
@@ -157,6 +164,18 @@ Signal generated after you connect to the lobby.
 **disconnected_from_lobby**\ (\ reason\: :ref:`String<class_String>`\ ) :ref:`🔗<class_LobbyClient_signal_disconnected_from_lobby>`
 
 Signal generated after you disconnect from the lobby.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_LobbyClient_signal_lobbies_listed:
+
+.. rst-class:: classref-signal
+
+**lobbies_listed**\ (\ lobbies\: :ref:`Array<class_Array>`\[:ref:`LobbyInfo<class_LobbyInfo>`\]\ ) :ref:`🔗<class_LobbyClient_signal_lobbies_listed>`
+
+Signal generated after the lobbies are listed, or when a new lobby is created or removed.
 
 .. rst-class:: classref-item-separator
 
@@ -294,18 +313,6 @@ Signal generated after a peer sends a chat message.
 
 ----
 
-.. _class_LobbyClient_signal_peer_named:
-
-.. rst-class:: classref-signal
-
-**peer_named**\ (\ peer\: :ref:`LobbyPeer<class_LobbyPeer>`\ ) :ref:`🔗<class_LobbyClient_signal_peer_named>`
-
-Signal generated after a peer names himself.
-
-.. rst-class:: classref-item-separator
-
-----
-
 .. _class_LobbyClient_signal_peer_ready:
 
 .. rst-class:: classref-signal
@@ -349,6 +356,18 @@ Signal generated after data is sent to the lobby.
 **received_peer_data**\ (\ data\: :ref:`Object<class_Object>`, to_peer\: :ref:`LobbyPeer<class_LobbyPeer>`, is_private\: :ref:`bool<class_bool>`\ ) :ref:`🔗<class_LobbyClient_signal_received_peer_data>`
 
 Signal generated after data is sent to peer.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_LobbyClient_signal_received_peer_user_data:
+
+.. rst-class:: classref-signal
+
+**received_peer_user_data**\ (\ peer\: :ref:`LobbyPeer<class_LobbyPeer>`, data\: :ref:`Object<class_Object>`\ ) :ref:`🔗<class_LobbyClient_signal_received_peer_user_data>`
+
+Signal generated after user data is sent to peer.
 
 .. rst-class:: classref-section-separator
 
@@ -559,6 +578,22 @@ Generates :ref:`received_peer_data<class_LobbyClient_signal_received_peer_data>`
 
 ----
 
+.. _class_LobbyClient_method_add_peer_user_data:
+
+.. rst-class:: classref-method
+
+:ref:`LobbyResponse<class_LobbyResponse>` **add_peer_user_data**\ (\ data\: :ref:`Dictionary<class_Dictionary>`\ ) :ref:`🔗<class_LobbyClient_method_add_peer_user_data>`
+
+Add user data to your own peer.
+
+Returns a :ref:`LobbyResponse<class_LobbyResponse>` object that has a :ref:`LobbyResponse.finished<class_LobbyResponse_signal_finished>` signal that is emitted when finished.
+
+Generates :ref:`received_peer_user_data<class_LobbyClient_signal_received_peer_user_data>`.
+
+.. rst-class:: classref-item-separator
+
+----
+
 .. _class_LobbyClient_method_add_peers_data:
 
 .. rst-class:: classref-method
@@ -579,7 +614,7 @@ Generates :ref:`received_peer_data<class_LobbyClient_signal_received_peer_data>`
 
 .. rst-class:: classref-method
 
-:ref:`bool<class_bool>` **connect_to_lobby**\ (\ ) :ref:`🔗<class_LobbyClient_method_connect_to_lobby>`
+:ref:`LobbyResponse<class_LobbyResponse>` **connect_to_lobby**\ (\ ) :ref:`🔗<class_LobbyClient_method_connect_to_lobby>`
 
 Connect to a Blazium Lobby Server using the :ref:`game_id<class_LobbyClient_property_game_id>` and :ref:`server_url<class_LobbyClient_property_server_url>`.
 
@@ -593,7 +628,7 @@ Generates :ref:`connected_to_lobby<class_LobbyClient_signal_connected_to_lobby>`
 
 .. rst-class:: classref-method
 
-:ref:`ViewLobbyResponse<class_ViewLobbyResponse>` **create_lobby**\ (\ title\: :ref:`String<class_String>`, tags\: :ref:`Dictionary<class_Dictionary>` = {}, max_players\: :ref:`int<class_int>` = 4, password\: :ref:`String<class_String>` = ""\ ) :ref:`🔗<class_LobbyClient_method_create_lobby>`
+:ref:`ViewLobbyResponse<class_ViewLobbyResponse>` **create_lobby**\ (\ title\: :ref:`String<class_String>`, sealed\: :ref:`bool<class_bool>`, tags\: :ref:`Dictionary<class_Dictionary>` = {}, max_players\: :ref:`int<class_int>` = 4, password\: :ref:`String<class_String>` = ""\ ) :ref:`🔗<class_LobbyClient_method_create_lobby>`
 
 Create a lobby and become host. If you are already in a lobby, you cannot create one. You need to leave first.
 
@@ -655,6 +690,22 @@ Generates :ref:`received_peer_data<class_LobbyClient_signal_received_peer_data>`
 
 ----
 
+.. _class_LobbyClient_method_del_peer_user_data:
+
+.. rst-class:: classref-method
+
+:ref:`LobbyResponse<class_LobbyResponse>` **del_peer_user_data**\ (\ keys\: :ref:`Array<class_Array>`\[:ref:`String<class_String>`\]\ ) :ref:`🔗<class_LobbyClient_method_del_peer_user_data>`
+
+Delete one or more keys from the peers user data.
+
+Returns a :ref:`LobbyResponse<class_LobbyResponse>` object that has a :ref:`LobbyResponse.finished<class_LobbyResponse_signal_finished>` signal that is emitted when finished.
+
+Generates :ref:`received_peer_user_data<class_LobbyClient_signal_received_peer_user_data>`.
+
+.. rst-class:: classref-item-separator
+
+----
+
 .. _class_LobbyClient_method_del_peers_data:
 
 .. rst-class:: classref-method
@@ -675,7 +726,7 @@ Generates :ref:`received_peer_data<class_LobbyClient_signal_received_peer_data>`
 
 .. rst-class:: classref-method
 
-|void| **disconnect_from_lobby**\ (\ ) :ref:`🔗<class_LobbyClient_method_disconnect_from_lobby>`
+:ref:`LobbyResponse<class_LobbyResponse>` **disconnect_from_lobby**\ (\ ) :ref:`🔗<class_LobbyClient_method_disconnect_from_lobby>`
 
 Disconnect from the lobby server.
 
@@ -751,9 +802,13 @@ Generates :ref:`lobby_left<class_LobbyClient_signal_lobby_left>`.
 
 .. rst-class:: classref-method
 
-:ref:`ListLobbyResponse<class_ListLobbyResponse>` **list_lobbies**\ (\ tags\: :ref:`Dictionary<class_Dictionary>` = {}, start\: :ref:`int<class_int>` = 0, count\: :ref:`int<class_int>` = 10\ ) :ref:`🔗<class_LobbyClient_method_list_lobbies>`
+:ref:`LobbyResponse<class_LobbyResponse>` **list_lobbies**\ (\ ) :ref:`🔗<class_LobbyClient_method_list_lobbies>`
 
 Lists all lobbies. Lobbies that are sealed won't show in the list, except if you disconnected and trying to reconnect to a lobby.
+
+Returns a :ref:`LobbyResponse<class_LobbyResponse>` object that has a :ref:`LobbyResponse.finished<class_LobbyResponse_signal_finished>` signal that is emitted when finished.
+
+Generates :ref:`lobbies_listed<class_LobbyClient_signal_lobbies_listed>`.
 
 .. rst-class:: classref-item-separator
 
@@ -834,36 +889,6 @@ Seals the lobby. You need to be the host to do this and the lobby needs to be un
 Returns a :ref:`LobbyResponse<class_LobbyResponse>` object that has a :ref:`LobbyResponse.finished<class_LobbyResponse_signal_finished>` signal that is emitted when finished.
 
 Generates :ref:`lobby_sealed<class_LobbyClient_signal_lobby_sealed>`.
-
-.. rst-class:: classref-item-separator
-
-----
-
-.. _class_LobbyClient_method_set_peer_name:
-
-.. rst-class:: classref-method
-
-:ref:`LobbyResponse<class_LobbyResponse>` **set_peer_name**\ (\ peer_name\: :ref:`String<class_String>`\ ) :ref:`🔗<class_LobbyClient_method_set_peer_name>`
-
-Set your peer name.
-
-Returns a :ref:`LobbyResponse<class_LobbyResponse>` object that has a :ref:`LobbyResponse.finished<class_LobbyResponse_signal_finished>` signal that is emitted when finished.
-
-Generates :ref:`peer_named<class_LobbyClient_signal_peer_named>` signal if you are in lobby.
-
-.. rst-class:: classref-item-separator
-
-----
-
-.. _class_LobbyClient_method_view_lobby:
-
-.. rst-class:: classref-method
-
-:ref:`ViewLobbyResponse<class_ViewLobbyResponse>` **view_lobby**\ (\ lobby_id\: :ref:`String<class_String>` = "", password\: :ref:`String<class_String>` = ""\ ) :ref:`🔗<class_LobbyClient_method_view_lobby>`
-
-View data from a lobby. Returns lobby settings and peers.
-
-Returns a :ref:`ViewLobbyResponse<class_ViewLobbyResponse>` object that has a :ref:`ViewLobbyResponse.finished<class_ViewLobbyResponse_signal_finished>` signal that is emitted when finished.
 
 .. |virtual| replace:: :abbr:`virtual (This method should typically be overridden by the user to have any effect.)`
 .. |const| replace:: :abbr:`const (This method has no side effects. It doesn't modify any of the instance's member variables.)`

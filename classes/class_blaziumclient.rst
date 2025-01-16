@@ -12,7 +12,7 @@ BlaziumClient
 
 **Inherits:** :ref:`Node<class_Node>` **<** :ref:`Object<class_Object>`
 
-**Inherited By:** :ref:`AuthoritativeClient<class_AuthoritativeClient>`, :ref:`LobbyClient<class_LobbyClient>`, :ref:`LoginClient<class_LoginClient>`, :ref:`MasterServerClient<class_MasterServerClient>`, :ref:`POGRClient<class_POGRClient>`
+**Inherited By:** :ref:`LobbyClient<class_LobbyClient>`, :ref:`LoginClient<class_LoginClient>`, :ref:`MasterServerClient<class_MasterServerClient>`, :ref:`POGRClient<class_POGRClient>`, :ref:`ScriptedLobbyClient<class_ScriptedLobbyClient>`
 
 Base node for connecting to the Blazium services.
 

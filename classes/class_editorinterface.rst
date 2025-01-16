@@ -98,6 +98,8 @@ Methods
    +----------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`PackedStringArray<class_PackedStringArray>`              | :ref:`get_open_scenes<class_EditorInterface_method_get_open_scenes>`\ (\ ) |const|                                                                                                                                                                               |
    +----------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`Array<class_Array>`                                      | :ref:`get_open_scenes_roots<class_EditorInterface_method_get_open_scenes_roots>`\ (\ ) |const|                                                                                                                                                                   |
+   +----------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`String<class_String>`                                    | :ref:`get_playing_scene<class_EditorInterface_method_get_playing_scene>`\ (\ ) |const|                                                                                                                                                                           |
    +----------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`EditorFileSystem<class_EditorFileSystem>`                | :ref:`get_resource_filesystem<class_EditorInterface_method_get_resource_filesystem>`\ (\ ) |const|                                                                                                                                                               |
@@ -454,6 +456,18 @@ Returns the editor's :ref:`EditorInspector<class_EditorInspector>` instance.
 :ref:`PackedStringArray<class_PackedStringArray>` **get_open_scenes**\ (\ ) |const| :ref:`🔗<class_EditorInterface_method_get_open_scenes>`
 
 Returns an :ref:`Array<class_Array>` with the file paths of the currently opened scenes.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_EditorInterface_method_get_open_scenes_roots:
+
+.. rst-class:: classref-method
+
+:ref:`Array<class_Array>` **get_open_scenes_roots**\ (\ ) |const| :ref:`🔗<class_EditorInterface_method_get_open_scenes_roots>`
+
+Returns an :ref:`Array<class_Array>` with the root nodes of the currently opened scenes.
 
 .. rst-class:: classref-item-separator
 

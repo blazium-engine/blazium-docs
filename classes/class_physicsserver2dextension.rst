@@ -286,11 +286,15 @@ Methods
    +-------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`RID<class_RID>`                                             | :ref:`_space_create<class_PhysicsServer2DExtension_private_method__space_create>`\ (\ ) |virtual|                                                                                                                                                                                                                                                                                                                                                 |
    +-------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | |void|                                                            | :ref:`_space_flush_queries<class_PhysicsServer2DExtension_private_method__space_flush_queries>`\ (\ space\: :ref:`RID<class_RID>`\ ) |virtual|                                                                                                                                                                                                                                                                                                    |
+   +-------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`int<class_int>`                                             | :ref:`_space_get_contact_count<class_PhysicsServer2DExtension_private_method__space_get_contact_count>`\ (\ space\: :ref:`RID<class_RID>`\ ) |virtual| |const|                                                                                                                                                                                                                                                                                    |
    +-------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`PackedVector2Array<class_PackedVector2Array>`               | :ref:`_space_get_contacts<class_PhysicsServer2DExtension_private_method__space_get_contacts>`\ (\ space\: :ref:`RID<class_RID>`\ ) |virtual| |const|                                                                                                                                                                                                                                                                                              |
    +-------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`PhysicsDirectSpaceState2D<class_PhysicsDirectSpaceState2D>` | :ref:`_space_get_direct_state<class_PhysicsServer2DExtension_private_method__space_get_direct_state>`\ (\ space\: :ref:`RID<class_RID>`\ ) |virtual|                                                                                                                                                                                                                                                                                              |
+   +-------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`int<class_int>`                                             | :ref:`_space_get_last_process_info<class_PhysicsServer2DExtension_private_method__space_get_last_process_info>`\ (\ space\: :ref:`RID<class_RID>`, process_info\: :ref:`ProcessInfo<enum_PhysicsServer2D_ProcessInfo>`\ ) |virtual|                                                                                                                                                                                                               |
    +-------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`float<class_float>`                                         | :ref:`_space_get_param<class_PhysicsServer2DExtension_private_method__space_get_param>`\ (\ space\: :ref:`RID<class_RID>`, param\: :ref:`SpaceParameter<enum_PhysicsServer2D_SpaceParameter>`\ ) |virtual| |const|                                                                                                                                                                                                                                |
    +-------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -301,6 +305,8 @@ Methods
    | |void|                                                            | :ref:`_space_set_debug_contacts<class_PhysicsServer2DExtension_private_method__space_set_debug_contacts>`\ (\ space\: :ref:`RID<class_RID>`, max_contacts\: :ref:`int<class_int>`\ ) |virtual|                                                                                                                                                                                                                                                    |
    +-------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | |void|                                                            | :ref:`_space_set_param<class_PhysicsServer2DExtension_private_method__space_set_param>`\ (\ space\: :ref:`RID<class_RID>`, param\: :ref:`SpaceParameter<enum_PhysicsServer2D_SpaceParameter>`, value\: :ref:`float<class_float>`\ ) |virtual|                                                                                                                                                                                                     |
+   +-------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | |void|                                                            | :ref:`_space_step<class_PhysicsServer2DExtension_private_method__space_step>`\ (\ space\: :ref:`RID<class_RID>`, delta\: :ref:`float<class_float>`\ ) |virtual|                                                                                                                                                                                                                                                                                   |
    +-------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | |void|                                                            | :ref:`_step<class_PhysicsServer2DExtension_private_method__step>`\ (\ step\: :ref:`float<class_float>`\ ) |virtual|                                                                                                                                                                                                                                                                                                                               |
    +-------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -1876,6 +1882,18 @@ Overridable version of :ref:`PhysicsServer2D.space_create<class_PhysicsServer2D_
 
 ----
 
+.. _class_PhysicsServer2DExtension_private_method__space_flush_queries:
+
+.. rst-class:: classref-method
+
+|void| **_space_flush_queries**\ (\ space\: :ref:`RID<class_RID>`\ ) |virtual| :ref:`🔗<class_PhysicsServer2DExtension_private_method__space_flush_queries>`
+
+**Experimental:** This method may be changed or removed in future versions.
+
+.. rst-class:: classref-item-separator
+
+----
+
 .. _class_PhysicsServer2DExtension_private_method__space_get_contact_count:
 
 .. rst-class:: classref-method
@@ -1911,6 +1929,18 @@ Overridable version of :ref:`PhysicsServer2D<class_PhysicsServer2D>`'s internal 
 :ref:`PhysicsDirectSpaceState2D<class_PhysicsDirectSpaceState2D>` **_space_get_direct_state**\ (\ space\: :ref:`RID<class_RID>`\ ) |virtual| :ref:`🔗<class_PhysicsServer2DExtension_private_method__space_get_direct_state>`
 
 Overridable version of :ref:`PhysicsServer2D.space_get_direct_state<class_PhysicsServer2D_method_space_get_direct_state>`.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_PhysicsServer2DExtension_private_method__space_get_last_process_info:
+
+.. rst-class:: classref-method
+
+:ref:`int<class_int>` **_space_get_last_process_info**\ (\ space\: :ref:`RID<class_RID>`, process_info\: :ref:`ProcessInfo<enum_PhysicsServer2D_ProcessInfo>`\ ) |virtual| :ref:`🔗<class_PhysicsServer2DExtension_private_method__space_get_last_process_info>`
+
+**Experimental:** This method may be changed or removed in future versions.
 
 .. rst-class:: classref-item-separator
 
@@ -1973,6 +2003,18 @@ Overridable version of :ref:`PhysicsServer2D<class_PhysicsServer2D>`'s internal 
 |void| **_space_set_param**\ (\ space\: :ref:`RID<class_RID>`, param\: :ref:`SpaceParameter<enum_PhysicsServer2D_SpaceParameter>`, value\: :ref:`float<class_float>`\ ) |virtual| :ref:`🔗<class_PhysicsServer2DExtension_private_method__space_set_param>`
 
 Overridable version of :ref:`PhysicsServer2D.space_set_param<class_PhysicsServer2D_method_space_set_param>`.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_PhysicsServer2DExtension_private_method__space_step:
+
+.. rst-class:: classref-method
+
+|void| **_space_step**\ (\ space\: :ref:`RID<class_RID>`, delta\: :ref:`float<class_float>`\ ) |virtual| :ref:`🔗<class_PhysicsServer2DExtension_private_method__space_step>`
+
+**Experimental:** This method may be changed or removed in future versions.
 
 .. rst-class:: classref-item-separator
 

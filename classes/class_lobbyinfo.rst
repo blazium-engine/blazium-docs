@@ -34,8 +34,6 @@ Properties
    +-------------------------------------+------------------------------------------------------------------------+-----------+
    | :ref:`String<class_String>`         | :ref:`host<class_LobbyInfo_property_host>`                             | ``""``    |
    +-------------------------------------+------------------------------------------------------------------------+-----------+
-   | :ref:`String<class_String>`         | :ref:`host_name<class_LobbyInfo_property_host_name>`                   | ``""``    |
-   +-------------------------------------+------------------------------------------------------------------------+-----------+
    | :ref:`String<class_String>`         | :ref:`id<class_LobbyInfo_property_id>`                                 | ``""``    |
    +-------------------------------------+------------------------------------------------------------------------+-----------+
    | :ref:`String<class_String>`         | :ref:`lobby_name<class_LobbyInfo_property_lobby_name>`                 | ``""``    |
@@ -87,22 +85,6 @@ The lobby public data.
 - :ref:`String<class_String>` **get_host**\ (\ )
 
 The host id of the lobby.
-
-.. rst-class:: classref-item-separator
-
-----
-
-.. _class_LobbyInfo_property_host_name:
-
-.. rst-class:: classref-property
-
-:ref:`String<class_String>` **host_name** = ``""`` :ref:`🔗<class_LobbyInfo_property_host_name>`
-
-.. rst-class:: classref-property-setget
-
-- :ref:`String<class_String>` **get_host_name**\ (\ )
-
-The name of the host of the lobby.
 
 .. rst-class:: classref-item-separator
 

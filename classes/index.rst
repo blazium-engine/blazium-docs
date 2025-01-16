@@ -44,7 +44,6 @@ Nodes
     class_audiostreamplayer
     class_audiostreamplayer2d
     class_audiostreamplayer3d
-    class_authoritativeclient
     class_backbuffercopy
     class_basebutton
     class_blaziumclient
@@ -92,6 +91,7 @@ Nodes
     class_decal
     class_directionallight2d
     class_directionallight3d
+    class_discordembeddedappclient
     class_editorcommandpalette
     class_editorfiledialog
     class_editorfilesystem
@@ -222,6 +222,7 @@ Nodes
     class_scriptcreatedialog
     class_scripteditor
     class_scripteditorbase
+    class_scriptedlobbyclient
     class_scrollbar
     class_scrollcontainer
     class_separator
@@ -253,6 +254,7 @@ Nodes
     class_texturebutton
     class_textureprogressbar
     class_texturerect
+    class_thirdpartyclient
     class_tilemap
     class_tilemaplayer
     class_timer
@@ -408,6 +410,7 @@ Resources
     class_fbxdocument
     class_fbxstate
     class_fogmaterial
+    class_foldablegroup
     class_font
     class_fontfile
     class_fontvariation
@@ -722,8 +725,6 @@ Other objects
     class_audiostreamplaybackpolyphonic
     class_audiostreamplaybackresampled
     class_audiostreamplaybacksynchronized
-    class_authoritativeresponse
-    class_authoritativeresult
     class_callbacktweener
     class_camerafeed
     class_cameraserver
@@ -732,6 +733,8 @@ Other objects
     class_configfile
     class_crypto
     class_diraccess
+    class_discordembeddedappresponse
+    class_discordembeddedappresult
     class_displayserver
     class_dtlsserver
     class_editordebuggerplugin
@@ -796,12 +799,11 @@ Other objects
     class_javascriptobject
     class_jnisingleton
     class_jsonrpc
+    class_jwt
     class_kinematiccollision2d
     class_kinematiccollision3d
     class_lightmapper
     class_lightmapperrd
-    class_listlobbyresponse
-    class_listlobbyresult
     class_lobbyresponse
     class_lobbyresult
     class_loginresponse
@@ -932,6 +934,8 @@ Other objects
     class_scenestate
     class_scenetree
     class_scenetreetimer
+    class_scriptedlobbyresponse
+    class_scriptedlobbyresult
     class_scriptlanguage
     class_scriptlanguageextension
     class_semaphore

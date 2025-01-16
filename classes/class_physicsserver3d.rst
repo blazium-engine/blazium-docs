@@ -370,7 +370,11 @@ Methods
    +-------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`RID<class_RID>`                                             | :ref:`space_create<class_PhysicsServer3D_method_space_create>`\ (\ )                                                                                                                                                                                                                                |
    +-------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | |void|                                                            | :ref:`space_flush_queries<class_PhysicsServer3D_method_space_flush_queries>`\ (\ space\: :ref:`RID<class_RID>`\ )                                                                                                                                                                                   |
+   +-------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`PhysicsDirectSpaceState3D<class_PhysicsDirectSpaceState3D>` | :ref:`space_get_direct_state<class_PhysicsServer3D_method_space_get_direct_state>`\ (\ space\: :ref:`RID<class_RID>`\ )                                                                                                                                                                             |
+   +-------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`int<class_int>`                                             | :ref:`space_get_last_process_info<class_PhysicsServer3D_method_space_get_last_process_info>`\ (\ space\: :ref:`RID<class_RID>`, process_info\: :ref:`ProcessInfo<enum_PhysicsServer3D_ProcessInfo>`\ )                                                                                              |
    +-------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`float<class_float>`                                         | :ref:`space_get_param<class_PhysicsServer3D_method_space_get_param>`\ (\ space\: :ref:`RID<class_RID>`, param\: :ref:`SpaceParameter<enum_PhysicsServer3D_SpaceParameter>`\ ) |const|                                                                                                               |
    +-------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -379,6 +383,8 @@ Methods
    | |void|                                                            | :ref:`space_set_active<class_PhysicsServer3D_method_space_set_active>`\ (\ space\: :ref:`RID<class_RID>`, active\: :ref:`bool<class_bool>`\ )                                                                                                                                                       |
    +-------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | |void|                                                            | :ref:`space_set_param<class_PhysicsServer3D_method_space_set_param>`\ (\ space\: :ref:`RID<class_RID>`, param\: :ref:`SpaceParameter<enum_PhysicsServer3D_SpaceParameter>`, value\: :ref:`float<class_float>`\ )                                                                                    |
+   +-------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | |void|                                                            | :ref:`space_step<class_PhysicsServer3D_method_space_step>`\ (\ space\: :ref:`RID<class_RID>`, delta\: :ref:`float<class_float>`\ )                                                                                                                                                                  |
    +-------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`RID<class_RID>`                                             | :ref:`sphere_shape_create<class_PhysicsServer3D_method_sphere_shape_create>`\ (\ )                                                                                                                                                                                                                  |
    +-------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -3919,6 +3925,20 @@ Creates a space. A space is a collection of parameters for the physics engine th
 
 ----
 
+.. _class_PhysicsServer3D_method_space_flush_queries:
+
+.. rst-class:: classref-method
+
+|void| **space_flush_queries**\ (\ space\: :ref:`RID<class_RID>`\ ) :ref:`🔗<class_PhysicsServer3D_method_space_flush_queries>`
+
+**Experimental:** This method may be changed or removed in future versions.
+
+Flushes ``space``'s queries. It is necessary to call this method after calling :ref:`space_step<class_PhysicsServer3D_method_space_step>` with an active space from ``_physics_process``. Otherwise, call this method before calling :ref:`space_step<class_PhysicsServer3D_method_space_step>`.
+
+.. rst-class:: classref-item-separator
+
+----
+
 .. _class_PhysicsServer3D_method_space_get_direct_state:
 
 .. rst-class:: classref-method
@@ -3926,6 +3946,20 @@ Creates a space. A space is a collection of parameters for the physics engine th
 :ref:`PhysicsDirectSpaceState3D<class_PhysicsDirectSpaceState3D>` **space_get_direct_state**\ (\ space\: :ref:`RID<class_RID>`\ ) :ref:`🔗<class_PhysicsServer3D_method_space_get_direct_state>`
 
 Returns the state of a space, a :ref:`PhysicsDirectSpaceState3D<class_PhysicsDirectSpaceState3D>`. This object can be used to make collision/intersection queries.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_PhysicsServer3D_method_space_get_last_process_info:
+
+.. rst-class:: classref-method
+
+:ref:`int<class_int>` **space_get_last_process_info**\ (\ space\: :ref:`RID<class_RID>`, process_info\: :ref:`ProcessInfo<enum_PhysicsServer3D_ProcessInfo>`\ ) :ref:`🔗<class_PhysicsServer3D_method_space_get_last_process_info>`
+
+**Experimental:** This method may be changed or removed in future versions.
+
+Returns information about the current state of ``space``. See :ref:`ProcessInfo<enum_PhysicsServer3D_ProcessInfo>` for a list of available states.
 
 .. rst-class:: classref-item-separator
 
@@ -3974,6 +4008,22 @@ Marks a space as active. It will not have an effect, unless it is assigned to an
 |void| **space_set_param**\ (\ space\: :ref:`RID<class_RID>`, param\: :ref:`SpaceParameter<enum_PhysicsServer3D_SpaceParameter>`, value\: :ref:`float<class_float>`\ ) :ref:`🔗<class_PhysicsServer3D_method_space_set_param>`
 
 Sets the value for a space parameter. A list of available parameters is on the :ref:`SpaceParameter<enum_PhysicsServer3D_SpaceParameter>` constants.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_PhysicsServer3D_method_space_step:
+
+.. rst-class:: classref-method
+
+|void| **space_step**\ (\ space\: :ref:`RID<class_RID>`, delta\: :ref:`float<class_float>`\ ) :ref:`🔗<class_PhysicsServer3D_method_space_step>`
+
+**Experimental:** This method may be changed or removed in future versions.
+
+Manually advance ``space`` forward in ``delta``. This technique can be used for speeding up physics simulations, as seen in advanced rollback-style networking, or for predicting outcomes in scenarios such as hitting a ball in a billiards game.
+
+\ **Note:** If call this method with an active ``space`` from ``_physics_process()``, you should call :ref:`space_flush_queries<class_PhysicsServer3D_method_space_flush_queries>` afterwards. Otherwise, call :ref:`space_flush_queries<class_PhysicsServer3D_method_space_flush_queries>` beforehand.
 
 .. rst-class:: classref-item-separator
 

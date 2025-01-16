@@ -705,6 +705,8 @@ Properties
    +---------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------+
    | :ref:`Dictionary<class_Dictionary>`               | :ref:`input/ui_undo<class_ProjectSettings_property_input/ui_undo>`                                                                                                                                         |                                                                                                       |
    +---------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------+
+   | :ref:`Dictionary<class_Dictionary>`               | :ref:`input/ui_unicode_start<class_ProjectSettings_property_input/ui_unicode_start>`                                                                                                                       |                                                                                                       |
+   +---------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------+
    | :ref:`Dictionary<class_Dictionary>`               | :ref:`input/ui_up<class_ProjectSettings_property_input/ui_up>`                                                                                                                                             |                                                                                                       |
    +---------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------+
    | :ref:`bool<class_bool>`                           | :ref:`input_devices/buffering/agile_event_flushing<class_ProjectSettings_property_input_devices/buffering/agile_event_flushing>`                                                                           | ``false``                                                                                             |
@@ -6014,6 +6016,20 @@ Default :ref:`InputEventAction<class_InputEventAction>` to undo the most recent 
 
 ----
 
+.. _class_ProjectSettings_property_input/ui_unicode_start:
+
+.. rst-class:: classref-property
+
+:ref:`Dictionary<class_Dictionary>` **input/ui_unicode_start** :ref:`🔗<class_ProjectSettings_property_input/ui_unicode_start>`
+
+Default :ref:`InputEventAction<class_InputEventAction>` to start Unicode character hexadecimal code input in a text field.
+
+\ **Note:** Default ``ui_*`` actions cannot be removed as they are necessary for the internal logic of several :ref:`Control<class_Control>`\ s. The events assigned to the action can however be modified.
+
+.. rst-class:: classref-item-separator
+
+----
+
 .. _class_ProjectSettings_property_input/ui_up:
 
 .. rst-class:: classref-property
@@ -9212,6 +9228,8 @@ Sets which physics engine to use for 2D physics.
 
 "DEFAULT" and "GodotPhysics2D" are the same, as there is currently no alternative 2D physics server implemented.
 
+"Dummy" is a 2D physics server that does nothing and returns only dummy values, effectively disabling all 2D physics functionality.
+
 .. rst-class:: classref-item-separator
 
 ----
@@ -9447,6 +9465,8 @@ During each physics tick, Godot will multiply the linear velocity of RigidBodies
 Sets which physics engine to use for 3D physics.
 
 "DEFAULT" and "GodotPhysics3D" are the same, as there is currently no alternative 3D physics server implemented.
+
+"Dummy" is a 3D physics server that does nothing and returns only dummy values, effectively disabling all 3D physics functionality.
 
 .. rst-class:: classref-item-separator
 
@@ -11300,7 +11320,7 @@ If ``true``, the forward renderer will fall back to Direct3D 12 if Vulkan is not
 
 :ref:`bool<class_bool>` **rendering/rendering_device/fallback_to_opengl3** = ``true`` :ref:`🔗<class_ProjectSettings_property_rendering/rendering_device/fallback_to_opengl3>`
 
-If ``true``, the forward renderer will fall back to OpenGL 3 if both Direct3D 12, Metal and Vulkan are not supported.
+If ``true``, the forward renderer will fall back to OpenGL 3 if both Direct3D 12 and Vulkan are not supported.
 
 \ **Note:** This setting is implemented only on Windows, Android, macOS, iOS, and Linux/X11.
 
