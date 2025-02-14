@@ -6,8 +6,8 @@
 Introduction
 ------------
 
-By default, 2D scenes in Godot are unshaded, with no lights and shadows visible.
-While this is fast to render, unshaded scenes can look bland. Godot provides the
+By default, 2D scenes in Blazium are unshaded, with no lights and shadows visible.
+While this is fast to render, unshaded scenes can look bland. Blazium provides the
 ability to use real-time 2D lighting and shadows, which can greatly enhance the
 sense of depth in your project.
 
@@ -114,7 +114,7 @@ transparent white, and move its starting location to be in the center.
 Directional light
 -----------------
 
-New in Godot 4.0 is the ability to have directional lighting in 2D. Directional
+Since Godot 4.0, 2D can have directional lighting. Directional
 lighting is used to represent sunlight or moonlight. Light rays are casted
 parallel to each other, as if the sun or moon was infinitely far away from the
 surface that is receiving the light.
@@ -138,7 +138,7 @@ DirectionalLight2D offers the following properties:
 
     Directional shadows will always appear to be infinitely long, regardless
     of the value of the **Height** property. This is a limitation of the shadow
-    rendering method used for 2D lights in Godot.
+    rendering method used for 2D lights in Blazium.
 
     To have directional shadows that are not infinitely long, you should disable
     shadows in the DirectionalLight2D and use a custom shader that reads from

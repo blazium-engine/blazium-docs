@@ -3,7 +3,7 @@
 Building the manual with Sphinx
 ===============================
 
-This page explains how to build a local copy of the Godot manual using the
+This page explains how to build a local copy of the Blazium manual using the
 Sphinx docs engine. This allows you to have local HTML files and build the
 documentation as a PDF, EPUB, or LaTeX file, for example.
 
@@ -30,13 +30,13 @@ Before you get started, make sure that you have:
 
                 .. code:: pwsh
 
-                    py -m venv godot-docs-venv
+                    py -m venv blazium-docs-venv
 
             .. group-tab:: Other platforms
 
                 .. code:: sh
 
-                    python3 -m venv godot-docs-venv
+                    python3 -m venv blazium-docs-venv
 
     b.  Activate the virtual environment:
 
@@ -46,13 +46,13 @@ Before you get started, make sure that you have:
 
                 .. code:: pwsh
 
-                    godot-docs-venv\Scripts\activate.bat
+                    blazium-docs-venv\Scripts\activate.bat
 
             .. group-tab:: Other platforms
 
                 .. code:: sh
 
-                    source godot-docs-venv/bin/activate
+                    source blazium-docs-venv/bin/activate
 
     c.  *(Optional)* Update pre-installed packages:
 
@@ -80,7 +80,7 @@ Before you get started, make sure that you have:
 
     .. code:: sh
 
-        cd godot-docs
+        cd blazium-docs
 
 4.  Install the required packages:
 

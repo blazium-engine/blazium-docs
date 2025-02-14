@@ -6,7 +6,7 @@ Your first 3D game
 ==================
 
 In this step-by-step tutorial series, you will create your first complete 3D
-game with Godot. By the end of the series, you will have a simple yet finished
+game with Blazium. By the end of the series, you will have a simple yet finished
 project of your own like the animated gif below.
 
 |image0|

@@ -7,8 +7,8 @@ Introduction
 ------------
 
 The C++ bindings for GDExtension are built on top of the C GDExtension API
-and provide a nicer way to "extend" nodes and other built-in classes in Godot using C++.
-This new system allows the extension of Godot to nearly the same
+and provide a nicer way to "extend" nodes and other built-in classes in Blazium using C++.
+This new system allows the extension of Blazium to nearly the same
 level as statically linked C++ modules.
 
 You can download the included example in the test folder of the godot-cpp
@@ -19,28 +19,28 @@ Setting up the project
 
 There are a few prerequisites you'll need:
 
-- a Godot 4 executable,
+- a Blazium executable,
 - a C++ compiler,
 - SCons as a build tool,
 - a copy of the `godot-cpp
   repository <https://github.com/godotengine/godot-cpp>`__.
 
 See also :ref:`Compiling <toc-devel-compiling>` as the build tools are identical
-to the ones you need to compile Godot from source.
+to the ones you need to compile Blazium from source.
 
 You can download the `godot-cpp repository <https://github.com/godotengine/godot-cpp>`__ from GitHub or let Git do the work for you.
 Note that this repository has different branches for different versions
-of Godot. GDExtensions will not work in older versions of Godot (only Godot 4 and up) and vice versa, so make sure you download the correct branch.
+of Blazium. GDExtensions will not work in older versions of Blazium and vice versa, so make sure you download the correct branch.
 
 .. note::
     To use `GDExtension <https://godotengine.org/article/introducing-gd-extensions>`__
-    you need to use the godot-cpp branch that matches the version of Godot that you are
+    you need to use the godot-cpp branch that matches the version of Blazium that you are
     targeting. For example, if you're targeting Godot 4.1, use the ``4.1`` branch. Throughout
     this tutorial we use ``4.x``, which will need to be replaced with the version of Godot you
     are targeting.
 
     The ``master`` branch is the development branch which is updated regularly
-    to work with Godot's ``master`` branch.
+    to work with Blazium's ``master`` branch.
 
 .. warning::
     Our long-term goal is that GDExtensions targeting an earlier version of Godot will work
@@ -95,13 +95,13 @@ Building the C++ bindings
 Now that we've downloaded our prerequisites, it is time to build the C++
 bindings.
 
-The repository contains a copy of the metadata for the current Godot release,
-but if you need to build these bindings for a newer version of Godot, simply
-call the Godot executable:
+The repository contains a copy of the metadata for the current Blazium release,
+but if you need to build these bindings for a newer version of Blazium, simply
+call the Blazium executable:
 
 .. code-block:: none
 
-    godot --dump-extension-api
+    blazium --dump-extension-api
 
 The resulting ``extension_api.json`` file will be created in the executable's
 directory. Copy it to the project folder and add ``custom_api_file=<PATH_TO_FILE>``
@@ -130,10 +130,10 @@ libraries that can be compiled into your project stored in ``godot-cpp/bin/``.
 Creating a simple plugin
 ------------------------
 
-Now it's time to build an actual plugin. We'll start by creating an empty Godot
+Now it's time to build an actual plugin. We'll start by creating an empty Blazium
 project in which we'll place a few files.
 
-Open Godot and create a new project. For this example, we will place it in a
+Open Blazium and create a new project. For this example, we will place it in a
 folder called ``demo`` inside our GDExtension's folder structure.
 
 In our demo project, we'll create a scene containing a Node called "Main" and
@@ -193,7 +193,7 @@ There are a few things of note to the above. We include ``sprite2d.hpp`` which
 contains bindings to the Sprite2D class. We'll be extending this class in our
 module.
 
-We're using the namespace ``godot``, since everything in GDExtension is defined
+We're using the namespace ``blazium``, since everything in GDExtension is defined
 within this namespace.
 
 Then we have our class definition, which inherits from our Sprite2D through a
@@ -206,7 +206,7 @@ In the next block we're defining our methods, we have our constructor
 and destructor defined, but there are two other functions that will likely look
 familiar to some, and one new method.
 
-The first is ``_bind_methods``, which is a static function that Godot will
+The first is ``_bind_methods``, which is a static function that Blazium will
 call to find out which methods can be called and which properties it exposes.
 The second is our ``_process`` function, which will work exactly the same
 as the ``_process`` function you're used to in GDScript.
@@ -249,7 +249,7 @@ and calculates a new position for our sprite using a sine and cosine function.
 There is one more C++ file we need; we'll name it ``register_types.cpp``. Our
 GDExtension plugin can contain multiple classes, each with their own header
 and source file like we've implemented ``GDExample`` up above. What we need now
-is a small bit of code that tells Godot about all the classes in our
+is a small bit of code that tells Blazium about all the classes in our
 GDExtension plugin.
 
 .. code-block:: cpp
@@ -292,7 +292,7 @@ GDExtension plugin.
     }
 
 The ``initialize_example_module`` and ``uninitialize_example_module`` functions get
-called respectively when Godot loads our plugin and when it unloads it. All
+called respectively when Blazium loads our plugin and when it unloads it. All
 we're doing here is parse through the functions in our bindings module to
 initialize them, but you might have to set up more things depending on your
 needs. We call the ``GDREGISTER_CLASS`` macro for each of our classes in our library.
@@ -333,7 +333,7 @@ build files in a subsequent tutorial.
 
     This ``SConstruct`` file was written to be used with the latest ``godot-cpp``
     master, you may need to make small changes using it with older versions or
-    refer to the ``SConstruct`` file in the Godot 4.x documentation.
+    refer to the ``SConstruct`` file in the Blazium documentation.
 
 Once you've downloaded the ``SConstruct`` file, place it in your GDExtension folder
 structure alongside ``godot-cpp``, ``src`` and ``demo``, then run:
@@ -366,10 +366,10 @@ following commands to do so:
 Using the GDExtension module
 ----------------------------
 
-Before we jump back into Godot, we need to create one more file in
+Before we jump back into Blazium, we need to create one more file in
 ``demo/bin/``.
 
-This file lets Godot know what dynamic libraries should be
+This file lets Blazium know what dynamic libraries should be
 loaded for each platform and the entry function for the module. It is called ``gdexample.gdextension``.
 
 .. code-block:: none
@@ -410,12 +410,12 @@ loaded for each platform and the entry function for the module. It is called ``g
     }
 
 This file contains a ``configuration`` section that controls the entry function of the module.
-You should also set the minimum compatible Godot version with ``compatability_minimum``,
-which prevents older version of Godot from trying to load your extension.
+You should also set the minimum compatible Blazium version with ``compatability_minimum``,
+which prevents older version of Blazium from trying to load your extension.
 The ``reloadable`` flag enables automatic reloading of your extension by the editor every time you recompile it,
 without needing to restart the editor. This only works if you compile your extension in debug mode (default).
 
-The ``libraries`` section is the important bit: it tells Godot the location of the
+The ``libraries`` section is the important bit: it tells Blazium the location of the
 dynamic library in the project's filesystem for each supported platform. It will
 also result in *just* that file being exported when you export the project,
 which means the data pack won't contain libraries that are incompatible with the
@@ -449,12 +449,12 @@ Here is another overview to check the correct file structure:
     |   +--gdexample.cpp
     |   +--gdexample.h
 
-Time to jump back into Godot. We load up the main scene we created way back in
+Time to jump back into Blazium. We load up the main scene we created way back in
 the beginning and now add a newly available GDExample node to the scene:
 
 .. image:: img/gdextension_cpp_nodes.webp
 
-We're going to assign the Godot logo to this node as our texture, disable the
+We're going to assign the Blazium logo to this node as our texture, disable the
 ``centered`` property:
 
 .. image:: img/gdextension_cpp_sprite.webp
@@ -528,7 +528,7 @@ show the methods we end up changing, don't remove the lines we're omitting:
 
 Once you compile the module with these changes in place, you will see that a
 property has been added to our interface. You can now change this property and
-when you run your project, you will see that our Godot icon travels along a
+when you run your project, you will see that our Blazium icon travels along a
 larger figure.
 
 Let's do the same but for the speed of our animation and use a setter and getter
@@ -595,14 +595,14 @@ The first two arguments are the minimum and maximum value and the third is the s
 
     For simplicity, we've only used the hint_range of the property method.
     There are a lot more options to choose from. These can be used to
-    further configure how properties are displayed and set on the Godot side.
+    further configure how properties are displayed and set on the Blazium side.
 
 Signals
 -------
 
 Last but not least, signals fully work in GDExtension as well. Having your extension
 react to a signal given out by another object requires you to call ``connect``
-on that object. We can't think of a good example for our wobbling Godot icon, we
+on that object. We can't think of a good example for our wobbling Blazium icon, we
 would need to showcase a far more complete example.
 
 This is the required syntax:
@@ -616,17 +616,17 @@ To connect our signal ``the_signal`` from some other node with our method
 and a ``Callable``. The ``Callable`` holds information about an object on which a method
 can be called. In our case, it associates our current object instance ``this`` with the
 method ``my_method`` of the object. Then the ``connect`` method will add this to the
-observers of ``the_signal``. Whenever ``the_signal`` is now emitted, Godot knows which
+observers of ``the_signal``. Whenever ``the_signal`` is now emitted, Blazium knows which
 method of which object it needs to call.
 
 Note that you can only call ``my_method`` if you've previously registered it in
-your ``_bind_methods`` method. Otherwise Godot will not know about the existence
+your ``_bind_methods`` method. Otherwise Blazium will not know about the existence
 of ``my_method``.
 
 To learn more about ``Callable``, check out the class reference here: :ref:`Callable <class_Callable>`.
 
 Having your object sending out signals is more common. For our wobbling
-Godot icon, we'll do something silly just to show how it works. We're going to
+Blazium icon, we'll do something silly just to show how it works. We're going to
 emit a signal every time a second has passed and pass the new location along.
 
 In our ``gdexample.h`` header file, we need to define a new member ``time_emit``:
@@ -690,7 +690,7 @@ Next, we'll need to change our ``_process`` method:
 After a second has passed, we emit our signal and reset our counter. We can add
 our parameter values directly to ``emit_signal``.
 
-Once the GDExtension library is compiled, we can go into Godot and select our sprite
+Once the GDExtension library is compiled, we can go into Blazium and select our sprite
 node. In the **Node** dock, we can find our new signal and link it up by pressing
 the **Connect** button or double-clicking the signal. We've added a script on
 our main node and implemented our signal like this:
@@ -708,5 +708,5 @@ Next steps
 ----------
 
 We hope the above example showed you the basics. You can
-build upon this example to create full-fledged scripts to control nodes in Godot
+build upon this example to create full-fledged scripts to control nodes in Blazium
 using C++.

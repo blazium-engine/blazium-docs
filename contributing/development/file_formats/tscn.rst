@@ -4,12 +4,12 @@ TSCN file format
 ================
 
 The TSCN (text scene) file format represents a single scene tree inside
-Godot. Unlike binary SCN files, TSCN files have the advantage of being mostly
+Blazium. Unlike binary SCN files, TSCN files have the advantage of being mostly
 human-readable and easy for version control systems to manage.
 
 The ESCN (exported scene) file format is identical to the TSCN file format, but
-is used to indicate to Godot that the file has been exported from another
-program and should not be edited by the user from within Godot.
+is used to indicate to Blazium that the file has been exported from another
+program and should not be edited by the user from within Blazium.
 Unlike SCN and TSCN files, during import, ESCN files are compiled to binary
 SCN files stored inside the ``.godot/imported/`` folder.
 This reduces the data size and speeds up loading, as binary formats are faster
@@ -20,7 +20,7 @@ in scene/resource files. It is possible to write them manually, but they will be
 discarded when saving the file.
 
 For those looking for a complete description, the parsing is handled in the file
-`resource_format_text.cpp <https://github.com/godotengine/godot/blob/master/scene/resources/resource_format_text.cpp>`_
+`resource_format_text.cpp <https://github.com/blazium-engine/blazium/blob/master/scene/resources/resource_format_text.cpp>`_
 in the ``ResourceFormatLoaderText`` class.
 
 .. note::
@@ -59,9 +59,9 @@ used by the engine to track files that are moved around, even while the editor
 is closed. Scripts can also load UID-based resources using the ``uid://`` path
 prefix to avoid relying on filesystem paths. This makes it possible to move
 around a file in the project, but still be able to load it in scripts without
-having to modify the script. Godot does not use external files to keep track of
+having to modify the script. Blazium does not use external files to keep track of
 IDs, which means no central metadata storage location is required within the
-project. See `this pull request <https://github.com/godotengine/godot/pull/50786>`__
+project. See `this pull request <https://github.com/blazium-engine/blazium/pull/50786>`__
 for detailed information.
 
 These sections should appear in order, but it can be hard to distinguish them.
@@ -70,7 +70,7 @@ the items in the section. For example, the heading of all external resources
 should start with ``[ext_resource ...]``.
 
 A TSCN file may contain single-line comments starting with a semicolon (``;``).
-However, comments will be discarded when saving the file using the Godot editor.
+However, comments will be discarded when saving the file using the Blazium editor.
 Whitespace within a TSCN file is not significant (except within strings), but
 extraneous whitespace will be discarded when saving the file.
 
@@ -112,7 +112,7 @@ Other valid keywords include:
 
 The first node in the file, which is also the scene root, must **not** have a
 ``parent="Path/To/Node"`` entry in its heading. All scene files should have
-exactly *one* scene root. If it doesn't, Godot will fail to import the file.
+exactly *one* scene root. If it doesn't, Blazium will fail to import the file.
 The parent path of other nodes should be absolute, but shouldn't contain
 the scene root's name. If the node is a direct child of the scene root,
 the path should be ``"."``. Here is an example scene tree
@@ -129,7 +129,7 @@ the path should be ``"."``. Here is an example scene tree
 
     To make the file structure easier to grasp, you can save a file with any
     given node or resource and then inspect it yourself in an external editor. You
-    can also make incremental changes in the Godot editor, and keep an external
+    can also make incremental changes in the Blazium editor, and keep an external
     text editor open on the ``.tscn`` or ``.tres`` file with auto-reload enabled
     to see what changes.
 
@@ -166,7 +166,7 @@ collision, visuals (mesh + light) and a camera parented to the RigidBody3D:
 NodePath
 ~~~~~~~~
 
-A tree structure is not enough to represent the whole scene. Godot uses a
+A tree structure is not enough to represent the whole scene. Blazium uses a
 ``NodePath(Path/To/Node)`` structure to refer to another node or attribute of
 the node anywhere in the scene tree. Paths are relative to the current node,
 with ``NodePath(".")`` pointing to the current node and ``NodePath("")``
@@ -246,7 +246,7 @@ documented :ref:`here <doc_tscn_animation>`.
 This split between animations themselves and animation libraries was done in
 Godot 4, so that animations can be imported separately from 3D meshes, which is
 a common workflow in 3D animation software. See the `original pull request
-<https://github.com/godotengine/godot/pull/59980>`__ for details.
+<https://github.com/blazium-engine/blazium/pull/59980>`__ for details.
 
 If the library name is empty, then it acts acts the unique source of animations
 for this AnimationPlayer. This allows using ``<animation_name>`` directly to
@@ -283,7 +283,7 @@ itself. An external resource consists of a path, a type, a UID (used to map its
 filesystem location to a unique identifier) and an ID (used to refer to the
 resource in the scene file).
 
-Godot always generates absolute paths relative to the resource directory and
+Blazium always generates absolute paths relative to the resource directory and
 thus prefixed with ``res://``, but paths relative to the TSCN file's location
 are also valid.
 
@@ -296,7 +296,7 @@ Some example external resources are:
 
 Like TSCN files, a TRES file may contain single-line comments starting with a
 semicolon (``;``). However, comments will be discarded when saving the resource
-using the Godot editor.
+using the Blazium editor.
 Whitespace within a TRES file is not significant (except within strings), but
 extraneous whitespace will be discarded when saving the file.
 
@@ -343,7 +343,7 @@ with the following keys:
 - ``material``: The material used when drawing the surface.
 - ``name``: The surface's name. This can be used in scripts and is imported from
   3D DCCs.
-- ``primitive``: The surface's primitive type, matching the ``Mesh.PrimitiveType`` Godot enum. ``0`` = points, ``1`` = lines, ``2`` = line
+- ``primitive``: The surface's primitive type, matching the ``Mesh.PrimitiveType`` Blazium enum. ``0`` = points, ``1`` = lines, ``2`` = line
   strip, ``3`` = triangles (most common), ``4`` = triangle strip.
 - ``skin_data``: Bone weight data.
 - ``vertex_count``: Number of vertices in the surface. This must match ``vertex_data``'s size.
@@ -402,7 +402,7 @@ Each track is described by a list of key-value pairs in the format
   ``audio`` (audio playback tracks), ``animation`` (tracks that play other
   animations).
 - ``imported``: ``true`` if the track was created from an imported 3D scene,
-  ``false`` if it was manually created by the user in the Godot editor or using
+  ``false`` if it was manually created by the user in the Blazium editor or using
   a script.
 - ``enabled``: ``true`` if the track is effective, ``false`` if it was disabled
   in the editor.

@@ -53,8 +53,8 @@ This mode determines how the (real world) environment is blended with the virtua
       On see-through devices that support this, the alpha will control the translucency
       of the optics.
       On video-passthrough devices alpha blending is applied with the video image.
-      passthrough will also be enabled if applicable. 
-        
+      passthrough will also be enabled if applicable.
+
 You can set the environment blend mode for your application through the ``environment_blend_mode``
 property of the :ref:`XRInterface <class_xrinterface>` instance.
 
@@ -77,15 +77,15 @@ there is adequate ambient light set to illuminate your scene.
 
     Some AR SDKs do provide ambient lighting information or even provide a full radiance
     map to allow for real world reflections in your virtual objects.
-    The core Godot XR functionality doesn't currently have support for this, however this
+    The core Blazium XR functionality doesn't currently have support for this, however this
     functionality can be exposed through plugins.
 
 OpenXR specific
 ---------------
 
 In OpenXR you can configure the default blend mode you want to use.
-Godot will select this blend mode at startup if available.
-If not available Godot will default to the first supported blend mode provided
+Blazium will select this blend mode at startup if available.
+If not available Blazium will default to the first supported blend mode provided
 by the XR runtime.
 
 .. image:: img/openxr_default_blend_mode.webp
@@ -147,7 +147,7 @@ Putting the above together we can use the following code as a base:
 Shadow to opacity
 -----------------
 
-Shadow to opacity is a render mode for Godot spatial shaders
+Shadow to opacity is a render mode for Blazium spatial shaders
 that was introduced in Godot 3 specifically for AR.
 It is a special render mode where the more a surface is in shadow,
 the more opaque the surface becomes. When a surface is fully lit,

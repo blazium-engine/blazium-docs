@@ -4,8 +4,8 @@ Bug triage guidelines
 =====================
 
 This page describes the typical workflow of the bug triage team aka
-bugsquad when handling issues and pull requests on Godot's
-`GitHub repository <https://github.com/godotengine/godot>`__.
+bugsquad when handling issues and pull requests on Blazium's
+`GitHub repository <https://github.com/blazium-engine/blazium>`__.
 It is bound to evolve together with the bugsquad, so do not
 hesitate to propose modifications to the following guidelines.
 
@@ -34,7 +34,7 @@ to both issues and pull requests.
 Labels
 ~~~~~~
 
-The following labels are currently defined in the Godot repository:
+The following labels are currently defined in the Blazium repository:
 
 **Categories:**
 
@@ -50,7 +50,7 @@ The following labels are currently defined in the Godot repository:
    The purpose of this label is to let developers know which issues are
    still reproducible when they want to select what to work on. It is
    therefore a good practice to add in a comment on what platform and
-   what version or commit of Godot the issue could be reproduced; if a
+   what version or commit of Blazium the issue could be reproduced; if a
    developer looks at the issue one year later, the *Confirmed* label
    may not be relevant anymore.
 -  *Crash:* describes a bug that causes the engine to crash.
@@ -61,11 +61,11 @@ The following labels are currently defined in the Godot repository:
 -  *Documentation*: issue related to the documentation. Mainly to request
    enhancements in the API documentation. Issues related to the ReadTheDocs
    documentation should be filed on the
-   `godot-docs <https://github.com/blazium-engine/blazium-docs>`_ repository.
+   `blazium-docs <https://github.com/blazium-engine/blazium-docs>`_ repository.
 -  *Enhancement*: describes a proposed enhancement to an existing
    functionality.
 -  *Feature proposal*: describes a wish for a new feature to be
-   implemented. Note that the main Godot repository no longer accepts
+   implemented. Note that the main Blazium repository no longer accepts
    feature requests. Please use
    `godot-proposals <https://github.com/godotengine/godot-proposals>`__ instead.
 -  *For PR meeting*: the issue needs to be discussed in a pull request meeting.
@@ -130,9 +130,9 @@ describe an issue or pull request.
 -  *Plugin*: relates to problems encountered while writing plugins.
 -  *Porting*: relates to some specific platforms or exporting projects.
 -  *Rendering*: relates to the 2D and 3D rendering engines.
--  *Shaders*: relates to the Godot shader language or visual shaders.
+-  *Shaders*: relates to the Blazium shader language or visual shaders.
 -  *Tests*: relates to unit tests.
--  *Thirdparty*: relates to third-party libraries used in Godot.
+-  *Thirdparty*: relates to third-party libraries used in Blazium.
 -  *XR*: relates to Augmented Reality or Virtual Reality.
 
 Issues would typically correspond to only one topic, though it's not
@@ -202,11 +202,11 @@ use the following labels:
 The available topics describe the same content as the topics in the main
 repository.
 
-Milestones
+Roadmaps
 ~~~~~~~~~~
 
-`Milestones <https://github.com/godotengine/godot/milestones>`_ correspond to
-planned future versions of Godot for which there is an existing roadmap. Issues
+`Roadmaps <https://blazium.app/roadmaps>`_ correspond to
+planned future versions of Blazium for which there is an existing roadmap. Issues
 that fit in the said roadmap should be filed under the corresponding milestone;
 if they don't correspond to any current roadmap, they should be left without
 milestone. As a rule of thumb, an issue corresponds to a given milestone if it

@@ -10,7 +10,7 @@ When creating a game, the process of localization usually starts when developmen
 has finished. This means that translations aren't available during development
 for testing whether the project is internationalized properly.
 
-Godot offers pseudolocalization as a way to test how robust the project is
+Blazium offers pseudolocalization as a way to test how robust the project is
 when it comes to locale changes. Pseudolocalization simulates changes that
 might take place during localization. This way, any issues regarding
 internationalization can be recognized early on during development.
@@ -35,7 +35,7 @@ Pseudolocalization can also be :ref:`toggled at runtime from a script <doc_pseud
 Pseudolocalization configurations
 ---------------------------------
 
-Pseudolocalization in Godot can be set up according to the specific use case of the
+Pseudolocalization in Blazium can be set up according to the specific use case of the
 project. Here are the pseudolocalization properties that can be configured through
 project settings:
 

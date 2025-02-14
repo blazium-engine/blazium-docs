@@ -80,8 +80,8 @@ they don't always tell the whole story.
 
 - Bottlenecks are often on the GPU, "as a result" of instructions given by the
   CPU.
-- Spikes can occur in the operating system processes (outside of Godot) "as a
-  result" of instructions used in Godot (for example, dynamic memory allocation).
+- Spikes can occur in the operating system processes (outside of Blazium) "as a
+  result" of instructions used in Blazium (for example, dynamic memory allocation).
 - You may not always be able to profile specific devices like a mobile phone
   due to the initial setup required.
 - You may have to solve performance problems that occur on hardware you don't
@@ -134,7 +134,7 @@ of your improvements. Sometimes, attempts to improve performance can backfire
 and lead to slower performance.
 **Always use profiling and timing to guide your efforts.**
 
-For more info about using Godot's built-in profiler, see :ref:`doc_the_profiler`.
+For more info about using Blazium's built-in profiler, see :ref:`doc_the_profiler`.
 
 Principles
 ----------

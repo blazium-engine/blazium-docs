@@ -5,7 +5,7 @@
 Recording with microphone
 =========================
 
-Godot supports in-game audio recording for Windows, macOS, Linux, Android and
+Blazium supports in-game audio recording for Windows, macOS, Linux, Android and
 iOS.
 
 A simple demo is included in the official demo projects and will be used as

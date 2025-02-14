@@ -23,11 +23,11 @@ class. It's just a script, so it can be run by executing:
 
  .. code-tab:: console GDScript
 
-    c:\godot> godot -s http_test.gd
+    c:\blazium> blazium -s http_test.gd
 
  .. code-tab:: console C#
 
-    c:\godot> godot -s HTTPTest.cs
+    c:\blazium> blazium -s HTTPTest.cs
 
 It will connect and fetch a website.
 

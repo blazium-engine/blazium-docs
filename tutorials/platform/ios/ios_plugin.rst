@@ -14,9 +14,9 @@ Loading and using an existing plugin
 
 An iOS plugin requires a ``.gdip`` configuration file, a binary file which can be either ``.a`` static library or ``.xcframework`` containing ``.a`` static libraries, and possibly other dependencies. To use it, you need to:
 
-1. Copy the plugin's files to your Godot project's ``res://ios/plugins`` directory. You can also group files in a sub-directory, like ``res://ios/plugins/my_plugin``.
+1. Copy the plugin's files to your Blazium project's ``res://ios/plugins`` directory. You can also group files in a sub-directory, like ``res://ios/plugins/my_plugin``.
 
-2. The Godot editor automatically detects and imports ``.gdip`` files inside ``res://ios/plugins`` and its subdirectories.
+2. The Blazium editor automatically detects and imports ``.gdip`` files inside ``res://ios/plugins`` and its subdirectories.
 
 3. You can find and activate detected plugins by going to Project -> Export... -> iOS and in the Options tab, scrolling to the Plugins section.
 
@@ -30,18 +30,18 @@ When a plugin is active, you can access it in your using ``Engine.get_singleton(
 
 .. note::
 
-   The plugin's files have to be in the ``res://ios/plugins/`` directory or a subdirectory, otherwise the Godot editor will not automatically detect them.
+   The plugin's files have to be in the ``res://ios/plugins/`` directory or a subdirectory, otherwise the Blazium editor will not automatically detect them.
 
 Creating an iOS plugin
 ----------------------
 
-At its core, a Godot iOS plugin is an iOS library (*.a* archive file or *.xcframework* containing static libraries) with the following requirements:
+At its core, a Blazium iOS plugin is an iOS library (*.a* archive file or *.xcframework* containing static libraries) with the following requirements:
 
 - The library must have a dependency on the Blazium Engine headers.
 
 - The library must come with a ``.gdip`` configuration file.
 
-An iOS plugin can have the same functionality as a Godot module but provides more flexibility and doesn't require to rebuild the engine.
+An iOS plugin can have the same functionality as a Blazium module but provides more flexibility and doesn't require to rebuild the engine.
 
 Here are the steps to get a plugin's development started. We recommend using `Xcode <https://developer.apple.com/develop/>`_ as your development environment.
 
@@ -56,13 +56,13 @@ To build an iOS plugin:
 
 2. Add the Blazium Engine header files as a dependency for your plugin library in ``HEADER_SEARCH_PATHS``. You can find the setting inside the ``Build Settings`` tab:
 
-    - Download the Blazium Engine source from the `Godot GitHub page <https://github.com/godotengine/godot>`_.
+    - Download the Blazium Engine source from the `Godot GitHub page <https://github.com/blazium-engine/blazium>`_.
 
     - Run SCons to generate headers. You can learn the process by reading :ref:`doc_compiling_for_ios`. You don't have to wait for compilation to complete to move forward as headers are generated before the engine starts to compile.
 
     - You should use the same header files for iOS plugins and for the iOS export template.
 
-3. In the ``Build Settings`` tab, specify the compilation flags for your static library in ``OTHER_CFLAGS``. The most important ones are ``-fcxx-modules``, ``-fmodules``, and ``-DDEBUG`` if you need debug support. Other flags should be the same you use to compile Godot. For instance:
+3. In the ``Build Settings`` tab, specify the compilation flags for your static library in ``OTHER_CFLAGS``. The most important ones are ``-fcxx-modules``, ``-fmodules``, and ``-DDEBUG`` if you need debug support. Other flags should be the same you use to compile Blazium. For instance:
 
 ::
 
@@ -76,7 +76,7 @@ To build an iOS plugin:
 
     xcodebuild -create-xcframework -library [DeviceLibrary].a -library [SimulatorLibrary].a -output [PluginName].xcframework
 
-6. Create a Godot iOS Plugin configuration file to help the system detect and load your plugin:
+6. Create a Blazium iOS Plugin configuration file to help the system detect and load your plugin:
 
     -   The configuration file extension must be ``gdip`` (e.g.: ``MyPlugin.gdip``).
 

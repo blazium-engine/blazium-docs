@@ -17,9 +17,9 @@ Differences between GDExtension and C++ modules
 -----------------------------------------------
 
 You can use both GDExtension and :ref:`C++ modules <doc_custom_modules_in_cpp>` to
-run C or C++ code in a Godot project.
+run C or C++ code in a Blazium project.
 
-They also both allow you to integrate third-party libraries into Godot. The one
+They also both allow you to integrate third-party libraries into Blazium. The one
 you should choose depends on your needs.
 
 .. warning::
@@ -77,7 +77,7 @@ GDExtension isn't enough:
 Supported languages
 -------------------
 
-The Godot developers officially support the following language bindings for
+The Blazium developers officially support the following language bindings for
 GDExtension:
 
 - C++ :ref:`(tutorial) <doc_gdextension_cpp_example>`
@@ -105,15 +105,15 @@ The bindings below are developed and maintained by the community:
 
     Not all bindings mentioned here may be production-ready. Make sure to
     research options thoroughly before starting a project with one of those.
-    Also, double-check whether the binding is compatible with the Godot version
+    Also, double-check whether the binding is compatible with the Blazium version
     you're using.
 
 Version compatibility
 ---------------------
 
-GDExtension add-ons compiled for a given Godot version are only guaranteed to work
+GDExtension add-ons compiled for a given Blazium version are only guaranteed to work
 with the same minor release series. For example, a GDExtension add-on compiled for
-Godot 4.0 will only work with Godot 4.0, 4.0.1, 4.0.2. In addition, GDExtension is
+Blazium 4.0 will only work with Godot 4.0, 4.0.1, 4.0.2. In addition, GDExtension is
 not compatible with Godot 3.x.
 
 GDExtension add-ons are also only compatible with engine builds that use the

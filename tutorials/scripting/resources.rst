@@ -7,7 +7,7 @@ Nodes and resources
 -------------------
 
 Up to this tutorial, we focused on the :ref:`Node <class_Node>`
-class in Godot as that's the one you use to code behavior and
+class in Blazium as that's the one you use to code behavior and
 most of the engine's features rely on it. There is
 another datatype that is just as important:
 :ref:`Resource <class_Resource>`.
@@ -16,7 +16,7 @@ another datatype that is just as important:
 arrange user interfaces, etc. **Resources** are **data containers**. They don't
 do anything on their own: instead, nodes use the data contained in resources.
 
-Anything Godot saves or loads from disk is a resource. Be it a scene (a ``.tscn``
+Anything Blazium saves or loads from disk is a resource. Be it a scene (a ``.tscn``
 or an ``.scn`` file), an image, a script... Here are some :ref:`Resource <class_Resource>` examples:
 
 - :ref:`Texture <class_Texture>`
@@ -63,7 +63,7 @@ it becomes a built-in resource.
 
 The switch between built-in and external resources happens when you save the
 scene. In the example above, if you erase the path ``"res://robi.png"`` and
-save, Godot will save the image inside the ``.tscn`` scene file.
+save, Blazium will save the image inside the ``.tscn`` scene file.
 
 .. note::
 
@@ -79,7 +79,7 @@ There are two ways to load resources from code. First, you can use the ``load()`
  .. code-tab:: gdscript GDScript
 
     func _ready():
-        # Godot loads the Resource when it reads this very line.
+        # Blazium loads the Resource when it reads this very line.
         var imported_resource = load("res://robi.png")
         $sprite.texture = imported_resource
 
@@ -87,7 +87,7 @@ There are two ways to load resources from code. First, you can use the ``load()`
 
     public override void _Ready()
     {
-        // Godot loads the Resource when it executes this line.
+        // Blazium loads the Resource when it executes this line.
         var texture = GD.Load<Texture>("res://Robi.png");
         var sprite = GetNode<Sprite2D>("sprite");
         sprite.Texture = texture;
@@ -101,7 +101,7 @@ with a variable path: you need to use a constant string.
  .. code-tab:: gdscript GDScript
 
     func _ready():
-        # Godot loads the resource at compile-time
+        # Blazium loads the resource at compile-time
         var imported_resource = preload("res://robi.png")
         get_node("sprite").texture = imported_resource
 
@@ -157,7 +157,7 @@ the engine frees all the resources it owns as well if no other node uses them.
 Creating your own resources
 ---------------------------
 
-Like any Object in Godot, users can also script Resources. Resource scripts
+Like any Object in Blazium, users can also script Resources. Resource scripts
 inherit the ability to freely translate between object properties and serialized
 text or binary data (\*.tres, \*.res). They also inherit the reference-counting
 memory management from the RefCounted type.
@@ -181,13 +181,13 @@ and :ref:`Resource <class_Resource>` features:
 
 - Resources can even serialize sub-Resources recursively, meaning users can design even more sophisticated data structures.
 
-- Users can save Resources as version-control-friendly text files (\*.tres). Upon exporting a game, Godot serializes resource files as binary files (\*.res) for increased speed and compression.
+- Users can save Resources as version-control-friendly text files (\*.tres). Upon exporting a game, Blazium serializes resource files as binary files (\*.res) for increased speed and compression.
 
 - Blazium Engine's Inspector renders and edits Resource files out-of-the-box. As such, users often do not need to implement custom logic to visualize or edit their data. To do so, double-click the resource file in the FileSystem dock or click the folder icon in the Inspector and open the file in the dialog.
 
 - They can extend **other** resource types besides just the base Resource.
 
-Godot makes it easy to create custom Resources in the Inspector.
+Blazium makes it easy to create custom Resources in the Inspector.
 
 1. Create a plain Resource object in the Inspector. This can even be a type that derives Resource, so long as your script is extending that type.
 2. Set the ``script`` property in the Inspector to be your script.
@@ -363,9 +363,9 @@ Now, select the :ref:`CharacterBody3D <class_CharacterBody3D>` node which we nam
     they use in the file. When loaded, they will fetch and load this script as an
     extension of their type. This means that trying to assign a subclass, i.e. an
     inner class of a script (such as using the ``class`` keyword in GDScript) won't
-    work. Godot will not serialize the custom properties on the script subclass properly.
+    work. Blazium will not serialize the custom properties on the script subclass properly.
 
-    In the example below, Godot would load the ``Node`` script, see that it doesn't
+    In the example below, Blazium would load the ``Node`` script, see that it doesn't
     extend ``Resource``, and then determine that the script failed to load for the
     Resource object since the types are incompatible.
 

@@ -4,12 +4,12 @@ Class reference primer
 ======================
 
 This page explains how to write the class reference. You will learn where to
-write new descriptions for the classes, methods, and properties for Godot's
+write new descriptions for the classes, methods, and properties for Blazium's
 built-in node types.
 
 .. seealso::
 
-    To learn to submit your changes to the Godot project using the Git version
+    To learn to submit your changes to the Blazium project using the Git version
     control system, see :ref:`doc_updating_the_class_reference`.
 
 The reference for each class is contained in an XML file like the one below:
@@ -67,7 +67,7 @@ description is always at the top of the page, while the long description lies
 below the list of methods, variables, and constants. You can find methods,
 member variables, constants, and signals in separate XML nodes.
 
-For each, you want to learn how they work in Godot's source code. Then, fill
+For each, you want to learn how they work in Blazium's source code. Then, fill
 their documentation by completing or improving the text in these tags:
 
 - `<brief_description>`
@@ -91,7 +91,7 @@ How to edit class XML
 
 Edit the file for your chosen class in ``doc/classes/`` to update the class
 reference. The folder contains an XML file for each class. The XML lists the
-constants and methods you will find in the class reference. Godot generates and
+constants and methods you will find in the class reference. Blazium generates and
 updates the XML automatically.
 
 .. note:: For some modules in the engine's source code, you'll find the XML
@@ -106,7 +106,7 @@ documentation, navigate to the ``doc/`` folder and run the command ``make rst``.
 This will convert the XML files to the online documentation's format and output
 errors if anything's wrong.
 
-Alternatively, you can build Godot and open the modified page in the built-in
+Alternatively, you can build Blazium and open the modified page in the built-in
 code reference. To learn how to compile the engine, read the :ref:`compilation
 guide <toc-devel-compiling>`.
 
@@ -125,7 +125,7 @@ search feature to find classes and properties quickly.
 Improve formatting with BBCode style tags
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Godot's XML class reference supports BBCode-like tags for linking as well as formatting text and code.
+Blazium's XML class reference supports BBCode-like tags for linking as well as formatting text and code.
 In the tables below you can find the available tags, usage examples and the results after conversion to reStructuredText.
 
 Linking

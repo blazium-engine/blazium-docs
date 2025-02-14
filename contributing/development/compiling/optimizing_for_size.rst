@@ -15,7 +15,7 @@ Common situations include creating builds for mobile and Web platforms.
 
 This tutorial aims to give an overview on different methods to create
 a smaller binary. Before continuing, it is recommended to read the previous tutorials
-on compiling Godot for each platform.
+on compiling Blazium for each platform.
 
 The options below are listed from the most important (greatest size savings)
 to the least important (lowest size savings).
@@ -33,7 +33,7 @@ distribution then running:
 
 ::
 
-    strip path/to/godot.binary
+    strip path/to/blazium.binary
 
 On Windows, ``strip.exe`` is included in most MinGW toolchain setups.
 
@@ -96,7 +96,7 @@ Disabling advanced text server
 - **Difficulty:** Easy
 - **Performed in official builds:** No
 
-By default, Godot uses an advanced text server with the support for the
+By default, Blazium uses an advanced text server with the support for the
 following features:
 
 - Right-to-left typesetting and complex scripts, required to write languages
@@ -104,7 +104,7 @@ following features:
 - Font ligatures and OpenType features (such as small capitals, fractions and
   slashed zero).
 
-Godot provides a fallback text server that isn't compiled by default. This text
+Blazium provides a fallback text server that isn't compiled by default. This text
 server can be used as a lightweight alternative to the default advanced text
 server:
 
@@ -197,7 +197,7 @@ Disabling unwanted modules
 - **Difficulty:** Medium to hard depending on modules
 - **Performed in official builds:** No
 
-A lot of Godot's functions are offered as modules.
+A lot of Blazium's functions are offered as modules.
 You can see a list of modules with the following command:
 
 ::

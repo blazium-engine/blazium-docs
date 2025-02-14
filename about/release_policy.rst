@@ -2,18 +2,18 @@
 
 .. _doc_release_policy:
 
-Godot release policy
+Blazium release policy
 ====================
 
-Godot's release policy is in constant evolution. The description below
+Blazium's release policy is in constant evolution. The description below
 provides a general idea of what to expect, but what will actually
 happen depends on the choices of core contributors and the needs of the
 community at a given time.
 
-Godot versioning
+Blazium versioning
 ----------------
 
-Godot loosely follows `Semantic Versioning <https://semver.org/>`__ with a
+Blazium loosely follows `Semantic Versioning <https://semver.org/>`__ with a
 ``major.minor.patch`` versioning system, albeit with an interpretation of each
 term adapted to the complexity of a game engine:
 
@@ -30,7 +30,7 @@ term adapted to the complexity of a game engine:
   areas *may* happen in minor versions, but the vast majority of projects
   should not be affected or require significant porting work.
 
-  This is because Godot, as a game engine, covers many areas like rendering,
+  This is because Blazium, as a game engine, covers many areas like rendering,
   physics, and scripting. Fixing bugs or implementing new features in one area
   might sometimes require changing a feature's behavior or modifying a class's
   interface, even if the rest of the engine API remains backwards compatible.
@@ -142,14 +142,7 @@ provided for testing purposes only.
 Which version should I use for a new project?
 ---------------------------------------------
 
-We recommend using Godot 4.x for new projects, as the Godot 4.x series will be
-supported long after 3.x stops receiving updates in the future. One caveat is
-that a lot of third-party documentation hasn't been updated for Godot 4.x yet.
-If you have to follow a tutorial designed for Godot 3.x, we recommend keeping
-:ref:`doc_upgrading_to_godot_4` open in a separate tab to check which methods
-have been renamed (if you get a script error while trying to use a specific node
-or method that was renamed in Godot 4.x).
-
+We recommend using Blazium (4.3) for new projects.
 If your project requires a feature that is missing in 4.x (such as GLES2/WebGL
 1.0), you should use Godot 3.x for a new project instead.
 
@@ -196,7 +189,7 @@ features that come with 4.0+.
 When is the next release out?
 -----------------------------
 
-While Godot contributors aren't working under any deadlines, we strive to
+While Blazium contributors aren't working under any deadlines, we strive to
 publish minor releases relatively frequently.
 
 In particular, after the very length release cycle for 4.0, we are pivoting to

@@ -11,7 +11,7 @@ and understand the :ref:`doc_vector_math` tutorial, as this tutorial
 requires a knowledge of vectors.
 
 This tutorial is about *transformations* and how we represent them
-in Godot using matrices. It is not a full in-depth guide to matrices.
+in Blazium using matrices. It is not a full in-depth guide to matrices.
 Transformations are most of the time applied as translation, rotation,
 and scale, so we will focus on how to represent those with matrices.
 
@@ -19,7 +19,7 @@ Most of this guide focuses on 2D, using :ref:`class_Transform2D` and
 :ref:`class_Vector2`, but the way things work in 3D is very similar.
 
 .. note:: As mentioned in the previous tutorial, it is important to
-          remember that in Godot, the Y axis points *down* in 2D.
+          remember that in Blazium, the Y axis points *down* in 2D.
           This is the opposite of how most schools teach linear
           algebra, with the Y axis pointing up.
 
@@ -136,12 +136,12 @@ hardest thing you need to know.
 
 .. image:: img/matrices_and_transforms/rotate2.png
 
-.. note:: Godot represents all rotations with radians, not degrees.
+.. note:: Blazium represents all rotations with radians, not degrees.
           A full turn is `TAU` or `PI*2` radians, and a quarter
           turn of 90 degrees is `TAU/4` or `PI/2` radians. Working
           with `TAU` usually results in more readable code.
 
-.. note:: Fun fact: In addition to Y being *down* in Godot, rotation
+.. note:: Fun fact: In addition to Y being *down* in Blazium, rotation
           is represented clockwise. This means that all the math and
           trig functions behave the same as a Y-is-up CCW system,
           since these differences "cancel out". You can think of
@@ -198,7 +198,7 @@ keep track of the origin vector in all examples. You can think of
 origin as another column, but it's often better to think of it as
 completely separate.
 
-Note that in 3D, Godot has a separate :ref:`class_Basis` structure
+Note that in 3D, Blazium has a separate :ref:`class_Basis` structure
 for holding the three :ref:`class_Vector3` values of the basis,
 since the code can get complex and it makes sense to separate
 it from :ref:`class_Transform3D` (which is composed of one
@@ -229,7 +229,7 @@ For example, an object rotated 90 degrees clockwise will move to
 the right when ``translated_local()`` with ``Vector2.UP``. To translate
 *relative to the global/parent frame* use ``translated()`` instead.
 
-.. note:: Godot's 2D uses coordinates based on pixels, so in actual
+.. note:: Blazium's 2D uses coordinates based on pixels, so in actual
           projects you will want to translate by hundreds of units.
 
 Putting it all together
@@ -356,7 +356,7 @@ Hopefully you now fully understand the how a transformation matrix affects
 the object, and the relationship between the basis vectors and how the
 object's "UV" or "intra-coordinates" have their world position changed.
 
-.. note:: In Godot, all transform math is done relative to the parent node.
+.. note:: In Blazium, all transform math is done relative to the parent node.
           When we refer to "world position", that would be relative to the
           node's parent instead, if the node had a parent.
 
@@ -588,7 +588,7 @@ One of the great things about transformation matrices is that they
 work very similarly between 2D and 3D transformations.
 All the code and formulas used above for 2D work the same in 3D,
 with 3 exceptions: the addition of a third axis, that each
-axis is of type :ref:`class_Vector3`, and also that Godot stores
+axis is of type :ref:`class_Vector3`, and also that Blazium stores
 the :ref:`class_Basis` separately from the :ref:`class_Transform3D`,
 since the math can get complex and it makes sense to separate it.
 
@@ -601,14 +601,14 @@ change the basis vectors to be non-perpendicular.
 .. image:: img/matrices_and_transforms/3d-identity.png
 
 If you would like, it's a good idea to play around with transforms
-to get an understanding of how they work. Godot allows you to edit
+to get an understanding of how they work. Blazium allows you to edit
 3D transform matrices directly from the inspector. You can download
 this project which has colored lines and cubes to help visualize the
 :ref:`class_Basis` vectors and the origin in both 2D and 3D:
 https://github.com/godotengine/godot-demo-projects/tree/master/misc/matrix_transform
 
-.. note:: You cannot edit Node2D's transform matrix directly in Godot 4.0's
-          inspector. This may be changed in a future release of Godot.
+.. note:: You cannot edit Node2D's transform matrix directly in Blazium's
+          inspector. This may be changed in a future release of Blazium.
 
 If you would like additional explanation, you should check out
 3Blue1Brown's excellent video about 3D linear transformations:
@@ -627,7 +627,7 @@ rotations as a set of 3 numbers, however, they are limited and not very
 useful, except for trivial cases.
 
 In 3D we do not typically use angles, we either use a transformation basis
-(used pretty much everywhere in Godot), or we use quaternions. Godot can
+(used pretty much everywhere in Blazium), or we use quaternions. Blazium can
 represent quaternions using the :ref:`class_Quaternion` struct. My suggestion
 to you is to completely ignore how they work under-the-hood, because
 they are very complicated and unintuitive.

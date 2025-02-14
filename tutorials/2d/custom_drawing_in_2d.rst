@@ -6,7 +6,7 @@ Custom drawing in 2D
 Introduction
 ------------
 
-Godot has nodes to draw sprites, polygons, particles, text, and many other
+Blazium has nodes to draw sprites, polygons, particles, text, and many other
 common game development needs. However, if you need something specific
 not covered with the standard nodes you can make any 2D node (for example,
 :ref:`Control <class_Control>` or :ref:`Node2D <class_Node2D>`-based)
@@ -113,7 +113,7 @@ of the texture when modified:
         }
     }
 
-To see it in action, you can set the texture to be the Godot icon on the
+To see it in action, you can set the texture to be the Blazium icon on the
 editor by dragging and dropping the default ``icon.svg`` from the
 ``FileSystem`` tab to the Texture property on the ``Inspector`` tab.
 When changing the ``Texture`` property value while the previous script is
@@ -212,7 +212,7 @@ method with ``filled = false``.
 Antialiased drawing
 -------------------
 
-Godot offers method parameters in :ref:`draw_line<class_CanvasItem_method_draw_line>`
+Blazium offers method parameters in :ref:`draw_line<class_CanvasItem_method_draw_line>`
 to enable antialiasing, but not all custom drawing methods offer this ``antialiased``
 parameter.
 
@@ -245,7 +245,7 @@ Example 1: drawing a custom shape
 ---------------------------------
 
 We will now use the custom drawing functionality of the Blazium Engine to draw
-something that Godot doesn't provide functions for. We will recreate the Godot
+something that Blazium doesn't provide functions for. We will recreate the Blazium
 logo but with code- only using drawing functions.
 
 You will have to code a function to perform this and draw it yourself.
@@ -310,14 +310,14 @@ the base of our shape:
         };
     }
 
-This format, while compact, is not the one that Godot understands to
+This format, while compact, is not the one that Blazium understands to
 draw a polygon. In a different scenario we could have to load
 these coordinates from a file or calculate the positions while the
 application is running, so some transformation may be needed.
 
 To transform these coordinates into the right format, we will create a new
 method ``float_array_to_Vector2Array()``. Then we will override the ``_ready()``
-function, which Godot will call only once -at the start of the execution-
+function, which Blazium will call only once -at the start of the execution-
 to load those coordinates into a variable:
 
 .. tabs::
@@ -398,7 +398,7 @@ Drawing connected lines
 
 Drawing a sequence of connected lines that don't close down to form a polygon
 is very similar to the previous method. We will use a connected set of lines to
-draw Godot's logo mouth.
+draw Blazium's logo mouth.
 
 First, we will define the list of coordinates that form the mouth shape, like this:
 

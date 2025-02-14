@@ -56,7 +56,7 @@ Each property has a specific function:
 Light number limits
 -------------------
 
-When using the Forward+ renderer, Godot uses a *clustering* approach for
+When using the Forward+ renderer, Blazium uses a *clustering* approach for
 real-time lighting. As many lights as desired can be added (as long as
 performance allows). However, there's still a default limit of 512 *clustered
 elements* that can be present in the current camera view. A clustered element is
@@ -160,12 +160,12 @@ at the cost of decreased performance.
     all" settings. To achieve the best visuals, you may need to use different
     shadow bias values on a per-light basis.
 
-**Note on Appearance Changes**: When enabling shadows on a light, be aware that the light's 
-appearance might change compared to when it's rendered without shadows in the compatibility 
-renderer. Due to limitations with older mobile devices, shadows are implemented using a multi-pass 
-rendering approach so lights with shadows are rendered in sRGB space instead of linear space. 
-This change in rendering space can sometimes drastically alter the light's appearance. To achieve a similar 
-appearance to an unshadowed light, you may need to adjust the light's energy setting. 
+**Note on Appearance Changes**: When enabling shadows on a light, be aware that the light's
+appearance might change compared to when it's rendered without shadows in the compatibility
+renderer. Due to limitations with older mobile devices, shadows are implemented using a multi-pass
+rendering approach so lights with shadows are rendered in sRGB space instead of linear space.
+This change in rendering space can sometimes drastically alter the light's appearance. To achieve a similar
+appearance to an unshadowed light, you may need to adjust the light's energy setting.
 
 Directional light
 -----------------
@@ -208,10 +208,10 @@ receive low-resolution shadows that may appear blocky.
 To fix this, a technique named *Parallel Split Shadow Maps* (PSSM) is used.
 This splits the view frustum in 2 or 4 areas. Each area gets its own shadow map.
 This allows small areas close to the viewer to have the same shadow resolution
-as a huge, far-away area. When shadows are enabled for DirectionalLight3D, the 
-default shadow mode is PSSM with 4 splits. In scenarios where an object is large 
-enough to appear in all four splits, it results in increased draw calls. Specifically, 
-such an object will be rendered five times in total: once for each of the four shadow 
+as a huge, far-away area. When shadows are enabled for DirectionalLight3D, the
+default shadow mode is PSSM with 4 splits. In scenarios where an object is large
+enough to appear in all four splits, it results in increased draw calls. Specifically,
+such an object will be rendered five times in total: once for each of the four shadow
 splits and once for the final scene rendering. This can impact performance, understanding
 this behavior is important for optimizing your scene and managing performance expectations.
 
@@ -473,7 +473,7 @@ make use of the increased sample count.
 16-bits versus 32-bit
 ^^^^^^^^^^^^^^^^^^^^^
 
-By default, Godot uses 16-bit depth textures for shadow map rendering. This is
+By default, Blazium uses 16-bit depth textures for shadow map rendering. This is
 recommended in most cases as it performs better without a noticeable difference
 in quality.
 

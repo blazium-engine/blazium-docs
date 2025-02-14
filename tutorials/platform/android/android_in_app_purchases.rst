@@ -3,7 +3,7 @@
 Android in-app purchases
 ========================
 
-Godot offers a first-party ``GodotGooglePlayBilling`` Android plugin compatible with Godot 4 which uses the `Google Play Billing library <https://developer.android.com/google/play/billing>`_.
+Blazium offers a first-party ``GodotGooglePlayBilling`` Android plugin compatible with Godot 4 which uses the `Google Play Billing library <https://developer.android.com/google/play/billing>`_.
 
 
 Usage

@@ -3,7 +3,7 @@
 Animation Track types
 =====================
 
-This page gives an overview of the track types available for Godot's animation
+This page gives an overview of the track types available for Blazium's animation
 player node on top of the default property tracks.
 
 .. seealso::

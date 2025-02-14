@@ -5,7 +5,7 @@ Editor and documentation localization
 
 .. highlight:: none
 
-Godot aims to make game development available to everyone, including people who
+Blazium aims to make game development available to everyone, including people who
 may not know or be comfortable with English. Therefore, we do our best to make
 the most important resources available in many languages, thanks to the
 translation effort of the community.
@@ -31,7 +31,7 @@ localization of images.
 
 .. tip::
 
-    Translating all the official Godot content is a massive undertaking, so we
+    Translating all the official Blazium content is a massive undertaking, so we
     advise prioritizing the resources as they are listed above: first the editor
     interface, then the online documentation, and eventually the class reference
     if there are enough translators to keep up with updates.
@@ -39,16 +39,16 @@ localization of images.
 Using Weblate for translations
 ------------------------------
 
-While our translations eventually reside in the Git repositories of the Godot
+While our translations eventually reside in the Git repositories of the Blazium
 engine and its documentation, all translation updates are handled through
 Weblate, and thus direct pull requests to the Git repositories are not accepted.
-Translations are synced manually between Weblate and the Godot repositories by
+Translations are synced manually between Weblate and the Blazium repositories by
 maintainers.
 
 You should therefore `register on Weblate <https://hosted.weblate.org/accounts/register/>`__
-to contribute to Godot's translations.
+to contribute to Blazium's translations.
 
-Once signed in, browse to the Godot resource which you want to contribute to (in
+Once signed in, browse to the Blazium resource which you want to contribute to (in
 this page we will use the `editor translation <https://hosted.weblate.org/projects/godot-engine/godot/>`__
 as an example) to find the list of all languages:
 
@@ -79,7 +79,7 @@ to translate to:
     for French) instead of a regional variant (e.g. ``fr_FR`` for French
     (France), ``fr_CA`` for French (Canada), or ``fr_DZ`` for French (Algeria)).
 
-    Godot has a huge amount of content to translate, so duplicating the work for
+    Blazium has a huge amount of content to translate, so duplicating the work for
     regional variants should only be done if the language variations are
     significant enough. Additionally, if a translation is done with for a
     regional variant, it will only be available automatically for users located
@@ -132,7 +132,7 @@ On that page, you have:
  - On the top right, the glossary shows terms for which an entry has been added
    previously, and which are included in the current string. For example, if
    you decided with fellow translators to use a specific translation for the
-   "node" term in Godot, you can add it to the glossary to ensure that other
+   "node" term in Blazium, you can add it to the glossary to ensure that other
    translators use the same convention.
  - The bottom right panel includes information on the source string. The most
    relevant item is the "source string location", which links you to the
@@ -163,7 +163,7 @@ translating.
   given file will be grouped together. For example, if the "source string
   location" indicates ``editor/code_editor.cpp``, the current string (and the
   nearby ones) is defined in the ``editor/code_editor.cpp`` code file, and is
-  thereby related to the code editors in Godot (GDScript, shaders).
+  thereby related to the code editors in Blazium (GDScript, shaders).
 - The online documentation's translation template is generated from the source
   RST files in the same order as seen in the **table of contents**, so for
   example the first strings are from the front page of the documentation.
@@ -300,11 +300,11 @@ external links, etc. Here are some examples::
 Class reference (BBCode)
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-The class reference is documented in the main Godot repository using XML files,
+The class reference is documented in the main Blazium repository using XML files,
 and with BBCode-like markup for styling and internal references.
 
 Some of the tags used are from the original BBCode (e.g. ``[b]Bold[/b]`` and
-``[i]Italics[/i]``), while others are Godot-specific and used for advanced
+``[i]Italics[/i]``), while others are Blazium-specific and used for advanced
 features such as inline code (e.g. ``[code]true[/code]``), linking to another
 class (e.g. ``[Node2D]``) or to a property in a given class (e.g.
 ``[member Node2D.position]``), or for multiline code blocks. Example::
@@ -317,9 +317,9 @@ class (e.g. ``[Node2D]``) or to a property in a given class (e.g.
 
 In the above example, ``[code]name[/code]``, ``[code]alpha[/code]``, and
 ``[Color]`` should *not* be translated, as they refer respectively to argument
-names and a class of the Godot API. Similarly, the contents of the
+names and a class of the Blazium API. Similarly, the contents of the
 ``[codeblock]`` should not be translated, as ``ColorN`` is a function of the
-Godot API and ``"red"`` is one of the named colors it supports. At most, you can
+Blazium API and ``"red"`` is one of the named colors it supports. At most, you can
 translate the name of the variable which holds the result (``red = ...``).
 
 Note also that in the XML, each line is a paragraph, so you should not add line
@@ -357,21 +357,21 @@ upload mode.
     version.
 
 If you want to test changes locally (especially for the editor translation), you
-can use the downloaded PO file and :ref:`compile Godot from source <toc-devel-compiling>`.
+can use the downloaded PO file and :ref:`compile Blazium from source <toc-devel-compiling>`.
 
 Rename the editor translation PO file to ``<lang>.po`` (e.g. ``eo.po`` for
 Esperanto) and place it in the ``editor/translations/`` folder
-(`GitHub <https://github.com/godotengine/godot/tree/master/editor/translations>`__).
+(`GitHub <https://github.com/blazium-engine/blazium/tree/master/editor/translations>`__).
 
 You can also test class reference changes the same way by renaming the PO file
 similarly and placing it in the ``doc/translations/`` folder
-(`GitHub <https://github.com/godotengine/godot/tree/master/doc/translations>`__).
+(`GitHub <https://github.com/blazium-engine/blazium/tree/master/doc/translations>`__).
 
 Localizing documentation images
 -------------------------------
 
 The online documentation includes many images, which can be screenshots of the
-Godot editor, custom-made graphs, of any other kind of visual content. Some of
+Blazium editor, custom-made graphs, of any other kind of visual content. Some of
 it includes text and might thus be relevant to localize in your language.
 
 This part is not handled via Weblate, but directly on the `godot-docs-l10n

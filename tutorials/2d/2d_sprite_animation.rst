@@ -11,7 +11,7 @@ characters with the AnimatedSprite2D class and the AnimationPlayer.
 Typically, when you create or download an animated character,
 it will come in one of two ways: as individual images or as a single sprite sheet
 containing all the animation's frames.
-Both can be animated in Godot with the AnimatedSprite2D class.
+Both can be animated in Blazium with the AnimatedSprite2D class.
 
 First, we'll use :ref:`AnimatedSprite2D <class_AnimatedSprite2D>` to
 animate a collection of individual images.
@@ -278,7 +278,7 @@ released.
 Summary
 -------
 
-These examples illustrate the two classes you can use in Godot for 2D animation.
+These examples illustrate the two classes you can use in Blazium for 2D animation.
 ``AnimationPlayer`` is a bit more complex than ``AnimatedSprite2D``,
 but it provides additional functionality, since you can also
 animate other properties like position or scale.

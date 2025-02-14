@@ -19,7 +19,7 @@ For that, :ref:`Containers <class_container>` are more useful.
 Container layout
 ----------------
 
-Containers provide a huge amount of layout power (as an example, the Godot editor user interface is entirely done using them):
+Containers provide a huge amount of layout power (as an example, the Blazium editor user interface is entirely done using them):
 
    .. image:: img/godot_containers.png
 
@@ -67,7 +67,7 @@ Experimenting with these flags and different containers is recommended to get a 
 Container types
 ---------------
 
-Godot provides several container types out of the box as they serve different purposes:
+Blazium provides several container types out of the box as they serve different purposes:
 
 Box Containers
 ^^^^^^^^^^^^^^

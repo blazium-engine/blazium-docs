@@ -10,7 +10,7 @@ Yes, the name sounds strange. "Kinematic Character". What is that?
 The reason for the name is that, when physics engines came out, they were called
 "Dynamics" engines (because they dealt mainly with collision
 responses). Many attempts were made to create a character controller
-using the dynamics engines, but it wasn't as easy as it seemed. Godot
+using the dynamics engines, but it wasn't as easy as it seemed. Blazium
 has one of the best implementations of dynamic character controller
 you can find (as it can be seen in the 2d/platformer demo), but using
 it requires a considerable level of skill and understanding of

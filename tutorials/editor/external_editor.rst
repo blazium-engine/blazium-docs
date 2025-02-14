@@ -10,7 +10,7 @@ This page explains how to code using an external text editor.
     To code C# in an external editor, see
     :ref:`the C# guide to configure an external editor <doc_c_sharp_setup_external_editor>`.
 
-Godot can be used with an external text editor, such as Sublime Text or Visual
+Blazium can be used with an external text editor, such as Sublime Text or Visual
 Studio Code. Browse to the relevant editor settings:
 **Editor > Editor Settings > Text Editor > External**
 
@@ -21,8 +21,8 @@ Studio Code. Browse to the relevant editor settings:
    **Text Editor > External** section of the Editor Settings
 
 There are two text fields: the executable path and command-line flags. The flags
-allow you to integrate the editor with Godot, passing it the file path to open
-and other relevant arguments. Godot will replace the following placeholders in
+allow you to integrate the editor with Blazium, passing it the file path to open
+and other relevant arguments. Blazium will replace the following placeholders in
 the flags string:
 
 +---------------------+-----------------------------------------------------+
@@ -82,9 +82,9 @@ We have official plugins for the following code editors:
 LSP/DAP support
 ---------------
 
-Godot supports the `Language Server Protocol <https://microsoft.github.io/language-server-protocol/>`_ (**LSP**) for code completion and the `Debug Adapter Protocol <https://microsoft.github.io/debug-adapter-protocol/>`_ (**DAP**) for debugging. You can check the `LSP client list <https://microsoft.github.io/language-server-protocol/implementors/tools/>`_ and `DAP client list <https://microsoft.github.io/debug-adapter-protocol/implementors/tools/>`_ to find if your editor supports them. If this is the case, you should be able to take advantage of these features without the need of a custom plugin.
+Blazium supports the `Language Server Protocol <https://microsoft.github.io/language-server-protocol/>`_ (**LSP**) for code completion and the `Debug Adapter Protocol <https://microsoft.github.io/debug-adapter-protocol/>`_ (**DAP**) for debugging. You can check the `LSP client list <https://microsoft.github.io/language-server-protocol/implementors/tools/>`_ and `DAP client list <https://microsoft.github.io/debug-adapter-protocol/implementors/tools/>`_ to find if your editor supports them. If this is the case, you should be able to take advantage of these features without the need of a custom plugin.
 
-To use these protocols, a Godot instance must be running on your current project. You should then configure your editor to communicate to the running adapter ports in Godot, which by default are ``6005`` for **LSP**, and ``6006`` for **DAP**. You can change these ports and other settings in the **Editor Settings**, under the **Network > Language Server** and **Network > Debug Adapter** sections respectively.
+To use these protocols, a Blazium instance must be running on your current project. You should then configure your editor to communicate to the running adapter ports in Blazium, which by default are ``6005`` for **LSP**, and ``6006`` for **DAP**. You can change these ports and other settings in the **Editor Settings**, under the **Network > Language Server** and **Network > Debug Adapter** sections respectively.
 
 Below are some configuration steps for specific editors:
 
@@ -124,4 +124,3 @@ JetBrains Rider
 ^^^^^^^^^^^^^^^
 
 Refer to `JetBrains Rider documentation <https://www.jetbrains.com/help/rider/Godot.html>`_.
-

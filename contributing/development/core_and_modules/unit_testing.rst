@@ -6,7 +6,7 @@ Unit testing
 Blazium Engine allows to write unit tests directly in C++. The engine integrates
 the `doctest <https://github.com/onqtam/doctest>`_ unit testing framework which
 gives ability to write test suites and test cases next to production code, but
-since the tests in Godot go through a different ``main`` entry point, the tests
+since the tests in Blazium go through a different ``main`` entry point, the tests
 reside in a dedicated ``tests/`` directory instead, which is located at the root
 of the engine source code.
 
@@ -33,7 +33,7 @@ Once the build is done, run the tests with a ``--test`` command-line option:
 
 .. code-block:: shell
 
-    ./bin/<godot_binary> --test
+    ./bin/<blazium_binary> --test
 
 The test run can be configured with the various doctest-specific command-line
 options. To retrieve the full list of supported options, run the ``--test``
@@ -41,7 +41,7 @@ command with the ``--help`` option:
 
 .. code-block:: shell
 
-    ./bin/<godot_binary> --test --help
+    ./bin/<blazium_binary> --test --help
 
 Any other options and arguments after the ``--test`` command are treated as
 arguments for doctest.
@@ -81,7 +81,7 @@ For instance, to run only the ``String`` unit tests, run:
 
 .. code-block:: shell
 
-    ./bin/<godot_binary> --test --test-case="*[String]*"
+    ./bin/<blazium_binary> --test --test-case="*[String]*"
 
 Successful assertions output can be enabled with the ``--success`` (``-s``)
 option, and can be combined with any combination of filtering options above,
@@ -89,7 +89,7 @@ for instance:
 
 .. code-block:: shell
 
-    ./bin/<godot_binary> --test --source-file="*test_color*" --success
+    ./bin/<blazium_binary> --test --source-file="*test_color*" --success
 
 Specific tests can be skipped with corresponding ``-exclude`` options. As of
 now, some tests include random stress tests which take a while to execute. In
@@ -97,7 +97,7 @@ order to skip those kind of tests, run the following command:
 
 .. code-block:: shell
 
-    ./bin/<godot_binary> --test --test-case-exclude="*[Stress]*"
+    ./bin/<blazium_binary> --test --test-case-exclude="*[Stress]*"
 
 Writing tests
 -------------
@@ -107,7 +107,7 @@ main test entry point in ``tests/test_main.cpp``. Most test suites are located
 directly under ``tests/`` directory.
 
 All header files are prefixed with ``test_``, and this is a naming convention
-which the Godot build system relies on to detect tests throughout the engine.
+which the Blazium build system relies on to detect tests throughout the engine.
 
 Here's a minimal working test suite with a single test case written:
 
@@ -136,13 +136,13 @@ Here's a minimal working test suite with a single test case written:
     To view usage instructions, run the script with the ``-h`` flag.
 
 The ``tests/test_macros.h`` header encapsulates everything which is needed for
-writing C++ unit tests in Godot. It includes doctest assertion and logging
+writing C++ unit tests in Blazium. It includes doctest assertion and logging
 macros such as ``CHECK`` as seen above, and of course the definitions for
 writing test cases themselves.
 
 .. seealso::
 
-    `tests/test_macros.h <https://github.com/godotengine/godot/blob/master/tests/test_macros.h>`_
+    `tests/test_macros.h <https://github.com/blazium-engine/blazium/blob/master/tests/test_macros.h>`_
     source code for currently implemented macros and aliases for them.
 
 Test cases are created using ``TEST_CASE`` function-like macro. Each test case
@@ -155,7 +155,7 @@ allows to prevent naming collisions for when other static helper functions are
 written to accommodate the repeating testing procedures such as populating
 common test data for each test, or writing parameterized tests.
 
-Godot supports writing tests per C++ module. For instructions on how to write
+Blazium supports writing tests per C++ module. For instructions on how to write
 module tests, refer to :ref:`doc_custom_module_unit_tests`.
 
 Subcases
@@ -181,7 +181,7 @@ Subcases can be nested to an arbitrary depth, but it is advised to limit nesting
 Assertions
 ~~~~~~~~~~
 
-A list of all commonly used assertions used throughout the Godot tests, sorted
+A list of all commonly used assertions used throughout the Blazium tests, sorted
 by severity.
 
 +-------------------+----------------------------------------------------------------------------------------------------------------------------------+
@@ -213,7 +213,7 @@ for more complex ones if you think that it deserves a better explanation.
 Logging
 ~~~~~~~
 
-The test output is handled by doctest itself, and does not rely on Godot
+The test output is handled by doctest itself, and does not rely on Blazium
 printing or logging functionality at all, so it's recommended to use dedicated
 macros which allow to log test output in a format written by doctest.
 
@@ -242,7 +242,7 @@ Testing failure paths
 ~~~~~~~~~~~~~~~~~~~~~
 
 Sometimes, it's not always feasible to test for an *expected* result. With the
-Godot development philosophy of that the engine should not crash and should
+Blazium development philosophy of that the engine should not crash and should
 gracefully recover whenever a non-fatal error occurs, it's important to check
 that those failure paths are indeed safe to execute without crashing the engine.
 
@@ -379,7 +379,7 @@ help of OS :ref:`get_cmdline_args<class_OS_method_get_cmdline_args>` method.
 Integration tests for GDScript
 ------------------------------
 
-Godot uses doctest to prevent regressions in GDScript during development. There
+Blazium uses doctest to prevent regressions in GDScript during development. There
 are several types of test scripts which can be written:
 
 - tests for expected errors;
@@ -406,7 +406,7 @@ Therefore, the process of writing integration tests for GDScript is the followin
             if true # Missing colon here.
                 print("true")
 
-3. Change directory to the Godot source repository root.
+3. Change directory to the Blazium source repository root.
 
    .. code-block:: shell
 

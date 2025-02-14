@@ -416,7 +416,7 @@ would cause unneeded updates.
 Reporting node configuration warnings
 -------------------------------------
 
-Godot uses a *node configuration warning* system to warn users about incorrectly
+Blazium uses a *node configuration warning* system to warn users about incorrectly
 configured nodes. When a node isn't configured correctly, a yellow warning sign
 appears next to the node's name in the Scene dock. When you hover or click on
 the icon, a warning message pops up. You can use this feature in your scripts to
@@ -469,7 +469,7 @@ not available in the editor out of the box. Some examples might be:
 - Replace nodes that were copy-pasted with scene instances to make them easier
   to modify later.
 
-This is available in Godot by extending :ref:`class_EditorScript` in a script.
+This is available in Blazium by extending :ref:`class_EditorScript` in a script.
 This provides a way to run individual scripts in the editor without having to
 create an editor plugin.
 

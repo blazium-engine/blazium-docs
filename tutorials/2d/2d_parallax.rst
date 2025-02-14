@@ -6,14 +6,14 @@
 Introduction
 ------------
 
-Parallax is an effect used to simulate depth by having textures move at different speeds relative to the camera. Godot
+Parallax is an effect used to simulate depth by having textures move at different speeds relative to the camera. Blazium
 provides the :ref:`Parallax2D<class_parallax2d>` node to achieve this effect. It can still be easy to get tripped
 up though, so this page provides in-depth descriptions of some properties and how to fix some common mistakes.
 
 .. note::
     This page only covers how to use :ref:`Parallax2D<class_parallax2d>`. This node is still experimental, so the
-    implementation might change in future versions of Godot. However, it is still recommended to use over the
-    :ref:`ParallaxLayer<class_parallaxlayer>` and :ref:`ParallaxBackground<class_parallaxbackground>` nodes. 
+    implementation might change in future versions of Blazium. However, it is still recommended to use over the
+    :ref:`ParallaxLayer<class_parallaxlayer>` and :ref:`ParallaxBackground<class_parallaxbackground>` nodes.
 
 Scroll scale
 ------------
@@ -169,7 +169,7 @@ Repeat times
 ------------
 
 Ideally, following this guide, your parallax textures are large enough to cover the screen even when zoomed out.
-Until now, we have had a perfectly fitting 288x208 texture inside of a 288x208 viewport. However, problems 
+Until now, we have had a perfectly fitting 288x208 texture inside of a 288x208 viewport. However, problems
 occur when we zoom out by setting the :ref:`Camera2D.zoom<class_camera2d_property_zoom>` to ``(0.5, 0.5)``:
 
 .. image:: img/2d_parallax_zoom_single.webp
@@ -193,7 +193,7 @@ normal zoom level and zooming out to half size.
 Split screen
 ------------
 
-Most tutorials for making a split screen game in Godot begin by writing a small script to assign
+Most tutorials for making a split screen game in Blazium begin by writing a small script to assign
 the :ref:`Viewport.world_2d<class_viewport_property_world_2d>` of the first SubViewport to the second, so they have a
 shared display. Questions often pop up about how to share a parallax effect between both screens.
 

@@ -6,16 +6,16 @@ Exporting for Android
 
 .. seealso::
 
-    This page describes how to export a Godot project to Android.
+    This page describes how to export a Blazium project to Android.
     If you're looking to compile export template binaries from source instead,
     read :ref:`doc_compiling_for_android`.
 
-Exporting for Android has fewer requirements than compiling Godot for Android.
+Exporting for Android has fewer requirements than compiling Blazium for Android.
 The following steps detail what is needed to set up the Android SDK and the engine.
 
 .. attention::
 
-    Projects written in C# can be exported to Android as of Godot 4.2, but support
+    Projects written in C# can be exported to Android as of Blazium, but support
     is experimental and :ref:`some limitations apply <doc_c_sharp_platforms>`.
 
 Install OpenJDK 17
@@ -39,7 +39,7 @@ Download and install the Android SDK.
     - Android SDK Command-line Tools (latest)
 
   - Ensure that the `NDK and CMake are installed and configured <https://developer.android.com/studio/projects/install-ndk>`__.
-  
+
     - CMake version 3.10.2.4988404
     - NDK version r23c (23.2.8568313)
 
@@ -58,7 +58,7 @@ Download and install the Android SDK.
     **do not use an Android SDK provided by your distribution's repositories as it will often be outdated**.
 
 
-Setting it up in Godot
+Setting it up in Blazium
 ----------------------
 
 Enter the Editor Settings screen. This screen contains the editor
@@ -94,9 +94,9 @@ Once that is configured, everything is ready to export to Android!
 Providing launcher icons
 ------------------------
 
-Launcher icons are used by Android launcher apps to represent your application to users. Godot only requires high-resolution icons (for ``xxxhdpi`` density screens) and will automatically generate lower-resolution variants.
+Launcher icons are used by Android launcher apps to represent your application to users. Blazium only requires high-resolution icons (for ``xxxhdpi`` density screens) and will automatically generate lower-resolution variants.
 
-There are two types of icons required by Godot:
+There are two types of icons required by Blazium:
 
 - **Main Icon:** The "classic" icon. This will be used on all Android versions up to Android 8 (Oreo), exclusive. Must be at least 192×192 px.
 - **Adaptive Icons:** Starting from Android 8 (inclusive), `Adaptive Icons <https://developer.android.com/guide/practices/ui_guidelines/icon_design_adaptive>`_ were introduced. Applications will need to include separate background and foreground icons to have a native look. The user's launcher application will control the icon's animation and masking. Must be at least 432×432 px.
@@ -105,11 +105,11 @@ There are two types of icons required by Godot:
 
 .. caution:: The most important adaptive icon design rule is to have your icon critical elements inside the safe zone: a centered circle with a diameter of 66dp (264 pixels on ``xxxhdpi``) to avoid being clipped by the launcher.
 
-If you don't provide some of the requested icons, Godot will replace them using a fallback chain, trying the next in line when the current one fails:
+If you don't provide some of the requested icons, Blazium will replace them using a fallback chain, trying the next in line when the current one fails:
 
-- **Main Icon:** Provided main icon -> Project icon -> Default Godot main icon.
-- **Adaptive Icon Foreground:** Provided foreground icon -> Provided main icon -> Project icon -> Default Godot foreground icon.
-- **Adaptive Icon Background:** Provided background icon -> Default Godot background icon.
+- **Main Icon:** Provided main icon -> Project icon -> Default Blazium main icon.
+- **Adaptive Icon Foreground:** Provided foreground icon -> Provided main icon -> Project icon -> Default Blazium foreground icon.
+- **Adaptive Icon Background:** Provided background icon -> Default Blazium background icon.
 
 It's highly recommended to provide all the requested icons with their specified resolutions.
 This way, your application will look great on all Android devices and versions.

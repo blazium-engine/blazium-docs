@@ -3,7 +3,7 @@
 Cross-language scripting
 ========================
 
-Godot allows you to mix and match scripting languages to suit your needs.
+Blazium allows you to mix and match scripting languages to suit your needs.
 This means a single project can define nodes in both C# and GDScript.
 This page will go through the possible interactions between two nodes written
 in different languages.

@@ -4,7 +4,7 @@ C# collections
 ==============
 
 The .NET base class library contains multiple collection types that can be
-used to store and manipulate data. Godot also provide some collection types
+used to store and manipulate data. Blazium also provide some collection types
 that are tightly integrated with the rest of the engine.
 
 Choose a collection

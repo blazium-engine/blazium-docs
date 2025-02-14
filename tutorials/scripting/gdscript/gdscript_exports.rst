@@ -3,7 +3,7 @@
 GDScript exported properties
 ============================
 
-In Godot, class members can be exported. This means their value gets saved along
+In Blazium, class members can be exported. This means their value gets saved along
 with the resource (such as the :ref:`scene <class_PackedScene>`) they're
 attached to. They will also be available for editing in the property editor.
 Exporting is done by using the ``@export`` annotation.
