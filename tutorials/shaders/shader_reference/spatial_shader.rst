@@ -3,7 +3,7 @@
 Spatial shaders
 ===============
 
-Spatial shaders are used for shading 3D objects. They are the most complex type of shader Godot offers.
+Spatial shaders are used for shading 3D objects. They are the most complex type of shader Blazium offers.
 Spatial shaders are highly configurable with different render modes and different rendering options
 (e.g. Subsurface Scattering, Transmission, Ambient Occlusion, Rim lighting etc). Users can optionally
 write vertex, fragment, and light processor functions to affect how objects are drawn.
@@ -105,7 +105,7 @@ Global built-ins are available everywhere, including custom functions.
 |                   | setting). It's not affected by :ref:`time_scale<class_Engine_property_time_scale>` or   |
 |                   | pausing. If you need  a ``TIME`` variable that can be scaled or paused, add your own    |
 |                   | :ref:`global shader uniform<doc_shading_language_global_uniforms>` and update it each   |
-|                   | frame.                                                                                  | 
+|                   | frame.                                                                                  |
 +-------------------+-----------------------------------------------------------------------------------------+
 | in float **PI**   | A ``PI`` constant (``3.141592``).                                                       |
 |                   | A ration of circle's circumference to its diameter and amount of radians in half turn.  |
@@ -259,9 +259,9 @@ shader, this value can be used as desired.
 Fragment built-ins
 ^^^^^^^^^^^^^^^^^^
 
-The default use of a Godot fragment processor function is to set up the material properties of your object
+The default use of a Blazium fragment processor function is to set up the material properties of your object
 and to let the built-in renderer handle the final shading. However, you are not required to use all
-these properties, and if you don't write to them, Godot will optimize away the corresponding functionality.
+these properties, and if you don't write to them, Blazium will optimize away the corresponding functionality.
 
 +----------------------------------------+--------------------------------------------------------------------------------------------------+
 | Built-in                               | Description                                                                                      |
@@ -408,7 +408,7 @@ Light built-ins
 ^^^^^^^^^^^^^^^
 
 Writing light processor functions is completely optional. You can skip the light function by setting
-render_mode to ``unshaded``. If no light function is written, Godot will use the material
+render_mode to ``unshaded``. If no light function is written, Blazium will use the material
 properties written to in the fragment function to calculate the lighting for you (subject to
 the render_mode).
 

@@ -79,7 +79,7 @@ Windows
 Windows is known to cause stutter in windowed games. This mostly depends on the
 hardware installed, drivers version and processes running in parallel (e.g.
 having many browser tabs open may cause stutter in a running game). To avoid
-this, starting with 3.1, Godot raises the game priority to "Above Normal". This
+this, starting with 3.1, Blazium raises the game priority to "Above Normal". This
 helps considerably but may not completely eliminate stutter.
 
 Eliminating this completely requires giving your game full privileges to become
@@ -200,7 +200,7 @@ done with caution.
 
 .. tip::
 
-    On any Godot project, you can use the ``--disable-vsync``
+    On any Blazium project, you can use the ``--disable-vsync``
     :ref:`command line argument <doc_command_line_tutorial>` to forcibly disable V-Sync.
     Since Godot 4.2, ``--max-fps <fps>`` can also be used to set a FPS limit
     (``0`` is unlimited). These arguments can be used at the same time.

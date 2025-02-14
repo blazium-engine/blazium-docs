@@ -8,14 +8,14 @@ intersect or come into contact. This is known as **collision detection**.
 When a collision is detected, you typically want something to happen. This
 is known as **collision response**.
 
-Godot offers a number of collision objects in 2D and 3D to provide both collision detection
+Blazium offers a number of collision objects in 2D and 3D to provide both collision detection
 and response. Trying to decide which one to use for your project can be confusing.
 You can avoid problems and simplify development if you understand how each works
 and what their pros and cons are.
 
 In this guide, you will learn:
 
--   Godot's four collision object types
+-   Blazium's four collision object types
 -   How each collision object works
 -   When and why to choose one type over another
 
@@ -26,7 +26,7 @@ In this guide, you will learn:
 Collision objects
 -----------------
 
-Godot offers four kinds of collision objects which all extend :ref:`CollisionObject2D <class_CollisionObject2D>`.
+Blazium offers four kinds of collision objects which all extend :ref:`CollisionObject2D <class_CollisionObject2D>`.
 The last three listed below are physics bodies and additionally extend :ref:`PhysicsBody2D <class_PhysicsBody2D>`.
 
 - :ref:`Area2D <class_Area2D>`
@@ -87,10 +87,10 @@ The physics engine runs at a fixed rate (a default of 60 iterations per second).
 is typically different from the frame rate which fluctuates based on what is rendered and
 available resources.
 
-It is important that all physics related code runs at this fixed rate. Therefore Godot
+It is important that all physics related code runs at this fixed rate. Therefore, Blazium
 differentiates :ref:`between physics and idle processing <doc_idle_and_physics_processing>`.
 Code that runs each frame is called idle processing and code that runs on each physics
-tick is called physics processing. Godot provides two different callbacks, one for each
+tick is called physics processing. Blazium provides two different callbacks, one for each
 of those processing rates.
 
 The physics callback, :ref:`Node._physics_process() <class_Node_private_method__physics_process>`,

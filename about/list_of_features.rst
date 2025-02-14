@@ -5,12 +5,12 @@
 List of features
 ================
 
-This page aims to list **all** features currently supported by Godot.
+This page aims to list **all** features currently supported by Blazium.
 
 .. note::
 
     This page lists features supported by the current stable version of
-    Godot. Some of these features may not be available in the
+    Blazium. Some of these features may not be available in the
     `LTS release series (3.x) <https://docs.godotengine.org/en/3.5/about/list_of_features.html>`__.
 
 Platforms
@@ -42,12 +42,12 @@ Platforms
 - iOS.
 - :ref:`Consoles <doc_consoles>`.
 
-Godot aims to be as platform-independent as possible and can be
+Blazium aims to be as platform-independent as possible and can be
 :ref:`ported to new platforms <doc_custom_platform_ports>` with relative ease.
 
 .. note::
 
-    Projects written in C# using Godot 4 currently cannot be exported to the
+    Projects written in C# using Blazium currently cannot be exported to the
     web platform. To use C# on that platform, consider Godot 3 instead.
     Android and iOS platform support is available as of Godot 4.2, but is
     experimental and :ref:`some limitations apply <doc_c_sharp_platforms>`.
@@ -389,7 +389,7 @@ Rendering
 
 Most effects listed above can be adjusted for better performance or to further
 improve quality. This can be helpful when
-:ref:`using Godot for offline rendering <doc_creating_movies>`.
+:ref:`using Blazium for offline rendering <doc_creating_movies>`.
 
 3D tools
 --------
@@ -632,7 +632,7 @@ Windowing and OS integration
   multiple instances of the same project).
 - Open file paths and URLs using default or custom protocol handlers (if registered on the system).
 - Parse custom command line arguments.
-- Any Godot binary (editor or exported project) can be
+- Any Blazium binary (editor or exported project) can be
   :ref:`used as a headless server <doc_exporting_for_dedicated_servers>`
   by starting it with the ``--headless`` command line argument.
   This allows running the engine without a GPU or display server.
@@ -661,7 +661,7 @@ XR support (AR and VR)
 GUI system
 ----------
 
-Godot's GUI is built using the same Control nodes used to make games in Godot.
+Blazium's GUI is built using the same Control nodes used to make games in Blazium.
 The editor UI can easily be extended in many ways using add-ons.
 
 **Nodes:**
@@ -708,7 +708,7 @@ The editor UI can easily be extended in many ways using add-ons.
 
 - Texture-based theming using :ref:`class_StyleBoxTexture`.
 
-Godot's small distribution size can make it a suitable alternative to frameworks
+Blazium's small distribution size can make it a suitable alternative to frameworks
 like Electron or Qt.
 
 Animation
@@ -735,11 +735,11 @@ File formats
 - Read and write :ref:`class_JSON` files.
 - Read and write INI-style configuration files using :ref:`class_ConfigFile`.
 
-   - Can (de)serialize any Godot datatype, including Vector2/3, Color, ...
+   - Can (de)serialize any Blazium datatype, including Vector2/3, Color, ...
 
 - Read XML files using :ref:`class_XMLParser`.
 - :ref:`Load and save images, audio/video, fonts and ZIP archives <doc_runtime_loading_and_saving>`
-  in an exported project without having to go through Godot's import system.
+  in an exported project without having to go through Blazium's import system.
 - Pack game data into a PCK file (custom format optimized for fast seeking),
   into a ZIP archive, or directly into the executable for single-file distribution.
 - :ref:`Export additional PCK files<doc_exporting_pcks>` that can be read
@@ -768,7 +768,7 @@ Miscellaneous
    - Can be :ref:`compiled <doc_introduction_to_the_buildsystem>` using GCC,
      Clang and MSVC. MinGW is also supported.
    - Friendly towards packagers. In most cases, system libraries can be used
-     instead of the ones provided by Godot. The build system doesn't download anything.
+     instead of the ones provided by Blazium. The build system doesn't download anything.
      Builds can be fully reproducible.
 
 - Licensed under the permissive MIT license.

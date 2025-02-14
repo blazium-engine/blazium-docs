@@ -7,12 +7,12 @@ System requirements
 
 This page contains system requirements for the editor and exported projects.
 These specifications are given for informative purposes only, but they can be
-referred to if you're looking to build or upgrade a system to use Godot on.
+referred to if you're looking to build or upgrade a system to use Blazium on.
 
-Godot editor
+Blazium editor
 ------------
 
-These are the **minimum** specifications required to run the Godot editor and work
+These are the **minimum** specifications required to run the Blazium editor and work
 on a simple 2D or 3D project:
 
 Desktop or laptop PC - Minimum
@@ -69,7 +69,7 @@ Desktop or laptop PC - Minimum
 
     Vulkan drivers for these Windows versions are known to have issues with
     memory leaks. As a result, it's recommended to stick to the Compatibility
-    rendering method when running Godot on a Windows version older than 10.
+    rendering method when running Blazium on a Windows version older than 10.
 
 Mobile device (smartphone/tablet) - Minimum
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -106,7 +106,7 @@ Mobile device (smartphone/tablet) - Minimum
 +----------------------+-----------------------------------------------------------------------------------------+
 
 These are the **recommended** specifications to get a smooth experience with the
-Godot editor on a simple 2D or 3D project:
+Blazium editor on a simple 2D or 3D project:
 
 Desktop or laptop PC - Recommended
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -178,7 +178,7 @@ Mobile device (smartphone/tablet) - Recommended
 |                      |   Samsung Internet                                                                      |
 +----------------------+-----------------------------------------------------------------------------------------+
 
-Exported Godot project
+Exported Blazium project
 ----------------------
 
 .. warning::
@@ -197,7 +197,7 @@ Exported Godot project
     to your project.
 
 These are the **minimum** specifications required to run a simple 2D or 3D
-project exported with Godot:
+project exported with Blazium:
 
 Desktop or laptop PC - Minimum
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

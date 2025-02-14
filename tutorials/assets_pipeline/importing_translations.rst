@@ -7,9 +7,9 @@ Games and internationalization
 ------------------------------
 
 The gaming community isn't monolingual or monocultural. It's made up of
-many different languages and cultures - just like the Godot community!
+many different languages and cultures - just like the Blazium community!
 If you want to allow players to experience your game in their language,
-one of things you'll need to provide is text translations, which Godot
+one of things you'll need to provide is text translations, which Blazium
 supports via internationalized text.
 
 In regular desktop or mobile applications, internationalized text is
@@ -31,7 +31,7 @@ each string. This allows you to revise the text while it is being
 translated to other languages. The unique ID can be a number, a string,
 or a string with a number (it's just a unique string anyway).
 
-.. note:: If you need a more powerful file format, Godot also supports
+.. note:: If you need a more powerful file format, Blazium also supports
           loading translations written in the gettext ``.po`` format. See
           :ref:`doc_localization_using_gettext` for details.
 
@@ -39,7 +39,7 @@ Translation format
 ------------------
 
 To complete the picture and allow efficient support for translations,
-Godot has a special importer that can read CSV files. Most spreadsheet
+Blazium has a special importer that can read CSV files. Most spreadsheet
 editors can export to this format, so the only requirement is that the files
 have a special arrangement. The CSV files **must** be saved with UTF-8 encoding
 without a `byte order mark <https://en.wikipedia.org/wiki/Byte_order_mark>`__.
@@ -57,8 +57,8 @@ CSV files must be formatted as follows:
 +--------+----------+----------+----------+
 
 The "lang" tags must represent a language, which must be one of the :ref:`valid
-locales <doc_locales>` supported by the engine, or they must start with an underscore (`_`), 
-which means the related column is served as comment and won't be imported. 
+locales <doc_locales>` supported by the engine, or they must start with an underscore (`_`),
+which means the related column is served as comment and won't be imported.
 The "KEY" tags must be unique and represent a string universally (they are usually in
 uppercase, to differentiate from other strings). These keys will be replaced at
 runtime by the matching translated string. Note that the case is important,
@@ -99,12 +99,12 @@ comma in the import options.
 CSV importer
 ------------
 
-Godot will treat CSV files as translations by default. It will import them
+Blazium will treat CSV files as translations by default. It will import them
 and generate one or more compressed translation resource files next to it.
 
 Importing will also add the translation to the list of
 translations to load when the game runs, specified in project.godot (or the
-project settings). Godot allows loading and removing translations at
+project settings). Blazium allows loading and removing translations at
 runtime as well.
 
 Select the ``.csv`` file and access the **Import** dock to define import

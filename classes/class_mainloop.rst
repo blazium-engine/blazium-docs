@@ -23,7 +23,7 @@ Description
 
 **MainLoop** is the abstract base class for a Godot project's game loop. It is inherited by :ref:`SceneTree<class_SceneTree>`, which is the default game loop implementation used in Godot projects, though it is also possible to write and use one's own **MainLoop** subclass instead of the scene tree.
 
-Upon the application start, a **MainLoop** implementation must be provided to the OS; otherwise, the application will exit. This happens automatically (and a :ref:`SceneTree<class_SceneTree>` is created) unless a **MainLoop** :ref:`Script<class_Script>` is provided from the command line (with e.g. ``godot -s my_loop.gd``) or the "Main Loop Type" project setting is overwritten.
+Upon the application start, a **MainLoop** implementation must be provided to the OS; otherwise, the application will exit. This happens automatically (and a :ref:`SceneTree<class_SceneTree>` is created) unless a **MainLoop** :ref:`Script<class_Script>` is provided from the command line (with e.g. ``blazium -s my_loop.gd``) or the "Main Loop Type" project setting is overwritten.
 
 Here is an example script implementing a simple **MainLoop**:
 
@@ -34,18 +34,18 @@ Here is an example script implementing a simple **MainLoop**:
 
     class_name CustomMainLoop
     extends MainLoop
-    
+
     var time_elapsed = 0
-    
+
     func _initialize():
         print("Initialized:")
         print("  Starting time: %s" % str(time_elapsed))
-    
+
     func _process(delta):
         time_elapsed += delta
         # Return true to end the main loop.
         return Input.get_mouse_button_mask() != 0 || Input.is_key_pressed(KEY_ESCAPE)
-    
+
     func _finalize():
         print("Finalized:")
         print("  End time: %s" % str(time_elapsed))
@@ -53,25 +53,25 @@ Here is an example script implementing a simple **MainLoop**:
  .. code-tab:: csharp
 
     using Godot;
-    
+
     [GlobalClass]
     public partial class CustomMainLoop : MainLoop
     {
         private double _timeElapsed = 0;
-    
+
         public override void _Initialize()
         {
             GD.Print("Initialized:");
             GD.Print($"  Starting Time: {_timeElapsed}");
         }
-    
+
         public override bool _Process(double delta)
         {
             _timeElapsed += delta;
             // Return true to end the main loop.
             return Input.GetMouseButtonMask() != 0 || Input.IsKeyPressed(Key.Escape);
         }
-    
+
         private void _Finalize()
         {
             GD.Print("Finalized:");

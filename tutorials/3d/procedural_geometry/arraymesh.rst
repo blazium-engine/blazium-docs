@@ -12,7 +12,7 @@ The first parameter is the ``PrimitiveType``, an OpenGL concept that instructs t
 how to arrange the primitive based on the vertices given, i.e. whether they represent triangles,
 lines, points, etc. See :ref:`Mesh.PrimitiveType <enum_Mesh_PrimitiveType>` for the options available.
 
-The second parameter, ``arrays``, is the actual Array that stores the mesh information. The array is a normal Godot array that
+The second parameter, ``arrays``, is the actual Array that stores the mesh information. The array is a normal Blazium array that
 is constructed with empty brackets ``[]``. It stores a ``Packed**Array`` (e.g. PackedVector3Array,
 PackedInt32Array, etc.) for each type of information that will be used to build the surface.
 
@@ -29,40 +29,40 @@ See :ref:`Mesh.ArrayType <enum_Mesh_ArrayType>` for a full list.
     * - Index
       - Mesh.ArrayType Enum
       - Array type
-    
+
     * - 0
       - ``ARRAY_VERTEX``
       - :ref:`PackedVector3Array <class_PackedVector3Array>` or :ref:`PackedVector2Array <class_PackedVector2Array>`
-    
+
     * - 1
       - ``ARRAY_NORMAL``
       - :ref:`PackedVector3Array <class_PackedVector3Array>`
-    
+
     * - 2
       - ``ARRAY_TANGENT``
-      - :ref:`PackedFloat32Array <class_PackedFloat32Array>` or :ref:`PackedFloat64Array <class_PackedFloat64Array>` of groups of 4 floats. The first 3 floats determine the tangent, and the last float the binormal 
+      - :ref:`PackedFloat32Array <class_PackedFloat32Array>` or :ref:`PackedFloat64Array <class_PackedFloat64Array>` of groups of 4 floats. The first 3 floats determine the tangent, and the last float the binormal
         direction as -1 or 1.
-    
+
     * - 3
       - ``ARRAY_COLOR``
       - :ref:`PackedColorArray <class_PackedColorArray>`
-    
+
     * - 4
       - ``ARRAY_TEX_UV``
       - :ref:`PackedVector2Array <class_PackedVector2Array>` or :ref:`PackedVector3Array <class_PackedVector3Array>`
-    
+
     * - 5
       - ``ARRAY_TEX_UV2``
       - :ref:`PackedVector2Array <class_PackedVector2Array>` or :ref:`PackedVector3Array <class_PackedVector3Array>`
-    
+
     * - 10
       - ``ARRAY_BONES``
       - :ref:`PackedFloat32Array <class_PackedFloat32Array>` of groups of 4 floats or :ref:`PackedInt32Array <class_PackedInt32Array>` of groups of 4 ints. Each group lists indexes of 4 bones that affects a given vertex.
-    
+
     * - 11
       - ``ARRAY_WEIGHTS``
       - :ref:`PackedFloat32Array <class_PackedFloat32Array>` or :ref:`PackedFloat64Array <class_PackedFloat64Array>` of groups of 4 floats. Each float lists the amount of weight the corresponding bone in ``ARRAY_BONES`` has on a given vertex.
-    
+
     * - 12
       - ``ARRAY_INDEX``
       - :ref:`PackedInt32Array <class_PackedInt32Array>`
@@ -91,13 +91,13 @@ Under ``_ready()``, create a new Array.
   .. code-tab:: gdscript GDScript
 
     var surface_array = []
-  
+
   .. code-tab:: csharp C#
 
     var surfaceArray = new Godot.Collections.Array();
 
 This will be the array that we keep our surface information in - it will hold
-all the arrays of data that the surface needs. Godot will expect it to be of
+all the arrays of data that the surface needs. Blazium will expect it to be of
 size ``Mesh.ARRAY_MAX``, so resize it accordingly.
 
 .. tabs::
@@ -105,7 +105,7 @@ size ``Mesh.ARRAY_MAX``, so resize it accordingly.
 
     var surface_array = []
     surface_array.resize(Mesh.ARRAY_MAX)
-  
+
  .. code-tab:: csharp C#
 
     var surfaceArray = new Godot.Collections.Array();
@@ -153,7 +153,7 @@ by adding each array to ``surface_array`` and then committing to the mesh.
     if (arrMesh != null)
     {
         // No blendshapes, lods, or compression used.
-        arrMesh.AddSurfaceFromArrays(Mesh.PrimitiveType.Triangles, surfaceArray); 
+        arrMesh.AddSurfaceFromArrays(Mesh.PrimitiveType.Triangles, surfaceArray);
     }
 
 .. note:: In this example, we used ``Mesh.PRIMITIVE_TRIANGLES``, but you can use any primitive type
@@ -233,7 +233,7 @@ Generating geometry
 -------------------
 
 Here is sample code for generating a sphere. Although the code is presented in
-GDScript, there is nothing Godot specific about the approach to generating it.
+GDScript, there is nothing Blazium specific about the approach to generating it.
 This implementation has nothing in particular to do with ArrayMeshes and is just a
 generic approach to generating a sphere. If you are having trouble understanding it
 or want to learn more about procedural geometry in general, you can use any tutorial

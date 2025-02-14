@@ -9,20 +9,20 @@ Runtime file loading and saving
 
 Sometimes, :ref:`exporting packs, patches, and mods <doc_exporting_pcks>` is not
 ideal when you want players to be able to load user-generated content in your
-project. It requires users to generate a PCK or ZIP file through the Godot
-editor, which contains resources imported by Godot.
+project. It requires users to generate a PCK or ZIP file through the Blazium
+editor, which contains resources imported by Blazium.
 
 Example use cases for runtime file loading and saving include:
 
 - Loading texture packs designed for the game.
 - Loading user-provided audio tracks and playing them back in an in-game radio station.
 - Loading custom levels or 3D models that can be designed with any 3D DCC that
-  can export to glTF (including glTF scenes saved by Godot at runtime).
+  can export to glTF (including glTF scenes saved by Blazium at runtime).
 - Using user-provided fonts for menus and HUD.
 - Saving/loading a file format that can contain multiple files but can still
   easily be read by other applications (ZIP).
 - Loading files created by another game or program, or even game data files from
-  another game not made with Godot.
+  another game not made with Blazium.
 
 Runtime file loading can be combined with :ref:`HTTP requests <doc_http_request_class>`
 to load resources from the Internet directly.
@@ -31,7 +31,7 @@ to load resources from the Internet directly.
 
     Do **not** use this runtime loading approach to load resources that are part
     of the project, as it's less efficient and doesn't allow benefiting from
-    Godot's resource handling functionality (such as translation remaps). See
+    Blazium's resource handling functionality (such as translation remaps). See
     :ref:`doc_import_process` for details.
 
 .. seealso::
@@ -42,7 +42,7 @@ to load resources from the Internet directly.
 Plain text and binary files
 ---------------------------
 
-Godot's :ref:`class_FileAccess` class provides methods to access files on the
+Blazium's :ref:`class_FileAccess` class provides methods to access files on the
 filesystem for reading and writing:
 
 ::
@@ -57,7 +57,7 @@ filesystem for reading and writing:
         return content
 
 To handle custom binary formats (such as loading file formats not supported by
-Godot), :ref:`class_FileAccess` provides several methods to read/write integers,
+Blazium), :ref:`class_FileAccess` provides several methods to read/write integers,
 floats, strings and more. These FileAccess methods have names that start with
 ``get_`` and ``store_``.
 
@@ -87,7 +87,7 @@ loaded at), use one of the following methods depending on the file format:
 - :ref:`Image.load_tga_from_buffer <class_Image_method_load_tga_from_buffer>`
 - :ref:`Image.load_webp_from_buffer <class_Image_method_load_webp_from_buffer>`
 
-Several image formats can also be saved by Godot at runtime using the following
+Several image formats can also be saved by Blazium at runtime using the following
 methods:
 
 - :ref:`Image.save_png <class_Image_method_save_png>`
@@ -118,7 +118,7 @@ Example of loading an image and displaying it in a :ref:`class_TextureRect` node
 
 ::
 
-    # Load an image of any format supported by Godot from the filesystem.
+    # Load an image of any format supported by Blazium from the filesystem.
     var image = Image.load_from_file(path)
     # Optionally, generate mipmaps if displaying the texture on a 3D surface
     # so that the texture doesn't look grainy when viewed at a distance.
@@ -136,10 +136,10 @@ Example of loading an image and displaying it in a :ref:`class_TextureRect` node
 Audio/video files
 -----------------
 
-Godot supports loading Ogg Vorbis audio at runtime. Note that not *all* files
+Blazium supports loading Ogg Vorbis audio at runtime. Note that not *all* files
 with an ``.ogg`` extension may be Ogg Vorbis files. Some may be Ogg Theora
 videos, or contain Opus audio within an Ogg container. These files will **not**
-load correctly as audio files in Godot.
+load correctly as audio files in Blazium.
 
 Example of loading an Ogg Vorbis audio file in an :ref:`class_AudioStreamPlayer` node:
 
@@ -163,7 +163,7 @@ Example of loading an Ogg Theora video file in a :ref:`class_VideoStreamPlayer` 
 
 .. note::
 
-    Godot doesn't support runtime loading of MP3 or WAV files yet. Until this is
+    Blazium doesn't support runtime loading of MP3 or WAV files yet. Until this is
     implemented, it's feasible to implement runtime WAV loading using a script
     since :ref:`class_AudioStreamWAV`'s ``data`` property is exposed to
     scripting.
@@ -177,9 +177,9 @@ Example of loading an Ogg Theora video file in a :ref:`class_VideoStreamPlayer` 
 3D scenes
 ---------
 
-Godot has first-class support for glTF 2.0, both in the editor and exported
+Blazium has first-class support for glTF 2.0, both in the editor and exported
 projects. Using :ref:`class_gltfdocument` and :ref:`class_gltfstate` together,
-Godot can load and save glTF files in exported projects, in both text
+Blazium can load and save glTF files in exported projects, in both text
 (``.gltf``) and binary (``.glb``) formats. The binary format should be preferred
 as it's faster to write and smaller, but the text format is easier to debug.
 
@@ -189,7 +189,7 @@ Example of loading a glTF scene and appending its root node to the scene:
 
     # Load an existing glTF scene.
     # GLTFState is used by GLTFDocument to store the loaded scene's state.
-    # GLTFDocument is the class that handles actually loading glTF data into a Godot node tree,
+    # GLTFDocument is the class that handles actually loading glTF data into a Blazium node tree,
     # which means it supports glTF features such as lights and cameras.
     var gltf_document_load = GLTFDocument.new()
     var gltf_state_load = GLTFState.new()
@@ -215,7 +215,7 @@ Example of loading a glTF scene and appending its root node to the scene:
     resources like textures can be loaded correctly. When loading from a file,
     the base path is automatically set to the folder containing the file. When
     loading from a buffer, this base path must be manually set as there is no
-    way for Godot to infer this path.
+    way for Blazium to infer this path.
 
     To set the base path, set
     :ref:`GLTFState.base_path <class_GLTFState_property_base_path>` on your
@@ -235,7 +235,7 @@ On the other hand, :ref:`FontFile.load_bitmap_font <class_FontFile_method_load_b
 the `BMFont <https://www.angelcode.com/products/bmfont/>`__ format (``.fnt`` or ``.font``).
 
 Additionally, it is possible to load any font that is installed on the system using
-Godot's support for :ref:`doc_using_fonts_system_fonts`.
+Blazium's support for :ref:`doc_using_fonts_system_fonts`.
 
 Example of loading a font file automatically according to its file extension,
 then adding it as a theme override to a :ref:`class_Label` node:
@@ -266,21 +266,21 @@ then adding it as a theme override to a :ref:`class_Label` node:
 ZIP archives
 ------------
 
-Godot supports reading and writing ZIP archives using the :ref:`class_zipreader`
+Blazium supports reading and writing ZIP archives using the :ref:`class_zipreader`
 and :ref:`class_zippacker` classes. This supports any ZIP file, including files
-generated by Godot's "Export PCK/ZIP" functionality (although these will contain
-imported Godot resources rather than the original project files).
+generated by Blazium's "Export PCK/ZIP" functionality (although these will contain
+imported Blazium resources rather than the original project files).
 
 .. note::
 
     Use :ref:`ProjectSettings.load_resource_pack <class_ProjectSettings_method_load_resource_pack>`
-    to load PCK or ZIP files exported by Godot as
+    to load PCK or ZIP files exported by Blazium as
     :ref:`additional data packs <doc_exporting_pcks>`. That approach is preferred
     for DLCs, as it makes interacting with additional data packs seamless (virtual filesystem).
 
 This ZIP archive support can be combined with runtime image, 3D scene and audio
 loading to provide a seamless modding experience without requiring users to go
-through the Godot editor to generate PCK/ZIP files.
+through the Blazium editor to generate PCK/ZIP files.
 
 Example that lists files in a ZIP archive in an :ref:`class_ItemList` node,
 then writes contents read from it to a new ZIP archive (essentially duplicating the archive):

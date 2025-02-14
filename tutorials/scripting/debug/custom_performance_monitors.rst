@@ -6,7 +6,7 @@ Custom performance monitors
 Introduction
 ------------
 
-As explained in the :ref:`doc_debugger_panel` documentation, Godot features a
+As explained in the :ref:`doc_debugger_panel` documentation, Blazium features a
 **Debugger > Monitors** bottom panel that allows tracking various values with
 graphs showing their evolution over time. The data for those graphs is sourced
 from the engine's :ref:`class_Performance` singleton.

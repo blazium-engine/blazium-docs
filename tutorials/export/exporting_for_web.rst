@@ -5,7 +5,7 @@ Exporting for the Web
 
 .. seealso::
 
-    This page describes how to export a Godot project to HTML5.
+    This page describes how to export a Blazium project to HTML5.
     If you're looking to compile editor or export template binaries from source instead,
     read :ref:`doc_compiling_for_web`.
 
@@ -83,7 +83,7 @@ Limitations
 
 For security and privacy reasons, many features that work effortlessly on
 native platforms are more complicated on the web platform. Following is a list
-of limitations you should be aware of when porting a Godot game to the web.
+of limitations you should be aware of when porting a Blazium game to the web.
 
 .. _doc_javascript_secure_contexts:
 
@@ -123,7 +123,7 @@ Full screen and mouse capture
 
 Browsers do not allow arbitrarily **entering full screen**. The same goes for
 **capturing the cursor**. Instead, these actions have to occur as a response to
-a JavaScript input event. In Godot, this means entering full screen from within
+a JavaScript input event. In Blazium, this means entering full screen from within
 a pressed input event callback such as ``_input`` or ``_unhandled_input``.
 Querying the :ref:`class_Input` singleton is not sufficient, the relevant
 input event must currently be active.
@@ -141,7 +141,7 @@ player to click, tap or press a key/button to enable audio, for instance when di
 .. seealso:: Google offers additional information about their `Web Audio autoplay
              policies <https://sites.google.com/a/chromium.org/dev/audio-video/autoplay>`__.
 
-             Apple's Safari team also posted additional information about their `Auto-Play Policy Changes for macOS 
+             Apple's Safari team also posted additional information about their `Auto-Play Policy Changes for macOS
              <https://webkit.org/blog/7734/auto-play-policy-changes-for-macos/>`__.
 
 .. warning:: Access to microphone requires a
@@ -206,7 +206,7 @@ used, see :ref:`doc_customizing_html5_shell`.
 .. warning::
 
     To ensure low audio latency and the ability to use :ref:`class_Thread` in web exports,
-    Godot 4 web exports always use
+    Blazium web exports always use
     `SharedArrayBuffer <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer>`__.
     This requires a :ref:`secure context <doc_javascript_secure_contexts>`,
     while also requiring the following CORS headers to be set when serving the files:
@@ -233,7 +233,7 @@ common on most web game hosting sites.
 
 The other exported files are served as they are, next to the ``.html`` file,
 names unchanged. The ``.wasm`` file is a binary WebAssembly module implementing
-the engine. The ``.pck`` file is the Godot main pack containing your game. The
+the engine. The ``.pck`` file is the Blazium main pack containing your game. The
 ``.js`` file contains start-up code and is used by the ``.html`` file to access
 the engine. The ``.png`` file contains the boot splash image. It is not used in
 the default HTML page, but is included for
