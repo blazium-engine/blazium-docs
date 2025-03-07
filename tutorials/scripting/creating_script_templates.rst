@@ -3,7 +3,7 @@
 Creating script templates
 =========================
 
-Godot provides a way to use script templates as seen in the
+Blazium provides a way to use script templates as seen in the
 ``Script Create Dialog`` while creating a new script:
 
 .. image:: img/script_create_dialog_templates.webp
@@ -29,13 +29,13 @@ Editor-defined templates
 These are available globally throughout any project. The location of these
 templates are determined per each OS:
 
--  Windows: ``%APPDATA%\Godot\script_templates\``
--  Linux: ``$HOME/.config/godot/script_templates/``
--  macOS: ``$HOME/Library/Application Support/Godot/script_templates/``
+-  Windows: ``%APPDATA%\Blazium \script_templates\``
+-  Linux: ``$HOME/.config/blazium/script_templates/``
+-  macOS: ``$HOME/Library/Application Support/Blazium/script_templates/``
 
-If you're getting Godot from somewhere other than the official website, such
+If you're getting Blazium from somewhere other than the official website, such
 as Steam, the folder might be in a different location. You can find it using
-the Godot editor. Go to ``Editor > Open Editor Data/Settings Folder`` and it
+the Blazium editor. Go to ``Editor > Open Editor Data/Settings Folder`` and it
 will open a folder in your file browser, inside that folder is the
 ``script_templates`` folder.
 
@@ -149,7 +149,7 @@ use these as the base for creating other templates:
 
  .. code-tab:: gdscript GDScript
 
-    # meta-description: Base template for Node with default Godot cycle methods
+    # meta-description: Base template for Node with default Blazium cycle methods
 
     extends _BASE_
 
@@ -166,7 +166,7 @@ use these as the base for creating other templates:
 
  .. code-tab:: csharp
 
-    // meta-description: Base template for Node with default Godot cycle methods
+    // meta-description: Base template for Node with default Blazium cycle methods
 
     using _BINDINGS_NAMESPACE_;
     using System;
@@ -184,7 +184,7 @@ use these as the base for creating other templates:
         }
     }
 
-The Godot editor provides a set of useful built-in node-specific templates, such as
+The Blazium editor provides a set of useful built-in node-specific templates, such as
 ``basic_movement`` for both :ref:`CharacterBody2D <class_CharacterBody2D>` and
 :ref:`CharacterBody3D <class_CharacterBody3D>` and ``plugin`` for
 :ref:`EditorPlugin <class_EditorPlugin>`.
@@ -198,23 +198,23 @@ which are currently implemented.
 Base placeholders
 ~~~~~~~~~~~~~~~~~
 
-+--------------------------+----------------------------------------------------+
-| Placeholder              | Description                                        |
-+==========================+====================================================+
-| ``_BINDINGS_NAMESPACE_`` | The name of the Godot namespace (used in C# only). |
-+--------------------------+----------------------------------------------------+
-| ``_CLASS_``              | The name of the new class.                         |
-+--------------------------+----------------------------------------------------+
-| ``_BASE_``               | The base type a new script inherits from.          |
-+--------------------------+----------------------------------------------------+
-| ``_TS_``                 | Indentation placeholder. The exact type and number |
-|                          | of whitespace characters used for indentation is   |
-|                          | determined by the ``text_editor/indent/type`` and  |
-|                          | ``text_editor/indent/size`` settings in the        |
-|                          | :ref:`EditorSettings <class_EditorSettings>`       |
-|                          | respectively. Can be overridden by the             |
-|                          | ``meta-space-indent`` header on the template.      |
-+--------------------------+----------------------------------------------------+
++--------------------------+-----------------------------------------------------+
+| Placeholder              | Description                                         |
++==========================+=====================================================+
+| ``_BINDINGS_NAMESPACE_`` | The name of the Blazium namespace (used in C# only).|
++--------------------------+-----------------------------------------------------+
+| ``_CLASS_``              | The name of the new class.                          |
++--------------------------+-----------------------------------------------------+
+| ``_BASE_``               | The base type a new script inherits from.           |
++--------------------------+-----------------------------------------------------+
+| ``_TS_``                 | Indentation placeholder. The exact type and number  |
+|                          | of whitespace characters used for indentation is    |
+|                          | determined by the ``text_editor/indent/type`` and   |
+|                          | ``text_editor/indent/size`` settings in the         |
+|                          | :ref:`EditorSettings <class_EditorSettings>`        |
+|                          | respectively. Can be overridden by the              |
+|                          | ``meta-space-indent`` header on the template.       |
++--------------------------+-----------------------------------------------------+
 
 Type placeholders
 ~~~~~~~~~~~~~~~~~

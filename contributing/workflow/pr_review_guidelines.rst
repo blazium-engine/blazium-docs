@@ -15,8 +15,8 @@ From a high level, the ideal life cycle of a pull request looks like the
 following:
 
   1. A contributor opens a PR that fixes a specific problem (optimally closing
-     a GitHub `issue <https://github.com/godotengine/godot>`_ or implementing
-     a `proposal <https://github.com/godotengine/godot-proposals>`_).
+     a GitHub `issue <https://github.com/blazium-engine/blazium>`_ or implementing
+     a `Godot proposal <https://github.com/godotengine/godot-proposals>`_).
 
   2. Other contributors provide feedback on the PR (including reviewing and/or
      approving the PR, as appropriate).
@@ -27,8 +27,8 @@ following:
   4. Another maintainer reviews the code with a focus on code style/clarity and
      approves it once satisfied.
 
-  5. A team leader or a member of the `production team
-     <https://godotengine.org/teams#production>`_ merges the pull request if
+  5. A member of the `production team
+     <https://blazium.app/teams#production>`_ merges the pull request if
      satisfied that it has been sufficiently reviewed.
 
 This document will explain steps 2, 3, 4, and 5 in more detail. For a more
@@ -44,9 +44,8 @@ Typically the first interaction on a pull request will be an engine maintainer
 assigning tags to the pull request and flagging it for review by someone
 familiar with that area of code.
 
-Engine maintainers are folks who are "members" of the Godot project repository
-on GitHub and/or are listed on the `Teams page <https://godotengine.org/teams>`_
-on the Godot website. Maintainers are responsible for a given area of the
+Engine maintainers are folks who are "members" of the Blazium project repository
+on GitHub. Maintainers are responsible for a given area of the
 engine. Typically this means they are the people who are given more trust to
 approve and recommend pull requests for merging.
 
@@ -122,7 +121,7 @@ Here are some things to think about and look out for as you review the code:
   are alright, but often bugs that you can find along the way are better fixed
   in their own PRs.
 
-* **Code properly uses Godot's own APIs and patterns.**
+* **Code properly uses Blazium's own APIs and patterns.**
 
   Consistency is very important, and a solution that already exists in the
   codebase is preferable to an ad-hoc solution.
@@ -153,8 +152,7 @@ best practices, and lastly, do the :ref:`code style review <doc_code_style_revie
     reason, that fact should be communicated as early and clearly as possible. We
     want to avoid stringing people along because it feels bad to say "sorry, no".
 
-As you review pull requests, keep the Godot `Code of Conduct
-<https://godotengine.org/code-of-conduct>`_ in mind. Especially the following:
+As you review pull requests, keep in mind:
 
 * Politeness is expected at all times. Be kind and courteous.
 
@@ -291,14 +289,14 @@ could be the person merging the pull request.
 
 Make sure that the reviews and approvals were left by people competent in that
 specific engine area. It is possible that even a long-standing member of the
-Godot organization left a review without having the relevant expertise.
+Blazium organization left a review without having the relevant expertise.
 
 .. note::
 
     An easy way to find PRs that may be ready for merging is filtering by
-    approved PRs and sorting by recently updated. For example, in the main Godot
+    approved PRs and sorting by recently updated. For example, in the main Blazium
     repository, you can use `this link
-    <https://github.com/godotengine/godot/pulls?q=is%3Apr+is%3Aopen+review%3Aapproved+sort%3Aupdated-desc>`_.
+    <https://github.com/blazium-engine/blazium/pulls?q=is%3Apr+is%3Aopen+review%3Aapproved+sort%3Aupdated-desc>`_.
 
 2. Get feedback from the community
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -354,15 +352,15 @@ out more broadly to ask for help reviewing. Consider asking:
   maintainer you've probably written them enough times to know how to make one,
   but for a general template think about *"Fix <issue> in <part of codebase>"*.
   For a more detailed recommendation see the `contributing.md
-  <https://github.com/godotengine/godot/blob/master/CONTRIBUTING.md#format-your-commit-messages-with-readability-in-mind>`_
-  page in the main Godot repository.
+  <https://github.com/blazium-engine/blazium/blob/master/CONTRIBUTING.md#format-your-commit-messages-with-readability-in-mind>`_
+  page in the main Blazium repository.
 
 4. GitHub checklist
 ~~~~~~~~~~~~~~~~~~~
 
 * **Validate the target branch of the PR.**
 
-  Most Godot development happens around in the ``master`` branch. Therefore most
+  Most Blazium development happens around in the ``blazium-dev`` branch. Therefore most
   pull requests must be made against it. From there pull requests can then be
   backported to other branches. Be wary of people making PRs on the version they
   are using (e.g, ``3.3``) and guide them to make a change against a

@@ -5,7 +5,7 @@ Using compute shaders
 
 This tutorial will walk you through the process of creating a minimal compute
 shader. But first, a bit of background on compute shaders and how they work with
-Godot.
+Blazium.
 
 .. note::
 
@@ -25,8 +25,8 @@ Now let's get started by creating a short compute shader.
 
 First, in the **external** text editor of your choice, create a new file called
 ``compute_example.glsl`` in your project folder. When you write compute shaders
-in Godot, you write them in GLSL directly. The Godot shader language is based on
-GLSL. If you are familiar with normal shaders in Godot, the syntax below will
+in Blazium, you write them in GLSL directly. The Blazium shader language is based on
+GLSL. If you are familiar with normal shaders in Blazium, the syntax below will
 look somewhat familiar.
 
 .. note::
@@ -71,7 +71,7 @@ results back in the buffer array. Now let's look at it line-by-line.
 
 These two lines communicate two things:
 
- 1. The following code is a compute shader. This is a Godot-specific hint that is needed for the editor to properly import the shader file.
+ 1. The following code is a compute shader. This is a Blazium-specific hint that is needed for the editor to properly import the shader file.
  2. The code is using GLSL version 450.
 
 You should never have to change these two lines for your custom compute shaders.

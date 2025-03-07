@@ -8,7 +8,7 @@ Introduction
 
 While indie or niche games usually
 do not need localization, games targeting a more massive market
-often require localization. Godot offers many tools to make this process
+often require localization. Blazium offers many tools to make this process
 more straightforward, so this tutorial is more like a collection of
 tips and tricks.
 
@@ -37,7 +37,7 @@ The above dialog is used to add or remove translations project-wide.
 Localizing resources
 --------------------
 
-It is also possible to instruct Godot to use alternate versions of
+It is also possible to instruct Blazium to use alternate versions of
 assets (resources) depending on the current language. This can be used for
 localized images such as in-game billboards or localized voices.
 
@@ -195,7 +195,7 @@ singular or plural form. However, hardcoding the "is plural" condition depending
 on whether there is more than 1 object is not valid in all languages.
 
 Some languages have more than two plural forms, and the rules on the number of
-objects required for each plural form vary. Godot offers support for
+objects required for each plural form vary. Blazium offers support for
 *pluralization* so that the target locales can handle this automatically.
 
 Pluralization is meant to be used with positive (or zero) integer numbers only.
@@ -269,7 +269,7 @@ can disable parts of it if desired.
 TranslationServer
 -----------------
 
-Godot has a server handling low-level translation management
+Blazium has a server handling low-level translation management
 called the :ref:`TranslationServer <class_TranslationServer>`.
 Translations can be added or removed during runtime;
 the current language can also be changed at runtime.
@@ -286,7 +286,7 @@ In some languages the shape of a glyph changes depending on the surrounding char
 Support for bidirectional writing systems and UI mirroring is transparent, you don't
 usually need to change anything or have any knowledge of the specific writing system.
 
-For RTL languages, Godot will automatically do the following changes to the UI:
+For RTL languages, Blazium will automatically do the following changes to the UI:
 
 -  Mirrors left/right anchors and margins.
 -  Swaps left and right text alignment.
@@ -312,7 +312,7 @@ Adding break iterator data to exported project
 ----------------------------------------------
 
 Some languages are written without spaces, and word and line breaking requires more than rules over character sequences.
-Godot includes ICU rule and dictionary based, break iterator data, but this data is not included into exported projects by default.
+Blazium includes ICU rule and dictionary based, break iterator data, but this data is not included into exported projects by default.
 To include it go to **Project → Project Settings → Localization → Text Server Data** and click **Install support data...**. Break iterator data is about 4 MB large.
 
 .. image:: img/icu_data.png
@@ -353,11 +353,11 @@ buttons). Otherwise, they can remain the same.
 Testing translations
 --------------------
 
-You may want to test a project's translation before releasing it. Godot provides two ways
+You may want to test a project's translation before releasing it. Blazium provides two ways
 to do this.
 
 First, in the Project Settings, under **Internationalization > Locale** (with advanced settings enabled), there is a **Test**
-property. Set this property to the locale code of the language you want to test. Godot will
+property. Set this property to the locale code of the language you want to test. Blazium will
 run the project with that locale when the project is run (either from the editor or when
 exported).
 
@@ -367,13 +367,13 @@ Keep in mind that since this is a project setting, it will show up in version co
 it is set to a non-empty value. Therefore, it should be set back to an empty value before
 committing changes to version control.
 
-Translations can also be tested when :ref:`running Godot from the command line <doc_command_line_tutorial>`.
+Translations can also be tested when :ref:`running Blazium from the command line <doc_command_line_tutorial>`.
 For example, to test a game in French, the following argument can be
 supplied:
 
 .. code-block:: shell
 
-   godot --language fr
+   blazium --language fr
 
 Translating the project name
 ----------------------------

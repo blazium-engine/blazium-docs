@@ -200,7 +200,7 @@ to oversharpening.
 
 .. note::
 
-    If you wish to use sharpening when rendering at native resolution, Godot
+    If you wish to use sharpening when rendering at native resolution, Blazium
     currently doesn't allow using the sharpening component of FSR1 (RCAS)
     independently from the upscaling component (EASU).
 
@@ -221,7 +221,7 @@ Mipmap bias
 *This is only available in the Forward+ and Mobile renderers, not the Compatibility
 renderer.*
 
-Godot automatically uses a negative texture mipmap bias when the 3D resolution
+Blazium automatically uses a negative texture mipmap bias when the 3D resolution
 scale is set below ``1.0``. This allows for better preservation of texture
 detail at the cost of a grainy appearance on detailed textures.
 
@@ -234,7 +234,7 @@ dock.
 The formula used to determine the texture mipmap bias is:
 ``log2f(min(scaling_3d_scale, 1.0)) + custom_texture_mipmap_bias``
 
-To counteract the blurriness added by some antialiasing methods, Godot also adds
+To counteract the blurriness added by some antialiasing methods, Blazium also adds
 a ``-0.25`` offset when FXAA is enabled, and a ``-0.5`` offset when TAA is
 enabled. If both are enabled at the same time, a ``-0.75`` offset is used. This
 mipmap bias offset is applied *before* the resolution scaling offset, so it does

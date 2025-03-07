@@ -21,7 +21,7 @@ more important than following this guide to a tee.
 
 .. note::
 
-    Godot's built-in script editor uses a lot of these conventions
+    Blazium's built-in script editor uses a lot of these conventions
     by default. Let it help you.
 
 Here is a complete class example based on these guidelines:
@@ -175,8 +175,8 @@ indentation level to distinguish continuation lines:
 ::
 
     var party = [
-        "Godot",
-        "Godette",
+        "Blazium",
+        "Blazia",
         "Steve",
     ]
 
@@ -200,8 +200,8 @@ indentation level to distinguish continuation lines:
 ::
 
     var party = [
-            "Godot",
-            "Godette",
+            "Blazium",
+            "Blazia",
             "Steve",
     ]
 
@@ -681,7 +681,7 @@ name to snake_case::
     class_name YAMLParser
     extends Object
 
-This is consistent with how C++ files are named in Godot's source code. This
+This is consistent with how C++ files are named in Blazium's source code. This
 also avoids case sensitivity issues that can crop up when exporting a project
 from Windows to other platforms.
 
@@ -923,7 +923,7 @@ Methods and static functions
 After the class's properties come the methods.
 
 Start with the ``_init()`` callback method, that the engine will call upon
-creating the object in memory. Follow with the ``_ready()`` callback, that Godot
+creating the object in memory. Follow with the ``_ready()`` callback, that Blazium
 calls when it adds a node to the scene tree.
 
 These functions should come first because they show how the object is

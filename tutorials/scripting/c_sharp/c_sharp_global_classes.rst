@@ -3,7 +3,7 @@
 C# global classes
 =================
 
-Global classes (also known as named scripts) are types registered in Godot's
+Global classes (also known as named scripts) are types registered in Blazium's
 editor so they can be used more conveniently.
 :ref:`In GDScript <doc_gdscript_basics_class_name>`, this is achieved
 using the ``class_name`` keyword at the top of a script. This page describes how
@@ -49,7 +49,7 @@ of nodes in the scene to match the assignment restriction.
 .. image:: img/globalclasses_exportednode.webp
 
 If a custom type isn't registered as a global class, the assignment is
-restricted to the Godot type the custom type is based on. For example, inspector
+restricted to the Blazium type the custom type is based on. For example, inspector
 assignments to an export of the type ``MySimpleSprite2D`` are restricted to
 ``Sprite2D`` and derived types.
 

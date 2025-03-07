@@ -33,7 +33,7 @@ Advanced topics
    openxr_hand_tracking
    openxr_body_tracking
 
-Godot XR Tools
+Blazium XR Tools
 --------------
 
 .. toctree::

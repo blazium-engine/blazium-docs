@@ -3,7 +3,7 @@
 Contributing to the documentation
 =================================
 
-This guide explains how to contribute to Godot's documentation, be it by
+This guide explains how to contribute to Blazium's documentation, be it by
 writing or reviewing pages.
 
 .. seealso::
@@ -15,27 +15,27 @@ Getting started
 ---------------
 
 To modify or create pages in the reference manual, you need to edit ``.rst``
-files in the `godot-docs GitHub repository
+files in the `blazium-docs GitHub repository
 <https://github.com/blazium-engine/blazium-docs>`_. Modifying those pages in a pull
 request triggers a rebuild of the online documentation upon merging.
 
 .. seealso:: For details on Git usage and the pull request workflow, please
              refer to the :ref:`doc_pr_workflow` page. Most of what it describes
-             regarding the main godotengine/godot repository is also valid for
+             regarding the main blazium-engine/blazium repository is also valid for
              the docs repository.
 
 .. warning:: The class reference's source files are in the `Blazium Engine
-             repository <https://github.com/godotengine/godot>`_. We generate
+             repository <https://github.com/blazium-engine/blazium>`_. We generate
              the :ref:`Class Reference <doc_class_reference>` section of this documentation
              from them. If you want to update the description of a class, its
              methods, or properties, read
              :ref:`doc_updating_the_class_reference`.
 
-What is the Godot documentation
+What is the Blazium documentation
 -------------------------------
 
-The Godot documentation is intended as a comprehensive reference manual for the
-Godot game engine. It is not meant to contain step-by-step tutorials, except for
+The Blazium documentation is intended as a comprehensive reference manual for the
+Blazium game engine. It is not meant to contain step-by-step tutorials, except for
 two game creation tutorials in the Getting Started section.
 
 We strive to write factual content in an accessible and well-written language. To
@@ -51,7 +51,7 @@ Contributing changes
 
 **Pull requests should use the** ``master`` **branch by default.** Only make pull
 requests against other branches (e.g. ``3.6`` or ``4.2``) if your changes only
-apply to that specific version of Godot. After a pull request is merged into
+apply to that specific version of Blazium. After a pull request is merged into
 ``master``, it will usually be cherry-picked into the current stable branch by
 documentation maintainers.
 
@@ -65,8 +65,8 @@ Editing existing pages
 To edit an existing page, locate its ``.rst`` source file and open it in your
 favorite text editor. You can then commit the changes, push them to your fork,
 and make a pull request. **Note that the pages in** ``classes/`` **should not be
-edited here.** They are automatically generated from Godot's `XML class
-reference <https://github.com/godotengine/godot/tree/master/doc/classes>`__.
+edited here.** They are automatically generated from Blazium's `XML class
+reference <https://github.com/blazium-engine/blazium/tree/master/doc/classes>`__.
 See :ref:`doc_updating_the_class_reference` for details.
 
 .. seealso:: To build the manual and test changes on your computer, see
@@ -96,7 +96,7 @@ and to log in to use it. Once logged in, you can propose change like so:
    Click the button **Propose changes**.
 
 5. On the following screens, click the **Create pull request** button until you
-   see a message like *Username wants to merge 1 commit into godotengine:master
+   see a message like *Username wants to merge 1 commit into blazium-engine:master
    from Username:patch-1*.
 
 .. note::
@@ -147,8 +147,8 @@ the lack of leading underscore in the reference).
 
 Write your titles like plain sentences, without capitalizing each word:
 
--  **Good:** Understanding signals in Godot
--  **Bad:** Understanding Signals In Godot
+-  **Good:** Understanding signals in Blazium
+-  **Bad:** Understanding Signals In Blazium
 
 Only proper nouns, projects, people, and node class names should have their
 first letter capitalized.
@@ -193,14 +193,14 @@ into a ``files/`` folder next to the ``.rst`` file, and using this inline markup
 
    :download:`file_name.zip <files/file_name.zip>`
 
-Consider using the `godot-docs-project-starters <https://github.com/blazium-engine/blazium-docs-project-starters>`
+Consider using the `blazium-docs-project-starters <https://github.com/blazium-engine/blazium-docs-project-starters>`
 repository for hosting support materials, such as project templates and asset packs.
 You can use a direct link to the generated archive from that repository with the regular
 link markup:
 
 .. code:: rst
 
-   `file_name.zip <https://github.com/godotengine/godot-docs-project-starters/releases/download/latest-4.x/file_name.zip>`_
+   `file_name.zip <https://github.com/blazium-engine/blazium-docs-project-starters/releases/download/latest-4.x/file_name.zip>`_
 
 
 License
@@ -209,7 +209,7 @@ License
 This documentation and every page it contains is published under the terms of
 the `Creative Commons Attribution 3.0 license (CC BY 3.0)
 <https://creativecommons.org/licenses/by/3.0/>`_, with attribution to "Juan
-Linietsky, Ariel Manzur and the Godot community".
+Linietsky, Ariel Manzur and the Blazium community".
 
 By contributing to the documentation on the GitHub repository, you agree that
 your changes are distributed under this license.

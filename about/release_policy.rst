@@ -2,18 +2,19 @@
 
 .. _doc_release_policy:
 
-Godot release policy
+Blazium release policy
 ====================
 
-Godot's release policy is in constant evolution. The description below
-provides a general idea of what to expect, but what will actually
-happen depends on the choices of core contributors and the needs of the
-community at a given time.
+Blazium builds are divided in ``nightly``, ``pre-release`` and ``release``.
 
-Godot versioning
+- ``nightly`` build are considered unstable.
+- ``pre-release`` build are for QA for a release build.
+- ``release`` build are considered stable and can be safely used.
+
+Blazium versioning
 ----------------
 
-Godot loosely follows `Semantic Versioning <https://semver.org/>`__ with a
+Blazium follows `Semantic Versioning <https://semver.org/>`__ with a
 ``major.minor.patch`` versioning system, albeit with an interpretation of each
 term adapted to the complexity of a game engine:
 
@@ -30,7 +31,7 @@ term adapted to the complexity of a game engine:
   areas *may* happen in minor versions, but the vast majority of projects
   should not be affected or require significant porting work.
 
-  This is because Godot, as a game engine, covers many areas like rendering,
+  This is because Blazium, as a game engine, covers many areas like rendering,
   physics, and scripting. Fixing bugs or implementing new features in one area
   might sometimes require changing a feature's behavior or modifying a class's
   interface, even if the rest of the engine API remains backwards compatible.
@@ -54,112 +55,103 @@ term adapted to the complexity of a game engine:
     Updating to new patch versions is therefore considered safe and strongly
     recommended to all users of a given stable branch.
 
-We call ``major.minor`` combinations *stable branches*. Each stable branch
-starts with a ``major.minor`` release (without the ``0`` for ``patch``) and is
-further developed for maintenance releases in a Git branch of the same name
-(for example patch updates for the 4.0 stable branch are developed in the
-``4.0`` Git branch).
+.. We call ``major.minor`` combinations *stable branches*. Each stable branch
+.. starts with a ``major.minor`` release (without the ``0`` for ``patch``) and is
+.. further developed for maintenance releases in a Git branch of the same name
+.. (for example patch updates for the 4.0 stable branch are developed in the
+.. ``4.0`` Git branch).
 
-Release support timeline
-------------------------
+.. Release support timeline
+.. ------------------------
 
 .. UPDATE: Table changes every minor version. Support policy may change.
 
-Stable branches are supported *at least* until the next stable branch is
-released and has received its first patch update. In practice, we support
-stable branches on a *best effort* basis for as long as they have active users
-who need maintenance updates.
+.. Stable branches are supported *at least* until the next stable branch is
+.. released and has received its first patch update. In practice, we support
+.. stable branches on a *best effort* basis for as long as they have active users
+.. who need maintenance updates.
 
-Whenever a new major version is released, we make the previous stable branch a
-long-term supported release, and do our best to provide fixes for issues
-encountered by users of that branch who cannot port complex projects to the new
-major version. This was the case for the 2.1 branch, and is the case for the
-3.x branch.
+.. Whenever a new major version is released, we make the previous stable branch a
+.. long-term supported release, and do our best to provide fixes for issues
+.. encountered by users of that branch who cannot port complex projects to the new
+.. major version. This was the case for the 2.1 branch, and is the case for the
+.. 3.x branch.
 
-In a given minor release series, only the latest patch release receives support.
-If you experience an issue using an older patch release, please upgrade to the
-latest patch release of that series and test again before reporting an issue
-on GitHub.
+.. In a given minor release series, only the latest patch release receives support.
+.. If you experience an issue using an older patch release, please upgrade to the
+.. latest patch release of that series and test again before reporting an issue
+.. on GitHub.
 
-+--------------+----------------------+--------------------------------------------------------------------------+
-| **Version**  | **Release date**     | **Support level**                                                        |
-+--------------+----------------------+--------------------------------------------------------------------------+
-| Godot 4.5    | Q3 2025 (estimate)   | |unstable| *Development.* Receives new features, usability and           |
-| (`master`)   |                      | performance improvements, as well as bug fixes, while under development. |
-+--------------+----------------------+--------------------------------------------------------------------------+
-| Godot 4.4    | March 2025           | |supported| Receives fixes for bugs and security issues, as well as      |
-|              |                      | patches that enable platform support.                                    |
-+--------------+----------------------+--------------------------------------------------------------------------+
-| Godot 4.3    | August 2024          | |supported| Receives fixes for bugs and security issues, as well as      |
-|              |                      | patches that enable platform support.                                    |
+.. +--------------+----------------------+--------------------------------------------------------------------------+
+.. | **Version**  | **Release date**     | **Support level**                                                        |
+.. +--------------+----------------------+--------------------------------------------------------------------------+
+.. | Godot 4.5    | Q3 2025 (estimate)   | |unstable| *Development.* Receives new features, usability and           |
+.. | (`master`)   |                      | performance improvements, as well as bug fixes, while under development. |
+.. +--------------+----------------------+--------------------------------------------------------------------------+
+.. | Godot 4.4    | March 2025           | |supported| Receives fixes for bugs and security issues, as well as      |
+.. |              |                      | patches that enable platform support.                                    |
+.. +--------------+----------------------+--------------------------------------------------------------------------+
+.. | Godot 4.3    | August 2024          | |supported| Receives fixes for bugs and security issues, as well as      |
+.. |              |                      | patches that enable platform support.                                    |
 +--------------+----------------------+--------------------------------------------------------------------------+
 | Godot 4.2    | November 2023        | |partial| Receives fixes for security and platform support issues only.  |
 +--------------+----------------------+--------------------------------------------------------------------------+
 | Godot 4.1    | July 2023            | |eol| No longer supported (last update: 4.1.4).                          |
-+--------------+----------------------+--------------------------------------------------------------------------+
-| Godot 4.0    | March 2023           | |eol| No longer supported (last update: 4.0.4).                          |
-+--------------+----------------------+--------------------------------------------------------------------------+
-| Godot 3.7    | No ETA for now       | |supported| *Beta.* Receives new features, usability and performance     |
-| (`3.x`)      |                      | improvements, as well as bug fixes, while under development.             |
-+--------------+----------------------+--------------------------------------------------------------------------+
-| Godot 3.6    | September 2024       | |supported| Receives fixes for bugs and security issues, as well as      |
-|              |                      | patches that enable platform support.                                    |
+.. +--------------+----------------------+--------------------------------------------------------------------------+
+.. | Godot 4.0    | March 2023           | |eol| No longer supported (last update: 4.0.4).                          |
+.. +--------------+----------------------+--------------------------------------------------------------------------+
+.. | Godot 3.7    | No ETA for now       | |supported| *Beta.* Receives new features, usability and performance     |
+.. | (`3.x`)      |                      | improvements, as well as bug fixes, while under development.             |
+.. +--------------+----------------------+--------------------------------------------------------------------------+
+.. | Godot 3.6    | September 2024       | |supported| Receives fixes for bugs and security issues, as well as      |
+.. |              |                      | patches that enable platform support.                                    |
 +--------------+----------------------+--------------------------------------------------------------------------+
 | Godot 3.5    | August 2022          | |partial| Receives fixes for security and platform support issues only.  |
-+--------------+----------------------+--------------------------------------------------------------------------+
-| Godot 3.4    | November 2021        | |eol| No longer supported (last update: 3.4.5).                          |
-+--------------+----------------------+--------------------------------------------------------------------------+
-| Godot 3.3    | April 2021           | |eol| No longer supported (last update: 3.3.4).                          |
-+--------------+----------------------+--------------------------------------------------------------------------+
-| Godot 3.2    | January 2020         | |eol| No longer supported (last update: 3.2.3).                          |
-+--------------+----------------------+--------------------------------------------------------------------------+
-| Godot 3.1    | March 2019           | |eol| No longer supported (last update: 3.1.2).                          |
-+--------------+----------------------+--------------------------------------------------------------------------+
-| Godot 3.0    | January 2018         | |eol| No longer supported (last update: 3.0.6).                          |
-+--------------+----------------------+--------------------------------------------------------------------------+
-| Godot 2.1    | July 2016            | |eol| No longer supported (last update: 2.1.6).                          |
-+--------------+----------------------+--------------------------------------------------------------------------+
-| Godot 2.0    | February 2016        | |eol| No longer supported (last update: 2.0.4.1).                        |
-+--------------+----------------------+--------------------------------------------------------------------------+
-| Godot 1.1    | May 2015             | |eol| No longer supported.                                               |
-+--------------+----------------------+--------------------------------------------------------------------------+
-| Godot 1.0    | December 2014        | |eol| No longer supported.                                               |
-+--------------+----------------------+--------------------------------------------------------------------------+
+.. +--------------+----------------------+--------------------------------------------------------------------------+
+.. | Godot 3.4    | November 2021        | |eol| No longer supported (last update: 3.4.5).                          |
+.. +--------------+----------------------+--------------------------------------------------------------------------+
+.. | Godot 3.3    | April 2021           | |eol| No longer supported (last update: 3.3.4).                          |
+.. +--------------+----------------------+--------------------------------------------------------------------------+
+.. | Godot 3.2    | January 2020         | |eol| No longer supported (last update: 3.2.3).                          |
+.. +--------------+----------------------+--------------------------------------------------------------------------+
+.. | Godot 3.1    | March 2019           | |eol| No longer supported (last update: 3.1.2).                          |
+.. +--------------+----------------------+--------------------------------------------------------------------------+
+.. | Godot 3.0    | January 2018         | |eol| No longer supported (last update: 3.0.6).                          |
+.. +--------------+----------------------+--------------------------------------------------------------------------+
+.. | Godot 2.1    | July 2016            | |eol| No longer supported (last update: 2.1.6).                          |
+.. +--------------+----------------------+--------------------------------------------------------------------------+
+.. | Godot 2.0    | February 2016        | |eol| No longer supported (last update: 2.0.4.1).                        |
+.. +--------------+----------------------+--------------------------------------------------------------------------+
+.. | Godot 1.1    | May 2015             | |eol| No longer supported.                                               |
+.. +--------------+----------------------+--------------------------------------------------------------------------+
+.. | Godot 1.0    | December 2014        | |eol| No longer supported.                                               |
+.. +--------------+----------------------+--------------------------------------------------------------------------+
 
-.. |supported| image:: img/supported.png
-.. |partial| image:: img/partial.png
-.. |eol| image:: img/eol.png
-.. |unstable| image:: img/unstable.png
+.. .. |supported| image:: img/supported.png
+.. .. |partial| image:: img/partial.png
+.. .. |eol| image:: img/eol.png
+.. .. |unstable| image:: img/unstable.png
 
-**Legend:**
-|supported| Full support –
-|partial| Partial support –
-|eol| No support (end of life) –
-|unstable| Development version
+.. **Legend:**
+.. |supported| Full support –
+.. |partial| Partial support –
+.. |eol| No support (end of life) –
+.. |unstable| Development version
 
-Pre-release Godot versions aren't intended to be used in production and are
-provided for testing purposes only.
+.. Pre-release Godot versions aren't intended to be used in production and are
+.. provided for testing purposes only.
 
-.. seealso::
+.. .. seealso::
 
-    See :ref:`doc_upgrading_to_godot_4` for instructions on migrating a project
-    from Godot 3.x to 4.x.
+..     See :ref:`doc_upgrading_to_godot_4` for instructions on migrating a project
+..     from Godot 3.x to 4.x.
 
 .. _doc_release_policy_which_version_should_i_use:
 
 Which version should I use for a new project?
 ---------------------------------------------
 
-We recommend using Godot 4.x for new projects, as the Godot 4.x series will be
-supported long after 3.x stops receiving updates in the future. One caveat is
-that a lot of third-party documentation hasn't been updated for Godot 4.x yet.
-If you have to follow a tutorial designed for Godot 3.x, we recommend keeping
-:ref:`doc_upgrading_to_godot_4` open in a separate tab to check which methods
-have been renamed (if you get a script error while trying to use a specific node
-or method that was renamed in Godot 4.x).
-
-If your project requires a feature that is missing in 4.x (such as GLES2/WebGL
-1.0), you should use Godot 3.x for a new project instead.
+We recommend using the latest release build of Blazium for new projects.
 
 .. _doc_release_policy_should_i_upgrade_my_project:
 
@@ -206,7 +198,7 @@ When is the next release out?
 
 .. UPDATE: Refers to specific current minor versions 3.6 and 3.7.
 
-While Godot contributors aren't working under any deadlines, we strive to
+While Blazium contributors aren't working under any deadlines, we strive to
 publish minor releases relatively frequently.
 
 In particular, after the very length release cycle for 4.0, we are pivoting to

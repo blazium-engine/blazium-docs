@@ -9,7 +9,7 @@ hidden geometry removal.
 On this page, you'll learn:
 
 - What are the advantages and pitfalls of occlusion culling.
-- How to set up occlusion culling in Godot.
+- How to set up occlusion culling in Blazium.
 - Troubleshooting common issues with occlusion culling.
 
 .. seealso::
@@ -74,7 +74,7 @@ performance gains.
     few occlusion culling opportunities, occlusion culling may not be worth the
     added setup and CPU usage.
 
-How occlusion culling works in Godot
+How occlusion culling works in Blazium
 ------------------------------------
 
 .. note::
@@ -82,7 +82,7 @@ How occlusion culling works in Godot
     "occluder" refers to the shape blocking the view, while "occludee" refers to
     the object being hidden.
 
-In Godot, occlusion culling works by rasterizing the scene's occluder geometry
+In Blazium, occlusion culling works by rasterizing the scene's occluder geometry
 to a low-resolution buffer on the CPU. This is done using
 the software raytracing library `Embree <https://github.com/embree/embree>`__.
 

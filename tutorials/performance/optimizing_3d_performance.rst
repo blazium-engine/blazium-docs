@@ -9,7 +9,7 @@ Optimizing 3D performance
 Culling
 -------
 
-Godot will automatically perform view frustum culling in order to prevent
+Blazium will automatically perform view frustum culling in order to prevent
 rendering objects that are outside the viewport. This works well for games that
 take place in a small area, however things can quickly become problematic in
 larger levels.
@@ -27,7 +27,7 @@ than what is visible.
 
 Things aren't quite as bad as they seem, because the Z-buffer usually allows the
 GPU to only fully shade the objects that are at the front. This is called *depth
-prepass* and is enabled by default in Godot when using the Forward+ or
+prepass* and is enabled by default in Blazium when using the Forward+ or
 Compatibility rendering methods. However, unneeded objects are still reducing
 performance.
 
@@ -46,7 +46,7 @@ setting up occlusion culling in your scene.
 Transparent objects
 -------------------
 
-Godot sorts objects by :ref:`Material <class_Material>` and :ref:`Shader
+Blazium sorts objects by :ref:`Material <class_Material>` and :ref:`Shader
 <class_Shader>` to improve performance. This, however, can not be done with
 transparent objects. Transparent objects are rendered from back to front to make
 blending with what is behind work. As a result,
@@ -67,7 +67,7 @@ in the far distance. There are several strategies for replacing models at
 varying distance. You could use lower poly models, or use transparency to
 simulate more complex geometry.
 
-Godot 4 offers several ways to control level of detail:
+Blazium offers several ways to control level of detail:
 
 - An automatic approach on mesh import using :ref:`doc_mesh_lod`.
 - A manual approach configured in the 3D node using :ref:`doc_visibility_ranges`.

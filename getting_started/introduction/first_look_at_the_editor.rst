@@ -6,10 +6,10 @@
 
 .. _doc_intro_to_the_editor_interface:
 
-First look at Godot's interface
+First look at Blazium's interface
 ===============================
 
-This page will give you a brief overview of Godot's interface. We're going to
+This page will give you a brief overview of Blazium's interface. We're going to
 look at the different main screens and docks to help you situate yourself.
 
 .. seealso:: For a comprehensive breakdown of the editor's interface and how to
@@ -18,14 +18,14 @@ look at the different main screens and docks to help you situate yourself.
 The Project Manager
 -------------------
 
-When you launch Godot, the first window you see is the Project Manager. In the
+When you launch Blazium, the first window you see is the Project Manager. In the
 default tab **Projects**, you can manage existing projects, import or create new
 ones, and more.
 
 .. image:: img/editor_intro_project_manager.webp
 
 At the top of the window, there is another tab named **Asset Library**. The first
-time you go to this tab you'll see a "Go Online" button. For privacy reasons, the Godot
+time you go to this tab you'll see a "Go Online" button. For privacy reasons, the Blazium
 project manager does not access the internet by default. To change this click
 the "Go Online" button. You can change this option later in the settings.
 
@@ -38,14 +38,14 @@ The Project Manager's settings can be opened using the **Settings** menu:
 
 .. image:: img/editor_intro_settings.webp
 
-From here, you can change the editor's language (default is the system language), interface theme, display 
+From here, you can change the editor's language (default is the system language), interface theme, display
 scale, network mode, and also the directory naming convention.
 
 .. seealso:: To learn the Project Manager's ins and outs, read
              :ref:`doc_project_manager`.
 
 
-First look at Godot's editor
+First look at Blazium's editor
 ----------------------------
 
 When you open a new or an existing project, the editor's interface appears.
@@ -53,7 +53,7 @@ Let's look at its main areas:
 
 .. image:: img/editor_intro_editor_empty.webp
 
-By default, along the window's top edge, it features **main menu** on the left, **workspace** switching 
+By default, along the window's top edge, it features **main menu** on the left, **workspace** switching
 buttons in the center (active workspace is highlighted), and **playtest** buttons and the
 **Movie Maker Mode** toggle on the right:
 
@@ -61,7 +61,7 @@ buttons in the center (active workspace is highlighted), and **playtest** button
 
 Just below the workspace buttons, the opened :ref:`scenes <doc_key_concepts_overview_scenes>`
 as tabs are seen. The plus (+) button right next to the tabs will add a new scene to the project.
-With the button on the far right, distraction-free mode can be toggled, which maximizes or restores 
+With the button on the far right, distraction-free mode can be toggled, which maximizes or restores
 the **viewport**'s size by hiding **docks** in the interface:
 
 .. image:: img/editor_intro_scene_selector.webp
@@ -113,7 +113,7 @@ When you click on one, it expands vertically. Below, you can see the animation e
 
 .. image:: img/editor_intro_bottom_panel_animation.webp
 
-Bottom panels can also be shown or hidden using the shortcuts defined in 
+Bottom panels can also be shown or hidden using the shortcuts defined in
 **Editor Settings > Shortcuts**, under the **Bottom Panels** category.
 
 .. _doc_intro_to_the_editor_interface_five_screens:
@@ -162,16 +162,16 @@ and assets to use in your projects.
 Integrated class reference
 --------------------------
 
-Godot comes with a built-in class reference.
+Blazium comes with a built-in class reference.
 
 You can search for information about a class, method, property, constant, or
 signal by any one of the following methods:
 
-* Pressing :kbd:`F1` (or :kbd:`Opt + Space` on macOS, or :kbd:`Fn + F1` for laptops 
+* Pressing :kbd:`F1` (or :kbd:`Opt + Space` on macOS, or :kbd:`Fn + F1` for laptops
   with a :kbd:`Fn` key) anywhere in the editor.
 * Clicking the "Search Help" button in the top-right of the Script main screen.
 * Clicking on the Help menu and Search Help.
-* :kbd:`Ctrl + Click` (:kbd:`Cmd + Click` on macOS) on a class name, function name, 
+* :kbd:`Ctrl + Click` (:kbd:`Cmd + Click` on macOS) on a class name, function name,
   or built-in variable in the script editor.
 
 .. image:: img/editor_intro_search_help_button.webp

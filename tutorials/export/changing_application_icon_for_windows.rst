@@ -3,7 +3,7 @@
 Changing application icon for Windows
 =====================================
 
-By default, the exported project's icon will be the Godot icon.
+By default, the exported project's icon will be the Blazium icon.
 You will most likely want to change that for your project. There are two types
 of icons that can be changed on Windows: the file icon and the taskbar icon.
 
@@ -48,10 +48,10 @@ Depending on which version of ImageMagick you installed, you might need to leave
 
 .. warning::
 
-    For the ICO file to effectively replace the default Godot icon, it must
-    contain *all* the sizes included in the default Godot icon: 16×16, 32×32,
+    For the ICO file to effectively replace the default Blazium icon, it must
+    contain *all* the sizes included in the default Blazium icon: 16×16, 32×32,
     48×48, 64×64, 128×128, 256×256. If the ICO file does not contain all the sizes,
-    the default Godot icon will be kept for the sizes that weren't overridden.
+    the default Blazium icon will be kept for the sizes that weren't overridden.
 
     The above ImageMagick command takes this into account.
 
@@ -93,7 +93,7 @@ Before selecting it in the export options, you will need to install
 an extra tool called **rcedit**.
 You can download it `here <https://github.com/electron/rcedit/releases>`_.
 
-After downloading, you need to tell Godot the path to the rcedit executable
+After downloading, you need to tell Blazium the path to the rcedit executable
 on your computer.
 Go to **Editor > Editor Settings > Export > Windows**.
 Click on the folder icon for the **rcedit** entry.

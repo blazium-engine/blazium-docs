@@ -141,7 +141,7 @@ methods has to be used:
    :ref:`Node._input() <class_Node_private_method__input>` or :ref:`Control._gui_input() <class_Control_private_method__gui_input>`.
 2. Implement event propagation based on the individual requirements.
 
-In accordance with Godot's node-based design, this enables
+In accordance with Blazium's node-based design, this enables
 specialized child nodes to handle and consume particular events, while
 their ancestors, and ultimately the scene root, can provide more
 generalized behavior if needed.

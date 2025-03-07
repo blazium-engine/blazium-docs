@@ -16,7 +16,7 @@ Anonymous types
 ---------------
 
 It *is* possible to completely define a scenes' contents using a script alone.
-This is, in essence, what the Godot Editor does, only in the C++ constructor
+This is, in essence, what the Blazium Editor does, only in the C++ constructor
 of its objects.
 
 But, choosing which one to use can be a dilemma. Creating script instances

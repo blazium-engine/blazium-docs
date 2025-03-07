@@ -52,7 +52,7 @@ And then you'll add the cpp file.
 
     bool TTS::say_text(String p_txt) {
 
-        //convert Godot String to Godot CharString to C string
+        //convert Blazium String to Blazium CharString to C string
         return festival_say_text(p_txt.ascii().get_data());
     }
 
@@ -129,7 +129,7 @@ installation commands for Linux below, for reference.
 .. important::
     The voices that Festival uses (and any other potential external/3rd-party
     resource) all have varying licenses and terms of use; some (if not most) of them may be
-    be problematic with Godot, even if the Festival Library itself is MIT License compatible.
+    be problematic with Blazium, even if the Festival Library itself is MIT License compatible.
     Please be sure to check the licenses and terms of use.
 
 The external library will also need to be installed inside your module to make the source
@@ -151,8 +151,8 @@ can link to them instead by adding them as submodules (from within the modules/t
     git submodule add https://github.com/festvox/speech_tools
 
 .. important::
-    Please note that Git submodules are not used in the Godot repository. If
-    you are developing a module to be merged into the main Godot repository, you should not
+    Please note that Git submodules are not used in the Blazium repository. If
+    you are developing a module to be merged into the main Blazium repository, you should not
     use submodules. If your module doesn't get merged in, you can always try to implement
     the external library as a GDExtension.
 
@@ -166,7 +166,7 @@ environment's paths:
     env_tts.Append(CPPPATH=["speech_tools/include", "festival/src/include"])
 
     # LIBPATH and LIBS need to be set on the real "env" (not the clone)
-    # to link the specified libraries to the Godot executable.
+    # to link the specified libraries to the Blazium executable.
 
     # This is an absolute path where your .a libraries reside.
     # If using a relative path, you must convert it to a
@@ -178,7 +178,7 @@ environment's paths:
     env.Append(LIBS=['Festival', 'estools', 'estbase', 'eststring'])
 
 If you want to add custom compiler flags when building your module, you need to clone
-`env` first, so it won't add those flags to whole Godot build (which can cause errors).
+`env` first, so it won't add those flags to whole Blazium build (which can cause errors).
 Example `SCsub` with custom flags:
 
 .. code-block:: python

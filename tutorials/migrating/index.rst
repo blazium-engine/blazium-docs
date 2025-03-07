@@ -3,7 +3,7 @@
 Migrating to a new version
 ==========================
 
-Godot :ref:`loosely follows <doc_release_policy>` a semantic versioning system,
+Blazium :ref:`loosely follows <doc_release_policy>` a semantic versioning system,
 where compatibility is assumed between minor and patch releases, while major
 releases can break it. As such, it is generally not recommended to move projects
 between major versions during their development, especially if you've been

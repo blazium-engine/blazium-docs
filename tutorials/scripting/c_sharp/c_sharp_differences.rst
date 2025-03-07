@@ -9,9 +9,9 @@ General differences
 -------------------
 
 As explained in :ref:`doc_c_sharp_general_differences`, ``PascalCase`` is used
-to access Godot APIs in C# instead of the ``snake_case`` used by GDScript and
+to access Blazium APIs in C# instead of the ``snake_case`` used by GDScript and
 C++. Where possible, fields and getters/setters have been converted to
-properties. In general, the C# Godot API strives to be as idiomatic as is
+properties. In general, the C# Blazium API strives to be as idiomatic as is
 reasonably possible. See the :ref:`doc_c_sharp_styleguide`, which we encourage
 you to also use for your own C# code.
 
@@ -21,7 +21,7 @@ translate the GDScript code ``x.set_name("Friend")`` to C#, write
 ``x.Name = "Friend";``.
 
 A C# IDE will provide intellisense, which is extremely useful when figuring out
-renamed C# APIs. The built-in Godot script editor has no support for C#
+renamed C# APIs. The built-in Blazium script editor has no support for C#
 intellisense, and it also doesn't provide many other C# development tools that
 are considered essential. See :ref:`doc_c_sharp_setup_external_editor`.
 
@@ -117,7 +117,7 @@ Example:
 Full list of equivalences
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-List of Godot's global scope functions and their equivalent in C#:
+List of Blazium's global scope functions and their equivalent in C#:
 
 ===============================  ==============================================================
 GDScript                         C#
@@ -377,7 +377,7 @@ GDScript              C#
 String
 ------
 
-Use ``System.String`` (``string``). Most of Godot's String methods have an
+Use ``System.String`` (``string``). Most of Blazium's String methods have an
 equivalent in ``System.String`` or are provided by the ``StringExtensions``
 class as extension methods.
 
@@ -393,7 +393,7 @@ modify the original string and return a newly created string with the
 modifications applied. To avoid creating multiple string allocations consider
 using a `StringBuilder`_.
 
-List of Godot's String methods and their equivalent in C#:
+List of Blazium's String methods and their equivalent in C#:
 
 =======================  ==============================================================
 GDScript                 C#
@@ -502,7 +502,7 @@ xml_escape               StringExtensions.XMLEscape
 xml_unescape             StringExtensions.XMLUnescape
 =======================  ==============================================================
 
-List of Godot's PackedByteArray methods that create a String and their C# equivalent:
+List of Blazium's PackedByteArray methods that create a String and their C# equivalent:
 
 =========================  ==============================================================
 GDScript                   C#
@@ -518,7 +518,7 @@ hex_encode                 StringExtensions.HexEncode (Consider using `System.Co
 
     .NET provides path utility methods under the
     `System.IO.Path`_
-    class. They can only be used with native OS paths, not Godot paths
+    class. They can only be used with native OS paths, not Blazium paths
     (paths that start with ``res://`` or ``user://``).
     See :ref:`doc_data_paths`.
 
@@ -610,7 +610,7 @@ GDScript              C#
 The ``Signal`` type implements the awaitable pattern which means it can be used with
 the ``await`` keyword. See :ref:`doc_c_sharp_differences_await`.
 
-Instead of using the ``Signal`` type, the recommended way to use Godot signals in C# is
+Instead of using the ``Signal`` type, the recommended way to use Blazium signals in C# is
 to use the generated C# events. See :ref:`doc_c_sharp_signals`.
 
 Callable
@@ -837,7 +837,7 @@ See also :ref:`Dictionary in C# <doc_c_sharp_collections_dictionary>`.
 Variant
 -------
 
-``Godot.Variant`` is used to represent Godot's native :ref:`Variant <class_Variant>` type.
+``Godot.Variant`` is used to represent Blazium's native :ref:`Variant <class_Variant>` type.
 Any :ref:`Variant-compatible type <c_sharp_variant_compatible_types>` can be converted from/to it.
 
 See also: :ref:`doc_c_sharp_variant`.

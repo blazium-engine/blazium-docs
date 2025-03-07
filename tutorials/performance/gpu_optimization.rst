@@ -28,7 +28,7 @@ Draw calls, state changes, and APIs
 .. note:: The following section is not relevant to end-users, but is useful to
           provide background information that is relevant in later sections.
 
-Godot sends instructions to the GPU via a graphics API (Vulkan, OpenGL, OpenGL
+Blazium sends instructions to the GPU via a graphics API (Vulkan, OpenGL, OpenGL
 ES or WebGL). The communication and driver activity involved can be quite
 costly, especially in OpenGL, OpenGL ES and WebGL. If we can provide these
 instructions in a way that is preferred by the driver and GPU, we can greatly
@@ -64,7 +64,7 @@ meshes tend to comprise hundreds or thousands of triangles, and combining large
 meshes in real-time is prohibitively expensive. The costs of joining them quickly
 exceeds any benefits as the number of triangles grows per mesh. A much better
 alternative is to **join meshes ahead of time** (static meshes in relation to each
-other). This can be done by artists, or programmatically within Godot using an add-on.
+other). This can be done by artists, or programmatically within Blazium using an add-on.
 
 There is also a cost to batching together objects in 3D. Several objects
 rendered as one cannot be individually culled. An entire city that is off-screen
@@ -80,11 +80,11 @@ For more information on 3D specific optimizations, see
 Reuse shaders and materials
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The Godot renderer is a little different to what is out there. It's designed to
+The Blazium renderer is a little different to what is out there. It's designed to
 minimize GPU state changes as much as possible. :ref:`StandardMaterial3D
 <class_StandardMaterial3D>` does a good job at reusing materials that need similar
 shaders. If custom shaders are used, make sure to reuse them as much as
-possible. Godot's priorities are:
+possible. Blazium's priorities are:
 
 -  **Reusing Materials:** The fewer different materials in the
    scene, the faster the rendering will be. If a scene has a huge amount
@@ -207,7 +207,7 @@ algorithms that require as few texture reads as possible.**
 Texture compression
 ~~~~~~~~~~~~~~~~~~~
 
-By default, Godot compresses textures of 3D models when imported using video RAM
+By default, Blazium compresses textures of 3D models when imported using video RAM
 (VRAM) compression. Video RAM compression isn't as efficient in size as PNG or
 JPG when stored, but increases performance enormously when drawing large enough
 textures.

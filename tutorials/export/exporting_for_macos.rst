@@ -5,7 +5,7 @@ Exporting for macOS
 
 .. seealso::
 
-    This page describes how to export a Godot project to macOS.
+    This page describes how to export a Blazium project to macOS.
     If you're looking to compile editor or export template binaries from source instead,
     read :ref:`doc_compiling_for_macos`.
 
@@ -21,17 +21,17 @@ This bundle can be exported as is, packed in a ZIP archive or DMG disk image (on
 Requirements
 ------------
 
--  Download the Godot export templates. Use the Godot menu: ``Editor > Manage Export Templates``.
+-  Download the Blazium export templates. Use the Blazium menu: ``Editor > Manage Export Templates``.
 -  A valid and unique ``Bundle identifier`` should be set in the ``Application`` section of the export options.
 
 .. warning::
 
-    Projects exported without code signing and notarization will be blocked by Gatekeeper if they are downloaded from unknown sources, see the :ref:`Running Godot apps on macOS <doc_running_on_macos>` page for more information.
+    Projects exported without code signing and notarization will be blocked by Gatekeeper if they are downloaded from unknown sources, see the :ref:`Running Blazium apps on macOS <doc_running_on_macos>` page for more information.
 
 Code signing and notarization
 -----------------------------
 
-By default, macOS will run only applications that are signed and notarized. If you use any other signing configuration, see :ref:`Running Godot apps on macOS <doc_running_on_macos>` for workarounds.
+By default, macOS will run only applications that are signed and notarized. If you use any other signing configuration, see :ref:`Running Blazium apps on macOS <doc_running_on_macos>` for workarounds.
 
 To notarize an app, you **must** have a valid `Apple Developer ID Certificate <https://developer.apple.com/>`__.
 
@@ -87,8 +87,8 @@ If you do not have an Apple Developer ID Certificate
 - Select ``Built-in (ad-hoc only)`` in the ``Code Signing > Codesign`` option.
 - Select ``Disabled`` in the ``Notarization > Notarization`` option.
 
-In this case Godot will use an ad-hoc signature, which will make running an exported app easier for the end users,
-see the :ref:`Running Godot apps on macOS <doc_running_on_macos>` page for more information.
+In this case Blazium will use an ad-hoc signature, which will make running an exported app easier for the end users,
+see the :ref:`Running Blazium apps on macOS <doc_running_on_macos>` page for more information.
 
 Signing Options
 ~~~~~~~~~~~~~~~
@@ -174,8 +174,8 @@ See `Hardened Runtime <https://developer.apple.com/documentation/security/harden
 | Debugging                             | [6]_ You can temporarily enable this entitlement to use native debugger (GDB, LLDB) with the exported app. This entitlement should be disabled for production export.                            |
 +---------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-.. [4] The ``Allow JIT Code Execution``, ``Allow Unsigned Executable Memory`` and ``Allow DYLD Environment Variables`` entitlements are always enabled for the Godot Mono exports, and are not visible in the export options.
-.. [5] These features aren't supported by Godot out of the box, enable them only if you are using add-ons which require them.
+.. [4] The ``Allow JIT Code Execution``, ``Allow Unsigned Executable Memory`` and ``Allow DYLD Environment Variables`` entitlements are always enabled for the Blazium Mono exports, and are not visible in the export options.
+.. [5] These features aren't supported by Blazium out of the box, enable them only if you are using add-ons which require them.
 .. [6] To notarize an app, you must disable the ``Debugging`` entitlement.
 
 App Sandbox Entitlement

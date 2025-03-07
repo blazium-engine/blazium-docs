@@ -1,22 +1,22 @@
 .. _doc_consoles:
 
-Console support in Godot
+Console support in Blazium
 ========================
 
 Console porting process
 -----------------------
 
-In order to develop for consoles in Godot, you need access to the console SDK and
+In order to develop for consoles in Blazium, you need access to the console SDK and
 export templates for it. These export templates need to be developed either by
 yourself or someone hired to do it, or provided by a third-party company.
 
-Currently, the only console Godot officially supports is Steam Deck (through the
+Currently, the only console Blazium officially supports is Steam Deck (through the
 official Linux export templates).
 
 The reason other consoles are not officially supported are:
 
 - To develop for consoles, one must be licensed as a company.
-  As an open source project, Godot has no legal structure to provide console ports.
+  As an open source project, Blazium has no legal structure to provide console ports.
 - Console SDKs are secret and covered by non-disclosure agreements.
   Even if we could get access to them, we could not publish the platform-specific
   code under an open source license.
@@ -61,8 +61,8 @@ You can read more about the console publishing process in this article:
 Third-party support
 -------------------
 
-Console ports of Godot are offered by third-party companies (which have
-ported Godot on their own). These companies also offer publishing of
+Console ports of Blazium are offered by third-party companies (which have
+ported Blazium on their own). These companies also offer publishing of
 your games to various consoles.
 
 Following is the list of providers:
@@ -84,7 +84,7 @@ Following is the list of providers:
 - `Sickhead Games <https://www.sickhead.com>`_ offers console porting to Nintendo Switch, PlayStation 4, PlayStation 5, Xbox One, and Xbox Series X/S for Godot games.
 - `W4 Games <https://www.w4games.com/>`_ offers console ports for Nintendo Switch, Xbox Series X/S, and Playstation 5 for you to port your game yourself.
 
-If your company offers porting, or porting *and* publishing services for Godot games,
+If your company offers porting, or porting *and* publishing services for Blazium games,
 feel free to
 `contact the Godot Foundation <https://godot.foundation/#contact>`_
 to add your company to the list above.

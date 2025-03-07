@@ -16,7 +16,7 @@ There are various XR toolkits available that implement more complex XR logic rea
 We have a :Ref:`small introduction to Godot XR Tools <godot-xr-tools>` that you can look at,
 a toolkit developed by core contributors of Godot.
 
-There are more toolkits available for Godot:
+There are more toolkits available for Blazium:
 
 * `Godot XR handtracking toolkit <https://github.com/RevolNoom/godot_xr_handtracking>`_ (GDScript)
 * `Godot XR Kit <https://github.com/patrykkalinowski/godot-xr-kit>`_ (GDScript)

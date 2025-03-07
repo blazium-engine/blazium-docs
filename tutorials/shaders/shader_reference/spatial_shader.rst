@@ -3,7 +3,7 @@
 Spatial shaders
 ===============
 
-Spatial shaders are used for shading 3D objects. They are the most complex type of shader Godot offers.
+Spatial shaders are used for shading 3D objects. They are the most complex type of shader Blazium offers.
 Spatial shaders are highly configurable with different render modes and different rendering options
 (e.g. Subsurface Scattering, Transmission, Ambient Occlusion, Rim lighting etc). Users can optionally
 write vertex, fragment, and light processor functions to affect how objects are drawn.
@@ -278,9 +278,9 @@ shader, this value can be used as desired.
 Fragment built-ins
 ------------------
 
-The default use of a Godot fragment processor function is to set up the material properties of your object
+The default use of a Blazium fragment processor function is to set up the material properties of your object
 and to let the built-in renderer handle the final shading. However, you are not required to use all
-these properties, and if you don't write to them, Godot will optimize away the corresponding functionality.
+these properties, and if you don't write to them, Blazium will optimize away the corresponding functionality.
 
 +----------------------------------------+--------------------------------------------------------------------------------------------------+
 | Built-in                               | Description                                                                                      |

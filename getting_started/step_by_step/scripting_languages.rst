@@ -9,7 +9,7 @@ Scripting languages
 ===================
 
 This lesson will give you an overview of the available scripting languages in
-Godot. You will learn the pros and cons of each option. In the next part, you
+Blazium. You will learn the pros and cons of each option. In the next part, you
 will write your first script using GDScript.
 
 **Scripts attach to a node and extend its behavior**. This means that scripts
@@ -17,7 +17,7 @@ inherit all functions and properties of the node they attach to.
 
 For example, take a game where a Camera2D node follows a ship. The Camera2D node
 follows its parent by default. Imagine you want the camera to shake when the player
-takes damage. As this feature is not built into Godot, you would attach a script
+takes damage. As this feature is not built into Blazium, you would attach a script
 to the Camera2D node and code the shake.
 
 .. image:: img/scripting_camera_shake.gif
@@ -25,7 +25,7 @@ to the Camera2D node and code the shake.
 Available scripting languages
 -----------------------------
 
-Godot offers **four gameplay programming languages**: GDScript, C#,
+Blazium offers **four gameplay programming languages**: GDScript, C#,
 and, via its GDExtension technology, C and C++. There are more
 community-supported languages, but these are the official ones.
 
@@ -41,9 +41,9 @@ Which language should I use?
 ----------------------------
 
 If you're a beginner, we recommend to **start with GDScript**. We made this
-language specifically for Godot and the needs of game developers. It has a
+language specifically for Blazium and the needs of game developers. It has a
 lightweight and straightforward syntax and provides the tightest integration
-with Godot.
+with Blazium.
 
 .. image:: img/scripting_gdscript.png
 
@@ -61,7 +61,7 @@ GDScript
 :ref:`GDScript<doc_gdscript>` is an
 `object-oriented <https://en.wikipedia.org/wiki/Object-oriented_programming>`_ and
 `imperative <https://en.wikipedia.org/wiki/Imperative_programming>`_
-programming language built for Godot. It's made by and for game developers
+programming language built for Blazium. It's made by and for game developers
 to save you time coding games. Its features include:
 
 - A simple syntax that leads to short files.
@@ -111,12 +111,12 @@ thanks to a generous donation from Microsoft.
 C# offers a good tradeoff between performance and ease of use, although you
 should be aware of its garbage collector.
 
-.. note:: You must use the .NET edition of the Godot editor to script in C#. You
+.. note:: You must use the .NET edition of the Blazium editor to script in C#. You
           can download it on the Godot website's `download
-          <https://godotengine.org/download/>`_ page.
+          <https://blazium.app/download/>`_ page.
 
-Since Godot uses .NET 8, in theory, you can use any third-party .NET library or
-framework in Godot, as well as any Common Language Infrastructure-compliant
+Since Blazium uses .NET 8, in theory, you can use any third-party .NET library or
+framework in Blazium, as well as any Common Language Infrastructure-compliant
 programming language, such as F#, Boo, or ClojureCLR. However, C# is the only
 officially supported .NET option.
 
@@ -139,7 +139,7 @@ C++ via GDExtension
 ~~~~~~~~~~~~~~~~~~~
 
 GDExtension allows you to write game code in C++ without needing to recompile
-Godot.
+Blazium.
 
 .. image:: img/scripting_cpp.png
 
@@ -150,7 +150,7 @@ GDExtension is the best choice for performance. You don't need to use it
 throughout an entire game, as you can write other parts in GDScript or C#.
 
 When working with GDExtension, the available types, functions, and properties
-closely resemble Godot's actual C++ API.
+closely resemble Blazium's actual C++ API.
 
 Summary
 -------
@@ -158,7 +158,7 @@ Summary
 Scripts are files containing code that you attach to a node to extend its
 functionality.
 
-Godot supports four official scripting languages, offering you flexibility
+Blazium supports four official scripting languages, offering you flexibility
 between performance and ease of use.
 
 You can mix languages, for instance, to implement demanding algorithms with C or

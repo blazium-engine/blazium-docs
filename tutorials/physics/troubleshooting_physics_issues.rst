@@ -54,7 +54,7 @@ should be preferred for a smooth appearance on most displays.
 Scaled physics bodies or collision shapes do not collide correctly
 ------------------------------------------------------------------
 
-Godot does not currently support scaling of physics bodies or collision shapes.
+Blazium does not currently support scaling of physics bodies or collision shapes.
 As a workaround, change the collision shape's extents instead of changing its
 scale. If you want the visual representation's scale to change as well, change
 the scale of the underlying visual representation (Sprite2D, MeshInstance3D, …)
@@ -149,7 +149,7 @@ Framerate drops when an object touches another object
 
 This is likely due to one of the objects using a collision shape that is too
 complex. Convex collision shapes should use a number of shapes as low as
-possible for performance reasons. When relying on Godot's automatic generation,
+possible for performance reasons. When relying on Blazium's automatic generation,
 it's possible that you ended up with dozens if not hundreds of shapes created
 for a single convex shape collision resource.
 

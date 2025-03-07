@@ -1,9 +1,9 @@
 .. _doc_godot_architecture_diagram:
 
-Godot's architecture diagram
+Blazium's architecture diagram
 ============================
 
-The following diagram describes the architecture used by Godot, from the
+The following diagram describes the architecture used by Blazium, from the
 core components down to the abstracted drivers, via the scene
 structure and the servers.
 

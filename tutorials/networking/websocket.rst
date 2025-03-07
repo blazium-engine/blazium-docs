@@ -15,12 +15,12 @@ The protocol is message based and a very powerful tool to send push notification
 
 Due to its simplicity, its wide compatibility, and being easier to use than a raw TCP connection, WebSocket soon started to spread outside the browsers, in native applications as a mean to communicate with network servers.
 
-Godot supports WebSocket in both native and HTML5 exports.
+Blazium supports WebSocket in both native and HTML5 exports.
 
-Using WebSocket in Godot
+Using WebSocket in Blazium
 ------------------------
 
-WebSocket is implemented in Godot via :ref:`WebSocketPeer <class_WebSocketPeer>`.
+WebSocket is implemented in Blazium via :ref:`WebSocketPeer <class_WebSocketPeer>`.
 The WebSocket implementation is compatible with the High-Level Multiplayer. See
 section on :ref:`high-level multiplayer <doc_high_level_multiplayer>` for more
 details.
@@ -56,7 +56,7 @@ This example will show you how to create a WebSocket connection to a remote serv
         else:
             # Wait for the socket to connect.
             await get_tree().create_timer(2).timeout
-            
+
             # Send data.
             socket.send_text("Test packet")
 
@@ -64,21 +64,21 @@ This example will show you how to create a WebSocket connection to a remote serv
         # Call this in _process or _physics_process. Data transfer and state updates
         # will only happen when calling this function.
         socket.poll()
-        
+
         # get_ready_state() tells you what state the socket is in.
         var state = socket.get_ready_state()
-        
+
         # WebSocketPeer.STATE_OPEN means the socket is connected and ready
         # to send and receive data.
         if state == WebSocketPeer.STATE_OPEN:
             while socket.get_available_packet_count():
                 print("Got data from server: ", socket.get_packet().get_string_from_utf8())
-        
+
         # WebSocketPeer.STATE_CLOSING means the socket is closing.
         # It is important to keep polling for a clean close.
         elif state == WebSocketPeer.STATE_CLOSING:
             pass
-        
+
         # WebSocketPeer.STATE_CLOSED means the connection has fully closed.
         # It is now safe to stop polling.
         elif state == WebSocketPeer.STATE_CLOSED:

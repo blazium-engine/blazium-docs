@@ -5,13 +5,13 @@
 C#/.NET
 =======
 
-C# is a high-level programming language developed by Microsoft. Godot supports
-C# as an option for a scripting language, alongside Godot's own
+C# is a high-level programming language developed by Microsoft. Blazium supports
+C# as an option for a scripting language, alongside Blazium's own
 :ref:`GDScript <doc_gdscript>`.
 
-The standard Godot executable does not contain C# support out of the box. Instead,
+The standard Blazium executable does not contain C# support out of the box. Instead,
 to enable C# support for your project you need to `download a .NET version <https://godotengine.org/download/>`_
-of the editor from the Godot website.
+of the editor from the Blazium website.
 
 .. toctree::
    :maxdepth: 1
@@ -22,10 +22,10 @@ of the editor from the Godot website.
    c_sharp_style_guide
    diagnostics/index
 
-Godot API for C#
+Blazium API for C#
 ----------------
 
-As a general purpose game engine Godot offers some high-level features as a part
+As a general purpose game engine Blazium offers some high-level features as a part
 of its API. Articles below explain how these features integrate into C# and how
 C# API may be different from GDScript.
 

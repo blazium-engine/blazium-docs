@@ -19,10 +19,10 @@ To compile export templates for the Web, the following is required:
 - `Python 3.8+ <https://www.python.org/>`__.
 - `SCons 4.0+ <https://scons.org/pages/download.html>`__ build system.
 
-.. seealso:: To get the Godot source code for compiling, see
+.. seealso:: To get the Blazium source code for compiling, see
              :ref:`doc_getting_source`.
 
-             For a general overview of SCons usage for Godot, see
+             For a general overview of SCons usage for Blazium, see
              :ref:`doc_introduction_to_the_buildsystem`.
 
 Building export templates
@@ -55,17 +55,17 @@ the ``threads`` option can be used to build the web template without threads sup
 
 The engine will now be compiled to WebAssembly by Emscripten. Once finished,
 the resulting file will be placed in the ``bin`` subdirectory. Its name is
-``godot.web.template_release.wasm32.zip`` for release or ``godot.web.template_debug.wasm32.zip``
+``blazium.web.template_release.wasm32.zip`` for release or ``blazium.web.template_debug.wasm32.zip``
 for debug.
 
 Finally, rename the zip archive to ``web_release.zip`` for the
 release template::
 
-    mv bin/godot.web.template_release.wasm32.zip bin/web_release.zip
+    mv bin/blazium.web.template_release.wasm32.zip bin/web_release.zip
 
 And ``web_debug.zip`` for the debug template::
 
-    mv bin/godot.web.template_debug.wasm32.zip bin/web_debug.zip
+    mv bin/blazium.web.template_debug.wasm32.zip bin/web_debug.zip
 
 GDExtension
 -----------
@@ -86,20 +86,20 @@ Its name will have ``_dlink`` added.
 Finally, rename the zip archives to ``web_dlink_release.zip`` and
 ``web_dlink_release.zip`` for the release template::
 
-    mv bin/godot.web.template_release.wasm32.dlink.zip bin/web_dlink_release.zip
-    mv bin/godot.web.template_debug.wasm32.dlink.zip bin/web_dlink_debug.zip
+    mv bin/blazium.web.template_release.wasm32.dlink.zip bin/web_dlink_release.zip
+    mv bin/blazium.web.template_debug.wasm32.dlink.zip bin/web_dlink_debug.zip
 
 Building the editor
 -------------------
 
-It is also possible to build a version of the Godot editor that can run in the
+It is also possible to build a version of the Blazium editor that can run in the
 browser. The editor version is not recommended
 over the native build. You can build the editor with::
 
     scons platform=web target=editor
 
 Once finished, the resulting file will be placed in the ``bin`` subdirectory.
-Its name will be ``godot.web.editor.wasm32.zip``. You can upload the
+Its name will be ``blazium.web.editor.wasm32.zip``. You can upload the
 zip content to your web server and visit it with your browser to use the editor.
 
 Refer to the :ref:`export page <doc_javascript_export_options>` for the web
@@ -107,12 +107,12 @@ server requirements.
 
 .. tip::
 
-    The Godot repository includes a
+    The Blazium repository includes a
     `Python script to host a local web server <https://raw.githubusercontent.com/godotengine/godot/master/platform/web/serve.py>`__.
     This can be used to test the web editor locally.
 
     After compiling the editor, extract the ZIP archive that was created in the
-    ``bin/`` folder, then run the following command in the Godot repository
+    ``bin/`` folder, then run the following command in the Blazium repository
     root:
 
     ::

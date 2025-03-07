@@ -3,10 +3,10 @@
 3D navigation overview
 ======================
 
-Godot provides multiple objects, classes and servers to facilitate grid-based or mesh-based navigation and pathfinding for 2D and 3D games.
-The following section provides a quick overview over all available navigation related objects in Godot for 3D scenes and their primary use.
+Blazium provides multiple objects, classes and servers to facilitate grid-based or mesh-based navigation and pathfinding for 2D and 3D games.
+The following section provides a quick overview over all available navigation related objects in Blazium for 3D scenes and their primary use.
 
-Godot provides the following objects and classes for 3D navigation:
+Blazium provides the following objects and classes for 3D navigation:
 
 - :ref:`Astar3D<class_Astar3D>`
     ``Astar3D`` objects provide an option to find the shortest path in a graph of weighted **points**.

@@ -5,7 +5,7 @@ Command line tutorial
 
 .. highlight:: shell
 
-Some developers like using the command line extensively. Godot is
+Some developers like using the command line extensively. Blazium is
 designed to be friendly to them, so here are the steps for working
 entirely from the command line. Given the engine relies on almost no
 external libraries, initialization times are pretty fast, making it
@@ -13,15 +13,15 @@ suitable for this workflow.
 
 .. note::
 
-    On Windows and Linux, you can run a Godot binary in a terminal by specifying
+    On Windows and Linux, you can run a Blazium binary in a terminal by specifying
     its relative or absolute path.
 
-    On macOS, the process is different due to Godot being contained within an
-    ``.app`` bundle (which is a *folder*, not a file). To run a Godot binary
-    from a terminal on macOS, you have to ``cd`` to the folder where the Godot
-    application bundle is located, then run ``Godot.app/Contents/MacOS/Godot``
+    On macOS, the process is different due to Blazium being contained within an
+    ``.app`` bundle (which is a *folder*, not a file). To run a Blazium binary
+    from a terminal on macOS, you have to ``cd`` to the folder where the Blazium
+    application bundle is located, then run ``Blazium.app/Contents/MacOS/Blazium``
     followed by any command line arguments. If you've renamed the application
-    bundle from ``Godot`` to another name, make sure to edit this command line
+    bundle from ``Blazium`` to another name, make sure to edit this command line
     accordingly.
 
 Command line reference
@@ -219,7 +219,7 @@ given build type.
 +------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------+
 | ``--dump-gdextension-interface``                                 | |editor| Generate GDExtension header file 'gdnative_interface.h' in the current folder. This file is the base file required to implement a GDExtension. |
 +------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------+
-| ``--dump-extension-api``                                         | |editor| Generate JSON dump of the Godot API for GDExtension bindings named 'extension_api.json' in the current folder.                                 |
+| ``--dump-extension-api``                                         | |editor| Generate JSON dump of the Blazium API for GDExtension bindings named 'extension_api.json' in the current folder.                                 |
 +------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------+
 | ``--validate-extension-api <path>``                              | |editor| Validate an extension API file dumped (with the option above) from a previous version of the engine to ensure API compatibility.               |
 |                                                                  | If incompatibilities or errors are detected, the return code will be non-zero.                                                                          |
@@ -232,41 +232,41 @@ given build type.
 Path
 ----
 
-It is recommended to place your Godot editor binary in your ``PATH`` environment
-variable, so it can be executed easily from any place by typing ``godot``.
-You can do so on Linux by placing the Godot binary in ``/usr/local/bin`` and
-making sure it is called ``godot`` (case-sensitive).
+It is recommended to place your Blazium editor binary in your ``PATH`` environment
+variable, so it can be executed easily from any place by typing ``blazium``.
+You can do so on Linux by placing the Blazium binary in ``/usr/local/bin`` and
+making sure it is called ``blazium`` (case-sensitive).
 
-To achieve this on Windows or macOS easily, you can install Godot using
-`Scoop <https://scoop.sh>`__ (on Windows) or `Homebrew <https://brew.sh>`__
-(on macOS). This will automatically make the copy of Godot installed
-available in the ``PATH``:
+.. To achieve this on Windows or macOS easily, you can install Blazium using
+.. `Scoop <https://scoop.sh>`__ (on Windows) or `Homebrew <https://brew.sh>`__
+.. (on macOS). This will automatically make the copy of Blazium installed
+.. available in the ``PATH``:
 
-.. tabs::
+.. .. tabs::
 
- .. code-tab:: sh Windows
+..  .. code-tab:: sh Windows
 
-    # Add "Extras" bucket
-    scoop bucket add extras
+..     # Add "Extras" bucket
+..     scoop bucket add extras
 
-    # Standard editor:
-    scoop install godot
+..     # Standard editor:
+..     scoop install blazium
 
-    # Editor with C# support (will be available as `godot-mono` in `PATH`):
-    scoop install godot-mono
+..     # Editor with C# support (will be available as `blazium-mono` in `PATH`):
+..     scoop install blazium-mono
 
- .. code-tab:: sh macOS
+..  .. code-tab:: sh macOS
 
-    # Standard editor:
-    brew install godot
+..     # Standard editor:
+..     brew install blazium
 
-    # Editor with C# support (will be available as `godot-mono` in `PATH`):
-    brew install godot-mono
+..     # Editor with C# support (will be available as `blazium-mono` in `PATH`):
+..     brew install blazium-mono
 
 Setting the project path
 ------------------------
 
-Depending on where your Godot binary is located and what your current
+Depending on where your Blazium binary is located and what your current
 working directory is, you may need to set the path to your project
 for any of the following commands to work correctly.
 
@@ -275,19 +275,19 @@ of your project as either the first argument, like this:
 
 ::
 
-    godot path_to_your_project/project.godot [other] [commands] [and] [args]
+    blazium path_to_your_project/project.godot [other] [commands] [and] [args]
 
 For all commands, this can be done by using the ``--path`` argument:
 
 ::
 
-    godot --path path_to_your_project [other] [commands] [and] [args]
+    blazium --path path_to_your_project [other] [commands] [and] [args]
 
 For example, the full command for exporting your game (as explained below) might look like this:
 
 ::
 
-    godot --headless --path path_to_your_project --export-release my_export_preset_name game.exe
+    blazium --headless --path path_to_your_project --export-release my_export_preset_name game.exe
 
 When starting from a subdirectory of your project, use the ``--upwards`` argument for Godot to
 automatically find the ``project.godot`` file by recursively searching the parent directories.
@@ -297,7 +297,7 @@ when your working directory is in the same path:
 
 ::
 
-    godot --upwards nested_scene.tscn
+    blazium --upwards nested_scene.tscn
 
 
 ..
@@ -317,19 +317,19 @@ shell to the desired place and making a ``project.godot`` file.
     touch project.godot
 
 
-The project can now be opened with Godot.
+The project can now be opened with Blazium.
 
 
 Running the editor
 ------------------
 
-Running the editor is done by executing Godot with the ``-e`` flag. This
+Running the editor is done by executing Blazium with the ``-e`` flag. This
 must be done from within the project directory or by setting the project path as explained above,
 otherwise the command is ignored and the Project Manager appears.
 
 ::
 
-    godot -e
+    blazium -e
 
 When passing in the full path to the ``project.godot`` file, the ``-e`` flag may be omitted.
 
@@ -338,12 +338,12 @@ the same code with that scene as argument.
 
 ::
 
-    godot -e scene.tscn
+    blazium -e scene.tscn
 
 Erasing a scene
 ---------------
 
-Godot is friends with your filesystem and will not create extra metadata files.
+Blazium is friends with your filesystem and will not create extra metadata files.
 Use ``rm`` to erase a scene file. Make sure nothing references that scene.
 Otherwise, an error will be thrown upon opening the project.
 
@@ -354,11 +354,11 @@ Otherwise, an error will be thrown upon opening the project.
 Running the game
 ----------------
 
-To run the game, execute Godot within the project directory or with the project path as explained above.
+To run the game, execute Blazium within the project directory or with the project path as explained above.
 
 ::
 
-    godot
+    blazium
 
 Note that passing in the ``project.godot`` file will always run the editor instead of running the game.
 
@@ -366,7 +366,7 @@ When a specific scene needs to be tested, pass that scene to the command line.
 
 ::
 
-    godot scene.tscn
+    blazium scene.tscn
 
 Debugging
 ---------
@@ -377,11 +377,11 @@ scroll quickly. For this, a command line debugger is provided by adding
 
 ::
 
-    godot -d
+    blazium -d
 
 ::
 
-    godot -d scene.tscn
+    blazium -d scene.tscn
 
 .. _doc_command_line_tutorial_exporting:
 
@@ -400,11 +400,11 @@ especially useful for continuous integration setups.
 
 ::
 
-    # `godot` must be a Godot editor binary, not an export template.
+    # `blazium` must be a Blazium editor binary, not an export template.
     # Also, export templates must be installed for the editor
     # (or a valid custom export template must be defined in the export preset).
-    godot --headless --export-release "Linux/X11" /var/builds/project
-    godot --headless --export-release Android /var/builds/project.apk
+    blazium --headless --export-release "Linux/X11" /var/builds/project
+    blazium --headless --export-release Android /var/builds/project.apk
 
 The preset name must match the name of an export preset defined in the
 project's ``export_presets.cfg`` file. If the preset name contains spaces or
@@ -437,7 +437,7 @@ Here is an example ``sayhello.gd``, showing how it works:
 
 .. code-block:: python
 
-    #!/usr/bin/env -S godot -s
+    #!/usr/bin/env -S blazium -s
     extends SceneTree
 
     func _init():
@@ -449,7 +449,7 @@ And how to run it:
 ::
 
     # Prints "Hello!" to standard output.
-    godot -s sayhello.gd
+    blazium -s sayhello.gd
 
 If no ``project.godot`` exists at the path, current path is assumed to be the
 current working directory (unless ``--path`` is specified).
@@ -460,7 +460,7 @@ filesystem path instead, which is useful if the script is located
 outside of the project directory.
 
 The first line of ``sayhello.gd`` above is commonly referred to as
-a *shebang*. If the Godot binary is in your ``PATH`` as ``godot``,
+a *shebang*. If the Blazium binary is in your ``PATH`` as ``blazium``,
 it allows you to run the script as follows in modern Linux
 distributions, as well as macOS:
 
@@ -472,8 +472,8 @@ distributions, as well as macOS:
     ./sayhello.gd
 
 If the above doesn't work in your current version of Linux or macOS, you can
-always have the shebang run Godot straight from where it is located as follows:
+always have the shebang run Blazium straight from where it is located as follows:
 
 ::
 
-    #!/usr/bin/godot -s
+    #!/usr/bin/blazium -s

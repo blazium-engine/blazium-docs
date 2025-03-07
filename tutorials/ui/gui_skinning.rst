@@ -31,7 +31,7 @@ Basics of themes
 ----------------
 
 The skinning system is driven by the :ref:`Theme <class_Theme>` resource. Every
-Godot project has an inherent default theme that contains the settings used by
+Blazium project has an inherent default theme that contains the settings used by
 the built-in control nodes. This is what gives the controls their distinct look
 out of the box. A theme only describes the configuration, however, and it is still
 the job of each individual control to use that configuration in the way it requires
@@ -39,8 +39,8 @@ to display itself. This is important to remember when implementing
 :ref:`your own custom controls <doc_custom_gui_controls>`.
 
 .. note::
-   Even the Godot editor itself relies on the default theme. But it doesn't look the
-   same as a Godot project, because it applies its own heavily customized theme on top
+   Even the Blazium editor itself relies on the default theme. But it doesn't look the
+   same as a Blazium project, because it applies its own heavily customized theme on top
    of the default one. In principle, this works exactly like it would in your game
    as explained :ref:`below <doc_gui_theme_in_project>`.
 
@@ -102,7 +102,7 @@ must be unique within the theme. For example, there cannot be two color items na
 ``font_color`` in a type called ``Label``, but there can be another ``font_color``
 item in a type ``LineEdit``.
 
-The default Godot theme comes with multiple theme types already defined,
+The default Blazium theme comes with multiple theme types already defined,
 one for every built-in control node that uses UI skinning. The example above
 contains actual theme items present in the default theme. You can refer to the
 **Theme Properties** section in the class reference for each control to see
@@ -184,7 +184,7 @@ it uses. Values provided by the theme are ignored.
 Customizing a project
 ---------------------
 
-Out of the box each project adopts the default project theme provided by Godot. The
+Out of the box each project adopts the default project theme provided by Blazium. The
 default theme itself is constant and cannot be changed, but its items can be overridden
 with a custom theme. Custom themes can be applied in two ways: as a project setting,
 and as a node property throughout the tree of control nodes.
@@ -196,7 +196,7 @@ does the same to the default fallback font. When a theme item is requested by a 
 node the custom project theme, if present, is checked first. Only if it doesn't have
 the item the default theme is checked.
 
-This allows you to configure the default look of every Godot control with a single
+This allows you to configure the default look of every Blazium control with a single
 theme resource, but you can go more granular than that. Every control node also has
 a :ref:`theme <class_Control_property_theme>` property, which allows you to set a
 custom theme for the branch of nodes starting with that control. This means that the

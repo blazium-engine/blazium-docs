@@ -9,7 +9,7 @@
 
 .. seealso::
 
-    Godot also supports antialiasing in 2D rendering. This is covered on the
+    Blazium also supports antialiasing in 2D rendering. This is covered on the
     :ref:`doc_2d_antialiasing` page.
 
 Introduction
@@ -30,7 +30,7 @@ and thin lines on top of the box have almost disappeared:
 
    Image is scaled by 2× with nearest-neighbor filtering to make aliasing more noticeable.
 
-To combat this, various antialiasing techniques can be used in Godot. These are
+To combat this, various antialiasing techniques can be used in Blazium. These are
 detailed below.
 
 .. seealso::
@@ -201,7 +201,7 @@ advanced project setting above ``1.0`` while ensuring
 :ref:`Rendering > Scaling 3D > Mode<class_ProjectSettings_property_rendering/scaling_3d/mode>`
 is set to ``Bilinear`` (the default).
 Since the scale factor is defined per-axis, a scale factor of ``1.5`` will result
-in 2.25× SSAA while a scale factor of ``2.0`` will result in 4× SSAA. Since Godot
+in 2.25× SSAA while a scale factor of ``2.0`` will result in 4× SSAA. Since Blazium
 uses the hardware's own bilinear filtering to perform the downsampling, the result
 will look crisper at integer scale factors (namely, ``2.0``).
 
@@ -282,7 +282,7 @@ When targeting low-end platforms such as mobile or integrated graphics, FXAA is
 usually the only viable option. 2× MSAA may be usable in some circumstances,
 but higher MSAA levels are unlikely to run smoothly on mobile GPUs.
 
-Godot allows using multiple antialiasing techniques at the same time. This is
+Blazium allows using multiple antialiasing techniques at the same time. This is
 usually unnecessary, but it can provide better visuals on high-end GPUs or for
 :ref:`non-real-time rendering <doc_creating_movies>`. For example, to make
 moving edges look better when TAA is enabled, you can also enable MSAA at the

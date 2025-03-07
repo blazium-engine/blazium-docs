@@ -38,10 +38,10 @@ For compiling under macOS, the following is required:
 
               sudo port install scons
 
-.. seealso:: To get the Godot source code for compiling, see
+.. seealso:: To get the Blazium source code for compiling, see
              :ref:`doc_getting_source`.
 
-             For a general overview of SCons usage for Godot, see
+             For a general overview of SCons usage for Blazium, see
              :ref:`doc_introduction_to_the_buildsystem`.
 
 Compiling
@@ -58,7 +58,7 @@ To compile for Apple Silicon (ARM64) powered Macs, use::
     scons platform=macos arch=arm64
 
 .. tip::
-    If you are compiling Godot to make changes or contribute to the engine,
+    If you are compiling Blazium to make changes or contribute to the engine,
     you may want to use the SCons options ``dev_build=yes`` or ``dev_mode=yes``.
     See :ref:`doc_introduction_to_the_buildsystem_development_and_production_aliases`
     for more info.
@@ -71,7 +71,7 @@ Manager.
 .. note:: Using a standalone editor executable is not recommended, it should be always packaged into an
           ``.app`` bundle to avoid UI activation issues.
 
-.. note:: If you want to use separate editor settings for your own Godot builds
+.. note:: If you want to use separate editor settings for your own Blazium builds
           and official releases, you can enable
           :ref:`doc_data_paths_self_contained_mode` by creating a file called
           ``._sc_`` or ``_sc_`` in the ``bin/`` folder.
@@ -96,11 +96,11 @@ run the above two commands and then use ``lipo`` to bundle them together::
 To create an ``.app`` bundle, you need to use the template located in ``misc/dist/macos_tools.app``. Typically, for an optimized
 editor binary built with ``dev_build=yes``::
 
-    cp -r misc/dist/macos_tools.app ./bin/Godot.app
-    mkdir -p bin/Godot.app/Contents/MacOS
-    cp bin/godot.macos.editor.universal bin/Godot.app/Contents/MacOS/Godot
-    chmod +x bin/Godot.app/Contents/MacOS/Godot
-    codesign --force --timestamp --options=runtime --entitlements misc/dist/macos/editor.entitlements -s - bin/Godot.app
+    cp -r misc/dist/macos_tools.app ./bin/Blazium.app
+    mkdir -p bin/Blazium.app/Contents/MacOS
+    cp bin/blazium.macos.editor.universal bin/Blazium.app/Contents/MacOS/Blazium
+    chmod +x bin/Blazium.app/Contents/MacOS/Blazium
+    codesign --force --timestamp --options=runtime --entitlements misc/dist/macos/editor.entitlements -s - bin/Blazium.app
 
 .. note::
 
@@ -110,8 +110,8 @@ editor binary built with ``dev_build=yes``::
     You can also choose to link it dynamically by passing ``use_volk=yes`` and
     including the dynamic library in your ``.app`` bundle::
 
-        mkdir -p <Godot bundle name>.app/Contents/Frameworks
-        cp <Vulkan SDK path>/macOS/lib/libMoltenVK.dylib <Godot bundle name>.app/Contents/Frameworks/libMoltenVK.dylib
+        mkdir -p <Blazium bundle name>.app/Contents/Frameworks
+        cp <Vulkan SDK path>/macOS/lib/libMoltenVK.dylib <Blazium bundle name>.app/Contents/Frameworks/libMoltenVK.dylib
 
 Running a headless/server build
 -------------------------------
@@ -123,7 +123,7 @@ projects in an automated manner, use the normal build::
 
 And then use the ``--headless`` command line argument::
 
-    ./bin/godot.macos.editor.x86_64 --headless
+    ./bin/blazium.macos.editor.x86_64 --headless
 
 To compile a debug *server* build which can be used with
 :ref:`remote debugging tools <doc_command_line_tutorial>`, use::
@@ -179,7 +179,7 @@ an *Universal 2* binary from two separate ARM64 and x86_64 binaries (if both wer
     MoltenVK without having to recompile export templates.
 
 You can then zip the ``macos_template.app`` folder to reproduce the ``macos.zip``
-template from the official Godot distribution::
+template from the official Blazium distribution::
 
     zip -r9 macos.zip macos_template.app
 

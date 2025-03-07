@@ -3,7 +3,7 @@
 CanvasItem shaders
 ==================
 
-CanvasItem shaders are used to draw all 2D elements in Godot. These include
+CanvasItem shaders are used to draw all 2D elements in Blazium. These include
 all nodes that inherit from CanvasItems, and all GUI elements.
 
 CanvasItem shaders contain fewer built-in variables and functionality than 
@@ -205,10 +205,10 @@ you must pass ``COLOR`` as a varying, then read it in ``fragment()``:
 NORMAL
 ~~~~~~
 
-Similarly, if a normal map is used in the :ref:`CanvasTexture <class_CanvasTexture>`, Godot uses
+Similarly, if a normal map is used in the :ref:`CanvasTexture <class_CanvasTexture>`, Blazium uses
 it by default and assigns its value to the built-in ``NORMAL`` variable. If you are using a normal
 map meant for use in 3D, it will appear inverted. In order to use it in your shader, you must assign
-it to the ``NORMAL_MAP`` property. Godot will handle converting it for use in 2D and overwriting ``NORMAL``.
+it to the ``NORMAL_MAP`` property. Blazium will handle converting it for use in 2D and overwriting ``NORMAL``.
 
 .. code-block:: glsl
 
@@ -267,9 +267,9 @@ it to the ``NORMAL_MAP`` property. Godot will handle converting it for use in 2D
 Light built-ins
 ---------------
 
-Light processor functions work differently in Godot 4.x than they did in Godot
+Light processor functions work differently in Blazium than they did in Godot
 3.x. In Godot 4.x all lighting is done during the regular draw pass. In other
-words, Godot no longer draws the object again for each light.
+words, Blazium no longer draws the object again for each light.
 
 Use the ``unshaded`` render mode if you do not want the ``light()`` function to
 run. Use the ``light_only`` render mode if you only want to see the impact of

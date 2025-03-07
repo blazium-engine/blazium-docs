@@ -46,7 +46,7 @@ You've probably encountered a lack of autocomplete suggestions after a dot:
 .. figure:: img/typed_gdscript_code_completion_dynamic.webp
     :alt: Completion options for dynamic typed code.
 
-This is due to dynamic code. Godot cannot know what value type you're passing
+This is due to dynamic code. Blazium cannot know what value type you're passing
 to the function. If you write the type explicitly however, you will get all
 methods, properties, constants, etc. from the value:
 
@@ -85,7 +85,7 @@ to always stay the same::
     func sum(a: float = 0.0, b: float = 0.0) -> float:
         return a + b
 
-Godot will try to infer types if you write a colon, but you omit the type::
+Blazium will try to infer types if you write a colon, but you omit the type::
 
     var damage := 10.5
     const MOVE_SPEED := 50.0
@@ -95,7 +95,7 @@ Godot will try to infer types if you write a colon, but you omit the type::
 .. note::
 
     1. There is no difference between ``=`` and ``:=`` for constants.
-    2. You don't need to write type hints for constants, as Godot sets it automatically
+    2. You don't need to write type hints for constants, as Blazium sets it automatically
        from the assigned value. But you can still do so to make the intent of your code clearer.
        Also, this is useful for typed arrays (like ``const A: Array[int] = [1, 2, 3]``),
        since untyped arrays are used by default.
@@ -130,7 +130,7 @@ For the example above, your ``rifle.gd`` would look like this::
     class_name Rifle
     extends Node2D
 
-If you use ``class_name``, Godot registers the ``Rifle`` type globally in the editor,
+If you use ``class_name``, Blazium registers the ``Rifle`` type globally in the editor,
 and you can use it anywhere, without having to preload it into a constant::
 
     var my_rifle: Rifle
@@ -292,7 +292,7 @@ get full autocompletion on the player variable thanks to that cast.
 
 .. note::
 
-    If you try to cast with a built-in type and it fails, Godot will throw an error.
+    If you try to cast with a built-in type and it fails, Blazium will throw an error.
 
 .. _doc_gdscript_static_typing_safe_lines:
 
@@ -301,7 +301,7 @@ Safe lines
 
 You can also use casting to ensure safe lines. Safe lines are a tool to tell you
 when ambiguous lines of code are type-safe. As you can mix and match typed
-and dynamic code, at times, Godot doesn't have enough information to know if
+and dynamic code, at times, Blazium doesn't have enough information to know if
 an instruction will trigger an error or not at runtime.
 
 This happens when you get a child node. Let's take a timer for example:
@@ -311,9 +311,9 @@ so even if your timer is of type ``Timer``, it is also a ``Node`` and
 an ``Object``, two classes it extends. With dynamic GDScript, you also don't
 care about the node's type as long as it has the methods you need to call.
 
-You can use casting to tell Godot the type you expect when you get a node:
+You can use casting to tell Blazium the type you expect when you get a node:
 ``($Timer as Timer)``, ``($Player as CharacterBody2D)``, etc.
-Godot will ensure the type works and if so, the line number will turn
+Blazium will ensure the type works and if so, the line number will turn
 green at the left of the script editor.
 
 .. figure:: img/typed_gdscript_safe_unsafe_line.webp

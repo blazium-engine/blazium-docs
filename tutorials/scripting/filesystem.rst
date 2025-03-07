@@ -8,7 +8,7 @@ Introduction
 
 A file system manages how assets are stored and how they are accessed.
 A well-designed file system also allows multiple developers to edit the
-same source files and assets while collaborating. Godot stores
+same source files and assets while collaborating. Blazium stores
 all assets as files in its file system.
 
 Implementation
@@ -21,8 +21,8 @@ included. If a resource has sub-resources that are built-in, the resource is
 saved in a single file together with all the bundled sub-resources. For
 example, a font resource is often bundled together with the font textures.
 
-The Godot file system avoids using metadata files. Existing asset managers and VCSs
-are better than anything we can implement, so Godot tries its best to play along
+The Blazium file system avoids using metadata files. Existing asset managers and VCSs
+are better than anything we can implement, so Blazium tries its best to play along
 with Subversion, Git, Mercurial, etc.
 
 Example of file system contents:
@@ -40,7 +40,7 @@ project.godot
 
 The ``project.godot`` file is the project description file, and it is always found
 at the root of the project. In fact, its location defines where the root is. This
-is the first file that Godot looks for when opening a project.
+is the first file that Blazium looks for when opening a project.
 
 This file contains the project configuration in plain text, using the win.ini
 format. Even an empty ``project.godot`` can function as a basic definition of
@@ -49,7 +49,7 @@ a blank project.
 Path delimiter
 --------------
 
-Godot only supports ``/`` as a path delimiter. This is done for
+Blazium only supports ``/`` as a path delimiter. This is done for
 portability reasons. All operating systems support this, even Windows,
 so a path such as ``C:\project\project.godot`` needs to be typed as
 ``C:/project/project.godot``.
@@ -85,7 +85,7 @@ Host file system
 Alternatively host file system paths can also be used, but this is not recommended
 for a released product as these paths are not guaranteed to work on all platforms.
 However, using host file system paths can be useful when writing development
-tools in Godot.
+tools in Blazium.
 
 Drawbacks
 ---------
@@ -95,9 +95,9 @@ moving assets around (renaming them or moving them from one path to another insi
 the project) will break existing references to these assets. These references will
 have to be re-defined to point at the new asset location.
 
-To avoid this, do all your move, delete and rename operations from within Godot, on
-the FileSystem dock. Never move assets from outside Godot, or dependencies will have
-to be fixed manually (Godot detects this and helps you fix them anyway, but why
+To avoid this, do all your move, delete and rename operations from within Blazium, on
+the FileSystem dock. Never move assets from outside Blazium, or dependencies will have
+to be fixed manually (Blazium detects this and helps you fix them anyway, but why
 go the hard route?).
 
 The second is that, under Windows and macOS, file and path names are case insensitive.
@@ -107,5 +107,5 @@ on other platforms, such as Linux, Android, etc. This may also apply to exported
 which use a compressed package to store all files.
 
 It is recommended that your team clearly define a naming convention for files when
-working with Godot. One fool-proof convention is to only allow lowercase
+working with Blazium. One fool-proof convention is to only allow lowercase
 file and path names.

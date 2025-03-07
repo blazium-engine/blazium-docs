@@ -7,10 +7,10 @@ Introduction
 ------------
 
 In a project, there may be times when text needs to be created as part of a 3D
-scene and not just in the HUD. Godot provides 2 methods to do this: the
+scene and not just in the HUD. Blazium provides 2 methods to do this: the
 Label3D node and the TextMesh *resource* for a MeshInstance3D node.
 
-Additionally, Godot makes it possible to position Control nodes according to a
+Additionally, Blazium makes it possible to position Control nodes according to a
 3D point's position on the camera. This can be used as an alternative to "true"
 3D text in situations where Label3D and TextMesh aren't flexible enough.
 

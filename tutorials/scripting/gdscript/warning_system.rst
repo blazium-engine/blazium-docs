@@ -26,7 +26,7 @@ script editor's status bar. The example below has 2 warnings:
 To ignore single warnings within a file, use the
 :ref:`@warning_ignore <class_@GDScript_annotation_@warning_ignore>` annotation.
 You can click on the ignore link to the left of the warning's description.
-Godot will add an annotation above the corresponding line and the code
+Blazium will add an annotation above the corresponding line and the code
 won't trigger the corresponding warning anymore:
 
 .. image:: img/typed_gdscript_warning_system_ignore.webp
