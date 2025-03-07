@@ -3,7 +3,7 @@
 Playing videos
 ==============
 
-Godot supports video playback with the :ref:`class_VideoStreamPlayer` node.
+Blazium supports video playback with the :ref:`class_VideoStreamPlayer` node.
 
 Supported playback formats
 --------------------------
@@ -12,7 +12,7 @@ The only supported format in core is **Ogg Theora** (not to be confused with Ogg
 Vorbis audio). It's possible for extensions to bring support for additional
 formats, but no such extensions exist yet as of July 2022.
 
-H.264 and H.265 cannot be supported in core Godot, as they are both encumbered
+H.264 and H.265 cannot be supported in core Blazium, as they are both encumbered
 by software patents. AV1 is royalty-free, but it remains slow to decode on the
 CPU and hardware decoding support isn't readily available on all GPUs in use
 yet.
@@ -26,7 +26,7 @@ as it was too buggy and difficult to maintain.
     extensions for data within an Ogg container.
 
     Renaming these file extensions to ``.ogv`` *may* allow the videos to be
-    imported in Godot. However, not all files with ``.ogg`` or ``.ogx``
+    imported in Blazium. However, not all files with ``.ogg`` or ``.ogx``
     extensions are videos - some of them may only contain audio.
 
 Setting up VideoStreamPlayer
@@ -47,7 +47,7 @@ Setting up VideoStreamPlayer
 Handling resizing and different aspect ratios
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-By default in Godot 4.0, the VideoStreamPlayer will automatically be resized to match
+By default in Blazium, the VideoStreamPlayer will automatically be resized to match
 the video's resolution. You can make it follow usual :ref:`class_Control` sizing
 by enabling **Expand** on the VideoStreamPlayer node.
 
@@ -150,7 +150,7 @@ To ensure your videos decode smoothly on varied hardware:
 Playback limitations
 --------------------
 
-There are several limitations with the current implementation of video playback in Godot:
+There are several limitations with the current implementation of video playback in Blazium:
 
 - Seeking a video to a certain point is not supported.
 - Changing playback speed is not supported. VideoStreamPlayer also won't follow

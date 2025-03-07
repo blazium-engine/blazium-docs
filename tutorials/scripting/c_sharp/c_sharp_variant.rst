@@ -5,7 +5,7 @@ C# Variant
 
 For a detailed explanation of Variant in general, see the :ref:`Variant <class_Variant>` documentation page.
 
-``Godot.Variant`` is used to represent Godot's native :ref:`Variant <class_Variant>` type. Any
+``Godot.Variant`` is used to represent Blazium's native :ref:`Variant <class_Variant>` type. Any
 :ref:`Variant-compatible type <c_sharp_variant_compatible_types>` can be converted from/to it.
 We recommend avoiding ``Godot.Variant`` unless it is necessary to interact with untyped engine APIs.
 Take advantage of C#'s type safety when possible.
@@ -94,8 +94,8 @@ Variant.Type             C# Type
 =======================  ===========================================================
 ``Nil``                  ``null`` (Not a type)
 ``Bool``                 ``bool``
-``Int``                  ``long`` (Godot stores 64-bit integers in Variant)
-``Float``                ``double`` (Godot stores 64-bit floats in Variant)
+``Int``                  ``long`` (Blazium stores 64-bit integers in Variant)
+``Float``                ``double`` (Blazium stores 64-bit floats in Variant)
 ``String``               ``string``
 ``Vector2``              ``Godot.Vector2``
 ``Vector2I``             ``Godot.Vector2I``
@@ -135,7 +135,7 @@ Variant.Type             C# Type
 
 .. warning::
 
-    Godot uses 64-bit integers and floats in Variant. Smaller integer and float types
+    Blazium uses 64-bit integers and floats in Variant. Smaller integer and float types
     such as ``int``, ``short`` and ``float`` are supported since they can fit in the
     bigger type. Be aware that when a conversion is performed, using the wrong
     type will result in potential precision loss.

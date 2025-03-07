@@ -8,7 +8,7 @@ Volumetric fog and fog volumes
     Volumetric fog is only supported in the Clustered Forward rendering backend,
     not Forward Mobile or Compatibility.
 
-As described in :ref:`doc_environment_and_post_processing`, Godot supports
+As described in :ref:`doc_environment_and_post_processing`, Blazium supports
 various visual effects including two types of fog: traditional (non-volumetric)
 fog and volumetric fog. Traditional fog affects the entire scene at once and
 cannot be customized with :ref:`doc_fog_shader`.
@@ -17,7 +17,7 @@ Volumetric fog can be used at the same time as non-volumetric fog if desired.
 
 On this page, you'll learn:
 
-- How to set up volumetric fog in Godot.
+- How to set up volumetric fog in Blazium.
 - What fog volumes are and how they differ from "global" volumetric fog.
 
 .. seealso::

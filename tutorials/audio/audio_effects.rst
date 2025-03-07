@@ -5,7 +5,7 @@
 Audio effects
 =============
 
-Godot includes several audio effects that can be added to an audio bus to
+Blazium includes several audio effects that can be added to an audio bus to
 alter every sound file that goes through that bus.
 
 .. image:: img/audio_buses4.webp
@@ -90,7 +90,7 @@ with reverb can create very natural sounding environments!
 Distortion
 ~~~~~~~~~~
 
-Makes the sound distorted. Godot offers several types of distortion:
+Makes the sound distorted. Blazium offers several types of distortion:
 
 - *Overdrive* sounds like a guitar distortion pedal or megaphone. Sounds distorted with this sound like they're coming through
   a low-quality speaker or device.
@@ -108,7 +108,7 @@ scripts to create an equalizer with a custom number of bands.
 EQ6, EQ10, EQ21
 ~~~~~~~~~~~~~~~
 
-Godot provides three equalizers with different numbers of bands, which
+Blazium provides three equalizers with different numbers of bands, which
 are represented in the title (6, 10, and 21 bands, respectively).
 An equalizer on the Master bus can be useful for cutting low and high
 frequencies that the device's speakers can't reproduce well.

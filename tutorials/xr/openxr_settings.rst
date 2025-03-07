@@ -4,15 +4,15 @@ OpenXR Settings
 ===============
 
 OpenXR has its own set of settings that are applied when OpenXR starts.
-While it is possible for OpenXR extensions implemented through Godot plugins to add additional settings,
-we will only discuss the settings in the core of Godot here.
+While it is possible for OpenXR extensions implemented through Blazium plugins to add additional settings,
+we will only discuss the settings in the core of Blazium here.
 
 .. image:: img/openxr_settings.png
 
 Enabled
 -------
 
-This setting enables the OpenXR module when Godot starts.
+This setting enables the OpenXR module when Blazium starts.
 This is required when the Vulkan backend is used.
 For other backends you can enable OpenXR at any time by calling ``initialize`` on the :ref:`OpenXRInterface <class_openxrinterface>`.
 
@@ -46,9 +46,9 @@ This specifies the view configuration your game is designed for:
 If the device on which you run your game does not match the selection here, OpenXR will fail to initialise.
 
 .. note::
-  OpenXR has additional view configurations for very specific devices that Godot doesn't support yet.
+  OpenXR has additional view configurations for very specific devices that Blazium doesn't support yet.
   For instance, Varjo headsets have a quad view configuration that outputs two sets of stereo images.
-  These may be supported in the near future. 
+  These may be supported in the near future.
 
 Reference Space
 ---------------
@@ -77,7 +77,7 @@ The :ref:`OpenXRInterface <class_openxrinterface>` will also emit the ``pose_rec
 so your game can react accordingly.
 
 .. Note::
-  Any other XR tracked elements such as controllers or anchors will also be adjusted accordingly. 
+  Any other XR tracked elements such as controllers or anchors will also be adjusted accordingly.
 
 .. Warning::
   You should **not** call ``center_on_hmd`` when using this reference space.
@@ -100,7 +100,7 @@ The :ref:`OpenXRInterface <class_openxrinterface>` will emit the ``pose_recenter
 and it is up to the game to react appropriately.
 Not doing so will prevent your game from being accepted on various stores.
 
-In Godot you can do this by calling the ``center_on_hmd`` function on the :ref:`XRServer <class_xrserver>`:
+In Blazium you can do this by calling the ``center_on_hmd`` function on the :ref:`XRServer <class_xrserver>`:
 
 - Calling ``XRServer.center_on_hmd(XRServer.RESET_BUT_KEEP_TILT, true)`` will move the :ref:`XRCamera3D <class_xrcamera3d>` node
   to the :ref:`XROrigin3D <class_xrorigin3d>` node similar to the ``Local`` reference space.
@@ -108,7 +108,7 @@ In Godot you can do this by calling the ``center_on_hmd`` function on the :ref:`
   above the :ref:`XROrigin3D <class_xrorigin3d>` node keeping the player's height, similar to the ``Local Floor`` reference space.
 
 .. Note::
-  Any other XR tracked elements such as controllers or anchors will also be adjusted accordingly. 
+  Any other XR tracked elements such as controllers or anchors will also be adjusted accordingly.
 
 Local Floor
 ^^^^^^^^^^^
@@ -140,7 +140,7 @@ so your game can react accordingly.
   It is better to use the Stage mode in this scenario and limit resetting to orientation only when a ``pose_recentered`` signal is received.
 
 .. Note::
-  Any other XR tracked elements such as controllers or anchors will also be adjusted accordingly. 
+  Any other XR tracked elements such as controllers or anchors will also be adjusted accordingly.
 
 .. Warning::
   You should **not** call ``center_on_hmd`` when using this reference space.
@@ -224,10 +224,10 @@ Hand Tracking
 
 This enables the hand tracking extension when supported by the device used. This is on by default for legacy reasons.
 The hand tracking extension provides access to data that allows you to visualise the user's hands with correct finger positions.
-Depending on platform capabilities the hand tracking data can be inferred from controller inputs, come from data gloves, 
+Depending on platform capabilities the hand tracking data can be inferred from controller inputs, come from data gloves,
 come from optical hand tracking sensors or any other applicable source.
 
-If your game only supports controllers this should be turned off. 
+If your game only supports controllers this should be turned off.
 
 See the chapter on :ref:`hand tracking <doc_openxr_hand_tracking>` for additional details.
 

@@ -1,15 +1,15 @@
 Materials
 =========
 
-Using existing Godot materials
+Using existing Blazium materials
 ------------------------------
 
 One way in which the exporter can handle materials is to attempt to match
-the Blender material with an existing Godot material. This has the advantage of
-being able to use all of the features of Godot's material system, but it means
+the Blender material with an existing Blazium material. This has the advantage of
+being able to use all of the features of Blazium's material system, but it means
 that you cannot see your model with the material applied inside Blender.
 
-To do this, the exporter attempts to find Godot materials with names that match
+To do this, the exporter attempts to find Blazium materials with names that match
 those of the material name in Blender. So if you export an object in Blender
 with the material name ``PurpleDots`` then the exporter will search for the
 file ``PurpleDots.tres`` and assign it to the object. If this file is not a
@@ -37,7 +37,7 @@ Export of Cycles/EEVEE materials
 --------------------------------
 
 The exporter has a primitive support for converting Cycles/EEVEE material node tree
-to Godot Shader Material. Note that some of the Shader Node are not supported yet due to
+to Blazium Shader Material. Note that some of the Shader Node are not supported yet due to
 difficulties in implementation, which are:
 
 - all the ``noisy textures``
@@ -60,7 +60,7 @@ Generate external materials
 
 The default configuration of material exporting would keep all the materials internal to
 the ``escn`` file. There is an option which could enable generating external ``.material``
-file when the ``escn`` file opens in Godot.
+file when the ``escn`` file opens in Blazium.
 
 .. image:: img/external_mat_option.jpg
 

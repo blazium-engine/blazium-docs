@@ -9,7 +9,7 @@
 
 .. seealso::
 
-    Godot also supports antialiasing in 3D rendering. This is covered on the
+    Blazium also supports antialiasing in 3D rendering. This is covered on the
     :ref:`doc_3d_antialiasing` page.
 
 Introduction
@@ -30,7 +30,7 @@ edges have a blocky appearance:
 
    Image is scaled by 2× with nearest-neighbor filtering to make aliasing more noticeable.
 
-To combat this, Godot supports several methods of enabling antialiasing on 2D rendering.
+To combat this, Blazium supports several methods of enabling antialiasing on 2D rendering.
 
 Antialiasing property in Line2D and custom drawing
 --------------------------------------------------

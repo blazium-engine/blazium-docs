@@ -9,9 +9,9 @@ Threads
 -------
 
 Threads are used to balance processing power across CPUs and cores.
-Godot supports multithreading, but not in the whole engine.
+Blazium supports multithreading, but not in the whole engine.
 
-Below is a list of ways multithreading can be used in different areas of Godot.
+Below is a list of ways multithreading can be used in different areas of Blazium.
 
 Global scope
 ------------
@@ -43,7 +43,7 @@ However, creating scene chunks (nodes in tree arrangement) outside the active tr
 
 Still, this is only really useful if you have **one** thread loading data.
 Attempting to load or create scene chunks from multiple threads may work, but you risk
-resources (which are only loaded once in Godot) tweaked by the multiple
+resources (which are only loaded once in Blazium) tweaked by the multiple
 threads, resulting in unexpected behaviors or crashes.
 
 Only use more than one thread to generate scene data if you *really* know what
@@ -61,7 +61,7 @@ Note that the Multi-Threaded thread model has several known bugs, so it may not 
 in all scenarios.
 
 You should avoid calling functions involving direct interaction with the GPU on other threads, such as creating new textures
-or modifying and retrieving image data, these operations can lead to performance stalls because they require synchronization 
+or modifying and retrieving image data, these operations can lead to performance stalls because they require synchronization
 with the :ref:`RenderingServer<class_RenderingServer>`, as data needs to be transmitted to or updated on the GPU.
 
 GDScript arrays, dictionaries

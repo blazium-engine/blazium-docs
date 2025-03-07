@@ -19,7 +19,7 @@ Setup
 -----
 
 Each example below uses the same scene setup. Start with a ``CharacterBody2D`` with two
-children: ``Sprite2D`` and ``CollisionShape2D``. You can use the Godot icon ("icon.png")
+children: ``Sprite2D`` and ``CollisionShape2D``. You can use the Blazium icon ("icon.png")
 for the Sprite2D's texture or use any other 2D image you have.
 
 Open ``Project -> Project Settings`` and select the "Input Map" tab. Add the following
@@ -83,7 +83,7 @@ We can then set our velocity by multiplying this direction vector, which has a
 length of ``1``, by our desired speed.
 
 .. tip:: If you've never used vector math before, or need a refresher,
-         you can see an explanation of vector usage in Godot at :ref:`doc_vector_math`.
+         you can see an explanation of vector usage in Blazium at :ref:`doc_vector_math`.
 
 .. note::
 

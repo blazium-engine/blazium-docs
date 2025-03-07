@@ -137,7 +137,7 @@ methods has to be used:
 GUI events also travel up the scene tree but, since these events target
 specific Controls, only direct ancestors of the targeted Control node receive the event.
 
-In accordance with Godot's node-based design, this enables
+In accordance with Blazium's node-based design, this enables
 specialized child nodes to handle and consume particular events, while
 their ancestors, and ultimately the scene root, can provide more
 generalized behavior if needed.

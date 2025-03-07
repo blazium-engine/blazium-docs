@@ -18,7 +18,7 @@ with the solution file, it can be generated using SCons.
 - | Run ``scons platform=windows vsproj=yes dev_build=yes`` to generate the solution with debug symbols.
   | The ``vsproj`` parameter signals that you want Visual Studio solution generated.
   | The ``dev_build`` parameter makes sure the debug symbols are included, allowing to e.g. step through code using breakpoints.
-- You can now open the project by double-clicking on the ``godot.sln`` in the project root
+- You can now open the project by double-clicking on the ``blazium.sln`` in the project root
   or by using the **Open a project or solution** option inside of the Visual Studio.
 - Use the **Build** top menu to build the project.
 
@@ -66,5 +66,5 @@ start debugging.
 .. figure:: img/vs_4_debugging_main.png
    :align: center
 
-If you run into any issues, ask for help in one of
-`Godot's community channels <https://godotengine.org/community>`__.
+If you run into any issues, ask for help in
+`Blazium's official Discord server <https://chat.blazium.app>`__.

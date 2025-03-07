@@ -7,7 +7,7 @@ Project Settings
 
 This page explains how to use the Project Settings window. If you would like to access and modify project settings via code, see :ref:`ProjectSettings <class_ProjectSettings>`.
 
-Godot stores the project settings in a project.godot file, a plain text file in INI format. There are dozens of settings you can change to control a project's execution. To simplify this process, Godot provides a project settings dialog, which acts as a front-end to editing a project.godot file.
+Blazium stores the project settings in a project.godot file, a plain text file in INI format. There are dozens of settings you can change to control a project's execution. To simplify this process, Blazium provides a project settings dialog, which acts as a front-end to editing a project.godot file.
 
 To access that dialog, select Project -> Project Settings.
 

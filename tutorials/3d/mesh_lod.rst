@@ -9,7 +9,7 @@ performance in a 3D project, along with :ref:`doc_occlusion_culling`.
 On this page, you'll learn:
 
 - How mesh LOD can improve your 3D project's rendering performance.
-- How to set up mesh LOD in Godot.
+- How to set up mesh LOD in Blazium.
 - How to measure mesh LOD's effectiveness in your project
   (and alternatives you can explore if it doesn't meet your expectations).
 
@@ -30,7 +30,7 @@ However, in projects that have a large amount of detailed 3D assets, setting up
 LOD manually can be a very time-consuming process. As a result, automatic mesh
 decimation and LOD configuration is becoming increasingly popular.
 
-Godot provides a way to automatically generate less detailed meshes for LOD
+Blazium provides a way to automatically generate less detailed meshes for LOD
 usage on import, then use those LOD meshes when needed automatically. This is
 completely transparent to the user.
 The `meshoptimizer <https://meshoptimizer.org/>`__ library is used for LOD mesh

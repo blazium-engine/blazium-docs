@@ -3,7 +3,7 @@
 Character animation
 ===================
 
-In this final lesson, we'll use Godot's built-in animation tools to make our
+In this final lesson, we'll use Blazium's built-in animation tools to make our
 characters float and flap. You'll learn to design animations in the editor and
 use code to make your game feel alive.
 
@@ -255,7 +255,7 @@ at the end of ``_physics_process()``.
 Animating the mobs
 ------------------
 
-Here's another nice trick with animations in Godot: as long as you use a similar
+Here's another nice trick with animations in Blazium: as long as you use a similar
 node structure, you can copy them to different scenes.
 
 For example, both the ``Mob`` and the ``Player`` scenes have a ``Pivot`` and a

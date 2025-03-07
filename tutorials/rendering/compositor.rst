@@ -120,7 +120,7 @@ and thus runs within our rendering thread.
 
 We need to ensure that we set our new shader code, and mark our
 shader code as dirty, without our render thread accessing this
-data at the same time. 
+data at the same time.
 
 Next we initialize our effect.
 
@@ -235,7 +235,7 @@ compile it.
     on some platforms such as consoles.
     Note that the demo project comes with an alternative example where
     a ``glsl`` file contains the entire compute shader and this is used.
-    Godot is able to precompile and cache the shader with this approach.
+    Blazium is able to precompile and cache the shader with this approach.
 
 Finally we need to implement our effect callback, the rendering engine will call
 this at the right stage of rendering.
@@ -254,7 +254,7 @@ this at the right stage of rendering.
                 if size.x == 0 and size.y == 0:
                     return
 
-                # We can use a compute shader here 
+                # We can use a compute shader here
                 var x_groups = (size.x - 1) / 8 + 1
                 var y_groups = (size.y - 1) / 8 + 1
                 var z_groups = 1
@@ -311,7 +311,7 @@ From our internal size we calculate our group size, see our local size in our
 template shader.
 
 We also populate our push constant so our shader knows our size.
-Godot does not support structs here **yet** so we use a
+Blazium does not support structs here **yet** so we use a
 ``PackedFloat32Array`` to store this data into. Note that we have
 to pad this array with a 16 byte alignment. In other words, the
 length of our array needs to be a multiple of 4.

@@ -41,9 +41,9 @@ Libraries section
 
 In this section you can set the paths to the compiled binaries of your GDExtension libraries.
 By specifying feature flags you can filter which version should be loaded and exported with your
-game depending on which feature flags are active. Every feature flag must match to Godot's
+game depending on which feature flags are active. Every feature flag must match to Blazium's
 feature flags or your custom export flags to be loaded in an exported game. For instance ``macos.debug``
-means that it will be loaded if Godot has both the ``macos`` and ``debug`` flag active. Each
+means that it will be loaded if Blazium has both the ``macos`` and ``debug`` flag active. Each
 line of the section is evaluated from top to bottom.
 
 Here is an example of what that can look like:
@@ -128,7 +128,7 @@ Architecture
 Icons section
 -------------
 
-By default, Godot uses the Node icon in the scene dock for GDExtension nodes. A custom icon can be
+By default, Blazium uses the Node icon in the scene dock for GDExtension nodes. A custom icon can be
 set by reference to its name and resource path of an SVG file.
 
 For example:
@@ -148,7 +148,7 @@ Dependencies section
 In this section you set the paths of the GDExtension dependencies. This is used internally to export the dependencies
 when exporting your game executable. You are able to set which dependency is loaded depending on the feature flags
 of the exported executable. In addition, you are able to set an optional subdirectory to move your dependencies into.
-If no path is supplied Godot will move the libraries into the same directory as your game executable.
+If no path is supplied Blazium will move the libraries into the same directory as your game executable.
 
 .. warning::
     In MacOS it is necessary to have shared libraries inside a folder called ``Frameworks`` with a directory structure
@@ -182,4 +182,3 @@ If no path is supplied Godot will move the libraries into the same directory as 
         "res://bin/libdependency.linux.template_release.arm64.so" : "",
         "res://bin/libdependency.linux.template_release.rv64.so" : ""
     }
-
