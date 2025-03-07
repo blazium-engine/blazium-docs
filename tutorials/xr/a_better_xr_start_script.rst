@@ -498,6 +498,6 @@ Often it is enough to call :ref:`center_on_hmd() <class_XRServer_method_center_o
         }
     }
 
-And that finished our script. It was written so that it can be re-used over multiple projects.
+And that finished our script. It was written so that it can be reused over multiple projects.
 Just add it as the script on your main node (and extend it if needed)
 or add it on a child node specific for this script.
