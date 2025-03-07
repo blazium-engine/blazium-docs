@@ -3,7 +3,7 @@
 CanvasItem shaders
 ==================
 
-CanvasItem shaders are used to draw all 2D elements in Godot. These include
+CanvasItem shaders are used to draw all 2D elements in Blazium. These include
 all nodes that inherit from CanvasItems, and all GUI elements.
 
 CanvasItem shaders contain less built-in variables and functionality than Spatial
@@ -59,7 +59,7 @@ Global built-ins are available everywhere, including custom functions.
 |                   | setting). It's not affected by :ref:`time_scale<class_Engine_property_time_scale>` or   |
 |                   | pausing. If you need  a ``TIME`` variable that can be scaled or paused, add your own    |
 |                   | :ref:`global shader uniform<doc_shading_language_global_uniforms>` and update it each   |
-|                   | frame.                                                                                  |      
+|                   | frame.                                                                                  |
 +-------------------+-----------------------------------------------------------------------------------------+
 | in float **PI**   | A ``PI`` constant (``3.141592``).                                                       |
 |                   | A ration of circle's circumference to its diameter and amount of radians in half turn.  |
@@ -144,7 +144,7 @@ Fragment built-ins
 
 Certain Nodes (for example, :ref:`Sprite2Ds <class_Sprite2D>`) display a texture
 by default. However, when a custom fragment function is attached to these nodes,
-the texture lookup needs to be done manually. Godot provides the texture color
+the texture lookup needs to be done manually. Blazium provides the texture color
 in the ``COLOR`` built-in variable multiplied by the node's color. To read the
 texture color by itself, you can use:
 
@@ -152,10 +152,10 @@ texture color by itself, you can use:
 
   COLOR = texture(TEXTURE, UV);
 
-Similarly, if a normal map is used in the :ref:`CanvasTexture <class_CanvasTexture>`, Godot uses
+Similarly, if a normal map is used in the :ref:`CanvasTexture <class_CanvasTexture>`, Blazium uses
 it by default and assigns its value to the built-in ``NORMAL`` variable. If you are using a normal
 map meant for use in 3D, it will appear inverted. In order to use it in your shader, you must assign
-it to the ``NORMALMAP`` property. Godot will handle converting it for use in 2D and overwriting ``NORMAL``.
+it to the ``NORMALMAP`` property. Blazium will handle converting it for use in 2D and overwriting ``NORMAL``.
 
 .. code-block:: glsl
 
@@ -213,9 +213,9 @@ it to the ``NORMALMAP`` property. Godot will handle converting it for use in 2D 
 Light built-ins
 ^^^^^^^^^^^^^^^
 
-Light processor functions work differently in Godot 4.x than they did in Godot
+Light processor functions work differently in Blazium than they did in Godot
 3.x. In Godot 4.x all lighting is done during the regular draw pass. In other
-words, Godot no longer draws the object again for each light.
+words, Blazium no longer draws the object again for each light.
 
 Use render_mode ``unshaded`` if you do not want the light processor function to
 run. Use render_mode ``light_only`` if you only want to see the impact of

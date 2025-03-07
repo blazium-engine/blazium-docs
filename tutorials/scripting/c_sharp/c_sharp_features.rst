@@ -3,7 +3,7 @@
 C# language features
 ====================
 
-This page provides an overview of the commonly used features of both C# and Godot
+This page provides an overview of the commonly used features of both C# and Blazium
 and how they are used together.
 
 .. _doc_c_sharp_features_type_conversion_and_casting:
@@ -99,7 +99,7 @@ For more advanced type checking, you can look into `Pattern Matching <https://do
 Preprocessor defines
 --------------------
 
-Godot has a set of defines that allow you to change your C# code
+Blazium has a set of defines that allow you to change your C# code
 depending on the environment you are compiling to.
 
 Examples
@@ -126,15 +126,15 @@ Or you can detect which engine your code is in, useful for making cross-engine l
         public void MyPlatformPrinter()
         {
     #if GODOT
-            GD.Print("This is Godot.");
+            GD.Print("This is Blazium.");
     #elif UNITY_5_3_OR_NEWER
             print("This is Unity.");
     #else
-            throw new NotSupportedException("Only Godot and Unity are supported.");
+            throw new NotSupportedException("Only Blazium and Unity are supported.");
     #endif
         }
 
-Or you can write scripts that target multiple Godot versions and take
+Or you can write scripts that target multiple Blazium versions and take
 advantage of features that are only available on some of those versions:
 
 .. code-block:: csharp
@@ -151,7 +151,7 @@ advantage of features that are only available on some of those versions:
 Full list of defines
 ~~~~~~~~~~~~~~~~~~~~
 
-* ``GODOT`` is always defined for Godot projects.
+* ``GODOT`` is always defined for Godot and Blazium projects
 
 * ``TOOLS`` is defined when building with the Debug configuration (editor and editor player).
 
@@ -164,11 +164,11 @@ Full list of defines
   depending on the OS. These names may change in the future.
   These are created from the ``get_name()`` method of the
   :ref:`OS <class_OS>` singleton, but not every possible OS
-  the method returns is an OS that Godot with .NET runs on.
+  the method returns is an OS that Blazium with .NET runs on.
 
 * ``GODOTX``, ``GODOTX_Y``, ``GODOTX_Y_Z``, ``GODOTx_OR_GREATER``,
   ``GODOTX_y_OR_GREATER``, and ``GODOTX_Y_z_OR_GREATER``, where ``X``, ``Y``,
-  and ``Z`` are replaced by the current major, minor and patch version of Godot.
+  and ``Z`` are replaced by the current major, minor and patch version of Blazium.
   ``x``, ``y``, and ``z`` are replaced by all values from 0 to the current version number for that
   component.
 

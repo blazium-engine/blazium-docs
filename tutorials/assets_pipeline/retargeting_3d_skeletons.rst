@@ -6,12 +6,12 @@ Retargeting 3D Skeletons
 To share animations among multiple Skeletons
 --------------------------------------------
 
-Godot has Position/Rotation/Scale 3D tracks (which this document calls "Transform" tracks)
+Blazium has Position/Rotation/Scale 3D tracks (which this document calls "Transform" tracks)
 with Nodepaths to bones for Skeleton bone animation. This means you can't
 share animations between multiple Skeletons just by using the same bone
 names.
 
-Godot allows each bone to have a parent-child relationship and can have rotation
+Blazium allows each bone to have a parent-child relationship and can have rotation
 and scale as well as position, which means that bones that share a name can still
 have different Transform values.
 
@@ -27,7 +27,7 @@ which they were exported. For example, the bones of a glTF model output from Ble
 have "Edit Bone Orientation" as the Bone Rest rotation. However, there are skeletal
 models without any Bone Rest rotations, such as the glTF model output from Maya.
 
-To share animations in Godot, it is necessary to match Bone Rests as well as Bone Names
+To share animations in Blazium, it is necessary to match Bone Rests as well as Bone Names
 to remove unwanted tracks in some cases. In Godot 4.0+, you can do that using the scene
 importer.
 
@@ -44,7 +44,7 @@ property ``bone_map``.
 .. image:: img/retargeting1.webp
 
 With the Skeleton node selected, first set up a new :ref:`class_bonemap` and :ref:`class_skeletonprofile`.
-Godot has a preset called :ref:`class_skeletonprofilehumanoid` for humanoid models.
+Blazium has a preset called :ref:`class_skeletonprofilehumanoid` for humanoid models.
 This tutorial proceeds with the assumption that you are using :ref:`class_skeletonprofilehumanoid`.
 
 .. note:: If you need a profile that is different from :ref:`class_skeletonprofilehumanoid`, you can export

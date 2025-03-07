@@ -18,7 +18,7 @@ engine code trying to find an underlying issue or an optimization possibility.
 Debugging the editor
 --------------------
 
-When working on the Godot editor keep in mind that by default the executable
+When working on the Blazium editor keep in mind that by default the executable
 will start in the Project Manager mode. Opening a project from the Project
 Manager spawns a new process, which stops the debugging session. To avoid that
 you should launch directly into the project using ``-e`` and ``--path`` launch
@@ -43,6 +43,6 @@ only the ``-e`` option is required.
 You can learn more about these launch options and other command line arguments
 in the :ref:`command line tutorial <doc_command_line_tutorial>`.
 
-If you're using a code editor or an IDE to debug Godot, check out our
+If you're using a code editor or an IDE to debug Blazium, check out our
 :ref:`configuration guides <doc_configuring_an_ide>`, which cover the setup
 process for building and debugging with your particular editor.

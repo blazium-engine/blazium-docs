@@ -3,10 +3,10 @@
 Blender ESCN exporter
 =====================
 
-.. note:: This chapter relates to the Blender plugin called "Godot Blender Exporter",
+.. note:: This chapter relates to the Blender plugin called "Blazium Blender Exporter",
           which can be downloaded here: https://github.com/godotengine/godot-blender-exporter
 
-This plugin can be used to export Blender scenes in a Godot-specific scene format
+This plugin can be used to export Blender scenes in a Blazium-specific scene format
 called ESCN, which is similar to TSCN (text format) but will be imported as binary
 SCN for performance.
 
@@ -35,7 +35,7 @@ This can be set in the outliner:
 .. image:: img/hide.jpg
 
 Objects hidden in the viewport will be exported, but will be hidden in the
-Godot scene.
+Blazium scene.
 
 
 Build pipeline integration

@@ -12,7 +12,7 @@ Before following the OpenXR-specific instructions here, you'll need to first set
 - Installing OpenJDK 17
 - Installing Android Studio
 - Creating a debug.keystore
-- Configuring the location of the Android SDK and debug.keystore in Godot
+- Configuring the location of the Android SDK and debug.keystore in Blazium
 
 See :ref:`doc_exporting_for_android` for the full details, and return here when you've finished these steps.
 
@@ -29,7 +29,7 @@ Select **Install Android Build Template...** from the **Project** menu:
 
 .. image:: img/android_gradle_build.webp
 
-This will create a folder called **android** inside of your project that contains all the runtime files needed on Android. You can now customize this installation. Godot won't show this in the editor but you can find it with a file browser.
+This will create a folder called **android** inside of your project that contains all the runtime files needed on Android. You can now customize this installation. Blazium won't show this in the editor but you can find it with a file browser.
 
 You can read more about gradle builds here: :ref:`doc_android_gradle_build`.
 
@@ -101,9 +101,9 @@ Now you can repeat the same process for the other devices.
     While the Mobile Vulkan renderer has many optimizations targeted at mobile devices, we're still working out the kinks.
     It is highly advisable to use the compatibility renderer (OpenGL) for the time being when targeting Android based XR devices.
 
-Running on your device from the Godot editor
+Running on your device from the Blazium editor
 --------------------------------------------
-If you've setup your export settings as described above, and your headset is connected to your computer and correctly recognized, you can launch it directly from the Godot editor using :ref:`doc_one-click_deploy`:
+If you've setup your export settings as described above, and your headset is connected to your computer and correctly recognized, you can launch it directly from the Blazium editor using :ref:`doc_one-click_deploy`:
 
 .. image:: img/android_one_click_deploy.webp
 

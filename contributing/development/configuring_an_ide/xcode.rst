@@ -32,7 +32,7 @@ Importing the project
   +------------+------------------------------------------------------------------------------+
   | Arguments  | See :ref:`doc_introduction_to_the_buildsystem` for a full list of arguments. |
   +------------+------------------------------------------------------------------------------+
-  | Directory  | A full path to the Godot root folder                                         |
+  | Directory  | A full path to the Blazium root folder                                       |
   +------------+------------------------------------------------------------------------------+
 
 - Add a Command Line Tool target which will be used for indexing the project by
@@ -51,15 +51,15 @@ Importing the project
 .. note:: Name it something so you know not to compile with this target (e.g. ``GodotXcodeIndex``).
 
 - For this target open the **Build Settings** tab and look for **Header Search Paths**.
-- Set **Header Search Paths** to the absolute path to the Godot root folder. You need to
+- Set **Header Search Paths** to the absolute path to the Blazium root folder. You need to
   include subdirectories as well. To achieve that, add two two asterisks (``**``) to the
-  end of the path, e.g. ``/Users/me/repos/godot-source/**``.
+  end of the path, e.g. ``/Users/me/repos/blazium-source/**``.
 
-- Add the Godot source to the project by dragging and dropping it into the project file browser.
+- Add the Blazium source to the project by dragging and dropping it into the project file browser.
 - Select **Create groups** for the **Added folders** option and check *only*
   your command line indexing target in the **Add to targets** section.
 
-.. figure:: img/xcode_6_after_add_godot_source_to_project.webp
+.. figure:: img/xcode_6_after_add_blazium_source_to_project.webp
    :figclass: figure-w480
    :align: center
 
@@ -81,7 +81,7 @@ To enable debugging support you need to edit the external build target's build a
 
 .. code-block:: shell
 
-  ln -f ${PROJECT_DIR}/godot/bin/godot.macos.tools.64 ${PROJECT_DIR}/godot/bin/godot
+  ln -f ${PROJECT_DIR}/blazium/bin/blazium.macos.tools.64 ${PROJECT_DIR}/blazium/bin/blazium
 
 .. figure:: img/xcode_7_setup_build_post_action.webp
    :figclass: figure-w480
@@ -102,8 +102,8 @@ To enable debugging support you need to edit the external build target's build a
   tells the executable to open the specified project (must be provided as an *absolute* path
   to the project root, not the ``project.godot`` file).
 
-To check that everything is working, put a breakpoint in ``platform/macos/godot_main_macos.mm`` and
+To check that everything is working, put a breakpoint in ``platform/macos/blazium_main_macos.mm`` and
 run the project.
 
-If you run into any issues, ask for help in one of
-`Godot's community channels <https://godotengine.org/community>`__.
+If you run into any issues, ask for help in
+`Blazium's official Discord server <https://chat.blazium.app>`__.

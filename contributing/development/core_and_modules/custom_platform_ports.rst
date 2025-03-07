@@ -3,7 +3,7 @@
 Custom platform ports
 =====================
 
-Similar to :ref:`doc_custom_modules_in_cpp`, Godot's multi-platform architecture
+Similar to :ref:`doc_custom_modules_in_cpp`, Blazium's multi-platform architecture
 is designed in a way that allows creating platform ports without modifying any
 existing source code.
 
@@ -18,22 +18,21 @@ Some reasons to create custom platform ports might be:
   write the platform layer yourself. This is a long and arduous process, as it
   requires signing NDAs with console manufacturers, but it allows you to have
   full control over the console porting process.
-- You want to port Godot to an exotic platform that isn't currently supported.
+- You want to port Blazium to an exotic platform that isn't currently supported.
 
 If you have questions about creating a custom platform port, feel free to ask in
-the ``#platforms`` channel of the
-`Godot Contributors Chat <https://chat.godotengine.org/channel/platforms>`__.
+`Blazium's offical Discord server <https://chat.blazium.app>`__.
 
 .. note::
 
-    Godot is a modern engine with modern requirements. Even if you only
+    Blazium is a modern engine with modern requirements. Even if you only
     intend to run simple 2D projects on the target platform, it still requires
     an amount of memory that makes it unviable to run on most retro consoles.
     For reference, in Godot 4, an empty project with nothing visible requires
     about 100 MB of RAM to run on Linux (50 MB in headless mode).
 
-    If you want to run Godot on heavily memory-constrained platforms, older
-    Godot versions have lower memory requirements. The porting process is
+    If you want to run Blazium on heavily memory-constrained platforms, older
+    Blazium versions have lower memory requirements. The porting process is
     similar, with the exception of :ref:`class_DisplayServer` not being split
     from the :ref:`class_OS` singleton.
 
@@ -42,18 +41,18 @@ Official platform ports
 
 The official platform ports can be used as a reference when creating a custom platform port:
 
-- `Windows <https://github.com/godotengine/godot/tree/master/platform/windows>`__
-- `macOS <https://github.com/godotengine/godot/tree/master/platform/macos>`__
-- `Linux/\*BSD <https://github.com/godotengine/godot/tree/master/platform/linuxbsd>`__
-- `Android <https://github.com/godotengine/godot/tree/master/platform/android>`__
-- `iOS <https://github.com/godotengine/godot/tree/master/platform/ios>`__
-- `Web <https://github.com/godotengine/godot/tree/master/platform/web>`__
+- `Windows <https://github.com/blazium-engine/blazium/tree/master/platform/windows>`__
+- `macOS <https://github.com/blazium-engine/blazium/tree/master/platform/macos>`__
+- `Linux/\*BSD <https://github.com/blazium-engine/blazium/tree/master/platform/linuxbsd>`__
+- `Android <https://github.com/blazium-engine/blazium/tree/master/platform/android>`__
+- `iOS <https://github.com/blazium-engine/blazium/tree/master/platform/ios>`__
+- `Web <https://github.com/blazium-engine/blazium/tree/master/platform/web>`__
 
 While platform code is usually self-contained, there are exceptions to this
 rule. For instance, audio drivers that are shared across several platforms and
 rendering backends are located in the
-`drivers/ folder <https://github.com/godotengine/godot/tree/master/drivers>`__
-of the Godot source code.
+`drivers/ folder <https://github.com/blazium-engine/blazium/tree/master/drivers>`__
+of the Blazium source code.
 
 Creating a custom platform port
 -------------------------------
@@ -71,9 +70,9 @@ A ``logo.svg`` (32×32) vector image must also be present within the platform
 folder. This logo is displayed in the Export dialog for each export preset
 targeting the platform in question.
 
-See `this implementation <https://github.com/godotengine/godot/blob/master/platform/linuxbsd/os_linuxbsd.cpp>`__
+See `this implementation <https://github.com/blazium-engine/blazium/blob/master/platform/linuxbsd/os_linuxbsd.cpp>`__
 for the Linux/\*BSD platform as an example. See also the
-`OS singleton header <https://github.com/godotengine/godot/blob/master/core/os/os.h>`__
+`OS singleton header <https://github.com/blazium-engine/blazium/blob/master/core/os/os.h>`__
 for reference.
 
 .. note::
@@ -82,7 +81,7 @@ for reference.
     class to get much of the work done automatically.
 
     If the platform is not UNIX-like, you might use the
-    `Windows port <https://github.com/godotengine/godot/blob/master/platform/windows/os_windows.cpp>`
+    `Windows port <https://github.com/blazium-engine/blazium/blob/master/platform/windows/os_windows.cpp>`
     as a reference.
 
 **detect.py file**
@@ -90,7 +89,7 @@ for reference.
 A ``detect.py`` file must be created within the platform's folder with all
 methods implemented. This file is required for SCons to detect the platform as a
 valid option for compiling. See the
-`detect.py file <https://github.com/godotengine/godot/blob/master/platform/linuxbsd/detect.py>`__
+`detect.py file <https://github.com/blazium-engine/blazium/blob/master/platform/linuxbsd/detect.py>`__
 for the Linux/\*BSD platform as an example.
 
 All methods should be implemented within ``detect.py`` as follows:
@@ -117,11 +116,11 @@ games.
 
 *Some links on this list point to the Linux/\*BSD platform implementation as a reference.*
 
-- One or more `DisplayServers <https://github.com/godotengine/godot/blob/master/platform/linuxbsd/x11/display_server_x11.cpp>`__,
+- One or more `DisplayServers <https://github.com/blazium-engine/blazium/blob/master/platform/linuxbsd/x11/display_server_x11.cpp>`__,
   with the windowing methods implemented. DisplayServer also covers features such
   as mouse support, touchscreen support and tablet driver (for pen input).
   See the
-  `DisplayServer singleton header <https://github.com/godotengine/godot/blob/master/servers/display_server.h>`__
+  `DisplayServer singleton header <https://github.com/blazium-engine/blazium/blob/master/servers/display_server.h>`__
   for reference.
 
   - For platforms not featuring full windowing support (or if it's not relevant
@@ -131,26 +130,26 @@ games.
     platform's screen resolution feature (if relevant). Any attempt to create
     or manipulate other window IDs can be rejected.
 - *If the target platform supports the graphics APIs in question:* Rendering
-  context for `Vulkan <https://github.com/godotengine/godot/blob/master/platform/linuxbsd/x11/vulkan_context_x11.cpp>`__,
-  `OpenGL 3.3 or OpenGL ES 3.0 <https://github.com/godotengine/godot/blob/master/platform/linuxbsd/x11/gl_manager_x11.cpp>`__.
-- Input handlers for `keyboard <https://github.com/godotengine/godot/blob/master/platform/linuxbsd/x11/key_mapping_x11.cpp>`__
-  and `controller <https://github.com/godotengine/godot/blob/master/platform/linuxbsd/joypad_linux.cpp>`__.
-- One or more `audio drivers <https://github.com/godotengine/godot/blob/master/drivers/pulseaudio/audio_driver_pulseaudio.cpp>`__.
+  context for `Vulkan <https://github.com/blazium-engine/blazium/blob/master/platform/linuxbsd/x11/vulkan_context_x11.cpp>`__,
+  `OpenGL 3.3 or OpenGL ES 3.0 <https://github.com/blazium-engine/blazium/blob/master/platform/linuxbsd/x11/gl_manager_x11.cpp>`__.
+- Input handlers for `keyboard <https://github.com/blazium-engine/blazium/blob/master/platform/linuxbsd/x11/key_mapping_x11.cpp>`__
+  and `controller <https://github.com/blazium-engine/blazium/blob/master/platform/linuxbsd/joypad_linux.cpp>`__.
+- One or more `audio drivers <https://github.com/blazium-engine/blazium/blob/master/drivers/pulseaudio/audio_driver_pulseaudio.cpp>`__.
   The audio driver can be located in the ``platform/`` folder (this is done for
   the Android and Web platforms), or in the ``drivers/`` folder if multiple
   platforms may be using this audio driver. See the
-  `AudioServer singleton header <https://github.com/godotengine/godot/blob/master/servers/audio_server.h>`__
+  `AudioServer singleton header <https://github.com/blazium-engine/blazium/blob/master/servers/audio_server.h>`__
   for reference.
-- `Crash handler <https://github.com/godotengine/godot/blob/master/platform/linuxbsd/crash_handler_linuxbsd.cpp>`__,
+- `Crash handler <https://github.com/blazium-engine/blazium/blob/master/platform/linuxbsd/crash_handler_linuxbsd.cpp>`__,
   for printing crash backtraces when the game crashes. This allows for easier
   troubleshooting on platforms where logs aren't readily accessible.
-- `Text-to-speech driver <https://github.com/godotengine/godot/blob/master/platform/linuxbsd/tts_linux.cpp>`__
+- `Text-to-speech driver <https://github.com/blazium-engine/blazium/blob/master/platform/linuxbsd/tts_linux.cpp>`__
   (for accessibility).
-- `Export handler <https://github.com/godotengine/godot/tree/master/platform/linuxbsd/export>`__
+- `Export handler <https://github.com/blazium-engine/blazium/tree/master/platform/linuxbsd/export>`__
   (for exporting from the editor, including :ref:`doc_one-click_deploy`).
   Not required if you intend to export only a PCK from the editor, then run the
   export template binary directly by renaming it to match the PCK file. See the
-  `EditorExportPlatform header <https://github.com/godotengine/godot/blob/master/editor/export/editor_export_platform.h>`__
+  `EditorExportPlatform header <https://github.com/blazium-engine/blazium/blob/master/editor/export/editor_export_platform.h>`__
   for reference.
   ``run_icon.svg`` (16×16) should be present within the platform folder if
   :ref:`doc_one-click_deploy` is implemented for the target platform. This icon
@@ -178,12 +177,12 @@ Distributing a custom platform port
 Platform ports are designed to be as self-contained as possible. Most of the
 code can be kept within a single folder located in ``platform/``. Like
 :ref:`doc_custom_modules_in_cpp`, this allows for streamlining the build process
-by making it possible to ``git clone`` a platform folder within a Godot repository
+by making it possible to ``git clone`` a platform folder within a Blazium repository
 clone's ``platform/`` folder, then run ``scons platform=<name>``. No other steps are
 necessary for building, unless third-party platform-specific dependencies need
 to be installed first.
 
 However, when a custom rendering backend is needed, another folder must be added
 in ``drivers/``. In this case, the platform port can be distributed as a fork of
-the Godot repository, or as a collection of several folders that can be added
-over a Godot Git repository clone.
+the Blazium repository, or as a collection of several folders that can be added
+over a Blazium Git repository clone.

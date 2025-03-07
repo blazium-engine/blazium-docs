@@ -1,9 +1,9 @@
 .. _doc_introduction_to_godot:
 
-Introduction to Godot
+Introduction to Blazium
 =====================
 
-This article is here to help you figure out whether Godot might be a good fit
+This article is here to help you figure out whether Blazium might be a good fit
 for you. We will introduce some broad features of the engine to give you a feel
 for what you can achieve with it and answer questions such as "what do I need to
 know to get started?".
@@ -11,17 +11,17 @@ know to get started?".
 This is by no means an exhaustive overview. We will introduce many more features
 in this getting started series.
 
-What is Godot?
+What is Blazium?
 --------------
 
-Godot is a general-purpose 2D and 3D game engine designed to support all sorts
+Blazium is a general-purpose 2D and 3D game engine designed to support all sorts
 of projects. You can use it to create games or applications you can then release
 on desktop or mobile, as well as on the web.
 
 You can also create console games with it, although you either need strong
 programming skills or a developer to port the game for you.
 
-.. note:: The Godot team can't provide an open source console export due to the
+.. note:: The Blazium team can't provide an open source console export due to the
           licensing terms imposed by console manufacturers. Regardless of the
           engine you use, though, releasing games on consoles is always a lot of
           work. You can read more on that here: :ref:`doc_consoles`.
@@ -49,7 +49,7 @@ You can find many more examples in the `official showcase videos`_.
 How does it work and look?
 --------------------------
 
-Godot comes with a fully-fledged game editor with integrated tools to answer the
+Blazium comes with a fully-fledged game editor with integrated tools to answer the
 most common needs. It includes a code editor, an animation editor, a tilemap
 editor, a shader editor, a debugger, a profiler, and more.
 
@@ -72,7 +72,7 @@ Programming languages
 Let's talk about the available programming languages.
 
 You can code your games using :ref:`GDScript <toc-learn-scripting-gdscript>`, a
-Godot-specific and tightly integrated language with a lightweight syntax, or
+Blazium-specific and tightly integrated language with a lightweight syntax, or
 :ref:`C# <toc-learn-scripting-C#>`, which is popular in the games industry.
 These are the two main scripting languages we support.
 
@@ -86,15 +86,15 @@ completely free and open source.
 
 .. doc_learning_programming
 
-What do I need to know to use Godot?
+What do I need to know to use Blazium?
 ------------------------------------
 
-Godot is a feature-packed game engine. With its thousands of features, there is
+Blazium is a feature-packed game engine. With its thousands of features, there is
 a lot to learn. To make the most of it, you need good programming foundations.
 While we try to make the engine accessible, you will benefit a lot from knowing
 how to think like a programmer first.
 
-Godot relies on the object-oriented programming paradigm. Being comfortable with
+Blazium relies on the object-oriented programming paradigm. Being comfortable with
 concepts such as classes and objects will help you code efficiently in it.
 
 If you are entirely new to programming, we recommend following the `CS50 open
@@ -106,7 +106,7 @@ countless hours and hurdles learning any game engine afterward.
           afraid of that: programming languages have many similarities. The
           skills you learn with one language transfer well to others.
 
-We will provide you with more Godot-specific learning resources in
+We will provide you with more Blazium-specific learning resources in
 :ref:`doc_learning_new_features`.
 
 In the next part, you will get an overview of the engine's essential concepts.

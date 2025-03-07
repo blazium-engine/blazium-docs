@@ -6,12 +6,12 @@ Version control systems
 Introduction
 ------------
 
-Godot aims to be VCS-friendly and generate mostly readable and mergeable files.
+Blazium aims to be VCS-friendly and generate mostly readable and mergeable files.
 
 Version control plugins
 -----------------------
 
-Godot also supports the use of version control systems in the editor itself.
+Blazium also supports the use of version control systems in the editor itself.
 However, version control in the editor requires a plugin for the specific VCS
 you're using.
 
@@ -44,7 +44,7 @@ Files to exclude from VCS
     If you are using Godot 3, check the ``3.5`` version of this documentation page
     instead.
 
-There are some files and folders Godot automatically creates when opening a
+There are some files and folders Blazium automatically creates when opening a
 project in the editor for the first time. To avoid bloating your version control
 repository with generated data, you should add them to your VCS ignore:
 
@@ -52,7 +52,7 @@ repository with generated data, you should add them to your VCS ignore:
 - ``*.translation``: These files are binary imported
   :ref:`translations <doc_internationalizing_games>` generated from CSV files.
 
-You can make the Godot project manager generate version control metadata for you
+You can make the Blazium project manager generate version control metadata for you
 automatically when creating a project. When choosing the **Git** option, this
 creates ``.gitignore`` and ``.gitattributes`` files in the project root:
 

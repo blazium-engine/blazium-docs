@@ -41,7 +41,7 @@ Global built-ins are available everywhere, including in custom functions.
 |                                 | setting). It's not affected by :ref:`time_scale<class_Engine_property_time_scale>` or   |
 |                                 | pausing. If you need  a ``TIME`` variable that can be scaled or paused, add your own    |
 |                                 | :ref:`global shader uniform<doc_shading_language_global_uniforms>` and update it each   |
-|                                 | frame.                                                                                  | 
+|                                 | frame.                                                                                  |
 +---------------------------------+-----------------------------------------------------------------------------------------+
 | in float **PI**                 | A ``PI`` constant (``3.141592``).                                                       |
 |                                 | A ratio of a circle's circumference to its diameter and amount of radians in half turn. |
