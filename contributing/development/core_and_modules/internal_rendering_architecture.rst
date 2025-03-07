@@ -177,11 +177,11 @@ Vulkan driver.
 
 **Vulkan context creation:**
 
-- `drivers/vulkan/vulkan_context.cpp <https://github.com/blazium-engine/blazium/blob/4.2/drivers/vulkan/vulkan_context.cpp>`__
+- `drivers/vulkan/vulkan_context.cpp <https://github.com/blazium-engine/blazium/blob/blazium-dev/drivers/vulkan/vulkan_context.cpp>`__
 
 **Direct3D 12 context creation:**
 
-- `drivers/d3d12/d3d12_context.cpp <https://github.com/blazium-engine/blazium/blob/master/drivers/d3d12/d3d12_context.cpp>`__
+- `drivers/d3d12/d3d12_context.cpp <https://github.com/blazium-engine/blazium/blob/blazium-dev/drivers/d3d12/d3d12_context.cpp>`__
 
 Direct3D 12
 ^^^^^^^^^^^
@@ -201,7 +201,7 @@ Mesa NIR (`more information <https://godotengine.org/article/d3d12-adventures-in
 **This driver is still experimental and only available in Godot 4.3 and later.**
 While Direct3D 12 allows supporting Direct3D-exclusive features on Windows 11 such
 as windowed optimizations and Auto HDR, Vulkan is still recommended for most projects.
-See the `pull request that introduced Direct3D 12 support <https://github.com/blazium-engine/blaziumg/pull/70315>`__
+See the `pull request that introduced Direct3D 12 support <https://github.com/godotengine/godot/pull/70315>`__
 for more information.
 
 Metal
@@ -277,11 +277,11 @@ RenderingDevice presents a similar level of abstraction as Metal or WebGPU.
 
 **Vulkan RenderingDevice implementation:**
 
-- `drivers/vulkan/rendering_device_driver_vulkan.cpp <https://github.com/blazium-engine/blaziumg/blob/master/drivers/vulkan/rendering_device_driver_vulkan.cpp>`__
+- `drivers/vulkan/rendering_device_driver_vulkan.cpp <https://github.com/blazium-engine/blazium/blob/blazium-dev/drivers/vulkan/rendering_device_driver_vulkan.cpp>`__
 
 **Direct3D 12 RenderingDevice implementation:**
 
-- `drivers/d3d12/rendering_device_driver_d3d12.cpp <https://github.com/blazium-engine/blaziumg/blob/master/drivers/d3d12/rendering_device_driver_d3d12.cpp>`__
+- `drivers/d3d12/rendering_device_driver_d3d12.cpp <https://github.com/blazium-engine/blazium/blob/blazium-dev/drivers/d3d12/rendering_device_driver_d3d12.cpp>`__
 
 Core rendering classes architecture
 -----------------------------------
@@ -290,7 +290,7 @@ This diagram represents the structure of rendering classes in Blazium, including
 
 .. image:: img/rendering_architecture_diagram.webp
 
-`View at full size <https://raw.githubusercontent.com/blazium-engine/blaziumg-docs/master/contributing/development/core_and_modules/img/rendering_architecture_diagram.webp>`__
+`View at full size <https://raw.githubusercontent.com/blazium-engine/blazium-docs/blazium-dev/contributing/development/core_and_modules/img/rendering_architecture_diagram.webp>`__
 
 .. _doc_internal_rendering_architecture_core_shaders:
 
@@ -344,27 +344,27 @@ this.
     See
     `The Shader Permutation Problem <https://therealmjp.github.io/posts/shader-permutations-part1/>`__
     and
-    `Branching on a GPU <https://medium.com/@jasonbooth_86226/branching-on-a-gpu-18bfc83694f2>`__
+    `Branching on a GPU <https://medium.com/@jasonbooth_86226/branching-on-a-gpu-18bfc8369blazium-dev>`__
     blog posts for more information.
 
 **Core GLSL material shaders:**
 
-- Forward+: `servers/rendering/renderer_rd/shaders/forward_clustered/scene_forward_clustered.glsl <https://github.com/blazium-engine/blaziumg/blob/4.2/servers/rendering/renderer_rd/shaders/forward_clustered/scene_forward_clustered.glsl>`__
-- Forward Mobile: `servers/rendering/renderer_rd/shaders/forward_mobile/scene_forward_mobile.glsl <https://github.com/blazium-engine/blaziumg/blob/4.2/servers/rendering/renderer_rd/shaders/forward_mobile/scene_forward_mobile.glsl>`__
-- Compatibility: `drivers/gles3/shaders/scene.glsl <https://github.com/blazium-engine/blaziumg/blob/4.2/drivers/gles3/shaders/scene.glsl>`__
+- Forward+: `servers/rendering/renderer_rd/shaders/forward_clustered/scene_forward_clustered.glsl <https://github.com/blazium-engine/blazium/blob/blazium-dev/servers/rendering/renderer_rd/shaders/forward_clustered/scene_forward_clustered.glsl>`__
+- Forward Mobile: `servers/rendering/renderer_rd/shaders/forward_mobile/scene_forward_mobile.glsl <https://github.com/blazium-engine/blazium/blob/blazium-dev/servers/rendering/renderer_rd/shaders/forward_mobile/scene_forward_mobile.glsl>`__
+- Compatibility: `drivers/gles3/shaders/scene.glsl <https://github.com/blazium-engine/blazium/blob/blazium-dev/drivers/gles3/shaders/scene.glsl>`__
 
 **Material shader generation:**
 
-- `scene/resources/material.cpp <https://github.com/blazium-engine/blaziumg/blob/4.2/scene/resources/material.cpp>`__
+- `scene/resources/material.cpp <https://github.com/blazium-engine/blazium/blob/blazium-dev/scene/resources/material.cpp>`__
 
 **Other GLSL shaders for Forward+ and Forward Mobile rendering methods:**
 
-- `servers/rendering/renderer_rd/shaders/ <https://github.com/blazium-engine/blaziumg/blob/4.2/servers/rendering/renderer_rd/shaders/>`__
-- `modules/lightmapper_rd/ <https://github.com/blazium-engine/blaziumg/blob/4.2/modules/lightmapper_rd>`__
+- `servers/rendering/renderer_rd/shaders/ <https://github.com/blazium-engine/blazium/blob/blazium-dev/servers/rendering/renderer_rd/shaders/>`__
+- `modules/lightmapper_rd/ <https://github.com/blazium-engine/blazium/blob/blazium-dev/modules/lightmapper_rd>`__
 
 **Other GLSL shaders for the Compatibility rendering method:**
 
-- `drivers/gles3/shaders/ <https://github.com/blazium-engine/blaziumg/blob/4.2/drivers/gles3/shaders/>`__
+- `drivers/gles3/shaders/ <https://github.com/blazium-engine/blazium/blob/blazium-dev/drivers/gles3/shaders/>`__
 
 2D and 3D rendering separation
 ------------------------------
@@ -400,12 +400,12 @@ release.
 
 **2D and 3D rendering buffer configuration C++ code:**
 
-- `servers/rendering/renderer_rd/storage_rd/render_scene_buffers_rd.cpp <https://github.com/blazium-engine/blaziumg/blob/4.2/servers/rendering/renderer_rd/storage_rd/render_scene_buffers_rd.cpp>`__
+- `servers/rendering/renderer_rd/storage_rd/render_scene_buffers_rd.cpp <https://github.com/blazium-engine/blazium/blob/blazium-dev/servers/rendering/renderer_rd/storage_rd/render_scene_buffers_rd.cpp>`__
 
 **FSR 1.0:**
 
-- `servers/rendering/renderer_rd/effects/fsr.cpp <https://github.com/blazium-engine/blaziumg/blob/4.2/servers/rendering/renderer_rd/effects/fsr.cpp>`__
-- `thirdparty/amd-fsr/ <https://github.com/blazium-engine/blaziumg/tree/master/thirdparty/amd-fsr>`__
+- `servers/rendering/renderer_rd/effects/fsr.cpp <https://github.com/blazium-engine/blazium/blob/blazium-dev/servers/rendering/renderer_rd/effects/fsr.cpp>`__
+- `thirdparty/amd-fsr/ <https://github.com/blazium-engine/blazium/tree/blazium-dev/thirdparty/amd-fsr>`__
 
 2D rendering techniques
 -----------------------
@@ -432,7 +432,7 @@ used to calculate particle collisions in 2D.
 
 **2D SDF generation GLSL shader:**
 
-- `servers/rendering/renderer_rd/shaders/canvas_sdf.glsl <https://github.com/blazium-engine/blaziumg/blob/4.2/servers/rendering/renderer_rd/shaders/canvas_sdf.glsl>`__
+- `servers/rendering/renderer_rd/shaders/canvas_sdf.glsl <https://github.com/blazium-engine/blazium/blob/blazium-dev/servers/rendering/renderer_rd/shaders/canvas_sdf.glsl>`__
 
 3D rendering techniques
 -----------------------
@@ -529,13 +529,13 @@ RenderingDevice abstraction as opposed to using AMD's reference code directly.
 
 **TAA resolve:**
 
-- `servers/rendering/renderer_rd/shaders/effects/taa_resolve.glsl <https://github.com/blazium-engine/blaziumg/blob/4.2/servers/rendering/renderer_rd/shaders/effects/taa_resolve.glsl>`__
+- `servers/rendering/renderer_rd/shaders/effects/taa_resolve.glsl <https://github.com/blazium-engine/blazium/blob/blazium-dev/servers/rendering/renderer_rd/shaders/effects/taa_resolve.glsl>`__
 
 **FSR 2.2:**
 
-- `servers/rendering/renderer_rd/effects/fsr2.cpp <https://github.com/blazium-engine/blaziumg/blob/4.2/servers/rendering/renderer_rd/effects/fsr2.cpp>`__
-- `servers/rendering/renderer_rd/shaders/effects/fsr2/ <https://github.com/blazium-engine/blaziumg/tree/master/servers/rendering/renderer_rd/shaders/effects/fsr2>`__
-- `thirdparty/amd-fsr2/ <https://github.com/blazium-engine/blaziumg/tree/master/thirdparty/amd-fsr2>`__
+- `servers/rendering/renderer_rd/effects/fsr2.cpp <https://github.com/blazium-engine/blazium/blob/blazium-dev/servers/rendering/renderer_rd/effects/fsr2.cpp>`__
+- `servers/rendering/renderer_rd/shaders/effects/fsr2/ <https://github.com/blazium-engine/blazium/tree/blazium-dev/servers/rendering/renderer_rd/shaders/effects/fsr2>`__
+- `thirdparty/amd-fsr2/ <https://github.com/blazium-engine/blazium/tree/blazium-dev/thirdparty/amd-fsr2>`__
 
 Global illumination
 ^^^^^^^^^^^^^^^^^^^
@@ -562,32 +562,32 @@ This would allow baking lightmaps while using the Compatibility backend.
 
 **Core GI C++ code:**
 
-- `servers/rendering/renderer_rd/environment/gi.cpp <https://github.com/blazium-engine/blaziumg/blob/4.2/servers/rendering/renderer_rd/environment/gi.cpp>`__
-- `scene/3d/voxel_gi.cpp <https://github.com/blazium-engine/blaziumg/blob/4.2/scene/3d/voxel_gi.cpp>`__ - VoxelGI node
-- `editor/plugins/voxel_gi_editor_plugin.cpp <https://github.com/blazium-engine/blaziumg/blob/4.2/editor/plugins/voxel_gi_editor_plugin.cpp>`__ - Editor UI for the VoxelGI node
+- `servers/rendering/renderer_rd/environment/gi.cpp <https://github.com/blazium-engine/blazium/blob/blazium-dev/servers/rendering/renderer_rd/environment/gi.cpp>`__
+- `scene/3d/voxel_gi.cpp <https://github.com/blazium-engine/blazium/blob/blazium-dev/scene/3d/voxel_gi.cpp>`__ - VoxelGI node
+- `editor/plugins/voxel_gi_editor_plugin.cpp <https://github.com/blazium-engine/blazium/blob/blazium-dev/editor/plugins/voxel_gi_editor_plugin.cpp>`__ - Editor UI for the VoxelGI node
 
 **Core GI GLSL shaders:**
 
-- `servers/rendering/renderer_rd/shaders/environment/voxel_gi.glsl <https://github.com/blazium-engine/blaziumg/blob/4.2/servers/rendering/renderer_rd/shaders/environment/voxel_gi.glsl>`__
-- `servers/rendering/renderer_rd/shaders/environment/voxel_gi_debug.glsl <https://github.com/blazium-engine/blaziumg/blob/4.2/servers/rendering/renderer_rd/shaders/environment/voxel_gi_debug.glsl>`__ - VoxelGI debug draw mode
-- `servers/rendering/renderer_rd/shaders/environment/sdfgi_debug.glsl <https://github.com/blazium-engine/blaziumg/blob/4.2/servers/rendering/renderer_rd/shaders/environment/sdfgi_debug.glsl>`__ - SDFGI Cascades debug draw mode
-- `servers/rendering/renderer_rd/shaders/environment/sdfgi_debug_probes.glsl <https://github.com/blazium-engine/blaziumg/blob/4.2/servers/rendering/renderer_rd/shaders/environment/sdfgi_debug_probes.glsl>`__ - SDFGI Probes debug draw mode
-- `servers/rendering/renderer_rd/shaders/environment/sdfgi_integrate.glsl <https://github.com/blazium-engine/blaziumg/blob/4.2/servers/rendering/renderer_rd/shaders/environment/sdfgi_integrate.glsl>`__
-- `servers/rendering/renderer_rd/shaders/environment/sdfgi_preprocess.glsl <https://github.com/blazium-engine/blaziumg/blob/4.2/servers/rendering/renderer_rd/shaders/environment/sdfgi_preprocess.glsl>`__
-- `servers/rendering/renderer_rd/shaders/environment/sdfgi_direct_light.glsl <https://github.com/blazium-engine/blaziumg/blob/4.2/servers/rendering/renderer_rd/shaders/environment/sdfgi_direct_light.glsl>`__
+- `servers/rendering/renderer_rd/shaders/environment/voxel_gi.glsl <https://github.com/blazium-engine/blazium/blob/blazium-dev/servers/rendering/renderer_rd/shaders/environment/voxel_gi.glsl>`__
+- `servers/rendering/renderer_rd/shaders/environment/voxel_gi_debug.glsl <https://github.com/blazium-engine/blazium/blob/blazium-dev/servers/rendering/renderer_rd/shaders/environment/voxel_gi_debug.glsl>`__ - VoxelGI debug draw mode
+- `servers/rendering/renderer_rd/shaders/environment/sdfgi_debug.glsl <https://github.com/blazium-engine/blazium/blob/blazium-dev/servers/rendering/renderer_rd/shaders/environment/sdfgi_debug.glsl>`__ - SDFGI Cascades debug draw mode
+- `servers/rendering/renderer_rd/shaders/environment/sdfgi_debug_probes.glsl <https://github.com/blazium-engine/blazium/blob/blazium-dev/servers/rendering/renderer_rd/shaders/environment/sdfgi_debug_probes.glsl>`__ - SDFGI Probes debug draw mode
+- `servers/rendering/renderer_rd/shaders/environment/sdfgi_integrate.glsl <https://github.com/blazium-engine/blazium/blob/blazium-dev/servers/rendering/renderer_rd/shaders/environment/sdfgi_integrate.glsl>`__
+- `servers/rendering/renderer_rd/shaders/environment/sdfgi_preprocess.glsl <https://github.com/blazium-engine/blazium/blob/blazium-dev/servers/rendering/renderer_rd/shaders/environment/sdfgi_preprocess.glsl>`__
+- `servers/rendering/renderer_rd/shaders/environment/sdfgi_direct_light.glsl <https://github.com/blazium-engine/blazium/blob/blazium-dev/servers/rendering/renderer_rd/shaders/environment/sdfgi_direct_light.glsl>`__
 
 **Lightmapper C++ code:**
 
-- `scene/3d/lightmap_gi.cpp <https://github.com/blazium-engine/blaziumg/blob/4.2/scene/3d/lightmap_gi.cpp>`__ - LightmapGI node
-- `editor/plugins/lightmap_gi_editor_plugin.cpp <https://github.com/blazium-engine/blaziumg/blob/4.2/editor/plugins/lightmap_gi_editor_plugin.cpp>`__ - Editor UI for the LightmapGI node
-- `scene/3d/lightmapper.cpp <https://github.com/blazium-engine/blaziumg/blob/4.2/scene/3d/lightmapper.cpp>`__ - Abstract class
-- `modules/lightmapper_rd/lightmapper_rd.cpp <https://github.com/blazium-engine/blaziumg/blob/4.2/modules/lightmapper_rd/lightmapper_rd.cpp>`__ - GPU-based lightmapper implementation
+- `scene/3d/lightmap_gi.cpp <https://github.com/blazium-engine/blazium/blob/blazium-dev/scene/3d/lightmap_gi.cpp>`__ - LightmapGI node
+- `editor/plugins/lightmap_gi_editor_plugin.cpp <https://github.com/blazium-engine/blazium/blob/blazium-dev/editor/plugins/lightmap_gi_editor_plugin.cpp>`__ - Editor UI for the LightmapGI node
+- `scene/3d/lightmapper.cpp <https://github.com/blazium-engine/blazium/blob/blazium-dev/scene/3d/lightmapper.cpp>`__ - Abstract class
+- `modules/lightmapper_rd/lightmapper_rd.cpp <https://github.com/blazium-engine/blazium/blob/blazium-dev/modules/lightmapper_rd/lightmapper_rd.cpp>`__ - GPU-based lightmapper implementation
 
 **Lightmapper GLSL shaders:**
 
-- `modules/lightmapper_rd/lm_raster.glsl <https://github.com/blazium-engine/blaziumg/blob/4.2/modules/lightmapper_rd/lm_raster.glsl>`__
-- `modules/lightmapper_rd/lm_compute.glsl <https://github.com/blazium-engine/blaziumg/blob/4.2/modules/lightmapper_rd/lm_compute.glsl>`__
-- `modules/lightmapper_rd/lm_blendseams.glsl <https://github.com/blazium-engine/blaziumg/blob/4.2/modules/lightmapper_rd/lm_blendseams.glsl>`__
+- `modules/lightmapper_rd/lm_raster.glsl <https://github.com/blazium-engine/blazium/blob/blazium-dev/modules/lightmapper_rd/lm_raster.glsl>`__
+- `modules/lightmapper_rd/lm_compute.glsl <https://github.com/blazium-engine/blazium/blob/blazium-dev/modules/lightmapper_rd/lm_compute.glsl>`__
+- `modules/lightmapper_rd/lm_blendseams.glsl <https://github.com/blazium-engine/blazium/blob/blazium-dev/modules/lightmapper_rd/lm_blendseams.glsl>`__
 
 Depth of field
 ^^^^^^^^^^^^^^
@@ -609,15 +609,15 @@ when temporal antialiasing is enabled.
 
 **Depth of field C++ code:**
 
-- `servers/rendering/renderer_rd/effects/bokeh_dof.cpp <https://github.com/blazium-engine/blaziumg/blob/4.2/servers/rendering/renderer_rd/effects/bokeh_dof.cpp>`__
+- `servers/rendering/renderer_rd/effects/bokeh_dof.cpp <https://github.com/blazium-engine/blazium/blob/blazium-dev/servers/rendering/renderer_rd/effects/bokeh_dof.cpp>`__
 
 **Depth of field GLSL shader (compute - used for Forward+):**
 
-- `servers/rendering/renderer_rd/shaders/effects/bokeh_dof.glsl <https://github.com/blazium-engine/blaziumg/blob/4.2/servers/rendering/renderer_rd/shaders/effects/bokeh_dof.glsl>`__
+- `servers/rendering/renderer_rd/shaders/effects/bokeh_dof.glsl <https://github.com/blazium-engine/blazium/blob/blazium-dev/servers/rendering/renderer_rd/shaders/effects/bokeh_dof.glsl>`__
 
 **Depth of field GLSL shader (raster - used for Forward Mobile):**
 
-- `servers/rendering/renderer_rd/shaders/effects/bokeh_dof_raster.glsl <https://github.com/blazium-engine/blaziumg/blob/4.2/servers/rendering/renderer_rd/shaders/effects/bokeh_dof_raster.glsl>`__
+- `servers/rendering/renderer_rd/shaders/effects/bokeh_dof_raster.glsl <https://github.com/blazium-engine/blazium/blob/blazium-dev/servers/rendering/renderer_rd/shaders/effects/bokeh_dof_raster.glsl>`__
 
 Screen-space effects (SSAO, SSIL, SSR, SSS)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -643,31 +643,31 @@ SSR is always performed at half resolution to improve performance.
 
 **Screen-space effects C++ code:**
 
-- `servers/rendering/renderer_rd/effects/ss_effects.cpp <https://github.com/blazium-engine/blaziumg/blob/4.2/servers/rendering/renderer_rd/effects/ss_effects.cpp>`__
+- `servers/rendering/renderer_rd/effects/ss_effects.cpp <https://github.com/blazium-engine/blazium/blob/blazium-dev/servers/rendering/renderer_rd/effects/ss_effects.cpp>`__
 
 **Screen-space ambient occlusion GLSL shader:**
 
-- `servers/rendering/renderer_rd/shaders/effects/ssao.glsl <https://github.com/blazium-engine/blaziumg/blob/4.2/servers/rendering/renderer_rd/shaders/effects/ssao.glsl>`__
-- `servers/rendering/renderer_rd/shaders/effects/ssao_blur.glsl <https://github.com/blazium-engine/blaziumg/blob/4.2/servers/rendering/renderer_rd/shaders/effects/ssao_blur.glsl>`__
-- `servers/rendering/renderer_rd/shaders/effects/ssao_interleave.glsl <https://github.com/blazium-engine/blaziumg/blob/4.2/servers/rendering/renderer_rd/shaders/effects/ssao_interleave.glsl>`__
-- `servers/rendering/renderer_rd/shaders/effects/ssao_importance_map.glsl <https://github.com/blazium-engine/blaziumg/blob/4.2/servers/rendering/renderer_rd/shaders/effects/ssao_importance_map.glsl>`__
+- `servers/rendering/renderer_rd/shaders/effects/ssao.glsl <https://github.com/blazium-engine/blazium/blob/blazium-dev/servers/rendering/renderer_rd/shaders/effects/ssao.glsl>`__
+- `servers/rendering/renderer_rd/shaders/effects/ssao_blur.glsl <https://github.com/blazium-engine/blazium/blob/blazium-dev/servers/rendering/renderer_rd/shaders/effects/ssao_blur.glsl>`__
+- `servers/rendering/renderer_rd/shaders/effects/ssao_interleave.glsl <https://github.com/blazium-engine/blazium/blob/blazium-dev/servers/rendering/renderer_rd/shaders/effects/ssao_interleave.glsl>`__
+- `servers/rendering/renderer_rd/shaders/effects/ssao_importance_map.glsl <https://github.com/blazium-engine/blazium/blob/blazium-dev/servers/rendering/renderer_rd/shaders/effects/ssao_importance_map.glsl>`__
 
 **Screen-space indirect lighting GLSL shader:**
 
-- `servers/rendering/renderer_rd/shaders/effects/ssil.glsl <https://github.com/blazium-engine/blaziumg/blob/4.2/servers/rendering/renderer_rd/shaders/effects/ssil.glsl>`__
-- `servers/rendering/renderer_rd/shaders/effects/ssil_blur.glsl <https://github.com/blazium-engine/blaziumg/blob/4.2/servers/rendering/renderer_rd/shaders/effects/ssil_blur.glsl>`__
-- `servers/rendering/renderer_rd/shaders/effects/ssil_interleave.glsl <https://github.com/blazium-engine/blaziumg/blob/4.2/servers/rendering/renderer_rd/shaders/effects/ssil_interleave.glsl>`__
-- `servers/rendering/renderer_rd/shaders/effects/ssil_importance_map.glsl <https://github.com/blazium-engine/blaziumg/blob/4.2/servers/rendering/renderer_rd/shaders/effects/ssil_importance_map.glsl>`__
+- `servers/rendering/renderer_rd/shaders/effects/ssil.glsl <https://github.com/blazium-engine/blazium/blob/blazium-dev/servers/rendering/renderer_rd/shaders/effects/ssil.glsl>`__
+- `servers/rendering/renderer_rd/shaders/effects/ssil_blur.glsl <https://github.com/blazium-engine/blazium/blob/blazium-dev/servers/rendering/renderer_rd/shaders/effects/ssil_blur.glsl>`__
+- `servers/rendering/renderer_rd/shaders/effects/ssil_interleave.glsl <https://github.com/blazium-engine/blazium/blob/blazium-dev/servers/rendering/renderer_rd/shaders/effects/ssil_interleave.glsl>`__
+- `servers/rendering/renderer_rd/shaders/effects/ssil_importance_map.glsl <https://github.com/blazium-engine/blazium/blob/blazium-dev/servers/rendering/renderer_rd/shaders/effects/ssil_importance_map.glsl>`__
 
 **Screen-space reflections GLSL shader:**
 
-- `servers/rendering/renderer_rd/shaders/effects/screen_space_reflection.glsl <https://github.com/blazium-engine/blaziumg/blob/4.2/servers/rendering/renderer_rd/shaders/effects/screen_space_reflection.glsl>`__
-- `servers/rendering/renderer_rd/shaders/effects/screen_space_reflection_scale.glsl <https://github.com/blazium-engine/blaziumg/blob/4.2/servers/rendering/renderer_rd/shaders/effects/screen_space_reflection_scale.glsl>`__
-- `servers/rendering/renderer_rd/shaders/effects/screen_space_reflection_filter.glsl <https://github.com/blazium-engine/blaziumg/blob/4.2/servers/rendering/renderer_rd/shaders/effects/screen_space_reflection_filter.glsl>`__
+- `servers/rendering/renderer_rd/shaders/effects/screen_space_reflection.glsl <https://github.com/blazium-engine/blazium/blob/blazium-dev/servers/rendering/renderer_rd/shaders/effects/screen_space_reflection.glsl>`__
+- `servers/rendering/renderer_rd/shaders/effects/screen_space_reflection_scale.glsl <https://github.com/blazium-engine/blazium/blob/blazium-dev/servers/rendering/renderer_rd/shaders/effects/screen_space_reflection_scale.glsl>`__
+- `servers/rendering/renderer_rd/shaders/effects/screen_space_reflection_filter.glsl <https://github.com/blazium-engine/blazium/blob/blazium-dev/servers/rendering/renderer_rd/shaders/effects/screen_space_reflection_filter.glsl>`__
 
 **Subsurface scattering GLSL:**
 
-- `servers/rendering/renderer_rd/shaders/effects/subsurface_scattering.glsl <https://github.com/blazium-engine/blaziumg/blob/4.2/servers/rendering/renderer_rd/shaders/effects/subsurface_scattering.glsl>`__
+- `servers/rendering/renderer_rd/shaders/effects/subsurface_scattering.glsl <https://github.com/blazium-engine/blazium/blob/blazium-dev/servers/rendering/renderer_rd/shaders/effects/subsurface_scattering.glsl>`__
 
 Sky rendering
 ^^^^^^^^^^^^^
@@ -690,9 +690,9 @@ article.
 
 **Sky rendering C++ code:**
 
-- `servers/rendering/renderer_rd/environment/sky.cpp <https://github.com/blazium-engine/blaziumg/blob/4.2/servers/rendering/renderer_rd/environment/sky.cpp>`__ - Sky rendering
-- `scene/resources/sky.cpp <https://github.com/blazium-engine/blaziumg/blob/4.2/scene/resources/sky.cpp>`__ - Sky resource (not to be confused with sky rendering)
-- `scene/resources/sky_material.cpp <https://github.com/blazium-engine/blaziumg/blob/4.2/scene/resources/sky_material.cpp>`__ SkyMaterial resources (used in the Sky resource)
+- `servers/rendering/renderer_rd/environment/sky.cpp <https://github.com/blazium-engine/blazium/blob/blazium-dev/servers/rendering/renderer_rd/environment/sky.cpp>`__ - Sky rendering
+- `scene/resources/sky.cpp <https://github.com/blazium-engine/blazium/blob/blazium-dev/scene/resources/sky.cpp>`__ - Sky resource (not to be confused with sky rendering)
+- `scene/resources/sky_material.cpp <https://github.com/blazium-engine/blazium/blob/blazium-dev/scene/resources/sky_material.cpp>`__ SkyMaterial resources (used in the Sky resource)
 
 **Sky rendering GLSL shader:**
 
@@ -723,14 +723,14 @@ article.
 
 **Volumetric fog C++ code:**
 
-- `servers/rendering/renderer_rd/environment/fog.cpp <https://github.com/blazium-engine/blaziumg/blob/4.2/servers/rendering/renderer_rd/environment/fog.cpp>`__ - General volumetric fog
-- `scene/3d/fog_volume.cpp <https://github.com/blazium-engine/blaziumg/blob/4.2/scene/3d/fog_volume.cpp>`__ - FogVolume node
-- `scene/resources/fog_material.cpp <https://github.com/blazium-engine/blaziumg/blob/4.2/scene/resources/fog_material.cpp>`__ - FogMaterial resource (used by FogVolume)
+- `servers/rendering/renderer_rd/environment/fog.cpp <https://github.com/blazium-engine/blazium/blob/blazium-dev/servers/rendering/renderer_rd/environment/fog.cpp>`__ - General volumetric fog
+- `scene/3d/fog_volume.cpp <https://github.com/blazium-engine/blazium/blob/blazium-dev/scene/3d/fog_volume.cpp>`__ - FogVolume node
+- `scene/resources/fog_material.cpp <https://github.com/blazium-engine/blazium/blob/blazium-dev/scene/resources/fog_material.cpp>`__ - FogMaterial resource (used by FogVolume)
 
 **Volumetric fog GLSL shaders:**
 
-- `servers/rendering/renderer_rd/shaders/environment/volumetric_fog.glsl <https://github.com/blazium-engine/blaziumg/blob/4.2/servers/rendering/renderer_rd/shaders/environment/volumetric_fog.glsl>`__
-- `servers/rendering/renderer_rd/shaders/environment/volumetric_fog_process.glsl <https://github.com/blazium-engine/blaziumg/blob/4.2/servers/rendering/renderer_rd/shaders/environment/volumetric_fog_process.glsl>`__
+- `servers/rendering/renderer_rd/shaders/environment/volumetric_fog.glsl <https://github.com/blazium-engine/blazium/blob/blazium-dev/servers/rendering/renderer_rd/shaders/environment/volumetric_fog.glsl>`__
+- `servers/rendering/renderer_rd/shaders/environment/volumetric_fog_process.glsl <https://github.com/blazium-engine/blazium/blob/blazium-dev/servers/rendering/renderer_rd/shaders/environment/volumetric_fog_process.glsl>`__
 
 Occlusion culling
 ^^^^^^^^^^^^^^^^^
@@ -771,8 +771,8 @@ RendererSceneOcclusionCull.
 
 **Occlusion culling C++ code:**
 
-- `scene/3d/occluder_instance_3d.cpp <https://github.com/blazium-engine/blaziumg/blob/4.2/scene/3d/occluder_instance_3d.cpp>`__
-- `servers/rendering/renderer_scene_occlusion_cull.cpp <https://github.com/blazium-engine/blaziumg/blob/4.2/servers/rendering/renderer_scene_occlusion_cull.cpp>`__
+- `scene/3d/occluder_instance_3d.cpp <https://github.com/blazium-engine/blazium/blob/blazium-dev/scene/3d/occluder_instance_3d.cpp>`__
+- `servers/rendering/renderer_scene_occlusion_cull.cpp <https://github.com/blazium-engine/blazium/blob/blazium-dev/servers/rendering/renderer_scene_occlusion_cull.cpp>`__
 
 Visibility range (LOD)
 ^^^^^^^^^^^^^^^^^^^^^^^
@@ -786,7 +786,7 @@ same mesh with different LODs (to allow for split screen rendering to look corre
 
 **Visibility range C++ code:**
 
-- `servers/rendering/renderer_scene_cull.cpp <https://github.com/blazium-engine/blaziumg/blob/4.2/servers/rendering/renderer_scene_cull.cpp>`__
+- `servers/rendering/renderer_scene_cull.cpp <https://github.com/blazium-engine/blazium/blob/blazium-dev/servers/rendering/renderer_scene_cull.cpp>`__
 
 Automatic mesh LOD
 ^^^^^^^^^^^^^^^^^^
@@ -813,8 +813,8 @@ their own mesh LOD thresholds (which can be different from the main scene render
 
 **Mesh LOD generation on import C++ code:**
 
-- `scene/resources/importer_mesh.cpp <https://github.com/blazium-engine/blaziumg/blob/4.2/scene/resources/importer_mesh.cpp>`__
+- `scene/resources/importer_mesh.cpp <https://github.com/blazium-engine/blazium/blob/blazium-dev/scene/resources/importer_mesh.cpp>`__
 
 **Mesh LOD determination C++ code:**
 
-- `servers/rendering/renderer_scene_cull.cpp <https://github.com/blazium-engine/blaziumg/blob/4.2/servers/rendering/renderer_scene_cull.cpp>`__
+- `servers/rendering/renderer_scene_cull.cpp <https://github.com/blazium-engine/blazium/blob/blazium-dev/servers/rendering/renderer_scene_cull.cpp>`__

@@ -64,12 +64,7 @@ For consistency across projects, we recommend following these guidelines:
 Importing
 ---------
 
-Blazium versions prior to 3.0 did the import process from files outside
-the project. While this can be useful in large projects, it
-resulted in an organization hassle for most developers.
-
-Because of this, assets are now transparently imported from within the project
-folder.
+Assets are transparently imported from within the project folder.
 
 Ignoring specific folders
 ~~~~~~~~~~~~~~~~~~~~~~~~~

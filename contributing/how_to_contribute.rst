@@ -16,7 +16,7 @@ Technical contributions
   To let us know about your findings, fill out this `bug report form <https://github.com/blazium-engine/blazium/issues/new/choose>`_ on our GitHub.
   Make sure to include as much information as possible to ensure these issues can easily be reproduced by others.
 
-  If you are interested in helping keep our bug tracker organized, you can even join the `bugsquad <https://chat.blazium.app/channel/bugsquad>`_!
+  .. If you are interested in helping keep our bug tracker organized, you can even join the `bugsquad <https://chat.blazium.app/channel/bugsquad>`_!
 
 - **Test Development Versions**
   While it is recommended to use the stable releases for your projects, you can help us test dev releases, betas, and release candidates
@@ -26,15 +26,15 @@ Technical contributions
   Find recent `development versions <https://blazium.app/download/>`_ directly on our download page, or linked in their own blog posts.
 
 - **Contribute Engine Code (mainly C++)**
-  The engine development is mainly coordinated on our `Contributor Discord Chat <https://chat.blazium.app/>`_,
+  The engine development is mainly coordinated on our Engine Development Discord Chat in the `Official Discord server <https://chat.blazium.app>`_,
   so if you are serious about making PRs you should join us there!
 
   Read more about the **technical submission process**: :ref:`doc_first_steps`
 
-  For each subject area of the engine, there is a corresponding team to coordinate the work.
-  Join the linked chat to get more eyes on your related PR, learn about open todos, or partake in meetings.
-  For some areas, specialists might even be encouraged to step up as maintainer!
-  `List of teams <https://godotengine.org/teams/>`_
+  .. For each subject area of the engine, there is a corresponding team to coordinate the work.
+  .. Join the linked chat to get more eyes on your related PR, learn about open todos, or partake in meetings.
+  .. For some areas, specialists might even be encouraged to step up as maintainer!
+  .. `List of teams <https://godotengine.org/teams/>`_
 
 - **Review Code Contributions**
   All pull requests need to be thoroughly reviewed before they can be merged into the master branch.
@@ -51,11 +51,11 @@ Technical contributions
 - **Demo projects (GDScript, C#, and making Assets)**
   We provide new users with `demo projects <https://github.com/godotengine/godot-demo-projects/>`_ so they can quickly test new features or get familiar with the engine in the first place.
   At industry events, we might even exhibit these demo projects to showcase what Blazium can do!
-  Help improve existing projects or supply your own to be added to the pool, and join the `demo channel <https://chat.blazium.app>`_ in the Contributor Discord Chat to talk about it.
+  Help improve existing projects or supply your own to be added to the pool, and join the `Discord server <https://chat.blazium.app>`_ in the Engine Development Discord Chat to talk about it.
 
 - **Documentation**
   The documentation is one of the most essential parts of any tech project, yet the need to document new features and substantial changes often gets overlooked.
-  Join the `documentation team <https://chat.godotengine.org/channel/documentation>`_ to improve the Blazium Engine with your technical writing skills.
+  Join the `Official Discord server <https://chat.blazium.app>`_ to improve the Blazium Engine with your technical writing skills.
 
 - **Translations (spoken languages other than English)**
   Are you interested in making the Blazium Engine more accessible to non-English speakers?
@@ -72,7 +72,7 @@ Community support
 
 - **Answer tech-support questions**
   With many new people discovering the Blazium Engine recently, the need for peer-to-peer tech-support has never been greater.
-  See the Blazium website <https://chat.blazium.app>`_ for a list of official and user-supported Blazium communities.
+  .. See the `Blazium Official Discord server <https://chat.blazium.app>`_ for a list of official and user-supported Blazium communities.
 
 - **Create tutorials & more**
   How did you get started with the Blazium Engine?

@@ -193,8 +193,8 @@ with their respective names. The templates folder can be located in:
 -  Linux: ``$HOME/.local/share/blazium/export_templates/<version>/``
 -  macOS: ``$HOME/Library/Application Support/Blazium/export_templates/<version>/``
 
-``<version>`` is of the form ``major.minor[.patch].status`` using values from
-``version.py`` in your Blazium source repository (e.g. ``4.1.3.stable`` or ``4.2.dev``).
+``<version>`` is of the form ``major.minor.patch.status`` using values from
+``version.py`` in your Blazium source repository (e.g. ``1.0.0.release`` or ``0.3.57.nightly``).
 You also need to write this same version string to a ``version.txt`` file located
 next to your export templates.
 

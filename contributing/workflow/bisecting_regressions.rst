@@ -29,8 +29,8 @@ Using official builds to speed up bisecting
 Before using Git's ``bisect`` command, we strongly recommend trying to reproduce
 the bug with an older (or newer) official release. This greatly reduces the
 range of commits that potentially need to be built from source and tested.
-You can find binaries of official releases, as well as alphas, betas,
-and release candidates `here <https://blazium.app/download>`__.
+You can find binaries of official releases, as well as nightlies,
+and pre-releases `here <https://blazium.app/download>`__.
 
 If you have experience with Godot 3.x and can reproduce an issue with Godot 4.0,
 we recommend trying to reproduce the issue in the latest Godot 3.x version (if
@@ -122,7 +122,7 @@ pre-release build (add it to your ``$HOME/.bashrc`` or similar):
 ::
 
     gd_snapshot_commit() {
-        curl -s https://blazium.app/download/$1/$2/README.txt \
+        curl -s https://downloads.tuxfamily.org/godotengine/$1/$2/README.txt \
             | grep 'from commit' \
             | sed 's/^Built from commit \(.*\)\.$/\1/'
     }

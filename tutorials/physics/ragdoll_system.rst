@@ -6,7 +6,7 @@ Ragdoll system
 Introduction
 ------------
 
-Since version 3.1, Blazium supports ragdoll physics. Ragdolls rely on physics simulation to create realistic procedural animation. They are used for death animations in many games.
+Ragdolls rely on physics simulation to create realistic procedural animation. They are used for death animations in many games.
 
 In this tutorial, we will be using the Platformer3D demo to set up a ragdoll.
 

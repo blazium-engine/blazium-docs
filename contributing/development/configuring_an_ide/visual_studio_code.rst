@@ -214,8 +214,8 @@ To fix include errors you may be having, you need to configure some settings in 
 
   - This argument can be added to your build task in ``tasks.json`` since it will need to be run whenever files are added or moved.
 
-If you run into any issues, ask for help in one of
-`Blazium's community channels <https://chat.blazium.app/>`__.
+If you run into any issues, ask for help in
+`Blazium's official Discord server <https://chat.blazium.app>`__.
 
 .. tip::
 

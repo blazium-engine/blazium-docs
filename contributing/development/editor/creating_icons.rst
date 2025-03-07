@@ -38,7 +38,7 @@ Color conversion for light editor themes
 
 If the user has configured their editor to use a light theme, Blazium will
 convert the icon's colors based on a
-`set of predefined color mappings <https://github.com/blazium-engine/blazium/blob/4.0.2-stable/editor/editor_themes.cpp#L60-L160>`__.
+`set of predefined color mappings <https://github.com/blazium-engine/blazium/blob/blazium-dev/editor/themes/editor_theme.cpp>`__.
 This is to ensure the icon always displays with a sufficient contrast rate.
 Try to restrict your icon's color palette to colors found in the list above.
 Otherwise, your icon may become difficult to read on a light background.
@@ -101,4 +101,4 @@ If icons don't appear in the editor, make sure that:
 References
 ~~~~~~~~~~
 
--  `editor/icons <https://github.com/blazium-engine/blazium/tree/master/editor/icons>`__
+-  `editor/icons <https://github.com/blazium-engine/blazium/tree/blazium-dev/editor/icons>`__

@@ -73,8 +73,7 @@ This documentation is organized into several sections:
   or developing C++ modules.
 - **Community** is dedicated to the life of Blazium's community and contains a list of
   recommended third-party tutorials and materials outside of this documentation.
-  It also provides details on the Asset Library. It also used to list Blazium
-  communities, which are now listed on the `Blazium Website <https://chat.blazium.app/>`_.
+  It also provides details on the Asset Library.
 - Finally, the **Class reference** documents the full Blazium API,
   also available directly within the engine's script editor.
   You can find information on all classes, functions, signals and so on here.

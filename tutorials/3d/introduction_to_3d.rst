@@ -13,7 +13,7 @@ which are almost identical to their 2D counterparts.
 
 .. figure:: img/godot-tps-demo.webp
    :align: center
-   :alt: An example 3D game demo created using Blazium
+   :alt: An example 3D game demo created using Godot
 
    Godot Third Person Shooter (TPS) Demo, available on the
    `Github repository <https://github.com/godotengine/tps-demo>`__ or the

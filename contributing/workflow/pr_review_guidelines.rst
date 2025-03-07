@@ -360,7 +360,7 @@ out more broadly to ask for help reviewing. Consider asking:
 
 * **Validate the target branch of the PR.**
 
-  Most Blazium development happens around in the ``master`` branch. Therefore most
+  Most Blazium development happens around in the ``blazium-dev`` branch. Therefore most
   pull requests must be made against it. From there pull requests can then be
   backported to other branches. Be wary of people making PRs on the version they
   are using (e.g, ``3.3``) and guide them to make a change against a

@@ -105,5 +105,5 @@ To enable debugging support you need to edit the external build target's build a
 To check that everything is working, put a breakpoint in ``platform/macos/blazium_main_macos.mm`` and
 run the project.
 
-If you run into any issues, ask for help in one of
-`Blazium's community channels <https://chat.blazium.app/>`__.
+If you run into any issues, ask for help in
+`Blazium's official Discord server <https://chat.blazium.app>`__.

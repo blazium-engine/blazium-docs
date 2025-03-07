@@ -129,9 +129,9 @@ builds cannot be performed from the MSYS2 or MinGW shells. Use either
     to MSVC. Therefore, it's recommended to use MinGW to produce builds that you
     distribute to players.
 
-    All official Blazium binaries are built in
-    `custom containers <https://github.com/godotengine/build-containers>`__
-    using MinGW.
+    .. All official Blazium binaries are built in
+    .. `custom containers <https://github.com/godotengine/build-containers>`__
+    .. using MinGW.
 
 Running SCons
 ~~~~~~~~~~~~~

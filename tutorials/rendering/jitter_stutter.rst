@@ -79,7 +79,7 @@ Windows
 Windows is known to cause stutter in windowed games. This mostly depends on the
 hardware installed, drivers version and processes running in parallel (e.g.
 having many browser tabs open may cause stutter in a running game). To avoid
-this, starting with 3.1, Blazium raises the game priority to "Above Normal". This
+this, Blazium raises the game priority to "Above Normal". This
 helps considerably but may not completely eliminate stutter.
 
 Eliminating this completely requires giving your game full privileges to become

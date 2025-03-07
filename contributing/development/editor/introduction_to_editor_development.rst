@@ -33,26 +33,26 @@ Directory structure
 -------------------
 
 The editor's code is fully self-contained in the
-`editor/ <https://github.com/blazium-engine/blazium/tree/master/editor>`__ folder
+`editor/ <https://github.com/blazium-engine/blazium/tree/blazium-dev/editor>`__ folder
 of the Blazium source repository.
 
 Some editor functionality is also implemented via
 :ref:`modules <doc_custom_modules_in_cpp>`. Some of these are only enabled in
 editor builds to decrease the binary size of export templates. See the
-`modules/ <https://github.com/blazium-engine/blazium/tree/master/modules>`__ folder
+`modules/ <https://github.com/blazium-engine/blazium/tree/blazium-dev/modules>`__ folder
 in the Blazium source repository.
 
 Some important files in the editor are:
 
-- `editor/editor_node.cpp <https://github.com/blazium-engine/blazium/blob/master/editor/editor_node.cpp>`__:
+- `editor/editor_node.cpp <https://github.com/blazium-engine/blazium/blob/blazium-dev/editor/editor_node.cpp>`__:
   Main editor initialization file. Effectively the "main scene" of the editor.
-- `editor/project_manager.cpp <https://github.com/blazium-engine/blazium/blob/master/editor/project_manager.cpp>`__:
+- `editor/project_manager.cpp <https://github.com/blazium-engine/blazium/blob/blazium-dev/editor/project_manager.cpp>`__:
   Main Project Manager initialization file. Effectively the "main scene" of the Project Manager.
-- `editor/plugins/canvas_item_editor_plugin.cpp <https://github.com/blazium-engine/blazium/blob/master/editor/plugins/canvas_item_editor_plugin.cpp>`__:
+- `editor/plugins/canvas_item_editor_plugin.cpp <https://github.com/blazium-engine/blazium/blob/blazium-dev/editor/plugins/canvas_item_editor_plugin.cpp>`__:
   The 2D editor viewport and related functionality (toolbar at the top, editing modes, overlaid helpers/panels, …).
-- `editor/plugins/node_3d_editor_plugin.cpp <https://github.com/blazium-engine/blazium/blob/master/editor/plugins/node_3d_editor_plugin.cpp>`__:
+- `editor/plugins/node_3d_editor_plugin.cpp <https://github.com/blazium-engine/blazium/blob/blazium-dev/editor/plugins/node_3d_editor_plugin.cpp>`__:
   The 3D editor viewport and related functionality (toolbar at the top, editing modes, overlaid panels, …).
-- `editor/plugins/node_3d_editor_gizmos.cpp <https://github.com/blazium-engine/blazium/blob/master/editor/plugins/node_3d_editor_gizmos.cpp>`__:
+- `editor/plugins/node_3d_editor_gizmos.cpp <https://github.com/blazium-engine/blazium/blob/blazium-dev/editor/plugins/node_3d_editor_gizmos.cpp>`__:
   Where the 3D editor gizmos are defined and drawn.
   This file doesn't have a 2D counterpart as 2D gizmos are drawn by the nodes themselves.
 
@@ -77,7 +77,7 @@ from ``servers/`` and ``core/``, it cannot depend on includes from ``editor/``.
 
 Currently, there are some dependencies to ``editor/`` includes in ``scene/``
 files, but
-`they are in the process of being removed <https://github.com/blazium-engine/blazium/issues/53295>`__.
+`they are in the process of being removed <https://github.com/godotengine/godot/issues/53295>`__.
 
 Development tips
 ----------------

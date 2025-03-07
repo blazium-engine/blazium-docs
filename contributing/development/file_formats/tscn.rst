@@ -20,7 +20,7 @@ in scene/resource files. It is possible to write them manually, but they will be
 discarded when saving the file.
 
 For those looking for a complete description, the parsing is handled in the file
-`resource_format_text.cpp <https://github.com/blazium-engine/blazium/blob/master/scene/resources/resource_format_text.cpp>`_
+`resource_format_text.cpp <https://github.com/blazium-engine/blazium/blob/blazium-dev/scene/resources/resource_format_text.cpp>`_
 in the ``ResourceFormatLoaderText`` class.
 
 .. note::
@@ -61,7 +61,7 @@ prefix to avoid relying on filesystem paths. This makes it possible to move
 around a file in the project, but still be able to load it in scripts without
 having to modify the script. Blazium does not use external files to keep track of
 IDs, which means no central metadata storage location is required within the
-project. See `this pull request <https://github.com/blazium-engine/blazium/pull/50786>`__
+project. See `this pull request <https://github.com/godotengine/godot/pull/50786>`__
 for detailed information.
 
 These sections should appear in order, but it can be hard to distinguish them.
@@ -246,7 +246,7 @@ documented :ref:`here <doc_tscn_animation>`.
 This split between animations themselves and animation libraries was done in
 Godot 4, so that animations can be imported separately from 3D meshes, which is
 a common workflow in 3D animation software. See the `original pull request
-<https://github.com/blazium-engine/blazium/pull/59980>`__ for details.
+<https://github.com/godotengine/godot/pull/59980>`__ for details.
 
 If the library name is empty, then it acts acts the unique source of animations
 for this AnimationPlayer. This allows using ``<animation_name>`` directly to

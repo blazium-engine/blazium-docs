@@ -203,9 +203,9 @@ given build type.
 | ``--export-pack <preset> <path>``                                | |editor| Like ``--export-release``, but only export the game pack for the given preset. The ``<path>`` extension determines whether it will be in PCK   |
 |                                                                  | or ZIP format. Implies ``--import``.                                                                                                                    |
 +------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------+
-| ``--convert-3to4 [<max_file_kb>] [<max_line_size>]``             | |editor| Convert project from Godot 3.x to Blazium 4.x.                                                                                                   |
+| ``--convert-3to4 [<max_file_kb>] [<max_line_size>]``             | |editor| Convert project from Godot 3.x to Godot 4.x.                                                                                                   |
 +------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------+
-| ``--validate-conversion-3to4 [<max_file_kb>] [<max_line_size>]`` | |editor| Show what elements will be renamed when converting project from Godot 3.x to Blazium 4.x.                                                        |
+| ``--validate-conversion-3to4 [<max_file_kb>] [<max_line_size>]`` | |editor| Show what elements will be renamed when converting project from Godot 3.x to Godot 4.x.                                                        |
 +------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------+
 | ``--doctool [<path>]``                                           | |editor| Dump the engine API reference to the given ``<path>`` in XML format, merging if existing files are found.                                      |
 +------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -236,31 +236,31 @@ variable, so it can be executed easily from any place by typing ``blazium``.
 You can do so on Linux by placing the Blazium binary in ``/usr/local/bin`` and
 making sure it is called ``blazium`` (case-sensitive).
 
-To achieve this on Windows or macOS easily, you can install Blazium using
-`Scoop <https://scoop.sh>`__ (on Windows) or `Homebrew <https://brew.sh>`__
-(on macOS). This will automatically make the copy of Blazium installed
-available in the ``PATH``:
+.. To achieve this on Windows or macOS easily, you can install Blazium using
+.. `Scoop <https://scoop.sh>`__ (on Windows) or `Homebrew <https://brew.sh>`__
+.. (on macOS). This will automatically make the copy of Blazium installed
+.. available in the ``PATH``:
 
-.. tabs::
+.. .. tabs::
 
- .. code-tab:: sh Windows
+..  .. code-tab:: sh Windows
 
-    # Add "Extras" bucket
-    scoop bucket add extras
+..     # Add "Extras" bucket
+..     scoop bucket add extras
 
-    # Standard editor:
-    scoop install blazium
+..     # Standard editor:
+..     scoop install blazium
 
-    # Editor with C# support (will be available as `blazium-mono` in `PATH`):
-    scoop install blazium-mono
+..     # Editor with C# support (will be available as `blazium-mono` in `PATH`):
+..     scoop install blazium-mono
 
- .. code-tab:: sh macOS
+..  .. code-tab:: sh macOS
 
-    # Standard editor:
-    brew install blazium
+..     # Standard editor:
+..     brew install blazium
 
-    # Editor with C# support (will be available as `blazium-mono` in `PATH`):
-    brew install blazium-mono
+..     # Editor with C# support (will be available as `blazium-mono` in `PATH`):
+..     brew install blazium-mono
 
 Setting the project path
 ------------------------

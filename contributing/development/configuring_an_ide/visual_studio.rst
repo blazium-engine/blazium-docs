@@ -66,5 +66,5 @@ start debugging.
 .. figure:: img/vs_4_debugging_main.png
    :align: center
 
-If you run into any issues, ask for help in one of
-`Blazium's community channels <https://chat.blazium.app/>`__.
+If you run into any issues, ask for help in
+`Blazium's official Discord server <https://chat.blazium.app>`__.

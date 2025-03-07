@@ -31,10 +31,10 @@ different licenses.
 
 For full details, look at the `COPYRIGHT.txt <https://github.com/blazium-engine/blazium/blob/master/COPYRIGHT.txt>`_
 as well as the `LICENSE.txt <https://github.com/blazium-engine/blazium/blob/blazium-dev/LICENSE.txt>`_
-and `LOGO_LICENSE.txt <https://github.com/godotengine/godot/blob/master/LOGO_LICENSE.txt>`_ files
+and `LOGO_LICENSE.txt <https://github.com/blazium-engine/blazium/blob/blazium-dev/LOGO_LICENSE.txt>`_ files
 in the Blazium repository.
 
-Also, see `the license page on the Godot website <https://godotengine.org/license>`_.
+Also, see `the license page on the Blazium website <https://blazium.app/licenses>`_.
 
 Which platforms are supported by Blazium?
 ---------------------------------------
@@ -216,8 +216,8 @@ How do I install the Blazium editor on my system (for desktop integration)?
 Since you don't need to actually install Blazium on your system to run it,
 this means desktop integration is not performed automatically.
 There are `Steam <https://store.steampowered.com/app/3293450/Blazium_Engine/>`__ (all platforms),
-`Scoop <https://scoop.sh/>`__ (Windows), `Homebrew <https://brew.sh/>`__ (macOS)
-or `Flathub <https://flathub.org/apps/details/org.blaziumengine.Blazium>`__ (Linux).
+.. `Scoop <https://scoop.sh/>`__ (Windows), `Homebrew <https://brew.sh/>`__ (macOS)
+.. or `Flathub <https://flathub.org/apps/details/org.blaziumengine.Blazium>`__ (Linux).
 This will automatically perform the required steps for desktop integration.
 
 Alternatively, you can manually perform the steps that an installer would do for you:
@@ -256,7 +256,7 @@ Linux
     line in the ``.desktop`` file linked below to contain the full *absolute* path
     to the Blazium binary.
 
-- Save `this .desktop file <https://raw.githubusercontent.com/godotengine/godot/master/misc/dist/linux/org.godotengine.Blazium.desktop>`__
+- Save `this .desktop file <https://raw.githubusercontent.com/blazium-engine/blazium/refs/heads/blazium-dev/misc/dist/linux/app.blazium.Blazium.desktop>`__
   to ``$HOME/.local/share/applications/``. If you have administrator privileges,
   you can also save the ``.desktop`` file to ``/usr/local/share/applications``
   to make the shortcut available for all users.
@@ -381,9 +381,8 @@ information.
 Which Blazium version should I use for a new project?
 ---------------------------------------------------
 
-We recommend using Blazium (4.3) for new projects, but depending on the feature set
-you need, it may be better to use 3.x instead. See
-:ref:`doc_release_policy_which_version_should_i_use` for more information.
+We recommend using the latest release build of Blazium for new projects.
+See :ref:`doc_release_policy_which_version_should_i_use` for more information.
 
 Should I upgrade my project to use new Blazium versions?
 ------------------------------------------------------
@@ -399,7 +398,7 @@ Awesome! As an open source project, Blazium thrives off of the innovation and
 the ambition of developers like you.
 
 The best way to start contributing to Blazium is by using it and reporting
-any `issues <https://github.com/blazium-engine/godot/issues>`_ that you might experience.
+any `issues <https://github.com/blazium-engine/blazium/issues>`_ that you might experience.
 A good bug report with clear reproduction steps helps your fellow contributors
 fix bugs quickly and efficiently. You can also report issues you find in the
 `online documentation <https://github.com/blazium-engine/blazium-docs/issues>`_.
@@ -454,7 +453,7 @@ in the Project Settings to decrease CPU and GPU usage.
 
 Check out `Material Maker <https://github.com/RodZill4/material-maker>`__ and
 `Pixelorama <https://github.com/Orama-Interactive/Pixelorama>`__ for examples of
-open source applications made with Blazium.
+open source applications made with Godot.
 
 .. _doc_faq_use_godot_as_library:
 

@@ -9,9 +9,7 @@ This page aims to list **all** features currently supported by Blazium.
 
 .. note::
 
-    This page lists features supported by the current stable version of
-    Blazium. Some of these features may not be available in the
-    `LTS release series (3.x) <https://docs.godotengine.org/en/3.5/about/list_of_features.html>`__.
+    This page lists features supported by the latest release version of Blazium.
 
 Platforms
 ---------

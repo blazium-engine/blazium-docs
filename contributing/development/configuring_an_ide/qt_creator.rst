@@ -108,5 +108,5 @@ Click on **Edit** to change the current settings, then click on
    :figclass: figure-w480
    :align: center
 
-If you run into any issues, ask for help in one of
-`Blazium's community channels <https://chat.blazium.app/>`__.
+If you run into any issues, ask for help in
+`Blazium's official Discord server <https://chat.blazium.app>`__.

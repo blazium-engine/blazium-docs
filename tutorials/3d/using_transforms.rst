@@ -401,4 +401,4 @@ Transforms are your friend
 
 For most beginners, getting used to working with transforms can take some time. However, once you get used to them, you will appreciate their simplicity and power.
 
-Don't hesitate to ask for help on this topic in any of Blazium's `online communities <https://godotengine.org/community>`_ and, once you become confident enough, please help others!
+Don't hesitate to ask for help on this topic in `Blazium's official Discord server <https://chat.blazium.app>`_ and, once you become confident enough, please help others!
