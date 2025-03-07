@@ -3,10 +3,10 @@
 Setting up XR
 =============
 
-Introduction to the XR system in Godot
+Introduction to the XR system in Blazium
 --------------------------------------
 
-Godot provides a modular XR system that abstracts many of the different XR platform specifics away from the user.
+Blazium provides a modular XR system that abstracts many of the different XR platform specifics away from the user.
 At the core sits the :ref:`XRServer <class_xrserver>` which acts as a central interface to the XR system that allows users to discover interfaces and interact with the components of the XR system.
 
 Each supported XR platform is implemented as an :ref:`XRInterface <class_xrinterface>`. Supported interfaces register themselves with the :ref:`XRServer <class_xrserver>` and can be queried with the ``find_interface`` method on the :ref:`XRServer <class_xrserver>`. When the desired interface is found it can be initialized by calling ``initialize`` on the interface.
@@ -14,10 +14,10 @@ Each supported XR platform is implemented as an :ref:`XRInterface <class_xrinter
 .. warning::
     A registered interface means nothing more than that the interface is available, if the interface is not supported by the host system, initialization may fail and return ``false``. This can have many reasons and sadly the reasons differ from platform to platform. It can be because the user hasn't installed the required software, or that the user simply hasn't plugged in their headset. You as a developer must thus react properly on an interface failing to initialize.
 
-Due to the special requirements for output in XR, especially for head mounted devices that supply different images to each eye, the :ref:`XRServer <class_xrserver>` in Godot will override various features in the rendering system. For stand-alone devices this means the final output is handled by the :ref:`XRInterface <class_xrinterface>` and Godot's usual output system is disabled. For desktop XR devices that work as a second screen it is possible to dedicate a separate :ref:`Viewport <class_viewport>` to handle the XR output, leaving the main Godot window available for displaying alternative content.
+Due to the special requirements for output in XR, especially for head mounted devices that supply different images to each eye, the :ref:`XRServer <class_xrserver>` in Blazium will override various features in the rendering system. For stand-alone devices this means the final output is handled by the :ref:`XRInterface <class_xrinterface>` and Blazium's usual output system is disabled. For desktop XR devices that work as a second screen it is possible to dedicate a separate :ref:`Viewport <class_viewport>` to handle the XR output, leaving the main Blazium window available for displaying alternative content.
 
 .. note::
-    Note that only one interface can be responsible for handling the output to an XR device, this is known as the primary interface and by default will be the first interface that is initialized. Godot currently thus only supports implementations with a single headset.
+    Note that only one interface can be responsible for handling the output to an XR device, this is known as the primary interface and by default will be the first interface that is initialized. Blazium currently thus only supports implementations with a single headset.
     It is possible, but increasingly uncommon, to have a secondary interface, for example to add tracking to an otherwise 3DOF only device.
 
 There are three XR specific node types that you will find in nearly all XR applications:
@@ -40,11 +40,11 @@ well optimized for XR right now compared to the other two.
 OpenXR
 ------
 
-OpenXR is a new industry standard that allows different XR platforms to present themselves through a standardised API to XR applications. This standard is an open standard maintained by the Khronos Group and thus aligns very well with Godot's interests.
+OpenXR is a new industry standard that allows different XR platforms to present themselves through a standardised API to XR applications. This standard is an open standard maintained by the Khronos Group and thus aligns very well with Blazium's interests.
 
 The Vulkan implementation of OpenXR is closely integrated with Vulkan, taking over part of the Vulkan system. This requires tight integration of certain core graphics features in the Vulkan renderer which are needed before the XR system is setup. This was one of the main deciding factors to include OpenXR as a core interface.
 
-This also means OpenXR needs to be enabled when Godot starts in order to set things
+This also means OpenXR needs to be enabled when Blazium starts in order to set things
 up correctly. Check the :ref:`Enabled<class_ProjectSettings_property_xr/openxr/enabled>`
 setting in your project settings under **XR > OpenXR**.
 

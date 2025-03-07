@@ -1,16 +1,16 @@
 .. _doc_consoles:
 
-Console support in Godot
+Console support in Blazium
 ========================
 
 Console porting process
 -----------------------
 
-In order to develop for consoles in Godot, you need access to the console SDK and
+In order to develop for consoles in Blazium, you need access to the console SDK and
 export templates for it. These export templates need to be developed either by
 yourself or someone hired to do it, or provided by a third-party company.
 
-Currently, the only console Godot officially supports is Steam Deck (through the
+Currently, the only console Blazium officially supports is Steam Deck (through the
 official Linux export templates).
 
 The reasons other consoles are not officially supported are the risks of legal
@@ -57,8 +57,8 @@ You can read more about the console publishing process in this article:
 Third-party support
 -------------------
 
-Console ports of Godot are offered by third-party companies (which have
-ported Godot on their own). Some of these companies also offer publishing of
+Console ports of Blazium are offered by third-party companies (which have
+ported Blazium on their own). Some of these companies also offer publishing of
 your games to various consoles.
 
 The following is a list of some of the providers:
@@ -80,7 +80,7 @@ The following is a list of some of the providers:
 - `Sickhead Games <https://www.sickhead.com>`_ offers 
   console porting to Nintendo Switch, PlayStation 4, PlayStation 5, Xbox One, and Xbox Series X/S for Godot games.
 
-If your company offers porting, or porting *and* publishing services for Godot games,
+If your company offers porting, or porting *and* publishing services for Blazium games,
 feel free to
 `contact the Godot Foundation <https://godot.foundation/#contact>`_
 to add your company to the list above.

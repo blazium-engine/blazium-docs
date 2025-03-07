@@ -15,14 +15,14 @@ used as often, it's difficult to find mainstream software aimed for this.
 One option is to create animations in third-party software such as Spine or
 Dragonbones. This functionality is also supported built-in.
 
-Why would you want to do skeletal animations directly in Godot? The answer is
+Why would you want to do skeletal animations directly in Blazium? The answer is
 that there are many advantages to it:
 
 * Better integration with the engine, so less hassle importing and editing from
   an external tool.
 * Ability to control particle systems, shaders, sounds, call scripts, colors,
   transparency, etc. in animations.
-* The built-in skeletal system in Godot is very efficient and designed for
+* The built-in skeletal system in Blazium is very efficient and designed for
   performance.
 
 The following tutorial will, then, explain 2D skeletal deformations.
@@ -34,7 +34,7 @@ Setup
 
    Before starting, we recommend you to go through the
    :ref:`doc_cutout_animation` tutorial to gain a general understanding of
-   animating within Godot.
+   animating within Blazium.
 
 For this tutorial, we will be using a single image to construct our character.
 Download it from :download:`gBot_pieces.png <img/gBot_pieces.png>` or save the
@@ -201,7 +201,7 @@ yield unexpected results:
 
 .. image:: img/skel2d21.gif
 
-This happens because Godot generates internal triangles that connect the points
+This happens because Blazium generates internal triangles that connect the points
 when drawing the polygon. They don't always bend the way you would expect. To
 solve this, you need to set hints in the geometry to clarify how you expect it
 to deform.

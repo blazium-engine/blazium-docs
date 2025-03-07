@@ -6,7 +6,7 @@
 Nodes and Scenes
 ================
 
-In :ref:`doc_key_concepts_overview`, we saw that a Godot game is a tree of
+In :ref:`doc_key_concepts_overview`, we saw that a Blazium game is a tree of
 scenes and that each scene is a tree of nodes. In this lesson, we explain a bit
 more about them. You will also create your first scene.
 
@@ -50,10 +50,10 @@ that runs and jumps, a life bar, a chest with which you can interact, and more.
 
 .. image:: img/nodes_and_scenes_3d_scene_example.png
 
-The Godot editor essentially is a **scene editor**. It has plenty of tools for
-editing 2D and 3D scenes, as well as user interfaces. A Godot project can
+The Blazium editor essentially is a **scene editor**. It has plenty of tools for
+editing 2D and 3D scenes, as well as user interfaces. A Blazium project can
 contain as many of these scenes as you need. The engine only requires one as
-your application's **main scene**. This is the scene Godot will first load when
+your application's **main scene**. This is the scene Blazium will first load when
 you or a player runs the game.
 
 On top of acting like nodes, scenes have the following characteristics:
@@ -151,7 +151,7 @@ Click the Save button in the file browser to save it as ``label.tscn``.
           allows you to save files inside the project. The ``res://`` path at
           the top of the window represents the project's root directory and
           stands for "resource path". For more information about file paths in
-          Godot, see :ref:`doc_filesystem`.
+          Blazium, see :ref:`doc_filesystem`.
 
 The application should open in a new window and display the text "Hello World".
 
@@ -181,7 +181,7 @@ Click the Select button, and in the file dialog that appears, double click on
 
 .. image:: img/nodes_and_scenes_14_select_main_scene.webp
 
-The demo should run again. Moving forward, every time you run the project, Godot
+The demo should run again. Moving forward, every time you run the project, Blazium
 will use this scene as a starting point.
 
 .. note:: The editor saves the main scene's path in a project.godot file in your
@@ -190,5 +190,5 @@ will use this scene as a starting point.
           Settings" window to do so. For more information, see
           :ref:`doc_project_settings`.
 
-In the next part, we will discuss another key concept in games and in Godot:
+In the next part, we will discuss another key concept in games and in Blazium:
 creating instances of a scene.

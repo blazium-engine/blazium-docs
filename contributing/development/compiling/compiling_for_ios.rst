@@ -37,10 +37,10 @@ Requirements
 
               sudo port install scons
 
-.. seealso:: To get the Godot source code for compiling, see
+.. seealso:: To get the Blazium source code for compiling, see
              :ref:`doc_getting_source`.
 
-             For a general overview of SCons usage for Godot, see
+             For a general overview of SCons usage for Blazium, see
              :ref:`doc_introduction_to_the_buildsystem`.
 
 Compiling

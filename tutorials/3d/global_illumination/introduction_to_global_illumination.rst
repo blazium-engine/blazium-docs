@@ -109,7 +109,7 @@ there are several criteria to keep in mind:
   require careful planning and manual work on the user's side. Depending on your
   time budget, some GI techniques may be preferable to others.
 
-Here's a comparison of all the global illumination techniques available in Godot:
+Here's a comparison of all the global illumination techniques available in Blazium:
 
 Performance
 ~~~~~~~~~~~
@@ -167,7 +167,7 @@ For comparison, here's a 3D scene with no global illumination options used:
 
    A 3D scene without any form of global illumination (only constant environment lighting). The box and sphere near the camera are both dynamic objects.
 
-Here's how Godot's various global illumination techniques compare:
+Here's how Blazium's various global illumination techniques compare:
 
 - **VoxelGI:** |average| Good reflections and indirect lighting, but beware of leaks.
 

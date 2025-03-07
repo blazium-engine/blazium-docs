@@ -3,18 +3,18 @@
 Import process
 ==============
 
-Importing assets in Godot
+Importing assets in Blazium
 -------------------------
 
-To import assets in Godot, place your assets (image files, scenes, audio
+To import assets in Blazium, place your assets (image files, scenes, audio
 files, fonts, etc) directly in the project folder. There are 2 ways to achieve this:
 
 - **For any file type:** Copy files manually with your operating system's file manager.
-- **For file types that can be imported by Godot:**
+- **For file types that can be imported by Blazium:**
   Drag-and-drop files from the operating system's file manager to the editor's FileSystem dock.
-  This only works with *resource* file types (i.e. file types that Godot can import).
+  This only works with *resource* file types (i.e. file types that Blazium can import).
 
-Godot will automatically import these files internally and keep the imported
+Blazium will automatically import these files internally and keep the imported
 resources hidden in a ``res://.godot/imported/`` folder.
 
 This means that when trying to access imported assets through code, you
@@ -31,12 +31,12 @@ Changing import parameters
 
 .. note::
 
-    Import parameters are only present in *non-native* Godot resource types.
-    This means Godot's own scene and resource file formats (``.tscn``, ``.scn``,
+    Import parameters are only present in *non-native* Blazium resource types.
+    This means Blazium's own scene and resource file formats (``.tscn``, ``.scn``,
     ``.tres``, ``.res``) don't have import options you can select in the Import
     dock.
 
-To change the import parameters of an asset in Godot, select the relevant
+To change the import parameters of an asset in Blazium, select the relevant
 resource in the FileSystem dock:
 
 .. image:: img/import_process_example.webp
@@ -69,7 +69,7 @@ parameters changed.
 Automatic reimport
 ------------------
 
-When the MD5 checksum of the source asset changes, Godot will perform an
+When the MD5 checksum of the source asset changes, Blazium will perform an
 automatic reimport of it, applying the preset configured for that specific
 asset.
 

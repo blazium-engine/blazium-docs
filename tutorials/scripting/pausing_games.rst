@@ -10,7 +10,7 @@ In most games it is desirable to, at some point, interrupt the
 game to do something else, such as taking a break or changing options.
 Implementing a fine-grained control for what can be paused (and what cannot)
 is a lot of work, so a simple framework for pausing is provided in
-Godot.
+Blazium.
 
 How pausing works
 -----------------
@@ -37,7 +37,7 @@ depending on their process mode.
 Process Modes
 -------------
 
-Each node in Godot has a "Process Mode" that defines when it processes. It can
+Each node in Blazium has a "Process Mode" that defines when it processes. It can
 be found and changed under a node's :ref:`Node <class_Node>` properties in the inspector.
 
 .. image:: img/pausemode.webp
@@ -57,7 +57,7 @@ You can also alter the property with code:
         ProcessMode = Node.ProcessModeEnum.Pausable;
     }
 
-This is what each mode tells a node to do:  
+This is what each mode tells a node to do:
 
 -  **Inherit**: Process depending on the state of the parent,
    grandparent, etc. The first parent that has a non-Inherit state.

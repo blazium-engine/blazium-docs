@@ -5,7 +5,7 @@ Setting up the project
 
 In this short first part, we'll set up and organize the project.
 
-Launch Godot and create a new project.
+Launch Blazium and create a new project.
 
 .. image:: img/new-project-button.webp
 
@@ -26,7 +26,7 @@ When creating the new project, you only need to choose a valid *Project Path*. Y
     to make the game. Extract the archive and move the ``art/``
     and ``fonts/`` directories to your project's directory.
 
-    Ensure that you have the required dependencies to use C# in Godot.
+    Ensure that you have the required dependencies to use C# in Blazium.
     You need the latest stable .NET SDK, and an editor such as VS Code.
     See :ref:`doc_c_sharp_setup`.
 

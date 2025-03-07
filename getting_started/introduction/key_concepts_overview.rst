@@ -4,11 +4,11 @@
 
 .. _doc_key_concepts_overview:
 
-Overview of Godot's key concepts
+Overview of Blazium's key concepts
 ================================
 
 Every game engine revolves around abstractions you use to build your
-applications. In Godot, a game is a **tree** of **nodes** that you group
+applications. In Blazium, a game is a **tree** of **nodes** that you group
 together into **scenes**. You can then wire these nodes so they can communicate
 using **signals**.
 
@@ -21,9 +21,9 @@ series, you will get to use them in practice.
 Scenes
 ------
 
-In Godot, you break down your game in reusable scenes. A scene can be a character,
+In Blazium, you break down your game in reusable scenes. A scene can be a character,
 a weapon, a menu in the user interface, a single house, an entire level, or
-anything you can think of. Godot's scenes are flexible; they fill the role of
+anything you can think of. Blazium's scenes are flexible; they fill the role of
 both prefabs and scenes in some other game engines.
 
 .. image:: img/key_concepts_main_menu.webp
@@ -53,7 +53,7 @@ Notice how nodes and scenes look the same in the editor. When you save a tree of
 nodes as a scene, it then shows as a single node, with its internal structure
 hidden in the editor.
 
-Godot provides an extensive library of base node types you can combine and
+Blazium provides an extensive library of base node types you can combine and
 extend to build more powerful ones. 2D, 3D, or user interface, you will do most
 things with these nodes.
 
@@ -80,7 +80,7 @@ flexibility in how you structure your scenes.
 
 .. image:: img/key_concepts_signals.webp
 
-.. note:: Signals are Godot's version of the *observer* pattern. You can read
+.. note:: Signals are Blazium's version of the *observer* pattern. You can read
           more about it here:
           https://gameprogrammingpatterns.com/observer.html
 
@@ -95,7 +95,7 @@ tailored to your game.
 Summary
 -------
 
-Nodes, scenes, the scene tree, and signals are four core concepts in Godot that
+Nodes, scenes, the scene tree, and signals are four core concepts in Blazium that
 you will manipulate all the time.
 
 Nodes are your game's smallest building blocks. You combine them to create scenes

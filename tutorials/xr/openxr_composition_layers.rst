@@ -6,14 +6,14 @@ OpenXR composition layers
 Introduction
 ------------
 
-In XR games you generally want to create user interactions that happen in 3D space 
+In XR games you generally want to create user interactions that happen in 3D space
 and involve users touching objects as if they are touching them in real life.
 
 Sometimes however creating a more traditional 2D interface is unavoidable.
 In XR however you can't just add 2D components to your scene.
-Godot needs depth information to properly position these elements so they appear at
+Blazium needs depth information to properly position these elements so they appear at
 a comfortable place for the user.
-Even with depth information there are headsets with slanted displays that make it impossible 
+Even with depth information there are headsets with slanted displays that make it impossible
 for the standard 2D pipeline to correctly render the 2D elements.
 
 The solution then is to render the UI to a :ref:`SubViewport <class_subviewport>`
@@ -25,7 +25,7 @@ The :ref:`QuadMesh <class_quadmesh>` is a suitable option for this.
     example project for an example of this approach.
 
 The problem with displaying the viewport in this way is that the rendered result
-is sampled for lens distortion by the XR runtime and the resulting quality loss 
+is sampled for lens distortion by the XR runtime and the resulting quality loss
 can make UI text hard to read.
 
 OpenXR offers a solution to this problem through composition layers.
@@ -34,7 +34,7 @@ on a surface after lens distortion resulting in a much higher quality end result
 
 .. note::
     As not all XR runtimes support all composition layer types,
-    Godot implements a fallback solution where we render the viewport
+    Blazium implements a fallback solution where we render the viewport
     as part of the normal scene but with the aforementioned quality
     limitations.
 
@@ -42,14 +42,14 @@ on a surface after lens distortion resulting in a much higher quality end result
     When the composition layer is supported,
     it is the XR runtime that presents the subviewport.
     This means the UI is only visible in the headset,
-    it will not be accessible by Godot and will thus
+    it will not be accessible by Blazium and will thus
     not be shown when you have a spectator view on the desktop.
 
 There are currently 3 nodes that expose this functionality:
 
 - :ref:`OpenXRCompositionLayerCylinder <class_OpenXRCompositionLayerCylinder>` shows the contents of the SubViewport on the inside of a cylinder (or "slice" of a cylinder).
 - :ref:`OpenXRCompositionLayerEquirect <class_OpenXRCompositionLayerEquirect>` shows the contents of the SubViewport on the interior of a sphere (or "slice" of a sphere).
-- :ref:`OpenXRCompositionLayerQuad <class_OpenXRCompositionLayerQuad>` shows the contents of the SubViewport on a flat rectangle. 
+- :ref:`OpenXRCompositionLayerQuad <class_OpenXRCompositionLayerQuad>` shows the contents of the SubViewport on a flat rectangle.
 
 Setting up the SubViewport
 --------------------------
@@ -64,9 +64,9 @@ It is advisable to save the 2D UI in a subscene, this makes it easier to do your
 .. image:: img/openxr_composition_layer_subviewport.webp
 
 .. warning::
-    The update mode "When Visible" will not work as Godot can't determine whether
+    The update mode "When Visible" will not work as Blazium can't determine whether
     the viewport is visible to the user.
-    When assigning our viewport to a composition layer Godot will automatically adjust this.
+    When assigning our viewport to a composition layer Blazium will automatically adjust this.
 
 Adding a composition layer
 --------------------------
@@ -208,7 +208,7 @@ to simulate our mouse moving and send that to our viewport for further processin
                     var from : Vector2 = _intersect_to_viewport_pos(was_intersect)
                     var to : Vector2 = _intersect_to_viewport_pos(intersect)
                     if was_pressed:
-                        event.button_mask = MOUSE_BUTTON_MASK_LEFT 
+                        event.button_mask = MOUSE_BUTTON_MASK_LEFT
                     event.relative = to - from
                     event.position = to
                     layer_viewport.push_input(event)
@@ -280,7 +280,7 @@ Hole punching
 As the composition layer is composited on top of the render result,
 it can be rendered in front of objects that are actually forward of the viewport.
 
-By enabling hole punch you instruct Godot to render a transparent object
+By enabling hole punch you instruct Blazium to render a transparent object
 where our viewport is displayed.
 It does this in a way that fills the depth buffer and clears the current rendering result.
 Anything behind our viewport will now be cleared,

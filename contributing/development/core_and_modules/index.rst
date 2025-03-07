@@ -6,7 +6,7 @@ Engine core and modules
 The following pages are meant to introduce the global organization of Blazium Engine's
 source code, and give useful tips for extending and fixing the engine on the C++ side.
 
-.. rubric:: Getting started with Godot's source code
+.. rubric:: Getting started with Blazium's source code
    :heading-level: 2
 
 This section covers the basics that you will encounter in (almost) every source file.
@@ -25,10 +25,10 @@ This section covers the basics that you will encounter in (almost) every source 
    2d_coordinate_systems
    scripting_development
 
-.. rubric:: Extending Godot by modifying its source code
+.. rubric:: Extending Blazium by modifying its source code
    :heading-level: 2
 
-This section covers what you can do by modifying Godot's C++ source code.
+This section covers what you can do by modifying Blazium's C++ source code.
 
 .. toctree::
    :maxdepth: 1

@@ -264,7 +264,7 @@ Note that a new instance must be added to the scene using ``add_child()``.
         AddChild(mob);
     }
 
-.. important:: Why ``PI``? In functions requiring angles, Godot uses *radians*,
+.. important:: Why ``PI``? In functions requiring angles, Blazium uses *radians*,
                not degrees. Pi represents a half turn in radians, about
                ``3.1415`` (there is also ``TAU`` which is equal to ``2 * PI``).
                If you're more comfortable working with degrees, you'll need to

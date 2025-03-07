@@ -10,7 +10,7 @@ How should they interact?
 How to build relationships effectively
 --------------------------------------
 
-When Godot users begin crafting their own scenes, they often run into the
+When Blazium users begin crafting their own scenes, they often run into the
 following problem:
 
 They create their first scene and fill it with content only to eventually end
@@ -354,7 +354,7 @@ A game should always have an "entry point"; somewhere you can definitively
 track where things begin so that you can follow the logic as it continues
 elsewhere. It also serves as a bird's eye view of all other data and logic
 in the program. For traditional applications, this is normally a "main"
-function. In Godot, it's a Main node.
+function. In Blazium, it's a Main node.
 
     - Node "Main" (main.gd)
 
@@ -389,8 +389,8 @@ If you have a system that...
   to swap out the main scene's content. This structure more or less keeps
   the "World" as the main game node.
 
-  Any GUI would also need to be either a singleton, a transitory part of the 
-  "World", or manually added as a direct child of the root. Otherwise, the 
+  Any GUI would also need to be either a singleton, a transitory part of the
+  "World", or manually added as a direct child of the root. Otherwise, the
   GUI nodes would also delete themselves during scene transitions.
 
 If you have systems that modify other systems' data, you should define those as
@@ -480,6 +480,6 @@ If they are dependent, then it stands to reason that they should be children of
 that parent (and likely part of that parent's scene if they aren't already).
 
 Does this mean nodes themselves are components? Not at all.
-Godot's node trees form an aggregation relationship, not one of composition.
+Blazium's node trees form an aggregation relationship, not one of composition.
 But while you still have the flexibility to move nodes around, it is still best
 when such moves are unnecessary by default.

@@ -4,8 +4,8 @@ Bug triage guidelines
 =====================
 
 This page describes the typical workflow of the bug triage team aka
-bugsquad when handling issues and pull requests on Godot's
-`GitHub repository <https://github.com/godotengine/godot>`__.
+bugsquad when handling issues and pull requests on Blazium's
+`GitHub repository <https://github.com/blazium-engine/blazium>`__.
 It is bound to evolve together with the bugsquad, so do not
 hesitate to propose modifications to the following guidelines.
 
@@ -45,8 +45,8 @@ working on it.
 Labels
 ~~~~~~
 
-The following `labels <https://github.com/godotengine/godot/labels>`__ are
-currently defined in the Godot repository:
+The following `labels <https://github.com/blazium-engine/blazium/labels>`__ are
+currently defined in the Blazium repository:
 
 Categories:
 ^^^^^^^^^^^
@@ -72,7 +72,7 @@ Categories:
    The purpose of this label is to let developers know which issues are
    still reproducible when they want to select what to work on. It is
    therefore a good practice to add in a comment on what platform and
-   what version or commit of Godot the issue could be reproduced; if a
+   what version or commit of Blazium the issue could be reproduced; if a
    developer looks at the issue one year later, the *Confirmed* label
    may not be relevant anymore.
 -  *Crash:* describes a bug that causes the engine to crash.
@@ -89,9 +89,7 @@ Categories:
    functionality.
 -  *Feature proposal*: used for PRs adding new features which do not have a
    corresponding proposal use this label. The label is removed when a feature
-   proposal is created and linked. The main Godot repository no longer accepts
-   feature requests as issues. Please use the `godot-proposals
-   <https://github.com/godotengine/godot-proposals>`__ repository instead.
+   proposal is created and linked. 
 -  *For PR meeting*: the issue needs to be discussed in a pull request meeting.
    These meetings are public and are held on the `Godot Contributors Chat <https://chat.blazium.app/>`_.
 -  *Good first issue*: the issue is *assumed* to be an easy one to fix, which makes
@@ -160,9 +158,9 @@ Topics:
 -  *Plugin*: relates to problems encountered while writing plugins.
 -  *Porting*: relates to some specific platforms or exporting projects.
 -  *Rendering*: relates to the 2D and 3D rendering engines.
--  *Shaders*: relates to the Godot shader language or visual shaders.
+-  *Shaders*: relates to the Blazium shader language or visual shaders.
 -  *Tests*: relates to unit tests.
--  *Thirdparty*: relates to third-party libraries used in Godot.
+-  *Thirdparty*: relates to third-party libraries used in Blazium.
 -  *XR*: relates to Augmented Reality or Virtual Reality.
 
 Issues would typically correspond to only one topic, though it's not
@@ -245,45 +243,46 @@ Topic:
 The available topics describe the same content as the topics in the main
 repository.
 
-Milestones
+Roadmaps
 ~~~~~~~~~~
 
-`Milestones <https://github.com/godotengine/godot/milestones>`_ are used for
-some issues and all PRs.
+We have a set of `Roadmaps <https://blazium.app/roadmaps>` showing what we have done and what we ahve planned.
+.. `Milestones <https://github.com/godotengine/godot/milestones>`_ are used for
+.. some issues and all PRs.
 
-We have milestones for specific minor engine versions, like ``4.5`` and ``4.6``,
-as well as general milestones for major engine versions, like ``3.x`` and
-``4.x``. In the ``godot-proposals`` repo, we also have a ``5.0`` milestone for
-compatibility-breaking changes that will be considered for Godot 5.0, in many
-years.
+.. We have milestones for specific minor engine versions, like ``4.5`` and ``4.6``,
+.. as well as general milestones for major engine versions, like ``3.x`` and
+.. ``4.x``. In the ``godot-proposals`` repo, we also have a ``5.0`` milestone for
+.. compatibility-breaking changes that will be considered for Godot 5.0, in many
+.. years.
 
-Issues are assigned to the current development milestone, such as ``4.5``, if
-they are related to features introduced in that engine version, or are bugs
-(regressions) in that version. Additionally, all issues completed during the
-development of that engine version are added to the milestone, so that users can
-see at a glance in which minor version an issue was first fixed. We don't always
-use the ``4.x`` milestone for issues, since by default all issues are related to
-Godot 4.x. However, we do use the ``3.x`` milestone to mark issues that are
-specific to Godot 3.x.
+.. Issues are assigned to the current development milestone, such as ``4.5``, if
+.. they are related to features introduced in that engine version, or are bugs
+.. (regressions) in that version. Additionally, all issues completed during the
+.. development of that engine version are added to the milestone, so that users can
+.. see at a glance in which minor version an issue was first fixed. We don't always
+.. use the ``4.x`` milestone for issues, since by default all issues are related to
+.. Godot 4.x. However, we do use the ``3.x`` milestone to mark issues that are
+.. specific to Godot 3.x.
 
-All pull requests are assigned to a milestone. By default, enhancement and
-feature PRs are assigned to the ``4.x`` milestone, and bugs are assigned to the
-current development milestone, such as ``4.5``. Towards the end of the minor
-version's development, PRs currently in that milestone are reassessed. If
-a PR is no longer being considered for that version, it is reassigned to either the
-major version milestone (``4.x``), or the next minor version milestone (such as
-``4.6``).
+.. All pull requests are assigned to a milestone. By default, enhancement and
+.. feature PRs are assigned to the ``4.x`` milestone, and bugs are assigned to the
+.. current development milestone, such as ``4.5``. Towards the end of the minor
+.. version's development, PRs currently in that milestone are reassessed. If
+.. a PR is no longer being considered for that version, it is reassigned to either the
+.. major version milestone (``4.x``), or the next minor version milestone (such as
+.. ``4.6``).
 
-Pull requests in the ``4.x`` milestone are reassigned to the current minor
-engine version, such as ``4.5``, when the review process is complete, and the
-production team decides that the PR is ready to be merged soon. Note that
-this usually requires more than one approving review.
+.. Pull requests in the ``4.x`` milestone are reassigned to the current minor
+.. engine version, such as ``4.5``, when the review process is complete, and the
+.. production team decides that the PR is ready to be merged soon. Note that
+.. this usually requires more than one approving review.
 
-The milestone assigned to a PR is a goal, not a guarantee. New features and
-enhancements are merged when they are ready. While reviewers and maintainers do
-their best to review PRs in time for the current version, at some point we reach
-the beta, feature freeze, and then release; and existing PRs are reassigned to
-the next minor version, or to ``4.x``. As a rule, we assign new features to the
-``4.x`` milestone initially to avoid continually reassigning a PR from version
-to version. However, a PR being in ``4.x`` does not mean it won't be merged;
-it's just the default for new features.
+.. The milestone assigned to a PR is a goal, not a guarantee. New features and
+.. enhancements are merged when they are ready. While reviewers and maintainers do
+.. their best to review PRs in time for the current version, at some point we reach
+.. the beta, feature freeze, and then release; and existing PRs are reassigned to
+.. the next minor version, or to ``4.x``. As a rule, we assign new features to the
+.. ``4.x`` milestone initially to avoid continually reassigning a PR from version
+.. to version. However, a PR being in ``4.x`` does not mean it won't be merged;
+.. it's just the default for new features.

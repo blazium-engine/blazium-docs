@@ -3,12 +3,12 @@
 Introducing XR tools
 ====================
 
-Out of the box Godot gives you all the basic support to setup an XR project.
+Out of the box Blazium gives you all the basic support to setup an XR project.
 XR specific game mechanics however need to be implemented on top of this foundation.
-While Godot makes this relatively easy this can still be a daunting task.
+While Blazium makes this relatively easy this can still be a daunting task.
 
 For this reason Godot has developed a toolkit called `Godot XR Tools <https://github.com/GodotVR/godot-xr-tools>`_
-that implements many of the basic mechanics found in XR games, from locomotion to object interaction to UI interaction. 
+that implements many of the basic mechanics found in XR games, from locomotion to object interaction to UI interaction.
 
 This toolkit is designed to work with both OpenXR and WebXR runtimes.
 We'll be using this as a base for our documentation here.
@@ -32,11 +32,11 @@ Find the latest release for Godot 4, and under **Assets**, download the
 Once downloaded unzip the file.
 You will notice the files are held within a ``godot-xr-tools`` subfolder.
 Inside of this folder you will find an ``addons`` folder.
-It is this folder that you want to copy in its entirety to your Godot project folder. Your project should now look something like this:
+It is this folder that you want to copy in its entirety to your Blazium project folder. Your project should now look something like this:
 
 .. image:: img/godot_xr_tools_root_folder.webp
 
-Now open up your project in Godot, if you haven't already, and give it a minute or
+Now open up your project in Blazium, if you haven't already, and give it a minute or
 so to import all the resources of the plugin. If it asks for a path to Blender to
 be set you can just click the option to disable blender import and restart the
 editor.

@@ -21,7 +21,7 @@ Description
 
 The **OS** class wraps the most common functionalities for communicating with the host operating system, such as the video driver, delays, environment variables, execution of binaries, command line, etc.
 
-\ **Note:** In Godot 4, **OS** functions related to window management, clipboard, and TTS were moved to the :ref:`DisplayServer<class_DisplayServer>` singleton (and the :ref:`Window<class_Window>` class). Functions related to time were removed and are only available in the :ref:`Time<class_Time>` class.
+\ **Note:** In Blazium, **OS** functions related to window management, clipboard, and TTS were moved to the :ref:`DisplayServer<class_DisplayServer>` singleton (and the :ref:`Window<class_Window>` class). Functions related to time were removed and are only available in the :ref:`Time<class_Time>` class.
 
 .. rst-class:: classref-introduction-group
 
@@ -464,7 +464,11 @@ Displays a modal dialog box using the host platform's implementation. The engine
 
 |void| **close_midi_inputs**\ (\ ) :ref:`🔗<class_OS_method_close_midi_inputs>`
 
+<<<<<<< HEAD
 Shuts down the system MIDI driver. Godot will no longer receive :ref:`InputEventMIDI<class_InputEventMIDI>`. See also :ref:`open_midi_inputs()<class_OS_method_open_midi_inputs>` and :ref:`get_connected_midi_inputs()<class_OS_method_get_connected_midi_inputs>`.
+=======
+Shuts down the system MIDI driver. Blazium will no longer receive :ref:`InputEventMIDI<class_InputEventMIDI>`. See also :ref:`open_midi_inputs<class_OS_method_open_midi_inputs>` and :ref:`get_connected_midi_inputs<class_OS_method_get_connected_midi_inputs>`.
+>>>>>>> a7815ba75 (Replaced Godot text with Blazium (#24))
 
 \ **Note:** This method is implemented on Linux, macOS, Windows, and Web.
 
@@ -492,7 +496,7 @@ Crashes the engine (or the editor if called within a ``@tool`` script). See also
 
 :ref:`int<class_int>` **create_instance**\ (\ arguments\: :ref:`PackedStringArray<class_PackedStringArray>`\ ) :ref:`🔗<class_OS_method_create_instance>`
 
-Creates a new instance of Godot that runs independently. The ``arguments`` are used in the given order and separated by a space.
+Creates a new instance of Blazium that runs independently. The ``arguments`` are used in the given order and separated by a space.
 
 If the process is successfully created, this method returns the new process' ID, which you can use to monitor the process (and potentially terminate it with :ref:`kill()<class_OS_method_kill>`). If the process cannot be created, this method returns ``-1``.
 
@@ -510,7 +514,7 @@ See :ref:`create_process()<class_OS_method_create_process>` if you wish to run a
 
 :ref:`int<class_int>` **create_process**\ (\ path\: :ref:`String<class_String>`, arguments\: :ref:`PackedStringArray<class_PackedStringArray>`, open_console\: :ref:`bool<class_bool>` = false\ ) :ref:`🔗<class_OS_method_create_process>`
 
-Creates a new process that runs independently of Godot. It will not terminate when Godot terminates. The path specified in ``path`` must exist and be an executable file or macOS ``.app`` bundle. The path is resolved based on the current platform. The ``arguments`` are used in the given order and separated by a space.
+Creates a new process that runs independently of Blazium. It will not terminate when Blazium terminates. The path specified in ``path`` must exist and be an executable file or macOS ``.app`` bundle. The path is resolved based on the current platform. The ``arguments`` are used in the given order and separated by a space.
 
 On Windows, if ``open_console`` is ``true`` and the process is a console app, a new terminal window will be opened.
 
@@ -645,7 +649,7 @@ If you wish to access a shell built-in or execute a composite command, a platfor
 
 :ref:`Dictionary<class_Dictionary>` **execute_with_pipe**\ (\ path\: :ref:`String<class_String>`, arguments\: :ref:`PackedStringArray<class_PackedStringArray>`, blocking\: :ref:`bool<class_bool>` = true\ ) :ref:`🔗<class_OS_method_execute_with_pipe>`
 
-Creates a new process that runs independently of Godot with redirected IO. It will not terminate when Godot terminates. The path specified in ``path`` must exist and be an executable file or macOS ``.app`` bundle. The path is resolved based on the current platform. The ``arguments`` are used in the given order and separated by a space.
+Creates a new process that runs independently of Blazium with redirected IO. It will not terminate when Blazium terminates. The path specified in ``path`` must exist and be an executable file or macOS ``.app`` bundle. The path is resolved based on the current platform. The ``arguments`` are used in the given order and separated by a space.
 
 If ``blocking`` is ``false``, created pipes work in non-blocking mode, i.e. read and write operations will return immediately. Use :ref:`FileAccess.get_error()<class_FileAccess_method_get_error>` to check if the last read/write operation was successful.
 
@@ -712,7 +716,11 @@ See also :ref:`get_keycode_string()<class_OS_method_get_keycode_string>`.
 
 Returns the *global* cache data directory according to the operating system's standards.
 
+<<<<<<< HEAD
 On the Linux/BSD platform, this path can be overridden by setting the ``XDG_CACHE_HOME`` environment variable before starting the project. See :doc:`File paths in Godot projects <../tutorials/io/data_paths>` in the documentation for more information. See also :ref:`get_config_dir()<class_OS_method_get_config_dir>` and :ref:`get_data_dir()<class_OS_method_get_data_dir>`.
+=======
+On the Linux/BSD platform, this path can be overridden by setting the ``XDG_CACHE_HOME`` environment variable before starting the project. See :doc:`File paths in Blazium projects <../tutorials/io/data_paths>` in the documentation for more information. See also :ref:`get_config_dir<class_OS_method_get_config_dir>` and :ref:`get_data_dir<class_OS_method_get_data_dir>`.
+>>>>>>> a7815ba75 (Replaced Godot text with Blazium (#24))
 
 Not to be confused with :ref:`get_user_data_dir()<class_OS_method_get_user_data_dir>`, which returns the *project-specific* user data path.
 
@@ -787,9 +795,9 @@ Returns the command-line user arguments passed to the engine. User arguments are
 
 ::
 
-    # Godot has been executed with the following command:
-    # godot --fullscreen -- --level=2 --hardcore
-    
+    # Blazium has been executed with the following command:
+    # blazium --fullscreen -- --level=2 --hardcore
+
     OS.get_cmdline_args()      # Returns ["--fullscreen", "--level=2", "--hardcore"]
     OS.get_cmdline_user_args() # Returns ["--level=2", "--hardcore"]
 
@@ -807,7 +815,11 @@ To get all passed arguments, use :ref:`get_cmdline_args()<class_OS_method_get_cm
 
 Returns the *global* user configuration directory according to the operating system's standards.
 
+<<<<<<< HEAD
 On the Linux/BSD platform, this path can be overridden by setting the ``XDG_CONFIG_HOME`` environment variable before starting the project. See :doc:`File paths in Godot projects <../tutorials/io/data_paths>` in the documentation for more information. See also :ref:`get_cache_dir()<class_OS_method_get_cache_dir>` and :ref:`get_data_dir()<class_OS_method_get_data_dir>`.
+=======
+On the Linux/BSD platform, this path can be overridden by setting the ``XDG_CONFIG_HOME`` environment variable before starting the project. See :doc:`File paths in Blazium projects <../tutorials/io/data_paths>` in the documentation for more information. See also :ref:`get_cache_dir<class_OS_method_get_cache_dir>` and :ref:`get_data_dir<class_OS_method_get_data_dir>`.
+>>>>>>> a7815ba75 (Replaced Godot text with Blazium (#24))
 
 Not to be confused with :ref:`get_user_data_dir()<class_OS_method_get_user_data_dir>`, which returns the *project-specific* user data path.
 
@@ -841,7 +853,11 @@ Returns an array of connected MIDI device names, if they exist. Returns an empty
 
 Returns the *global* user data directory according to the operating system's standards.
 
+<<<<<<< HEAD
 On the Linux/BSD platform, this path can be overridden by setting the ``XDG_DATA_HOME`` environment variable before starting the project. See :doc:`File paths in Godot projects <../tutorials/io/data_paths>` in the documentation for more information. See also :ref:`get_cache_dir()<class_OS_method_get_cache_dir>` and :ref:`get_config_dir()<class_OS_method_get_config_dir>`.
+=======
+On the Linux/BSD platform, this path can be overridden by setting the ``XDG_DATA_HOME`` environment variable before starting the project. See :doc:`File paths in Blazium projects <../tutorials/io/data_paths>` in the documentation for more information. See also :ref:`get_cache_dir<class_OS_method_get_cache_dir>` and :ref:`get_config_dir<class_OS_method_get_config_dir>`.
+>>>>>>> a7815ba75 (Replaced Godot text with Blazium (#24))
 
 Not to be confused with :ref:`get_user_data_dir()<class_OS_method_get_user_data_dir>`, which returns the *project-specific* user data path.
 
@@ -905,7 +921,11 @@ Returns the value of the given environment variable, or an empty string if ``var
 
 Returns the file path to the current engine executable.
 
+<<<<<<< HEAD
 \ **Note:** On macOS, if you want to launch another instance of Godot, always use :ref:`create_instance()<class_OS_method_create_instance>` instead of relying on the executable path.
+=======
+\ **Note:** On macOS, if you want to launch another instance of Blazium, always use :ref:`create_instance<class_OS_method_create_instance>` instead of relying on the executable path.
+>>>>>>> a7815ba75 (Replaced Godot text with Blazium (#24))
 
 .. rst-class:: classref-item-separator
 
@@ -1381,13 +1401,13 @@ Returns a string that is unique to the device.
 
 :ref:`String<class_String>` **get_user_data_dir**\ (\ ) |const| :ref:`🔗<class_OS_method_get_user_data_dir>`
 
-Returns the absolute directory path where user data is written (the ``user://`` directory in Godot). The path depends on the project name and :ref:`ProjectSettings.application/config/use_custom_user_dir<class_ProjectSettings_property_application/config/use_custom_user_dir>`.
+Returns the absolute directory path where user data is written (the ``user://`` directory in Blazium). The path depends on the project name and :ref:`ProjectSettings.application/config/use_custom_user_dir<class_ProjectSettings_property_application/config/use_custom_user_dir>`.
 
-- On Windows, this is ``%AppData%\Godot\app_userdata\[project_name]``, or ``%AppData%\[custom_name]`` if ``use_custom_user_dir`` is set. ``%AppData%`` expands to ``%UserProfile%\AppData\Roaming``.
+- On Windows, this is ``%AppData%\Blazium\app_userdata\[project_name]``, or ``%AppData%\[custom_name]`` if ``use_custom_user_dir`` is set. ``%AppData%`` expands to ``%UserProfile%\AppData\Roaming``.
 
-- On macOS, this is ``~/Library/Application Support/Godot/app_userdata/[project_name]``, or ``~/Library/Application Support/[custom_name]`` if ``use_custom_user_dir`` is set.
+- On macOS, this is ``~/Library/Application Support/Blazium/app_userdata/[project_name]``, or ``~/Library/Application Support/[custom_name]`` if ``use_custom_user_dir`` is set.
 
-- On Linux and BSD, this is ``~/.local/share/godot/app_userdata/[project_name]``, or ``~/.local/share/[custom_name]`` if ``use_custom_user_dir`` is set.
+- On Linux and BSD, this is ``~/.local/share/blazium/app_userdata/[project_name]``, or ``~/.local/share/[custom_name]`` if ``use_custom_user_dir`` is set.
 
 - On Android and iOS, this is a sandboxed directory in either internal or external storage, depending on the user's configuration.
 
@@ -1491,11 +1511,11 @@ Returns ``true`` if the feature for the given feature tag is supported in the cu
 
 :ref:`bool<class_bool>` **is_debug_build**\ (\ ) |const| :ref:`🔗<class_OS_method_is_debug_build>`
 
-Returns ``true`` if the Godot binary used to run the project is a *debug* export template, or when running in the editor.
+Returns ``true`` if the Blazium binary used to run the project is a *debug* export template, or when running in the editor.
 
-Returns ``false`` if the Godot binary used to run the project is a *release* export template.
+Returns ``false`` if the Blazium binary used to run the project is a *release* export template.
 
-\ **Note:** To check whether the Godot binary used to run the project is an export template (debug or release), use ``OS.has_feature("template")`` instead.
+\ **Note:** To check whether the Blazium binary used to run the project is an export template (debug or release), use ``OS.has_feature("template")`` instead.
 
 .. rst-class:: classref-item-separator
 
@@ -1653,7 +1673,11 @@ Returns :ref:`@GlobalScope.FAILED<class_@GlobalScope_constant_FAILED>` if the fi
 
 |void| **open_midi_inputs**\ (\ ) :ref:`🔗<class_OS_method_open_midi_inputs>`
 
+<<<<<<< HEAD
 Initializes the singleton for the system MIDI driver, allowing Godot to receive :ref:`InputEventMIDI<class_InputEventMIDI>`. See also :ref:`get_connected_midi_inputs()<class_OS_method_get_connected_midi_inputs>` and :ref:`close_midi_inputs()<class_OS_method_close_midi_inputs>`.
+=======
+Initializes the singleton for the system MIDI driver, allowing Blazium to receive :ref:`InputEventMIDI<class_InputEventMIDI>`. See also :ref:`get_connected_midi_inputs<class_OS_method_get_connected_midi_inputs>` and :ref:`close_midi_inputs<class_OS_method_close_midi_inputs>`.
+>>>>>>> a7815ba75 (Replaced Godot text with Blazium (#24))
 
 \ **Note:** This method is implemented on Linux, macOS, Windows, and Web.
 
@@ -1767,7 +1791,11 @@ On macOS (sandboxed applications only), this function clears list of user select
 
 |void| **set_environment**\ (\ variable\: :ref:`String<class_String>`, value\: :ref:`String<class_String>`\ ) |const| :ref:`🔗<class_OS_method_set_environment>`
 
+<<<<<<< HEAD
 Sets the value of the environment variable ``variable`` to ``value``. The environment variable will be set for the Godot process and any process executed with :ref:`execute()<class_OS_method_execute>` after running :ref:`set_environment()<class_OS_method_set_environment>`. The environment variable will *not* persist to processes run after the Godot process was terminated.
+=======
+Sets the value of the environment variable ``variable`` to ``value``. The environment variable will be set for the Blazium process and any process executed with :ref:`execute<class_OS_method_execute>` after running :ref:`set_environment<class_OS_method_set_environment>`. The environment variable will *not* persist to processes run after the Blazium process was terminated.
+>>>>>>> a7815ba75 (Replaced Godot text with Blazium (#24))
 
 \ **Note:** Environment variable names are case-sensitive on all platforms except Windows. The ``variable`` name cannot be empty or include the ``=`` character. On Windows, there is a 32767 characters limit for the combined length of ``variable``, ``value``, and the ``=`` and null terminator characters that will be registered in the environment block.
 
@@ -1813,7 +1841,7 @@ Assigns the given name to the current thread. Returns :ref:`@GlobalScope.ERR_UNA
 
 If ``enabled`` is ``true``, when opening a file for writing, a temporary file is used in its place. When closed, it is automatically applied to the target file.
 
-This can useful when files may be opened by other applications, such as antiviruses, text editors, or even the Godot editor itself.
+This can useful when files may be opened by other applications, such as antiviruses, text editors, or even the Blazium editor itself.
 
 .. rst-class:: classref-item-separator
 
@@ -1831,7 +1859,7 @@ Requests the OS to open a resource identified by ``uri`` with the most appropria
 
 - ``OS.shell_open("C:/Users/name/Downloads")`` also works on Windows and opens the file explorer at the user's Downloads folder.
 
-- ``OS.shell_open("https://godotengine.org")`` opens the default web browser on the official Godot website.
+- ``OS.shell_open("https://blazium.app")`` opens the default web browser on the official Blazium website.
 
 - ``OS.shell_open("mailto:example@example.com")`` opens the default email client with the "To" field set to ``example@example.com``. See `RFC 2368 - The [code]mailto[/code] URL scheme <https://datatracker.ietf.org/doc/html/rfc2368>`__ for a list of fields that can be added.
 
@@ -1869,7 +1897,11 @@ Use :ref:`ProjectSettings.globalize_path()<class_ProjectSettings_method_globaliz
 
 |void| **unset_environment**\ (\ variable\: :ref:`String<class_String>`\ ) |const| :ref:`🔗<class_OS_method_unset_environment>`
 
+<<<<<<< HEAD
 Removes the given environment variable from the current environment, if it exists. The ``variable`` name cannot be empty or include the ``=`` character. The environment variable will be removed for the Godot process and any process executed with :ref:`execute()<class_OS_method_execute>` after running :ref:`unset_environment()<class_OS_method_unset_environment>`. The removal of the environment variable will *not* persist to processes run after the Godot process was terminated.
+=======
+Removes the given environment variable from the current environment, if it exists. The ``variable`` name cannot be empty or include the ``=`` character. The environment variable will be removed for the Blazium process and any process executed with :ref:`execute<class_OS_method_execute>` after running :ref:`unset_environment<class_OS_method_unset_environment>`. The removal of the environment variable will *not* persist to processes run after the Blazium process was terminated.
+>>>>>>> a7815ba75 (Replaced Godot text with Blazium (#24))
 
 \ **Note:** Environment variable names are case-sensitive on all platforms except Windows.
 

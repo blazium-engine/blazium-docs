@@ -20,8 +20,8 @@ Some use-cases where customizing the default page is useful include:
   the project file system as soon as possible;
 - Passing custom command line arguments, e.g. ``-s`` to start a ``MainLoop`` script.
 
-The default HTML page is available in the Godot Engine repository at
-`/misc/dist/html/full-size.html <https://github.com/godotengine/godot/blob/master/misc/dist/html/full-size.html>`__
+The default HTML page is available in the Blazium Engine repository at
+`/misc/dist/html/full-size.html <https://github.com/blazium-engine/blazium/blob/master/misc/dist/html/full-size.html>`__
 but the following template can be used as a much simpler example:
 
 .. code-block:: html
@@ -71,7 +71,7 @@ The following optional placeholders will enable some extra features in your cust
   A custom string to include in the HTML document just before the end of the ``<head>`` tag. It
   is customized in the export options under the *Html / Head Include* section. While you fully
   control the HTML page you create, this variable can be useful for configuring parts of the
-  HTML ``head`` element from the Godot Editor, e.g. for different Web export presets.
+  HTML ``head`` element from the Blazium Editor, e.g. for different Web export presets.
 
 - ``$GODOT_SPLASH``:
   The path to the image used as the boot splash as defined in the

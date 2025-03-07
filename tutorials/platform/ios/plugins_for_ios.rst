@@ -5,7 +5,7 @@
 Plugins for iOS
 ===============
 
-Godot provides StoreKit, GameCenter, iCloud services and other plugins.
+Blazium provides StoreKit, GameCenter, iCloud services and other plugins.
 They are using same model of asynchronous calls explained below.
 
 ARKit and Camera access are also provided as plugins.

@@ -6,12 +6,12 @@ Your first 2D game
 ==================
 
 In this step-by-step tutorial series, you will create your first complete 2D
-game with Godot. By the end of the series, you will have a simple yet complete
+game with Blazium. By the end of the series, you will have a simple yet complete
 game of your own, like the image below.
 
 |image0|
 
-You will learn how the Godot editor works, how to structure a project, and build
+You will learn how the Blazium editor works, how to structure a project, and build
 a 2D game.
 
 .. note:: This project is an introduction to the Blazium Engine. It assumes that
@@ -23,7 +23,7 @@ enemies for as long as possible.
 
 You will learn to:
 
-- Create a complete 2D game with the Godot editor.
+- Create a complete 2D game with the Blazium editor.
 - Structure a simple game project.
 - Move the player character and change its sprite.
 - Spawn random enemies.
@@ -36,7 +36,7 @@ recommend you to start with this one, though.
 
 **Why start with 2D?**
 
-If you are new to game development or unfamiliar with Godot, we recommend
+If you are new to game development or unfamiliar with Blazium, we recommend
 starting with 2D games. This will allow you to become comfortable with both
 before tackling 3D games, which tend to be more complicated.
 

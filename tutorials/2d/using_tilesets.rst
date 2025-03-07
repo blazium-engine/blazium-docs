@@ -157,7 +157,7 @@ three vertical dots menu button at the top of the TileSet editor and choose
 Using a collection of scenes
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Since Godot 4.0, you can place actual *scenes* as tiles. This allows you to use
+You can place actual *scenes* as tiles. This allows you to use
 any collection of nodes as a tile. For example, you could use scene tiles to
 place gameplay elements, such as shops the player may be able to interact with.
 You could also use scene tiles to place AudioStreamPlayer2Ds (for ambient
@@ -211,7 +211,7 @@ Merging several atlases into a single atlas
 
 Using multiple atlases within a single TileSet resource can sometimes be useful,
 but it can also be cumbersome in certain situations (especially if you're using
-one image per tile). Godot allows you to merge several atlases into a single
+one image per tile). Blazium allows you to merge several atlases into a single
 atlas for easier organization.
 
 To do so, you must have more than one atlas created in the TileSet resource.
@@ -436,7 +436,7 @@ corners or edges of platforms, floors, etc. While these can be placed manually,
 this quickly becomes tedious. Handling this situation with procedurally
 generated levels can also be difficult and require a lot of code.
 
-Godot offers *terrains* to perform this kind of tile connection automatically.
+Blazium offers *terrains* to perform this kind of tile connection automatically.
 This allows you to have the "correct" tile variants automatically used.
 
 Terrains are grouped into terrain sets. Each terrain set is assigned a mode from

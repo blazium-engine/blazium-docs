@@ -3,7 +3,7 @@
 The XR action map
 =================
 
-Godot has an action map feature as part of the XR system.
+Blazium has an action map feature as part of the XR system.
 At this point in time this system is part of the OpenXR module.
 There are plans to encompass WebXR into this in the near future hence we call it
 the XR action map system in this document.
@@ -24,28 +24,28 @@ You will then find the XR Action Map interface in the bottom of the screen:
 .. image:: img/xr_action_map.webp
 
 .. note::
-  Godot's built-in input system has many things in common with the XR action map system.
+  Blazium's built-in input system has many things in common with the XR action map system.
   In fact our original idea was to add functionality to the existing input system and
   expose the data to the OpenXR action map system.
   We may revisit that idea at some point but as it turns out there were just too many
   problems to overcome.
   To name a few:
 
-    * Godot's input system mainly centers around button inputs, XR adds triggers, axis,
+    * Blazium's input system mainly centers around button inputs, XR adds triggers, axis,
       poses and haptics (output) into the mix.
       This would greatly complicate the input system with features that won't work for
       normal controllers or contrast with the current approach.
-      It was felt this would lead to confusion for the majority of Godot users.
-    * Godot's input system works with raw input data that is parsed and triggers emitting
+      It was felt this would lead to confusion for the majority of Blazium users.
+    * Blazium's input system works with raw input data that is parsed and triggers emitting
       actions.
       This input data is made available to the end user.
       OpenXR completely hides raw data and does all the parsing for us, we only get
       access to already parsed action data.
       This inconsistency is likely to lead to bugs when an unsuspecting user tries to use
       an XR device as a normal input device.
-    * Godot's input system allows changes to what inputs are bound to actions in runtime,
+    * Blazium's input system allows changes to what inputs are bound to actions in runtime,
       OpenXR does not.
-    * Godot's input system is based on device ids which are meaningless in OpenXR.
+    * Blazium's input system is based on device ids which are meaningless in OpenXR.
 
   This does mean that a game/application that mixes traditional inputs with XR
   controllers will have a separation.
@@ -55,7 +55,7 @@ You will then find the XR Action Map interface in the bottom of the screen:
 The default action map
 ----------------------
 
-Godot will automatically create a default action map if no action map file is found.
+Blazium will automatically create a default action map if no action map file is found.
 
 .. warning::
   This default map was designed to help developers port their XR games/applications from
@@ -64,7 +64,7 @@ Godot will automatically create a default action map if no action map file is fo
   default, to actions one on one.
   This is not a good example of setting up an action map.
   It does allow a new developer to have a starting point when they want to become
-  familiar with Godot XR.
+  familiar with Blazium XR.
   It prevents having to design a proper action map for their game/application first.
 
 For this walkthrough we're going to start with a blank action map.
@@ -106,8 +106,8 @@ This is especially important if you wish to bind the same input on a controller
 to a different action.
 For instance:
 
-  * in your ``Character control`` set you may have an action ``Jump``, 
-  * in your ``Vehicle control`` set you may have an action ``Accelerate``, 
+  * in your ``Character control`` set you may have an action ``Jump``,
+  * in your ``Vehicle control`` set you may have an action ``Accelerate``,
   * in your ``Menu`` set you may have an action ``Select``.
 
 All are bound to the trigger on your controller.
@@ -198,7 +198,7 @@ on the pose action assigned to ``pose`` property of this node.
 More about poses later.
 
 .. note::
-  The OpenXR implementation in Godot also exposes a special pose called ``Skeleton``.
+  The OpenXR implementation in Blazium also exposes a special pose called ``Skeleton``.
   This is part of the hand tracking implementation.
   This pose is exposed through the ``skeleton`` action that is supported outside of the
   action map system.
@@ -295,7 +295,7 @@ The appropriate :ref:`XRController3D <class_xrcontroller3d>` node will emit the 
   You can bind the same action to multiple inputs for the same controller on the same
   profile.
   In this case the XR runtime will attempt to combine the inputs.
-  
+
   * For ``Bool`` inputs, this will perform an ``OR`` operation between the buttons.
   * For ``Float`` inputs, this will take the highest value of the bound inputs.
   * The behavior for ``Pose`` inputs is undefined, but the first bound input is likely to
@@ -336,13 +336,13 @@ There are also provisions for devices such as treadmills, haptic vests and such 
   XR runtimes that do not support added input or output types will often crash if
   supplied.
 
-  As such Godot keeps meta data of all available devices, their inputs and outputs and
+  As such Blazium keeps meta data of all available devices, their inputs and outputs and
   which extension adds support for them.
   You can create interaction profiles for all devices you wish to support.
-  Godot will filter out those not supported by the XR runtime the user is using.
+  Blazium will filter out those not supported by the XR runtime the user is using.
 
   This does mean that in order to support new devices, you might need to update to a more
-  recent version of Godot.
+  recent version of Blazium.
 
 It is however also important to note that the action map has been designed
 with this in mind.
@@ -363,7 +363,7 @@ If all else fails, it will check the generic :ref:`"Simple controller" <doc_xr_a
 .. note::
   There is an important conclusion to be made here:
   When a controller is found, and the action map is applied to it, the XR runtime is not
-  limited to the exact configurations you set up in Godot's action map editor.
+  limited to the exact configurations you set up in Blazium's action map editor.
   While the runtime will generally choose a suitable mapping based on one of the bindings
   you set up in the action map, it can deviate from it.
 
@@ -428,12 +428,12 @@ given on that subject earlier in this document.
   For instance we can find the ``X`` button twice, once as ``X click`` and then
   as ``X touch``.
   This is due to the Touch controller having a capacitive sensor.
-  
+
   * ``X touch`` will be true if the user is merely touching the X button.
   * ``X click`` will be true when the user is actually pressing down on the button.
 
   Similarly for the thumbstick we have:
-  
+
   * ``Thumbstick touch`` which will be true if the user is touching the thumbstick.
   * ``Thumbstick`` which gives a value for the direction the thumbstick is pushed to.
   * ``Thumbstick click`` which is true when the user is pressing down on the thumbstick.

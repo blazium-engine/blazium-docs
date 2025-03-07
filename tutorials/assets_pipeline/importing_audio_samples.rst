@@ -6,7 +6,7 @@ Importing audio samples
 Supported audio formats
 -----------------------
 
-Godot provides 3 options to import your audio data: WAV, Ogg Vorbis and MP3.
+Blazium provides 3 options to import your audio data: WAV, Ogg Vorbis and MP3.
 
 Each format has different advantages:
 
@@ -17,14 +17,14 @@ Each format has different advantages:
 - Ogg Vorbis files use a stronger compression that results in much
   smaller file size, but require significantly more processing power to
   play back.
-- MP3 files use better compression than WAV with IMA-ADPCM or QOA, but worse 
+- MP3 files use better compression than WAV with IMA-ADPCM or QOA, but worse
   than Ogg Vorbis. This means that an MP3 file with roughly equal quality to
   Ogg Vorbis will be significantly larger. On the bright side, MP3 requires
   less CPU usage to play back compared to Ogg Vorbis.
 
 .. note::
 
-    If you've compiled the Godot editor from source with specific modules disabled,
+    If you've compiled the Blazium editor from source with specific modules disabled,
     some formats may not be available.
 
 Here is a comparative chart representing the file size of 1 second of audio with
@@ -140,7 +140,7 @@ Edit > Loop Mode
 ----------------
 
 Unlike Ogg Vorbis and MP3, WAV files can contain metadata to indicate whether
-they're looping (in addition to loop points). By default, Godot will follow this
+they're looping (in addition to loop points). By default, Blazium will follow this
 metadata, but you can choose to apply a specific loop mode:
 
 - **Disabled:** Don't loop audio, even if metadata indicates the file should be
@@ -278,7 +278,7 @@ Use appropriate quality settings
 
 While keeping pristine-quality audio sources is important if you're performing
 editing, using the same quality in the exported project is not necessary. For
-WAV files, Godot offers several import options to reduce the final file size
+WAV files, Blazium offers several import options to reduce the final file size
 without modifying the source file on disk.
 
 To reduce memory usage and file size, choose an appropriate quantization,
@@ -302,7 +302,7 @@ sample rate and number of channels for your audio:
 Use real-time audio effects to reduce file size
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Godot has an :ref:`extensive bus system <doc_audio_buses>` with built-in effects.
+Blazium has an :ref:`extensive bus system <doc_audio_buses>` with built-in effects.
 This saves SFX artists the need to add reverb to the sound effects,
 reducing their size greatly and ensuring correct trimming.
 

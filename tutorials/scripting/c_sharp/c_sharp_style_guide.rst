@@ -3,10 +3,10 @@
 C# style guide
 ==============
 
-Having well-defined and consistent coding conventions is important for every project, and Godot
+Having well-defined and consistent coding conventions is important for every project, and Blazium
 is no exception to this rule.
 
-This page contains a coding style guide, which is followed by developers of and contributors to Godot
+This page contains a coding style guide, which is followed by developers of and contributors to Blazium
 itself. As such, it is mainly intended for those who want to contribute to the project, but since
 the conventions and guidelines mentioned in this article are those most widely adopted by the users
 of the language, we encourage you to do the same, especially if you do not have such a guide yet.
@@ -20,7 +20,7 @@ of the language, we encourage you to do the same, especially if you do not have 
 Language specification
 ----------------------
 
-Godot currently uses **C# version 12.0** in its engine and example source code,
+Blazium currently uses **C# version 12.0** in its engine and example source code,
 as this is the version supported by .NET 8.0 (the current baseline requirement).
 So, before we move to a newer version, care must be taken to avoid mixing
 language features only available in C# 13.0 or later.

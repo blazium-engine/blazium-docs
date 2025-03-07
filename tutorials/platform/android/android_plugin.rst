@@ -1,6 +1,6 @@
 .. _doc_android_plugin:
 
-Godot Android plugins
+Blazium Android plugins
 =====================
 
 Introduction
@@ -9,7 +9,7 @@ Introduction
 Android plugins are powerful tools to extend the capabilities of the Blazium Engine
 by tapping into the functionality provided by Android platforms and ecosystem.
 
-For example in Godot 4, Android plugins are used to support multiple Android-based
+For example in Blazium, Android plugins are used to support multiple Android-based
 XR platforms without encumbering the core codebase with vendor specific code or binaries.
 
 Android plugin
@@ -26,13 +26,13 @@ v2 Architecture
 
 .. note::
 
-    Godot Android plugin leverages the :ref:`Gradle build system <doc_android_gradle_build>`.
+    Blazium Android plugin leverages the :ref:`Gradle build system <doc_android_gradle_build>`.
 
 
 Building on the previous v1 architecture, Android plugins continue to be derived from the
 `Android archive library <https://developer.android.com/studio/projects/android-library#aar-contents>`_.
 
-At its core, a Godot Android plugin v2 is an Android library with a dependency on the :ref:`Godot Android library <doc_android_library>`,
+At its core, a Blazium Android plugin v2 is an Android library with a dependency on the :ref:`Godot Android library <doc_android_library>`,
 and a custom Android library manifest.
 
 This architecture allows Android plugins to extend the functionality of the engine with:
@@ -46,17 +46,17 @@ This architecture allows Android plugins to extend the functionality of the engi
 Each plugin has an init class extending from the `GodotPlugin <https://github.com/godotengine/godot/blob/0a7f75ec7b465604b6496c8f5f1d638aed250d6d/platform/android/java/lib/src/org/godotengine/godot/plugin/GodotPlugin.java#L80>`_ class
 which is provided by the :ref:`Godot Android library <doc_android_library>`.
 
-The ``GodotPlugin`` class provides APIs to access the running Godot instance and hook into its lifecycle. It is loaded at runtime by the Blazium Engine.
+The ``GodotPlugin`` class provides APIs to access the running Blazium instance and hook into its lifecycle. It is loaded at runtime by the Blazium Engine.
 
 v2 Packaging format
 ~~~~~~~~~~~~~~~~~~~
 
-v1 Android plugins required a custom ``gdap`` configuration file that was used by the Godot Editor to detect and load them.
+v1 Android plugins required a custom ``gdap`` configuration file that was used by the Blazium Editor to detect and load them.
 However this approach had several drawbacks, primary ones being that it lacked flexibility and departed from the `existing
 Godot EditorExportPlugin format, delivery and installation flow <https://docs.blazium.app/tutorials/plugins/editor/installing_plugins.html>`_.
 
 This has been resolved for v2 Android plugins by deprecating the ``gdap`` packaging and configuration mechanism in favor of
-the existing Godot ``EditorExportPlugin`` packaging format.
+the existing Blazium ``EditorExportPlugin`` packaging format.
 The ``EditorExportPlugin`` API in turn has been extended to properly support Android plugins.
 
 
@@ -64,15 +64,15 @@ Building a v2 Android plugin
 ----------------------------
 
 A github project template **is provided** at https://github.com/m4gr3d/Godot-Android-Plugin-Template as a **quickstart for building
-Godot Android plugins for Godot 4.2+**.
+Blazium Android plugins for Godot 4.2+**.
 You can follow the `template README <https://github.com/m4gr3d/Godot-Android-Plugin-Template#readme>`_
-to set up your own Godot Android plugin project.
+to set up your own Blazium Android plugin project.
 
 To provide further understanding, here is a break-down of the steps used to create the project template:
 
 1. Create an Android library module using `these instructions <https://developer.android.com/studio/projects/android-library>`_
 
-2. Add the Godot Android library as a dependency by updating the module's ``gradle`` `build file <https://github.com/m4gr3d/Godot-Android-Plugin-Template/blob/main/plugin/build.gradle.kts#L42>`_::
+2. Add the Blazium Android library as a dependency by updating the module's ``gradle`` `build file <https://github.com/m4gr3d/Godot-Android-Plugin-Template/blob/main/plugin/build.gradle.kts#L42>`_::
 
       dependencies {
           implementation("org.godotengine:godot:4.2.0.stable")
@@ -113,7 +113,7 @@ Similar to GDNative support in v1 Android plugins, v2 Android plugins support th
 A github project template is provided at https://github.com/m4gr3d/GDExtension-Android-Plugin-Template as a quickstart for building
 GDExtension Android plugins for Godot 4.2+.
 You can follow the `template's README <https://github.com/m4gr3d/GDExtension-Android-Plugin-Template#readme>`_
-to set up your own Godot Android plugin project.
+to set up your own Blazium Android plugin project.
 
 
 Migrating a v1 Android plugin to v2
@@ -125,16 +125,16 @@ Use the following steps if you have a v1 Android plugin you want to migrate to v
 
     - Change the ``org.godotengine.plugin.v1`` prefix to ``org.godotengine.plugin.v2``
 
-2. Update the Godot Android library build dependency:
+2. Update the Blazium Android library build dependency:
 
-    - You can continue using the ``godot-lib.<version>.<status>.aar`` binary from `Godot's download page <https://godotengine.org/download>`_ if that's your preference. Make sure it's updated to the latest stable version.
+    - You can continue using the ``godot-lib.<version>.<status>.aar`` binary from `Blazium's download page <https://blazium.app/download>`_ if that's your preference. Make sure it's updated to the latest stable version.
     - Or you can switch to the MavenCentral provided dependency::
 
         dependencies {
             implementation("org.godotengine:godot:4.2.0.stable")
         }
 
-3. After updating the Godot Android library dependency, sync or build the plugin and resolve any compile errors:
+3. After updating the Blazium Android library dependency, sync or build the plugin and resolve any compile errors:
 
     - The ``Godot`` instance provided by ``GodotPlugin::getGodot()`` no longer has access to a ``android.content.Context`` reference. Use ``GodotPlugin::getActivity()`` instead.
 
@@ -143,14 +143,14 @@ Use the following steps if you have a v1 Android plugin you want to migrate to v
 Packaging a v2 Android plugin
 -----------------------------
 
-As mentioned, a v2 Android plugin is now provided to the Godot Editor as an ``EditorExportPlugin`` plugin, so it shares a lot of the `same packaging steps <https://docs.blazium.app/tutorials/plugins/editor/making_plugins.html#creating-a-plugin>`_.
+As mentioned, a v2 Android plugin is now provided to the Blazium Editor as an ``EditorExportPlugin`` plugin, so it shares a lot of the `same packaging steps <https://docs.blazium.app/tutorials/plugins/editor/making_plugins.html#creating-a-plugin>`_.
 
 1. Add the plugin output binaries within the plugin directory (e.g: in ``addons/<plugin_name>/``)
 
 2. Add the `tool script <https://docs.blazium.app/tutorials/plugins/editor/making_plugins.html#the-script-file>`_ for the export functionality within the plugin directory (e.g: in ``addons/<plugin_name>/``)
 
     - The created script must be a ``@tool`` script, or else it will not work properly
-    - The export tool script is used to configure the Android plugin and hook it within the Godot Editor's export process. It should look something like this::
+    - The export tool script is used to configure the Android plugin and hook it within the Blazium Editor's export process. It should look something like this::
 
         @tool
         extends EditorPlugin
@@ -203,7 +203,7 @@ As mentioned, a v2 Android plugin is now provided to the Godot Editor as an ``Ed
         - `_get_android_manifest_element_contents <https://docs.blazium.app/classes/class_editorexportplugin.html#class-editorexportplugin-method-get-android-manifest-element-contents>`_: update the contents of the `<manifest>` element in the generated Android manifest
 
         The ``_get_android_manifest_*`` methods allow the plugin to automatically provide changes
-        to the app's manifest which are preserved when the Godot Editor is updated, resolving a long standing issue with v1 Android plugins.
+        to the app's manifest which are preserved when the Blazium Editor is updated, resolving a long standing issue with v1 Android plugins.
 
 
 3. Create a ``plugin.cfg``. This is an INI file with metadata about your plugin::
@@ -284,13 +284,13 @@ Using a v2 Android plugin
     - The provided github project templates include demo Godot projects for quick testing.
 
 
-1. Copy the plugin's output directory (``addons/<plugin_name>``) to the target Godot project's directory
+1. Copy the plugin's output directory (``addons/<plugin_name>``) to the target Blazium project's directory
 
-2. Open the project in the Godot Editor; the Editor should detect the plugin
+2. Open the project in the Blazium Editor; the Editor should detect the plugin
 
 3. Navigate to ``Project`` -> ``Project Settings...`` -> ``Plugins``, and ensure the plugin is enabled
 
-4. Install the Godot Android build template by clicking on ``Project`` -> ``Install Android Build Template...``
+4. Install the Blazium Android build template by clicking on ``Project`` -> ``Install Android Build Template...``
 
 5. Navigate to ``Project`` -> ``Export...``
 
@@ -354,20 +354,20 @@ For example::
         else:
             printerr("Initialization error")
 
-Support using the GDExtension functionality in the Godot Editor
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Support using the GDExtension functionality in the Blazium Editor
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If planning to use the GDExtension functionality in the Godot Editor, it is recommended that the
+If planning to use the GDExtension functionality in the Blazium Editor, it is recommended that the
 GDExtension's native binaries are compiled not just for Android, but also for the OS onto which
-developers / users intend to run the Godot Editor. Not doing so may prevent developers /
-users from writing code that accesses the plugin from within the Godot Editor.
+developers / users intend to run the Blazium Editor. Not doing so may prevent developers /
+users from writing code that accesses the plugin from within the Blazium Editor.
 
 This may involve creating dummy plugins for the host OS just so the API is published to the
 editor. You can use the `godot-cpp-template <https://github.com/godotengine/godot-cpp-template>`__
 github template for reference on how to do so.
 
-Godot crashes upon load
-~~~~~~~~~~~~~~~~~~~~~~~
+Blazium crashes upon load
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. UPDATE: Not supported yet. When more complex datatypes are supported,
 .. update this section.

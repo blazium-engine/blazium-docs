@@ -7,7 +7,7 @@ Introduction
 ------------
 
 Due to their focus on performance, real-time rendering engines have many
-limitations. Godot's renderer is no exception. To work effectively with those
+limitations. Blazium's renderer is no exception. To work effectively with those
 limitations, you need to understand them.
 
 Texture size limits
@@ -33,7 +33,7 @@ without affecting the source file.
 Color banding
 -------------
 
-When using the Forward+ or Mobile rendering methods, Godot's 3D engine
+When using the Forward+ or Mobile rendering methods, Blazium's 3D engine
 renders internally in HDR. However, the rendering output will be tonemapped to a
 low dynamic range so it can be displayed on the screen. This can result in
 visible banding, especially when using untextured materials. For performance
@@ -106,7 +106,7 @@ player.
 Transparency sorting
 --------------------
 
-In Godot, transparent materials are drawn after opaque materials. Transparent
+In Blazium, transparent materials are drawn after opaque materials. Transparent
 objects are sorted back to front before being drawn based on the Node3D's
 position, not the vertex position in world space. Due to this, overlapping
 objects may often be sorted out of order. To fix improperly sorted objects,
@@ -120,7 +120,7 @@ forward or backward for the purpose of sorting. Even then, these may not
 always be sufficient.
 
 Some rendering engines feature *order-independent transparency* techniques to
-alleviate this, but this is costly on the GPU. Godot currently doesn't provide
+alleviate this, but this is costly on the GPU. Blazium currently doesn't provide
 this feature. There are still several ways to avoid this problem:
 
 - Only make materials transparent if you actually need it. If a material only

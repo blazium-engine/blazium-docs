@@ -2,8 +2,9 @@
 
 This repository contains the source files of [Blazium Engine](https://blazium.app)'s documentation, in reStructuredText markup language (reST).
 
-They are meant to be parsed with the [Sphinx](https://www.sphinx-doc.org/) documentation builder to build the HTML documentation on [Godot's website](https://docs.blazium.app).
+They are meant to be parsed with the [Sphinx](https://www.sphinx-doc.org/) documentation builder to build the HTML documentation on [Blazium's website](https://docs.blazium.app).
 
+<!--
 ## Download for offline use
 
 To browse the documentation offline, you can download an HTML copy (updated every Monday):
@@ -17,6 +18,7 @@ For mobile devices or e-readers, you can also download an ePub copy (updated eve
 [latest](https://nightly.link/godotengine/godot-docs/workflows/build_offline_docs/master/godot-docs-epub-master.zip),
 [3.6](https://nightly.link/godotengine/godot-docs/workflows/build_offline_docs/master/godot-docs-epub-3.6.zip). Extract
 the ZIP archive then open the `GodotEngine.epub` file in an e-book reader application.
+-->
 
 ## Theming
 
@@ -31,7 +33,7 @@ add-on.
 
 ## Contributing
 
-All contributors are welcome to help on the Godot documentation.
+All contributors are welcome to help on the Blazium documentation.
 
 To get started, head to the [Contributing section](https://docs.blazium.app/contributing/how_to_contribute.html) of the online manual. There, you will find all the information you need to write and submit changes.
 
@@ -49,4 +51,4 @@ Here are some quick links to the areas you might be interested in:
 With the exception of the `classes/` folder, all the content of this repository is licensed under the Creative Commons Attribution 3.0 Unported license ([CC BY 3.0](https://creativecommons.org/licenses/by/3.0/)) and is to be attributed to "Juan Linietsky, Ariel Manzur and the Godot community".
 See [LICENSE.txt](/LICENSE.txt) for details.
 
-The files in the `classes/` folder are derived from [Godot's main source repository](https://github.com/blazium-engine/blazium) and are distributed under the MIT license, with the same authors as above.
+The files in the `classes/` folder are derived from [Blazium's main source repository](https://github.com/blazium-engine/blazium) and are distributed under the MIT license, with the same authors as above.

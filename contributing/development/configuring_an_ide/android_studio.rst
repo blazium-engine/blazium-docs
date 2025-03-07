@@ -7,7 +7,7 @@ Android Studio
 IDE for Android development made by `Google <https://about.google/>`_ and `JetBrains <https://www.jetbrains.com/>`_.
 It's based on `IntelliJ IDEA <https://www.jetbrains.com/idea/>`_ and has a
 feature-rich editor which supports Java and C/C++. It can be used to
-work on Godot's core engine as well as the Android platform codebase.
+work on Blazium's core engine as well as the Android platform codebase.
 
 Importing the project
 ---------------------
@@ -74,9 +74,9 @@ Building & debugging the editor module
 Building & debugging the app module
 -----------------------------------
 
-The ``app`` module requires the presence of a Godot project in its ``assets`` directory (``<Godot root directory>/platform/android/java/app/assets``) to run.
-This is usually handled by the Godot Editor during the export process.
-While developing in Android Studio, it's necessary to manually add a Godot project under that directory to replicate the export process.
+The ``app`` module requires the presence of a Godot project in its ``assets`` directory (``<Blazium root directory>/platform/android/java/app/assets``) to run.
+This is usually handled by the Blazium Editor during the export process.
+While developing in Android Studio, it's necessary to manually add a Blazium project under that directory to replicate the export process.
 Once that's done, you can follow the instructions below to run/debug the ``app`` module:
 
 - To build the ``app`` module:
@@ -106,4 +106,4 @@ Once that's done, you can follow the instructions below to run/debug the ``app``
 
 
 If you run into any issues, ask for help in
-`Godot's Android dev channel <https://chat.godotengine.org/channel/android>`__.
+`Blazium's official Discord server <https://chat.blazium.app>`__.

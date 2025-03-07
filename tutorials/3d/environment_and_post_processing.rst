@@ -3,7 +3,7 @@
 Environment and post-processing
 ===============================
 
-Godot 4 provides a redesigned Environment resource, as well as a new
+Blazium provides a redesigned Environment resource, as well as a new
 post-processing system with many available effects right out of the box.
 
 .. note::
@@ -278,7 +278,7 @@ Fog
     at the same time.
 
 Fog, as in real life, makes distant objects fade away into a uniform color.
-There are two kinds of fog in Godot:
+There are two kinds of fog in Blazium:
 
 - **Depth Fog:** This one is applied based on the distance from the camera.
 - **Height Fog:** This one is applied to any objects below (or above) a certain
@@ -379,7 +379,7 @@ Screen-Space Reflections (SSR)
 *This feature is only available when using the Forward+ renderer, not
 Mobile or Compatibility.*
 
-While Godot supports several sources of reflection data such as
+While Blazium supports several sources of reflection data such as
 :ref:`doc_reflection_probes`, they may not provide enough detail for all
 situations. Scenarios where screen-space reflections make the most sense are
 when objects are in contact with each other (object over floor, over a table,
@@ -423,7 +423,7 @@ Mobile or Compatibility.*
 
 As mentioned in the **Ambient** section, areas where light from light nodes
 does not reach (either because it's outside the radius or shadowed) are lit
-with ambient light. Godot can simulate this using VoxelGI, ReflectionProbe,
+with ambient light. Blazium can simulate this using VoxelGI, ReflectionProbe,
 the Sky, or a constant ambient color. The problem, however, is that all the
 methods proposed previously act more on a larger scale (large regions) than at the
 smaller geometry level.
@@ -572,7 +572,7 @@ Glow
 
 In photography and film, when light amount exceeds the maximum *luminance*
 (brightness) supported by the media, it generally bleeds outwards to darker
-regions of the image. This is simulated in Godot with the **Glow** effect.
+regions of the image. This is simulated in Blazium with the **Glow** effect.
 
 .. image:: img/environment_glow1.webp
 
@@ -621,7 +621,7 @@ The **Blend Mode** of the effect can also be changed:
   High mix factor values will appear to darken the image unless **Bloom** is
   increased.
 
-To change the glow effect size and shape, Godot provides **Levels**. Smaller
+To change the glow effect size and shape, Blazium provides **Levels**. Smaller
 levels are strong glows that appear around objects, while large levels are hazy
 glows covering the whole screen:
 
@@ -736,7 +736,7 @@ To use glow as a blurring solution:
 Adjustments
 ~~~~~~~~~~~
 
-At the end of processing, Godot offers the possibility to do some standard
+At the end of processing, Blazium offers the possibility to do some standard
 image adjustments.
 
 .. image:: img/environment_adjustments.webp
@@ -865,7 +865,7 @@ Auto Exposure
 Mobile or Compatibility.*
 
 Even though, in most cases, lighting and texturing are heavily artist controlled,
-Godot supports a basic high dynamic range implementation with the auto exposure
+Blazium supports a basic high dynamic range implementation with the auto exposure
 mechanism. This is generally used to add realism when combining interior areas
 with low light and bright outdoor areas. Auto exposure simulates the camera
 (or eye) in an effort to adapt between light and dark locations and their

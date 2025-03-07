@@ -9,11 +9,11 @@ CSG stands for **Constructive Solid Geometry**, and is a tool to combine basic
 shapes or custom meshes to create more complex shapes. In 3D modeling software,
 CSG is mostly known as "Boolean Operators".
 
-Level prototyping is one of the main uses of CSG in Godot. This technique allows
+Level prototyping is one of the main uses of CSG in Blazium. This technique allows
 users to create the most common shapes by combining primitives.
 Interior environments can be created by using inverted primitives.
 
-.. note:: The CSG nodes in Godot are mainly intended for prototyping. There is
+.. note:: The CSG nodes in Blazium are mainly intended for prototyping. There is
           no built-in support for UV mapping or editing 3D polygons (though
           extruded 2D polygons can be used with the CSGPolygon3D node).
 
@@ -37,7 +37,7 @@ Interior environments can be created by using inverted primitives.
 Introduction to CSG nodes
 -------------------------
 
-Like other features of Godot, CSG is supported in the form of nodes. These are
+Like other features of Blazium, CSG is supported in the form of nodes. These are
 the CSG nodes:
 
 - :ref:`CSGBox3D <class_CSGBox3D>`
@@ -92,7 +92,7 @@ Custom meshes
 
 Custom meshes can be used for :ref:`CSGMesh3D <class_CSGMesh3D>` as long as the
 mesh is *manifold*. The mesh can be modeled in other software and imported into
-Godot. Multiple materials are supported. 
+Blazium. Multiple materials are supported. 
 
 For a mesh to be used as a CSG mesh, it is required to:
 
@@ -293,16 +293,16 @@ this:
 
 .. image:: img/csg_room_result.png
 
-You've successfully prototyped a room level with the CSG tools in Godot.
+You've successfully prototyped a room level with the CSG tools in Blazium.
 CSG tools can be used for designing all kinds of levels, such as a maze
 or a city; explore its limitations when designing your game.
 
 Using prototype textures
 ------------------------
 
-Godot's :ref:`doc_standard_material_3d` supports *triplanar mapping*, which can be
+Blazium's :ref:`doc_standard_material_3d` supports *triplanar mapping*, which can be
 used to automatically apply a texture to arbitrary objects without distortion.
-This is handy when using CSG as Godot doesn't support editing UV maps on CSG
+This is handy when using CSG as Blazium doesn't support editing UV maps on CSG
 nodes yet. Triplanar mapping is relatively slow, which usually restricts its
 usage to organic surfaces like terrain. Still, when prototyping, it can be used
 to quickly apply textures to CSG-based levels.

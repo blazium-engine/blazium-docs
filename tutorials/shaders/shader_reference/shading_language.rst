@@ -6,7 +6,7 @@ Shading language
 Introduction
 ------------
 
-Godot uses a shading language similar to GLSL ES 3.0. Most datatypes and
+Blazium uses a shading language similar to GLSL ES 3.0. Most datatypes and
 functions are supported, and the few remaining ones will likely be added over
 time.
 
@@ -483,7 +483,7 @@ You can also pass them to functions:
 Operators
 ---------
 
-Godot shading language supports the same set of operators as GLSL ES 3.0. Below
+Blazium shading language supports the same set of operators as GLSL ES 3.0. Below
 is the list of them in precedence order:
 
 .. table::
@@ -547,7 +547,7 @@ is the list of them in precedence order:
 Flow control
 ------------
 
-Godot Shading language supports the most common types of flow control:
+Blazium Shading language supports the most common types of flow control:
 
 .. code-block:: glsl
 
@@ -599,7 +599,7 @@ Godot Shading language supports the most common types of flow control:
     } while (cond);
 
 Keep in mind that in modern GPUs, an infinite loop can exist and can freeze
-your application (including editor). Godot can't protect you from this, so be
+your application (including editor). Blazium can't protect you from this, so be
 careful not to make this mistake!
 
 Also, when comparing floating-point values against a number, make sure to
@@ -649,7 +649,7 @@ render compared to not rendering any object in the first place.
 Functions
 ---------
 
-It is possible to define functions in a Godot shader. They use the following
+It is possible to define functions in a Blazium shader. They use the following
 syntax:
 
 .. code-block:: glsl

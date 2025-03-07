@@ -6,7 +6,7 @@ Introduction to 3D
 Creating a 3D game can be challenging. That extra Z coordinate makes
 many of the common techniques that helped to make 2D games simpler no
 longer work. To aid in this transition, it is worth mentioning that
-Godot uses similar APIs for 2D and 3D. Most nodes are the same and
+Blazium uses similar APIs for 2D and 3D. Most nodes are the same and
 are present in both 2D and 3D versions. In fact, it is worth checking
 the 3D platformer tutorial, or the 3D kinematic character tutorials,
 which are almost identical to their 2D counterparts.
@@ -15,8 +15,8 @@ which are almost identical to their 2D counterparts.
    :align: center
    :alt: An example 3D game demo created using Godot
 
-   Godot Third Person Shooter (TPS) Demo, available on the 
-   `Github repository <https://github.com/godotengine/tps-demo>`__ or the 
+   Godot Third Person Shooter (TPS) Demo, available on the
+   `Github repository <https://github.com/godotengine/tps-demo>`__ or the
    :ref:`Asset Library <doc_project_manager_downloading_demos>`.
 
 In 3D, math is a little more complex than in 2D. For an introduction to the
@@ -43,61 +43,61 @@ Main toolbar
 ~~~~~~~~~~~~
 
 Some buttons in the main toolbar are the same as those in the 2D workspace. A brief explanation
-is given with the shortcut if the mouse cursor is hovered over a button for one second. 
-Some buttons may have additional functionality if another keypress is performed. A recap 
-of main functionality of each button with its default shortcut is provided below from 
+is given with the shortcut if the mouse cursor is hovered over a button for one second.
+Some buttons may have additional functionality if another keypress is performed. A recap
+of main functionality of each button with its default shortcut is provided below from
 left to right:
 
 .. image:: img/3d_toolbar.webp
 
 - **Select Mode** (:kbd:`Q`): Allows selection of nodes in the viewport. Left clicking
-  on a node to select one. Left clicking and dragging a rectangle selects all 
+  on a node to select one. Left clicking and dragging a rectangle selects all
   nodes within the rectangle's boundaries, once released.
   Holding :kbd:`Shift` while selecting adds more nodes to the selection.
   Clicking on a selected node while holding :kbd:`Shift` deselects the node.
   In this mode, you can use the gizmos to perform movement or rotation.
-- **Move Mode** (:kbd:`W`): Enables move (or translate) mode for the selected nodes. 
+- **Move Mode** (:kbd:`W`): Enables move (or translate) mode for the selected nodes.
   See :ref:`doc_introduction_to_3d_space_and_manipulation` for more details.
-- **Rotate Mode** (:kbd:`E`): Enables rotation mode for the selected nodes. See 
+- **Rotate Mode** (:kbd:`E`): Enables rotation mode for the selected nodes. See
   :ref:`doc_introduction_to_3d_space_and_manipulation` for more details.
-- **Scale Mode** (:kbd:`R`): Enables scaling and displays scaling gizmos in different 
-  axes for the selected nodes. See :ref:`doc_introduction_to_3d_space_and_manipulation` 
+- **Scale Mode** (:kbd:`R`): Enables scaling and displays scaling gizmos in different
+  axes for the selected nodes. See :ref:`doc_introduction_to_3d_space_and_manipulation`
   for more details.
 - **Show the list of selectable nodes at the clicked position**: As the description suggests,
   this provides a list of selectable nodes at the clicked position as a context menu,
   if there is more than one node in the clicked area.
 - **Lock** (:kbd:`Ctrl + L`) the selected nodes, preventing selection and movement in the viewport.
-  Clicking the button again (or using :kbd:`Ctrl + Shift + L`) unlocks the selected nodes. 
+  Clicking the button again (or using :kbd:`Ctrl + Shift + L`) unlocks the selected nodes.
   Locked nodes can only be selected in the scene tree.
-  They can easily be identified with a padlock next to their node names in the scene tree. 
+  They can easily be identified with a padlock next to their node names in the scene tree.
   Clicking on this padlock also unlocks the nodes.
-- **Group selected nodes** (:kbd:`Ctrl + G`). This allows selection of the root node if 
+- **Group selected nodes** (:kbd:`Ctrl + G`). This allows selection of the root node if
   any of the children are selected.
-  Using :kbd:`Ctrl + G` ungroups them. Additionally, clicking the ungroup button in 
+  Using :kbd:`Ctrl + G` ungroups them. Additionally, clicking the ungroup button in
   the scene tree performs the same action.
 - **Ruler Mode** (:kbd:`M`): When enabled you can click and drag to measure distance in the scene
   in meters.
-- **Use Local Space** (:kbd:`T`): If enabled, gizmos of a node are drawn using the current node's 
+- **Use Local Space** (:kbd:`T`): If enabled, gizmos of a node are drawn using the current node's
   rotation angle instead of the :ref:`global viewport axes <doc_introduction_to_3d_coordinate_system>`.
-- **Use Snap** (:kbd:`Y`): If enabled, movement, and rotation snap to grid. Snapping can also 
+- **Use Snap** (:kbd:`Y`): If enabled, movement, and rotation snap to grid. Snapping can also
   temporarily be activated using :kbd:`Ctrl` while performing the action.
   The settings for changing snap options are explained below.
 - **Toggle preview sunlight**: If no DirectionalLight3D exist in the scene, a preview 
   of sunlight can be used as a light source. See 
   :ref:`doc_introduction_to_3d_preview_environment_light` for more details.
-- **Toggle preview environment**: If no WorldEnvironment exists in the scene, a preview of the 
-  environment can be used as a placeholder. See 
+- **Toggle preview environment**: If no WorldEnvironment exists in the scene, a preview of the
+  environment can be used as a placeholder. See
   :ref:`doc_introduction_to_3d_preview_environment_light` for more details.
-- **Edit Sun and Environment Settings (three dots)**: Opens the menu to configure preview 
-  sunlight and environment settings. See :ref:`doc_introduction_to_3d_preview_environment_light` 
+- **Edit Sun and Environment Settings (three dots)**: Opens the menu to configure preview
+  sunlight and environment settings. See :ref:`doc_introduction_to_3d_preview_environment_light`
   for more details.
 
 - **Transform menu**: It has three options:
 
    - *Snap Object to Floor*: Snaps an object to a solid floor.
-   - *Transform Dialog*: Opens a dialog to adjust transform parameters (translate, rotate, scale, 
+   - *Transform Dialog*: Opens a dialog to adjust transform parameters (translate, rotate, scale,
      and transform) manually.
-   - *Snap Settings*: Allows you to change transform, rotate snap (in degrees), and scale snap 
+   - *Snap Settings*: Allows you to change transform, rotate snap (in degrees), and scale snap
      (in percent) settings.
 
 - **View menu**: Controls the view options and enables additional viewports:
@@ -113,7 +113,7 @@ Moreover, specific types of gizmos can be toggled in this menu.
 An open eye means that the gizmo is visible, a closed eye means it is hidden.
 A half-open eye means that it is also visible through opaque surfaces.
 
-Clicking on *Settings* in this view menu opens a window to change the 
+Clicking on *Settings* in this view menu opens a window to change the
 *Vertical Field of View (VFOV)* parameter
 (in degrees), *Z-Near*, and *Z-Far* values.
 
@@ -132,8 +132,8 @@ this menu:
 
 .. image:: img/tuto_3d6_1.webp
 
-This menu also displays the current view type and enables quick adjustment of the 
-viewport's viewing angle. Additionally, it offers options to modify the appearance of 
+This menu also displays the current view type and enables quick adjustment of the
+viewport's viewing angle. Additionally, it offers options to modify the appearance of
 nodes within the viewport.
 
 .. _doc_introduction_to_3d_coordinate_system:
@@ -141,19 +141,19 @@ nodes within the viewport.
 Coordinate system
 ~~~~~~~~~~~~~~~~~
 
-Godot uses the `metric <https://en.wikipedia.org/wiki/Metric_system>`__
+Blazium uses the `metric <https://en.wikipedia.org/wiki/Metric_system>`__
 system for everything in 3D, with 1 unit being equal to 1 meter.
 Physics and other areas are tuned for this scale. Therefore, attempting to use a
 different scale is usually a bad idea (unless you know what you are doing).
 
 When working with 3D assets, it's always best to work in the correct scale (set
-the unit to metric in your 3D modeling software). Godot allows scaling
+the unit to metric in your 3D modeling software). Blazium allows scaling
 post-import and, while this works in most cases, in rare situations it may
 introduce floating-point precision issues (and thus, glitches or artifacts) in
 delicate areas such as rendering or physics. Make sure your artists always work
 in the right scale!
 
-The Y coordinate is used for "up". As for the horizontal X/Z axes, Godot uses a
+The Y coordinate is used for "up". As for the horizontal X/Z axes, Blazium uses a
 **right-handed** coordinate system. This means that for most objects that need
 alignment (such as lights or cameras), the Z axis is used as a "pointing
 towards" direction. This convention roughly means that:
@@ -196,7 +196,7 @@ The arcs can be clicked and held to rotate the object.
 To lock one axis and move the object freely in the other two axes, the colored rectangles
 can be clicked, held, and dragged.
 
-If the transform mode is changed from *Select Mode* to *Scale Mode*, the arrows will be 
+If the transform mode is changed from *Select Mode* to *Scale Mode*, the arrows will be
 replaced by cubes, which can be dragged to scale an object as if the object is being moved.
 
 Navigating the 3D environment
@@ -204,7 +204,7 @@ Navigating the 3D environment
 
 In 3D environments, it is often important to adjust the viewpoint or angle
 from which you are viewing the scene.
-In Godot, navigating the 3D environment in the viewport (or spatial editor)
+In Blazium, navigating the 3D environment in the viewport (or spatial editor)
 can be done in multiple ways.
 
 The default 3D scene navigation controls are similar to Blender (aiming to
@@ -219,7 +219,7 @@ Then, under *Navigation*, search for *Navigation Scheme*.
 Using the default settings, the following shortcuts control how one can
 navigate in the viewport:
 
-Pressing the middle mouse button and dragging the mouse allows you to orbit around 
+Pressing the middle mouse button and dragging the mouse allows you to orbit around
 the center of what is on the screen.
 
 It is also possible to left-click and hold the manipulator gizmo located
@@ -236,7 +236,7 @@ If the *Perspective* view is enabled on the viewport (can be seen on the viewpor
 not the View menu on the main toolbar), holding down the right mouse button on the viewport
 or pressing :kbd:`Shift + F` switches to "free-look" mode.
 In this mode you can move the mouse to look around, use the :kbd:`W` :kbd:`A`
-:kbd:`S` :kbd:`D` keys to fly around the view, :kbd:`E` to go up, and :kbd:`Q` to 
+:kbd:`S` :kbd:`D` keys to fly around the view, :kbd:`E` to go up, and :kbd:`Q` to
 go down. To disable this mode, release the right mouse button or press
 :kbd:`Shift + F` again.
 
@@ -265,11 +265,11 @@ axis by specifying the axis as a letter, then the distance (if entering a
 value with the keyboard).
 
 For instance, to move the selection upwards by 2.5 units, enter the
-following sequence in order (Y+ is upwards in Godot):
+following sequence in order (Y+ is upwards in Blazium):
 
 :kbd:`G`-:kbd:`Y`-:kbd:`2`-:kbd:`.`-:kbd:`5`-:kbd:`Enter`
 
-To use Blender-style transform shortcuts in Godot, go to the Editor Settings'
+To use Blender-style transform shortcuts in Blazium, go to the Editor Settings'
 **Shortcuts** tab, then in the Spatial Editor section:
 
 - Bind **Begin Translate Transformation** to :kbd:`G`.
@@ -278,7 +278,7 @@ To use Blender-style transform shortcuts in Godot, go to the Editor Settings'
 - Finally, unbind **Scale Mode** so that its shortcut won't conflict with
   **Begin Rotate Transformation**.
 
-.. tip:: More shortcuts can be found on the 
+.. tip:: More shortcuts can be found on the
   :ref:`doc_default_key_mapping_shortcuts_spatial_editor` page.
 
 Node3D node
@@ -306,7 +306,7 @@ scale.
 Unlike 2D, where loading image content and drawing is straightforward, 3D is a
 little more difficult. The content needs to be created with special 3D tools
 (also called Digital Content Creation tools, or DCCs) and exported to an
-exchange file format to be imported in Godot. This is required since 3D formats
+exchange file format to be imported in Blazium. This is required since 3D formats
 are not as standardized as images.
 
 Manually authored models (using 3D modeling software)
@@ -315,8 +315,8 @@ Manually authored models (using 3D modeling software)
 .. FIXME: Needs update to properly description Godot 3.x workflow
    (used to reference a non existing doc_importing_3d_meshes importer).
 
-It is possible to import 3D models in Godot created in external tools.
-Depending on the format, you can import entire scenes (exactly as they look in 
+It is possible to import 3D models in Blazium created in external tools.
+Depending on the format, you can import entire scenes (exactly as they look in
 the 3D modeling software), including animation, skeletal rigs, blend shapes, or
 as simple resources.
 
@@ -336,7 +336,7 @@ In any case, this method is meant for generating static geometry (models
 that will not be updated often), as creating vertex arrays and
 submitting them to the 3D API has a significant performance cost.
 
-.. note:: To learn about prototyping inside Godot or using external tools, see
+.. note:: To learn about prototyping inside Blazium or using external tools, see
    :ref:`doc_csg_tools`.
 
 
@@ -344,7 +344,7 @@ Immediate geometry
 ~~~~~~~~~~~~~~~~~~
 
 If, instead, you need to generate simple geometry that will be updated often,
-Godot provides a special :ref:`ImmediateMesh <class_ImmediateMesh>` resource
+Blazium provides a special :ref:`ImmediateMesh <class_ImmediateMesh>` resource
 that can be used in a :ref:`MeshInstance3D <class_MeshInstance3D>` node.
 This provides an OpenGL 1.x-style immediate-mode API to create points, lines,
 triangles, etc.
@@ -352,7 +352,7 @@ triangles, etc.
 2D in 3D
 ~~~~~~~~
 
-While Godot packs a powerful 2D engine, many types of games use 2D in a
+While Blazium packs a powerful 2D engine, many types of games use 2D in a
 3D environment. By using a fixed camera (either orthogonal or
 perspective) that does not rotate, nodes such as
 :ref:`Sprite3D <class_Sprite3D>` and
@@ -368,7 +368,7 @@ Environment
 -----------
 
 Besides editing a scene, it is often common to edit the environment.
-Godot provides a :ref:`WorldEnvironment <class_WorldEnvironment>`
+Blazium provides a :ref:`WorldEnvironment <class_WorldEnvironment>`
 node that allows changing the background color, mode (as in, put a
 skybox), and applying several types of built-in post-processing effects.
 Environments can also be overridden in the Camera.
@@ -391,8 +391,8 @@ by clicking on their respective icon.
 
 .. image:: img/tuto_3d8.webp
 
- 
-The three dots dropdown menu next to those icons can be used to adjust the properties 
+
+The three dots dropdown menu next to those icons can be used to adjust the properties
 of the preview environment and light if they are enabled.
 
 .. image:: img/tuto_3d9.webp
@@ -441,4 +441,4 @@ quite dark unless the background environment is very bright.
 
 Most outdoor scenes have a directional light (the sun or moon), while indoor
 scenes typically have several positional lights (lamps, torches, …).
-See :ref:`doc_lights_and_shadows` for more information on setting up lights in Godot.
+See :ref:`doc_lights_and_shadows` for more information on setting up lights in Blazium.

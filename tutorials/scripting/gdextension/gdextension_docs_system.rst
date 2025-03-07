@@ -5,7 +5,7 @@ GDExtension documentation system
 
 .. note::
 
-    Adding documentation for GDExtensions is only possible for Godot 4.3 and later. The support can be integrated into your project
+    Adding documentation for GDExtensions is only possible for Blazium 4.3 and later. The support can be integrated into your project
     regardless because the snippet will check if you use the appropriate godot-cpp version.
     If you set the ``compatibility_minimum`` to 4.2 and you load a project with the extension through a 4.2 editor, the
     documentation page for that class will be empty. The extension itself will still work.
@@ -39,17 +39,17 @@ XML files (one per class) to document the exposed constructors, properties, meth
     |   +--gdexample.cpp
     |   +--gdexample.h
 
-Inside the Godot demo project directory of your GDExtension directory, run the following terminal command:
+Inside the Blazium demo project directory of your GDExtension directory, run the following terminal command:
 
 .. code-block:: none
 
-    # Replace "godot" with the full path to a Godot editor binary
-    # if Godot is not installed in your `PATH`.
-    godot --doctool ../ --gdextension-docs
+    # Replace "blazium" with the full path to a Blazium editor binary
+    # if Blazium is not installed in your `PATH`.
+    blazium --doctool ../ --gdextension-docs
 
-This command calls upon the Godot editor binary to generate documentation via the ``--doctool``
-and ``--gdextension-docs`` commands. The ``../`` addition is to let Godot know where the GDExtension
-SConstruct file is located. By calling this command, Godot generates a ``doc_classes`` directory inside the
+This command calls upon the Blazium editor binary to generate documentation via the ``--doctool``
+and ``--gdextension-docs`` commands. The ``../`` addition is to let Blazium know where the GDExtension
+SConstruct file is located. By calling this command, Blazium generates a ``doc_classes`` directory inside the
 project directory in which it generates XML files for the GDExtension classes. Those files
 can then be edited to add information about member variables, methods, signals, and more.
 
@@ -70,7 +70,7 @@ flags. SCons then tries to load all the XML files inside the ``doc_classes`` dir
 to the ``sources`` variable which already includes all the source files of your extension. If it fails
 it means we are currently trying to compile the library when the ``godot_cpp`` is set to a version before 4.3.
 
-After loading the extension in a 4.3 Godot editor or later and open the documentation of your extension class
+After loading the extension in a 4.3 Blazium editor or later and open the documentation of your extension class
 either by :kbd:`Ctrl + Click` in the script editor or the Editor help dialog you will see something like this:
 
 .. image:: img/gdextension_docs_generation.webp
