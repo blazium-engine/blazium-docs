@@ -1,7 +1,7 @@
 .. _doc_introduction_to_godot:
 
 Introduction to Blazium
-=====================
+=======================
 
 This article is here to help you figure out whether Blazium might be a good fit
 for you. We will introduce some broad features of the engine to give you a feel
@@ -12,7 +12,7 @@ This is by no means an exhaustive overview. We will introduce many more features
 in this getting started series.
 
 What is Blazium?
---------------
+----------------
 
 Blazium is a general-purpose 2D and 3D game engine designed to support all sorts
 of projects. You can use it to create games or applications you can then release
@@ -87,7 +87,7 @@ completely free and open source.
 .. _doc_introduction_learning_programming:
 
 What do I need to know to use Blazium?
-------------------------------------
+--------------------------------------
 
 Blazium is a feature-packed game engine. With its thousands of features, there is
 a lot to learn. To make the most of it, you need good programming foundations.

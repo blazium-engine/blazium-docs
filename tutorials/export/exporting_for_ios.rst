@@ -25,7 +25,7 @@ Requirements
 -  Download the Blazium export templates. Use the Blazium menu: Editor > Manage Export Templates
 
 Export a Blazium project to Xcode
--------------------------------
+---------------------------------
 
 In the Blazium editor, open the **Export** window from the **Project** menu. When the
 Export window opens, click **Add..** and select **iOS**.
@@ -78,7 +78,7 @@ In the following example:
           to prevent signing issues in Xcode.
 
 Steps to link a Blazium project folder to Xcode
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 1. Start from an exported iOS project (follow the steps above).
 2. In Finder, drag the Blazium project folder into the Xcode file browser.

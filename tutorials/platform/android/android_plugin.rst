@@ -1,7 +1,7 @@
 .. _doc_android_plugin:
 
 Blazium Android plugins
-=====================
+=======================
 
 Introduction
 ------------

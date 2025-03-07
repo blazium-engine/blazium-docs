@@ -7,7 +7,7 @@
 .. _doc_intro_to_the_editor_interface:
 
 First look at Blazium's interface
-===============================
+=================================
 
 This page will give you a brief overview of Blazium's interface. We're going to
 look at the different main screens and docks to help you situate yourself.
@@ -46,7 +46,7 @@ scale, network mode, and also the directory naming convention.
 
 
 First look at Blazium's editor
-----------------------------
+------------------------------
 
 When you open a new or an existing project, the editor's interface appears.
 Let's look at its main areas:

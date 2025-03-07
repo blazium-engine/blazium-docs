@@ -59,7 +59,7 @@ Download and install the Android SDK.
 
 
 Setting it up in Blazium
-----------------------
+------------------------
 
 Enter the Editor Settings screen (under the Godot tab for macOS, or the Editor tab 
 for other platforms). This screen contains the editor settings for the user 

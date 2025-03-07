@@ -9,7 +9,7 @@ Frequently asked questions
 ==========================
 
 What can I do with Blazium? How much does it cost? What are the license terms?
-----------------------------------------------------------------------------
+------------------------------------------------------------------------------
 
 Blazium is `Free and open source Software <https://en.wikipedia.org/wiki/Free_and_open_source_software>`_
 available under the `OSI-approved <https://opensource.org/licenses/MIT>`_ MIT license. This means it is
@@ -37,7 +37,7 @@ in the Blazium repository.
 Also, see `the license page on the Blazium website <https://blazium.app/licenses>`_.
 
 Which platforms are supported by Blazium?
----------------------------------------
+-----------------------------------------
 
 **For the editor:**
 
@@ -78,7 +78,7 @@ and :ref:`compiling Blazium yourself <toc-devel-compiling>`.
     of Godot 3 for interested users.
 
 Which programming languages are supported in Blazium?
----------------------------------------------------
+-----------------------------------------------------
 
 The officially supported languages for Blazium are GDScript, C#, and C++.
 See the subcategories for each language in the :ref:`scripting <toc-learn-scripting>` section.
@@ -239,7 +239,7 @@ your 3D modeling software, and how to import them for Blazium in the
 :ref:`doc_importing_3d_scenes` documentation.
 
 Will [insert closed SDK such as FMOD, GameWorks, etc.] be supported in Blazium?
------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
 
 The aim of Blazium is to create a free and open source MIT-licensed engine that
 is modular and extendable. There are no plans for the core engine development
@@ -259,7 +259,7 @@ Blazium is not owned by one person; it belongs to the community, and it grows al
 with ambitious community contributors like you.
 
 How can I extend Blazium?
------------------------
+-------------------------
 
 For extending Blazium, like creating Blazium Editor plugins or adding support
 for additional languages, take a look at :ref:`EditorPlugins <doc_making_plugins>`
@@ -275,7 +275,7 @@ for Blazium. This would be a good starting point to see how another
 third-party library integrates with Blazium.
 
 How do I install the Blazium editor on my system (for desktop integration)?
--------------------------------------------------------------------------
+---------------------------------------------------------------------------
 
 Since you don't need to actually install Blazium on your system to run it,
 this means desktop integration is not performed automatically.
@@ -326,7 +326,7 @@ Linux
   to make the shortcut available for all users.
 
 Is the Blazium editor a portable application?
--------------------------------------------
+---------------------------------------------
 
 In its default configuration, Blazium is *semi-portable*. Its executable can run
 from any location (including non-writable locations) and never requires
@@ -341,7 +341,7 @@ If *true* portable operation is desired (e.g. for use on a USB stick),
 follow the steps in :ref:`doc_data_paths_self_contained_mode`.
 
 Why does Blazium prioritize Vulkan and OpenGL over Direct3D?
-----------------------------------------------------------
+------------------------------------------------------------
 
 Blazium aims for cross-platform compatibility and open standards first and
 foremost. OpenGL and Vulkan are the technologies that are both open and
@@ -356,7 +356,7 @@ Direct3D 12 is prevalent, such as Windows and Xbox. However, Vulkan and OpenGL
 will continue as the default rendering drivers on all platforms, including Windows.
 
 Why does Blazium aim to keep its core feature set small?
-------------------------------------------------------
+--------------------------------------------------------
 
 Blazium intentionally does not include features that can be implemented by add-ons
 unless they are used very often. One example of something not used often is
@@ -437,19 +437,19 @@ horizontal FOV.
 And that's it! Your game should work in multiple resolutions.
 
 When is the next release of Blazium out?
---------------------------------------
+----------------------------------------
 
 When it's ready! See :ref:`doc_release_policy_when_is_next_release_out` for more
 information.
 
 Which Blazium version should I use for a new project?
----------------------------------------------------
+-----------------------------------------------------
 
 We recommend using the latest release build of Blazium for new projects.
 See :ref:`doc_release_policy_which_version_should_i_use` for more information.
 
 Should I upgrade my project to use new Blazium versions?
-------------------------------------------------------
+--------------------------------------------------------
 
 Some new versions are safer to upgrade to than others. In general, whether you
 should upgrade depends on your project's circumstances. See
@@ -481,7 +481,7 @@ We explain how to work with the engine source, how to edit the documentation, an
 what other ways to contribute are there in our :ref:`documentation for contributors <doc_ways_to_contribute>`.
 
 I have a great idea for Blazium. How can I share it?
---------------------------------------------------
+----------------------------------------------------
 
 We are always looking for suggestions about how to improve the engine. User feedback
 is the main driving force behind our decision-making process, and limitations that
@@ -511,7 +511,7 @@ document before creating a proposal to learn more about the process.
 .. _doc_faq_non_game_applications:
 
 Is it possible to use Blazium to create non-game applications?
-------------------------------------------------------------
+--------------------------------------------------------------
 
 Yes! Blazium features an extensive built-in UI system, and its small distribution
 size can make it a suitable alternative to frameworks like Electron or Qt.
@@ -527,7 +527,7 @@ open source applications made with Godot.
 .. _doc_faq_use_godot_as_library:
 
 Is it possible to use Blazium as a library?
------------------------------------------
+-------------------------------------------
 
 Blazium is meant to be used with its editor. We recommend you give it a try, as it
 will most likely save you time in the long term. There are no plans to make
@@ -540,7 +540,7 @@ compared to Blazium. This will make it more difficult to find answers to your
 questions.
 
 What user interface toolkit does Blazium use?
--------------------------------------------
+---------------------------------------------
 
 Blazium does not use a standard :abbr:`GUI (Graphical User Interface)` toolkit
 like GTK, Qt or wxWidgets. Instead, Blazium uses its own user interface toolkit,
@@ -562,7 +562,7 @@ but you can still
 .. _doc_faq_why_scons:
 
 Why does Blazium use the SCons build system?
-------------------------------------------
+--------------------------------------------
 
 Blazium uses the `SCons <https://www.scons.org/>`__ build system. There are no
 plans to switch to a different build system in the near future. There are many
@@ -591,7 +591,7 @@ you are planning to build Blazium yourself.
 .. _doc_faq_why_not_stl:
 
 Why does Blazium not use STL (Standard Template Library)?
--------------------------------------------------------
+---------------------------------------------------------
 
 Like many other libraries (Qt as an example), Blazium does not make use of STL
 (with a few exceptions such as threading primitives). We believe STL is a great
@@ -610,7 +610,7 @@ general-purpose library, but we had special requirements for Blazium.
   internationalization support.
 
 Why does Blazium not use exceptions?
-----------------------------------
+------------------------------------
 
 We believe games should not crash, no matter what. If an unexpected
 situation happens, Blazium will print an error (which can be traced even to
@@ -621,7 +621,7 @@ Additionally, exceptions significantly increase the binary size for the
 executable and result in increased compile times.
 
 Does Blazium use an ECS (Entity Component System)?
-------------------------------------------------
+--------------------------------------------------
 
 Blazium does **not** use an ECS and relies on inheritance instead. While there
 is no universally better approach, we found that using an inheritance-based approach
@@ -635,7 +635,7 @@ More information about Blazium's design choices can be found in
 `this article <https://godotengine.org/article/why-isnt-godot-ecs-based-game-engine>`__.
 
 Why does Blazium not force users to implement DOD (Data-Oriented Design)?
------------------------------------------------------------------------
+-------------------------------------------------------------------------
 
 While Blazium internally attempts to use cache coherency as much as possible,
 we believe users don't need to be forced to use DOD practices.
@@ -655,11 +655,11 @@ is to use C++ and GDExtensions for performance-heavy tasks and GDScript (or C#)
 for the rest of the game.
 
 How can I support Blazium development or contribute?
---------------------------------------------------
+----------------------------------------------------
 
 See :ref:`doc_ways_to_contribute`.
 
 Who is working on Blazium? How can I contact you?
------------------------------------------------
+-------------------------------------------------
 
 `Join our discord <https://chat.blazium>`.

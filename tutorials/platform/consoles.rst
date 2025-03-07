@@ -1,7 +1,7 @@
 .. _doc_consoles:
 
 Console support in Blazium
-========================
+==========================
 
 Console porting process
 -----------------------

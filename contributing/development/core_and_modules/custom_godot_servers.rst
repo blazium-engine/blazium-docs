@@ -1,7 +1,7 @@
 .. _doc_custom_godot_servers:
 
 Custom Blazium servers
-====================
+======================
 
 Introduction
 ------------
@@ -33,7 +33,7 @@ What for?
 - And more...
 
 Creating a Blazium server
------------------------
+-------------------------
 
 At minimum, a server must have a static instance, a sleep timer, a thread loop,
 an initialization state and a cleanup procedure.

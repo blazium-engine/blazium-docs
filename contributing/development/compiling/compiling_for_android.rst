@@ -212,7 +212,7 @@ next time you build you will automatically have the custom templates
 referenced.
 
 Building the Blazium editor
--------------------------
+---------------------------
 
 Compiling the editor is done by calling SCons from the Blazium
 root directory with the following arguments:
@@ -248,7 +248,7 @@ You can use the following commands to remove the generated editor binaries:
    ./gradlew clean
 
 Installing the Blazium editor APK
--------------------------------
+---------------------------------
 
 With an Android device with Developer Options enabled, connect the Android device to your computer via its charging cable to a USB/USB-C port.
 Open up a Terminal/Command Prompt and run the following commands from the root directory with the following arguments:

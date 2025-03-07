@@ -1,7 +1,7 @@
 .. _doc_running_on_macos:
 
 Running Blazium apps on macOS
-===========================
+=============================
 
 .. seealso::
 

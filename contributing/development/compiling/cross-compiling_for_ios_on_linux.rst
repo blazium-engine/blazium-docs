@@ -105,7 +105,7 @@ Now you should have the iOS toolchain binaries in
 ``$HOME/iostoolchain/usr/bin``.
 
 Compiling Blazium for iPhone
---------------------------
+----------------------------
 
 Once you've done the above steps, you should keep two things in your
 environment: the built toolchain and the iPhoneOS SDK directory. Those

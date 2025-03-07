@@ -18,7 +18,7 @@ In situations where a single sanitizer is provided by several different compiler
 remember that their output and behavior will differ slightly.
 
 Using sanitizers on Blazium
--------------------------
+---------------------------
 
 Sanitizers **require** recompiling the binary. This means you cannot use
 official Blazium binaries to run sanitizers.

@@ -23,7 +23,7 @@ of the editor from the Blazium website.
    diagnostics/index
 
 Blazium API for C#
-----------------
+------------------
 
 As a general purpose game engine Blazium offers some high-level features as a part
 of its API. Articles below explain how these features integrate into C# and how

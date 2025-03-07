@@ -72,8 +72,8 @@ If you decide to document a class, but don't know what a particular method does,
 worry. Leave it for now, and list the methods you skipped when you open a pull request
 with your changes. Another writer will take care of it.
 
-You can still look at the methods' implementation in Godot's source code on GitHub.
-If you have doubts, feel free to ask on `blazium's official discord server <https://chat.blazium.app/>`_.
+You can still look at the methods' implementation in Blazium's source code on GitHub.
+If you have doubts, feel free to ask on the `Blazium Discord <https://chat.blazium.app/>`_.
 
 .. warning::
 
