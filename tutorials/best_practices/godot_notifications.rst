@@ -1,7 +1,7 @@
 .. _doc_godot_notifications:
 
 Blazium notifications
-===================
+=====================
 
 Every Object in Blazium implements a
 :ref:`_notification <class_Object_private_method__notification>` method. Its purpose is to

@@ -23,7 +23,7 @@ These profilers may not be the most powerful or flexible options, but their
 standalone operation and limited feature set tends to make them easier to use.
 
 Setting up Blazium
-----------------
+------------------
 
 To get useful profiling information, it is **absolutely required** to use a Blazium
 build that includes debugging symbols. Official binaries do not include debugging

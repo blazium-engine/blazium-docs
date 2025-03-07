@@ -220,14 +220,14 @@ given build type.
 | ``--dump-gdextension-interface``                                 | |editor| Generate GDExtension header file 'gdnative_interface.h' in the current folder. This file is the base file required to implement a GDExtension. |
 +------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------+
 | ``--dump-extension-api``                                         | |editor| Generate JSON dump of the Blazium API for GDExtension bindings named 'extension_api.json' in the current folder.                                 |
-+------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------+
-| ``--validate-extension-api <path>``                              | |editor| Validate an extension API file dumped (with the option above) from a previous version of the engine to ensure API compatibility.               |
-|                                                                  | If incompatibilities or errors are detected, the return code will be non-zero.                                                                          |
-+------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------+
-| ``--benchmark``                                                  | |editor| Benchmark the run time and print it to console.                                                                                                |
-+------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------+
-| ``--benchmark-file <path>``                                      | |editor| Benchmark the run time and save it to a given file in JSON format. The path should be absolute.                                                |
-+------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------+
++------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ``--validate-extension-api <path>``                              | |editor| Validate an extension API file dumped (with the option above) from a previous version of the engine to ensure API compatibility.                 |
+|                                                                  | If incompatibilities or errors are detected, the return code will be non-zero.                                                                            |
++------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ``--benchmark``                                                  | |editor| Benchmark the run time and print it to console.                                                                                                  |
++------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ``--benchmark-file <path>``                                      | |editor| Benchmark the run time and save it to a given file in JSON format. The path should be absolute.                                                  |
++------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 Path
 ----

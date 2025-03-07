@@ -4,7 +4,7 @@ Setting up XR
 =============
 
 Introduction to the XR system in Blazium
---------------------------------------
+----------------------------------------
 
 Blazium provides a modular XR system that abstracts many of the different XR platform specifics away from the user.
 At the core sits the :ref:`XRServer <class_xrserver>` which acts as a central interface to the XR system that allows users to discover interfaces and interact with the components of the XR system.

@@ -6,7 +6,7 @@ Getting the source
 .. highlight:: shell
 
 Downloading the Blazium source code
----------------------------------
+-----------------------------------
 
 Before :ref:`getting into the SCons build system <doc_introduction_to_the_buildsystem>`
 and compiling Blazium, you need to actually download the Blazium source code.

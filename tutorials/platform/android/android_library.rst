@@ -1,7 +1,7 @@
 .. _doc_android_library:
 
 Blazium Android library
-=====================
+=======================
 
 The Blazium Engine for Android platforms is designed to be used as an `Android library <https://developer.android.com/studio/projects/android-library>`_.
 This architecture enables several key features on Android platforms:
@@ -16,14 +16,14 @@ This architecture enables several key features on Android platforms:
 Below we describe some of the use-cases and scenarios this architecture enables.
 
 Using the Blazium Android library
--------------------------------
+---------------------------------
 
 The Blazium Android library is packaged as an AAR archive file and hosted on `MavenCentral <https://central.sonatype.com/artifact/org.godotengine/godot>`_ along with `its documentation <https://javadoc.io/doc/org.godotengine/godot/latest/index.html>`_.
 
 It provides access to Blazium APIs and capabilities on Android platforms for the following non-exhaustive use-cases.
 
 Blazium Android plugins
----------------------
+-----------------------
 
 Android plugins are powerful tools to extend the capabilities of the Blazium Engine
 by tapping into the functionality provided by Android platforms and ecosystem.
@@ -35,7 +35,7 @@ granting it powerful capabilities such as GDExtension support which allows to up
 For more information, see :ref:`Godot Android plugins <doc_android_plugin>`.
 
 Embedding Blazium in existing Android projects
---------------------------------------------
+----------------------------------------------
 
 The Blazium Engine can be embedded within existing Android applications or libraries,
 allowing developers to leverage mature and battle-tested code and libraries better suited to a specific task.

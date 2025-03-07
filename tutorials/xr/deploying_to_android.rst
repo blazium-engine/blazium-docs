@@ -74,7 +74,7 @@ and **Khronos XR Features** for HTC are available. You will need to select the
 appropriate settings if you wish to use these features.
 
 Running on your device from the Blazium editor
---------------------------------------------
+----------------------------------------------
 If you've setup your export settings as described above, and your headset is connected to your computer and correctly recognized, you can launch it directly from the Blazium editor using :ref:`doc_one-click_deploy`:
 
 .. image:: img/android_one_click_deploy.webp

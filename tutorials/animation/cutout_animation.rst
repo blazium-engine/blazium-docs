@@ -26,7 +26,7 @@ this are `Paper Mario <https://en.wikipedia.org/wiki/Super_Paper_Mario>`__ or
 `Rayman Origins <https://en.wikipedia.org/wiki/Rayman_Origins>`__ .
 
 Cutout animation in Blazium
-~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Blazium provides tools for working with cutout rigs, and is ideal for the workflow:
 

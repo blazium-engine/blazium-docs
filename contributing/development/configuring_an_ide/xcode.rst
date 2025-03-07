@@ -59,7 +59,7 @@ Importing the project
 - Select **Create groups** for the **Added folders** option and check *only*
   your command line indexing target in the **Add to targets** section.
 
-.. figure:: img/xcode_6_after_add_blazium_source_to_project.webp
+.. figure:: img/xcode_6_after_add_godot_source_to_project.webp
    :figclass: figure-w480
    :align: center
 

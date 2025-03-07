@@ -461,7 +461,7 @@ files in the Blazium repository, replace existing arguments written like 'this' 
 .. _doc_docs_writing_guidelines_common_vocabulary:
 
 Common vocabulary to use in Blazium's documentation
--------------------------------------------------
+---------------------------------------------------
 
 The developers chose some specific words to refer to areas of the
 interface. They're used in the sources, in the documentation, and you

@@ -1,7 +1,7 @@
 .. _doc_what_are_godot_classes:
 
 Applying object-oriented principles in Blazium
-============================================
+==============================================
 
 The engine offers two main ways to create reusable objects: scripts and scenes. Neither of these
 technically define classes under the hood.

@@ -3,7 +3,7 @@
 .. _doc_release_policy:
 
 Blazium release policy
-====================
+======================
 
 Blazium builds are divided in ``nightly``, ``pre-release`` and ``release``.
 
@@ -12,7 +12,7 @@ Blazium builds are divided in ``nightly``, ``pre-release`` and ``release``.
 - ``release`` build are considered stable and can be safely used.
 
 Blazium versioning
-----------------
+------------------
 
 Blazium follows `Semantic Versioning <https://semver.org/>`__ with a
 ``major.minor.patch`` versioning system, albeit with an interpretation of each
@@ -133,10 +133,10 @@ term adapted to the complexity of a game engine:
 .. .. |unstable| image:: img/unstable.png
 
 .. **Legend:**
-.. |supported| Full support –
-.. |partial| Partial support –
-.. |eol| No support (end of life) –
-.. |unstable| Development version
+.. .. |supported| Full support –
+.. .. |partial| Partial support –
+.. .. |eol| No support (end of life) –
+.. .. |unstable| Development version
 
 .. Pre-release Godot versions aren't intended to be used in production and are
 .. provided for testing purposes only.

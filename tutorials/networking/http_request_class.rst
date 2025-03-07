@@ -25,7 +25,7 @@ So HTTP may be useful for your game's login system, lobby browser,
 to retrieve some information from the web or to download game assets.
 
 HTTP requests in Blazium
-----------------------
+------------------------
 
 The :ref:`HTTPRequest <class_HTTPRequest>` node is the easiest way to make HTTP requests in Blazium.
 It is backed by the more low-level :ref:`HTTPClient <class_HTTPClient>`,

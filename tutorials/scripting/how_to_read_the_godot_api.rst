@@ -1,7 +1,7 @@
 .. _doc_how_to_read_the_godot_api:
 
 How to read the Blazium API
-=========================
+===========================
 
 On this page, you'll learn how to read the class reference for the Blazium API.
 

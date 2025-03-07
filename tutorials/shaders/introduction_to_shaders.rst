@@ -44,7 +44,7 @@ look like this.
    pixel it has to draw. More on that below.
 
 Shaders in Blazium
-----------------
+------------------
 
 Blazium provides a shading language based on the popular OpenGL Shading Language
 (GLSL) but simplified. The engine handles some of the lower-level initialization

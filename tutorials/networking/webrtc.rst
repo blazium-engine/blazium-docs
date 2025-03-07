@@ -33,7 +33,7 @@ However, this comes at a price, which is that some media information must be exc
 Peers connect to a signaling server (for example a WebSocket server) and send their media information. The server then relays this information to other peers, allowing them to establish the desired direct communication. Once this step is done, peers can disconnect from the signaling server and keep the direct Peer-to-Peer (P2P) connection open.
 
 Using WebRTC in Blazium
----------------------
+-----------------------
 
 WebRTC is implemented in Blazium via two main classes :ref:`WebRTCPeerConnection <class_WebRTCPeerConnection>` and :ref:`WebRTCDataChannel <class_WebRTCDataChannel>`, plus the multiplayer API implementation :ref:`WebRTCMultiplayerPeer <class_WebRTCMultiplayerPeer>`. See section on :ref:`high-level multiplayer <doc_high_level_multiplayer>` for more details.
 
