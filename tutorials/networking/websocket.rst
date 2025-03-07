@@ -18,7 +18,7 @@ Due to its simplicity, its wide compatibility, and being easier to use than a ra
 Blazium supports WebSocket in both native and HTML5 exports.
 
 Using WebSocket in Blazium
-------------------------
+--------------------------
 
 WebSocket is implemented in Blazium via :ref:`WebSocketPeer <class_WebSocketPeer>`. The WebSocket implementation is compatible with the High Level Multiplayer. See section on :ref:`high-level multiplayer <doc_high_level_multiplayer>` for more details.
 

@@ -89,7 +89,7 @@ by going to Virus & threat protection > Virus & threat protection settings >
 Add or remove exclusions.
 
 The Blazium editor appears frozen after clicking the system console
------------------------------------------------------------------
+-------------------------------------------------------------------
 
 When running Blazium on Windows with the system console enabled, you can
 accidentally enable *selection mode* by clicking inside the command window. This
@@ -100,7 +100,7 @@ To solve this, select the system console window and press Enter to leave
 selection mode.
 
 The Blazium editor's macOS dock icon gets duplicated every time it is manually moved
-----------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
 
 If you open the Blazium editor and manually change the position of the dock icon,
 then restart the editor, you will get a duplicate dock icon all the way to the

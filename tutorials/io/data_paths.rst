@@ -1,7 +1,7 @@
 .. _doc_data_paths:
 
 File paths in Blazium projects
-============================
+==============================
 
 This page explains how file paths work inside Blazium projects. You will learn how
 to access paths in your projects using the ``res://`` and ``user://`` notations,
@@ -85,21 +85,21 @@ Project Settings:
 
 On desktop platforms, the actual directory paths for ``user://`` are:
 
-+---------------------+------------------------------------------------------------------------------+
-| Type                | Location                                                                     |
-+=====================+==============================================================================+
++---------------------+--------------------------------------------------------------------------------+
+| Type                | Location                                                                       |
++=====================+================================================================================+
 | Default             | | Windows: ``%APPDATA%\Blazium\app_userdata\[project_name]``                   |
 |                     | | macOS: ``~/Library/Application Support/Blazium/app_userdata/[project_name]`` |
 |                     | | Linux: ``~/.local/share/blazium/app_userdata/[project_name]``                |
-+---------------------+------------------------------------------------------------------------------+
-| Custom dir          | | Windows: ``%APPDATA%\[project_name]``                                      |
-|                     | | macOS: ``~/Library/Application Support/[project_name]``                    |
-|                     | | Linux: ``~/.local/share/[project_name]``                                   |
-+---------------------+------------------------------------------------------------------------------+
-| Custom dir and name | | Windows: ``%APPDATA%\[custom_user_dir_name]``                              |
-|                     | | macOS: ``~/Library/Application Support/[custom_user_dir_name]``            |
-|                     | | Linux: ``~/.local/share/[custom_user_dir_name]``                           |
-+---------------------+------------------------------------------------------------------------------+
++---------------------+--------------------------------------------------------------------------------+
+| Custom dir          | | Windows: ``%APPDATA%\[project_name]``                                        |
+|                     | | macOS: ``~/Library/Application Support/[project_name]``                      |
+|                     | | Linux: ``~/.local/share/[project_name]``                                     |
++---------------------+--------------------------------------------------------------------------------+
+| Custom dir and name | | Windows: ``%APPDATA%\[custom_user_dir_name]``                                |
+|                     | | macOS: ``~/Library/Application Support/[custom_user_dir_name]``              |
+|                     | | Linux: ``~/.local/share/[custom_user_dir_name]``                             |
++---------------------+--------------------------------------------------------------------------------+
 
 ``[project_name]`` is based on the application name defined in the Project Settings, but
 you can override it on a per-platform basis using :ref:`feature tags <doc_feature_tags>`.

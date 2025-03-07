@@ -287,7 +287,7 @@ Troubleshooting
     on GitHub.
 
 My controller isn't recognized by Blazium.
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 First, check that your controller is recognized by other applications. You can
 use the `Gamepad Tester <https://gamepad-tester.com/>`__ website to confirm that

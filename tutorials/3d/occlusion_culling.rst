@@ -75,7 +75,7 @@ performance gains.
     added setup and CPU usage.
 
 How occlusion culling works in Blazium
-------------------------------------
+--------------------------------------
 
 .. note::
 

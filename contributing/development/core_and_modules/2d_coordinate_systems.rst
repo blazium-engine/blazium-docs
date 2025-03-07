@@ -15,7 +15,7 @@ available in Blazium. For a deeper understanding, the :ref:`doc_matrices_and_tra
 offers insights to the underlying functionality.
 
 Blazium 2D coordinate systems
----------------------------
+-----------------------------
 
 The following graphic gives an overview of Blazium 2D coordinate systems and the available
 node-transforms, transform-functions and coordinate-system related functions. At the left

@@ -32,7 +32,7 @@ request triggers a rebuild of the online documentation upon merging.
              :ref:`doc_updating_the_class_reference`.
 
 What is the Blazium documentation
--------------------------------
+---------------------------------
 
 The Blazium documentation is intended as a comprehensive reference manual for the
 Blazium game engine. It is not meant to contain step-by-step tutorials, except for

@@ -31,7 +31,7 @@ Refer to the :ref:`Introduction <toc-learn-introduction>` and the
 :ref:`Creating your first script <doc_scripting_first_script>` pages if needed.
 
 HTTP requests in Blazium
-----------------------
+------------------------
 
 The :ref:`HTTPRequest <class_HTTPRequest>` node is the easiest way to make HTTP requests in Blazium.
 It is backed by the more low-level :ref:`HTTPClient <class_HTTPClient>`,

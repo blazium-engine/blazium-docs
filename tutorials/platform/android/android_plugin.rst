@@ -1,7 +1,7 @@
 .. _doc_android_plugin:
 
 Blazium Android plugins
-=====================
+=======================
 
 Introduction
 ------------
@@ -355,7 +355,7 @@ For example::
             printerr("Initialization error")
 
 Support using the GDExtension functionality in the Blazium Editor
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If planning to use the GDExtension functionality in the Blazium Editor, it is recommended that the
 GDExtension's native binaries are compiled not just for Android, but also for the OS onto which
@@ -367,7 +367,7 @@ editor. You can use the `godot-cpp-template <https://github.com/godotengine/godo
 github template for reference on how to do so.
 
 Blazium crashes upon load
-^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Check ``adb logcat`` for possible problems, then:
 

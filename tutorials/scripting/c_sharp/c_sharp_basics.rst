@@ -355,7 +355,7 @@ on structs, allowing you to do the same thing in a single line.
 You can read more about this error on the `C# language reference <https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/compiler-messages/cs1612>`_.
 
 Performance of C# in Blazium
---------------------------
+----------------------------
 
 According to some preliminary `benchmarks <https://github.com/cart/godot3-bunnymark>`_,
 the performance of C# in Blazium — while generally in the same order of magnitude
@@ -406,7 +406,7 @@ The implicit conversion from ``string`` to ``NodePath`` or ``StringName`` incur 
 costs as the ``string`` has to be marshalled and passed to the respective native constructor.
 
 Using NuGet packages in Blazium
------------------------------
+-------------------------------
 
 `NuGet <https://www.nuget.org/>`_ packages can be installed and used with Blazium,
 as with any C# project. Many IDEs are able to add packages directly.

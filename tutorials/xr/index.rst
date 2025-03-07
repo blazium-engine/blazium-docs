@@ -34,7 +34,7 @@ Advanced topics
    openxr_body_tracking
 
 Blazium XR Tools
---------------
+----------------
 
 .. toctree::
    :maxdepth: 1

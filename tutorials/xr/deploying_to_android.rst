@@ -102,7 +102,7 @@ Now you can repeat the same process for the other devices.
     It is highly advisable to use the compatibility renderer (OpenGL) for the time being when targeting Android based XR devices.
 
 Running on your device from the Blazium editor
---------------------------------------------
+----------------------------------------------
 If you've setup your export settings as described above, and your headset is connected to your computer and correctly recognized, you can launch it directly from the Blazium editor using :ref:`doc_one-click_deploy`:
 
 .. image:: img/android_one_click_deploy.webp

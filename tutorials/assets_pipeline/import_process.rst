@@ -4,7 +4,7 @@ Import process
 ==============
 
 Importing assets in Blazium
--------------------------
+---------------------------
 
 To import assets in Blazium, place your assets (image files, scenes, audio
 files, fonts, etc) directly in the project folder. There are 2 ways to achieve this:

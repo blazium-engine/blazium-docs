@@ -59,7 +59,7 @@ Download and install the Android SDK.
 
 
 Setting it up in Blazium
-----------------------
+------------------------
 
 Enter the Editor Settings screen. This screen contains the editor
 settings for the user account in the computer (it's independent of the

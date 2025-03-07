@@ -5,7 +5,7 @@
 .. _doc_key_concepts_overview:
 
 Overview of Blazium's key concepts
-================================
+==================================
 
 Every game engine revolves around abstractions you use to build your
 applications. In Blazium, a game is a **tree** of **nodes** that you group

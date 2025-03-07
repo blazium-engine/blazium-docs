@@ -2,7 +2,7 @@ Materials
 =========
 
 Using existing Blazium materials
-------------------------------
+--------------------------------
 
 One way in which the exporter can handle materials is to attempt to match
 the Blender material with an existing Blazium material. This has the advantage of

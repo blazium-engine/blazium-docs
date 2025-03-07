@@ -2,7 +2,7 @@ Debugging on macOS
 ==================
 
 Debugging Blazium editor
-----------------------
+------------------------
 
 Attaching a debugger to the signed macOS process requires the "com.apple.security.get-task-allow" entitlement, which is not enabled by default, since apps can't be notarized as long as it is enabled.
 If you want to debug an official build of the editor it should be re-signed with the proper entitlements.

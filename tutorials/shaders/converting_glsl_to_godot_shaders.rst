@@ -1,7 +1,7 @@
 .. _doc_converting_glsl_to_godot_shaders:
 
 Converting GLSL to Blazium shaders
-================================
+==================================
 
 This document explains the differences between Blazium's shading language and GLSL
 and gives practical advice on how to migrate shaders from other sources, such as
@@ -160,31 +160,31 @@ equivalents are listed as "Provide with Uniform", users are responsible for
 creating that uniform themselves. The description gives the reader a hint about
 what they can pass in as a substitute.
 
-+---------------------+---------+------------------------+-----------------------------------------------------+
-|Variable             |Type     |Equivalent              |Description                                          |
-+=====================+=========+========================+=====================================================+
-|fragColor            |out vec4 |COLOR                   |Output color for each pixel.                         |
-+---------------------+---------+------------------------+-----------------------------------------------------+
-|fragCoord            |vec2     |FRAGCOORD.xy            |For full screen quads. For smaller quads, use UV.    |
-+---------------------+---------+------------------------+-----------------------------------------------------+
-|iResolution          |vec3     |1.0 / SCREEN_PIXEL_SIZE |Can also pass in manually.                           |
-+---------------------+---------+------------------------+-----------------------------------------------------+
-|iTime                |float    |TIME                    |Time since shader started.                           |
-+---------------------+---------+------------------------+-----------------------------------------------------+
-|iTimeDelta           |float    |Provide with Uniform    |Time to render previous frame.                       |
-+---------------------+---------+------------------------+-----------------------------------------------------+
-|iFrame               |float    |Provide with Uniform    |Frame number.                                        |
-+---------------------+---------+------------------------+-----------------------------------------------------+
-|iChannelTime[4]      |float    |Provide with Uniform    |Time since that particular texture started.          |
-+---------------------+---------+------------------------+-----------------------------------------------------+
-|iMouse               |vec4     |Provide with Uniform    |Mouse position in pixel coordinates.                 |
-+---------------------+---------+------------------------+-----------------------------------------------------+
-|iDate                |vec4     |Provide with Uniform    |Current date, expressed in seconds.                  |
-+---------------------+---------+------------------------+-----------------------------------------------------+
-|iChannelResolution[4]|vec3     |1.0 / TEXTURE_PIXEL_SIZE|Resolution of particular texture.                    |
-+---------------------+---------+------------------------+-----------------------------------------------------+
++---------------------+---------+------------------------+-------------------------------------------------------+
+|Variable             |Type     |Equivalent              |Description                                            |
++=====================+=========+========================+=======================================================+
+|fragColor            |out vec4 |COLOR                   |Output color for each pixel.                           |
++---------------------+---------+------------------------+-------------------------------------------------------+
+|fragCoord            |vec2     |FRAGCOORD.xy            |For full screen quads. For smaller quads, use UV.      |
++---------------------+---------+------------------------+-------------------------------------------------------+
+|iResolution          |vec3     |1.0 / SCREEN_PIXEL_SIZE |Can also pass in manually.                             |
++---------------------+---------+------------------------+-------------------------------------------------------+
+|iTime                |float    |TIME                    |Time since shader started.                             |
++---------------------+---------+------------------------+-------------------------------------------------------+
+|iTimeDelta           |float    |Provide with Uniform    |Time to render previous frame.                         |
++---------------------+---------+------------------------+-------------------------------------------------------+
+|iFrame               |float    |Provide with Uniform    |Frame number.                                          |
++---------------------+---------+------------------------+-------------------------------------------------------+
+|iChannelTime[4]      |float    |Provide with Uniform    |Time since that particular texture started.            |
++---------------------+---------+------------------------+-------------------------------------------------------+
+|iMouse               |vec4     |Provide with Uniform    |Mouse position in pixel coordinates.                   |
++---------------------+---------+------------------------+-------------------------------------------------------+
+|iDate                |vec4     |Provide with Uniform    |Current date, expressed in seconds.                    |
++---------------------+---------+------------------------+-------------------------------------------------------+
+|iChannelResolution[4]|vec3     |1.0 / TEXTURE_PIXEL_SIZE|Resolution of particular texture.                      |
++---------------------+---------+------------------------+-------------------------------------------------------+
 |iChanneli            |Sampler2D|TEXTURE                 |Blazium provides only one built-in; user can make more.|
-+---------------------+---------+------------------------+-----------------------------------------------------+
++---------------------+---------+------------------------+-------------------------------------------------------+
 
 Coordinates
 ^^^^^^^^^^^

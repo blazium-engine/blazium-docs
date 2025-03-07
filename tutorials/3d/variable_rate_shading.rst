@@ -79,7 +79,7 @@ Variable rate shading is only supported on specific GPUs:
 As of January 2023, Apple and Raspberry Pi GPUs do not support variable rate shading.
 
 Using variable rate shading in Blazium
-------------------------------------
+--------------------------------------
 
 .. note::
 

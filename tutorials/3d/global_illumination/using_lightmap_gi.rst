@@ -130,7 +130,7 @@ their UV2 maps properly generated.
     and engine versions.
 
 Unwrap from within Blazium
-^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. warning::
 

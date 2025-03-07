@@ -86,7 +86,7 @@ SCons version is too old. Update it to the latest version with
 .. _doc_compiling_for_windows_install_vs:
 
 Downloading Blazium's source
---------------------------
+----------------------------
 
 Refer to :ref:`doc_getting_source` for detailed instructions.
 

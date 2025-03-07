@@ -481,7 +481,7 @@ certain C# arrays and the collection types defined in the ``Godot.Collections``
 namespace are Variant-compatible, therefore, only those types can be exported.
 
 Exporting Blazium arrays
-^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: csharp
 
@@ -521,7 +521,7 @@ drag-and-dropping multiple files from the FileSystem dock.
     public Godot.Collections.Array<PackedScene> Scenes { get; set; }
 
 Exporting Blazium dictionaries
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: csharp
 

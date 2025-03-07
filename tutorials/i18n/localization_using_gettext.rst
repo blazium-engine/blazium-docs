@@ -149,7 +149,7 @@ Alternatively, you can do that graphically using Poedit, or by uploading the
 POT file to your web platform of choice.
 
 Loading a messages file in Blazium
---------------------------------
+----------------------------------
 
 To register a messages file as a translation in a project, open the
 **Project Settings**, then go to the **Localization** tab.

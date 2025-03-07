@@ -1,7 +1,7 @@
 .. _doc_godot_design_philosophy:
 
 Blazium's design philosophy
-=========================
+===========================
 
 Now that you've gotten your feet wet, let's talk about Blazium's design.
 
@@ -138,7 +138,7 @@ improvements in all corners of the engine at the same time in every
 major release.
 
 The Blazium editor is a Blazium game
---------------------------------
+------------------------------------
 
 The Blazium editor runs on the game engine. It uses the engine's own UI
 system, it can hot-reload code and scenes when you test your projects,

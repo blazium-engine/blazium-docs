@@ -10,7 +10,7 @@ These specifications are given for informative purposes only, but they can be
 referred to if you're looking to build or upgrade a system to use Blazium on.
 
 Blazium editor
-------------
+--------------
 
 These are the **minimum** specifications required to run the Blazium editor and work
 on a simple 2D or 3D project:
@@ -179,7 +179,7 @@ Mobile device (smartphone/tablet) - Recommended
 +----------------------+-----------------------------------------------------------------------------------------+
 
 Exported Blazium project
-----------------------
+------------------------
 
 .. warning::
 

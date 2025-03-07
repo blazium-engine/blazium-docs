@@ -72,8 +72,7 @@ worry. Leave it for now, and list the methods you skipped when you open a pull r
 with your changes. Another writer will take care of it.
 
 You can still look at the methods' implementation in Blazium's source code on GitHub.
-If you have doubts, feel free to ask on the
- `Blazium Discord <https://chat.blazium.app/>`_.
+If you have doubts, feel free to ask on the `Blazium Discord <https://chat.blazium.app/>`_.
 
 .. warning::
 

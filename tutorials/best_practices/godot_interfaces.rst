@@ -1,7 +1,7 @@
 .. _doc_godot_interfaces:
 
 Blazium interfaces
-================
+==================
 
 Often one needs scripts that rely on other objects for features. There
 are 2 parts to this process:

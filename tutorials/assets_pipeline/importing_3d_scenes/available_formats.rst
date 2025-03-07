@@ -95,7 +95,7 @@ a Blazium scene file, which is what gets used when you run/export your game.
     Blender's Materials tab, then export the scene to glTF again.
 
 Importing ``.blend`` files directly within Blazium
-------------------------------------------------
+--------------------------------------------------
 
 .. note::
 
@@ -159,7 +159,7 @@ For complex scenes or scenes that contain animations, Blazium provides a
 that will correctly export COLLADA scenes for use in Blazium.
 
 Importing OBJ files in Blazium
-----------------------------
+------------------------------
 
 OBJ is one of the simplest 3D formats out there, so Blazium should be able to
 import most OBJ files successfully. However, OBJ is also a very limited format:
@@ -185,7 +185,7 @@ There are 2 ways to use OBJ meshes in Blazium:
     overbright).
 
 Importing FBX files in Blazium
-----------------------------
+------------------------------
 
 By default any FBX file added to a Blazium project in Godot 4.3 or later will
 use the ufbx import method. Any file that was was added to a project in a
