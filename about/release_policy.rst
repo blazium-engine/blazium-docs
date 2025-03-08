@@ -5,11 +5,11 @@
 Blazium release policy
 ======================
 
-Blazium builds are divided in ``nightly``, ``pre-release`` and ``release``.
+Blazium builds are divided into ``nightly``, ``pre-release`` and ``release``.
 
-- ``nightly`` build are considered unstable.
-- ``pre-release`` build are for QA for a release build.
-- ``release`` build are considered stable and can be safely used.
+- ``nightly`` builds are considered unstable.
+- ``pre-release`` builds are for QA for a release build.
+- ``release`` builds are considered stable and can be safely used.
 
 Blazium versioning
 ------------------
