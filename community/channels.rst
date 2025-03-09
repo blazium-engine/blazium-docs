@@ -5,7 +5,7 @@ Community channels
 
 So, where is the Blazium community and where can you ask questions and get help?
 
-Currently all the Blazium community can be found on `Blazium's official Discord server <https://chat.blazium.app>`.
+Currently the Blazium community can be found on `Blazium's official Discord server <https://chat.blazium.app>`_.
 
 .. This page used to list the various official and user-supported Blazium communities.
 .. That list is now available on the `Blazium website <https://chat.blazium.app>`_.
