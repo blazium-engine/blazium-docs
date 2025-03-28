@@ -116,7 +116,7 @@ To run and debug the project you need to create a new configuration in the ``lau
         },
         {
             "description": "Load custom pretty-printers for Blazium types.",
-            "text": "source ${workspaceRoot}/misc/utility/blazium_gdb_pretty_print.py"
+            "text": "source ${workspaceRoot}/misc/utility/godot_gdb_pretty_print.py"
         }
       ],
       "preLaunchTask": "build"
