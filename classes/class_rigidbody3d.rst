@@ -326,7 +326,7 @@ Property Descriptions
 - |void| **set_angular_damp**\ (\ value\: :ref:`float<class_float>`\ )
 - :ref:`float<class_float>` **get_angular_damp**\ (\ )
 
-Damps the body's rotation. By default, the body will use the **Default Angular Damp** in **Project > Project Settings > Physics > 3d** or any value override set by an :ref:`Area3D<class_Area3D>` the body is in. Depending on :ref:`angular_damp_mode<class_RigidBody3D_property_angular_damp_mode>`, you can set :ref:`angular_damp<class_RigidBody3D_property_angular_damp>` to be added to or to replace the body's damping value.
+Damps the body's rotation. By default, the body will use the :ref:`ProjectSettings.physics/3d/default_angular_damp<class_ProjectSettings_property_physics/3d/default_angular_damp>` project setting or any value override set by an :ref:`Area3D<class_Area3D>` the body is in. Depending on :ref:`angular_damp_mode<class_RigidBody3D_property_angular_damp_mode>`, you can set :ref:`angular_damp<class_RigidBody3D_property_angular_damp>` to be added to or to replace the body's damping value.
 
 See :ref:`ProjectSettings.physics/3d/default_angular_damp<class_ProjectSettings_property_physics/3d/default_angular_damp>` for more details about damping.
 
@@ -631,7 +631,7 @@ If set to :ref:`Vector3.ZERO<class_Vector3_constant_ZERO>`, inertia is automatic
 - |void| **set_linear_damp**\ (\ value\: :ref:`float<class_float>`\ )
 - :ref:`float<class_float>` **get_linear_damp**\ (\ )
 
-Damps the body's movement. By default, the body will use the **Default Linear Damp** in **Project > Project Settings > Physics > 3d** or any value override set by an :ref:`Area3D<class_Area3D>` the body is in. Depending on :ref:`linear_damp_mode<class_RigidBody3D_property_linear_damp_mode>`, you can set :ref:`linear_damp<class_RigidBody3D_property_linear_damp>` to be added to or to replace the body's damping value.
+Damps the body's movement. By default, the body will use the :ref:`ProjectSettings.physics/3d/default_linear_damp<class_ProjectSettings_property_physics/3d/default_linear_damp>` project setting or any value override set by an :ref:`Area3D<class_Area3D>` the body is in. Depending on :ref:`linear_damp_mode<class_RigidBody3D_property_linear_damp_mode>`, you can set :ref:`linear_damp<class_RigidBody3D_property_linear_damp>` to be added to or to replace the body's damping value.
 
 See :ref:`ProjectSettings.physics/3d/default_linear_damp<class_ProjectSettings_property_physics/3d/default_linear_damp>` for more details about damping.
 

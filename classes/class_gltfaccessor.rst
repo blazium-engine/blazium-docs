@@ -12,16 +12,16 @@ GLTFAccessor
 
 **Inherits:** :ref:`Resource<class_Resource>` **<** :ref:`RefCounted<class_RefCounted>` **<** :ref:`Object<class_Object>`
 
-Represents a GLTF accessor.
+Represents a glTF accessor.
 
 .. rst-class:: classref-introduction-group
 
 Description
 -----------
 
-GLTFAccessor is a data structure representing GLTF a ``accessor`` that would be found in the ``"accessors"`` array. A buffer is a blob of binary data. A buffer view is a slice of a buffer. An accessor is a typed interpretation of the data in a buffer view.
+GLTFAccessor is a data structure representing a glTF ``accessor`` that would be found in the ``"accessors"`` array. A buffer is a blob of binary data. A buffer view is a slice of a buffer. An accessor is a typed interpretation of the data in a buffer view.
 
-Most custom data stored in GLTF does not need accessors, only buffer views (see :ref:`GLTFBufferView<class_GLTFBufferView>`). Accessors are for more advanced use cases such as interleaved mesh data encoded for the GPU.
+Most custom data stored in glTF does not need accessors, only buffer views (see :ref:`GLTFBufferView<class_GLTFBufferView>`). Accessors are for more advanced use cases such as interleaved mesh data encoded for the GPU.
 
 .. rst-class:: classref-introduction-group
 
@@ -143,6 +143,112 @@ Accessor type "MAT3". For the glTF object model, this maps to "float3x3", repres
 
 Accessor type "MAT4". For the glTF object model, this maps to "float4x4", represented in the glTF JSON as an array of sixteen floats.
 
+.. rst-class:: classref-item-separator
+
+----
+
+.. _enum_GLTFAccessor_GLTFComponentType:
+
+.. rst-class:: classref-enumeration
+
+enum **GLTFComponentType**: :ref:`🔗<enum_GLTFAccessor_GLTFComponentType>`
+
+.. _class_GLTFAccessor_constant_COMPONENT_TYPE_NONE:
+
+.. rst-class:: classref-enumeration-constant
+
+:ref:`GLTFComponentType<enum_GLTFAccessor_GLTFComponentType>` **COMPONENT_TYPE_NONE** = ``0``
+
+Component type "NONE". This is not a valid component type, and is used to indicate that the component type is not set.
+
+.. _class_GLTFAccessor_constant_COMPONENT_TYPE_SIGNED_BYTE:
+
+.. rst-class:: classref-enumeration-constant
+
+:ref:`GLTFComponentType<enum_GLTFAccessor_GLTFComponentType>` **COMPONENT_TYPE_SIGNED_BYTE** = ``5120``
+
+Component type "BYTE". The value is ``0x1400`` which comes from OpenGL. This indicates data is stored in 1-byte or 8-bit signed integers. This is a core part of the glTF specification.
+
+.. _class_GLTFAccessor_constant_COMPONENT_TYPE_UNSIGNED_BYTE:
+
+.. rst-class:: classref-enumeration-constant
+
+:ref:`GLTFComponentType<enum_GLTFAccessor_GLTFComponentType>` **COMPONENT_TYPE_UNSIGNED_BYTE** = ``5121``
+
+Component type "UNSIGNED_BYTE". The value is ``0x1401`` which comes from OpenGL. This indicates data is stored in 1-byte or 8-bit unsigned integers. This is a core part of the glTF specification.
+
+.. _class_GLTFAccessor_constant_COMPONENT_TYPE_SIGNED_SHORT:
+
+.. rst-class:: classref-enumeration-constant
+
+:ref:`GLTFComponentType<enum_GLTFAccessor_GLTFComponentType>` **COMPONENT_TYPE_SIGNED_SHORT** = ``5122``
+
+Component type "SHORT". The value is ``0x1402`` which comes from OpenGL. This indicates data is stored in 2-byte or 16-bit signed integers. This is a core part of the glTF specification.
+
+.. _class_GLTFAccessor_constant_COMPONENT_TYPE_UNSIGNED_SHORT:
+
+.. rst-class:: classref-enumeration-constant
+
+:ref:`GLTFComponentType<enum_GLTFAccessor_GLTFComponentType>` **COMPONENT_TYPE_UNSIGNED_SHORT** = ``5123``
+
+Component type "UNSIGNED_SHORT". The value is ``0x1403`` which comes from OpenGL. This indicates data is stored in 2-byte or 16-bit unsigned integers. This is a core part of the glTF specification.
+
+.. _class_GLTFAccessor_constant_COMPONENT_TYPE_SIGNED_INT:
+
+.. rst-class:: classref-enumeration-constant
+
+:ref:`GLTFComponentType<enum_GLTFAccessor_GLTFComponentType>` **COMPONENT_TYPE_SIGNED_INT** = ``5124``
+
+Component type "INT". The value is ``0x1404`` which comes from OpenGL. This indicates data is stored in 4-byte or 32-bit signed integers. This is NOT a core part of the glTF specification, and may not be supported by all glTF importers. May be used by some extensions including ``KHR_interactivity``.
+
+.. _class_GLTFAccessor_constant_COMPONENT_TYPE_UNSIGNED_INT:
+
+.. rst-class:: classref-enumeration-constant
+
+:ref:`GLTFComponentType<enum_GLTFAccessor_GLTFComponentType>` **COMPONENT_TYPE_UNSIGNED_INT** = ``5125``
+
+Component type "UNSIGNED_INT". The value is ``0x1405`` which comes from OpenGL. This indicates data is stored in 4-byte or 32-bit unsigned integers. This is a core part of the glTF specification.
+
+.. _class_GLTFAccessor_constant_COMPONENT_TYPE_SINGLE_FLOAT:
+
+.. rst-class:: classref-enumeration-constant
+
+:ref:`GLTFComponentType<enum_GLTFAccessor_GLTFComponentType>` **COMPONENT_TYPE_SINGLE_FLOAT** = ``5126``
+
+Component type "FLOAT". The value is ``0x1406`` which comes from OpenGL. This indicates data is stored in 4-byte or 32-bit floating-point numbers. This is a core part of the glTF specification.
+
+.. _class_GLTFAccessor_constant_COMPONENT_TYPE_DOUBLE_FLOAT:
+
+.. rst-class:: classref-enumeration-constant
+
+:ref:`GLTFComponentType<enum_GLTFAccessor_GLTFComponentType>` **COMPONENT_TYPE_DOUBLE_FLOAT** = ``5130``
+
+Component type "DOUBLE". The value is ``0x140A`` which comes from OpenGL. This indicates data is stored in 8-byte or 64-bit floating-point numbers. This is NOT a core part of the glTF specification, and may not be supported by all glTF importers. May be used by some extensions including ``KHR_interactivity``.
+
+.. _class_GLTFAccessor_constant_COMPONENT_TYPE_HALF_FLOAT:
+
+.. rst-class:: classref-enumeration-constant
+
+:ref:`GLTFComponentType<enum_GLTFAccessor_GLTFComponentType>` **COMPONENT_TYPE_HALF_FLOAT** = ``5131``
+
+Component type "HALF_FLOAT". The value is ``0x140B`` which comes from OpenGL. This indicates data is stored in 2-byte or 16-bit floating-point numbers. This is NOT a core part of the glTF specification, and may not be supported by all glTF importers. May be used by some extensions including ``KHR_interactivity``.
+
+.. _class_GLTFAccessor_constant_COMPONENT_TYPE_SIGNED_LONG:
+
+.. rst-class:: classref-enumeration-constant
+
+:ref:`GLTFComponentType<enum_GLTFAccessor_GLTFComponentType>` **COMPONENT_TYPE_SIGNED_LONG** = ``5134``
+
+Component type "LONG". The value is ``0x140E`` which comes from OpenGL. This indicates data is stored in 8-byte or 64-bit signed integers. This is NOT a core part of the glTF specification, and may not be supported by all glTF importers. May be used by some extensions including ``KHR_interactivity``.
+
+.. _class_GLTFAccessor_constant_COMPONENT_TYPE_UNSIGNED_LONG:
+
+.. rst-class:: classref-enumeration-constant
+
+:ref:`GLTFComponentType<enum_GLTFAccessor_GLTFComponentType>` **COMPONENT_TYPE_UNSIGNED_LONG** = ``5135``
+
+Component type "UNSIGNED_LONG". The value is ``0x140F`` which comes from OpenGL. This indicates data is stored in 8-byte or 64-bit unsigned integers. This is NOT a core part of the glTF specification, and may not be supported by all glTF importers. May be used by some extensions including ``KHR_interactivity``.
+
 .. rst-class:: classref-section-separator
 
 ----
@@ -163,7 +269,7 @@ Property Descriptions
 - |void| **set_accessor_type**\ (\ value\: :ref:`GLTFAccessorType<enum_GLTFAccessor_GLTFAccessorType>`\ )
 - :ref:`GLTFAccessorType<enum_GLTFAccessor_GLTFAccessorType>` **get_accessor_type**\ (\ )
 
-The GLTF accessor type as an enum. Possible values are 0 for "SCALAR", 1 for "VEC2", 2 for "VEC3", 3 for "VEC4", 4 for "MAT2", 5 for "MAT3", and 6 for "MAT4".
+The glTF accessor type as an enum. Possible values are 0 for "SCALAR", 1 for "VEC2", 2 for "VEC3", 3 for "VEC4", 4 for "MAT2", 5 for "MAT3", and 6 for "MAT4".
 
 .. rst-class:: classref-item-separator
 
@@ -214,7 +320,7 @@ The offset relative to the start of the buffer view in bytes.
 - |void| **set_component_type**\ (\ value\: :ref:`int<class_int>`\ )
 - :ref:`int<class_int>` **get_component_type**\ (\ )
 
-The GLTF component type as an enum. Possible values are 5120 for "BYTE", 5121 for "UNSIGNED_BYTE", 5122 for "SHORT", 5123 for "UNSIGNED_SHORT", 5125 for "UNSIGNED_INT", and 5126 for "FLOAT". A value of 5125 or "UNSIGNED_INT" must not be used for any accessor that is not referenced by mesh.primitive.indices.
+The glTF component type as an enum. See :ref:`GLTFComponentType<enum_GLTFAccessor_GLTFComponentType>` for possible values. Within the core glTF specification, a value of 5125 or "UNSIGNED_INT" must not be used for any accessor that is not referenced by mesh.primitive.indices.
 
 .. rst-class:: classref-item-separator
 
@@ -407,7 +513,7 @@ The offset relative to the start of the bufferView in bytes.
 
 **Deprecated:** Use :ref:`accessor_type<class_GLTFAccessor_property_accessor_type>` instead.
 
-The GLTF accessor type as an enum. Use :ref:`accessor_type<class_GLTFAccessor_property_accessor_type>` instead.
+The glTF accessor type as an enum. Use :ref:`accessor_type<class_GLTFAccessor_property_accessor_type>` instead.
 
 .. |virtual| replace:: :abbr:`virtual (This method should typically be overridden by the user to have any effect.)`
 .. |const| replace:: :abbr:`const (This method has no side effects. It doesn't modify any of the instance's member variables.)`

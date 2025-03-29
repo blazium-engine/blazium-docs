@@ -34,6 +34,8 @@ Methods
    +------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`bool<class_bool>`                                          | :ref:`class_exists<class_ClassDB_method_class_exists>`\ (\ class\: :ref:`StringName<class_StringName>`\ ) |const|                                                                                                                                       |
    +------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`APIType<enum_ClassDB_APIType>`                             | :ref:`class_get_api_type<class_ClassDB_method_class_get_api_type>`\ (\ class\: :ref:`StringName<class_StringName>`\ ) |const|                                                                                                                           |
+   +------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`PackedStringArray<class_PackedStringArray>`                | :ref:`class_get_enum_constants<class_ClassDB_method_class_get_enum_constants>`\ (\ class\: :ref:`StringName<class_StringName>`, enum\: :ref:`StringName<class_StringName>`, no_inheritance\: :ref:`bool<class_bool>` = false\ ) |const|                 |
    +------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`PackedStringArray<class_PackedStringArray>`                | :ref:`class_get_enum_list<class_ClassDB_method_class_get_enum_list>`\ (\ class\: :ref:`StringName<class_StringName>`, no_inheritance\: :ref:`bool<class_bool>` = false\ ) |const|                                                                       |
@@ -66,9 +68,13 @@ Methods
    +------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`bool<class_bool>`                                          | :ref:`class_has_signal<class_ClassDB_method_class_has_signal>`\ (\ class\: :ref:`StringName<class_StringName>`, signal\: :ref:`StringName<class_StringName>`\ ) |const|                                                                                 |
    +------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`Error<enum_@GlobalScope_Error>`                            | :ref:`class_override_api_type<class_ClassDB_method_class_override_api_type>`\ (\ class\: :ref:`StringName<class_StringName>`, api\: :ref:`APIType<enum_ClassDB_APIType>`\ ) |const|                                                                     |
+   +------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`Error<enum_@GlobalScope_Error>`                            | :ref:`class_set_property<class_ClassDB_method_class_set_property>`\ (\ object\: :ref:`Object<class_Object>`, property\: :ref:`StringName<class_StringName>`, value\: :ref:`Variant<class_Variant>`\ ) |const|                                           |
    +------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`PackedStringArray<class_PackedStringArray>`                | :ref:`get_class_list<class_ClassDB_method_get_class_list>`\ (\ ) |const|                                                                                                                                                                                |
+   +------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`APIType<enum_ClassDB_APIType>`                             | :ref:`get_current_api<class_ClassDB_method_get_current_api>`\ (\ ) |const|                                                                                                                                                                              |
    +------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`PackedStringArray<class_PackedStringArray>`                | :ref:`get_inheriters_from_class<class_ClassDB_method_get_inheriters_from_class>`\ (\ class\: :ref:`StringName<class_StringName>`\ ) |const|                                                                                                             |
    +------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -82,6 +88,63 @@ Methods
    +------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`bool<class_bool>`                                          | :ref:`is_parent_class<class_ClassDB_method_is_parent_class>`\ (\ class\: :ref:`StringName<class_StringName>`, inherits\: :ref:`StringName<class_StringName>`\ ) |const|                                                                                 |
    +------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | |void|                                                           | :ref:`set_current_api<class_ClassDB_method_set_current_api>`\ (\ api\: :ref:`APIType<enum_ClassDB_APIType>`\ ) |const|                                                                                                                                  |
+   +------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+.. rst-class:: classref-section-separator
+
+----
+
+.. rst-class:: classref-descriptions-group
+
+Enumerations
+------------
+
+.. _enum_ClassDB_APIType:
+
+.. rst-class:: classref-enumeration
+
+enum **APIType**: :ref:`🔗<enum_ClassDB_APIType>`
+
+.. _class_ClassDB_constant_API_CORE:
+
+.. rst-class:: classref-enumeration-constant
+
+:ref:`APIType<enum_ClassDB_APIType>` **API_CORE** = ``0``
+
+Native Core class type.
+
+.. _class_ClassDB_constant_API_EDITOR:
+
+.. rst-class:: classref-enumeration-constant
+
+:ref:`APIType<enum_ClassDB_APIType>` **API_EDITOR** = ``1``
+
+Native Editor class type.
+
+.. _class_ClassDB_constant_API_EXTENSION:
+
+.. rst-class:: classref-enumeration-constant
+
+:ref:`APIType<enum_ClassDB_APIType>` **API_EXTENSION** = ``2``
+
+GDExtension class type.
+
+.. _class_ClassDB_constant_API_EDITOR_EXTENSION:
+
+.. rst-class:: classref-enumeration-constant
+
+:ref:`APIType<enum_ClassDB_APIType>` **API_EDITOR_EXTENSION** = ``3``
+
+GDExtension Editor class type.
+
+.. _class_ClassDB_constant_API_NONE:
+
+.. rst-class:: classref-enumeration-constant
+
+:ref:`APIType<enum_ClassDB_APIType>` **API_NONE** = ``4``
+
+Unknown class type.
 
 .. rst-class:: classref-section-separator
 
@@ -111,6 +174,18 @@ Returns ``true`` if objects can be instantiated from the specified ``class``, ot
 :ref:`bool<class_bool>` **class_exists**\ (\ class\: :ref:`StringName<class_StringName>`\ ) |const| :ref:`🔗<class_ClassDB_method_class_exists>`
 
 Returns whether the specified ``class`` is available or not.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_ClassDB_method_class_get_api_type:
+
+.. rst-class:: classref-method
+
+:ref:`APIType<enum_ClassDB_APIType>` **class_get_api_type**\ (\ class\: :ref:`StringName<class_StringName>`\ ) |const| :ref:`🔗<class_ClassDB_method_class_get_api_type>`
+
+Returns the API type of ``class``. See :ref:`APIType<enum_ClassDB_APIType>`.
 
 .. rst-class:: classref-item-separator
 
@@ -310,6 +385,20 @@ Returns whether ``class`` or its ancestry has a signal called ``signal`` or not.
 
 ----
 
+.. _class_ClassDB_method_class_override_api_type:
+
+.. rst-class:: classref-method
+
+:ref:`Error<enum_@GlobalScope_Error>` **class_override_api_type**\ (\ class\: :ref:`StringName<class_StringName>`, api\: :ref:`APIType<enum_ClassDB_APIType>`\ ) |const| :ref:`🔗<class_ClassDB_method_class_override_api_type>`
+
+Overrides the API type of ``class`` to ``api``. See :ref:`APIType<enum_ClassDB_APIType>`.
+
+\ **Note:** This should only be used with a thorough understanding of its implications.
+
+.. rst-class:: classref-item-separator
+
+----
+
 .. _class_ClassDB_method_class_set_property:
 
 .. rst-class:: classref-method
@@ -329,6 +418,18 @@ Sets ``property`` value of ``object`` to ``value``.
 :ref:`PackedStringArray<class_PackedStringArray>` **get_class_list**\ (\ ) |const| :ref:`🔗<class_ClassDB_method_get_class_list>`
 
 Returns the names of all the classes available.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_ClassDB_method_get_current_api:
+
+.. rst-class:: classref-method
+
+:ref:`APIType<enum_ClassDB_APIType>` **get_current_api**\ (\ ) |const| :ref:`🔗<class_ClassDB_method_get_current_api>`
+
+Returns the currently active API type. See :ref:`APIType<enum_ClassDB_APIType>`.
 
 .. rst-class:: classref-item-separator
 
@@ -401,6 +502,20 @@ Returns whether ``class`` (or its ancestor classes if ``no_inheritance`` is ``fa
 :ref:`bool<class_bool>` **is_parent_class**\ (\ class\: :ref:`StringName<class_StringName>`, inherits\: :ref:`StringName<class_StringName>`\ ) |const| :ref:`🔗<class_ClassDB_method_is_parent_class>`
 
 Returns whether ``inherits`` is an ancestor of ``class`` or not.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_ClassDB_method_set_current_api:
+
+.. rst-class:: classref-method
+
+|void| **set_current_api**\ (\ api\: :ref:`APIType<enum_ClassDB_APIType>`\ ) |const| :ref:`🔗<class_ClassDB_method_set_current_api>`
+
+Sets the globally active API type to ``api``. See :ref:`APIType<enum_ClassDB_APIType>`.
+
+\ **Note:** This should only be used with a thorough understanding of its implications.
 
 .. |virtual| replace:: :abbr:`virtual (This method should typically be overridden by the user to have any effect.)`
 .. |const| replace:: :abbr:`const (This method has no side effects. It doesn't modify any of the instance's member variables.)`

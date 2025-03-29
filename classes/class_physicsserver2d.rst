@@ -240,11 +240,15 @@ Methods
    +-------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`bool<class_bool>`                                           | :ref:`joint_is_disabled_collisions_between_bodies<class_PhysicsServer2D_method_joint_is_disabled_collisions_between_bodies>`\ (\ joint\: :ref:`RID<class_RID>`\ ) |const|                                                                                                                                                     |
    +-------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`bool<class_bool>`                                           | :ref:`joint_is_enabled<class_PhysicsServer2D_method_joint_is_enabled>`\ (\ joint\: :ref:`RID<class_RID>`\ ) |const|                                                                                                                                                                                                           |
+   +-------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | |void|                                                            | :ref:`joint_make_damped_spring<class_PhysicsServer2D_method_joint_make_damped_spring>`\ (\ joint\: :ref:`RID<class_RID>`, anchor_a\: :ref:`Vector2<class_Vector2>`, anchor_b\: :ref:`Vector2<class_Vector2>`, body_a\: :ref:`RID<class_RID>`, body_b\: :ref:`RID<class_RID>` = RID()\ )                                       |
    +-------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | |void|                                                            | :ref:`joint_make_groove<class_PhysicsServer2D_method_joint_make_groove>`\ (\ joint\: :ref:`RID<class_RID>`, groove1_a\: :ref:`Vector2<class_Vector2>`, groove2_a\: :ref:`Vector2<class_Vector2>`, anchor_b\: :ref:`Vector2<class_Vector2>`, body_a\: :ref:`RID<class_RID>` = RID(), body_b\: :ref:`RID<class_RID>` = RID()\ ) |
    +-------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | |void|                                                            | :ref:`joint_make_pin<class_PhysicsServer2D_method_joint_make_pin>`\ (\ joint\: :ref:`RID<class_RID>`, anchor\: :ref:`Vector2<class_Vector2>`, body_a\: :ref:`RID<class_RID>`, body_b\: :ref:`RID<class_RID>` = RID()\ )                                                                                                       |
+   +-------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | |void|                                                            | :ref:`joint_set_enabled<class_PhysicsServer2D_method_joint_set_enabled>`\ (\ joint\: :ref:`RID<class_RID>`, enabled\: :ref:`bool<class_bool>`\ )                                                                                                                                                                              |
    +-------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | |void|                                                            | :ref:`joint_set_param<class_PhysicsServer2D_method_joint_set_param>`\ (\ joint\: :ref:`RID<class_RID>`, param\: :ref:`JointParam<enum_PhysicsServer2D_JointParam>`, value\: :ref:`float<class_float>`\ )                                                                                                                      |
    +-------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -272,7 +276,11 @@ Methods
    +-------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`RID<class_RID>`                                             | :ref:`space_create<class_PhysicsServer2D_method_space_create>`\ (\ )                                                                                                                                                                                                                                                          |
    +-------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | |void|                                                            | :ref:`space_flush_queries<class_PhysicsServer2D_method_space_flush_queries>`\ (\ space\: :ref:`RID<class_RID>`\ )                                                                                                                                                                                                             |
+   +-------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`PhysicsDirectSpaceState2D<class_PhysicsDirectSpaceState2D>` | :ref:`space_get_direct_state<class_PhysicsServer2D_method_space_get_direct_state>`\ (\ space\: :ref:`RID<class_RID>`\ )                                                                                                                                                                                                       |
+   +-------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`int<class_int>`                                             | :ref:`space_get_last_process_info<class_PhysicsServer2D_method_space_get_last_process_info>`\ (\ space\: :ref:`RID<class_RID>`, process_info\: :ref:`ProcessInfo<enum_PhysicsServer2D_ProcessInfo>`\ )                                                                                                                        |
    +-------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`float<class_float>`                                         | :ref:`space_get_param<class_PhysicsServer2D_method_space_get_param>`\ (\ space\: :ref:`RID<class_RID>`, param\: :ref:`SpaceParameter<enum_PhysicsServer2D_SpaceParameter>`\ ) |const|                                                                                                                                         |
    +-------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -281,6 +289,8 @@ Methods
    | |void|                                                            | :ref:`space_set_active<class_PhysicsServer2D_method_space_set_active>`\ (\ space\: :ref:`RID<class_RID>`, active\: :ref:`bool<class_bool>`\ )                                                                                                                                                                                 |
    +-------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | |void|                                                            | :ref:`space_set_param<class_PhysicsServer2D_method_space_set_param>`\ (\ space\: :ref:`RID<class_RID>`, param\: :ref:`SpaceParameter<enum_PhysicsServer2D_SpaceParameter>`, value\: :ref:`float<class_float>`\ )                                                                                                              |
+   +-------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | |void|                                                            | :ref:`space_step<class_PhysicsServer2D_method_space_step>`\ (\ space\: :ref:`RID<class_RID>`, delta\: :ref:`float<class_float>`\ )                                                                                                                                                                                            |
    +-------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`RID<class_RID>`                                             | :ref:`world_boundary_shape_create<class_PhysicsServer2D_method_world_boundary_shape_create>`\ (\ )                                                                                                                                                                                                                            |
    +-------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -2351,6 +2361,18 @@ Returns whether the bodies attached to the :ref:`Joint2D<class_Joint2D>` will co
 
 ----
 
+.. _class_PhysicsServer2D_method_joint_is_enabled:
+
+.. rst-class:: classref-method
+
+:ref:`bool<class_bool>` **joint_is_enabled**\ (\ joint\: :ref:`RID<class_RID>`\ ) |const| :ref:`🔗<class_PhysicsServer2D_method_joint_is_enabled>`
+
+Gets joint enable state.
+
+.. rst-class:: classref-item-separator
+
+----
+
 .. _class_PhysicsServer2D_method_joint_make_damped_spring:
 
 .. rst-class:: classref-method
@@ -2382,6 +2404,18 @@ Makes the joint a groove joint.
 |void| **joint_make_pin**\ (\ joint\: :ref:`RID<class_RID>`, anchor\: :ref:`Vector2<class_Vector2>`, body_a\: :ref:`RID<class_RID>`, body_b\: :ref:`RID<class_RID>` = RID()\ ) :ref:`🔗<class_PhysicsServer2D_method_joint_make_pin>`
 
 Makes the joint a pin joint. If ``body_b`` is an empty :ref:`RID<class_RID>`, then ``body_a`` is pinned to the point ``anchor`` (given in global coordinates); otherwise, ``body_a`` is pinned to ``body_b`` at the point ``anchor`` (given in global coordinates). To set the parameters which are specific to the pin joint, see :ref:`pin_joint_set_param<class_PhysicsServer2D_method_pin_joint_set_param>`.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_PhysicsServer2D_method_joint_set_enabled:
+
+.. rst-class:: classref-method
+
+|void| **joint_set_enabled**\ (\ joint\: :ref:`RID<class_RID>`, enabled\: :ref:`bool<class_bool>`\ ) :ref:`🔗<class_PhysicsServer2D_method_joint_set_enabled>`
+
+Enable or disable a joint.
 
 .. rst-class:: classref-item-separator
 
@@ -2561,6 +2595,20 @@ Creates a 2D space in the physics server, and returns the :ref:`RID<class_RID>` 
 
 ----
 
+.. _class_PhysicsServer2D_method_space_flush_queries:
+
+.. rst-class:: classref-method
+
+|void| **space_flush_queries**\ (\ space\: :ref:`RID<class_RID>`\ ) :ref:`🔗<class_PhysicsServer2D_method_space_flush_queries>`
+
+**Experimental:** This method may be changed or removed in future versions.
+
+Flushes ``space``'s queries. It is necessary to call this method after calling :ref:`space_step<class_PhysicsServer2D_method_space_step>` with an active space from ``_physics_process``. Otherwise, call this method before calling :ref:`space_step<class_PhysicsServer2D_method_space_step>`.
+
+.. rst-class:: classref-item-separator
+
+----
+
 .. _class_PhysicsServer2D_method_space_get_direct_state:
 
 .. rst-class:: classref-method
@@ -2568,6 +2616,20 @@ Creates a 2D space in the physics server, and returns the :ref:`RID<class_RID>` 
 :ref:`PhysicsDirectSpaceState2D<class_PhysicsDirectSpaceState2D>` **space_get_direct_state**\ (\ space\: :ref:`RID<class_RID>`\ ) :ref:`🔗<class_PhysicsServer2D_method_space_get_direct_state>`
 
 Returns the state of a space, a :ref:`PhysicsDirectSpaceState2D<class_PhysicsDirectSpaceState2D>`. This object can be used for collision/intersection queries.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_PhysicsServer2D_method_space_get_last_process_info:
+
+.. rst-class:: classref-method
+
+:ref:`int<class_int>` **space_get_last_process_info**\ (\ space\: :ref:`RID<class_RID>`, process_info\: :ref:`ProcessInfo<enum_PhysicsServer2D_ProcessInfo>`\ ) :ref:`🔗<class_PhysicsServer2D_method_space_get_last_process_info>`
+
+**Experimental:** This method may be changed or removed in future versions.
+
+Returns information about the current state of ``space``. See :ref:`ProcessInfo<enum_PhysicsServer2D_ProcessInfo>` for a list of available states.
 
 .. rst-class:: classref-item-separator
 
@@ -2616,6 +2678,22 @@ Activates or deactivates the space. If ``active`` is ``false``, then the physics
 |void| **space_set_param**\ (\ space\: :ref:`RID<class_RID>`, param\: :ref:`SpaceParameter<enum_PhysicsServer2D_SpaceParameter>`, value\: :ref:`float<class_float>`\ ) :ref:`🔗<class_PhysicsServer2D_method_space_set_param>`
 
 Sets the value of the given space parameter. See :ref:`SpaceParameter<enum_PhysicsServer2D_SpaceParameter>` for the list of available parameters.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_PhysicsServer2D_method_space_step:
+
+.. rst-class:: classref-method
+
+|void| **space_step**\ (\ space\: :ref:`RID<class_RID>`, delta\: :ref:`float<class_float>`\ ) :ref:`🔗<class_PhysicsServer2D_method_space_step>`
+
+**Experimental:** This method may be changed or removed in future versions.
+
+Manually advance ``space`` forward in ``delta``. This technique can be used for speeding up physics simulations, as seen in advanced rollback-style networking, or for predicting outcomes in scenarios such as hitting a ball in a billiards game.
+
+\ **Note:** If call this method with an active ``space`` from ``_physics_process()``, you should call :ref:`space_flush_queries<class_PhysicsServer2D_method_space_flush_queries>` afterwards. Otherwise, call :ref:`space_flush_queries<class_PhysicsServer2D_method_space_flush_queries>` beforehand.
 
 .. rst-class:: classref-item-separator
 

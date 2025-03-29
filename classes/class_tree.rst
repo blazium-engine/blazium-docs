@@ -71,6 +71,8 @@ Properties
    +------------------------------------------+---------------------------------------------------------------------------------+---------------------------------------------------------------------------+
    | :ref:`bool<class_bool>`                  | :ref:`allow_search<class_Tree_property_allow_search>`                           | ``true``                                                                  |
    +------------------------------------------+---------------------------------------------------------------------------------+---------------------------------------------------------------------------+
+   | :ref:`bool<class_bool>`                  | :ref:`auto_tooltip<class_Tree_property_auto_tooltip>`                           | ``true``                                                                  |
+   +------------------------------------------+---------------------------------------------------------------------------------+---------------------------------------------------------------------------+
    | :ref:`bool<class_bool>`                  | clip_contents                                                                   | ``true`` (overrides :ref:`Control<class_Control_property_clip_contents>`) |
    +------------------------------------------+---------------------------------------------------------------------------------+---------------------------------------------------------------------------+
    | :ref:`bool<class_bool>`                  | :ref:`column_titles_visible<class_Tree_property_column_titles_visible>`         | ``false``                                                                 |
@@ -187,35 +189,39 @@ Theme Properties
    :widths: auto
 
    +-----------------------------------+------------------------------------------------------------------------------------------+-------------------------------------+
-   | :ref:`Color<class_Color>`         | :ref:`children_hl_line_color<class_Tree_theme_color_children_hl_line_color>`             | ``Color(0.27, 0.27, 0.27, 1)``      |
+   | :ref:`Color<class_Color>`         | :ref:`children_hl_line_color<class_Tree_theme_color_children_hl_line_color>`             | ``Color(0.875, 0.875, 0.875, 0.8)`` |
    +-----------------------------------+------------------------------------------------------------------------------------------+-------------------------------------+
-   | :ref:`Color<class_Color>`         | :ref:`custom_button_font_highlight<class_Tree_theme_color_custom_button_font_highlight>` | ``Color(0.95, 0.95, 0.95, 1)``      |
+   | :ref:`Color<class_Color>`         | :ref:`custom_button_font_highlight<class_Tree_theme_color_custom_button_font_highlight>` | ``Color(0.875, 0.875, 0.875, 0.9)`` |
    +-----------------------------------+------------------------------------------------------------------------------------------+-------------------------------------+
-   | :ref:`Color<class_Color>`         | :ref:`drop_position_color<class_Tree_theme_color_drop_position_color>`                   | ``Color(1, 1, 1, 1)``               |
+   | :ref:`Color<class_Color>`         | :ref:`drop_position_color<class_Tree_theme_color_drop_position_color>`                   | ``Color(0.875, 0.875, 0.875, 1)``   |
    +-----------------------------------+------------------------------------------------------------------------------------------+-------------------------------------+
-   | :ref:`Color<class_Color>`         | :ref:`font_color<class_Tree_theme_color_font_color>`                                     | ``Color(0.7, 0.7, 0.7, 1)``         |
+   | :ref:`Color<class_Color>`         | :ref:`font_color<class_Tree_theme_color_font_color>`                                     | ``Color(0.875, 0.875, 0.875, 0.8)`` |
    +-----------------------------------+------------------------------------------------------------------------------------------+-------------------------------------+
-   | :ref:`Color<class_Color>`         | :ref:`font_disabled_color<class_Tree_theme_color_font_disabled_color>`                   | ``Color(0.875, 0.875, 0.875, 0.5)`` |
+   | :ref:`Color<class_Color>`         | :ref:`font_disabled_color<class_Tree_theme_color_font_disabled_color>`                   | ``Color(0.875, 0.875, 0.875, 0.4)`` |
+   +-----------------------------------+------------------------------------------------------------------------------------------+-------------------------------------+
+   | :ref:`Color<class_Color>`         | :ref:`font_hovered_color<class_Tree_theme_color_font_hovered_color>`                     | ``Color(0.875, 0.875, 0.875, 1)``   |
+   +-----------------------------------+------------------------------------------------------------------------------------------+-------------------------------------+
+   | :ref:`Color<class_Color>`         | :ref:`font_hovered_dimmed_color<class_Tree_theme_color_font_hovered_dimmed_color>`       | ``Color(0.875, 0.875, 0.875, 0.6)`` |
    +-----------------------------------+------------------------------------------------------------------------------------------+-------------------------------------+
    | :ref:`Color<class_Color>`         | :ref:`font_outline_color<class_Tree_theme_color_font_outline_color>`                     | ``Color(0, 0, 0, 1)``               |
    +-----------------------------------+------------------------------------------------------------------------------------------+-------------------------------------+
-   | :ref:`Color<class_Color>`         | :ref:`font_selected_color<class_Tree_theme_color_font_selected_color>`                   | ``Color(1, 1, 1, 1)``               |
+   | :ref:`Color<class_Color>`         | :ref:`font_selected_color<class_Tree_theme_color_font_selected_color>`                   | ``Color(0.875, 0.875, 0.875, 1)``   |
    +-----------------------------------+------------------------------------------------------------------------------------------+-------------------------------------+
-   | :ref:`Color<class_Color>`         | :ref:`guide_color<class_Tree_theme_color_guide_color>`                                   | ``Color(0.7, 0.7, 0.7, 0.25)``      |
+   | :ref:`Color<class_Color>`         | :ref:`guide_color<class_Tree_theme_color_guide_color>`                                   | ``Color(0.875, 0.875, 0.875, 0.4)`` |
    +-----------------------------------+------------------------------------------------------------------------------------------+-------------------------------------+
-   | :ref:`Color<class_Color>`         | :ref:`parent_hl_line_color<class_Tree_theme_color_parent_hl_line_color>`                 | ``Color(0.27, 0.27, 0.27, 1)``      |
+   | :ref:`Color<class_Color>`         | :ref:`parent_hl_line_color<class_Tree_theme_color_parent_hl_line_color>`                 | ``Color(0.875, 0.875, 0.875, 0.9)`` |
    +-----------------------------------+------------------------------------------------------------------------------------------+-------------------------------------+
-   | :ref:`Color<class_Color>`         | :ref:`relationship_line_color<class_Tree_theme_color_relationship_line_color>`           | ``Color(0.27, 0.27, 0.27, 1)``      |
+   | :ref:`Color<class_Color>`         | :ref:`relationship_line_color<class_Tree_theme_color_relationship_line_color>`           | ``Color(0.875, 0.875, 0.875, 0.6)`` |
    +-----------------------------------+------------------------------------------------------------------------------------------+-------------------------------------+
-   | :ref:`Color<class_Color>`         | :ref:`title_button_color<class_Tree_theme_color_title_button_color>`                     | ``Color(0.875, 0.875, 0.875, 1)``   |
+   | :ref:`Color<class_Color>`         | :ref:`title_button_color<class_Tree_theme_color_title_button_color>`                     | ``Color(0.875, 0.875, 0.875, 0.8)`` |
    +-----------------------------------+------------------------------------------------------------------------------------------+-------------------------------------+
    | :ref:`int<class_int>`             | :ref:`button_margin<class_Tree_theme_constant_button_margin>`                            | ``4``                               |
    +-----------------------------------+------------------------------------------------------------------------------------------+-------------------------------------+
    | :ref:`int<class_int>`             | :ref:`children_hl_line_width<class_Tree_theme_constant_children_hl_line_width>`          | ``1``                               |
    +-----------------------------------+------------------------------------------------------------------------------------------+-------------------------------------+
-   | :ref:`int<class_int>`             | :ref:`draw_guides<class_Tree_theme_constant_draw_guides>`                                | ``1``                               |
+   | :ref:`int<class_int>`             | :ref:`draw_guides<class_Tree_theme_constant_draw_guides>`                                | ``0``                               |
    +-----------------------------------+------------------------------------------------------------------------------------------+-------------------------------------+
-   | :ref:`int<class_int>`             | :ref:`draw_relationship_lines<class_Tree_theme_constant_draw_relationship_lines>`        | ``0``                               |
+   | :ref:`int<class_int>`             | :ref:`draw_relationship_lines<class_Tree_theme_constant_draw_relationship_lines>`        | ``1``                               |
    +-----------------------------------+------------------------------------------------------------------------------------------+-------------------------------------+
    | :ref:`int<class_int>`             | :ref:`h_separation<class_Tree_theme_constant_h_separation>`                              | ``4``                               |
    +-----------------------------------+------------------------------------------------------------------------------------------+-------------------------------------+
@@ -223,19 +229,19 @@ Theme Properties
    +-----------------------------------+------------------------------------------------------------------------------------------+-------------------------------------+
    | :ref:`int<class_int>`             | :ref:`inner_item_margin_bottom<class_Tree_theme_constant_inner_item_margin_bottom>`      | ``0``                               |
    +-----------------------------------+------------------------------------------------------------------------------------------+-------------------------------------+
-   | :ref:`int<class_int>`             | :ref:`inner_item_margin_left<class_Tree_theme_constant_inner_item_margin_left>`          | ``0``                               |
+   | :ref:`int<class_int>`             | :ref:`inner_item_margin_left<class_Tree_theme_constant_inner_item_margin_left>`          | ``6``                               |
    +-----------------------------------+------------------------------------------------------------------------------------------+-------------------------------------+
-   | :ref:`int<class_int>`             | :ref:`inner_item_margin_right<class_Tree_theme_constant_inner_item_margin_right>`        | ``0``                               |
+   | :ref:`int<class_int>`             | :ref:`inner_item_margin_right<class_Tree_theme_constant_inner_item_margin_right>`        | ``6``                               |
    +-----------------------------------+------------------------------------------------------------------------------------------+-------------------------------------+
    | :ref:`int<class_int>`             | :ref:`inner_item_margin_top<class_Tree_theme_constant_inner_item_margin_top>`            | ``0``                               |
    +-----------------------------------+------------------------------------------------------------------------------------------+-------------------------------------+
-   | :ref:`int<class_int>`             | :ref:`item_margin<class_Tree_theme_constant_item_margin>`                                | ``16``                              |
+   | :ref:`int<class_int>`             | :ref:`item_margin<class_Tree_theme_constant_item_margin>`                                | ``12``                              |
    +-----------------------------------+------------------------------------------------------------------------------------------+-------------------------------------+
    | :ref:`int<class_int>`             | :ref:`outline_size<class_Tree_theme_constant_outline_size>`                              | ``0``                               |
    +-----------------------------------+------------------------------------------------------------------------------------------+-------------------------------------+
    | :ref:`int<class_int>`             | :ref:`parent_hl_line_margin<class_Tree_theme_constant_parent_hl_line_margin>`            | ``0``                               |
    +-----------------------------------+------------------------------------------------------------------------------------------+-------------------------------------+
-   | :ref:`int<class_int>`             | :ref:`parent_hl_line_width<class_Tree_theme_constant_parent_hl_line_width>`              | ``1``                               |
+   | :ref:`int<class_int>`             | :ref:`parent_hl_line_width<class_Tree_theme_constant_parent_hl_line_width>`              | ``2``                               |
    +-----------------------------------+------------------------------------------------------------------------------------------+-------------------------------------+
    | :ref:`int<class_int>`             | :ref:`relationship_line_width<class_Tree_theme_constant_relationship_line_width>`        | ``1``                               |
    +-----------------------------------+------------------------------------------------------------------------------------------+-------------------------------------+
@@ -287,6 +293,8 @@ Theme Properties
    +-----------------------------------+------------------------------------------------------------------------------------------+-------------------------------------+
    | :ref:`Texture2D<class_Texture2D>` | :ref:`updown<class_Tree_theme_icon_updown>`                                              |                                     |
    +-----------------------------------+------------------------------------------------------------------------------------------+-------------------------------------+
+   | :ref:`StyleBox<class_StyleBox>`   | :ref:`button_hover<class_Tree_theme_style_button_hover>`                                 |                                     |
+   +-----------------------------------+------------------------------------------------------------------------------------------+-------------------------------------+
    | :ref:`StyleBox<class_StyleBox>`   | :ref:`button_pressed<class_Tree_theme_style_button_pressed>`                             |                                     |
    +-----------------------------------+------------------------------------------------------------------------------------------+-------------------------------------+
    | :ref:`StyleBox<class_StyleBox>`   | :ref:`cursor<class_Tree_theme_style_cursor>`                                             |                                     |
@@ -300,6 +308,10 @@ Theme Properties
    | :ref:`StyleBox<class_StyleBox>`   | :ref:`custom_button_pressed<class_Tree_theme_style_custom_button_pressed>`               |                                     |
    +-----------------------------------+------------------------------------------------------------------------------------------+-------------------------------------+
    | :ref:`StyleBox<class_StyleBox>`   | :ref:`focus<class_Tree_theme_style_focus>`                                               |                                     |
+   +-----------------------------------+------------------------------------------------------------------------------------------+-------------------------------------+
+   | :ref:`StyleBox<class_StyleBox>`   | :ref:`hovered<class_Tree_theme_style_hovered>`                                           |                                     |
+   +-----------------------------------+------------------------------------------------------------------------------------------+-------------------------------------+
+   | :ref:`StyleBox<class_StyleBox>`   | :ref:`hovered_dimmed<class_Tree_theme_style_hovered_dimmed>`                             |                                     |
    +-----------------------------------+------------------------------------------------------------------------------------------+-------------------------------------+
    | :ref:`StyleBox<class_StyleBox>`   | :ref:`panel<class_Tree_theme_style_panel>`                                               |                                     |
    +-----------------------------------+------------------------------------------------------------------------------------------+-------------------------------------+
@@ -639,6 +651,23 @@ If ``true``, a right mouse button click can select items.
 - :ref:`bool<class_bool>` **get_allow_search**\ (\ )
 
 If ``true``, allows navigating the **Tree** with letter keys through incremental search.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_Tree_property_auto_tooltip:
+
+.. rst-class:: classref-property
+
+:ref:`bool<class_bool>` **auto_tooltip** = ``true`` :ref:`🔗<class_Tree_property_auto_tooltip>`
+
+.. rst-class:: classref-property-setget
+
+- |void| **set_auto_tooltip**\ (\ value\: :ref:`bool<class_bool>`\ )
+- :ref:`bool<class_bool>` **is_auto_tooltip_enabled**\ (\ )
+
+If ``true``, tree items with no tooltip assigned display their text as their tooltip. See also :ref:`TreeItem.get_tooltip_text<class_TreeItem_method_get_tooltip_text>` and :ref:`TreeItem.get_button_tooltip_text<class_TreeItem_method_get_button_tooltip_text>`.
 
 .. rst-class:: classref-item-separator
 
@@ -1308,7 +1337,7 @@ Theme Property Descriptions
 
 .. rst-class:: classref-themeproperty
 
-:ref:`Color<class_Color>` **children_hl_line_color** = ``Color(0.27, 0.27, 0.27, 1)`` :ref:`🔗<class_Tree_theme_color_children_hl_line_color>`
+:ref:`Color<class_Color>` **children_hl_line_color** = ``Color(0.875, 0.875, 0.875, 0.8)`` :ref:`🔗<class_Tree_theme_color_children_hl_line_color>`
 
 The :ref:`Color<class_Color>` of the relationship lines between the selected :ref:`TreeItem<class_TreeItem>` and its children.
 
@@ -1320,7 +1349,7 @@ The :ref:`Color<class_Color>` of the relationship lines between the selected :re
 
 .. rst-class:: classref-themeproperty
 
-:ref:`Color<class_Color>` **custom_button_font_highlight** = ``Color(0.95, 0.95, 0.95, 1)`` :ref:`🔗<class_Tree_theme_color_custom_button_font_highlight>`
+:ref:`Color<class_Color>` **custom_button_font_highlight** = ``Color(0.875, 0.875, 0.875, 0.9)`` :ref:`🔗<class_Tree_theme_color_custom_button_font_highlight>`
 
 Text :ref:`Color<class_Color>` for a :ref:`TreeItem.CELL_MODE_CUSTOM<class_TreeItem_constant_CELL_MODE_CUSTOM>` mode cell when it's hovered.
 
@@ -1332,7 +1361,7 @@ Text :ref:`Color<class_Color>` for a :ref:`TreeItem.CELL_MODE_CUSTOM<class_TreeI
 
 .. rst-class:: classref-themeproperty
 
-:ref:`Color<class_Color>` **drop_position_color** = ``Color(1, 1, 1, 1)`` :ref:`🔗<class_Tree_theme_color_drop_position_color>`
+:ref:`Color<class_Color>` **drop_position_color** = ``Color(0.875, 0.875, 0.875, 1)`` :ref:`🔗<class_Tree_theme_color_drop_position_color>`
 
 :ref:`Color<class_Color>` used to draw possible drop locations. See :ref:`DropModeFlags<enum_Tree_DropModeFlags>` constants for further description of drop locations.
 
@@ -1344,7 +1373,7 @@ Text :ref:`Color<class_Color>` for a :ref:`TreeItem.CELL_MODE_CUSTOM<class_TreeI
 
 .. rst-class:: classref-themeproperty
 
-:ref:`Color<class_Color>` **font_color** = ``Color(0.7, 0.7, 0.7, 1)`` :ref:`🔗<class_Tree_theme_color_font_color>`
+:ref:`Color<class_Color>` **font_color** = ``Color(0.875, 0.875, 0.875, 0.8)`` :ref:`🔗<class_Tree_theme_color_font_color>`
 
 Default text :ref:`Color<class_Color>` of the item.
 
@@ -1356,9 +1385,33 @@ Default text :ref:`Color<class_Color>` of the item.
 
 .. rst-class:: classref-themeproperty
 
-:ref:`Color<class_Color>` **font_disabled_color** = ``Color(0.875, 0.875, 0.875, 0.5)`` :ref:`🔗<class_Tree_theme_color_font_disabled_color>`
+:ref:`Color<class_Color>` **font_disabled_color** = ``Color(0.875, 0.875, 0.875, 0.4)`` :ref:`🔗<class_Tree_theme_color_font_disabled_color>`
 
 Text :ref:`Color<class_Color>` for a :ref:`TreeItem.CELL_MODE_CHECK<class_TreeItem_constant_CELL_MODE_CHECK>` mode cell when it's non-editable (see :ref:`TreeItem.set_editable<class_TreeItem_method_set_editable>`).
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_Tree_theme_color_font_hovered_color:
+
+.. rst-class:: classref-themeproperty
+
+:ref:`Color<class_Color>` **font_hovered_color** = ``Color(0.875, 0.875, 0.875, 1)`` :ref:`🔗<class_Tree_theme_color_font_hovered_color>`
+
+Text :ref:`Color<class_Color>` used when the item is hovered.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_Tree_theme_color_font_hovered_dimmed_color:
+
+.. rst-class:: classref-themeproperty
+
+:ref:`Color<class_Color>` **font_hovered_dimmed_color** = ``Color(0.875, 0.875, 0.875, 0.6)`` :ref:`🔗<class_Tree_theme_color_font_hovered_dimmed_color>`
+
+Text :ref:`Color<class_Color>` used when the item is hovered, while a button of the same item is hovered as the same time.
 
 .. rst-class:: classref-item-separator
 
@@ -1380,7 +1433,7 @@ The tint of text outline of the item.
 
 .. rst-class:: classref-themeproperty
 
-:ref:`Color<class_Color>` **font_selected_color** = ``Color(1, 1, 1, 1)`` :ref:`🔗<class_Tree_theme_color_font_selected_color>`
+:ref:`Color<class_Color>` **font_selected_color** = ``Color(0.875, 0.875, 0.875, 1)`` :ref:`🔗<class_Tree_theme_color_font_selected_color>`
 
 Text :ref:`Color<class_Color>` used when the item is selected.
 
@@ -1392,7 +1445,7 @@ Text :ref:`Color<class_Color>` used when the item is selected.
 
 .. rst-class:: classref-themeproperty
 
-:ref:`Color<class_Color>` **guide_color** = ``Color(0.7, 0.7, 0.7, 0.25)`` :ref:`🔗<class_Tree_theme_color_guide_color>`
+:ref:`Color<class_Color>` **guide_color** = ``Color(0.875, 0.875, 0.875, 0.4)`` :ref:`🔗<class_Tree_theme_color_guide_color>`
 
 :ref:`Color<class_Color>` of the guideline.
 
@@ -1404,7 +1457,7 @@ Text :ref:`Color<class_Color>` used when the item is selected.
 
 .. rst-class:: classref-themeproperty
 
-:ref:`Color<class_Color>` **parent_hl_line_color** = ``Color(0.27, 0.27, 0.27, 1)`` :ref:`🔗<class_Tree_theme_color_parent_hl_line_color>`
+:ref:`Color<class_Color>` **parent_hl_line_color** = ``Color(0.875, 0.875, 0.875, 0.9)`` :ref:`🔗<class_Tree_theme_color_parent_hl_line_color>`
 
 The :ref:`Color<class_Color>` of the relationship lines between the selected :ref:`TreeItem<class_TreeItem>` and its parents.
 
@@ -1416,7 +1469,7 @@ The :ref:`Color<class_Color>` of the relationship lines between the selected :re
 
 .. rst-class:: classref-themeproperty
 
-:ref:`Color<class_Color>` **relationship_line_color** = ``Color(0.27, 0.27, 0.27, 1)`` :ref:`🔗<class_Tree_theme_color_relationship_line_color>`
+:ref:`Color<class_Color>` **relationship_line_color** = ``Color(0.875, 0.875, 0.875, 0.6)`` :ref:`🔗<class_Tree_theme_color_relationship_line_color>`
 
 The default :ref:`Color<class_Color>` of the relationship lines.
 
@@ -1428,7 +1481,7 @@ The default :ref:`Color<class_Color>` of the relationship lines.
 
 .. rst-class:: classref-themeproperty
 
-:ref:`Color<class_Color>` **title_button_color** = ``Color(0.875, 0.875, 0.875, 1)`` :ref:`🔗<class_Tree_theme_color_title_button_color>`
+:ref:`Color<class_Color>` **title_button_color** = ``Color(0.875, 0.875, 0.875, 0.8)`` :ref:`🔗<class_Tree_theme_color_title_button_color>`
 
 Default text :ref:`Color<class_Color>` of the title button.
 
@@ -1464,7 +1517,7 @@ The width of the relationship lines between the selected :ref:`TreeItem<class_Tr
 
 .. rst-class:: classref-themeproperty
 
-:ref:`int<class_int>` **draw_guides** = ``1`` :ref:`🔗<class_Tree_theme_constant_draw_guides>`
+:ref:`int<class_int>` **draw_guides** = ``0`` :ref:`🔗<class_Tree_theme_constant_draw_guides>`
 
 Draws the guidelines if not zero, this acts as a boolean. The guideline is a horizontal line drawn at the bottom of each item.
 
@@ -1476,7 +1529,7 @@ Draws the guidelines if not zero, this acts as a boolean. The guideline is a hor
 
 .. rst-class:: classref-themeproperty
 
-:ref:`int<class_int>` **draw_relationship_lines** = ``0`` :ref:`🔗<class_Tree_theme_constant_draw_relationship_lines>`
+:ref:`int<class_int>` **draw_relationship_lines** = ``1`` :ref:`🔗<class_Tree_theme_constant_draw_relationship_lines>`
 
 Draws the relationship lines if not zero, this acts as a boolean. Relationship lines are drawn at the start of child items to show hierarchy.
 
@@ -1524,7 +1577,7 @@ The inner bottom margin of a cell.
 
 .. rst-class:: classref-themeproperty
 
-:ref:`int<class_int>` **inner_item_margin_left** = ``0`` :ref:`🔗<class_Tree_theme_constant_inner_item_margin_left>`
+:ref:`int<class_int>` **inner_item_margin_left** = ``6`` :ref:`🔗<class_Tree_theme_constant_inner_item_margin_left>`
 
 The inner left margin of a cell.
 
@@ -1536,7 +1589,7 @@ The inner left margin of a cell.
 
 .. rst-class:: classref-themeproperty
 
-:ref:`int<class_int>` **inner_item_margin_right** = ``0`` :ref:`🔗<class_Tree_theme_constant_inner_item_margin_right>`
+:ref:`int<class_int>` **inner_item_margin_right** = ``6`` :ref:`🔗<class_Tree_theme_constant_inner_item_margin_right>`
 
 The inner right margin of a cell.
 
@@ -1560,7 +1613,7 @@ The inner top margin of a cell.
 
 .. rst-class:: classref-themeproperty
 
-:ref:`int<class_int>` **item_margin** = ``16`` :ref:`🔗<class_Tree_theme_constant_item_margin>`
+:ref:`int<class_int>` **item_margin** = ``12`` :ref:`🔗<class_Tree_theme_constant_item_margin>`
 
 The horizontal margin at the start of an item. This is used when folding is enabled for the item.
 
@@ -1598,7 +1651,7 @@ The space between the parent relationship lines for the selected :ref:`TreeItem<
 
 .. rst-class:: classref-themeproperty
 
-:ref:`int<class_int>` **parent_hl_line_width** = ``1`` :ref:`🔗<class_Tree_theme_constant_parent_hl_line_width>`
+:ref:`int<class_int>` **parent_hl_line_width** = ``2`` :ref:`🔗<class_Tree_theme_constant_parent_hl_line_width>`
 
 The width of the relationship lines between the selected :ref:`TreeItem<class_TreeItem>` and its parents.
 
@@ -1906,6 +1959,18 @@ The updown arrow icon to display for the :ref:`TreeItem.CELL_MODE_RANGE<class_Tr
 
 ----
 
+.. _class_Tree_theme_style_button_hover:
+
+.. rst-class:: classref-themeproperty
+
+:ref:`StyleBox<class_StyleBox>` **button_hover** :ref:`🔗<class_Tree_theme_style_button_hover>`
+
+:ref:`StyleBox<class_StyleBox>` used when a button in the tree is hovered.
+
+.. rst-class:: classref-item-separator
+
+----
+
 .. _class_Tree_theme_style_button_pressed:
 
 .. rst-class:: classref-themeproperty
@@ -1985,6 +2050,30 @@ Default :ref:`StyleBox<class_StyleBox>` for a :ref:`TreeItem.CELL_MODE_CUSTOM<cl
 :ref:`StyleBox<class_StyleBox>` **focus** :ref:`🔗<class_Tree_theme_style_focus>`
 
 The focused style for the **Tree**, drawn on top of everything.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_Tree_theme_style_hovered:
+
+.. rst-class:: classref-themeproperty
+
+:ref:`StyleBox<class_StyleBox>` **hovered** :ref:`🔗<class_Tree_theme_style_hovered>`
+
+:ref:`StyleBox<class_StyleBox>` for the item being hovered.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_Tree_theme_style_hovered_dimmed:
+
+.. rst-class:: classref-themeproperty
+
+:ref:`StyleBox<class_StyleBox>` **hovered_dimmed** :ref:`🔗<class_Tree_theme_style_hovered_dimmed>`
+
+:ref:`StyleBox<class_StyleBox>` for the item being hovered, while a button of the same item is hovered as the same time.
 
 .. rst-class:: classref-item-separator
 

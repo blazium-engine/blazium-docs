@@ -12,7 +12,7 @@ BoxContainer
 
 **Inherits:** :ref:`Container<class_Container>` **<** :ref:`Control<class_Control>` **<** :ref:`CanvasItem<class_CanvasItem>` **<** :ref:`Node<class_Node>` **<** :ref:`Object<class_Object>`
 
-**Inherited By:** :ref:`HBoxContainer<class_HBoxContainer>`, :ref:`VBoxContainer<class_VBoxContainer>`
+**Inherited By:** :ref:`EditorScrollBox<class_EditorScrollBox>`, :ref:`HBoxContainer<class_HBoxContainer>`, :ref:`VBoxContainer<class_VBoxContainer>`
 
 A container that arranges its child controls horizontally or vertically.
 

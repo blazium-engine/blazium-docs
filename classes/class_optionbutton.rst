@@ -127,7 +127,7 @@ Theme Properties
    :widths: auto
 
    +-----------------------------------+-------------------------------------------------------------------------+-------+
-   | :ref:`int<class_int>`             | :ref:`arrow_margin<class_OptionButton_theme_constant_arrow_margin>`     | ``4`` |
+   | :ref:`int<class_int>`             | :ref:`arrow_margin<class_OptionButton_theme_constant_arrow_margin>`     | ``6`` |
    +-----------------------------------+-------------------------------------------------------------------------+-------+
    | :ref:`int<class_int>`             | :ref:`modulate_arrow<class_OptionButton_theme_constant_modulate_arrow>` | ``0`` |
    +-----------------------------------+-------------------------------------------------------------------------+-------+
@@ -589,7 +589,7 @@ Theme Property Descriptions
 
 .. rst-class:: classref-themeproperty
 
-:ref:`int<class_int>` **arrow_margin** = ``4`` :ref:`🔗<class_OptionButton_theme_constant_arrow_margin>`
+:ref:`int<class_int>` **arrow_margin** = ``6`` :ref:`🔗<class_OptionButton_theme_constant_arrow_margin>`
 
 The horizontal space between the arrow icon and the right edge of the button.
 

@@ -55,6 +55,8 @@ Methods
    +---------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`bool<class_bool>`                                       | :ref:`has_cached<class_ResourceLoader_method_has_cached>`\ (\ path\: :ref:`String<class_String>`\ )                                                                                                                                                                                          |
    +---------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`PackedStringArray<class_PackedStringArray>`             | :ref:`list_directory<class_ResourceLoader_method_list_directory>`\ (\ directory_path\: :ref:`String<class_String>`\ )                                                                                                                                                                        |
+   +---------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`Resource<class_Resource>`                               | :ref:`load<class_ResourceLoader_method_load>`\ (\ path\: :ref:`String<class_String>`, type_hint\: :ref:`String<class_String>` = "", cache_mode\: :ref:`CacheMode<enum_ResourceLoader_CacheMode>` = 1\ )                                                                                      |
    +---------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`Resource<class_Resource>`                               | :ref:`load_threaded_get<class_ResourceLoader_method_load_threaded_get>`\ (\ path\: :ref:`String<class_String>`\ )                                                                                                                                                                            |
@@ -262,6 +264,18 @@ Once a resource has been loaded by the engine, it is cached in memory for faster
 
 ----
 
+.. _class_ResourceLoader_method_list_directory:
+
+.. rst-class:: classref-method
+
+:ref:`PackedStringArray<class_PackedStringArray>` **list_directory**\ (\ directory_path\: :ref:`String<class_String>`\ ) :ref:`🔗<class_ResourceLoader_method_list_directory>`
+
+Lists a directory (as example: "res://assets/enemies"), returning all resources contained within. The resource files are the original file names as visible in the editor before exporting.
+
+.. rst-class:: classref-item-separator
+
+----
+
 .. _class_ResourceLoader_method_load:
 
 .. rst-class:: classref-method
@@ -310,7 +324,7 @@ If this is called before the loading thread is done (i.e. :ref:`load_threaded_ge
 
 Returns the status of a threaded loading operation started with :ref:`load_threaded_request<class_ResourceLoader_method_load_threaded_request>` for the resource at ``path``. See :ref:`ThreadLoadStatus<enum_ResourceLoader_ThreadLoadStatus>` for possible return values.
 
-An array variable can optionally be passed via ``progress``, and will return a one-element array containing the ratio of completion of the threaded loading (between ``0.0``\  and ``1.0``).
+An array variable can optionally be passed via ``progress``, and will return a one-element array containing the ratio of completion of the threaded loading (between ``0.0`` and ``1.0``).
 
 \ **Note:** The recommended way of using this method is to call it during different frames (e.g., in :ref:`Node._process<class_Node_private_method__process>`, instead of a loop).
 

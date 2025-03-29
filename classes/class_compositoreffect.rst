@@ -119,7 +119,7 @@ The callback is called before our transparent rendering pass, but after our sky 
 
 :ref:`EffectCallbackType<enum_CompositorEffect_EffectCallbackType>` **EFFECT_CALLBACK_TYPE_POST_TRANSPARENT** = ``4``
 
-The callback is called after our transparent rendering pass, but before any build in post effects and output to our render target.
+The callback is called after our transparent rendering pass, but before any built-in post-processing effects and output to our render target.
 
 .. _class_CompositorEffect_constant_EFFECT_CALLBACK_TYPE_MAX:
 
@@ -155,7 +155,7 @@ If ``true`` and MSAA is enabled, this will trigger a color buffer resolve before
 
 ::
 
-    var render_scene_buffers : RenderSceneBuffersRD = render_data.get_render_scene_buffers()
+    var render_scene_buffers = render_data.get_render_scene_buffers()
     var color_buffer = render_scene_buffers.get_texture("render_buffers", "color")
 
 .. rst-class:: classref-item-separator
@@ -179,7 +179,7 @@ If ``true`` and MSAA is enabled, this will trigger a depth buffer resolve before
 
 ::
 
-    var render_scene_buffers : RenderSceneBuffersRD = render_data.get_render_scene_buffers()
+    var render_scene_buffers = render_data.get_render_scene_buffers()
     var depth_buffer = render_scene_buffers.get_texture("render_buffers", "depth")
 
 .. rst-class:: classref-item-separator
@@ -237,7 +237,7 @@ If ``true`` this triggers motion vectors being calculated during the opaque rend
 
 ::
 
-    var render_scene_buffers : RenderSceneBuffersRD = render_data.get_render_scene_buffers()
+    var render_scene_buffers = render_data.get_render_scene_buffers()
     var motion_buffer = render_scene_buffers.get_velocity_texture()
 
 .. rst-class:: classref-item-separator
@@ -261,7 +261,7 @@ If ``true`` this triggers normal and roughness data to be output during our dept
 
 ::
 
-    var render_scene_buffers : RenderSceneBuffersRD = render_data.get_render_scene_buffers()
+    var render_scene_buffers = render_data.get_render_scene_buffers()
     var roughness_buffer = render_scene_buffers.get_texture("forward_clustered", "normal_roughness")
 
 The raw normal and roughness buffer is stored in an optimized format, different than the one available in Spatial shaders. When sampling the buffer, a conversion function must be applied. Use this function, copied from `here <https://github.com/godotengine/godot/blob/da5f39889f155658cef7f7ec3cc1abb94e17d815/servers/rendering/renderer_rd/shaders/forward_clustered/scene_forward_clustered_inc.glsl#L334-L341>`__:

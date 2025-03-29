@@ -129,25 +129,25 @@ Theme Properties
 .. table::
    :widths: auto
 
-   +-----------------------------------+-------------------------------------------------------------------------+-----------------------------------+
-   | :ref:`Color<class_Color>`         | :ref:`resizer_color<class_GraphNode_theme_color_resizer_color>`         | ``Color(0.875, 0.875, 0.875, 1)`` |
-   +-----------------------------------+-------------------------------------------------------------------------+-----------------------------------+
-   | :ref:`int<class_int>`             | :ref:`port_h_offset<class_GraphNode_theme_constant_port_h_offset>`      | ``0``                             |
-   +-----------------------------------+-------------------------------------------------------------------------+-----------------------------------+
-   | :ref:`int<class_int>`             | :ref:`separation<class_GraphNode_theme_constant_separation>`            | ``2``                             |
-   +-----------------------------------+-------------------------------------------------------------------------+-----------------------------------+
-   | :ref:`Texture2D<class_Texture2D>` | :ref:`port<class_GraphNode_theme_icon_port>`                            |                                   |
-   +-----------------------------------+-------------------------------------------------------------------------+-----------------------------------+
-   | :ref:`StyleBox<class_StyleBox>`   | :ref:`panel<class_GraphNode_theme_style_panel>`                         |                                   |
-   +-----------------------------------+-------------------------------------------------------------------------+-----------------------------------+
-   | :ref:`StyleBox<class_StyleBox>`   | :ref:`panel_selected<class_GraphNode_theme_style_panel_selected>`       |                                   |
-   +-----------------------------------+-------------------------------------------------------------------------+-----------------------------------+
-   | :ref:`StyleBox<class_StyleBox>`   | :ref:`slot<class_GraphNode_theme_style_slot>`                           |                                   |
-   +-----------------------------------+-------------------------------------------------------------------------+-----------------------------------+
-   | :ref:`StyleBox<class_StyleBox>`   | :ref:`titlebar<class_GraphNode_theme_style_titlebar>`                   |                                   |
-   +-----------------------------------+-------------------------------------------------------------------------+-----------------------------------+
-   | :ref:`StyleBox<class_StyleBox>`   | :ref:`titlebar_selected<class_GraphNode_theme_style_titlebar_selected>` |                                   |
-   +-----------------------------------+-------------------------------------------------------------------------+-----------------------------------+
+   +-----------------------------------+-------------------------------------------------------------------------+-------------------------------------+
+   | :ref:`Color<class_Color>`         | :ref:`resizer_color<class_GraphNode_theme_color_resizer_color>`         | ``Color(0.875, 0.875, 0.875, 0.9)`` |
+   +-----------------------------------+-------------------------------------------------------------------------+-------------------------------------+
+   | :ref:`int<class_int>`             | :ref:`port_h_offset<class_GraphNode_theme_constant_port_h_offset>`      | ``0``                               |
+   +-----------------------------------+-------------------------------------------------------------------------+-------------------------------------+
+   | :ref:`int<class_int>`             | :ref:`separation<class_GraphNode_theme_constant_separation>`            | ``2``                               |
+   +-----------------------------------+-------------------------------------------------------------------------+-------------------------------------+
+   | :ref:`Texture2D<class_Texture2D>` | :ref:`port<class_GraphNode_theme_icon_port>`                            |                                     |
+   +-----------------------------------+-------------------------------------------------------------------------+-------------------------------------+
+   | :ref:`StyleBox<class_StyleBox>`   | :ref:`panel<class_GraphNode_theme_style_panel>`                         |                                     |
+   +-----------------------------------+-------------------------------------------------------------------------+-------------------------------------+
+   | :ref:`StyleBox<class_StyleBox>`   | :ref:`panel_selected<class_GraphNode_theme_style_panel_selected>`       |                                     |
+   +-----------------------------------+-------------------------------------------------------------------------+-------------------------------------+
+   | :ref:`StyleBox<class_StyleBox>`   | :ref:`slot<class_GraphNode_theme_style_slot>`                           |                                     |
+   +-----------------------------------+-------------------------------------------------------------------------+-------------------------------------+
+   | :ref:`StyleBox<class_StyleBox>`   | :ref:`titlebar<class_GraphNode_theme_style_titlebar>`                   |                                     |
+   +-----------------------------------+-------------------------------------------------------------------------+-------------------------------------+
+   | :ref:`StyleBox<class_StyleBox>`   | :ref:`titlebar_selected<class_GraphNode_theme_style_titlebar_selected>` |                                     |
+   +-----------------------------------+-------------------------------------------------------------------------+-------------------------------------+
 
 .. rst-class:: classref-section-separator
 
@@ -462,7 +462,7 @@ Returns the :ref:`HBoxContainer<class_HBoxContainer>` used for the title bar, on
 
 :ref:`bool<class_bool>` **is_slot_draw_stylebox**\ (\ slot_index\: :ref:`int<class_int>`\ ) |const| :ref:`🔗<class_GraphNode_method_is_slot_draw_stylebox>`
 
-Returns true if the background :ref:`StyleBox<class_StyleBox>` of the slot with the given ``slot_index`` is drawn.
+Returns ``true`` if the background :ref:`StyleBox<class_StyleBox>` of the slot with the given ``slot_index`` is drawn.
 
 .. rst-class:: classref-item-separator
 
@@ -633,7 +633,7 @@ Theme Property Descriptions
 
 .. rst-class:: classref-themeproperty
 
-:ref:`Color<class_Color>` **resizer_color** = ``Color(0.875, 0.875, 0.875, 1)`` :ref:`🔗<class_GraphNode_theme_color_resizer_color>`
+:ref:`Color<class_Color>` **resizer_color** = ``Color(0.875, 0.875, 0.875, 0.9)`` :ref:`🔗<class_GraphNode_theme_color_resizer_color>`
 
 The color modulation applied to the resizer icon.
 

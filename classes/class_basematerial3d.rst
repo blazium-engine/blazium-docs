@@ -645,7 +645,7 @@ The object will be shaded per pixel. Useful for realistic shading effects.
 
 :ref:`ShadingMode<enum_BaseMaterial3D_ShadingMode>` **SHADING_MODE_PER_VERTEX** = ``2``
 
-The object will be shaded per vertex. Useful when you want cheaper shaders and do not care about visual quality. Not implemented yet (this mode will act like :ref:`SHADING_MODE_PER_PIXEL<class_BaseMaterial3D_constant_SHADING_MODE_PER_PIXEL>`).
+The object will be shaded per vertex. Useful when you want cheaper shaders and do not care about visual quality.
 
 .. _class_BaseMaterial3D_constant_SHADING_MODE_MAX:
 
@@ -1536,7 +1536,7 @@ The strength of the anisotropy effect. This is multiplied by :ref:`anisotropy_fl
 - |void| **set_feature**\ (\ feature\: :ref:`Feature<enum_BaseMaterial3D_Feature>`, enable\: :ref:`bool<class_bool>`\ )
 - :ref:`bool<class_bool>` **get_feature**\ (\ feature\: :ref:`Feature<enum_BaseMaterial3D_Feature>`\ ) |const|
 
-If ``true``, anisotropy is enabled. Anisotropy changes the shape of the specular blob and aligns it to tangent space. This is useful for brushed aluminium and hair reflections.
+If ``true``, anisotropy is enabled. Anisotropy changes the shape of the specular blob and aligns it to tangent space. This is useful for brushed aluminum and hair reflections.
 
 \ **Note:** Mesh tangents are needed for anisotropy to work. If the mesh does not contain tangents, the anisotropy effect will appear broken.
 
@@ -1730,8 +1730,6 @@ If ``true``, the shader will keep the scale set for the mesh. Otherwise, the sca
 - :ref:`BillboardMode<enum_BaseMaterial3D_BillboardMode>` **get_billboard_mode**\ (\ )
 
 Controls how the object faces the camera. See :ref:`BillboardMode<enum_BaseMaterial3D_BillboardMode>`.
-
-\ **Note:** When billboarding is enabled and the material also casts shadows, billboards will face **the** camera in the scene when rendering shadows. In scenes with multiple cameras, the intended shadow cannot be determined and this will result in undefined behavior. See `GitHub Pull Request #72638 <https://github.com/godotengine/godot/pull/72638>`__ for details.
 
 \ **Note:** Billboard mode is not suitable for VR because the left-right vector of the camera is not horizontal when the screen is attached to your head instead of on the table. See `GitHub issue #41567 <https://github.com/godotengine/godot/issues/41567>`__ for details.
 
@@ -2928,8 +2926,6 @@ Specifies the channel of the :ref:`roughness_texture<class_BaseMaterial3D_proper
 - :ref:`ShadingMode<enum_BaseMaterial3D_ShadingMode>` **get_shading_mode**\ (\ )
 
 Sets whether the shading takes place, per-pixel, per-vertex or unshaded. Per-vertex lighting is faster, making it the best choice for mobile applications, however it looks considerably worse than per-pixel. Unshaded rendering is the fastest, but disables all interactions with lights.
-
-\ **Note:** Setting the shading mode vertex shading currently has no effect, as vertex shading is not implemented yet.
 
 .. rst-class:: classref-item-separator
 

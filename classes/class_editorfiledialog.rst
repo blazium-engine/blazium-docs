@@ -21,6 +21,8 @@ Description
 
 **EditorFileDialog** is an enhanced version of :ref:`FileDialog<class_FileDialog>` available only to editor plugins. Additional features include list of favorited/recent files and the ability to see files as thumbnails grid instead of list.
 
+Unlike :ref:`FileDialog<class_FileDialog>`, **EditorFileDialog** does not have a property for using native dialogs. Instead, native dialogs can be enabled globally via the :ref:`EditorSettings.interface/editor/use_native_file_dialogs<class_EditorSettings_property_interface/editor/use_native_file_dialogs>` editor setting. They are also enabled automatically when running in sandbox (e.g. on macOS).
+
 .. rst-class:: classref-reftable-group
 
 Properties
@@ -70,7 +72,11 @@ Methods
    +---------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | |void|                                            | :ref:`add_side_menu<class_EditorFileDialog_method_add_side_menu>`\ (\ menu\: :ref:`Control<class_Control>`, title\: :ref:`String<class_String>` = ""\ )                                                        |
    +---------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | |void|                                            | :ref:`clear_filename_filter<class_EditorFileDialog_method_clear_filename_filter>`\ (\ )                                                                                                                        |
+   +---------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | |void|                                            | :ref:`clear_filters<class_EditorFileDialog_method_clear_filters>`\ (\ )                                                                                                                                        |
+   +---------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`String<class_String>`                       | :ref:`get_filename_filter<class_EditorFileDialog_method_get_filename_filter>`\ (\ ) |const|                                                                                                                    |
    +---------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`LineEdit<class_LineEdit>`                   | :ref:`get_line_edit<class_EditorFileDialog_method_get_line_edit>`\ (\ )                                                                                                                                        |
    +---------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -87,6 +93,8 @@ Methods
    | |void|                                            | :ref:`invalidate<class_EditorFileDialog_method_invalidate>`\ (\ )                                                                                                                                              |
    +---------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | |void|                                            | :ref:`popup_file_dialog<class_EditorFileDialog_method_popup_file_dialog>`\ (\ )                                                                                                                                |
+   +---------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | |void|                                            | :ref:`set_filename_filter<class_EditorFileDialog_method_set_filename_filter>`\ (\ filter\: :ref:`String<class_String>`\ )                                                                                      |
    +---------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | |void|                                            | :ref:`set_option_default<class_EditorFileDialog_method_set_option_default>`\ (\ option\: :ref:`int<class_int>`, default_value_index\: :ref:`int<class_int>`\ )                                                 |
    +---------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -123,6 +131,18 @@ Emitted when a directory is selected.
 **file_selected**\ (\ path\: :ref:`String<class_String>`\ ) :ref:`🔗<class_EditorFileDialog_signal_file_selected>`
 
 Emitted when a file is selected.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_EditorFileDialog_signal_filename_filter_changed:
+
+.. rst-class:: classref-signal
+
+**filename_filter_changed**\ (\ filter\: :ref:`String<class_String>`\ ) :ref:`🔗<class_EditorFileDialog_signal_filename_filter_changed>`
+
+Emitted when the filter for file names changes.
 
 .. rst-class:: classref-item-separator
 
@@ -479,13 +499,37 @@ Adds the given ``menu`` to the side of the file dialog with the given ``title`` 
 
 ----
 
+.. _class_EditorFileDialog_method_clear_filename_filter:
+
+.. rst-class:: classref-method
+
+|void| **clear_filename_filter**\ (\ ) :ref:`🔗<class_EditorFileDialog_method_clear_filename_filter>`
+
+Clear the filter for file names.
+
+.. rst-class:: classref-item-separator
+
+----
+
 .. _class_EditorFileDialog_method_clear_filters:
 
 .. rst-class:: classref-method
 
 |void| **clear_filters**\ (\ ) :ref:`🔗<class_EditorFileDialog_method_clear_filters>`
 
-Removes all filters except for "All Files (\*)".
+Removes all filters except for "All Files (\*.\*)".
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_EditorFileDialog_method_get_filename_filter:
+
+.. rst-class:: classref-method
+
+:ref:`String<class_String>` **get_filename_filter**\ (\ ) |const| :ref:`🔗<class_EditorFileDialog_method_get_filename_filter>`
+
+Returns the value of the filter for file names.
 
 .. rst-class:: classref-item-separator
 
@@ -586,6 +630,18 @@ Notify the **EditorFileDialog** that its view of the data is no longer accurate.
 |void| **popup_file_dialog**\ (\ ) :ref:`🔗<class_EditorFileDialog_method_popup_file_dialog>`
 
 Shows the **EditorFileDialog** at the default size and position for file dialogs in the editor, and selects the file name if there is a current file.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_EditorFileDialog_method_set_filename_filter:
+
+.. rst-class:: classref-method
+
+|void| **set_filename_filter**\ (\ filter\: :ref:`String<class_String>`\ ) :ref:`🔗<class_EditorFileDialog_method_set_filename_filter>`
+
+Sets the value of the filter for file names.
 
 .. rst-class:: classref-item-separator
 

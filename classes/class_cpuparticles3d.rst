@@ -91,6 +91,8 @@ Properties
    +---------------------------------------------------------+---------------------------------------------------------------------------------------------+----------------------------+
    | :ref:`Vector3<class_Vector3>`                           | :ref:`emission_ring_axis<class_CPUParticles3D_property_emission_ring_axis>`                 |                            |
    +---------------------------------------------------------+---------------------------------------------------------------------------------------------+----------------------------+
+   | :ref:`float<class_float>`                               | :ref:`emission_ring_cone_angle<class_CPUParticles3D_property_emission_ring_cone_angle>`     |                            |
+   +---------------------------------------------------------+---------------------------------------------------------------------------------------------+----------------------------+
    | :ref:`float<class_float>`                               | :ref:`emission_ring_height<class_CPUParticles3D_property_emission_ring_height>`             |                            |
    +---------------------------------------------------------+---------------------------------------------------------------------------------------------+----------------------------+
    | :ref:`float<class_float>`                               | :ref:`emission_ring_inner_radius<class_CPUParticles3D_property_emission_ring_inner_radius>` |                            |
@@ -196,6 +198,8 @@ Methods
 .. table::
    :widths: auto
 
+   +---------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`AABB<class_AABB>`   | :ref:`capture_aabb<class_CPUParticles3D_method_capture_aabb>`\ (\ ) |const|                                                                                                              |
    +---------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | |void|                    | :ref:`convert_from_particles<class_CPUParticles3D_method_convert_from_particles>`\ (\ particles\: :ref:`Node<class_Node>`\ )                                                             |
    +---------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -541,7 +545,7 @@ Number of particles emitted in one emission cycle.
 - |void| **set_param_curve**\ (\ param\: :ref:`Parameter<enum_CPUParticles3D_Parameter>`, curve\: :ref:`Curve<class_Curve>`\ )
 - :ref:`Curve<class_Curve>` **get_param_curve**\ (\ param\: :ref:`Parameter<enum_CPUParticles3D_Parameter>`\ ) |const|
 
-Each particle's rotation will be animated along this :ref:`Curve<class_Curve>`.
+Each particle's rotation will be animated along this :ref:`Curve<class_Curve>`. Should be a unit :ref:`Curve<class_Curve>`.
 
 .. rst-class:: classref-item-separator
 
@@ -592,7 +596,7 @@ Minimum angle.
 - |void| **set_param_curve**\ (\ param\: :ref:`Parameter<enum_CPUParticles3D_Parameter>`, curve\: :ref:`Curve<class_Curve>`\ )
 - :ref:`Curve<class_Curve>` **get_param_curve**\ (\ param\: :ref:`Parameter<enum_CPUParticles3D_Parameter>`\ ) |const|
 
-Each particle's angular velocity (rotation speed) will vary along this :ref:`Curve<class_Curve>` over its lifetime.
+Each particle's angular velocity (rotation speed) will vary along this :ref:`Curve<class_Curve>` over its lifetime. Should be a unit :ref:`Curve<class_Curve>`.
 
 .. rst-class:: classref-item-separator
 
@@ -643,7 +647,7 @@ Minimum initial angular velocity (rotation speed) applied to each particle in *d
 - |void| **set_param_curve**\ (\ param\: :ref:`Parameter<enum_CPUParticles3D_Parameter>`, curve\: :ref:`Curve<class_Curve>`\ )
 - :ref:`Curve<class_Curve>` **get_param_curve**\ (\ param\: :ref:`Parameter<enum_CPUParticles3D_Parameter>`\ ) |const|
 
-Each particle's animation offset will vary along this :ref:`Curve<class_Curve>`.
+Each particle's animation offset will vary along this :ref:`Curve<class_Curve>`. Should be a unit :ref:`Curve<class_Curve>`.
 
 .. rst-class:: classref-item-separator
 
@@ -694,7 +698,7 @@ Minimum animation offset.
 - |void| **set_param_curve**\ (\ param\: :ref:`Parameter<enum_CPUParticles3D_Parameter>`, curve\: :ref:`Curve<class_Curve>`\ )
 - :ref:`Curve<class_Curve>` **get_param_curve**\ (\ param\: :ref:`Parameter<enum_CPUParticles3D_Parameter>`\ ) |const|
 
-Each particle's animation speed will vary along this :ref:`Curve<class_Curve>`.
+Each particle's animation speed will vary along this :ref:`Curve<class_Curve>`. Should be a unit :ref:`Curve<class_Curve>`.
 
 .. rst-class:: classref-item-separator
 
@@ -802,7 +806,7 @@ Each particle's color will vary along this :ref:`GradientTexture1D<class_Gradien
 - |void| **set_param_curve**\ (\ param\: :ref:`Parameter<enum_CPUParticles3D_Parameter>`, curve\: :ref:`Curve<class_Curve>`\ )
 - :ref:`Curve<class_Curve>` **get_param_curve**\ (\ param\: :ref:`Parameter<enum_CPUParticles3D_Parameter>`\ ) |const|
 
-Damping will vary along this :ref:`Curve<class_Curve>`.
+Damping will vary along this :ref:`Curve<class_Curve>`. Should be a unit :ref:`Curve<class_Curve>`.
 
 .. rst-class:: classref-item-separator
 
@@ -964,6 +968,25 @@ Sets the initial positions to spawn particles when using :ref:`EMISSION_SHAPE_PO
 - :ref:`Vector3<class_Vector3>` **get_emission_ring_axis**\ (\ )
 
 The axis of the ring when using the emitter :ref:`EMISSION_SHAPE_RING<class_CPUParticles3D_constant_EMISSION_SHAPE_RING>`.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_CPUParticles3D_property_emission_ring_cone_angle:
+
+.. rst-class:: classref-property
+
+:ref:`float<class_float>` **emission_ring_cone_angle** :ref:`🔗<class_CPUParticles3D_property_emission_ring_cone_angle>`
+
+.. rst-class:: classref-property-setget
+
+- |void| **set_emission_ring_cone_angle**\ (\ value\: :ref:`float<class_float>`\ )
+- :ref:`float<class_float>` **get_emission_ring_cone_angle**\ (\ )
+
+The angle of the cone when using the emitter :ref:`EMISSION_SHAPE_RING<class_CPUParticles3D_constant_EMISSION_SHAPE_RING>`. The default angle of 90 degrees results in a ring, while an angle of 0 degrees results in a cone. Intermediate values will result in a ring where one end is larger than the other.
+
+\ **Note:** Depending on :ref:`emission_ring_height<class_CPUParticles3D_property_emission_ring_height>`, the angle may be clamped if the ring's end is reached to form a perfect cone.
 
 .. rst-class:: classref-item-separator
 
@@ -1167,7 +1190,7 @@ Gravity applied to every particle.
 - |void| **set_param_curve**\ (\ param\: :ref:`Parameter<enum_CPUParticles3D_Parameter>`, curve\: :ref:`Curve<class_Curve>`\ )
 - :ref:`Curve<class_Curve>` **get_param_curve**\ (\ param\: :ref:`Parameter<enum_CPUParticles3D_Parameter>`\ ) |const|
 
-Each particle's hue will vary along this :ref:`Curve<class_Curve>`.
+Each particle's hue will vary along this :ref:`Curve<class_Curve>`. Should be a unit :ref:`Curve<class_Curve>`.
 
 .. rst-class:: classref-item-separator
 
@@ -1286,7 +1309,7 @@ Particle lifetime randomness ratio.
 - |void| **set_param_curve**\ (\ param\: :ref:`Parameter<enum_CPUParticles3D_Parameter>`, curve\: :ref:`Curve<class_Curve>`\ )
 - :ref:`Curve<class_Curve>` **get_param_curve**\ (\ param\: :ref:`Parameter<enum_CPUParticles3D_Parameter>`\ ) |const|
 
-Each particle's linear acceleration will vary along this :ref:`Curve<class_Curve>`.
+Each particle's linear acceleration will vary along this :ref:`Curve<class_Curve>`. Should be a unit :ref:`Curve<class_Curve>`.
 
 .. rst-class:: classref-item-separator
 
@@ -1388,7 +1411,7 @@ If ``true``, only one emission cycle occurs. If set ``true`` during a cycle, emi
 - |void| **set_param_curve**\ (\ param\: :ref:`Parameter<enum_CPUParticles3D_Parameter>`, curve\: :ref:`Curve<class_Curve>`\ )
 - :ref:`Curve<class_Curve>` **get_param_curve**\ (\ param\: :ref:`Parameter<enum_CPUParticles3D_Parameter>`\ ) |const|
 
-Each particle's orbital velocity will vary along this :ref:`Curve<class_Curve>`.
+Each particle's orbital velocity will vary along this :ref:`Curve<class_Curve>`. Should be a unit :ref:`Curve<class_Curve>`.
 
 .. rst-class:: classref-item-separator
 
@@ -1507,7 +1530,7 @@ Particle system starts as if it had already run for this many seconds.
 - |void| **set_param_curve**\ (\ param\: :ref:`Parameter<enum_CPUParticles3D_Parameter>`, curve\: :ref:`Curve<class_Curve>`\ )
 - :ref:`Curve<class_Curve>` **get_param_curve**\ (\ param\: :ref:`Parameter<enum_CPUParticles3D_Parameter>`\ ) |const|
 
-Each particle's radial acceleration will vary along this :ref:`Curve<class_Curve>`.
+Each particle's radial acceleration will vary along this :ref:`Curve<class_Curve>`. Should be a unit :ref:`Curve<class_Curve>`.
 
 .. rst-class:: classref-item-separator
 
@@ -1575,7 +1598,7 @@ Emission lifetime randomness ratio.
 - |void| **set_param_curve**\ (\ param\: :ref:`Parameter<enum_CPUParticles3D_Parameter>`, curve\: :ref:`Curve<class_Curve>`\ )
 - :ref:`Curve<class_Curve>` **get_param_curve**\ (\ param\: :ref:`Parameter<enum_CPUParticles3D_Parameter>`\ ) |const|
 
-Each particle's scale will vary along this :ref:`Curve<class_Curve>`.
+Each particle's scale will vary along this :ref:`Curve<class_Curve>`. Should be a unit :ref:`Curve<class_Curve>`.
 
 .. rst-class:: classref-item-separator
 
@@ -1728,7 +1751,7 @@ Each particle's initial direction range from ``+spread`` to ``-spread`` degrees.
 - |void| **set_param_curve**\ (\ param\: :ref:`Parameter<enum_CPUParticles3D_Parameter>`, curve\: :ref:`Curve<class_Curve>`\ )
 - :ref:`Curve<class_Curve>` **get_param_curve**\ (\ param\: :ref:`Parameter<enum_CPUParticles3D_Parameter>`\ ) |const|
 
-Each particle's tangential acceleration will vary along this :ref:`Curve<class_Curve>`.
+Each particle's tangential acceleration will vary along this :ref:`Curve<class_Curve>`. Should be a unit :ref:`Curve<class_Curve>`.
 
 .. rst-class:: classref-item-separator
 
@@ -1791,6 +1814,18 @@ Grow the box if particles suddenly appear/disappear when the node enters/exits t
 
 Method Descriptions
 -------------------
+
+.. _class_CPUParticles3D_method_capture_aabb:
+
+.. rst-class:: classref-method
+
+:ref:`AABB<class_AABB>` **capture_aabb**\ (\ ) |const| :ref:`🔗<class_CPUParticles3D_method_capture_aabb>`
+
+Returns the axis-aligned bounding box that contains all the particles that are active in the current frame.
+
+.. rst-class:: classref-item-separator
+
+----
 
 .. _class_CPUParticles3D_method_convert_from_particles:
 
@@ -1870,7 +1905,7 @@ Restarts the particle emitter.
 
 |void| **set_param_curve**\ (\ param\: :ref:`Parameter<enum_CPUParticles3D_Parameter>`, curve\: :ref:`Curve<class_Curve>`\ ) :ref:`🔗<class_CPUParticles3D_method_set_param_curve>`
 
-Sets the :ref:`Curve<class_Curve>` of the parameter specified by :ref:`Parameter<enum_CPUParticles3D_Parameter>`.
+Sets the :ref:`Curve<class_Curve>` of the parameter specified by :ref:`Parameter<enum_CPUParticles3D_Parameter>`. Should be a unit :ref:`Curve<class_Curve>`.
 
 .. rst-class:: classref-item-separator
 

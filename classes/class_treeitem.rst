@@ -58,6 +58,8 @@ Methods
    +-------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | |void|                                                            | :ref:`call_recursive<class_TreeItem_method_call_recursive>`\ (\ method\: :ref:`StringName<class_StringName>`, ...\ ) |vararg|                                                                                                                                       |
    +-------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | |void|                                                            | :ref:`clear_buttons<class_TreeItem_method_clear_buttons>`\ (\ )                                                                                                                                                                                                     |
+   +-------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | |void|                                                            | :ref:`clear_custom_bg_color<class_TreeItem_method_clear_custom_bg_color>`\ (\ column\: :ref:`int<class_int>`\ )                                                                                                                                                     |
    +-------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | |void|                                                            | :ref:`clear_custom_color<class_TreeItem_method_clear_custom_color>`\ (\ column\: :ref:`int<class_int>`\ )                                                                                                                                                           |
@@ -67,6 +69,8 @@ Methods
    | |void|                                                            | :ref:`deselect<class_TreeItem_method_deselect>`\ (\ column\: :ref:`int<class_int>`\ )                                                                                                                                                                               |
    +-------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | |void|                                                            | :ref:`erase_button<class_TreeItem_method_erase_button>`\ (\ column\: :ref:`int<class_int>`, button_index\: :ref:`int<class_int>`\ )                                                                                                                                 |
+   +-------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`AutoTranslateMode<enum_Node_AutoTranslateMode>`             | :ref:`get_auto_translate_mode<class_TreeItem_method_get_auto_translate_mode>`\ (\ column\: :ref:`int<class_int>`\ ) |const|                                                                                                                                         |
    +-------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`AutowrapMode<enum_TextServer_AutowrapMode>`                 | :ref:`get_autowrap_mode<class_TreeItem_method_get_autowrap_mode>`\ (\ column\: :ref:`int<class_int>`\ ) |const|                                                                                                                                                     |
    +-------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -185,6 +189,8 @@ Methods
    | |void|                                                            | :ref:`remove_child<class_TreeItem_method_remove_child>`\ (\ child\: :ref:`TreeItem<class_TreeItem>`\ )                                                                                                                                                              |
    +-------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | |void|                                                            | :ref:`select<class_TreeItem_method_select>`\ (\ column\: :ref:`int<class_int>`\ )                                                                                                                                                                                   |
+   +-------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | |void|                                                            | :ref:`set_auto_translate_mode<class_TreeItem_method_set_auto_translate_mode>`\ (\ column\: :ref:`int<class_int>`, mode\: :ref:`AutoTranslateMode<enum_Node_AutoTranslateMode>`\ )                                                                                   |
    +-------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | |void|                                                            | :ref:`set_autowrap_mode<class_TreeItem_method_set_autowrap_mode>`\ (\ column\: :ref:`int<class_int>`, autowrap_mode\: :ref:`AutowrapMode<enum_TextServer_AutowrapMode>`\ )                                                                                          |
    +-------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -442,6 +448,18 @@ Calls the ``method`` on the actual TreeItem and its children recursively. Pass p
 
 ----
 
+.. _class_TreeItem_method_clear_buttons:
+
+.. rst-class:: classref-method
+
+|void| **clear_buttons**\ (\ ) :ref:`🔗<class_TreeItem_method_clear_buttons>`
+
+Removes all buttons from all columns of this item.
+
+.. rst-class:: classref-item-separator
+
+----
+
 .. _class_TreeItem_method_clear_custom_bg_color:
 
 .. rst-class:: classref-method
@@ -499,6 +517,18 @@ Deselects the given column.
 |void| **erase_button**\ (\ column\: :ref:`int<class_int>`, button_index\: :ref:`int<class_int>`\ ) :ref:`🔗<class_TreeItem_method_erase_button>`
 
 Removes the button at index ``button_index`` in column ``column``.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_TreeItem_method_get_auto_translate_mode:
+
+.. rst-class:: classref-method
+
+:ref:`AutoTranslateMode<enum_Node_AutoTranslateMode>` **get_auto_translate_mode**\ (\ column\: :ref:`int<class_int>`\ ) |const| :ref:`🔗<class_TreeItem_method_get_auto_translate_mode>`
+
+Returns the column's auto translate mode.
 
 .. rst-class:: classref-item-separator
 
@@ -824,7 +854,7 @@ Returns the metadata value that was set for the given column using :ref:`set_met
 
 :ref:`TreeItem<class_TreeItem>` **get_next**\ (\ ) |const| :ref:`🔗<class_TreeItem_method_get_next>`
 
-Returns the next sibling TreeItem in the tree or a null object if there is none.
+Returns the next sibling TreeItem in the tree or a ``null`` object if there is none.
 
 .. rst-class:: classref-item-separator
 
@@ -864,7 +894,7 @@ If ``wrap`` is enabled, the method will wrap around to the first visible element
 
 :ref:`TreeItem<class_TreeItem>` **get_parent**\ (\ ) |const| :ref:`🔗<class_TreeItem_method_get_parent>`
 
-Returns the parent TreeItem or a null object if there is none.
+Returns the parent TreeItem or a ``null`` object if there is none.
 
 .. rst-class:: classref-item-separator
 
@@ -876,7 +906,7 @@ Returns the parent TreeItem or a null object if there is none.
 
 :ref:`TreeItem<class_TreeItem>` **get_prev**\ (\ ) :ref:`🔗<class_TreeItem_method_get_prev>`
 
-Returns the previous sibling TreeItem in the tree or a null object if there is none.
+Returns the previous sibling TreeItem in the tree or a ``null`` object if there is none.
 
 .. rst-class:: classref-item-separator
 
@@ -1225,6 +1255,20 @@ Removes the given child **TreeItem** and all its children from the :ref:`Tree<cl
 |void| **select**\ (\ column\: :ref:`int<class_int>`\ ) :ref:`🔗<class_TreeItem_method_select>`
 
 Selects the given ``column``.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_TreeItem_method_set_auto_translate_mode:
+
+.. rst-class:: classref-method
+
+|void| **set_auto_translate_mode**\ (\ column\: :ref:`int<class_int>`, mode\: :ref:`AutoTranslateMode<enum_Node_AutoTranslateMode>`\ ) :ref:`🔗<class_TreeItem_method_set_auto_translate_mode>`
+
+Sets the given column's auto translate mode to ``mode``.
+
+All columns use :ref:`Node.AUTO_TRANSLATE_MODE_INHERIT<class_Node_constant_AUTO_TRANSLATE_MODE_INHERIT>` by default, which uses the same auto translate mode as the :ref:`Tree<class_Tree>` itself.
 
 .. rst-class:: classref-item-separator
 

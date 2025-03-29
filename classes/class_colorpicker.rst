@@ -101,11 +101,17 @@ Theme Properties
    +-----------------------------------+----------------------------------------------------------------------------------------+---------+
    | :ref:`int<class_int>`             | :ref:`center_slider_grabbers<class_ColorPicker_theme_constant_center_slider_grabbers>` | ``1``   |
    +-----------------------------------+----------------------------------------------------------------------------------------+---------+
+   | :ref:`int<class_int>`             | :ref:`colorize_sliders<class_ColorPicker_theme_constant_colorize_sliders>`             | ``1``   |
+   +-----------------------------------+----------------------------------------------------------------------------------------+---------+
    | :ref:`int<class_int>`             | :ref:`h_width<class_ColorPicker_theme_constant_h_width>`                               | ``30``  |
    +-----------------------------------+----------------------------------------------------------------------------------------+---------+
    | :ref:`int<class_int>`             | :ref:`label_width<class_ColorPicker_theme_constant_label_width>`                       | ``10``  |
    +-----------------------------------+----------------------------------------------------------------------------------------+---------+
-   | :ref:`int<class_int>`             | :ref:`margin<class_ColorPicker_theme_constant_margin>`                                 | ``4``   |
+   | :ref:`int<class_int>`             | :ref:`margin<class_ColorPicker_theme_constant_margin>`                                 | ``6``   |
+   +-----------------------------------+----------------------------------------------------------------------------------------+---------+
+   | :ref:`int<class_int>`             | :ref:`preset_size<class_ColorPicker_theme_constant_preset_size>`                       | ``30``  |
+   +-----------------------------------+----------------------------------------------------------------------------------------+---------+
+   | :ref:`int<class_int>`             | :ref:`sample_height<class_ColorPicker_theme_constant_sample_height>`                   | ``30``  |
    +-----------------------------------+----------------------------------------------------------------------------------------+---------+
    | :ref:`int<class_int>`             | :ref:`sv_height<class_ColorPicker_theme_constant_sv_height>`                           | ``256`` |
    +-----------------------------------+----------------------------------------------------------------------------------------+---------+
@@ -117,15 +123,21 @@ Theme Properties
    +-----------------------------------+----------------------------------------------------------------------------------------+---------+
    | :ref:`Texture2D<class_Texture2D>` | :ref:`color_hue<class_ColorPicker_theme_icon_color_hue>`                               |         |
    +-----------------------------------+----------------------------------------------------------------------------------------+---------+
-   | :ref:`Texture2D<class_Texture2D>` | :ref:`color_okhsl_hue<class_ColorPicker_theme_icon_color_okhsl_hue>`                   |         |
-   +-----------------------------------+----------------------------------------------------------------------------------------+---------+
    | :ref:`Texture2D<class_Texture2D>` | :ref:`expanded_arrow<class_ColorPicker_theme_icon_expanded_arrow>`                     |         |
    +-----------------------------------+----------------------------------------------------------------------------------------+---------+
    | :ref:`Texture2D<class_Texture2D>` | :ref:`folded_arrow<class_ColorPicker_theme_icon_folded_arrow>`                         |         |
    +-----------------------------------+----------------------------------------------------------------------------------------+---------+
+   | :ref:`Texture2D<class_Texture2D>` | :ref:`folded_arrow_mirrored<class_ColorPicker_theme_icon_folded_arrow_mirrored>`       |         |
+   +-----------------------------------+----------------------------------------------------------------------------------------+---------+
+   | :ref:`Texture2D<class_Texture2D>` | :ref:`hex_code_icon<class_ColorPicker_theme_icon_hex_code_icon>`                       |         |
+   +-----------------------------------+----------------------------------------------------------------------------------------+---------+
+   | :ref:`Texture2D<class_Texture2D>` | :ref:`hex_icon<class_ColorPicker_theme_icon_hex_icon>`                                 |         |
+   +-----------------------------------+----------------------------------------------------------------------------------------+---------+
    | :ref:`Texture2D<class_Texture2D>` | :ref:`overbright_indicator<class_ColorPicker_theme_icon_overbright_indicator>`         |         |
    +-----------------------------------+----------------------------------------------------------------------------------------+---------+
    | :ref:`Texture2D<class_Texture2D>` | :ref:`picker_cursor<class_ColorPicker_theme_icon_picker_cursor>`                       |         |
+   +-----------------------------------+----------------------------------------------------------------------------------------+---------+
+   | :ref:`Texture2D<class_Texture2D>` | :ref:`picker_cursor_bg<class_ColorPicker_theme_icon_picker_cursor_bg>`                 |         |
    +-----------------------------------+----------------------------------------------------------------------------------------+---------+
    | :ref:`Texture2D<class_Texture2D>` | :ref:`sample_bg<class_ColorPicker_theme_icon_sample_bg>`                               |         |
    +-----------------------------------+----------------------------------------------------------------------------------------+---------+
@@ -612,6 +624,18 @@ Overrides the :ref:`Slider.center_grabber<class_Slider_theme_constant_center_gra
 
 ----
 
+.. _class_ColorPicker_theme_constant_colorize_sliders:
+
+.. rst-class:: classref-themeproperty
+
+:ref:`int<class_int>` **colorize_sliders** = ``1`` :ref:`🔗<class_ColorPicker_theme_constant_colorize_sliders>`
+
+If ``true`` The color mode sliders will be colorized.
+
+.. rst-class:: classref-item-separator
+
+----
+
 .. _class_ColorPicker_theme_constant_h_width:
 
 .. rst-class:: classref-themeproperty
@@ -640,9 +664,33 @@ The minimum width of the color labels next to sliders.
 
 .. rst-class:: classref-themeproperty
 
-:ref:`int<class_int>` **margin** = ``4`` :ref:`🔗<class_ColorPicker_theme_constant_margin>`
+:ref:`int<class_int>` **margin** = ``6`` :ref:`🔗<class_ColorPicker_theme_constant_margin>`
 
 The margin around the **ColorPicker**.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_ColorPicker_theme_constant_preset_size:
+
+.. rst-class:: classref-themeproperty
+
+:ref:`int<class_int>` **preset_size** = ``30`` :ref:`🔗<class_ColorPicker_theme_constant_preset_size>`
+
+Controls the size of the recent and swatches color buttons.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_ColorPicker_theme_constant_sample_height:
+
+.. rst-class:: classref-themeproperty
+
+:ref:`int<class_int>` **sample_height** = ``30`` :ref:`🔗<class_ColorPicker_theme_constant_sample_height>`
+
+Controls the height of the color sample.
 
 .. rst-class:: classref-item-separator
 
@@ -708,25 +756,13 @@ Custom texture for the hue selection slider on the right.
 
 ----
 
-.. _class_ColorPicker_theme_icon_color_okhsl_hue:
-
-.. rst-class:: classref-themeproperty
-
-:ref:`Texture2D<class_Texture2D>` **color_okhsl_hue** :ref:`🔗<class_ColorPicker_theme_icon_color_okhsl_hue>`
-
-Custom texture for the H slider in the OKHSL color mode.
-
-.. rst-class:: classref-item-separator
-
-----
-
 .. _class_ColorPicker_theme_icon_expanded_arrow:
 
 .. rst-class:: classref-themeproperty
 
 :ref:`Texture2D<class_Texture2D>` **expanded_arrow** :ref:`🔗<class_ColorPicker_theme_icon_expanded_arrow>`
 
-The icon for color preset drop down menu when expanded.
+The arrow used for the preset containers when expanded.
 
 .. rst-class:: classref-item-separator
 
@@ -738,7 +774,43 @@ The icon for color preset drop down menu when expanded.
 
 :ref:`Texture2D<class_Texture2D>` **folded_arrow** :ref:`🔗<class_ColorPicker_theme_icon_folded_arrow>`
 
-The icon for color preset drop down menu when folded.
+The arrow used for the preset containers when folded. (for left-to-right layouts).
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_ColorPicker_theme_icon_folded_arrow_mirrored:
+
+.. rst-class:: classref-themeproperty
+
+:ref:`Texture2D<class_Texture2D>` **folded_arrow_mirrored** :ref:`🔗<class_ColorPicker_theme_icon_folded_arrow_mirrored>`
+
+The arrow used for the preset containers when folded. (for right-to-left layouts).
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_ColorPicker_theme_icon_hex_code_icon:
+
+.. rst-class:: classref-themeproperty
+
+:ref:`Texture2D<class_Texture2D>` **hex_code_icon** :ref:`🔗<class_ColorPicker_theme_icon_hex_code_icon>`
+
+The icon displayed when the hex :ref:`LineEdit<class_LineEdit>` is showing the color code.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_ColorPicker_theme_icon_hex_icon:
+
+.. rst-class:: classref-themeproperty
+
+:ref:`Texture2D<class_Texture2D>` **hex_icon** :ref:`🔗<class_ColorPicker_theme_icon_hex_icon>`
+
+The icon displayed when the hex :ref:`LineEdit<class_LineEdit>` is showing the hex code.
 
 .. rst-class:: classref-item-separator
 
@@ -763,6 +835,18 @@ The indicator used to signalize that the color value is outside the 0-1 range.
 :ref:`Texture2D<class_Texture2D>` **picker_cursor** :ref:`🔗<class_ColorPicker_theme_icon_picker_cursor>`
 
 The image displayed over the color box/circle (depending on the :ref:`picker_shape<class_ColorPicker_property_picker_shape>`), marking the currently selected color.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_ColorPicker_theme_icon_picker_cursor_bg:
+
+.. rst-class:: classref-themeproperty
+
+:ref:`Texture2D<class_Texture2D>` **picker_cursor_bg** :ref:`🔗<class_ColorPicker_theme_icon_picker_cursor_bg>`
+
+The fill image displayed behind the picker cursor.
 
 .. rst-class:: classref-item-separator
 

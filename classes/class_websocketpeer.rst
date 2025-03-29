@@ -67,9 +67,11 @@ Properties
    +---------------------------------------------------+--------------------------------------------------------------------------------+-------------------------+
    | :ref:`PackedStringArray<class_PackedStringArray>` | :ref:`handshake_headers<class_WebSocketPeer_property_handshake_headers>`       | ``PackedStringArray()`` |
    +---------------------------------------------------+--------------------------------------------------------------------------------+-------------------------+
+   | :ref:`float<class_float>`                         | :ref:`heartbeat_interval<class_WebSocketPeer_property_heartbeat_interval>`     | ``0.0``                 |
+   +---------------------------------------------------+--------------------------------------------------------------------------------+-------------------------+
    | :ref:`int<class_int>`                             | :ref:`inbound_buffer_size<class_WebSocketPeer_property_inbound_buffer_size>`   | ``65535``               |
    +---------------------------------------------------+--------------------------------------------------------------------------------+-------------------------+
-   | :ref:`int<class_int>`                             | :ref:`max_queued_packets<class_WebSocketPeer_property_max_queued_packets>`     | ``2048``                |
+   | :ref:`int<class_int>`                             | :ref:`max_queued_packets<class_WebSocketPeer_property_max_queued_packets>`     | ``4096``                |
    +---------------------------------------------------+--------------------------------------------------------------------------------+-------------------------+
    | :ref:`int<class_int>`                             | :ref:`outbound_buffer_size<class_WebSocketPeer_property_outbound_buffer_size>` | ``65535``               |
    +---------------------------------------------------+--------------------------------------------------------------------------------+-------------------------+
@@ -221,6 +223,25 @@ The extra HTTP headers to be sent during the WebSocket handshake.
 
 ----
 
+.. _class_WebSocketPeer_property_heartbeat_interval:
+
+.. rst-class:: classref-property
+
+:ref:`float<class_float>` **heartbeat_interval** = ``0.0`` :ref:`🔗<class_WebSocketPeer_property_heartbeat_interval>`
+
+.. rst-class:: classref-property-setget
+
+- |void| **set_heartbeat_interval**\ (\ value\: :ref:`float<class_float>`\ )
+- :ref:`float<class_float>` **get_heartbeat_interval**\ (\ )
+
+The interval (in seconds) at which the peer will automatically send WebSocket "ping" control frames. When set to ``0``, no "ping" control frames will be sent.
+
+\ **Note:** Has no effect in Web exports due to browser restrictions.
+
+.. rst-class:: classref-item-separator
+
+----
+
 .. _class_WebSocketPeer_property_inbound_buffer_size:
 
 .. rst-class:: classref-property
@@ -242,7 +263,7 @@ The size of the input buffer in bytes (roughly the maximum amount of memory that
 
 .. rst-class:: classref-property
 
-:ref:`int<class_int>` **max_queued_packets** = ``2048`` :ref:`🔗<class_WebSocketPeer_property_max_queued_packets>`
+:ref:`int<class_int>` **max_queued_packets** = ``4096`` :ref:`🔗<class_WebSocketPeer_property_max_queued_packets>`
 
 .. rst-class:: classref-property-setget
 
@@ -333,6 +354,8 @@ Closes this WebSocket connection. ``code`` is the status code for the closure (s
 :ref:`Error<enum_@GlobalScope_Error>` **connect_to_url**\ (\ url\: :ref:`String<class_String>`, tls_client_options\: :ref:`TLSOptions<class_TLSOptions>` = null\ ) :ref:`🔗<class_WebSocketPeer_method_connect_to_url>`
 
 Connects to the given URL. TLS certificates will be verified against the hostname when connecting using the ``wss://`` protocol. You can pass the optional ``tls_client_options`` parameter to customize the trusted certification authorities, or disable the common name verification. See :ref:`TLSOptions.client<class_TLSOptions_method_client>` and :ref:`TLSOptions.client_unsafe<class_TLSOptions_method_client_unsafe>`.
+
+\ **Note:** This method is non-blocking, and will return :ref:`@GlobalScope.OK<class_@GlobalScope_constant_OK>` before the connection is established as long as the provided parameters are valid and the peer is not in an invalid state (e.g. already connected). Regularly call :ref:`poll<class_WebSocketPeer_method_poll>` (e.g. during :ref:`Node<class_Node>` process) and check the result of :ref:`get_ready_state<class_WebSocketPeer_method_get_ready_state>` to know whether the connection succeeds or fails.
 
 \ **Note:** To avoid mixed content warnings or errors in Web, you may have to use a ``url`` that starts with ``wss://`` (secure) instead of ``ws://``. When doing so, make sure to use the fully qualified domain name that matches the one defined in the server's TLS certificate. Do not connect directly via the IP address for ``wss://`` connections, as it won't match with the TLS certificate.
 

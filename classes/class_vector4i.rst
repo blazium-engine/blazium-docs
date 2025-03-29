@@ -554,7 +554,7 @@ Gets the remainder of each component of the **Vector4i** with the components of 
 
 ::
 
-    print(Vector4i(10, -20, 30, -40) % Vector4i(7, 8, 9, 10))  # Prints "(3, -4, 3, 0)"
+    print(Vector4i(10, -20, 30, -40) % Vector4i(7, 8, 9, 10))  # Prints (3, -4, 3, 0)
 
 .. rst-class:: classref-item-separator
 
@@ -566,11 +566,11 @@ Gets the remainder of each component of the **Vector4i** with the components of 
 
 :ref:`Vector4i<class_Vector4i>` **operator %**\ (\ right\: :ref:`int<class_int>`\ ) :ref:`🔗<class_Vector4i_operator_mod_int>`
 
-Gets the remainder of each component of the **Vector4i** with the the given :ref:`int<class_int>`. This operation uses truncated division, which is often not desired as it does not work well with negative numbers. Consider using :ref:`@GlobalScope.posmod<class_@GlobalScope_method_posmod>` instead if you want to handle negative numbers.
+Gets the remainder of each component of the **Vector4i** with the given :ref:`int<class_int>`. This operation uses truncated division, which is often not desired as it does not work well with negative numbers. Consider using :ref:`@GlobalScope.posmod<class_@GlobalScope_method_posmod>` instead if you want to handle negative numbers.
 
 ::
 
-    print(Vector4i(10, -20, 30, -40) % 7)  # Prints "(3, -6, 2, -5)"
+    print(Vector4i(10, -20, 30, -40) % 7)  # Prints (3, -6, 2, -5)
 
 .. rst-class:: classref-item-separator
 
@@ -586,7 +586,7 @@ Multiplies each component of the **Vector4i** by the components of the given **V
 
 ::
 
-    print(Vector4i(10, 20, 30, 40) * Vector4i(3, 4, 5, 6)) # Prints "(30, 80, 150, 240)"
+    print(Vector4i(10, 20, 30, 40) * Vector4i(3, 4, 5, 6)) # Prints (30, 80, 150, 240)
 
 .. rst-class:: classref-item-separator
 
@@ -604,7 +604,7 @@ Returns a Vector4 value due to floating-point operations.
 
 ::
 
-    print(Vector4i(10, 20, 30, 40) * 2) # Prints "(20, 40, 60, 80)"
+    print(Vector4i(10, 20, 30, 40) * 2) # Prints (20.0, 40.0, 60.0, 80.0)
 
 .. rst-class:: classref-item-separator
 
@@ -632,7 +632,7 @@ Adds each component of the **Vector4i** by the components of the given **Vector4
 
 ::
 
-    print(Vector4i(10, 20, 30, 40) + Vector4i(3, 4, 5, 6)) # Prints "(13, 24, 35, 46)"
+    print(Vector4i(10, 20, 30, 40) + Vector4i(3, 4, 5, 6)) # Prints (13, 24, 35, 46)
 
 .. rst-class:: classref-item-separator
 
@@ -648,7 +648,7 @@ Subtracts each component of the **Vector4i** by the components of the given **Ve
 
 ::
 
-    print(Vector4i(10, 20, 30, 40) - Vector4i(3, 4, 5, 6)) # Prints "(7, 16, 25, 34)"
+    print(Vector4i(10, 20, 30, 40) - Vector4i(3, 4, 5, 6)) # Prints (7, 16, 25, 34)
 
 .. rst-class:: classref-item-separator
 
@@ -664,7 +664,7 @@ Divides each component of the **Vector4i** by the components of the given **Vect
 
 ::
 
-    print(Vector4i(10, 20, 30, 40) / Vector4i(2, 5, 3, 4)) # Prints "(5, 4, 10, 10)"
+    print(Vector4i(10, 20, 30, 40) / Vector4i(2, 5, 3, 4)) # Prints (5, 4, 10, 10)
 
 .. rst-class:: classref-item-separator
 
@@ -682,7 +682,7 @@ Returns a Vector4 value due to floating-point operations.
 
 ::
 
-    print(Vector4i(10, 20, 30, 40) / 2 # Prints "(5, 10, 15, 20)"
+    print(Vector4i(10, 20, 30, 40) / 2 # Prints (5.0, 10.0, 15.0, 20.0)
 
 .. rst-class:: classref-item-separator
 

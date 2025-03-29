@@ -56,6 +56,10 @@ Properties
    +---------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`String<class_String>`                       | :ref:`application/min_ios_version<class_EditorExportPlatformIOS_property_application/min_ios_version>`                                                                               |
    +---------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`String<class_String>`                       | :ref:`application/provisioning_profile_specifier_debug<class_EditorExportPlatformIOS_property_application/provisioning_profile_specifier_debug>`                                     |
+   +---------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`String<class_String>`                       | :ref:`application/provisioning_profile_specifier_release<class_EditorExportPlatformIOS_property_application/provisioning_profile_specifier_release>`                                 |
+   +---------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`String<class_String>`                       | :ref:`application/provisioning_profile_uuid_debug<class_EditorExportPlatformIOS_property_application/provisioning_profile_uuid_debug>`                                               |
    +---------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`String<class_String>`                       | :ref:`application/provisioning_profile_uuid_release<class_EditorExportPlatformIOS_property_application/provisioning_profile_uuid_release>`                                           |
@@ -72,39 +76,125 @@ Properties
    +---------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`bool<class_bool>`                           | :ref:`capabilities/access_wifi<class_EditorExportPlatformIOS_property_capabilities/access_wifi>`                                                                                     |
    +---------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`PackedStringArray<class_PackedStringArray>` | :ref:`capabilities/additional<class_EditorExportPlatformIOS_property_capabilities/additional>`                                                                                       |
+   +---------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`bool<class_bool>`                           | :ref:`capabilities/performance_a12<class_EditorExportPlatformIOS_property_capabilities/performance_a12>`                                                                             |
    +---------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`bool<class_bool>`                           | :ref:`capabilities/performance_gaming_tier<class_EditorExportPlatformIOS_property_capabilities/performance_gaming_tier>`                                                             |
-   +---------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | :ref:`bool<class_bool>`                           | :ref:`capabilities/push_notifications<class_EditorExportPlatformIOS_property_capabilities/push_notifications>`                                                                       |
    +---------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`String<class_String>`                       | :ref:`custom_template/debug<class_EditorExportPlatformIOS_property_custom_template/debug>`                                                                                           |
    +---------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`String<class_String>`                       | :ref:`custom_template/release<class_EditorExportPlatformIOS_property_custom_template/release>`                                                                                       |
    +---------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`String<class_String>`                       | :ref:`entitlements/additional<class_EditorExportPlatformIOS_property_entitlements/additional>`                                                                                       |
+   +---------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`bool<class_bool>`                           | :ref:`entitlements/game_center<class_EditorExportPlatformIOS_property_entitlements/game_center>`                                                                                     |
+   +---------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`bool<class_bool>`                           | :ref:`entitlements/increased_memory_limit<class_EditorExportPlatformIOS_property_entitlements/increased_memory_limit>`                                                               |
+   +---------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`String<class_String>`                       | :ref:`entitlements/push_notifications<class_EditorExportPlatformIOS_property_entitlements/push_notifications>`                                                                       |
+   +---------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`String<class_String>`                       | :ref:`icons/app_store_1024x1024<class_EditorExportPlatformIOS_property_icons/app_store_1024x1024>`                                                                                   |
    +---------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | :ref:`String<class_String>`                       | :ref:`icons/ipad_76x76<class_EditorExportPlatformIOS_property_icons/ipad_76x76>`                                                                                                     |
+   | :ref:`String<class_String>`                       | :ref:`icons/app_store_1024x1024_dark<class_EditorExportPlatformIOS_property_icons/app_store_1024x1024_dark>`                                                                         |
+   +---------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`String<class_String>`                       | :ref:`icons/app_store_1024x1024_tinted<class_EditorExportPlatformIOS_property_icons/app_store_1024x1024_tinted>`                                                                     |
+   +---------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`String<class_String>`                       | :ref:`icons/icon_1024x1024<class_EditorExportPlatformIOS_property_icons/icon_1024x1024>`                                                                                             |
+   +---------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`String<class_String>`                       | :ref:`icons/icon_1024x1024_dark<class_EditorExportPlatformIOS_property_icons/icon_1024x1024_dark>`                                                                                   |
+   +---------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`String<class_String>`                       | :ref:`icons/icon_1024x1024_tinted<class_EditorExportPlatformIOS_property_icons/icon_1024x1024_tinted>`                                                                               |
+   +---------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`String<class_String>`                       | :ref:`icons/ios_128x128<class_EditorExportPlatformIOS_property_icons/ios_128x128>`                                                                                                   |
+   +---------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`String<class_String>`                       | :ref:`icons/ios_128x128_dark<class_EditorExportPlatformIOS_property_icons/ios_128x128_dark>`                                                                                         |
+   +---------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`String<class_String>`                       | :ref:`icons/ios_128x128_tinted<class_EditorExportPlatformIOS_property_icons/ios_128x128_tinted>`                                                                                     |
+   +---------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`String<class_String>`                       | :ref:`icons/ios_136x136<class_EditorExportPlatformIOS_property_icons/ios_136x136>`                                                                                                   |
+   +---------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`String<class_String>`                       | :ref:`icons/ios_136x136_dark<class_EditorExportPlatformIOS_property_icons/ios_136x136_dark>`                                                                                         |
+   +---------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`String<class_String>`                       | :ref:`icons/ios_136x136_tinted<class_EditorExportPlatformIOS_property_icons/ios_136x136_tinted>`                                                                                     |
+   +---------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`String<class_String>`                       | :ref:`icons/ios_192x192<class_EditorExportPlatformIOS_property_icons/ios_192x192>`                                                                                                   |
+   +---------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`String<class_String>`                       | :ref:`icons/ios_192x192_dark<class_EditorExportPlatformIOS_property_icons/ios_192x192_dark>`                                                                                         |
+   +---------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`String<class_String>`                       | :ref:`icons/ios_192x192_tinted<class_EditorExportPlatformIOS_property_icons/ios_192x192_tinted>`                                                                                     |
    +---------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`String<class_String>`                       | :ref:`icons/ipad_152x152<class_EditorExportPlatformIOS_property_icons/ipad_152x152>`                                                                                                 |
    +---------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`String<class_String>`                       | :ref:`icons/ipad_152x152_dark<class_EditorExportPlatformIOS_property_icons/ipad_152x152_dark>`                                                                                       |
+   +---------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`String<class_String>`                       | :ref:`icons/ipad_152x152_tinted<class_EditorExportPlatformIOS_property_icons/ipad_152x152_tinted>`                                                                                   |
+   +---------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`String<class_String>`                       | :ref:`icons/ipad_167x167<class_EditorExportPlatformIOS_property_icons/ipad_167x167>`                                                                                                 |
+   +---------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`String<class_String>`                       | :ref:`icons/ipad_167x167_dark<class_EditorExportPlatformIOS_property_icons/ipad_167x167_dark>`                                                                                       |
+   +---------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`String<class_String>`                       | :ref:`icons/ipad_167x167_tinted<class_EditorExportPlatformIOS_property_icons/ipad_167x167_tinted>`                                                                                   |
    +---------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`String<class_String>`                       | :ref:`icons/iphone_120x120<class_EditorExportPlatformIOS_property_icons/iphone_120x120>`                                                                                             |
    +---------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`String<class_String>`                       | :ref:`icons/iphone_120x120_dark<class_EditorExportPlatformIOS_property_icons/iphone_120x120_dark>`                                                                                   |
+   +---------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`String<class_String>`                       | :ref:`icons/iphone_120x120_tinted<class_EditorExportPlatformIOS_property_icons/iphone_120x120_tinted>`                                                                               |
+   +---------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`String<class_String>`                       | :ref:`icons/iphone_180x180<class_EditorExportPlatformIOS_property_icons/iphone_180x180>`                                                                                             |
+   +---------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`String<class_String>`                       | :ref:`icons/iphone_180x180_dark<class_EditorExportPlatformIOS_property_icons/iphone_180x180_dark>`                                                                                   |
+   +---------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`String<class_String>`                       | :ref:`icons/iphone_180x180_tinted<class_EditorExportPlatformIOS_property_icons/iphone_180x180_tinted>`                                                                               |
    +---------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`String<class_String>`                       | :ref:`icons/notification_40x40<class_EditorExportPlatformIOS_property_icons/notification_40x40>`                                                                                     |
    +---------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`String<class_String>`                       | :ref:`icons/notification_40x40_dark<class_EditorExportPlatformIOS_property_icons/notification_40x40_dark>`                                                                           |
+   +---------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`String<class_String>`                       | :ref:`icons/notification_40x40_tinted<class_EditorExportPlatformIOS_property_icons/notification_40x40_tinted>`                                                                       |
+   +---------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`String<class_String>`                       | :ref:`icons/notification_60x60<class_EditorExportPlatformIOS_property_icons/notification_60x60>`                                                                                     |
+   +---------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`String<class_String>`                       | :ref:`icons/notification_60x60_dark<class_EditorExportPlatformIOS_property_icons/notification_60x60_dark>`                                                                           |
+   +---------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`String<class_String>`                       | :ref:`icons/notification_60x60_tinted<class_EditorExportPlatformIOS_property_icons/notification_60x60_tinted>`                                                                       |
+   +---------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`String<class_String>`                       | :ref:`icons/notification_76x76<class_EditorExportPlatformIOS_property_icons/notification_76x76>`                                                                                     |
+   +---------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`String<class_String>`                       | :ref:`icons/notification_76x76_dark<class_EditorExportPlatformIOS_property_icons/notification_76x76_dark>`                                                                           |
+   +---------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`String<class_String>`                       | :ref:`icons/notification_76x76_tinted<class_EditorExportPlatformIOS_property_icons/notification_76x76_tinted>`                                                                       |
+   +---------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`String<class_String>`                       | :ref:`icons/notification_114x114<class_EditorExportPlatformIOS_property_icons/notification_114x114>`                                                                                 |
+   +---------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`String<class_String>`                       | :ref:`icons/notification_114x114_dark<class_EditorExportPlatformIOS_property_icons/notification_114x114_dark>`                                                                       |
+   +---------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`String<class_String>`                       | :ref:`icons/notification_114x114_tinted<class_EditorExportPlatformIOS_property_icons/notification_114x114_tinted>`                                                                   |
    +---------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`String<class_String>`                       | :ref:`icons/settings_58x58<class_EditorExportPlatformIOS_property_icons/settings_58x58>`                                                                                             |
    +---------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`String<class_String>`                       | :ref:`icons/settings_58x58_dark<class_EditorExportPlatformIOS_property_icons/settings_58x58_dark>`                                                                                   |
+   +---------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`String<class_String>`                       | :ref:`icons/settings_58x58_tinted<class_EditorExportPlatformIOS_property_icons/settings_58x58_tinted>`                                                                               |
+   +---------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`String<class_String>`                       | :ref:`icons/settings_87x87<class_EditorExportPlatformIOS_property_icons/settings_87x87>`                                                                                             |
    +---------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | :ref:`String<class_String>`                       | :ref:`icons/spotlight_40x40<class_EditorExportPlatformIOS_property_icons/spotlight_40x40>`                                                                                           |
+   | :ref:`String<class_String>`                       | :ref:`icons/settings_87x87_dark<class_EditorExportPlatformIOS_property_icons/settings_87x87_dark>`                                                                                   |
+   +---------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`String<class_String>`                       | :ref:`icons/settings_87x87_tinted<class_EditorExportPlatformIOS_property_icons/settings_87x87_tinted>`                                                                               |
    +---------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`String<class_String>`                       | :ref:`icons/spotlight_80x80<class_EditorExportPlatformIOS_property_icons/spotlight_80x80>`                                                                                           |
+   +---------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`String<class_String>`                       | :ref:`icons/spotlight_80x80_dark<class_EditorExportPlatformIOS_property_icons/spotlight_80x80_dark>`                                                                                 |
+   +---------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`String<class_String>`                       | :ref:`icons/spotlight_80x80_tinted<class_EditorExportPlatformIOS_property_icons/spotlight_80x80_tinted>`                                                                             |
+   +---------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`String<class_String>`                       | :ref:`icons/spotlight_120x120<class_EditorExportPlatformIOS_property_icons/spotlight_120x120>`                                                                                       |
+   +---------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`String<class_String>`                       | :ref:`icons/spotlight_120x120_dark<class_EditorExportPlatformIOS_property_icons/spotlight_120x120_dark>`                                                                             |
+   +---------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`String<class_String>`                       | :ref:`icons/spotlight_120x120_tinted<class_EditorExportPlatformIOS_property_icons/spotlight_120x120_tinted>`                                                                         |
    +---------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`int<class_int>`                             | :ref:`privacy/active_keyboard_access_reasons<class_EditorExportPlatformIOS_property_privacy/active_keyboard_access_reasons>`                                                         |
    +---------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -585,6 +675,34 @@ Minimum version of iOS required for this application to run in the ``major.minor
 
 ----
 
+.. _class_EditorExportPlatformIOS_property_application/provisioning_profile_specifier_debug:
+
+.. rst-class:: classref-property
+
+:ref:`String<class_String>` **application/provisioning_profile_specifier_debug** :ref:`🔗<class_EditorExportPlatformIOS_property_application/provisioning_profile_specifier_debug>`
+
+Name of the provisioning profile. Sets XCode PROVISIONING_PROFILE_SPECIFIER for debug. `Used for manual provisioning <https://developer.apple.com/documentation/xcode/build-settings-reference#Provisioning-Profile>`__.
+
+Can be overridden with the environment variable ``GODOT_IOS_PROFILE_SPECIFIER_DEBUG``.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_EditorExportPlatformIOS_property_application/provisioning_profile_specifier_release:
+
+.. rst-class:: classref-property
+
+:ref:`String<class_String>` **application/provisioning_profile_specifier_release** :ref:`🔗<class_EditorExportPlatformIOS_property_application/provisioning_profile_specifier_release>`
+
+Name of the provisioning profile. Sets XCode PROVISIONING_PROFILE_SPECIFIER for release. `Used for manual provisioning <https://developer.apple.com/documentation/xcode/build-settings-reference#Provisioning-Profile>`__.
+
+Can be overridden with the environment variable ``GODOT_IOS_PROFILE_SPECIFIER_RELEASE``.
+
+.. rst-class:: classref-item-separator
+
+----
+
 .. _class_EditorExportPlatformIOS_property_application/provisioning_profile_uuid_debug:
 
 .. rst-class:: classref-property
@@ -685,6 +803,20 @@ If ``true``, networking features related to Wi-Fi access are enabled. See `Requi
 
 ----
 
+.. _class_EditorExportPlatformIOS_property_capabilities/additional:
+
+.. rst-class:: classref-property
+
+:ref:`PackedStringArray<class_PackedStringArray>` **capabilities/additional** :ref:`🔗<class_EditorExportPlatformIOS_property_capabilities/additional>`
+
+Additional data added to the ``UIRequiredDeviceCapabilities`` array of the ``Info.plist`` file.
+
+**Note:** The returned array is *copied* and any changes to it will not update the original property value. See :ref:`PackedStringArray<class_PackedStringArray>` for more details.
+
+.. rst-class:: classref-item-separator
+
+----
+
 .. _class_EditorExportPlatformIOS_property_capabilities/performance_a12:
 
 .. rst-class:: classref-property
@@ -708,18 +840,6 @@ Enabling this option limits supported devices to: iPhone XS, iPhone XR, iPad Min
 Requires the graphics performance and features of the A17 Pro and later chips.
 
 Enabling this option limits supported devices to: iPhone 15 Pro and newer.
-
-.. rst-class:: classref-item-separator
-
-----
-
-.. _class_EditorExportPlatformIOS_property_capabilities/push_notifications:
-
-.. rst-class:: classref-property
-
-:ref:`bool<class_bool>` **capabilities/push_notifications** :ref:`🔗<class_EditorExportPlatformIOS_property_capabilities/push_notifications>`
-
-If ``true``, push notifications are enabled. See `Required Device Capabilities <https://developer.apple.com/support/required-device-capabilities/>`__.
 
 .. rst-class:: classref-item-separator
 
@@ -749,6 +869,59 @@ Path to the custom export template. If left empty, default template is used.
 
 ----
 
+.. _class_EditorExportPlatformIOS_property_entitlements/additional:
+
+.. rst-class:: classref-property
+
+:ref:`String<class_String>` **entitlements/additional** :ref:`🔗<class_EditorExportPlatformIOS_property_entitlements/additional>`
+
+Additional data added to the root ``<dict>`` section of the `.entitlements <https://developer.apple.com/documentation/bundleresources/entitlements>`__ file. The value should be an XML section with pairs of key-value elements, for example:
+
+.. code:: text
+
+    <key>key_name</key>
+    <string>value</string>
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_EditorExportPlatformIOS_property_entitlements/game_center:
+
+.. rst-class:: classref-property
+
+:ref:`bool<class_bool>` **entitlements/game_center** :ref:`🔗<class_EditorExportPlatformIOS_property_entitlements/game_center>`
+
+Enable to allow access to Game Center features. `com.apple.developer.game-center <https://developer.apple.com/documentation/bundleresources/entitlements/com_apple_developer_game-center>`__.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_EditorExportPlatformIOS_property_entitlements/increased_memory_limit:
+
+.. rst-class:: classref-property
+
+:ref:`bool<class_bool>` **entitlements/increased_memory_limit** :ref:`🔗<class_EditorExportPlatformIOS_property_entitlements/increased_memory_limit>`
+
+Enable if app may perform better with a higher memory limit. `com.apple.developer.kernel.increased-memory-limit <https://developer.apple.com/documentation/bundleresources/entitlements/com_apple_developer_kernel_increased-memory-limit>`__.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_EditorExportPlatformIOS_property_entitlements/push_notifications:
+
+.. rst-class:: classref-property
+
+:ref:`String<class_String>` **entitlements/push_notifications** :ref:`🔗<class_EditorExportPlatformIOS_property_entitlements/push_notifications>`
+
+Environment for Apple Push Notification service. See `aps-environment <https://developer.apple.com/documentation/bundleresources/entitlements/aps-environment>`__.
+
+.. rst-class:: classref-item-separator
+
+----
+
 .. _class_EditorExportPlatformIOS_property_icons/app_store_1024x1024:
 
 .. rst-class:: classref-property
@@ -761,13 +934,169 @@ App Store application icon file. If left empty, it will fallback to :ref:`Projec
 
 ----
 
-.. _class_EditorExportPlatformIOS_property_icons/ipad_76x76:
+.. _class_EditorExportPlatformIOS_property_icons/app_store_1024x1024_dark:
 
 .. rst-class:: classref-property
 
-:ref:`String<class_String>` **icons/ipad_76x76** :ref:`🔗<class_EditorExportPlatformIOS_property_icons/ipad_76x76>`
+:ref:`String<class_String>` **icons/app_store_1024x1024_dark** :ref:`🔗<class_EditorExportPlatformIOS_property_icons/app_store_1024x1024_dark>`
 
-Home screen application icon file on iPad (1x DPI). If left empty, it will fallback to :ref:`ProjectSettings.application/config/icon<class_ProjectSettings_property_application/config/icon>`. See `App icons <https://developer.apple.com/design/human-interface-guidelines/foundations/app-icons>`__.
+App Store application icon file, dark version. See `App icons <https://developer.apple.com/design/human-interface-guidelines/foundations/app-icons>`__.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_EditorExportPlatformIOS_property_icons/app_store_1024x1024_tinted:
+
+.. rst-class:: classref-property
+
+:ref:`String<class_String>` **icons/app_store_1024x1024_tinted** :ref:`🔗<class_EditorExportPlatformIOS_property_icons/app_store_1024x1024_tinted>`
+
+App Store application icon file, tinted version. See `App icons <https://developer.apple.com/design/human-interface-guidelines/foundations/app-icons>`__.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_EditorExportPlatformIOS_property_icons/icon_1024x1024:
+
+.. rst-class:: classref-property
+
+:ref:`String<class_String>` **icons/icon_1024x1024** :ref:`🔗<class_EditorExportPlatformIOS_property_icons/icon_1024x1024>`
+
+Base application icon used to generate other icons. If left empty, it will fallback to :ref:`ProjectSettings.application/config/icon<class_ProjectSettings_property_application/config/icon>`. See `App icons <https://developer.apple.com/design/human-interface-guidelines/foundations/app-icons>`__.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_EditorExportPlatformIOS_property_icons/icon_1024x1024_dark:
+
+.. rst-class:: classref-property
+
+:ref:`String<class_String>` **icons/icon_1024x1024_dark** :ref:`🔗<class_EditorExportPlatformIOS_property_icons/icon_1024x1024_dark>`
+
+Base application icon used to generate other icons, dark version. See `App icons <https://developer.apple.com/design/human-interface-guidelines/foundations/app-icons>`__.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_EditorExportPlatformIOS_property_icons/icon_1024x1024_tinted:
+
+.. rst-class:: classref-property
+
+:ref:`String<class_String>` **icons/icon_1024x1024_tinted** :ref:`🔗<class_EditorExportPlatformIOS_property_icons/icon_1024x1024_tinted>`
+
+Base application icon used to generate other icons, tinted version. See `App icons <https://developer.apple.com/design/human-interface-guidelines/foundations/app-icons>`__.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_EditorExportPlatformIOS_property_icons/ios_128x128:
+
+.. rst-class:: classref-property
+
+:ref:`String<class_String>` **icons/ios_128x128** :ref:`🔗<class_EditorExportPlatformIOS_property_icons/ios_128x128>`
+
+iOS application 64x64 icon file (2x DPI). If left empty, it will fallback to :ref:`ProjectSettings.application/config/icon<class_ProjectSettings_property_application/config/icon>`. See `App icons <https://developer.apple.com/design/human-interface-guidelines/foundations/app-icons>`__.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_EditorExportPlatformIOS_property_icons/ios_128x128_dark:
+
+.. rst-class:: classref-property
+
+:ref:`String<class_String>` **icons/ios_128x128_dark** :ref:`🔗<class_EditorExportPlatformIOS_property_icons/ios_128x128_dark>`
+
+iOS application 64x64 icon file (2x DPI), dark version. See `App icons <https://developer.apple.com/design/human-interface-guidelines/foundations/app-icons>`__.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_EditorExportPlatformIOS_property_icons/ios_128x128_tinted:
+
+.. rst-class:: classref-property
+
+:ref:`String<class_String>` **icons/ios_128x128_tinted** :ref:`🔗<class_EditorExportPlatformIOS_property_icons/ios_128x128_tinted>`
+
+iOS application 64x64 icon file (2x DPI), tinted version. See `App icons <https://developer.apple.com/design/human-interface-guidelines/foundations/app-icons>`__.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_EditorExportPlatformIOS_property_icons/ios_136x136:
+
+.. rst-class:: classref-property
+
+:ref:`String<class_String>` **icons/ios_136x136** :ref:`🔗<class_EditorExportPlatformIOS_property_icons/ios_136x136>`
+
+iOS application 68x68 icon file (2x DPI). If left empty, it will fallback to :ref:`ProjectSettings.application/config/icon<class_ProjectSettings_property_application/config/icon>`. See `App icons <https://developer.apple.com/design/human-interface-guidelines/foundations/app-icons>`__.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_EditorExportPlatformIOS_property_icons/ios_136x136_dark:
+
+.. rst-class:: classref-property
+
+:ref:`String<class_String>` **icons/ios_136x136_dark** :ref:`🔗<class_EditorExportPlatformIOS_property_icons/ios_136x136_dark>`
+
+iOS application 68x68 icon file (2x DPI), dark version. See `App icons <https://developer.apple.com/design/human-interface-guidelines/foundations/app-icons>`__.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_EditorExportPlatformIOS_property_icons/ios_136x136_tinted:
+
+.. rst-class:: classref-property
+
+:ref:`String<class_String>` **icons/ios_136x136_tinted** :ref:`🔗<class_EditorExportPlatformIOS_property_icons/ios_136x136_tinted>`
+
+iOS application 68x68 icon file (2x DPI), tinted version. See `App icons <https://developer.apple.com/design/human-interface-guidelines/foundations/app-icons>`__.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_EditorExportPlatformIOS_property_icons/ios_192x192:
+
+.. rst-class:: classref-property
+
+:ref:`String<class_String>` **icons/ios_192x192** :ref:`🔗<class_EditorExportPlatformIOS_property_icons/ios_192x192>`
+
+iOS application 64x64 icon file (3x DPI). If left empty, it will fallback to :ref:`ProjectSettings.application/config/icon<class_ProjectSettings_property_application/config/icon>`. See `App icons <https://developer.apple.com/design/human-interface-guidelines/foundations/app-icons>`__.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_EditorExportPlatformIOS_property_icons/ios_192x192_dark:
+
+.. rst-class:: classref-property
+
+:ref:`String<class_String>` **icons/ios_192x192_dark** :ref:`🔗<class_EditorExportPlatformIOS_property_icons/ios_192x192_dark>`
+
+iOS application 64x64 icon file (3x DPI), dark version. See `App icons <https://developer.apple.com/design/human-interface-guidelines/foundations/app-icons>`__.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_EditorExportPlatformIOS_property_icons/ios_192x192_tinted:
+
+.. rst-class:: classref-property
+
+:ref:`String<class_String>` **icons/ios_192x192_tinted** :ref:`🔗<class_EditorExportPlatformIOS_property_icons/ios_192x192_tinted>`
+
+iOS application 64x64 icon file (3x DPI), tinted version. See `App icons <https://developer.apple.com/design/human-interface-guidelines/foundations/app-icons>`__.
 
 .. rst-class:: classref-item-separator
 
@@ -785,6 +1114,30 @@ Home screen application icon file on iPad (2x DPI). If left empty, it will fallb
 
 ----
 
+.. _class_EditorExportPlatformIOS_property_icons/ipad_152x152_dark:
+
+.. rst-class:: classref-property
+
+:ref:`String<class_String>` **icons/ipad_152x152_dark** :ref:`🔗<class_EditorExportPlatformIOS_property_icons/ipad_152x152_dark>`
+
+Home screen application icon file on iPad (2x DPI), dark version. See `App icons <https://developer.apple.com/design/human-interface-guidelines/foundations/app-icons>`__.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_EditorExportPlatformIOS_property_icons/ipad_152x152_tinted:
+
+.. rst-class:: classref-property
+
+:ref:`String<class_String>` **icons/ipad_152x152_tinted** :ref:`🔗<class_EditorExportPlatformIOS_property_icons/ipad_152x152_tinted>`
+
+Home screen application icon file on iPad (2x DPI), tinted version. See `App icons <https://developer.apple.com/design/human-interface-guidelines/foundations/app-icons>`__.
+
+.. rst-class:: classref-item-separator
+
+----
+
 .. _class_EditorExportPlatformIOS_property_icons/ipad_167x167:
 
 .. rst-class:: classref-property
@@ -792,6 +1145,30 @@ Home screen application icon file on iPad (2x DPI). If left empty, it will fallb
 :ref:`String<class_String>` **icons/ipad_167x167** :ref:`🔗<class_EditorExportPlatformIOS_property_icons/ipad_167x167>`
 
 Home screen application icon file on iPad (3x DPI). If left empty, it will fallback to :ref:`ProjectSettings.application/config/icon<class_ProjectSettings_property_application/config/icon>`. See `App icons <https://developer.apple.com/design/human-interface-guidelines/foundations/app-icons>`__.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_EditorExportPlatformIOS_property_icons/ipad_167x167_dark:
+
+.. rst-class:: classref-property
+
+:ref:`String<class_String>` **icons/ipad_167x167_dark** :ref:`🔗<class_EditorExportPlatformIOS_property_icons/ipad_167x167_dark>`
+
+Home screen application icon file on iPad (3x DPI), dark version. See `App icons <https://developer.apple.com/design/human-interface-guidelines/foundations/app-icons>`__.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_EditorExportPlatformIOS_property_icons/ipad_167x167_tinted:
+
+.. rst-class:: classref-property
+
+:ref:`String<class_String>` **icons/ipad_167x167_tinted** :ref:`🔗<class_EditorExportPlatformIOS_property_icons/ipad_167x167_tinted>`
+
+Home screen application icon file on iPad (3x DPI), tinted version. See `App icons <https://developer.apple.com/design/human-interface-guidelines/foundations/app-icons>`__.
 
 .. rst-class:: classref-item-separator
 
@@ -809,6 +1186,30 @@ Home screen application icon file on iPhone (2x DPI). If left empty, it will fal
 
 ----
 
+.. _class_EditorExportPlatformIOS_property_icons/iphone_120x120_dark:
+
+.. rst-class:: classref-property
+
+:ref:`String<class_String>` **icons/iphone_120x120_dark** :ref:`🔗<class_EditorExportPlatformIOS_property_icons/iphone_120x120_dark>`
+
+Home screen application icon file on iPhone (2x DPI), dark version. See `App icons <https://developer.apple.com/design/human-interface-guidelines/foundations/app-icons>`__.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_EditorExportPlatformIOS_property_icons/iphone_120x120_tinted:
+
+.. rst-class:: classref-property
+
+:ref:`String<class_String>` **icons/iphone_120x120_tinted** :ref:`🔗<class_EditorExportPlatformIOS_property_icons/iphone_120x120_tinted>`
+
+Home screen application icon file on iPhone (2x DPI), tinted version. See `App icons <https://developer.apple.com/design/human-interface-guidelines/foundations/app-icons>`__.
+
+.. rst-class:: classref-item-separator
+
+----
+
 .. _class_EditorExportPlatformIOS_property_icons/iphone_180x180:
 
 .. rst-class:: classref-property
@@ -816,6 +1217,30 @@ Home screen application icon file on iPhone (2x DPI). If left empty, it will fal
 :ref:`String<class_String>` **icons/iphone_180x180** :ref:`🔗<class_EditorExportPlatformIOS_property_icons/iphone_180x180>`
 
 Home screen application icon file on iPhone (3x DPI). If left empty, it will fallback to :ref:`ProjectSettings.application/config/icon<class_ProjectSettings_property_application/config/icon>`. See `App icons <https://developer.apple.com/design/human-interface-guidelines/foundations/app-icons>`__.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_EditorExportPlatformIOS_property_icons/iphone_180x180_dark:
+
+.. rst-class:: classref-property
+
+:ref:`String<class_String>` **icons/iphone_180x180_dark** :ref:`🔗<class_EditorExportPlatformIOS_property_icons/iphone_180x180_dark>`
+
+Home screen application icon file on iPhone (3x DPI), dark version. See `App icons <https://developer.apple.com/design/human-interface-guidelines/foundations/app-icons>`__.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_EditorExportPlatformIOS_property_icons/iphone_180x180_tinted:
+
+.. rst-class:: classref-property
+
+:ref:`String<class_String>` **icons/iphone_180x180_tinted** :ref:`🔗<class_EditorExportPlatformIOS_property_icons/iphone_180x180_tinted>`
+
+Home screen application icon file on iPhone (3x DPI), tinted version. See `App icons <https://developer.apple.com/design/human-interface-guidelines/foundations/app-icons>`__.
 
 .. rst-class:: classref-item-separator
 
@@ -833,6 +1258,30 @@ Notification icon file on iPad and iPhone (2x DPI). If left empty, it will fallb
 
 ----
 
+.. _class_EditorExportPlatformIOS_property_icons/notification_40x40_dark:
+
+.. rst-class:: classref-property
+
+:ref:`String<class_String>` **icons/notification_40x40_dark** :ref:`🔗<class_EditorExportPlatformIOS_property_icons/notification_40x40_dark>`
+
+Notification icon file on iPad and iPhone (2x DPI), dark version. See `App icons <https://developer.apple.com/design/human-interface-guidelines/foundations/app-icons>`__.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_EditorExportPlatformIOS_property_icons/notification_40x40_tinted:
+
+.. rst-class:: classref-property
+
+:ref:`String<class_String>` **icons/notification_40x40_tinted** :ref:`🔗<class_EditorExportPlatformIOS_property_icons/notification_40x40_tinted>`
+
+Notification icon file on iPad and iPhone (2x DPI), tinted version. See `App icons <https://developer.apple.com/design/human-interface-guidelines/foundations/app-icons>`__.
+
+.. rst-class:: classref-item-separator
+
+----
+
 .. _class_EditorExportPlatformIOS_property_icons/notification_60x60:
 
 .. rst-class:: classref-property
@@ -840,6 +1289,102 @@ Notification icon file on iPad and iPhone (2x DPI). If left empty, it will fallb
 :ref:`String<class_String>` **icons/notification_60x60** :ref:`🔗<class_EditorExportPlatformIOS_property_icons/notification_60x60>`
 
 Notification icon file on iPhone (3x DPI). If left empty, it will fallback to :ref:`ProjectSettings.application/config/icon<class_ProjectSettings_property_application/config/icon>`. See `App icons <https://developer.apple.com/design/human-interface-guidelines/foundations/app-icons>`__.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_EditorExportPlatformIOS_property_icons/notification_60x60_dark:
+
+.. rst-class:: classref-property
+
+:ref:`String<class_String>` **icons/notification_60x60_dark** :ref:`🔗<class_EditorExportPlatformIOS_property_icons/notification_60x60_dark>`
+
+Notification icon file on iPhone (3x DPI), dark version. See `App icons <https://developer.apple.com/design/human-interface-guidelines/foundations/app-icons>`__.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_EditorExportPlatformIOS_property_icons/notification_60x60_tinted:
+
+.. rst-class:: classref-property
+
+:ref:`String<class_String>` **icons/notification_60x60_tinted** :ref:`🔗<class_EditorExportPlatformIOS_property_icons/notification_60x60_tinted>`
+
+Notification icon file on iPhone (3x DPI), tinted version. See `App icons <https://developer.apple.com/design/human-interface-guidelines/foundations/app-icons>`__.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_EditorExportPlatformIOS_property_icons/notification_76x76:
+
+.. rst-class:: classref-property
+
+:ref:`String<class_String>` **icons/notification_76x76** :ref:`🔗<class_EditorExportPlatformIOS_property_icons/notification_76x76>`
+
+Notification icon file on iPad and iPhone (2x DPI). If left empty, it will fallback to :ref:`ProjectSettings.application/config/icon<class_ProjectSettings_property_application/config/icon>`. See `App icons <https://developer.apple.com/design/human-interface-guidelines/foundations/app-icons>`__.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_EditorExportPlatformIOS_property_icons/notification_76x76_dark:
+
+.. rst-class:: classref-property
+
+:ref:`String<class_String>` **icons/notification_76x76_dark** :ref:`🔗<class_EditorExportPlatformIOS_property_icons/notification_76x76_dark>`
+
+Notification icon file on iPad and iPhone (2x DPI), dark version. See `App icons <https://developer.apple.com/design/human-interface-guidelines/foundations/app-icons>`__.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_EditorExportPlatformIOS_property_icons/notification_76x76_tinted:
+
+.. rst-class:: classref-property
+
+:ref:`String<class_String>` **icons/notification_76x76_tinted** :ref:`🔗<class_EditorExportPlatformIOS_property_icons/notification_76x76_tinted>`
+
+Notification icon file on iPad and iPhone (2x DPI), tinted version. See `App icons <https://developer.apple.com/design/human-interface-guidelines/foundations/app-icons>`__.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_EditorExportPlatformIOS_property_icons/notification_114x114:
+
+.. rst-class:: classref-property
+
+:ref:`String<class_String>` **icons/notification_114x114** :ref:`🔗<class_EditorExportPlatformIOS_property_icons/notification_114x114>`
+
+Notification icon file on iPad and iPhone (3x DPI). If left empty, it will fallback to :ref:`ProjectSettings.application/config/icon<class_ProjectSettings_property_application/config/icon>`. See `App icons <https://developer.apple.com/design/human-interface-guidelines/foundations/app-icons>`__.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_EditorExportPlatformIOS_property_icons/notification_114x114_dark:
+
+.. rst-class:: classref-property
+
+:ref:`String<class_String>` **icons/notification_114x114_dark** :ref:`🔗<class_EditorExportPlatformIOS_property_icons/notification_114x114_dark>`
+
+Notification icon file on iPad and iPhone (3x DPI), dark version. See `App icons <https://developer.apple.com/design/human-interface-guidelines/foundations/app-icons>`__.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_EditorExportPlatformIOS_property_icons/notification_114x114_tinted:
+
+.. rst-class:: classref-property
+
+:ref:`String<class_String>` **icons/notification_114x114_tinted** :ref:`🔗<class_EditorExportPlatformIOS_property_icons/notification_114x114_tinted>`
+
+Notification icon file on iPad and iPhone (3x DPI), tinted version. See `App icons <https://developer.apple.com/design/human-interface-guidelines/foundations/app-icons>`__.
 
 .. rst-class:: classref-item-separator
 
@@ -857,6 +1402,30 @@ Application settings icon file on iPad and iPhone (2x DPI). If left empty, it wi
 
 ----
 
+.. _class_EditorExportPlatformIOS_property_icons/settings_58x58_dark:
+
+.. rst-class:: classref-property
+
+:ref:`String<class_String>` **icons/settings_58x58_dark** :ref:`🔗<class_EditorExportPlatformIOS_property_icons/settings_58x58_dark>`
+
+Application settings icon file on iPad and iPhone (2x DPI), dark version. See `App icons <https://developer.apple.com/design/human-interface-guidelines/foundations/app-icons>`__.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_EditorExportPlatformIOS_property_icons/settings_58x58_tinted:
+
+.. rst-class:: classref-property
+
+:ref:`String<class_String>` **icons/settings_58x58_tinted** :ref:`🔗<class_EditorExportPlatformIOS_property_icons/settings_58x58_tinted>`
+
+Application settings icon file on iPad and iPhone (2x DPI), tinted version. See `App icons <https://developer.apple.com/design/human-interface-guidelines/foundations/app-icons>`__.
+
+.. rst-class:: classref-item-separator
+
+----
+
 .. _class_EditorExportPlatformIOS_property_icons/settings_87x87:
 
 .. rst-class:: classref-property
@@ -869,13 +1438,25 @@ Application settings icon file on iPhone (3x DPI). If left empty, it will fallba
 
 ----
 
-.. _class_EditorExportPlatformIOS_property_icons/spotlight_40x40:
+.. _class_EditorExportPlatformIOS_property_icons/settings_87x87_dark:
 
 .. rst-class:: classref-property
 
-:ref:`String<class_String>` **icons/spotlight_40x40** :ref:`🔗<class_EditorExportPlatformIOS_property_icons/spotlight_40x40>`
+:ref:`String<class_String>` **icons/settings_87x87_dark** :ref:`🔗<class_EditorExportPlatformIOS_property_icons/settings_87x87_dark>`
 
-Spotlight icon file on iPad (1x DPI). If left empty, it will fallback to :ref:`ProjectSettings.application/config/icon<class_ProjectSettings_property_application/config/icon>`. See `App icons <https://developer.apple.com/design/human-interface-guidelines/foundations/app-icons>`__.
+Application settings icon file on iPhone (3x DPI), dark version. See `App icons <https://developer.apple.com/design/human-interface-guidelines/foundations/app-icons>`__.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_EditorExportPlatformIOS_property_icons/settings_87x87_tinted:
+
+.. rst-class:: classref-property
+
+:ref:`String<class_String>` **icons/settings_87x87_tinted** :ref:`🔗<class_EditorExportPlatformIOS_property_icons/settings_87x87_tinted>`
+
+Application settings icon file on iPhone (3x DPI), tinted version. See `App icons <https://developer.apple.com/design/human-interface-guidelines/foundations/app-icons>`__.
 
 .. rst-class:: classref-item-separator
 
@@ -888,6 +1469,66 @@ Spotlight icon file on iPad (1x DPI). If left empty, it will fallback to :ref:`P
 :ref:`String<class_String>` **icons/spotlight_80x80** :ref:`🔗<class_EditorExportPlatformIOS_property_icons/spotlight_80x80>`
 
 Spotlight icon file on iPad and iPhone (2x DPI). If left empty, it will fallback to :ref:`ProjectSettings.application/config/icon<class_ProjectSettings_property_application/config/icon>`. See `App icons <https://developer.apple.com/design/human-interface-guidelines/foundations/app-icons>`__.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_EditorExportPlatformIOS_property_icons/spotlight_80x80_dark:
+
+.. rst-class:: classref-property
+
+:ref:`String<class_String>` **icons/spotlight_80x80_dark** :ref:`🔗<class_EditorExportPlatformIOS_property_icons/spotlight_80x80_dark>`
+
+Spotlight icon file on iPad and iPhone (2x DPI), dark version. See `App icons <https://developer.apple.com/design/human-interface-guidelines/foundations/app-icons>`__.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_EditorExportPlatformIOS_property_icons/spotlight_80x80_tinted:
+
+.. rst-class:: classref-property
+
+:ref:`String<class_String>` **icons/spotlight_80x80_tinted** :ref:`🔗<class_EditorExportPlatformIOS_property_icons/spotlight_80x80_tinted>`
+
+Spotlight icon file on iPad and iPhone (2x DPI), tinted version. See `App icons <https://developer.apple.com/design/human-interface-guidelines/foundations/app-icons>`__.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_EditorExportPlatformIOS_property_icons/spotlight_120x120:
+
+.. rst-class:: classref-property
+
+:ref:`String<class_String>` **icons/spotlight_120x120** :ref:`🔗<class_EditorExportPlatformIOS_property_icons/spotlight_120x120>`
+
+Spotlight icon file on iPad and iPhone (3x DPI). If left empty, it will fallback to :ref:`ProjectSettings.application/config/icon<class_ProjectSettings_property_application/config/icon>`. See `App icons <https://developer.apple.com/design/human-interface-guidelines/foundations/app-icons>`__.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_EditorExportPlatformIOS_property_icons/spotlight_120x120_dark:
+
+.. rst-class:: classref-property
+
+:ref:`String<class_String>` **icons/spotlight_120x120_dark** :ref:`🔗<class_EditorExportPlatformIOS_property_icons/spotlight_120x120_dark>`
+
+Spotlight icon file on iPad and iPhone (3x DPI), dark version. See `App icons <https://developer.apple.com/design/human-interface-guidelines/foundations/app-icons>`__.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_EditorExportPlatformIOS_property_icons/spotlight_120x120_tinted:
+
+.. rst-class:: classref-property
+
+:ref:`String<class_String>` **icons/spotlight_120x120_tinted** :ref:`🔗<class_EditorExportPlatformIOS_property_icons/spotlight_120x120_tinted>`
+
+Spotlight icon file on iPad and iPhone (3x DPI), tinted version. See `App icons <https://developer.apple.com/design/human-interface-guidelines/foundations/app-icons>`__.
 
 .. rst-class:: classref-item-separator
 

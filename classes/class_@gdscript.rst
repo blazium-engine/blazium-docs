@@ -17,9 +17,9 @@ Built-in GDScript constants, functions, and annotations.
 Description
 -----------
 
-A list of GDScript-specific utility functions and annotations accessible from any script.
+A list of utility functions and annotations accessible from any script written in GDScript.
 
-For the list of the global functions and constants see :ref:`@GlobalScope<class_@GlobalScope>`.
+For the list of global functions and constants that can be accessed in any scripting language, see :ref:`@GlobalScope<class_@GlobalScope>`.
 
 .. rst-class:: classref-introduction-group
 
@@ -43,7 +43,7 @@ Methods
    +-------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`String<class_String>`         | :ref:`char<class_@GDScript_method_char>`\ (\ char\: :ref:`int<class_int>`\ )                                                                                             |
    +-------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | :ref:`Variant<class_Variant>`       | :ref:`convert<class_@GDScript_method_convert>`\ (\ what\: :ref:`Variant<class_Variant>`, type\: :ref:`int<class_int>`\ )                                                 |
+   | :ref:`Variant<class_Variant>`       | :ref:`convert<class_@GDScript_method_convert>`\ (\ what\: :ref:`Variant<class_Variant>`, type\: :ref:`Variant.Type<enum_@GlobalScope_Variant.Type>`\ )                   |
    +-------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`Object<class_Object>`         | :ref:`dict_to_inst<class_@GDScript_method_dict_to_inst>`\ (\ dictionary\: :ref:`Dictionary<class_Dictionary>`\ )                                                         |
    +-------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -724,6 +724,53 @@ See also :ref:`@GlobalScope.PROPERTY_USAGE_SUBGROUP<class_@GlobalScope_constant_
 
 ----
 
+.. _class_@GDScript_annotation_@export_tool_button:
+
+.. rst-class:: classref-annotation
+
+**@export_tool_button**\ (\ text\: :ref:`String<class_String>`, icon\: :ref:`String<class_String>` = ""\ ) :ref:`🔗<class_@GDScript_annotation_@export_tool_button>`
+
+Export a :ref:`Callable<class_Callable>` property as a clickable button with the label ``text``. When the button is pressed, the callable is called.
+
+If ``icon`` is specified, it is used to fetch an icon for the button via :ref:`Control.get_theme_icon<class_Control_method_get_theme_icon>`, from the ``"EditorIcons"`` theme type. If ``icon`` is omitted, the default ``"Callable"`` icon is used instead.
+
+Consider using the :ref:`EditorUndoRedoManager<class_EditorUndoRedoManager>` to allow the action to be reverted safely.
+
+See also :ref:`@GlobalScope.PROPERTY_HINT_TOOL_BUTTON<class_@GlobalScope_constant_PROPERTY_HINT_TOOL_BUTTON>`.
+
+::
+
+    @tool
+    extends Sprite2D
+    
+    @export_tool_button("Hello") var hello_action = hello
+    @export_tool_button("Randomize the color!", "ColorRect")
+    var randomize_color_action = randomize_color
+    
+    func hello():
+        print("Hello world!")
+    
+    func randomize_color():
+        var undo_redo = EditorInterface.get_editor_undo_redo()
+        undo_redo.create_action("Randomized Sprite2D Color")
+        undo_redo.add_do_property(self, &"self_modulate", Color(randf(), randf(), randf()))
+        undo_redo.add_undo_property(self, &"self_modulate", self_modulate)
+        undo_redo.commit_action()
+
+\ **Note:** The property is exported without the :ref:`@GlobalScope.PROPERTY_USAGE_STORAGE<class_@GlobalScope_constant_PROPERTY_USAGE_STORAGE>` flag because a :ref:`Callable<class_Callable>` cannot be properly serialized and stored in a file.
+
+\ **Note:** In an exported project neither :ref:`EditorInterface<class_EditorInterface>` nor :ref:`EditorUndoRedoManager<class_EditorUndoRedoManager>` exist, which may cause some scripts to break. To prevent this, you can use :ref:`Engine.get_singleton<class_Engine_method_get_singleton>` and omit the static type from the variable declaration:
+
+::
+
+    var undo_redo = Engine.get_singleton(&"EditorInterface").get_editor_undo_redo()
+
+\ **Note:** Avoid storing lambda callables in member variables of :ref:`RefCounted<class_RefCounted>`-based classes (e.g. resources), as this can lead to memory leaks. Use only method callables and optionally :ref:`Callable.bind<class_Callable_method_bind>` or :ref:`Callable.unbind<class_Callable_method_unbind>`.
+
+.. rst-class:: classref-item-separator
+
+----
+
 .. _class_@GDScript_annotation_@icon:
 
 .. rst-class:: classref-annotation
@@ -740,7 +787,7 @@ Add a custom icon to the current script. The icon specified at ``icon_path`` is 
 
 \ **Note:** As annotations describe their subject, the :ref:`@icon<class_@GDScript_annotation_@icon>` annotation must be placed before the class definition and inheritance.
 
-\ **Note:** Unlike other annotations, the argument of the :ref:`@icon<class_@GDScript_annotation_@icon>` annotation must be a string literal (constant expressions are not supported).
+\ **Note:** Unlike most other annotations, the argument of the :ref:`@icon<class_@GDScript_annotation_@icon>` annotation must be a string literal (constant expressions are not supported).
 
 .. rst-class:: classref-item-separator
 
@@ -756,7 +803,7 @@ Mark the following property as assigned when the :ref:`Node<class_Node>` is read
 
 ::
 
-    @onready var character_name: Label = $Label
+    @onready var character_name = $Label
 
 .. rst-class:: classref-item-separator
 
@@ -846,6 +893,48 @@ Mark the following statement to ignore the specified ``warning``. See :doc:`GDSc
         @warning_ignore("unreachable_code")
         print("unreachable")
 
+See also :ref:`@warning_ignore_start<class_@GDScript_annotation_@warning_ignore_start>` and :ref:`@warning_ignore_restore<class_@GDScript_annotation_@warning_ignore_restore>`.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_@GDScript_annotation_@warning_ignore_restore:
+
+.. rst-class:: classref-annotation
+
+**@warning_ignore_restore**\ (\ warning\: :ref:`String<class_String>`, ...\ ) |vararg| :ref:`🔗<class_@GDScript_annotation_@warning_ignore_restore>`
+
+Stops ignoring the listed warning types after :ref:`@warning_ignore_start<class_@GDScript_annotation_@warning_ignore_start>`. Ignoring the specified warning types will be reset to Project Settings. This annotation can be omitted to ignore the warning types until the end of the file.
+
+\ **Note:** Unlike most other annotations, arguments of the :ref:`@warning_ignore_restore<class_@GDScript_annotation_@warning_ignore_restore>` annotation must be string literals (constant expressions are not supported).
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_@GDScript_annotation_@warning_ignore_start:
+
+.. rst-class:: classref-annotation
+
+**@warning_ignore_start**\ (\ warning\: :ref:`String<class_String>`, ...\ ) |vararg| :ref:`🔗<class_@GDScript_annotation_@warning_ignore_start>`
+
+Starts ignoring the listed warning types until the end of the file or the :ref:`@warning_ignore_restore<class_@GDScript_annotation_@warning_ignore_restore>` annotation with the given warning type.
+
+::
+
+    func test():
+        var a = 1 # Warning (if enabled in the Project Settings).
+        @warning_ignore_start("unused_variable")
+        var b = 2 # No warning.
+        var c = 3 # No warning.
+        @warning_ignore_restore("unused_variable")
+        var d = 4 # Warning (if enabled in the Project Settings).
+
+\ **Note:** To suppress a single warning, use :ref:`@warning_ignore<class_@GDScript_annotation_@warning_ignore>` instead.
+
+\ **Note:** Unlike most other annotations, arguments of the :ref:`@warning_ignore_start<class_@GDScript_annotation_@warning_ignore_start>` annotation must be string literals (constant expressions are not supported).
+
 .. rst-class:: classref-section-separator
 
 ----
@@ -912,9 +1001,9 @@ Returns a single character (as a :ref:`String<class_String>`) of the given Unico
 
 ::
 
-    a = char(65)      # a is "A"
-    a = char(65 + 32) # a is "a"
-    a = char(8364)    # a is "€"
+    var upper = char(65)      # upper is "A"
+    var lower = char(65 + 32) # lower is "a"
+    var euro = char(8364)     # euro is "€"
 
 .. rst-class:: classref-item-separator
 
@@ -924,7 +1013,7 @@ Returns a single character (as a :ref:`String<class_String>`) of the given Unico
 
 .. rst-class:: classref-method
 
-:ref:`Variant<class_Variant>` **convert**\ (\ what\: :ref:`Variant<class_Variant>`, type\: :ref:`int<class_int>`\ ) :ref:`🔗<class_@GDScript_method_convert>`
+:ref:`Variant<class_Variant>` **convert**\ (\ what\: :ref:`Variant<class_Variant>`, type\: :ref:`Variant.Type<enum_@GlobalScope_Variant.Type>`\ ) :ref:`🔗<class_@GDScript_method_convert>`
 
 **Deprecated:** Use :ref:`@GlobalScope.type_convert<class_@GlobalScope_method_type_convert>` instead.
 
@@ -1033,7 +1122,7 @@ Returns ``true`` if ``value`` is an instance of ``type``. The ``type`` value mus
 
 Unlike the right operand of the ``is`` operator, ``type`` can be a non-constant value. The ``is`` operator supports more features (such as typed arrays). Use the operator instead of this method if you do not need dynamic type checking.
 
-Examples:
+\ **Examples:**\ 
 
 ::
 
@@ -1060,10 +1149,10 @@ Returns the length of the given Variant ``var``. The length can be the character
 
 ::
 
-    a = [1, 2, 3, 4]
+    var a = [1, 2, 3, 4]
     len(a) # Returns 4
     
-    b = "Hello!"
+    var b = "Hello!"
     len(b) # Returns 6
 
 .. rst-class:: classref-item-separator
@@ -1179,7 +1268,7 @@ Returns an array with the given range. :ref:`range<class_@GDScript_method_range>
 
 \ **Note:** Returns an empty array if no value meets the value constraint (e.g. ``range(2, 5, -1)`` or ``range(5, 5, 1)``).
 
-Examples:
+\ **Examples:**\ 
 
 ::
 

@@ -23,6 +23,18 @@ The JavaClassWrapper singleton provides a way for the Godot application to send 
 
 \ **Note:** This singleton is only available in Android builds.
 
+::
+
+    var LocalDateTime = JavaClassWrapper.wrap("java.time.LocalDateTime")
+    var DateTimeFormatter = JavaClassWrapper.wrap("java.time.format.DateTimeFormatter")
+    
+    var datetime = LocalDateTime.now()
+    var formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss")
+    
+    print(datetime.format(formatter))
+
+\ **Warning:** When calling Java methods, be sure to check :ref:`get_exception<class_JavaClassWrapper_method_get_exception>` to check if the method threw an exception.
+
 .. rst-class:: classref-reftable-group
 
 Methods
@@ -31,9 +43,11 @@ Methods
 .. table::
    :widths: auto
 
-   +-----------------------------------+-------------------------------------------------------------------------------------------+
-   | :ref:`JavaClass<class_JavaClass>` | :ref:`wrap<class_JavaClassWrapper_method_wrap>`\ (\ name\: :ref:`String<class_String>`\ ) |
-   +-----------------------------------+-------------------------------------------------------------------------------------------+
+   +-------------------------------------+-------------------------------------------------------------------------------------------+
+   | :ref:`JavaObject<class_JavaObject>` | :ref:`get_exception<class_JavaClassWrapper_method_get_exception>`\ (\ )                   |
+   +-------------------------------------+-------------------------------------------------------------------------------------------+
+   | :ref:`JavaClass<class_JavaClass>`   | :ref:`wrap<class_JavaClassWrapper_method_wrap>`\ (\ name\: :ref:`String<class_String>`\ ) |
+   +-------------------------------------+-------------------------------------------------------------------------------------------+
 
 .. rst-class:: classref-section-separator
 
@@ -43,6 +57,20 @@ Methods
 
 Method Descriptions
 -------------------
+
+.. _class_JavaClassWrapper_method_get_exception:
+
+.. rst-class:: classref-method
+
+:ref:`JavaObject<class_JavaObject>` **get_exception**\ (\ ) :ref:`🔗<class_JavaClassWrapper_method_get_exception>`
+
+Returns the Java exception from the last call into a Java class. If there was no exception, it will return ``null``.
+
+\ **Note:** This method only works on Android. On every other platform, this method will always return ``null``.
+
+.. rst-class:: classref-item-separator
+
+----
 
 .. _class_JavaClassWrapper_method_wrap:
 

@@ -40,6 +40,8 @@ Properties
    +---------------------------+---------------------------------------------------------------------------------------+----------+
    | :ref:`bool<class_bool>`   | :ref:`print_error_messages<class_Engine_property_print_error_messages>`               | ``true`` |
    +---------------------------+---------------------------------------------------------------------------------------+----------+
+   | :ref:`bool<class_bool>`   | :ref:`print_to_stdout<class_Engine_property_print_to_stdout>`                         | ``true`` |
+   +---------------------------+---------------------------------------------------------------------------------------+----------+
    | :ref:`float<class_float>` | :ref:`time_scale<class_Engine_property_time_scale>`                                   | ``1.0``  |
    +---------------------------+---------------------------------------------------------------------------------------+----------+
 
@@ -59,6 +61,8 @@ Methods
    | :ref:`Array<class_Array>`\[:ref:`Dictionary<class_Dictionary>`\] | :ref:`get_copyright_info<class_Engine_method_get_copyright_info>`\ (\ ) |const|                                                                             |
    +------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`Dictionary<class_Dictionary>`                              | :ref:`get_donor_info<class_Engine_method_get_donor_info>`\ (\ ) |const|                                                                                     |
+   +------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`int<class_int>`                                            | :ref:`get_frame_ticks<class_Engine_method_get_frame_ticks>`\ (\ ) |const|                                                                                   |
    +------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`int<class_int>`                                            | :ref:`get_frames_drawn<class_Engine_method_get_frames_drawn>`\ (\ )                                                                                         |
    +------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -91,6 +95,8 @@ Methods
    | :ref:`bool<class_bool>`                                          | :ref:`has_singleton<class_Engine_method_has_singleton>`\ (\ name\: :ref:`StringName<class_StringName>`\ ) |const|                                           |
    +------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`bool<class_bool>`                                          | :ref:`is_editor_hint<class_Engine_method_is_editor_hint>`\ (\ ) |const|                                                                                     |
+   +------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`bool<class_bool>`                                          | :ref:`is_embedded_in_editor<class_Engine_method_is_embedded_in_editor>`\ (\ ) |const|                                                                       |
    +------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`bool<class_bool>`                                          | :ref:`is_in_physics_frame<class_Engine_method_is_in_physics_frame>`\ (\ ) |const|                                                                           |
    +------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -221,6 +227,25 @@ If ``false``, stops printing error and warning messages to the console and edito
 
 ----
 
+.. _class_Engine_property_print_to_stdout:
+
+.. rst-class:: classref-property
+
+:ref:`bool<class_bool>` **print_to_stdout** = ``true`` :ref:`🔗<class_Engine_property_print_to_stdout>`
+
+.. rst-class:: classref-property-setget
+
+- |void| **set_print_to_stdout**\ (\ value\: :ref:`bool<class_bool>`\ )
+- :ref:`bool<class_bool>` **is_printing_to_stdout**\ (\ )
+
+If ``false``, stops printing messages (for example using :ref:`@GlobalScope.print<class_@GlobalScope_method_print>`) to the console, log files, and editor Output log. This property is equivalent to the :ref:`ProjectSettings.application/run/disable_stdout<class_ProjectSettings_property_application/run/disable_stdout>` project setting.
+
+\ **Note:** This does not stop printing errors or warnings produced by scripts to the console or log files, for more details see :ref:`print_error_messages<class_Engine_property_print_error_messages>`.
+
+.. rst-class:: classref-item-separator
+
+----
+
 .. _class_Engine_property_time_scale:
 
 .. rst-class:: classref-property
@@ -259,26 +284,7 @@ Method Descriptions
 
 Returns the name of the CPU architecture the Godot binary was built for. Possible return values include ``"x86_64"``, ``"x86_32"``, ``"arm64"``, ``"arm32"``, ``"rv64"``, ``"riscv"``, ``"ppc64"``, ``"ppc"``, ``"wasm64"``, and ``"wasm32"``.
 
-To detect whether the current build is 64-bit, you can use the fact that all 64-bit architecture names contain ``64`` in their name:
-
-
-.. tabs::
-
- .. code-tab:: gdscript
-
-    if "64" in Engine.get_architecture_name():
-        print("Running a 64-bit build of Godot.")
-    else:
-        print("Running a 32-bit build of Godot.")
-
- .. code-tab:: csharp
-
-    if (Engine.GetArchitectureName().Contains("64"))
-        GD.Print("Running a 64-bit build of Godot.");
-    else
-        GD.Print("Running a 32-bit build of Godot.");
-
-
+To detect whether the current build is 64-bit, or the type of architecture, don't use the architecture name. Instead, use :ref:`OS.has_feature<class_OS_method_has_feature>` to check for the ``"64"`` feature tag, or tags such as ``"x86"`` or ``"arm"``. See the :doc:`Feature Tags <../tutorials/export/feature_tags>` documentation for more details.
 
 \ **Note:** This method does *not* return the name of the system's CPU architecture (like :ref:`OS.get_processor_name<class_OS_method_get_processor_name>`). For example, when running an ``x86_32`` Godot binary on an ``x86_64`` system, the returned value will still be ``"x86_32"``.
 
@@ -327,6 +333,18 @@ Every :ref:`Dictionary<class_Dictionary>` contains a ``name`` identifier, and a 
 Returns a :ref:`Dictionary<class_Dictionary>` of categorized donor names. Each entry is an :ref:`Array<class_Array>` of strings:
 
 {``platinum_sponsors``, ``gold_sponsors``, ``silver_sponsors``, ``bronze_sponsors``, ``mini_sponsors``, ``gold_donors``, ``silver_donors``, ``bronze_donors``}
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_Engine_method_get_frame_ticks:
+
+.. rst-class:: classref-method
+
+:ref:`int<class_int>` **get_frame_ticks**\ (\ ) |const| :ref:`🔗<class_Engine_method_get_frame_ticks>`
+
+Returns the tick count at the start of the frame.
 
 .. rst-class:: classref-item-separator
 
@@ -621,10 +639,10 @@ Returns ``true`` if a singleton with the given ``name`` exists in the global sco
 
  .. code-tab:: csharp
 
-    GD.Print(Engine.HasSingleton("OS"));          // Prints true
-    GD.Print(Engine.HasSingleton("Engine"));      // Prints true
-    GD.Print(Engine.HasSingleton("AudioServer")); // Prints true
-    GD.Print(Engine.HasSingleton("Unknown"));     // Prints false
+    GD.Print(Engine.HasSingleton("OS"));          // Prints True
+    GD.Print(Engine.HasSingleton("Engine"));      // Prints True
+    GD.Print(Engine.HasSingleton("AudioServer")); // Prints True
+    GD.Print(Engine.HasSingleton("Unknown"));     // Prints False
 
 
 
@@ -664,6 +682,18 @@ Returns ``true`` if the script is currently running inside the editor, otherwise
 See :doc:`Running code in the editor <../tutorials/plugins/running_code_in_the_editor>` in the documentation for more information.
 
 \ **Note:** To detect whether the script is running on an editor *build* (such as when pressing :kbd:`F5`), use :ref:`OS.has_feature<class_OS_method_has_feature>` with the ``"editor"`` argument instead. ``OS.has_feature("editor")`` evaluate to ``true`` both when the script is running in the editor and when running the project from the editor, but returns ``false`` when run from an exported project.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_Engine_method_is_embedded_in_editor:
+
+.. rst-class:: classref-method
+
+:ref:`bool<class_bool>` **is_embedded_in_editor**\ (\ ) |const| :ref:`🔗<class_Engine_method_is_embedded_in_editor>`
+
+Returns ``true`` if the engine is running embedded in the editor. This is useful to prevent attempting to update window mode or window flags that are not supported when running the project embedded in the editor.
 
 .. rst-class:: classref-item-separator
 

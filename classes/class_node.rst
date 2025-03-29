@@ -12,7 +12,7 @@ Node
 
 **Inherits:** :ref:`Object<class_Object>`
 
-**Inherited By:** :ref:`AnimationMixer<class_AnimationMixer>`, :ref:`AudioStreamPlayer<class_AudioStreamPlayer>`, :ref:`BlaziumClient<class_BlaziumClient>`, :ref:`CanvasItem<class_CanvasItem>`, :ref:`CanvasLayer<class_CanvasLayer>`, :ref:`EditorFileSystem<class_EditorFileSystem>`, :ref:`EditorPlugin<class_EditorPlugin>`, :ref:`EditorResourcePreview<class_EditorResourcePreview>`, :ref:`HTTPRequest<class_HTTPRequest>`, :ref:`InstancePlaceholder<class_InstancePlaceholder>`, :ref:`MissingNode<class_MissingNode>`, :ref:`MultiplayerSpawner<class_MultiplayerSpawner>`, :ref:`MultiplayerSynchronizer<class_MultiplayerSynchronizer>`, :ref:`NavigationAgent2D<class_NavigationAgent2D>`, :ref:`NavigationAgent3D<class_NavigationAgent3D>`, :ref:`Node3D<class_Node3D>`, :ref:`ResourcePreloader<class_ResourcePreloader>`, :ref:`ShaderGlobalsOverride<class_ShaderGlobalsOverride>`, :ref:`StatusIndicator<class_StatusIndicator>`, :ref:`Timer<class_Timer>`, :ref:`Viewport<class_Viewport>`, :ref:`WorldEnvironment<class_WorldEnvironment>`
+**Inherited By:** :ref:`AnimationMixer<class_AnimationMixer>`, :ref:`AudioStreamPlayer<class_AudioStreamPlayer>`, :ref:`BlaziumClient<class_BlaziumClient>`, :ref:`CanvasItem<class_CanvasItem>`, :ref:`CanvasLayer<class_CanvasLayer>`, :ref:`EditorFileSystem<class_EditorFileSystem>`, :ref:`EditorPlugin<class_EditorPlugin>`, :ref:`EditorResourcePreview<class_EditorResourcePreview>`, :ref:`HTTPRequest<class_HTTPRequest>`, :ref:`InstancePlaceholder<class_InstancePlaceholder>`, :ref:`MissingNode<class_MissingNode>`, :ref:`MultiplayerSpawner<class_MultiplayerSpawner>`, :ref:`MultiplayerSynchronizer<class_MultiplayerSynchronizer>`, :ref:`NavigationAgent2D<class_NavigationAgent2D>`, :ref:`NavigationAgent3D<class_NavigationAgent3D>`, :ref:`Node3D<class_Node3D>`, :ref:`ResourcePreloader<class_ResourcePreloader>`, :ref:`ShaderGlobalsOverride<class_ShaderGlobalsOverride>`, :ref:`SQLite<class_SQLite>`, :ref:`StatusIndicator<class_StatusIndicator>`, :ref:`ThirdPartyClient<class_ThirdPartyClient>`, :ref:`Timer<class_Timer>`, :ref:`Viewport<class_Viewport>`, :ref:`WorldEnvironment<class_WorldEnvironment>`
 
 Base class for all scene objects.
 
@@ -177,6 +177,8 @@ Methods
    +------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`float<class_float>`                                        | :ref:`get_process_delta_time<class_Node_method_get_process_delta_time>`\ (\ ) |const|                                                                                                                                                   |
    +------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`Variant<class_Variant>`                                    | :ref:`get_rpc_config<class_Node_method_get_rpc_config>`\ (\ ) |const|                                                                                                                                                                   |
+   +------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`bool<class_bool>`                                          | :ref:`get_scene_instance_load_placeholder<class_Node_method_get_scene_instance_load_placeholder>`\ (\ ) |const|                                                                                                                         |
    +------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`SceneTree<class_SceneTree>`                                | :ref:`get_tree<class_Node_method_get_tree>`\ (\ ) |const|                                                                                                                                                                               |
@@ -295,6 +297,8 @@ Methods
    +------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | |void|                                                           | :ref:`set_thread_safe<class_Node_method_set_thread_safe>`\ (\ property\: :ref:`StringName<class_StringName>`, value\: :ref:`Variant<class_Variant>`\ )                                                                                  |
    +------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | |void|                                                           | :ref:`set_translation_domain_inherited<class_Node_method_set_translation_domain_inherited>`\ (\ )                                                                                                                                       |
+   +------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | |void|                                                           | :ref:`update_configuration_warnings<class_Node_method_update_configuration_warnings>`\ (\ )                                                                                                                                             |
    +------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
@@ -354,6 +358,18 @@ Emitted when the list of children is changed. This happens when child nodes are 
 **editor_description_changed**\ (\ node\: :ref:`Node<class_Node>`\ ) :ref:`🔗<class_Node_signal_editor_description_changed>`
 
 Emitted when the node's editor description field changed.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_Node_signal_editor_state_changed:
+
+.. rst-class:: classref-signal
+
+**editor_state_changed**\ (\ ) :ref:`🔗<class_Node_signal_editor_state_changed>`
+
+Emitted when an attribute of the node that is relevant to the editor is changed. Only emitted in the editor.
 
 .. rst-class:: classref-item-separator
 
@@ -632,7 +648,7 @@ Duplicate the node's script (also overriding the duplicated children's scripts, 
 
 :ref:`DuplicateFlags<enum_Node_DuplicateFlags>` **DUPLICATE_USE_INSTANTIATION** = ``8``
 
-Duplicate using :ref:`PackedScene.instantiate<class_PackedScene_method_instantiate>`. If the node comes from a scene saved on disk, re-uses :ref:`PackedScene.instantiate<class_PackedScene_method_instantiate>` as the base for the duplicated node and its children.
+Duplicate using :ref:`PackedScene.instantiate<class_PackedScene_method_instantiate>`. If the node comes from a scene saved on disk, reuses :ref:`PackedScene.instantiate<class_PackedScene_method_instantiate>` as the base for the duplicated node and its children.
 
 .. rst-class:: classref-item-separator
 
@@ -2165,6 +2181,18 @@ Returns the time elapsed (in seconds) since the last process callback. This valu
 
 ----
 
+.. _class_Node_method_get_rpc_config:
+
+.. rst-class:: classref-method
+
+:ref:`Variant<class_Variant>` **get_rpc_config**\ (\ ) |const| :ref:`🔗<class_Node_method_get_rpc_config>`
+
+Returns a :ref:`Dictionary<class_Dictionary>` mapping method names to their RPC configuration defined for this node using :ref:`rpc_config<class_Node_method_rpc_config>`.
+
+.. rst-class:: classref-item-separator
+
+----
+
 .. _class_Node_method_get_scene_instance_load_placeholder:
 
 .. rst-class:: classref-method
@@ -2984,6 +3012,20 @@ If set to ``true``, the node becomes a :ref:`InstancePlaceholder<class_InstanceP
 |void| **set_thread_safe**\ (\ property\: :ref:`StringName<class_StringName>`, value\: :ref:`Variant<class_Variant>`\ ) :ref:`🔗<class_Node_method_set_thread_safe>`
 
 Similar to :ref:`call_thread_safe<class_Node_method_call_thread_safe>`, but for setting properties.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_Node_method_set_translation_domain_inherited:
+
+.. rst-class:: classref-method
+
+|void| **set_translation_domain_inherited**\ (\ ) :ref:`🔗<class_Node_method_set_translation_domain_inherited>`
+
+Makes this node inherit the translation domain from its parent node. If this node has no parent, the main translation domain will be used.
+
+This is the default behavior for all nodes. Calling :ref:`Object.set_translation_domain<class_Object_method_set_translation_domain>` disables this behavior.
 
 .. rst-class:: classref-item-separator
 

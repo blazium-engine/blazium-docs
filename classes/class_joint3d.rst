@@ -38,15 +38,17 @@ Properties
 .. table::
    :widths: auto
 
-   +---------------------------------+------------------------------------------------------------------------------------------+------------------+
-   | :ref:`bool<class_bool>`         | :ref:`exclude_nodes_from_collision<class_Joint3D_property_exclude_nodes_from_collision>` | ``true``         |
-   +---------------------------------+------------------------------------------------------------------------------------------+------------------+
-   | :ref:`NodePath<class_NodePath>` | :ref:`node_a<class_Joint3D_property_node_a>`                                             | ``NodePath("")`` |
-   +---------------------------------+------------------------------------------------------------------------------------------+------------------+
-   | :ref:`NodePath<class_NodePath>` | :ref:`node_b<class_Joint3D_property_node_b>`                                             | ``NodePath("")`` |
-   +---------------------------------+------------------------------------------------------------------------------------------+------------------+
-   | :ref:`int<class_int>`           | :ref:`solver_priority<class_Joint3D_property_solver_priority>`                           | ``1``            |
-   +---------------------------------+------------------------------------------------------------------------------------------+------------------+
+   +----------------------------------------------+------------------------------------------------------------------------------------------+------------------+
+   | :ref:`DisableMode<enum_Joint3D_DisableMode>` | :ref:`disable_mode<class_Joint3D_property_disable_mode>`                                 | ``0``            |
+   +----------------------------------------------+------------------------------------------------------------------------------------------+------------------+
+   | :ref:`bool<class_bool>`                      | :ref:`exclude_nodes_from_collision<class_Joint3D_property_exclude_nodes_from_collision>` | ``true``         |
+   +----------------------------------------------+------------------------------------------------------------------------------------------+------------------+
+   | :ref:`NodePath<class_NodePath>`              | :ref:`node_a<class_Joint3D_property_node_a>`                                             | ``NodePath("")`` |
+   +----------------------------------------------+------------------------------------------------------------------------------------------+------------------+
+   | :ref:`NodePath<class_NodePath>`              | :ref:`node_b<class_Joint3D_property_node_b>`                                             | ``NodePath("")`` |
+   +----------------------------------------------+------------------------------------------------------------------------------------------+------------------+
+   | :ref:`int<class_int>`                        | :ref:`solver_priority<class_Joint3D_property_solver_priority>`                           | ``1``            |
+   +----------------------------------------------+------------------------------------------------------------------------------------------+------------------+
 
 .. rst-class:: classref-reftable-group
 
@@ -66,8 +68,58 @@ Methods
 
 .. rst-class:: classref-descriptions-group
 
+Enumerations
+------------
+
+.. _enum_Joint3D_DisableMode:
+
+.. rst-class:: classref-enumeration
+
+enum **DisableMode**: :ref:`🔗<enum_Joint3D_DisableMode>`
+
+.. _class_Joint3D_constant_DISABLE_MODE_REMOVE:
+
+.. rst-class:: classref-enumeration-constant
+
+:ref:`DisableMode<enum_Joint3D_DisableMode>` **DISABLE_MODE_REMOVE** = ``0``
+
+When :ref:`Node.process_mode<class_Node_property_process_mode>` is set to :ref:`Node.PROCESS_MODE_DISABLED<class_Node_constant_PROCESS_MODE_DISABLED>`, remove from the physics simulation to stop all physics interactions with this **Joint3D**.
+
+Automatically re-added to the physics simulation when the :ref:`Node<class_Node>` is processed again with initial transforms for bodies.
+
+.. _class_Joint3D_constant_DISABLE_MODE_KEEP_ACTIVE:
+
+.. rst-class:: classref-enumeration-constant
+
+:ref:`DisableMode<enum_Joint3D_DisableMode>` **DISABLE_MODE_KEEP_ACTIVE** = ``1``
+
+When :ref:`Node.process_mode<class_Node_property_process_mode>` is set to :ref:`Node.PROCESS_MODE_DISABLED<class_Node_constant_PROCESS_MODE_DISABLED>`, do not affect the physics simulation.
+
+.. rst-class:: classref-section-separator
+
+----
+
+.. rst-class:: classref-descriptions-group
+
 Property Descriptions
 ---------------------
+
+.. _class_Joint3D_property_disable_mode:
+
+.. rst-class:: classref-property
+
+:ref:`DisableMode<enum_Joint3D_DisableMode>` **disable_mode** = ``0`` :ref:`🔗<class_Joint3D_property_disable_mode>`
+
+.. rst-class:: classref-property-setget
+
+- |void| **set_disable_mode**\ (\ value\: :ref:`DisableMode<enum_Joint3D_DisableMode>`\ )
+- :ref:`DisableMode<enum_Joint3D_DisableMode>` **get_disable_mode**\ (\ )
+
+Defines the behavior in physics when :ref:`Node.process_mode<class_Node_property_process_mode>` is set to :ref:`Node.PROCESS_MODE_DISABLED<class_Node_constant_PROCESS_MODE_DISABLED>`. See :ref:`DisableMode<enum_Joint3D_DisableMode>` for more details about the different modes.
+
+.. rst-class:: classref-item-separator
+
+----
 
 .. _class_Joint3D_property_exclude_nodes_from_collision:
 

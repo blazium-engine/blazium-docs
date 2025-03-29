@@ -51,11 +51,33 @@ Methods
 .. table::
    :widths: auto
 
-   +---------------------------+------------------------------------------------------------------------+
-   | :ref:`Theme<class_Theme>` | :ref:`get_default_theme<class_ThemeDB_method_get_default_theme>`\ (\ ) |
-   +---------------------------+------------------------------------------------------------------------+
-   | :ref:`Theme<class_Theme>` | :ref:`get_project_theme<class_ThemeDB_method_get_project_theme>`\ (\ ) |
-   +---------------------------+------------------------------------------------------------------------+
+   +---------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`Error<enum_@GlobalScope_Error>`             | :ref:`add_user_icon<class_ThemeDB_method_add_user_icon>`\ (\ icon_name\: :ref:`String<class_String>`, icon_source\: :ref:`String<class_String>`\ ) |
+   +---------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------+
+   | |void|                                            | :ref:`freeze_default_theme<class_ThemeDB_method_freeze_default_theme>`\ (\ )                                                                       |
+   +---------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`Theme<class_Theme>`                         | :ref:`get_default_theme<class_ThemeDB_method_get_default_theme>`\ (\ )                                                                             |
+   +---------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`ImageTexture<class_ImageTexture>`           | :ref:`get_icon<class_ThemeDB_method_get_icon>`\ (\ icon_name\: :ref:`String<class_String>`\ )                                                      |
+   +---------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`PackedStringArray<class_PackedStringArray>` | :ref:`get_icon_list<class_ThemeDB_method_get_icon_list>`\ (\ )                                                                                     |
+   +---------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`Theme<class_Theme>`                         | :ref:`get_project_theme<class_ThemeDB_method_get_project_theme>`\ (\ )                                                                             |
+   +---------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`ImageTexture<class_ImageTexture>`           | :ref:`get_user_icon<class_ThemeDB_method_get_user_icon>`\ (\ icon_name\: :ref:`String<class_String>`\ )                                            |
+   +---------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`PackedStringArray<class_PackedStringArray>` | :ref:`get_user_icon_list<class_ThemeDB_method_get_user_icon_list>`\ (\ )                                                                           |
+   +---------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`bool<class_bool>`                           | :ref:`has_icon<class_ThemeDB_method_has_icon>`\ (\ icon_name\: :ref:`String<class_String>`\ )                                                      |
+   +---------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`bool<class_bool>`                           | :ref:`has_user_icon<class_ThemeDB_method_has_user_icon>`\ (\ icon_name\: :ref:`String<class_String>`\ )                                            |
+   +---------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`bool<class_bool>`                           | :ref:`is_default_theme_frozen<class_ThemeDB_method_is_default_theme_frozen>`\ (\ ) |const|                                                         |
+   +---------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`Error<enum_@GlobalScope_Error>`             | :ref:`remove_user_icon<class_ThemeDB_method_remove_user_icon>`\ (\ icon_name\: :ref:`String<class_String>`\ )                                      |
+   +---------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------+
+   | |void|                                            | :ref:`unfreeze_default_theme<class_ThemeDB_method_unfreeze_default_theme>`\ (\ )                                                                   |
+   +---------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------+
 
 .. rst-class:: classref-section-separator
 
@@ -66,6 +88,68 @@ Methods
 Signals
 -------
 
+.. _class_ThemeDB_signal_border_padding_changed:
+
+.. rst-class:: classref-signal
+
+**border_padding_changed**\ (\ ) :ref:`🔗<class_ThemeDB_signal_border_padding_changed>`
+
+Emits when the default theme padding or border width are changed from :ref:`ProjectSettings<class_ProjectSettings>`.
+
+Used internally to update the internal margin of the nodes that has a focus :ref:`StyleBox<class_StyleBox>`.
+
+Use ``ThemeDB.get_default_theme().get_constant("border_padding", "Constants")`` to get the changed value.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_ThemeDB_signal_border_width_changed:
+
+.. rst-class:: classref-signal
+
+**border_width_changed**\ (\ ) :ref:`🔗<class_ThemeDB_signal_border_width_changed>`
+
+Emits when the default theme border width is changed from :ref:`ProjectSettings<class_ProjectSettings>`.
+
+Use ``ThemeDB.get_default_theme().get_constant("border_width", "Constants")`` to get the changed value.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_ThemeDB_signal_colors_changed:
+
+.. rst-class:: classref-signal
+
+**colors_changed**\ (\ ) :ref:`🔗<class_ThemeDB_signal_colors_changed>`
+
+Emits when any of the theme colors are changed from the :ref:`ProjectSettings<class_ProjectSettings>`.
+
+Use ``ThemeDB.get_default_theme().get_color("base_color", "Colors")`` to get the changed value.
+
+Valid options are base_color, accent_color, accent_color2, bg_color, bg_color2, normal_color, pressed_color, hover_color, disabled_color, mono_color, font_color, and font_outline_color.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_ThemeDB_signal_corner_radius_changed:
+
+.. rst-class:: classref-signal
+
+**corner_radius_changed**\ (\ ) :ref:`🔗<class_ThemeDB_signal_corner_radius_changed>`
+
+Emits when the default theme corner radius is changed from :ref:`ProjectSettings<class_ProjectSettings>`.
+
+Use ``ThemeDB.get_default_theme().get_constant("corner_radius", "Constants")`` to get the changed value.
+
+\ **Note:** To get the corner radius used for focus style, use ``ThemeDB.get_default_theme().get_constant("focus_corners", "Constants")``.
+
+.. rst-class:: classref-item-separator
+
+----
+
 .. _class_ThemeDB_signal_fallback_changed:
 
 .. rst-class:: classref-signal
@@ -73,6 +157,144 @@ Signals
 **fallback_changed**\ (\ ) :ref:`🔗<class_ThemeDB_signal_fallback_changed>`
 
 Emitted when one of the fallback values had been changed. Use it to refresh the look of controls that may rely on the fallback theme items.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_ThemeDB_signal_font_changed:
+
+.. rst-class:: classref-signal
+
+**font_changed**\ (\ ) :ref:`🔗<class_ThemeDB_signal_font_changed>`
+
+Emits when the project font is changed from :ref:`ProjectSettings<class_ProjectSettings>`.
+
+Use ``ThemeDB.get_default_theme().get_default_font()`` to get the new font, if the new font is null, the fallback font is used instead.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_ThemeDB_signal_font_color_changed:
+
+.. rst-class:: classref-signal
+
+**font_color_changed**\ (\ ) :ref:`🔗<class_ThemeDB_signal_font_color_changed>`
+
+Emits when the default theme font color is changed from :ref:`ProjectSettings<class_ProjectSettings>`.
+
+Use ``ThemeDB.get_default_theme().get_color("font_color", "Colors")`` to get the changed value.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_ThemeDB_signal_font_outline_color_changed:
+
+.. rst-class:: classref-signal
+
+**font_outline_color_changed**\ (\ ) :ref:`🔗<class_ThemeDB_signal_font_outline_color_changed>`
+
+Emits when the default theme font outline color is changed from :ref:`ProjectSettings<class_ProjectSettings>`.
+
+Use ``ThemeDB.get_default_theme().get_color("font_outline_color", "Colors")`` to get the changed value.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_ThemeDB_signal_font_outline_size_changed:
+
+.. rst-class:: classref-signal
+
+**font_outline_size_changed**\ (\ ) :ref:`🔗<class_ThemeDB_signal_font_outline_size_changed>`
+
+Emits when the default theme font outline size is changed from :ref:`ProjectSettings<class_ProjectSettings>`.
+
+Use ``ThemeDB.get_default_theme().get_constant("font_outline_size", "Constants")`` to get the changed value.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_ThemeDB_signal_font_size_changed:
+
+.. rst-class:: classref-signal
+
+**font_size_changed**\ (\ ) :ref:`🔗<class_ThemeDB_signal_font_size_changed>`
+
+Emits when the default theme font size is changed from :ref:`ProjectSettings<class_ProjectSettings>`.
+
+Use ``ThemeDB.get_default_theme().get_default_font_size()`` to get the changed value.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_ThemeDB_signal_icons_changed:
+
+.. rst-class:: classref-signal
+
+**icons_changed**\ (\ ) :ref:`🔗<class_ThemeDB_signal_icons_changed>`
+
+Emits when the theme icons scale or colors changes.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_ThemeDB_signal_margin_changed:
+
+.. rst-class:: classref-signal
+
+**margin_changed**\ (\ ) :ref:`🔗<class_ThemeDB_signal_margin_changed>`
+
+Emits when the default theme margin is changed from :ref:`ProjectSettings<class_ProjectSettings>`.
+
+\ **Note:** The margin is used for internal separation and not the content margins which uses padding, check :ref:`padding_changed<class_ThemeDB_signal_padding_changed>`.
+
+Use ``ThemeDB.get_default_theme().get_constant("margin", "Constants")`` to get the changed value.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_ThemeDB_signal_padding_changed:
+
+.. rst-class:: classref-signal
+
+**padding_changed**\ (\ ) :ref:`🔗<class_ThemeDB_signal_padding_changed>`
+
+Emits when the default theme padding is changed from :ref:`ProjectSettings<class_ProjectSettings>`.
+
+Use ``ThemeDB.get_default_theme().get_constant("padding", "Constants")`` to get the changed value.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_ThemeDB_signal_scale_changed:
+
+.. rst-class:: classref-signal
+
+**scale_changed**\ (\ ) :ref:`🔗<class_ThemeDB_signal_scale_changed>`
+
+Emits when the default theme scale is changed from :ref:`ProjectSettings<class_ProjectSettings>`.
+
+Use ``ThemeDB.get_default_theme().get_default_base_scale()`` to get the changed value.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_ThemeDB_signal_theme_changed:
+
+.. rst-class:: classref-signal
+
+**theme_changed**\ (\ ) :ref:`🔗<class_ThemeDB_signal_theme_changed>`
+
+Emits when any property that has a path starting with "gui/theme/" is changed from :ref:`ProjectSettings<class_ProjectSettings>`.
 
 .. rst-class:: classref-section-separator
 
@@ -179,13 +401,76 @@ The fallback stylebox of every :ref:`Control<class_Control>` node and :ref:`Them
 Method Descriptions
 -------------------
 
+.. _class_ThemeDB_method_add_user_icon:
+
+.. rst-class:: classref-method
+
+:ref:`Error<enum_@GlobalScope_Error>` **add_user_icon**\ (\ icon_name\: :ref:`String<class_String>`, icon_source\: :ref:`String<class_String>`\ ) :ref:`🔗<class_ThemeDB_method_add_user_icon>`
+
+Add an Icon to the default theme, which will make it change colors and scale when the default theme is changed from :ref:`ProjectSettings<class_ProjectSettings>`.
+
+\ ``icon_source`` should be a valid SVG :ref:`String<class_String>`.
+
+In SVG source "red" and "#0f0" are replaced with font and accent colors when they are changed from :ref:`ProjectSettings<class_ProjectSettings>`.
+
+\ **Note:** Editor plugins need to remove their user icon(s) when unloaded.
+
+::
+
+    func _enter_tree():
+        var source = FileAccess.get_file_as_string("res://icon.svg")
+        ThemeDB.add_user_icon("my_icon", source)
+    
+    func _exit_tree():
+        ThemeDB.remove_user_icon("my_icon")
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_ThemeDB_method_freeze_default_theme:
+
+.. rst-class:: classref-method
+
+|void| **freeze_default_theme**\ (\ ) :ref:`🔗<class_ThemeDB_method_freeze_default_theme>`
+
+Prevents the default theme from emitting changed. This prevents Nodes using the theme from being updated until :ref:`unfreeze_default_theme<class_ThemeDB_method_unfreeze_default_theme>` is called.
+
+.. rst-class:: classref-item-separator
+
+----
+
 .. _class_ThemeDB_method_get_default_theme:
 
 .. rst-class:: classref-method
 
 :ref:`Theme<class_Theme>` **get_default_theme**\ (\ ) :ref:`🔗<class_ThemeDB_method_get_default_theme>`
 
-Returns a reference to the default engine :ref:`Theme<class_Theme>`. This theme resource is responsible for the out-of-the-box look of :ref:`Control<class_Control>` nodes and cannot be overridden.
+Returns a reference to the default engine :ref:`Theme<class_Theme>`. This theme resource is responsible for the out-of-the-box look of :ref:`Control<class_Control>` nodes and can be customized from :ref:`ProjectSettings<class_ProjectSettings>`.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_ThemeDB_method_get_icon:
+
+.. rst-class:: classref-method
+
+:ref:`ImageTexture<class_ImageTexture>` **get_icon**\ (\ icon_name\: :ref:`String<class_String>`\ ) :ref:`🔗<class_ThemeDB_method_get_icon>`
+
+Returns an internal icon from the fallback theme, internal theme icons are the default icons that comes with Blazium.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_ThemeDB_method_get_icon_list:
+
+.. rst-class:: classref-method
+
+:ref:`PackedStringArray<class_PackedStringArray>` **get_icon_list**\ (\ ) :ref:`🔗<class_ThemeDB_method_get_icon_list>`
+
+Returns a list for all the icon names that are used internally for the default theme.
 
 .. rst-class:: classref-item-separator
 
@@ -200,6 +485,90 @@ Returns a reference to the default engine :ref:`Theme<class_Theme>`. This theme 
 Returns a reference to the custom project :ref:`Theme<class_Theme>`. This theme resources allows to override the default engine theme for every control node in the project.
 
 To set the project theme, see :ref:`ProjectSettings.gui/theme/custom<class_ProjectSettings_property_gui/theme/custom>`.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_ThemeDB_method_get_user_icon:
+
+.. rst-class:: classref-method
+
+:ref:`ImageTexture<class_ImageTexture>` **get_user_icon**\ (\ icon_name\: :ref:`String<class_String>`\ ) :ref:`🔗<class_ThemeDB_method_get_user_icon>`
+
+Returns a user icon from the default theme.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_ThemeDB_method_get_user_icon_list:
+
+.. rst-class:: classref-method
+
+:ref:`PackedStringArray<class_PackedStringArray>` **get_user_icon_list**\ (\ ) :ref:`🔗<class_ThemeDB_method_get_user_icon_list>`
+
+Returns a list for all the user icon names.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_ThemeDB_method_has_icon:
+
+.. rst-class:: classref-method
+
+:ref:`bool<class_bool>` **has_icon**\ (\ icon_name\: :ref:`String<class_String>`\ ) :ref:`🔗<class_ThemeDB_method_has_icon>`
+
+Returns whether the default theme has an internal icon with ``icon_name``.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_ThemeDB_method_has_user_icon:
+
+.. rst-class:: classref-method
+
+:ref:`bool<class_bool>` **has_user_icon**\ (\ icon_name\: :ref:`String<class_String>`\ ) :ref:`🔗<class_ThemeDB_method_has_user_icon>`
+
+Returns whether the default theme has a user icon with ``icon_name``.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_ThemeDB_method_is_default_theme_frozen:
+
+.. rst-class:: classref-method
+
+:ref:`bool<class_bool>` **is_default_theme_frozen**\ (\ ) |const| :ref:`🔗<class_ThemeDB_method_is_default_theme_frozen>`
+
+Returns whether the default theme is frozen.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_ThemeDB_method_remove_user_icon:
+
+.. rst-class:: classref-method
+
+:ref:`Error<enum_@GlobalScope_Error>` **remove_user_icon**\ (\ icon_name\: :ref:`String<class_String>`\ ) :ref:`🔗<class_ThemeDB_method_remove_user_icon>`
+
+Removes a user icon that was previously added to the default theme.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_ThemeDB_method_unfreeze_default_theme:
+
+.. rst-class:: classref-method
+
+|void| **unfreeze_default_theme**\ (\ ) :ref:`🔗<class_ThemeDB_method_unfreeze_default_theme>`
+
+Emits :ref:`Resource.changed<class_Resource_signal_changed>` if the default theme was already frozen. Also check :ref:`freeze_default_theme<class_ThemeDB_method_freeze_default_theme>`.
 
 .. |virtual| replace:: :abbr:`virtual (This method should typically be overridden by the user to have any effect.)`
 .. |const| replace:: :abbr:`const (This method has no side effects. It doesn't modify any of the instance's member variables.)`

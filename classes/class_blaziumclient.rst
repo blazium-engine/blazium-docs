@@ -12,16 +12,18 @@ BlaziumClient
 
 **Inherits:** :ref:`Node<class_Node>` **<** :ref:`Object<class_Object>`
 
-**Inherited By:** :ref:`AuthoritativeLobbyClient<class_AuthoritativeLobbyClient>`, :ref:`LobbyClient<class_LobbyClient>`, :ref:`LoginClient<class_LoginClient>`, :ref:`MasterServerClient<class_MasterServerClient>`, :ref:`POGRClient<class_POGRClient>`
+**Inherited By:** :ref:`LobbyClient<class_LobbyClient>`, :ref:`LoginClient<class_LoginClient>`, :ref:`MasterServerClient<class_MasterServerClient>`, :ref:`POGRClient<class_POGRClient>`, :ref:`ScriptedLobbyClient<class_ScriptedLobbyClient>`
 
-Base node for connecting to the Blazium services.
+Abstact base class for everything related to Blazium services.
 
 .. rst-class:: classref-introduction-group
 
 Description
 -----------
 
-The **BlaziumClient** node provides an interface for connecting to the Blazium services. These services are designed to simplify game development with aspects such as multiplayer, authentication, etc.
+Abstact base class for everything related to Blazium services.
+
+These services are designed to simplify game development with aspects such as multiplayer, authentication, etc.
 
 Developers have the flexibility to either:
 

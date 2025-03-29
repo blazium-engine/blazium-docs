@@ -58,6 +58,8 @@ Properties
    +---------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+-------------------------+
    | :ref:`Hinting<enum_TextServer_Hinting>`                             | :ref:`hinting<class_SystemFont_property_hinting>`                                                       | ``1``                   |
    +---------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+-------------------------+
+   | :ref:`bool<class_bool>`                                             | :ref:`keep_rounding_remainders<class_SystemFont_property_keep_rounding_remainders>`                     | ``true``                |
+   +---------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+-------------------------+
    | :ref:`FontLCDSubpixelLayout<enum_TextServer_FontLCDSubpixelLayout>` | :ref:`lcd_subpixel_layout<class_SystemFont_property_lcd_subpixel_layout>`                               | ``1``                   |
    +---------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+-------------------------+
    | :ref:`int<class_int>`                                               | :ref:`msdf_pixel_range<class_SystemFont_property_msdf_pixel_range>`                                     | ``16``                  |
@@ -247,6 +249,23 @@ If set to ``true``, generate mipmaps for the font textures.
 - :ref:`Hinting<enum_TextServer_Hinting>` **get_hinting**\ (\ )
 
 Font hinting mode.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_SystemFont_property_keep_rounding_remainders:
+
+.. rst-class:: classref-property
+
+:ref:`bool<class_bool>` **keep_rounding_remainders** = ``true`` :ref:`🔗<class_SystemFont_property_keep_rounding_remainders>`
+
+.. rst-class:: classref-property-setget
+
+- |void| **set_keep_rounding_remainders**\ (\ value\: :ref:`bool<class_bool>`\ )
+- :ref:`bool<class_bool>` **get_keep_rounding_remainders**\ (\ )
+
+If set to ``true``, when aligning glyphs to the pixel boundaries rounding remainders are accumulated to ensure more uniform glyph distribution. This setting has no effect if subpixel positioning is enabled.
 
 .. rst-class:: classref-item-separator
 

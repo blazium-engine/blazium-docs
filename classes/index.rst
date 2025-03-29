@@ -44,7 +44,6 @@ Nodes
     class_audiostreamplayer
     class_audiostreamplayer2d
     class_audiostreamplayer3d
-    class_authoritativelobbyclient
     class_backbuffercopy
     class_basebutton
     class_blaziumclient
@@ -70,6 +69,7 @@ Nodes
     class_collisionpolygon3d
     class_collisionshape2d
     class_collisionshape3d
+    class_colorbutton
     class_colorpicker
     class_colorpickerbutton
     class_colorrect
@@ -92,16 +92,21 @@ Nodes
     class_decal
     class_directionallight2d
     class_directionallight3d
+    class_discordembeddedappclient
     class_editorcommandpalette
     class_editorfiledialog
     class_editorfilesystem
+    class_editorhscrollbox
     class_editorinspector
     class_editorplugin
     class_editorproperty
     class_editorresourcepicker
     class_editorresourcepreview
     class_editorscriptpicker
+    class_editorscrollbox
     class_editorspinslider
+    class_editortoaster
+    class_editorvscrollbox
     class_filedialog
     class_filesystemdock
     class_flowcontainer
@@ -126,6 +131,7 @@ Nodes
     class_graphnode
     class_gridcontainer
     class_gridmap
+    class_gridmapeditorplugin
     class_groovejoint2d
     class_hboxcontainer
     class_hflowcontainer
@@ -178,11 +184,15 @@ Nodes
     class_node3d
     class_occluderinstance3d
     class_omnilight3d
+    class_openxrbindingmodifiereditor
     class_openxrcompositionlayer
     class_openxrcompositionlayercylinder
     class_openxrcompositionlayerequirect
     class_openxrcompositionlayerquad
     class_openxrhand
+    class_openxrinteractionprofileeditor
+    class_openxrinteractionprofileeditorbase
+    class_openxrvisibilitymask
     class_optionbutton
     class_panel
     class_panelcontainer
@@ -215,6 +225,7 @@ Nodes
     class_remotetransform2d
     class_remotetransform3d
     class_resourcepreloader
+    class_retargetmodifier3d
     class_richtextlabel
     class_rigidbody2d
     class_rigidbody3d
@@ -222,6 +233,7 @@ Nodes
     class_scriptcreatedialog
     class_scripteditor
     class_scripteditorbase
+    class_scriptedlobbyclient
     class_scrollbar
     class_scrollcontainer
     class_separator
@@ -242,6 +254,7 @@ Nodes
     class_sprite2d
     class_sprite3d
     class_spritebase3d
+    class_sqlite
     class_staticbody2d
     class_staticbody3d
     class_statusindicator
@@ -253,6 +266,7 @@ Nodes
     class_texturebutton
     class_textureprogressbar
     class_texturerect
+    class_thirdpartyclient
     class_tilemap
     class_tilemaplayer
     class_timer
@@ -284,6 +298,7 @@ Nodes
     class_xrhandmodifier3d
     class_xrnode3d
     class_xrorigin3d
+    class_youtubeplayablesclient
 
 Resources
 =========
@@ -305,6 +320,7 @@ Resources
     class_animationnodeblendspace1d
     class_animationnodeblendspace2d
     class_animationnodeblendtree
+    class_animationnodeextension
     class_animationnodeoneshot
     class_animationnodeoutput
     class_animationnodestatemachine
@@ -391,6 +407,7 @@ Resources
     class_convexpolygonshape3d
     class_cryptokey
     class_csharpscript
+    class_csv
     class_cubemap
     class_cubemaparray
     class_curve
@@ -404,16 +421,19 @@ Resources
     class_editorsettings
     class_editorsyntaxhighlighter
     class_environment
+    class_externaltexture
     class_fastnoiselite
     class_fbxdocument
     class_fbxstate
     class_fogmaterial
+    class_foldablegroup
     class_font
     class_fontfile
     class_fontvariation
     class_gameserverinfo
     class_gdextension
     class_gdscript
+    class_gdscriptsyntaxhighlighter
     class_gltfaccessor
     class_gltfanimation
     class_gltfbufferview
@@ -481,10 +501,17 @@ Resources
     class_occluderpolygon2d
     class_oggpacketsequence
     class_openxraction
+    class_openxractionbindingmodifier
     class_openxractionmap
     class_openxractionset
+    class_openxranalogthresholdmodifier
+    class_openxrbindingmodifier
+    class_openxrdpadbindingmodifier
+    class_openxrhapticbase
+    class_openxrhapticvibration
     class_openxrinteractionprofile
     class_openxripbinding
+    class_openxripbindingmodifier
     class_optimizedtranslation
     class_ormmaterial3d
     class_packeddatacontainer
@@ -545,6 +572,7 @@ Resources
     class_sphereoccluder3d
     class_sphereshape3d
     class_spriteframes
+    class_sqlitedatabase
     class_standardmaterial3d
     class_stylebox
     class_styleboxempty
@@ -722,8 +750,6 @@ Other objects
     class_audiostreamplaybackpolyphonic
     class_audiostreamplaybackresampled
     class_audiostreamplaybacksynchronized
-    class_authoritativelobbyresponse
-    class_authoritativelobbyresult
     class_callbacktweener
     class_camerafeed
     class_cameraserver
@@ -732,12 +758,16 @@ Other objects
     class_configfile
     class_crypto
     class_diraccess
+    class_discordembeddedappresponse
+    class_discordembeddedappresult
     class_displayserver
     class_dtlsserver
+    class_editorcontextmenuplugin
     class_editordebuggerplugin
     class_editordebuggersession
     class_editorexportplatform
     class_editorexportplatformandroid
+    class_editorexportplatformextension
     class_editorexportplatformios
     class_editorexportplatformlinuxbsd
     class_editorexportplatformmacos
@@ -745,6 +775,7 @@ Other objects
     class_editorexportplatformweb
     class_editorexportplatformwindows
     class_editorexportplugin
+    class_editorexportpreset
     class_editorfeatureprofile
     class_editorfilesystemdirectory
     class_editorfilesystemimportformatsupportquery
@@ -775,12 +806,14 @@ Other objects
     class_engine
     class_enginedebugger
     class_engineprofiler
+    class_env
     class_expression
     class_fileaccess
     class_framebuffercacherd
     class_gdextensionmanager
     class_geometry2d
     class_geometry3d
+    class_gltfobjectmodelproperty
     class_hashingcontext
     class_hmaccontext
     class_httpclient
@@ -792,16 +825,16 @@ Other objects
     class_ip
     class_javaclass
     class_javaclasswrapper
+    class_javaobject
     class_javascriptbridge
     class_javascriptobject
     class_jnisingleton
     class_jsonrpc
+    class_jwt
     class_kinematiccollision2d
     class_kinematiccollision3d
     class_lightmapper
     class_lightmapperrd
-    class_listlobbyresponse
-    class_listlobbyresult
     class_lobbyresponse
     class_lobbyresult
     class_loginresponse
@@ -912,6 +945,7 @@ Other objects
     class_resourceimporter
     class_resourceimporterbitmap
     class_resourceimporterbmfont
+    class_resourceimportercsv
     class_resourceimportercsvtranslation
     class_resourceimporterdynamicfont
     class_resourceimporterimage
@@ -932,10 +966,18 @@ Other objects
     class_scenestate
     class_scenetree
     class_scenetreetimer
+    class_scriptedlobbyresponse
+    class_scriptedlobbyresult
     class_scriptlanguage
     class_scriptlanguageextension
     class_semaphore
+    class_shaderincludedb
     class_skinreference
+    class_sqliteaccess
+    class_sqlitecolumnschema
+    class_sqlitequery
+    class_sqlitequeryresult
+    class_steam
     class_streampeer
     class_streampeerbuffer
     class_streampeerextension
@@ -957,6 +999,7 @@ Other objects
     class_tiledata
     class_time
     class_tlsoptions
+    class_translationdomain
     class_translationserver
     class_treeitem
     class_trianglemesh
@@ -991,6 +1034,8 @@ Other objects
     class_xrserver
     class_xrtracker
     class_xrvrs
+    class_youtubeplayablesresponse
+    class_youtubeplayablesresult
     class_zippacker
     class_zipreader
 
@@ -1002,10 +1047,12 @@ Editor-only
     :name: toc-class-ref-editors
 
     class_editorcommandpalette
+    class_editorcontextmenuplugin
     class_editordebuggerplugin
     class_editordebuggersession
     class_editorexportplatform
     class_editorexportplatformandroid
+    class_editorexportplatformextension
     class_editorexportplatformios
     class_editorexportplatformlinuxbsd
     class_editorexportplatformmacos
@@ -1013,11 +1060,13 @@ Editor-only
     class_editorexportplatformweb
     class_editorexportplatformwindows
     class_editorexportplugin
+    class_editorexportpreset
     class_editorfeatureprofile
     class_editorfiledialog
     class_editorfilesystem
     class_editorfilesystemdirectory
     class_editorfilesystemimportformatsupportquery
+    class_editorhscrollbox
     class_editorimportplugin
     class_editorinspector
     class_editorinspectorplugin
@@ -1041,13 +1090,16 @@ Editor-only
     class_editorscenepostimportplugin
     class_editorscript
     class_editorscriptpicker
+    class_editorscrollbox
     class_editorselection
     class_editorsettings
     class_editorspinslider
     class_editorsyntaxhighlighter
+    class_editortoaster
     class_editortranslationparserplugin
     class_editorundoredomanager
     class_editorvcsinterface
+    class_editorvscrollbox
     class_filesystemdock
     class_scriptcreatedialog
     class_scripteditor

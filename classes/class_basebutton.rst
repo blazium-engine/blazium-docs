@@ -12,7 +12,7 @@ BaseButton
 
 **Inherits:** :ref:`Control<class_Control>` **<** :ref:`CanvasItem<class_CanvasItem>` **<** :ref:`Node<class_Node>` **<** :ref:`Object<class_Object>`
 
-**Inherited By:** :ref:`Button<class_Button>`, :ref:`LinkButton<class_LinkButton>`, :ref:`TextureButton<class_TextureButton>`
+**Inherited By:** :ref:`Button<class_Button>`, :ref:`ColorButton<class_ColorButton>`, :ref:`LinkButton<class_LinkButton>`, :ref:`TextureButton<class_TextureButton>`
 
 Abstract base class for GUI buttons.
 
@@ -412,6 +412,8 @@ If ``true``, the button will highlight for a short amount of time when its short
 - :ref:`bool<class_bool>` **is_shortcut_in_tooltip_enabled**\ (\ )
 
 If ``true``, the button will add information about its shortcut in the tooltip.
+
+\ **Note:** This property does nothing when the tooltip control is customized using :ref:`Control._make_custom_tooltip<class_Control_private_method__make_custom_tooltip>`.
 
 .. rst-class:: classref-item-separator
 

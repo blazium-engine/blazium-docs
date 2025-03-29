@@ -43,13 +43,15 @@ Properties
 .. table::
    :widths: auto
 
-   +-----------------------------+----------------------------------------------------------+---------------------------------------+
-   | :ref:`bool<class_bool>`     | :ref:`connected<class_LoginClient_property_connected>`   | ``false``                             |
-   +-----------------------------+----------------------------------------------------------+---------------------------------------+
-   | :ref:`String<class_String>` | :ref:`game_id<class_LoginClient_property_game_id>`       | ``""``                                |
-   +-----------------------------+----------------------------------------------------------+---------------------------------------+
-   | :ref:`String<class_String>` | :ref:`server_url<class_LoginClient_property_server_url>` | ``"wss://login.blazium.app/connect"`` |
-   +-----------------------------+----------------------------------------------------------+---------------------------------------+
+   +-----------------------------+----------------------------------------------------------------------------------------+---------------------------------------+
+   | :ref:`bool<class_bool>`     | :ref:`connected<class_LoginClient_property_connected>`                                 | ``false``                             |
+   +-----------------------------+----------------------------------------------------------------------------------------+---------------------------------------+
+   | :ref:`String<class_String>` | :ref:`discord_embedded_app/path<class_LoginClient_property_discord_embedded_app/path>` | ``"blazium/login/connect"``           |
+   +-----------------------------+----------------------------------------------------------------------------------------+---------------------------------------+
+   | :ref:`String<class_String>` | :ref:`game_id<class_LoginClient_property_game_id>`                                     | ``""``                                |
+   +-----------------------------+----------------------------------------------------------------------------------------+---------------------------------------+
+   | :ref:`String<class_String>` | :ref:`server_url<class_LoginClient_property_server_url>`                               | ``"wss://login.blazium.app/connect"`` |
+   +-----------------------------+----------------------------------------------------------------------------------------+---------------------------------------+
 
 .. rst-class:: classref-reftable-group
 
@@ -60,7 +62,7 @@ Methods
    :widths: auto
 
    +-------------------------------------------+------------------------------------------------------------------------------------------------------------------------+
-   | :ref:`bool<class_bool>`                   | :ref:`connect_to_server<class_LoginClient_method_connect_to_server>`\ (\ )                                             |
+   | :ref:`LoginResponse<class_LoginResponse>` | :ref:`connect_to_server<class_LoginClient_method_connect_to_server>`\ (\ )                                             |
    +-------------------------------------------+------------------------------------------------------------------------------------------------------------------------+
    | |void|                                    | :ref:`disconnect_from_server<class_LoginClient_method_disconnect_from_server>`\ (\ )                                   |
    +-------------------------------------------+------------------------------------------------------------------------------------------------------------------------+
@@ -116,7 +118,7 @@ Signals a log from a command.
 
 .. rst-class:: classref-signal
 
-**received_jwt**\ (\ jwt\: :ref:`String<class_String>`, type\: :ref:`String<class_String>`\ ) :ref:`🔗<class_LoginClient_signal_received_jwt>`
+**received_jwt**\ (\ jwt\: :ref:`String<class_String>`, type\: :ref:`String<class_String>`, access_token\: :ref:`String<class_String>`\ ) :ref:`🔗<class_LoginClient_signal_received_jwt>`
 
 Signal emitted when a JWT is received.
 
@@ -140,6 +142,23 @@ Property Descriptions
 - :ref:`bool<class_bool>` **get_connected**\ (\ )
 
 Client connected state.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_LoginClient_property_discord_embedded_app/path:
+
+.. rst-class:: classref-property
+
+:ref:`String<class_String>` **discord_embedded_app/path** = ``"blazium/login/connect"`` :ref:`🔗<class_LoginClient_property_discord_embedded_app/path>`
+
+.. rst-class:: classref-property-setget
+
+- |void| **set_override_discord_path**\ (\ value\: :ref:`String<class_String>`\ )
+- :ref:`String<class_String>` **get_override_discord_path**\ (\ )
+
+Set to what path this client should use when connecting to the discord embedded app.
 
 .. rst-class:: classref-item-separator
 
@@ -177,6 +196,8 @@ Can only contain alphanumeric characters.
 
 Set to what url this client should connect to.
 
+For discord embedded app environment, replaces the url with `client_id.discordsays.com/.proxy/blazium/login/connect <wss://client_id.discordsays.com/.proxy/blazium/login/connect>`__ if left default, where client_id is the client id from the discord embedded app url (automatically detected).
+
 .. rst-class:: classref-section-separator
 
 ----
@@ -190,11 +211,13 @@ Method Descriptions
 
 .. rst-class:: classref-method
 
-:ref:`bool<class_bool>` **connect_to_server**\ (\ ) :ref:`🔗<class_LoginClient_method_connect_to_server>`
+:ref:`LoginResponse<class_LoginResponse>` **connect_to_server**\ (\ ) :ref:`🔗<class_LoginClient_method_connect_to_server>`
 
 Connects to the server specified in :ref:`server_url<class_LoginClient_property_server_url>` using the game id specified in :ref:`game_id<class_LoginClient_property_game_id>`. Must be done before requesting login info.
 
 Generates :ref:`connected_to_server<class_LoginClient_signal_connected_to_server>` when connected.
+
+Returns a :ref:`LoginResponse<class_LoginResponse>` object that has a :ref:`LoginResponse.finished<class_LoginResponse_signal_finished>` signal that is emitted when finished.
 
 .. rst-class:: classref-item-separator
 
@@ -207,6 +230,8 @@ Generates :ref:`connected_to_server<class_LoginClient_signal_connected_to_server
 |void| **disconnect_from_server**\ (\ ) :ref:`🔗<class_LoginClient_method_disconnect_from_server>`
 
 Disconnect from the server.
+
+Needs :ref:`connect_to_server<class_LoginClient_method_connect_to_server>` to be called first.
 
 Generates :ref:`disconnected_from_server<class_LoginClient_signal_disconnected_from_server>` when disconnected.
 
@@ -221,6 +246,8 @@ Generates :ref:`disconnected_from_server<class_LoginClient_signal_disconnected_f
 :ref:`LoginResponse<class_LoginResponse>` **request_login_info**\ (\ login_type\: :ref:`String<class_String>`\ ) :ref:`🔗<class_LoginClient_method_request_login_info>`
 
 Request login info using the login type specified.
+
+Needs :ref:`connect_to_server<class_LoginClient_method_connect_to_server>` to be called first.
 
 Returns a :ref:`LoginResponse<class_LoginResponse>` object that has a :ref:`LoginResponse.finished<class_LoginResponse_signal_finished>` signal that is emitted when finished.
 

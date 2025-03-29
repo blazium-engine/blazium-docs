@@ -100,6 +100,8 @@ Properties
    +--------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------+-------------------------+
    | :ref:`Vector3<class_Vector3>`                                      | :ref:`emission_ring_axis<class_ParticleProcessMaterial_property_emission_ring_axis>`                                   |                         |
    +--------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------+-------------------------+
+   | :ref:`float<class_float>`                                          | :ref:`emission_ring_cone_angle<class_ParticleProcessMaterial_property_emission_ring_cone_angle>`                       |                         |
+   +--------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------+-------------------------+
    | :ref:`float<class_float>`                                          | :ref:`emission_ring_height<class_ParticleProcessMaterial_property_emission_ring_height>`                               |                         |
    +--------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------+-------------------------+
    | :ref:`float<class_float>`                                          | :ref:`emission_ring_inner_radius<class_ParticleProcessMaterial_property_emission_ring_inner_radius>`                   |                         |
@@ -182,6 +184,8 @@ Properties
    +--------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------+-------------------------+
    | :ref:`int<class_int>`                                              | :ref:`sub_emitter_amount_at_end<class_ParticleProcessMaterial_property_sub_emitter_amount_at_end>`                     |                         |
    +--------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------+-------------------------+
+   | :ref:`int<class_int>`                                              | :ref:`sub_emitter_amount_at_start<class_ParticleProcessMaterial_property_sub_emitter_amount_at_start>`                 |                         |
+   +--------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------+-------------------------+
    | :ref:`float<class_float>`                                          | :ref:`sub_emitter_frequency<class_ParticleProcessMaterial_property_sub_emitter_frequency>`                             |                         |
    +--------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------+-------------------------+
    | :ref:`bool<class_bool>`                                            | :ref:`sub_emitter_keep_velocity<class_ParticleProcessMaterial_property_sub_emitter_keep_velocity>`                     | ``false``               |
@@ -248,6 +252,23 @@ Methods
    +-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | |void|                            | :ref:`set_particle_flag<class_ParticleProcessMaterial_method_set_particle_flag>`\ (\ particle_flag\: :ref:`ParticleFlags<enum_ParticleProcessMaterial_ParticleFlags>`, enable\: :ref:`bool<class_bool>`\ ) |
    +-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+.. rst-class:: classref-section-separator
+
+----
+
+.. rst-class:: classref-descriptions-group
+
+Signals
+-------
+
+.. _class_ParticleProcessMaterial_signal_emission_shape_changed:
+
+.. rst-class:: classref-signal
+
+**emission_shape_changed**\ (\ ) :ref:`🔗<class_ParticleProcessMaterial_signal_emission_shape_changed>`
+
+Emitted when this material's emission shape is changed in any way. This includes changes to :ref:`emission_shape<class_ParticleProcessMaterial_property_emission_shape>`, :ref:`emission_shape_scale<class_ParticleProcessMaterial_property_emission_shape_scale>`, or :ref:`emission_sphere_radius<class_ParticleProcessMaterial_property_emission_sphere_radius>`, and any other property that affects the emission shape's offset, size, scale, or orientation.
 
 .. rst-class:: classref-section-separator
 
@@ -602,11 +623,23 @@ enum **SubEmitterMode**: :ref:`🔗<enum_ParticleProcessMaterial_SubEmitterMode>
 
 
 
+.. _class_ParticleProcessMaterial_constant_SUB_EMITTER_AT_START:
+
+.. rst-class:: classref-enumeration-constant
+
+:ref:`SubEmitterMode<enum_ParticleProcessMaterial_SubEmitterMode>` **SUB_EMITTER_AT_START** = ``4``
+
+.. container:: contribute
+
+	There is currently no description for this enum. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
+
+
+
 .. _class_ParticleProcessMaterial_constant_SUB_EMITTER_MAX:
 
 .. rst-class:: classref-enumeration-constant
 
-:ref:`SubEmitterMode<enum_ParticleProcessMaterial_SubEmitterMode>` **SUB_EMITTER_MAX** = ``4``
+:ref:`SubEmitterMode<enum_ParticleProcessMaterial_SubEmitterMode>` **SUB_EMITTER_MAX** = ``5``
 
 Represents the size of the :ref:`SubEmitterMode<enum_ParticleProcessMaterial_SubEmitterMode>` enum.
 
@@ -673,6 +706,8 @@ Property Descriptions
 - :ref:`Texture2D<class_Texture2D>` **get_alpha_curve**\ (\ )
 
 The alpha value of each particle's color will be multiplied by this :ref:`CurveTexture<class_CurveTexture>` over its lifetime.
+
+\ **Note:** :ref:`alpha_curve<class_ParticleProcessMaterial_property_alpha_curve>` multiplies the particle mesh's vertex colors. To have a visible effect on a :ref:`BaseMaterial3D<class_BaseMaterial3D>`, :ref:`BaseMaterial3D.vertex_color_use_as_albedo<class_BaseMaterial3D_property_vertex_color_use_as_albedo>` *must* be ``true``. For a :ref:`ShaderMaterial<class_ShaderMaterial>`, ``ALBEDO *= COLOR.rgb;`` must be inserted in the shader's ``fragment()`` function. Otherwise, :ref:`alpha_curve<class_ParticleProcessMaterial_property_alpha_curve>` will have no visible effect.
 
 .. rst-class:: classref-item-separator
 
@@ -1210,7 +1245,7 @@ Particle color will be modulated by color determined by sampling this texture at
 
 Each particle's color will be multiplied by this :ref:`CurveTexture<class_CurveTexture>` over its lifetime.
 
-\ **Note:** This property won't have a visible effect unless the render material is marked as unshaded.
+\ **Note:** :ref:`emission_curve<class_ParticleProcessMaterial_property_emission_curve>` multiplies the particle mesh's vertex colors. To have a visible effect on a :ref:`BaseMaterial3D<class_BaseMaterial3D>`, :ref:`BaseMaterial3D.vertex_color_use_as_albedo<class_BaseMaterial3D_property_vertex_color_use_as_albedo>` *must* be ``true``. For a :ref:`ShaderMaterial<class_ShaderMaterial>`, ``ALBEDO *= COLOR.rgb;`` must be inserted in the shader's ``fragment()`` function. Otherwise, :ref:`emission_curve<class_ParticleProcessMaterial_property_emission_curve>` will have no visible effect.
 
 .. rst-class:: classref-item-separator
 
@@ -1279,6 +1314,25 @@ Particles will be emitted at positions determined by sampling this texture at a 
 - :ref:`Vector3<class_Vector3>` **get_emission_ring_axis**\ (\ )
 
 The axis of the ring when using the emitter :ref:`EMISSION_SHAPE_RING<class_ParticleProcessMaterial_constant_EMISSION_SHAPE_RING>`.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_ParticleProcessMaterial_property_emission_ring_cone_angle:
+
+.. rst-class:: classref-property
+
+:ref:`float<class_float>` **emission_ring_cone_angle** :ref:`🔗<class_ParticleProcessMaterial_property_emission_ring_cone_angle>`
+
+.. rst-class:: classref-property-setget
+
+- |void| **set_emission_ring_cone_angle**\ (\ value\: :ref:`float<class_float>`\ )
+- :ref:`float<class_float>` **get_emission_ring_cone_angle**\ (\ )
+
+The angle of the cone when using the emitter :ref:`EMISSION_SHAPE_RING<class_ParticleProcessMaterial_constant_EMISSION_SHAPE_RING>`. The default angle of 90 degrees results in a ring, while an angle of 0 degrees results in a cone. Intermediate values will result in a ring where one end is larger than the other.
+
+\ **Note:** Depending on :ref:`emission_ring_height<class_ParticleProcessMaterial_property_emission_ring_height>`, the angle may be clamped if the ring's end is reached to form a perfect cone.
 
 .. rst-class:: classref-item-separator
 
@@ -1996,6 +2050,25 @@ The amount of particles to spawn from the subemitter node when a collision occur
 - :ref:`int<class_int>` **get_sub_emitter_amount_at_end**\ (\ )
 
 The amount of particles to spawn from the subemitter node when the particle expires.
+
+\ **Note:** This value shouldn't exceed :ref:`GPUParticles2D.amount<class_GPUParticles2D_property_amount>` or :ref:`GPUParticles3D.amount<class_GPUParticles3D_property_amount>` defined on the *subemitter node* (not the main node), relative to the subemitter's particle lifetime. If the number of particles is exceeded, no new particles will spawn from the subemitter until enough particles have expired.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_ParticleProcessMaterial_property_sub_emitter_amount_at_start:
+
+.. rst-class:: classref-property
+
+:ref:`int<class_int>` **sub_emitter_amount_at_start** :ref:`🔗<class_ParticleProcessMaterial_property_sub_emitter_amount_at_start>`
+
+.. rst-class:: classref-property-setget
+
+- |void| **set_sub_emitter_amount_at_start**\ (\ value\: :ref:`int<class_int>`\ )
+- :ref:`int<class_int>` **get_sub_emitter_amount_at_start**\ (\ )
+
+The amount of particles to spawn from the subemitter node when the particle spawns.
 
 \ **Note:** This value shouldn't exceed :ref:`GPUParticles2D.amount<class_GPUParticles2D_property_amount>` or :ref:`GPUParticles3D.amount<class_GPUParticles3D_property_amount>` defined on the *subemitter node* (not the main node), relative to the subemitter's particle lifetime. If the number of particles is exceeded, no new particles will spawn from the subemitter until enough particles have expired.
 

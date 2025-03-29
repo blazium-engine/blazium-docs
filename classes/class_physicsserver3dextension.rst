@@ -266,6 +266,8 @@ Methods
    +-------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`bool<class_bool>`                                           | :ref:`_joint_is_disabled_collisions_between_bodies<class_PhysicsServer3DExtension_private_method__joint_is_disabled_collisions_between_bodies>`\ (\ joint\: :ref:`RID<class_RID>`\ ) |virtual| |const|                                                                                                                                                                                                                                                                   |
    +-------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`bool<class_bool>`                                           | :ref:`_joint_is_enabled<class_PhysicsServer3DExtension_private_method__joint_is_enabled>`\ (\ joint\: :ref:`RID<class_RID>`\ ) |virtual| |const|                                                                                                                                                                                                                                                                                                                         |
+   +-------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | |void|                                                            | :ref:`_joint_make_cone_twist<class_PhysicsServer3DExtension_private_method__joint_make_cone_twist>`\ (\ joint\: :ref:`RID<class_RID>`, body_A\: :ref:`RID<class_RID>`, local_ref_A\: :ref:`Transform3D<class_Transform3D>`, body_B\: :ref:`RID<class_RID>`, local_ref_B\: :ref:`Transform3D<class_Transform3D>`\ ) |virtual|                                                                                                                                             |
    +-------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | |void|                                                            | :ref:`_joint_make_generic_6dof<class_PhysicsServer3DExtension_private_method__joint_make_generic_6dof>`\ (\ joint\: :ref:`RID<class_RID>`, body_A\: :ref:`RID<class_RID>`, local_ref_A\: :ref:`Transform3D<class_Transform3D>`, body_B\: :ref:`RID<class_RID>`, local_ref_B\: :ref:`Transform3D<class_Transform3D>`\ ) |virtual|                                                                                                                                         |
@@ -277,6 +279,8 @@ Methods
    | |void|                                                            | :ref:`_joint_make_pin<class_PhysicsServer3DExtension_private_method__joint_make_pin>`\ (\ joint\: :ref:`RID<class_RID>`, body_A\: :ref:`RID<class_RID>`, local_A\: :ref:`Vector3<class_Vector3>`, body_B\: :ref:`RID<class_RID>`, local_B\: :ref:`Vector3<class_Vector3>`\ ) |virtual|                                                                                                                                                                                   |
    +-------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | |void|                                                            | :ref:`_joint_make_slider<class_PhysicsServer3DExtension_private_method__joint_make_slider>`\ (\ joint\: :ref:`RID<class_RID>`, body_A\: :ref:`RID<class_RID>`, local_ref_A\: :ref:`Transform3D<class_Transform3D>`, body_B\: :ref:`RID<class_RID>`, local_ref_B\: :ref:`Transform3D<class_Transform3D>`\ ) |virtual|                                                                                                                                                     |
+   +-------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | |void|                                                            | :ref:`_joint_set_enabled<class_PhysicsServer3DExtension_private_method__joint_set_enabled>`\ (\ joint\: :ref:`RID<class_RID>`, enabled\: :ref:`bool<class_bool>`\ ) |virtual|                                                                                                                                                                                                                                                                                            |
    +-------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | |void|                                                            | :ref:`_joint_set_solver_priority<class_PhysicsServer3DExtension_private_method__joint_set_solver_priority>`\ (\ joint\: :ref:`RID<class_RID>`, priority\: :ref:`int<class_int>`\ ) |virtual|                                                                                                                                                                                                                                                                             |
    +-------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -384,11 +388,15 @@ Methods
    +-------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`RID<class_RID>`                                             | :ref:`_space_create<class_PhysicsServer3DExtension_private_method__space_create>`\ (\ ) |virtual|                                                                                                                                                                                                                                                                                                                                                                        |
    +-------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | |void|                                                            | :ref:`_space_flush_queries<class_PhysicsServer3DExtension_private_method__space_flush_queries>`\ (\ space\: :ref:`RID<class_RID>`\ ) |virtual|                                                                                                                                                                                                                                                                                                                           |
+   +-------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`int<class_int>`                                             | :ref:`_space_get_contact_count<class_PhysicsServer3DExtension_private_method__space_get_contact_count>`\ (\ space\: :ref:`RID<class_RID>`\ ) |virtual| |const|                                                                                                                                                                                                                                                                                                           |
    +-------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`PackedVector3Array<class_PackedVector3Array>`               | :ref:`_space_get_contacts<class_PhysicsServer3DExtension_private_method__space_get_contacts>`\ (\ space\: :ref:`RID<class_RID>`\ ) |virtual| |const|                                                                                                                                                                                                                                                                                                                     |
    +-------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`PhysicsDirectSpaceState3D<class_PhysicsDirectSpaceState3D>` | :ref:`_space_get_direct_state<class_PhysicsServer3DExtension_private_method__space_get_direct_state>`\ (\ space\: :ref:`RID<class_RID>`\ ) |virtual|                                                                                                                                                                                                                                                                                                                     |
+   +-------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`int<class_int>`                                             | :ref:`_space_get_last_process_info<class_PhysicsServer3DExtension_private_method__space_get_last_process_info>`\ (\ space\: :ref:`RID<class_RID>`, process_info\: :ref:`ProcessInfo<enum_PhysicsServer3D_ProcessInfo>`\ ) |virtual|                                                                                                                                                                                                                                      |
    +-------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`float<class_float>`                                         | :ref:`_space_get_param<class_PhysicsServer3DExtension_private_method__space_get_param>`\ (\ space\: :ref:`RID<class_RID>`, param\: :ref:`SpaceParameter<enum_PhysicsServer3D_SpaceParameter>`\ ) |virtual| |const|                                                                                                                                                                                                                                                       |
    +-------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -399,6 +407,8 @@ Methods
    | |void|                                                            | :ref:`_space_set_debug_contacts<class_PhysicsServer3DExtension_private_method__space_set_debug_contacts>`\ (\ space\: :ref:`RID<class_RID>`, max_contacts\: :ref:`int<class_int>`\ ) |virtual|                                                                                                                                                                                                                                                                           |
    +-------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | |void|                                                            | :ref:`_space_set_param<class_PhysicsServer3DExtension_private_method__space_set_param>`\ (\ space\: :ref:`RID<class_RID>`, param\: :ref:`SpaceParameter<enum_PhysicsServer3D_SpaceParameter>`, value\: :ref:`float<class_float>`\ ) |virtual|                                                                                                                                                                                                                            |
+   +-------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | |void|                                                            | :ref:`_space_step<class_PhysicsServer3DExtension_private_method__space_step>`\ (\ space\: :ref:`RID<class_RID>`, delta\: :ref:`float<class_float>`\ ) |virtual|                                                                                                                                                                                                                                                                                                          |
    +-------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`RID<class_RID>`                                             | :ref:`_sphere_shape_create<class_PhysicsServer3DExtension_private_method__sphere_shape_create>`\ (\ ) |virtual|                                                                                                                                                                                                                                                                                                                                                          |
    +-------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -2060,6 +2070,20 @@ Method Descriptions
 
 ----
 
+.. _class_PhysicsServer3DExtension_private_method__joint_is_enabled:
+
+.. rst-class:: classref-method
+
+:ref:`bool<class_bool>` **_joint_is_enabled**\ (\ joint\: :ref:`RID<class_RID>`\ ) |virtual| |const| :ref:`🔗<class_PhysicsServer3DExtension_private_method__joint_is_enabled>`
+
+.. container:: contribute
+
+	There is currently no description for this method. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
+
+.. rst-class:: classref-item-separator
+
+----
+
 .. _class_PhysicsServer3DExtension_private_method__joint_make_cone_twist:
 
 .. rst-class:: classref-method
@@ -2135,6 +2159,20 @@ Method Descriptions
 .. rst-class:: classref-method
 
 |void| **_joint_make_slider**\ (\ joint\: :ref:`RID<class_RID>`, body_A\: :ref:`RID<class_RID>`, local_ref_A\: :ref:`Transform3D<class_Transform3D>`, body_B\: :ref:`RID<class_RID>`, local_ref_B\: :ref:`Transform3D<class_Transform3D>`\ ) |virtual| :ref:`🔗<class_PhysicsServer3DExtension_private_method__joint_make_slider>`
+
+.. container:: contribute
+
+	There is currently no description for this method. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_PhysicsServer3DExtension_private_method__joint_set_enabled:
+
+.. rst-class:: classref-method
+
+|void| **_joint_set_enabled**\ (\ joint\: :ref:`RID<class_RID>`, enabled\: :ref:`bool<class_bool>`\ ) |virtual| :ref:`🔗<class_PhysicsServer3DExtension_private_method__joint_set_enabled>`
 
 .. container:: contribute
 
@@ -2886,6 +2924,18 @@ Method Descriptions
 
 ----
 
+.. _class_PhysicsServer3DExtension_private_method__space_flush_queries:
+
+.. rst-class:: classref-method
+
+|void| **_space_flush_queries**\ (\ space\: :ref:`RID<class_RID>`\ ) |virtual| :ref:`🔗<class_PhysicsServer3DExtension_private_method__space_flush_queries>`
+
+**Experimental:** This method may be changed or removed in future versions.
+
+.. rst-class:: classref-item-separator
+
+----
+
 .. _class_PhysicsServer3DExtension_private_method__space_get_contact_count:
 
 .. rst-class:: classref-method
@@ -2923,6 +2973,18 @@ Method Descriptions
 .. container:: contribute
 
 	There is currently no description for this method. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_PhysicsServer3DExtension_private_method__space_get_last_process_info:
+
+.. rst-class:: classref-method
+
+:ref:`int<class_int>` **_space_get_last_process_info**\ (\ space\: :ref:`RID<class_RID>`, process_info\: :ref:`ProcessInfo<enum_PhysicsServer3D_ProcessInfo>`\ ) |virtual| :ref:`🔗<class_PhysicsServer3DExtension_private_method__space_get_last_process_info>`
+
+**Experimental:** This method may be changed or removed in future versions.
 
 .. rst-class:: classref-item-separator
 
@@ -2993,6 +3055,18 @@ Method Descriptions
 .. container:: contribute
 
 	There is currently no description for this method. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_PhysicsServer3DExtension_private_method__space_step:
+
+.. rst-class:: classref-method
+
+|void| **_space_step**\ (\ space\: :ref:`RID<class_RID>`, delta\: :ref:`float<class_float>`\ ) |virtual| :ref:`🔗<class_PhysicsServer3DExtension_private_method__space_step>`
+
+**Experimental:** This method may be changed or removed in future versions.
 
 .. rst-class:: classref-item-separator
 

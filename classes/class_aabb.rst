@@ -103,7 +103,7 @@ Methods
    +-------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`float<class_float>`     | :ref:`get_shortest_axis_size<class_AABB_method_get_shortest_axis_size>`\ (\ ) |const|                                                                   |
    +-------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | :ref:`Vector3<class_Vector3>` | :ref:`get_support<class_AABB_method_get_support>`\ (\ dir\: :ref:`Vector3<class_Vector3>`\ ) |const|                                                    |
+   | :ref:`Vector3<class_Vector3>` | :ref:`get_support<class_AABB_method_get_support>`\ (\ direction\: :ref:`Vector3<class_Vector3>`\ ) |const|                                              |
    +-------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`float<class_float>`     | :ref:`get_volume<class_AABB_method_get_volume>`\ (\ ) |const|                                                                                           |
    +-------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -163,7 +163,7 @@ Property Descriptions
 
 :ref:`Vector3<class_Vector3>` **end** = ``Vector3(0, 0, 0)`` :ref:`🔗<class_AABB_property_end>`
 
-The ending point. This is usually the corner on the top-right and forward of the bounding box, and is equivalent to ``position + size``. Setting this point affects the :ref:`size<class_AABB_property_size>`.
+The ending point. This is usually the corner on the top-right and back of the bounding box, and is equivalent to ``position + size``. Setting this point affects the :ref:`size<class_AABB_property_size>`.
 
 .. rst-class:: classref-item-separator
 
@@ -175,7 +175,7 @@ The ending point. This is usually the corner on the top-right and forward of the
 
 :ref:`Vector3<class_Vector3>` **position** = ``Vector3(0, 0, 0)`` :ref:`🔗<class_AABB_property_position>`
 
-The origin point. This is usually the corner on the bottom-left and back of the bounding box.
+The origin point. This is usually the corner on the bottom-left and forward of the bounding box.
 
 .. rst-class:: classref-item-separator
 
@@ -189,7 +189,7 @@ The origin point. This is usually the corner on the bottom-left and back of the 
 
 The bounding box's width, height, and depth starting from :ref:`position<class_AABB_property_position>`. Setting this value also affects the :ref:`end<class_AABB_property_end>` point.
 
-\ **Note:** It's recommended setting the width, height, and depth to non-negative values. This is because most methods in Godot assume that the :ref:`position<class_AABB_property_position>` is the bottom-left-back corner, and the :ref:`end<class_AABB_property_end>` is the top-right-forward corner. To get an equivalent bounding box with non-negative size, use :ref:`abs<class_AABB_method_abs>`.
+\ **Note:** It's recommended setting the width, height, and depth to non-negative values. This is because most methods in Godot assume that the :ref:`position<class_AABB_property_position>` is the bottom-left-forward corner, and the :ref:`end<class_AABB_property_end>` is the top-right-back corner. To get an equivalent bounding box with non-negative size, use :ref:`abs<class_AABB_method_abs>`.
 
 .. rst-class:: classref-section-separator
 
@@ -252,8 +252,8 @@ Returns an **AABB** equivalent to this bounding box, with its width, height, and
 
     var box = AABB(Vector3(5, 0, 5), Vector3(-20, -10, -5))
     var absolute = box.abs()
-    print(absolute.position) # Prints (-15, -10, 0)
-    print(absolute.size)     # Prints (20, 10, 5)
+    print(absolute.position) # Prints (-15.0, -10.0, 0.0)
+    print(absolute.size)     # Prints (20.0, 10.0, 5.0)
 
  .. code-tab:: csharp
 
@@ -323,12 +323,12 @@ Returns a copy of this bounding box expanded to align the edges with the given `
     var box = AABB(Vector3(0, 0, 0), Vector3(5, 2, 5))
     
     box = box.expand(Vector3(10, 0, 0))
-    print(box.position) # Prints (0, 0, 0)
-    print(box.size)     # Prints (10, 2, 5)
+    print(box.position) # Prints (0.0, 0.0, 0.0)
+    print(box.size)     # Prints (10.0, 2.0, 5.0)
     
     box = box.expand(Vector3(-5, 0, 5))
-    print(box.position) # Prints (-5, 0, 0)
-    print(box.size)     # Prints (15, 2, 5)
+    print(box.position) # Prints (-5.0, 0.0, 0.0)
+    print(box.size)     # Prints (15.0, 2.0, 5.0)
 
  .. code-tab:: csharp
 
@@ -387,16 +387,16 @@ Returns the longest normalized axis of this bounding box's :ref:`size<class_AABB
 
     var box = AABB(Vector3(0, 0, 0), Vector3(2, 4, 8))
     
-    print(box.get_longest_axis())       # Prints (0, 0, 1)
+    print(box.get_longest_axis())       # Prints (0.0, 0.0, 1.0)
     print(box.get_longest_axis_index()) # Prints 2
-    print(box.get_longest_axis_size())  # Prints 8
+    print(box.get_longest_axis_size())  # Prints 8.0
 
  .. code-tab:: csharp
 
     var box = new Aabb(new Vector3(0, 0, 0), new Vector3(2, 4, 8));
     
     GD.Print(box.GetLongestAxis());      // Prints (0, 0, 1)
-    GD.Print(box.GetLongestAxisIndex()); // Prints 2
+    GD.Print(box.GetLongestAxisIndex()); // Prints Z
     GD.Print(box.GetLongestAxisSize());  // Prints 8
 
 
@@ -450,16 +450,16 @@ Returns the shortest normalized axis of this bounding box's :ref:`size<class_AAB
 
     var box = AABB(Vector3(0, 0, 0), Vector3(2, 4, 8))
     
-    print(box.get_shortest_axis())       # Prints (1, 0, 0)
+    print(box.get_shortest_axis())       # Prints (1.0, 0.0, 0.0)
     print(box.get_shortest_axis_index()) # Prints 0
-    print(box.get_shortest_axis_size())  # Prints 2
+    print(box.get_shortest_axis_size())  # Prints 2.0
 
  .. code-tab:: csharp
 
     var box = new Aabb(new Vector3(0, 0, 0), new Vector3(2, 4, 8));
     
     GD.Print(box.GetShortestAxis());      // Prints (1, 0, 0)
-    GD.Print(box.GetShortestAxisIndex()); // Prints 0
+    GD.Print(box.GetShortestAxisIndex()); // Prints X
     GD.Print(box.GetShortestAxisSize());  // Prints 2
 
 
@@ -502,7 +502,7 @@ For an example, see :ref:`get_shortest_axis<class_AABB_method_get_shortest_axis>
 
 .. rst-class:: classref-method
 
-:ref:`Vector3<class_Vector3>` **get_support**\ (\ dir\: :ref:`Vector3<class_Vector3>`\ ) |const| :ref:`🔗<class_AABB_method_get_support>`
+:ref:`Vector3<class_Vector3>` **get_support**\ (\ direction\: :ref:`Vector3<class_Vector3>`\ ) |const| :ref:`🔗<class_AABB_method_get_support>`
 
 Returns the vertex's position of this bounding box that's the farthest in the given direction. This point is commonly known as the support point in collision detection algorithms.
 
@@ -536,12 +536,12 @@ Returns a copy of this bounding box extended on all sides by the given amount ``
  .. code-tab:: gdscript
 
     var a = AABB(Vector3(4, 4, 4), Vector3(8, 8, 8)).grow(4)
-    print(a.position) # Prints (0, 0, 0)
-    print(a.size)     # Prints (16, 16, 16)
+    print(a.position) # Prints (0.0, 0.0, 0.0)
+    print(a.size)     # Prints (16.0, 16.0, 16.0)
     
     var b = AABB(Vector3(0, 0, 0), Vector3(8, 4, 2)).grow(2)
-    print(b.position) # Prints (-2, -2, -2)
-    print(b.size)     # Prints (12, 8, 6)
+    print(b.position) # Prints (-2.0, -2.0, -2.0)
+    print(b.size)     # Prints (12.0, 8.0, 6.0)
 
  .. code-tab:: csharp
 
@@ -614,8 +614,8 @@ Returns the intersection between this bounding box and ``with``. If the boxes do
     var box2 = AABB(Vector3(2, 0, 2), Vector3(8, 4, 4))
     
     var intersection = box1.intersection(box2)
-    print(intersection.position) # Prints (2, 0, 2)
-    print(intersection.size)     # Prints (3, 2, 4)
+    print(intersection.position) # Prints (2.0, 0.0, 2.0)
+    print(intersection.size)     # Prints (3.0, 2.0, 4.0)
 
  .. code-tab:: csharp
 
@@ -692,7 +692,7 @@ The segment begins at ``from`` and ends at ``to``.
 
 :ref:`bool<class_bool>` **is_equal_approx**\ (\ aabb\: :ref:`AABB<class_AABB>`\ ) |const| :ref:`🔗<class_AABB_method_is_equal_approx>`
 
-Returns ``true`` if this bounding box and ``aabb`` are approximately equal, by calling :ref:`Vector2.is_equal_approx<class_Vector2_method_is_equal_approx>` on the :ref:`position<class_AABB_property_position>` and the :ref:`size<class_AABB_property_size>`.
+Returns ``true`` if this bounding box and ``aabb`` are approximately equal, by calling :ref:`Vector3.is_equal_approx<class_Vector3_method_is_equal_approx>` on the :ref:`position<class_AABB_property_position>` and the :ref:`size<class_AABB_property_size>`.
 
 .. rst-class:: classref-item-separator
 
@@ -704,7 +704,7 @@ Returns ``true`` if this bounding box and ``aabb`` are approximately equal, by c
 
 :ref:`bool<class_bool>` **is_finite**\ (\ ) |const| :ref:`🔗<class_AABB_method_is_finite>`
 
-Returns ``true`` if this bounding box's values are finite, by calling :ref:`Vector2.is_finite<class_Vector2_method_is_finite>` on the :ref:`position<class_AABB_property_position>` and the :ref:`size<class_AABB_property_size>`.
+Returns ``true`` if this bounding box's values are finite, by calling :ref:`Vector3.is_finite<class_Vector3_method_is_finite>` on the :ref:`position<class_AABB_property_position>` and the :ref:`size<class_AABB_property_size>`.
 
 .. rst-class:: classref-item-separator
 

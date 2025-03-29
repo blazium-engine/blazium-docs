@@ -12,14 +12,14 @@ LoginResponse
 
 **Inherits:** :ref:`RefCounted<class_RefCounted>` **<** :ref:`Object<class_Object>`
 
-Response from a :ref:`LoginClient.request_login_info<class_LoginClient_method_request_login_info>` call.
+Response from the :ref:`LoginClient<class_LoginClient>` node.
 
 .. rst-class:: classref-introduction-group
 
 Description
 -----------
 
-Response from a :ref:`LoginClient.request_login_info<class_LoginClient_method_request_login_info>` call. Await on :ref:`finished<class_LoginResponse_signal_finished>` signal to get the :ref:`LoginResult<class_LoginResult>`.
+Response from the :ref:`LoginClient<class_LoginClient>` node. Await on :ref:`finished<class_LoginResponse_signal_finished>` signal to get the :ref:`LoginResult<class_LoginResult>`.
 
 .. rst-class:: classref-section-separator
 

@@ -21,7 +21,7 @@ A list of global scope enumerated constants and built-in functions. This is all 
 
 Singletons are also documented here, since they can be accessed from anywhere.
 
-For the entries related to GDScript which can be accessed in any script see :ref:`@GDScript<class_@GDScript>`.
+For the entries that can only be accessed from scripts written in GDScript, see :ref:`@GDScript<class_@GDScript>`.
 
 .. note::
 
@@ -51,6 +51,8 @@ Properties
    +---------------------------------------------------------------+-------------------------------------------------------------------------------------+
    | :ref:`DisplayServer<class_DisplayServer>`                     | :ref:`DisplayServer<class_@GlobalScope_property_DisplayServer>`                     |
    +---------------------------------------------------------------+-------------------------------------------------------------------------------------+
+   | :ref:`ENV<class_ENV>`                                         | :ref:`ENV<class_@GlobalScope_property_ENV>`                                         |
+   +---------------------------------------------------------------+-------------------------------------------------------------------------------------+
    | :ref:`EditorInterface<class_EditorInterface>`                 | :ref:`EditorInterface<class_@GlobalScope_property_EditorInterface>`                 |
    +---------------------------------------------------------------+-------------------------------------------------------------------------------------+
    | :ref:`Engine<class_Engine>`                                   | :ref:`Engine<class_@GlobalScope_property_Engine>`                                   |
@@ -68,6 +70,8 @@ Properties
    | :ref:`Input<class_Input>`                                     | :ref:`Input<class_@GlobalScope_property_Input>`                                     |
    +---------------------------------------------------------------+-------------------------------------------------------------------------------------+
    | :ref:`InputMap<class_InputMap>`                               | :ref:`InputMap<class_@GlobalScope_property_InputMap>`                               |
+   +---------------------------------------------------------------+-------------------------------------------------------------------------------------+
+   | :ref:`JWT<class_JWT>`                                         | :ref:`JWT<class_@GlobalScope_property_JWT>`                                         |
    +---------------------------------------------------------------+-------------------------------------------------------------------------------------+
    | :ref:`JavaClassWrapper<class_JavaClassWrapper>`               | :ref:`JavaClassWrapper<class_@GlobalScope_property_JavaClassWrapper>`               |
    +---------------------------------------------------------------+-------------------------------------------------------------------------------------+
@@ -104,6 +108,8 @@ Properties
    | :ref:`ResourceSaver<class_ResourceSaver>`                     | :ref:`ResourceSaver<class_@GlobalScope_property_ResourceSaver>`                     |
    +---------------------------------------------------------------+-------------------------------------------------------------------------------------+
    | :ref:`ResourceUID<class_ResourceUID>`                         | :ref:`ResourceUID<class_@GlobalScope_property_ResourceUID>`                         |
+   +---------------------------------------------------------------+-------------------------------------------------------------------------------------+
+   | :ref:`Steam<class_Steam>`                                     | :ref:`Steam<class_@GlobalScope_property_Steam>`                                     |
    +---------------------------------------------------------------+-------------------------------------------------------------------------------------+
    | :ref:`TextServerManager<class_TextServerManager>`             | :ref:`TextServerManager<class_@GlobalScope_property_TextServerManager>`             |
    +---------------------------------------------------------------+-------------------------------------------------------------------------------------+
@@ -1425,7 +1431,7 @@ Help key.
 
 :ref:`Key<enum_@GlobalScope_Key>` **KEY_BACK** = ``4194376``
 
-Media back key. Not to be confused with the Back button on an Android device.
+Back key.
 
 .. _class_@GlobalScope_constant_KEY_FORWARD:
 
@@ -1433,7 +1439,7 @@ Media back key. Not to be confused with the Back button on an Android device.
 
 :ref:`Key<enum_@GlobalScope_Key>` **KEY_FORWARD** = ``4194377``
 
-Media forward key.
+Forward key.
 
 .. _class_@GlobalScope_constant_KEY_STOP:
 
@@ -1449,7 +1455,7 @@ Media stop key.
 
 :ref:`Key<enum_@GlobalScope_Key>` **KEY_REFRESH** = ``4194379``
 
-Media refresh key.
+Refresh key.
 
 .. _class_@GlobalScope_constant_KEY_VOLUMEDOWN:
 
@@ -1753,7 +1759,7 @@ Space key.
 
 :ref:`Key<enum_@GlobalScope_Key>` **KEY_EXCLAM** = ``33``
 
-! key.
+Exclamation mark (``!``) key.
 
 .. _class_@GlobalScope_constant_KEY_QUOTEDBL:
 
@@ -1761,7 +1767,7 @@ Space key.
 
 :ref:`Key<enum_@GlobalScope_Key>` **KEY_QUOTEDBL** = ``34``
 
-" key.
+Double quotation mark (``"``) key.
 
 .. _class_@GlobalScope_constant_KEY_NUMBERSIGN:
 
@@ -1769,7 +1775,7 @@ Space key.
 
 :ref:`Key<enum_@GlobalScope_Key>` **KEY_NUMBERSIGN** = ``35``
 
-# key.
+Number sign or *hash* (``#``) key.
 
 .. _class_@GlobalScope_constant_KEY_DOLLAR:
 
@@ -1777,7 +1783,7 @@ Space key.
 
 :ref:`Key<enum_@GlobalScope_Key>` **KEY_DOLLAR** = ``36``
 
-$ key.
+Dollar sign (``$``) key.
 
 .. _class_@GlobalScope_constant_KEY_PERCENT:
 
@@ -1785,7 +1791,7 @@ $ key.
 
 :ref:`Key<enum_@GlobalScope_Key>` **KEY_PERCENT** = ``37``
 
-% key.
+Percent sign (``%``) key.
 
 .. _class_@GlobalScope_constant_KEY_AMPERSAND:
 
@@ -1793,7 +1799,7 @@ $ key.
 
 :ref:`Key<enum_@GlobalScope_Key>` **KEY_AMPERSAND** = ``38``
 
-& key.
+Ampersand (``&``) key.
 
 .. _class_@GlobalScope_constant_KEY_APOSTROPHE:
 
@@ -1801,7 +1807,7 @@ $ key.
 
 :ref:`Key<enum_@GlobalScope_Key>` **KEY_APOSTROPHE** = ``39``
 
-' key.
+Apostrophe (``'``) key.
 
 .. _class_@GlobalScope_constant_KEY_PARENLEFT:
 
@@ -1809,7 +1815,7 @@ $ key.
 
 :ref:`Key<enum_@GlobalScope_Key>` **KEY_PARENLEFT** = ``40``
 
-( key.
+Left parenthesis (``(``) key.
 
 .. _class_@GlobalScope_constant_KEY_PARENRIGHT:
 
@@ -1817,7 +1823,7 @@ $ key.
 
 :ref:`Key<enum_@GlobalScope_Key>` **KEY_PARENRIGHT** = ``41``
 
-) key.
+Right parenthesis (``)``) key.
 
 .. _class_@GlobalScope_constant_KEY_ASTERISK:
 
@@ -1825,7 +1831,7 @@ $ key.
 
 :ref:`Key<enum_@GlobalScope_Key>` **KEY_ASTERISK** = ``42``
 
-\* key.
+Asterisk (``*``) key.
 
 .. _class_@GlobalScope_constant_KEY_PLUS:
 
@@ -1833,7 +1839,7 @@ $ key.
 
 :ref:`Key<enum_@GlobalScope_Key>` **KEY_PLUS** = ``43``
 
-+ key.
+Plus (``+``) key.
 
 .. _class_@GlobalScope_constant_KEY_COMMA:
 
@@ -1841,7 +1847,7 @@ $ key.
 
 :ref:`Key<enum_@GlobalScope_Key>` **KEY_COMMA** = ``44``
 
-, key.
+Comma (``,``) key.
 
 .. _class_@GlobalScope_constant_KEY_MINUS:
 
@@ -1849,7 +1855,7 @@ $ key.
 
 :ref:`Key<enum_@GlobalScope_Key>` **KEY_MINUS** = ``45``
 
-- key.
+Minus (``-``) key.
 
 .. _class_@GlobalScope_constant_KEY_PERIOD:
 
@@ -1857,7 +1863,7 @@ $ key.
 
 :ref:`Key<enum_@GlobalScope_Key>` **KEY_PERIOD** = ``46``
 
-. key.
+Period (``.``) key.
 
 .. _class_@GlobalScope_constant_KEY_SLASH:
 
@@ -1865,7 +1871,7 @@ $ key.
 
 :ref:`Key<enum_@GlobalScope_Key>` **KEY_SLASH** = ``47``
 
-/ key.
+Slash (``/``) key.
 
 .. _class_@GlobalScope_constant_KEY_0:
 
@@ -1953,7 +1959,7 @@ Number 9 key.
 
 :ref:`Key<enum_@GlobalScope_Key>` **KEY_COLON** = ``58``
 
-: key.
+Colon (``:``) key.
 
 .. _class_@GlobalScope_constant_KEY_SEMICOLON:
 
@@ -1961,7 +1967,7 @@ Number 9 key.
 
 :ref:`Key<enum_@GlobalScope_Key>` **KEY_SEMICOLON** = ``59``
 
-; key.
+Semicolon (``;``) key.
 
 .. _class_@GlobalScope_constant_KEY_LESS:
 
@@ -1969,7 +1975,7 @@ Number 9 key.
 
 :ref:`Key<enum_@GlobalScope_Key>` **KEY_LESS** = ``60``
 
-< key.
+Less-than sign (``<``) key.
 
 .. _class_@GlobalScope_constant_KEY_EQUAL:
 
@@ -1977,7 +1983,7 @@ Number 9 key.
 
 :ref:`Key<enum_@GlobalScope_Key>` **KEY_EQUAL** = ``61``
 
-= key.
+Equal sign (``=``) key.
 
 .. _class_@GlobalScope_constant_KEY_GREATER:
 
@@ -1985,7 +1991,7 @@ Number 9 key.
 
 :ref:`Key<enum_@GlobalScope_Key>` **KEY_GREATER** = ``62``
 
-> key.
+Greater-than sign (``>``) key.
 
 .. _class_@GlobalScope_constant_KEY_QUESTION:
 
@@ -1993,7 +1999,7 @@ Number 9 key.
 
 :ref:`Key<enum_@GlobalScope_Key>` **KEY_QUESTION** = ``63``
 
-? key.
+Question mark (``?``) key.
 
 .. _class_@GlobalScope_constant_KEY_AT:
 
@@ -2001,7 +2007,7 @@ Number 9 key.
 
 :ref:`Key<enum_@GlobalScope_Key>` **KEY_AT** = ``64``
 
-@ key.
+At sign (``@``) key.
 
 .. _class_@GlobalScope_constant_KEY_A:
 
@@ -2217,7 +2223,7 @@ Z key.
 
 :ref:`Key<enum_@GlobalScope_Key>` **KEY_BRACKETLEFT** = ``91``
 
-[ key.
+Left bracket (``[lb]``) key.
 
 .. _class_@GlobalScope_constant_KEY_BACKSLASH:
 
@@ -2225,7 +2231,7 @@ Z key.
 
 :ref:`Key<enum_@GlobalScope_Key>` **KEY_BACKSLASH** = ``92``
 
-\\ key.
+Backslash (``\``) key.
 
 .. _class_@GlobalScope_constant_KEY_BRACKETRIGHT:
 
@@ -2233,7 +2239,7 @@ Z key.
 
 :ref:`Key<enum_@GlobalScope_Key>` **KEY_BRACKETRIGHT** = ``93``
 
-] key.
+Right bracket (``[rb]``) key.
 
 .. _class_@GlobalScope_constant_KEY_ASCIICIRCUM:
 
@@ -2241,7 +2247,7 @@ Z key.
 
 :ref:`Key<enum_@GlobalScope_Key>` **KEY_ASCIICIRCUM** = ``94``
 
-^ key.
+Caret (``^``) key.
 
 .. _class_@GlobalScope_constant_KEY_UNDERSCORE:
 
@@ -2249,7 +2255,7 @@ Z key.
 
 :ref:`Key<enum_@GlobalScope_Key>` **KEY_UNDERSCORE** = ``95``
 
-\_ key.
+Underscore (``_``) key.
 
 .. _class_@GlobalScope_constant_KEY_QUOTELEFT:
 
@@ -2257,7 +2263,7 @@ Z key.
 
 :ref:`Key<enum_@GlobalScope_Key>` **KEY_QUOTELEFT** = ``96``
 
-` key.
+Backtick (`````) key.
 
 .. _class_@GlobalScope_constant_KEY_BRACELEFT:
 
@@ -2265,7 +2271,7 @@ Z key.
 
 :ref:`Key<enum_@GlobalScope_Key>` **KEY_BRACELEFT** = ``123``
 
-{ key.
+Left brace (``{``) key.
 
 .. _class_@GlobalScope_constant_KEY_BAR:
 
@@ -2273,7 +2279,7 @@ Z key.
 
 :ref:`Key<enum_@GlobalScope_Key>` **KEY_BAR** = ``124``
 
-| key.
+Vertical bar or *pipe* (``|``) key.
 
 .. _class_@GlobalScope_constant_KEY_BRACERIGHT:
 
@@ -2281,7 +2287,7 @@ Z key.
 
 :ref:`Key<enum_@GlobalScope_Key>` **KEY_BRACERIGHT** = ``125``
 
-} key.
+Right brace (``}``) key.
 
 .. _class_@GlobalScope_constant_KEY_ASCIITILDE:
 
@@ -2289,7 +2295,7 @@ Z key.
 
 :ref:`Key<enum_@GlobalScope_Key>` **KEY_ASCIITILDE** = ``126``
 
-~ key.
+Tilde (``~``) key.
 
 .. _class_@GlobalScope_constant_KEY_YEN:
 
@@ -2297,7 +2303,7 @@ Z key.
 
 :ref:`Key<enum_@GlobalScope_Key>` **KEY_YEN** = ``165``
 
-¥ key.
+Yen symbol (``¥``) key.
 
 .. _class_@GlobalScope_constant_KEY_SECTION:
 
@@ -2305,7 +2311,7 @@ Z key.
 
 :ref:`Key<enum_@GlobalScope_Key>` **KEY_SECTION** = ``167``
 
-§ key.
+Section sign (``§``) key.
 
 .. rst-class:: classref-item-separator
 
@@ -3045,9 +3051,7 @@ enum **Error**: :ref:`🔗<enum_@GlobalScope_Error>`
 
 Methods that return :ref:`Error<enum_@GlobalScope_Error>` return :ref:`OK<class_@GlobalScope_constant_OK>` when no error occurred.
 
-Since :ref:`OK<class_@GlobalScope_constant_OK>` has value 0, and all other error constants are positive integers, it can also be used in boolean checks.
-
-\ **Example:**\ 
+Since :ref:`OK<class_@GlobalScope_constant_OK>` has value ``0``, and all other error constants are positive integers, it can also be used in boolean checks.
 
 ::
 
@@ -3702,7 +3706,7 @@ If a property is :ref:`Array<class_Array>`, hints the editor how to show element
 
 
 
-Examples:
+\ **Examples:**\ 
 
 
 .. tabs::
@@ -3846,11 +3850,34 @@ Hints that a quaternion property should disable the temporary euler editor.
 
 Hints that a string property is a password, and every character is replaced with the secret character.
 
+.. _class_@GlobalScope_constant_PROPERTY_HINT_TOOL_BUTTON:
+
+.. rst-class:: classref-enumeration-constant
+
+:ref:`PropertyHint<enum_@GlobalScope_PropertyHint>` **PROPERTY_HINT_TOOL_BUTTON** = ``38``
+
+Hints that a :ref:`Callable<class_Callable>` property should be displayed as a clickable button. When the button is pressed, the callable is called. The hint string specifies the button text and optionally an icon from the ``"EditorIcons"`` theme type.
+
+.. code:: text
+
+    "Click me!" - A button with the text "Click me!" and the default "Callable" icon.
+    "Click me!,ColorRect" - A button with the text "Click me!" and the "ColorRect" icon.
+
+\ **Note:** A :ref:`Callable<class_Callable>` cannot be properly serialized and stored in a file, so it is recommended to use :ref:`PROPERTY_USAGE_EDITOR<class_@GlobalScope_constant_PROPERTY_USAGE_EDITOR>` instead of :ref:`PROPERTY_USAGE_DEFAULT<class_@GlobalScope_constant_PROPERTY_USAGE_DEFAULT>`.
+
+.. _class_@GlobalScope_constant_PROPERTY_HINT_ONESHOT:
+
+.. rst-class:: classref-enumeration-constant
+
+:ref:`PropertyHint<enum_@GlobalScope_PropertyHint>` **PROPERTY_HINT_ONESHOT** = ``39``
+
+Hints that a property will be changed on its own after setting, such as :ref:`AudioStreamPlayer.playing<class_AudioStreamPlayer_property_playing>` or :ref:`GPUParticles3D.emitting<class_GPUParticles3D_property_emitting>`.
+
 .. _class_@GlobalScope_constant_PROPERTY_HINT_MAX:
 
 .. rst-class:: classref-enumeration-constant
 
-:ref:`PropertyHint<enum_@GlobalScope_PropertyHint>` **PROPERTY_HINT_MAX** = ``38``
+:ref:`PropertyHint<enum_@GlobalScope_PropertyHint>` **PROPERTY_HINT_MAX** = ``41``
 
 Represents the size of the :ref:`PropertyHint<enum_@GlobalScope_PropertyHint>` enum.
 
@@ -3966,7 +3993,7 @@ Editing the property prompts the user for restarting the editor.
 
 :ref:`PropertyUsageFlags<enum_@GlobalScope_PropertyUsageFlags>` **PROPERTY_USAGE_SCRIPT_VARIABLE** = ``4096``
 
-The property is a script variable which should be serialized and saved in the scene file.
+The property is a script variable. :ref:`PROPERTY_USAGE_SCRIPT_VARIABLE<class_@GlobalScope_constant_PROPERTY_USAGE_SCRIPT_VARIABLE>` can be used to distinguish between exported script variables from built-in variables (which don't have this usage flag). By default, :ref:`PROPERTY_USAGE_SCRIPT_VARIABLE<class_@GlobalScope_constant_PROPERTY_USAGE_SCRIPT_VARIABLE>` is **not** applied to variables that are created by overriding :ref:`Object._get_property_list<class_Object_private_method__get_property_list>` in a script.
 
 .. _class_@GlobalScope_constant_PROPERTY_USAGE_STORE_IF_NULL:
 
@@ -4000,7 +4027,7 @@ If this property is modified, all inspector fields will be refreshed.
 
 :ref:`PropertyUsageFlags<enum_@GlobalScope_PropertyUsageFlags>` **PROPERTY_USAGE_CLASS_IS_ENUM** = ``65536``
 
-The property is an enum, i.e. it only takes named integer constants from its associated enumeration.
+The property is a variable of enum type, i.e. it only takes named integer constants from its associated enumeration.
 
 .. _class_@GlobalScope_constant_PROPERTY_USAGE_NIL_IS_VARIANT:
 
@@ -4803,6 +4830,18 @@ The :ref:`DisplayServer<class_DisplayServer>` singleton.
 
 ----
 
+.. _class_@GlobalScope_property_ENV:
+
+.. rst-class:: classref-property
+
+:ref:`ENV<class_ENV>` **ENV** :ref:`🔗<class_@GlobalScope_property_ENV>`
+
+The :ref:`ENV<class_ENV>` singleton.
+
+.. rst-class:: classref-item-separator
+
+----
+
 .. _class_@GlobalScope_property_EditorInterface:
 
 .. rst-class:: classref-property
@@ -4908,6 +4947,18 @@ The :ref:`Input<class_Input>` singleton.
 :ref:`InputMap<class_InputMap>` **InputMap** :ref:`🔗<class_@GlobalScope_property_InputMap>`
 
 The :ref:`InputMap<class_InputMap>` singleton.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_@GlobalScope_property_JWT:
+
+.. rst-class:: classref-property
+
+:ref:`JWT<class_JWT>` **JWT** :ref:`🔗<class_@GlobalScope_property_JWT>`
+
+The :ref:`JWT<class_JWT>` singleton.
 
 .. rst-class:: classref-item-separator
 
@@ -5135,6 +5186,18 @@ The :ref:`ResourceUID<class_ResourceUID>` singleton.
 
 ----
 
+.. _class_@GlobalScope_property_Steam:
+
+.. rst-class:: classref-property
+
+:ref:`Steam<class_Steam>` **Steam** :ref:`🔗<class_@GlobalScope_property_Steam>`
+
+The :ref:`Steam<class_Steam>` singleton.
+
+.. rst-class:: classref-item-separator
+
+----
+
 .. _class_@GlobalScope_property_TextServerManager:
 
 .. rst-class:: classref-property
@@ -5322,7 +5385,7 @@ Returns the hyperbolic arc (also called inverse) cosine of ``x``, returning a va
 
 :ref:`float<class_float>` **angle_difference**\ (\ from\: :ref:`float<class_float>`, to\: :ref:`float<class_float>`\ ) :ref:`🔗<class_@GlobalScope_method_angle_difference>`
 
-Returns the difference between the two angles, in the range of ``[-PI, +PI]``. When ``from`` and ``to`` are opposite, returns ``-PI`` if ``from`` is smaller than ``to``, or ``PI`` otherwise.
+Returns the difference between the two angles (in radians), in the range of ``[-PI, +PI]``. When ``from`` and ``to`` are opposite, returns ``-PI`` if ``from`` is smaller than ``to``, or ``PI`` otherwise.
 
 .. rst-class:: classref-item-separator
 
@@ -5712,7 +5775,7 @@ Returns an "eased" value of ``x`` based on an easing function defined with ``cur
 .. code:: text
 
     - Lower than -1.0 (exclusive): Ease in-out
-    - 1.0: Linear
+    - -1.0: Linear
     - Between -1.0 and 0.0 (exclusive): Ease out-in
     - 0.0: Constant
     - Between 0.0 to 1.0 (exclusive): Ease out
@@ -6084,9 +6147,9 @@ This function is faster than using :ref:`is_equal_approx<class_@GlobalScope_meth
 
 :ref:`Variant<class_Variant>` **lerp**\ (\ from\: :ref:`Variant<class_Variant>`, to\: :ref:`Variant<class_Variant>`, weight\: :ref:`Variant<class_Variant>`\ ) :ref:`🔗<class_@GlobalScope_method_lerp>`
 
-Linearly interpolates between two values by the factor defined in ``weight``. To perform interpolation, ``weight`` should be between ``0.0`` and ``1.0`` (inclusive). However, values outside this range are allowed and can be used to perform *extrapolation*. If this is not desired, use :ref:`clamp<class_@GlobalScope_method_clamp>` on the result of this function.
+Linearly interpolates between two values by the factor defined in ``weight``. To perform interpolation, ``weight`` should be between ``0.0`` and ``1.0`` (inclusive). However, values outside this range are allowed and can be used to perform *extrapolation*. If this is not desired, use :ref:`clampf<class_@GlobalScope_method_clampf>` to limit ``weight``.
 
-Both ``from`` and ``to`` must be the same type. Supported types: :ref:`int<class_int>`, :ref:`float<class_float>`, :ref:`Vector2<class_Vector2>`, :ref:`Vector3<class_Vector3>`, :ref:`Vector4<class_Vector4>`, :ref:`Color<class_Color>`, :ref:`Quaternion<class_Quaternion>`, :ref:`Basis<class_Basis>`.
+Both ``from`` and ``to`` must be the same type. Supported types: :ref:`int<class_int>`, :ref:`float<class_float>`, :ref:`Vector2<class_Vector2>`, :ref:`Vector3<class_Vector3>`, :ref:`Vector4<class_Vector4>`, :ref:`Color<class_Color>`, :ref:`Quaternion<class_Quaternion>`, :ref:`Basis<class_Basis>`, :ref:`Transform2D<class_Transform2D>`, :ref:`Transform3D<class_Transform3D>`.
 
 ::
 
@@ -6094,7 +6157,7 @@ Both ``from`` and ``to`` must be the same type. Supported types: :ref:`int<class
 
 See also :ref:`inverse_lerp<class_@GlobalScope_method_inverse_lerp>` which performs the reverse of this operation. To perform eased interpolation with :ref:`lerp<class_@GlobalScope_method_lerp>`, combine it with :ref:`ease<class_@GlobalScope_method_ease>` or :ref:`smoothstep<class_@GlobalScope_method_smoothstep>`. See also :ref:`remap<class_@GlobalScope_method_remap>` to map a continuous series of values to another.
 
-\ **Note:** For better type safety, use :ref:`lerpf<class_@GlobalScope_method_lerpf>`, :ref:`Vector2.lerp<class_Vector2_method_lerp>`, :ref:`Vector3.lerp<class_Vector3_method_lerp>`, :ref:`Vector4.lerp<class_Vector4_method_lerp>`, :ref:`Color.lerp<class_Color_method_lerp>`, :ref:`Quaternion.slerp<class_Quaternion_method_slerp>` or :ref:`Basis.slerp<class_Basis_method_slerp>`.
+\ **Note:** For better type safety, use :ref:`lerpf<class_@GlobalScope_method_lerpf>`, :ref:`Vector2.lerp<class_Vector2_method_lerp>`, :ref:`Vector3.lerp<class_Vector3_method_lerp>`, :ref:`Vector4.lerp<class_Vector4_method_lerp>`, :ref:`Color.lerp<class_Color_method_lerp>`, :ref:`Quaternion.slerp<class_Quaternion_method_slerp>`, :ref:`Basis.slerp<class_Basis_method_slerp>`, :ref:`Transform2D.interpolate_with<class_Transform2D_method_interpolate_with>`, or :ref:`Transform3D.interpolate_with<class_Transform3D_method_interpolate_with>`.
 
 .. rst-class:: classref-item-separator
 
@@ -6150,15 +6213,12 @@ See also :ref:`inverse_lerp<class_@GlobalScope_method_inverse_lerp>` which perfo
 
 :ref:`float<class_float>` **linear_to_db**\ (\ lin\: :ref:`float<class_float>`\ ) :ref:`🔗<class_@GlobalScope_method_linear_to_db>`
 
-Converts from linear energy to decibels (audio). This can be used to implement volume sliders that behave as expected (since volume isn't linear).
+Converts from linear energy to decibels (audio). Since volume is not normally linear, this can be used to implement volume sliders that behave as expected.
 
-\ **Example:**\ 
+\ **Example:** Change the Master bus's volume through a :ref:`Slider<class_Slider>` node, which ranges from ``0.0`` to ``1.0``:
 
 ::
 
-    # "Slider" refers to a node that inherits Range such as HSlider or VSlider.
-    # Its range must be configured to go from 0 to 1.
-    # Change the bus name if you'd like to change the volume of a specific bus only.
     AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Master"), linear_to_db($Slider.value))
 
 .. rst-class:: classref-item-separator
@@ -6431,7 +6491,7 @@ Converts one or more arguments of any type to string in the best way possible an
 
 
 
-\ **Note:** Consider using :ref:`push_error<class_@GlobalScope_method_push_error>` and :ref:`push_warning<class_@GlobalScope_method_push_warning>` to print error and warning messages instead of :ref:`print<class_@GlobalScope_method_print>` or :ref:`print_rich<class_@GlobalScope_method_print_rich>`. This distinguishes them from print messages used for debugging purposes, while also displaying a stack trace when an error or warning is printed.
+\ **Note:** Consider using :ref:`push_error<class_@GlobalScope_method_push_error>` and :ref:`push_warning<class_@GlobalScope_method_push_warning>` to print error and warning messages instead of :ref:`print<class_@GlobalScope_method_print>` or :ref:`print_rich<class_@GlobalScope_method_print_rich>`. This distinguishes them from print messages used for debugging purposes, while also displaying a stack trace when an error or warning is printed. See also :ref:`Engine.print_to_stdout<class_Engine_property_print_to_stdout>` and :ref:`ProjectSettings.application/run/disable_stdout<class_ProjectSettings_property_application/run/disable_stdout>`.
 
 .. rst-class:: classref-item-separator
 
@@ -6446,8 +6506,6 @@ Converts one or more arguments of any type to string in the best way possible an
 Converts one or more arguments of any type to string in the best way possible and prints them to the console.
 
 The following BBCode tags are supported: ``b``, ``i``, ``u``, ``s``, ``indent``, ``code``, ``url``, ``center``, ``right``, ``color``, ``bgcolor``, ``fgcolor``.
-
-Color tags only support the following named colors: ``black``, ``red``, ``green``, ``yellow``, ``blue``, ``magenta``, ``pink``, ``purple``, ``cyan``, ``white``, ``orange``, ``gray``. Hexadecimal color codes are not supported.
 
 URL tags only support URLs wrapped by a URL tag, not URLs with a different title.
 
@@ -6680,8 +6738,8 @@ Given a ``seed``, returns a :ref:`PackedInt64Array<class_PackedInt64Array>` of s
 
     var a = rand_from_seed(4)
     
-    print(a[0])	# Prints 2879024997
-    print(a[1])	# Prints 4
+    print(a[0]) # Prints 2879024997
+    print(a[1]) # Prints 4
 
 .. rst-class:: classref-item-separator
 
@@ -7020,7 +7078,7 @@ Returns ``-1.0`` if ``x`` is negative, ``1.0`` if ``x`` is positive, and ``0.0``
 
 :ref:`int<class_int>` **signi**\ (\ x\: :ref:`int<class_int>`\ ) :ref:`🔗<class_@GlobalScope_method_signi>`
 
-Returns ``-1`` if ``x`` is negative, ``1`` if ``x`` is positive, and ``0`` if if ``x`` is zero.
+Returns ``-1`` if ``x`` is negative, ``1`` if ``x`` is positive, and ``0`` if ``x`` is zero.
 
 ::
 

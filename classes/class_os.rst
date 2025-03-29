@@ -21,7 +21,7 @@ Description
 
 The **OS** class wraps the most common functionalities for communicating with the host operating system, such as the video driver, delays, environment variables, execution of binaries, command line, etc.
 
-\ **Note:** In Blazium, **OS** functions related to window management, clipboard, and TTS were moved to the :ref:`DisplayServer<class_DisplayServer>` singleton (and the :ref:`Window<class_Window>` class). Functions related to time were removed and are only available in the :ref:`Time<class_Time>` class.
+\ **Note:** In Godot 4, **OS** functions related to window management, clipboard, and TTS were moved to the :ref:`DisplayServer<class_DisplayServer>` singleton (and the :ref:`Window<class_Window>` class). Functions related to time were removed and are only available in the :ref:`Time<class_Time>` class.
 
 .. rst-class:: classref-introduction-group
 
@@ -135,6 +135,8 @@ Methods
    +---------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`PackedStringArray<class_PackedStringArray>` | :ref:`get_system_fonts<class_OS_method_get_system_fonts>`\ (\ ) |const|                                                                                                                                                                                                                                                                                                                     |
    +---------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`String<class_String>`                       | :ref:`get_temp_dir<class_OS_method_get_temp_dir>`\ (\ ) |const|                                                                                                                                                                                                                                                                                                                             |
+   +---------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`int<class_int>`                             | :ref:`get_thread_caller_id<class_OS_method_get_thread_caller_id>`\ (\ ) |const|                                                                                                                                                                                                                                                                                                             |
    +---------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`String<class_String>`                       | :ref:`get_unique_id<class_OS_method_get_unique_id>`\ (\ ) |const|                                                                                                                                                                                                                                                                                                                           |
@@ -142,6 +144,8 @@ Methods
    | :ref:`String<class_String>`                       | :ref:`get_user_data_dir<class_OS_method_get_user_data_dir>`\ (\ ) |const|                                                                                                                                                                                                                                                                                                                   |
    +---------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`String<class_String>`                       | :ref:`get_version<class_OS_method_get_version>`\ (\ ) |const|                                                                                                                                                                                                                                                                                                                               |
+   +---------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`String<class_String>`                       | :ref:`get_version_alias<class_OS_method_get_version_alias>`\ (\ ) |const|                                                                                                                                                                                                                                                                                                                   |
    +---------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`PackedStringArray<class_PackedStringArray>` | :ref:`get_video_adapter_driver_info<class_OS_method_get_video_adapter_driver_info>`\ (\ ) |const|                                                                                                                                                                                                                                                                                           |
    +---------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -230,6 +234,14 @@ The OpenGL 3 rendering driver. It uses OpenGL 3.3 Core Profile on desktop platfo
 :ref:`RenderingDriver<enum_OS_RenderingDriver>` **RENDERING_DRIVER_D3D12** = ``2``
 
 The Direct3D 12 rendering driver.
+
+.. _class_OS_constant_RENDERING_DRIVER_METAL:
+
+.. rst-class:: classref-enumeration-constant
+
+:ref:`RenderingDriver<enum_OS_RenderingDriver>` **RENDERING_DRIVER_METAL** = ``3``
+
+The Metal rendering driver.
 
 .. rst-class:: classref-item-separator
 
@@ -394,9 +406,9 @@ Displays a modal dialog box using the host platform's implementation. The engine
 
 |void| **close_midi_inputs**\ (\ ) :ref:`🔗<class_OS_method_close_midi_inputs>`
 
-Shuts down the system MIDI driver. Blazium will no longer receive :ref:`InputEventMIDI<class_InputEventMIDI>`. See also :ref:`open_midi_inputs<class_OS_method_open_midi_inputs>` and :ref:`get_connected_midi_inputs<class_OS_method_get_connected_midi_inputs>`.
+Shuts down the system MIDI driver. Godot will no longer receive :ref:`InputEventMIDI<class_InputEventMIDI>`. See also :ref:`open_midi_inputs<class_OS_method_open_midi_inputs>` and :ref:`get_connected_midi_inputs<class_OS_method_get_connected_midi_inputs>`.
 
-\ **Note:** This method is implemented on Linux, macOS and Windows.
+\ **Note:** This method is implemented on Linux, macOS, Windows, and Web.
 
 .. rst-class:: classref-item-separator
 
@@ -422,7 +434,7 @@ Crashes the engine (or the editor if called within a ``@tool`` script). See also
 
 :ref:`int<class_int>` **create_instance**\ (\ arguments\: :ref:`PackedStringArray<class_PackedStringArray>`\ ) :ref:`🔗<class_OS_method_create_instance>`
 
-Creates a new instance of Blazium that runs independently. The ``arguments`` are used in the given order and separated by a space.
+Creates a new instance of Godot that runs independently. The ``arguments`` are used in the given order and separated by a space.
 
 If the process is successfully created, this method returns the new process' ID, which you can use to monitor the process (and potentially terminate it with :ref:`kill<class_OS_method_kill>`). If the process cannot be created, this method returns ``-1``.
 
@@ -440,13 +452,13 @@ See :ref:`create_process<class_OS_method_create_process>` if you wish to run a d
 
 :ref:`int<class_int>` **create_process**\ (\ path\: :ref:`String<class_String>`, arguments\: :ref:`PackedStringArray<class_PackedStringArray>`, open_console\: :ref:`bool<class_bool>` = false\ ) :ref:`🔗<class_OS_method_create_process>`
 
-Creates a new process that runs independently of Blazium. It will not terminate when Blazium terminates. The path specified in ``path`` must exist and be an executable file or macOS ``.app`` bundle. The path is resolved based on the current platform. The ``arguments`` are used in the given order and separated by a space.
+Creates a new process that runs independently of Godot. It will not terminate when Godot terminates. The path specified in ``path`` must exist and be an executable file or macOS ``.app`` bundle. The path is resolved based on the current platform. The ``arguments`` are used in the given order and separated by a space.
 
 On Windows, if ``open_console`` is ``true`` and the process is a console app, a new terminal window will be opened.
 
 If the process is successfully created, this method returns its process ID, which you can use to monitor the process (and potentially terminate it with :ref:`kill<class_OS_method_kill>`). Otherwise, this method returns ``-1``.
 
-For example, running another instance of the project:
+\ **Example:** Run another instance of the project:
 
 
 .. tabs::
@@ -575,7 +587,7 @@ If you wish to access a shell built-in or execute a composite command, a platfor
 
 :ref:`Dictionary<class_Dictionary>` **execute_with_pipe**\ (\ path\: :ref:`String<class_String>`, arguments\: :ref:`PackedStringArray<class_PackedStringArray>`\ ) :ref:`🔗<class_OS_method_execute_with_pipe>`
 
-Creates a new process that runs independently of Blazium with redirected IO. It will not terminate when Blazium terminates. The path specified in ``path`` must exist and be an executable file or macOS ``.app`` bundle. The path is resolved based on the current platform. The ``arguments`` are used in the given order and separated by a space.
+Creates a new process that runs independently of Godot with redirected IO. It will not terminate when Godot terminates. The path specified in ``path`` must exist and be an executable file or macOS ``.app`` bundle. The path is resolved based on the current platform. The ``arguments`` are used in the given order and separated by a space.
 
 If the process cannot be created, this method returns an empty :ref:`Dictionary<class_Dictionary>`. Otherwise, this method returns a :ref:`Dictionary<class_Dictionary>` with the following keys:
 
@@ -640,7 +652,7 @@ See also :ref:`get_keycode_string<class_OS_method_get_keycode_string>`.
 
 Returns the *global* cache data directory according to the operating system's standards.
 
-On the Linux/BSD platform, this path can be overridden by setting the ``XDG_CACHE_HOME`` environment variable before starting the project. See :doc:`File paths in Blazium projects <../tutorials/io/data_paths>` in the documentation for more information. See also :ref:`get_config_dir<class_OS_method_get_config_dir>` and :ref:`get_data_dir<class_OS_method_get_data_dir>`.
+On the Linux/BSD platform, this path can be overridden by setting the ``XDG_CACHE_HOME`` environment variable before starting the project. See :doc:`File paths in Godot projects <../tutorials/io/data_paths>` in the documentation for more information. See also :ref:`get_config_dir<class_OS_method_get_config_dir>` and :ref:`get_data_dir<class_OS_method_get_data_dir>`.
 
 Not to be confused with :ref:`get_user_data_dir<class_OS_method_get_user_data_dir>`, which returns the *project-specific* user data path.
 
@@ -662,7 +674,7 @@ You can also incorporate environment variables using the :ref:`get_environment<c
 
 You can set :ref:`ProjectSettings.editor/run/main_run_args<class_ProjectSettings_property_editor/run/main_run_args>` to define command-line arguments to be passed by the editor when running the project.
 
-Here's a minimal example on how to parse command-line arguments into a :ref:`Dictionary<class_Dictionary>` using the ``--key=value`` form for arguments:
+\ **Example:** Parse command-line arguments into a :ref:`Dictionary<class_Dictionary>` using the ``--key=value`` form for arguments:
 
 
 .. tabs::
@@ -715,9 +727,9 @@ Returns the command-line user arguments passed to the engine. User arguments are
 
 ::
 
-    # Blazium has been executed with the following command:
-    # blazium --fullscreen -- --level=2 --hardcore
-
+    # Godot has been executed with the following command:
+    # godot --fullscreen -- --level=2 --hardcore
+    
     OS.get_cmdline_args()      # Returns ["--fullscreen", "--level=2", "--hardcore"]
     OS.get_cmdline_user_args() # Returns ["--level=2", "--hardcore"]
 
@@ -735,7 +747,7 @@ To get all passed arguments, use :ref:`get_cmdline_args<class_OS_method_get_cmdl
 
 Returns the *global* user configuration directory according to the operating system's standards.
 
-On the Linux/BSD platform, this path can be overridden by setting the ``XDG_CONFIG_HOME`` environment variable before starting the project. See :doc:`File paths in Blazium projects <../tutorials/io/data_paths>` in the documentation for more information. See also :ref:`get_cache_dir<class_OS_method_get_cache_dir>` and :ref:`get_data_dir<class_OS_method_get_data_dir>`.
+On the Linux/BSD platform, this path can be overridden by setting the ``XDG_CONFIG_HOME`` environment variable before starting the project. See :doc:`File paths in Godot projects <../tutorials/io/data_paths>` in the documentation for more information. See also :ref:`get_cache_dir<class_OS_method_get_cache_dir>` and :ref:`get_data_dir<class_OS_method_get_data_dir>`.
 
 Not to be confused with :ref:`get_user_data_dir<class_OS_method_get_user_data_dir>`, which returns the *project-specific* user data path.
 
@@ -751,7 +763,11 @@ Not to be confused with :ref:`get_user_data_dir<class_OS_method_get_user_data_di
 
 Returns an array of connected MIDI device names, if they exist. Returns an empty array if the system MIDI driver has not previously been initialized with :ref:`open_midi_inputs<class_OS_method_open_midi_inputs>`. See also :ref:`close_midi_inputs<class_OS_method_close_midi_inputs>`.
 
-\ **Note:** This method is implemented on Linux, macOS and Windows.
+\ **Note:** This method is implemented on Linux, macOS, Windows, and Web.
+
+\ **Note:** On the Web platform, Web MIDI needs to be supported by the browser. `For the time being <https://caniuse.com/midi>`__, it is currently supported by all major browsers, except Safari.
+
+\ **Note:** On the Web platform, using MIDI input requires a browser permission to be granted first. This permission request is performed when calling :ref:`open_midi_inputs<class_OS_method_open_midi_inputs>`. The browser will refrain from processing MIDI input until the user accepts the permission request.
 
 .. rst-class:: classref-item-separator
 
@@ -765,7 +781,7 @@ Returns an array of connected MIDI device names, if they exist. Returns an empty
 
 Returns the *global* user data directory according to the operating system's standards.
 
-On the Linux/BSD platform, this path can be overridden by setting the ``XDG_DATA_HOME`` environment variable before starting the project. See :doc:`File paths in Blazium projects <../tutorials/io/data_paths>` in the documentation for more information. See also :ref:`get_cache_dir<class_OS_method_get_cache_dir>` and :ref:`get_config_dir<class_OS_method_get_config_dir>`.
+On the Linux/BSD platform, this path can be overridden by setting the ``XDG_DATA_HOME`` environment variable before starting the project. See :doc:`File paths in Godot projects <../tutorials/io/data_paths>` in the documentation for more information. See also :ref:`get_cache_dir<class_OS_method_get_cache_dir>` and :ref:`get_config_dir<class_OS_method_get_config_dir>`.
 
 Not to be confused with :ref:`get_user_data_dir<class_OS_method_get_user_data_dir>`, which returns the *project-specific* user data path.
 
@@ -829,7 +845,7 @@ Returns the value of the given environment variable, or an empty string if ``var
 
 Returns the file path to the current engine executable.
 
-\ **Note:** On macOS, if you want to launch another instance of Blazium, always use :ref:`create_instance<class_OS_method_create_instance>` instead of relying on the executable path.
+\ **Note:** On macOS, if you want to launch another instance of Godot, always use :ref:`create_instance<class_OS_method_create_instance>` instead of relying on the executable path.
 
 .. rst-class:: classref-item-separator
 
@@ -962,7 +978,7 @@ Returns a :ref:`Dictionary<class_Dictionary>` containing information about the c
 
 Returns the model name of the current device.
 
-\ **Note:** This method is implemented on Android and iOS. Returns ``"GenericDevice"`` on unsupported platforms.
+\ **Note:** This method is implemented on Android, iOS, macOS, and Windows. Returns ``"GenericDevice"`` on unsupported platforms.
 
 .. rst-class:: classref-item-separator
 
@@ -1221,6 +1237,18 @@ Returns the list of font family names available.
 
 ----
 
+.. _class_OS_method_get_temp_dir:
+
+.. rst-class:: classref-method
+
+:ref:`String<class_String>` **get_temp_dir**\ (\ ) |const| :ref:`🔗<class_OS_method_get_temp_dir>`
+
+Returns the *global* temporary data directory according to the operating system's standards.
+
+.. rst-class:: classref-item-separator
+
+----
+
 .. _class_OS_method_get_thread_caller_id:
 
 .. rst-class:: classref-method
@@ -1257,13 +1285,13 @@ Returns a string that is unique to the device.
 
 :ref:`String<class_String>` **get_user_data_dir**\ (\ ) |const| :ref:`🔗<class_OS_method_get_user_data_dir>`
 
-Returns the absolute directory path where user data is written (the ``user://`` directory in Blazium). The path depends on the project name and :ref:`ProjectSettings.application/config/use_custom_user_dir<class_ProjectSettings_property_application/config/use_custom_user_dir>`.
+Returns the absolute directory path where user data is written (the ``user://`` directory in Godot). The path depends on the project name and :ref:`ProjectSettings.application/config/use_custom_user_dir<class_ProjectSettings_property_application/config/use_custom_user_dir>`.
 
-- On Windows, this is ``%AppData%\Blazium\app_userdata\[project_name]``, or ``%AppData%\[custom_name]`` if ``use_custom_user_dir`` is set. ``%AppData%`` expands to ``%UserProfile%\AppData\Roaming``.
+- On Windows, this is ``%AppData%\Godot\app_userdata\[project_name]``, or ``%AppData%\[custom_name]`` if ``use_custom_user_dir`` is set. ``%AppData%`` expands to ``%UserProfile%\AppData\Roaming``.
 
-- On macOS, this is ``~/Library/Application Support/Blazium/app_userdata/[project_name]``, or ``~/Library/Application Support/[custom_name]`` if ``use_custom_user_dir`` is set.
+- On macOS, this is ``~/Library/Application Support/Godot/app_userdata/[project_name]``, or ``~/Library/Application Support/[custom_name]`` if ``use_custom_user_dir`` is set.
 
-- On Linux and BSD, this is ``~/.local/share/blazium/app_userdata/[project_name]``, or ``~/.local/share/[custom_name]`` if ``use_custom_user_dir`` is set.
+- On Linux and BSD, this is ``~/.local/share/godot/app_userdata/[project_name]``, or ``~/.local/share/[custom_name]`` if ``use_custom_user_dir`` is set.
 
 - On Android and iOS, this is a sandboxed directory in either internal or external storage, depending on the user's configuration.
 
@@ -1294,6 +1322,20 @@ Returns the exact production and build version of the operating system. This is 
 - For Android, the SDK version and the incremental build number are returned. If it's a custom ROM, it attempts to return its version instead.
 
 \ **Note:** This method is not supported on the Web platform. It returns an empty string.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_OS_method_get_version_alias:
+
+.. rst-class:: classref-method
+
+:ref:`String<class_String>` **get_version_alias**\ (\ ) |const| :ref:`🔗<class_OS_method_get_version_alias>`
+
+Returns the branded version used in marketing, followed by the build number (on Windows) or the version number (on macOS). Examples include ``11 (build 22000)`` and ``Sequoia (15.0.0)``. This value can then be appended to :ref:`get_name<class_OS_method_get_name>` to get a full, human-readable operating system name and version combination for the operating system. Windows feature updates such as 24H2 are not contained in the resulting string, but Windows Server is recognized as such (e.g. ``2025 (build 26100)`` for Windows Server 2025).
+
+\ **Note:** This method is only supported on Windows and macOS. On other operating systems, it returns the same value as :ref:`get_version<class_OS_method_get_version>`.
 
 .. rst-class:: classref-item-separator
 
@@ -1353,11 +1395,11 @@ Returns ``true`` if the feature for the given feature tag is supported in the cu
 
 :ref:`bool<class_bool>` **is_debug_build**\ (\ ) |const| :ref:`🔗<class_OS_method_is_debug_build>`
 
-Returns ``true`` if the Blazium binary used to run the project is a *debug* export template, or when running in the editor.
+Returns ``true`` if the Godot binary used to run the project is a *debug* export template, or when running in the editor.
 
-Returns ``false`` if the Blazium binary used to run the project is a *release* export template.
+Returns ``false`` if the Godot binary used to run the project is a *release* export template.
 
-\ **Note:** To check whether the Blazium binary used to run the project is an export template (debug or release), use ``OS.has_feature("template")`` instead.
+\ **Note:** To check whether the Godot binary used to run the project is an export template (debug or release), use ``OS.has_feature("template")`` instead.
 
 .. rst-class:: classref-item-separator
 
@@ -1383,10 +1425,10 @@ Returns ``true`` if the input keycode corresponds to a Unicode character. For a 
 
  .. code-tab:: csharp
 
-    GD.Print(OS.IsKeycodeUnicode((long)Key.G));      // Prints true
-    GD.Print(OS.IsKeycodeUnicode((long)Key.Kp4));    // Prints true
-    GD.Print(OS.IsKeycodeUnicode((long)Key.Tab));    // Prints false
-    GD.Print(OS.IsKeycodeUnicode((long)Key.Escape)); // Prints false
+    GD.Print(OS.IsKeycodeUnicode((long)Key.G));      // Prints True
+    GD.Print(OS.IsKeycodeUnicode((long)Key.Kp4));    // Prints True
+    GD.Print(OS.IsKeycodeUnicode((long)Key.Tab));    // Prints False
+    GD.Print(OS.IsKeycodeUnicode((long)Key.Escape)); // Prints False
 
 
 
@@ -1515,9 +1557,13 @@ Returns :ref:`@GlobalScope.FAILED<class_@GlobalScope_constant_FAILED>` if the fi
 
 |void| **open_midi_inputs**\ (\ ) :ref:`🔗<class_OS_method_open_midi_inputs>`
 
-Initializes the singleton for the system MIDI driver, allowing Blazium to receive :ref:`InputEventMIDI<class_InputEventMIDI>`. See also :ref:`get_connected_midi_inputs<class_OS_method_get_connected_midi_inputs>` and :ref:`close_midi_inputs<class_OS_method_close_midi_inputs>`.
+Initializes the singleton for the system MIDI driver, allowing Godot to receive :ref:`InputEventMIDI<class_InputEventMIDI>`. See also :ref:`get_connected_midi_inputs<class_OS_method_get_connected_midi_inputs>` and :ref:`close_midi_inputs<class_OS_method_close_midi_inputs>`.
 
-\ **Note:** This method is implemented on Linux, macOS and Windows.
+\ **Note:** This method is implemented on Linux, macOS, Windows, and Web.
+
+\ **Note:** On the Web platform, Web MIDI needs to be supported by the browser. `For the time being <https://caniuse.com/midi>`__, it is currently supported by all major browsers, except Safari.
+
+\ **Note:** On the Web platform, using MIDI input requires a browser permission to be granted first. This permission request is performed when calling :ref:`open_midi_inputs<class_OS_method_open_midi_inputs>`. The browser will refrain from processing MIDI input until the user accepts the permission request.
 
 .. rst-class:: classref-item-separator
 
@@ -1585,7 +1631,7 @@ On macOS (sandboxed applications only), this function clears list of user select
 
 |void| **set_environment**\ (\ variable\: :ref:`String<class_String>`, value\: :ref:`String<class_String>`\ ) |const| :ref:`🔗<class_OS_method_set_environment>`
 
-Sets the value of the environment variable ``variable`` to ``value``. The environment variable will be set for the Blazium process and any process executed with :ref:`execute<class_OS_method_execute>` after running :ref:`set_environment<class_OS_method_set_environment>`. The environment variable will *not* persist to processes run after the Blazium process was terminated.
+Sets the value of the environment variable ``variable`` to ``value``. The environment variable will be set for the Godot process and any process executed with :ref:`execute<class_OS_method_execute>` after running :ref:`set_environment<class_OS_method_set_environment>`. The environment variable will *not* persist to processes run after the Godot process was terminated.
 
 \ **Note:** Environment variable names are case-sensitive on all platforms except Windows. The ``variable`` name cannot be empty or include the ``=`` character. On Windows, there is a 32767 characters limit for the combined length of ``variable``, ``value``, and the ``=`` and null terminator characters that will be registered in the environment block.
 
@@ -1631,7 +1677,7 @@ Assigns the given name to the current thread. Returns :ref:`@GlobalScope.ERR_UNA
 
 If ``enabled`` is ``true``, when opening a file for writing, a temporary file is used in its place. When closed, it is automatically applied to the target file.
 
-This can useful when files may be opened by other applications, such as antiviruses, text editors, or even the Blazium editor itself.
+This can useful when files may be opened by other applications, such as antiviruses, text editors, or even the Godot editor itself.
 
 .. rst-class:: classref-item-separator
 
@@ -1645,9 +1691,11 @@ This can useful when files may be opened by other applications, such as antiviru
 
 Requests the OS to open a resource identified by ``uri`` with the most appropriate program. For example:
 
-- ``OS.shell_open("C:\\Users\name\Downloads")`` on Windows opens the file explorer at the user's Downloads folder.
+- ``OS.shell_open("C:\\Users\\name\\Downloads")`` on Windows opens the file explorer at the user's Downloads folder.
 
-- ``OS.shell_open("https://blazium.app")`` opens the default web browser on the official Blazium website.
+- ``OS.shell_open("C:/Users/name/Downloads")`` also works on Windows and opens the file explorer at the user's Downloads folder.
+
+- ``OS.shell_open("https://godotengine.org")`` opens the default web browser on the official Godot website.
 
 - ``OS.shell_open("mailto:example@example.com")`` opens the default email client with the "To" field set to ``example@example.com``. See `RFC 2368 - The [code]mailto[/code] URL scheme <https://datatracker.ietf.org/doc/html/rfc2368>`__ for a list of fields that can be added.
 
@@ -1685,7 +1733,7 @@ Use :ref:`ProjectSettings.globalize_path<class_ProjectSettings_method_globalize_
 
 |void| **unset_environment**\ (\ variable\: :ref:`String<class_String>`\ ) |const| :ref:`🔗<class_OS_method_unset_environment>`
 
-Removes the given environment variable from the current environment, if it exists. The ``variable`` name cannot be empty or include the ``=`` character. The environment variable will be removed for the Blazium process and any process executed with :ref:`execute<class_OS_method_execute>` after running :ref:`unset_environment<class_OS_method_unset_environment>`. The removal of the environment variable will *not* persist to processes run after the Blazium process was terminated.
+Removes the given environment variable from the current environment, if it exists. The ``variable`` name cannot be empty or include the ``=`` character. The environment variable will be removed for the Godot process and any process executed with :ref:`execute<class_OS_method_execute>` after running :ref:`unset_environment<class_OS_method_unset_environment>`. The removal of the environment variable will *not* persist to processes run after the Godot process was terminated.
 
 \ **Note:** Environment variable names are case-sensitive on all platforms except Windows.
 

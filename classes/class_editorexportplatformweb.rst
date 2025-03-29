@@ -40,49 +40,87 @@ Properties
 .. table::
    :widths: auto
 
-   +-----------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | :ref:`String<class_String>` | :ref:`custom_template/debug<class_EditorExportPlatformWeb_property_custom_template/debug>`                                                                         |
-   +-----------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | :ref:`String<class_String>` | :ref:`custom_template/release<class_EditorExportPlatformWeb_property_custom_template/release>`                                                                     |
-   +-----------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | :ref:`int<class_int>`       | :ref:`html/canvas_resize_policy<class_EditorExportPlatformWeb_property_html/canvas_resize_policy>`                                                                 |
-   +-----------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | :ref:`String<class_String>` | :ref:`html/custom_html_shell<class_EditorExportPlatformWeb_property_html/custom_html_shell>`                                                                       |
-   +-----------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | :ref:`bool<class_bool>`     | :ref:`html/experimental_virtual_keyboard<class_EditorExportPlatformWeb_property_html/experimental_virtual_keyboard>`                                               |
-   +-----------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | :ref:`bool<class_bool>`     | :ref:`html/export_icon<class_EditorExportPlatformWeb_property_html/export_icon>`                                                                                   |
-   +-----------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | :ref:`bool<class_bool>`     | :ref:`html/focus_canvas_on_start<class_EditorExportPlatformWeb_property_html/focus_canvas_on_start>`                                                               |
-   +-----------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | :ref:`String<class_String>` | :ref:`html/head_include<class_EditorExportPlatformWeb_property_html/head_include>`                                                                                 |
-   +-----------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | :ref:`Color<class_Color>`   | :ref:`progressive_web_app/background_color<class_EditorExportPlatformWeb_property_progressive_web_app/background_color>`                                           |
-   +-----------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | :ref:`int<class_int>`       | :ref:`progressive_web_app/display<class_EditorExportPlatformWeb_property_progressive_web_app/display>`                                                             |
-   +-----------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | :ref:`bool<class_bool>`     | :ref:`progressive_web_app/enabled<class_EditorExportPlatformWeb_property_progressive_web_app/enabled>`                                                             |
-   +-----------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | :ref:`bool<class_bool>`     | :ref:`progressive_web_app/ensure_cross_origin_isolation_headers<class_EditorExportPlatformWeb_property_progressive_web_app/ensure_cross_origin_isolation_headers>` |
-   +-----------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | :ref:`String<class_String>` | :ref:`progressive_web_app/icon_144x144<class_EditorExportPlatformWeb_property_progressive_web_app/icon_144x144>`                                                   |
-   +-----------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | :ref:`String<class_String>` | :ref:`progressive_web_app/icon_180x180<class_EditorExportPlatformWeb_property_progressive_web_app/icon_180x180>`                                                   |
-   +-----------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | :ref:`String<class_String>` | :ref:`progressive_web_app/icon_512x512<class_EditorExportPlatformWeb_property_progressive_web_app/icon_512x512>`                                                   |
-   +-----------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | :ref:`String<class_String>` | :ref:`progressive_web_app/offline_page<class_EditorExportPlatformWeb_property_progressive_web_app/offline_page>`                                                   |
-   +-----------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | :ref:`int<class_int>`       | :ref:`progressive_web_app/orientation<class_EditorExportPlatformWeb_property_progressive_web_app/orientation>`                                                     |
-   +-----------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | :ref:`bool<class_bool>`     | :ref:`variant/extensions_support<class_EditorExportPlatformWeb_property_variant/extensions_support>`                                                               |
-   +-----------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | :ref:`bool<class_bool>`     | :ref:`variant/thread_support<class_EditorExportPlatformWeb_property_variant/thread_support>`                                                                       |
-   +-----------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | :ref:`bool<class_bool>`     | :ref:`vram_texture_compression/for_desktop<class_EditorExportPlatformWeb_property_vram_texture_compression/for_desktop>`                                           |
-   +-----------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | :ref:`bool<class_bool>`     | :ref:`vram_texture_compression/for_mobile<class_EditorExportPlatformWeb_property_vram_texture_compression/for_mobile>`                                             |
-   +-----------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   +-----------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`bool<class_bool>`     | :ref:`blazium/discord_embed/autodetect<class_EditorExportPlatformWeb_property_blazium/discord_embed/autodetect>`                                                     |
+   +-----------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`bool<class_bool>`     | :ref:`blazium/discord_embed/enabled<class_EditorExportPlatformWeb_property_blazium/discord_embed/enabled>`                                                           |
+   +-----------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`bool<class_bool>`     | :ref:`blazium/export_gzip_compressed_wasm/enabled<class_EditorExportPlatformWeb_property_blazium/export_gzip_compressed_wasm/enabled>`                               |
+   +-----------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`bool<class_bool>`     | :ref:`blazium/export_gzip_compressed_wasm/keep_uncompressed_wasm<class_EditorExportPlatformWeb_property_blazium/export_gzip_compressed_wasm/keep_uncompressed_wasm>` |
+   +-----------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`String<class_String>` | :ref:`blazium/social_headers/card<class_EditorExportPlatformWeb_property_blazium/social_headers/card>`                                                               |
+   +-----------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`String<class_String>` | :ref:`blazium/social_headers/description<class_EditorExportPlatformWeb_property_blazium/social_headers/description>`                                                 |
+   +-----------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`bool<class_bool>`     | :ref:`blazium/social_headers/enabled<class_EditorExportPlatformWeb_property_blazium/social_headers/enabled>`                                                         |
+   +-----------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`String<class_String>` | :ref:`blazium/social_headers/image<class_EditorExportPlatformWeb_property_blazium/social_headers/image>`                                                             |
+   +-----------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`String<class_String>` | :ref:`blazium/social_headers/site<class_EditorExportPlatformWeb_property_blazium/social_headers/site>`                                                               |
+   +-----------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`String<class_String>` | :ref:`blazium/social_headers/title<class_EditorExportPlatformWeb_property_blazium/social_headers/title>`                                                             |
+   +-----------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`String<class_String>` | :ref:`blazium/social_headers/url<class_EditorExportPlatformWeb_property_blazium/social_headers/url>`                                                                 |
+   +-----------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`String<class_String>` | :ref:`blazium/web_headers/description<class_EditorExportPlatformWeb_property_blazium/web_headers/description>`                                                       |
+   +-----------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`bool<class_bool>`     | :ref:`blazium/web_headers/enabled<class_EditorExportPlatformWeb_property_blazium/web_headers/enabled>`                                                               |
+   +-----------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`String<class_String>` | :ref:`blazium/web_headers/image<class_EditorExportPlatformWeb_property_blazium/web_headers/image>`                                                                   |
+   +-----------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`String<class_String>` | :ref:`blazium/web_headers/site_name<class_EditorExportPlatformWeb_property_blazium/web_headers/site_name>`                                                           |
+   +-----------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`String<class_String>` | :ref:`blazium/web_headers/title<class_EditorExportPlatformWeb_property_blazium/web_headers/title>`                                                                   |
+   +-----------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`String<class_String>` | :ref:`blazium/web_headers/type<class_EditorExportPlatformWeb_property_blazium/web_headers/type>`                                                                     |
+   +-----------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`String<class_String>` | :ref:`blazium/web_headers/url<class_EditorExportPlatformWeb_property_blazium/web_headers/url>`                                                                       |
+   +-----------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`bool<class_bool>`     | :ref:`blazium/youtube_playable/enabled<class_EditorExportPlatformWeb_property_blazium/youtube_playable/enabled>`                                                     |
+   +-----------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`String<class_String>` | :ref:`custom_template/debug<class_EditorExportPlatformWeb_property_custom_template/debug>`                                                                           |
+   +-----------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`String<class_String>` | :ref:`custom_template/release<class_EditorExportPlatformWeb_property_custom_template/release>`                                                                       |
+   +-----------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`int<class_int>`       | :ref:`html/canvas_resize_policy<class_EditorExportPlatformWeb_property_html/canvas_resize_policy>`                                                                   |
+   +-----------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`String<class_String>` | :ref:`html/custom_html_shell<class_EditorExportPlatformWeb_property_html/custom_html_shell>`                                                                         |
+   +-----------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`bool<class_bool>`     | :ref:`html/experimental_virtual_keyboard<class_EditorExportPlatformWeb_property_html/experimental_virtual_keyboard>`                                                 |
+   +-----------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`bool<class_bool>`     | :ref:`html/export_icon<class_EditorExportPlatformWeb_property_html/export_icon>`                                                                                     |
+   +-----------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`bool<class_bool>`     | :ref:`html/focus_canvas_on_start<class_EditorExportPlatformWeb_property_html/focus_canvas_on_start>`                                                                 |
+   +-----------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`String<class_String>` | :ref:`html/head_include<class_EditorExportPlatformWeb_property_html/head_include>`                                                                                   |
+   +-----------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`Color<class_Color>`   | :ref:`progressive_web_app/background_color<class_EditorExportPlatformWeb_property_progressive_web_app/background_color>`                                             |
+   +-----------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`int<class_int>`       | :ref:`progressive_web_app/display<class_EditorExportPlatformWeb_property_progressive_web_app/display>`                                                               |
+   +-----------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`bool<class_bool>`     | :ref:`progressive_web_app/enabled<class_EditorExportPlatformWeb_property_progressive_web_app/enabled>`                                                               |
+   +-----------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`bool<class_bool>`     | :ref:`progressive_web_app/ensure_cross_origin_isolation_headers<class_EditorExportPlatformWeb_property_progressive_web_app/ensure_cross_origin_isolation_headers>`   |
+   +-----------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`String<class_String>` | :ref:`progressive_web_app/icon_144x144<class_EditorExportPlatformWeb_property_progressive_web_app/icon_144x144>`                                                     |
+   +-----------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`String<class_String>` | :ref:`progressive_web_app/icon_180x180<class_EditorExportPlatformWeb_property_progressive_web_app/icon_180x180>`                                                     |
+   +-----------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`String<class_String>` | :ref:`progressive_web_app/icon_512x512<class_EditorExportPlatformWeb_property_progressive_web_app/icon_512x512>`                                                     |
+   +-----------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`String<class_String>` | :ref:`progressive_web_app/offline_page<class_EditorExportPlatformWeb_property_progressive_web_app/offline_page>`                                                     |
+   +-----------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`int<class_int>`       | :ref:`progressive_web_app/orientation<class_EditorExportPlatformWeb_property_progressive_web_app/orientation>`                                                       |
+   +-----------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`bool<class_bool>`     | :ref:`variant/extensions_support<class_EditorExportPlatformWeb_property_variant/extensions_support>`                                                                 |
+   +-----------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`bool<class_bool>`     | :ref:`variant/thread_support<class_EditorExportPlatformWeb_property_variant/thread_support>`                                                                         |
+   +-----------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`bool<class_bool>`     | :ref:`vram_texture_compression/for_desktop<class_EditorExportPlatformWeb_property_vram_texture_compression/for_desktop>`                                             |
+   +-----------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`bool<class_bool>`     | :ref:`vram_texture_compression/for_mobile<class_EditorExportPlatformWeb_property_vram_texture_compression/for_mobile>`                                               |
+   +-----------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 .. rst-class:: classref-section-separator
 
@@ -92,6 +130,238 @@ Properties
 
 Property Descriptions
 ---------------------
+
+.. _class_EditorExportPlatformWeb_property_blazium/discord_embed/autodetect:
+
+.. rst-class:: classref-property
+
+:ref:`bool<class_bool>` **blazium/discord_embed/autodetect** :ref:`🔗<class_EditorExportPlatformWeb_property_blazium/discord_embed/autodetect>`
+
+Autodetect and patch the url to work with discord if running on discord domain.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_EditorExportPlatformWeb_property_blazium/discord_embed/enabled:
+
+.. rst-class:: classref-property
+
+:ref:`bool<class_bool>` **blazium/discord_embed/enabled** :ref:`🔗<class_EditorExportPlatformWeb_property_blazium/discord_embed/enabled>`
+
+Enable if you want to use discord embedded app feature.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_EditorExportPlatformWeb_property_blazium/export_gzip_compressed_wasm/enabled:
+
+.. rst-class:: classref-property
+
+:ref:`bool<class_bool>` **blazium/export_gzip_compressed_wasm/enabled** :ref:`🔗<class_EditorExportPlatformWeb_property_blazium/export_gzip_compressed_wasm/enabled>`
+
+Enable if you want to export the WASM file as a GZIP. Recommended when exporting for Youtube Playables.
+
+\ **Note:** Your web server will have to serve the ``index.wasm.gz`` file when the client request for ``index.wasm``.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_EditorExportPlatformWeb_property_blazium/export_gzip_compressed_wasm/keep_uncompressed_wasm:
+
+.. rst-class:: classref-property
+
+:ref:`bool<class_bool>` **blazium/export_gzip_compressed_wasm/keep_uncompressed_wasm** :ref:`🔗<class_EditorExportPlatformWeb_property_blazium/export_gzip_compressed_wasm/keep_uncompressed_wasm>`
+
+Enable if you want to keep the uncompressed base WASM file.
+
+\ **Note:** If you plan to serve either the compressed or uncompressed WASM file, the game loading progress bar may not accurately reflect actual loading times.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_EditorExportPlatformWeb_property_blazium/social_headers/card:
+
+.. rst-class:: classref-property
+
+:ref:`String<class_String>` **blazium/social_headers/card** :ref:`🔗<class_EditorExportPlatformWeb_property_blazium/social_headers/card>`
+
+The card meta property of the web page.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_EditorExportPlatformWeb_property_blazium/social_headers/description:
+
+.. rst-class:: classref-property
+
+:ref:`String<class_String>` **blazium/social_headers/description** :ref:`🔗<class_EditorExportPlatformWeb_property_blazium/social_headers/description>`
+
+The description meta property of the web page.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_EditorExportPlatformWeb_property_blazium/social_headers/enabled:
+
+.. rst-class:: classref-property
+
+:ref:`bool<class_bool>` **blazium/social_headers/enabled** :ref:`🔗<class_EditorExportPlatformWeb_property_blazium/social_headers/enabled>`
+
+Enable if you want to use social headers.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_EditorExportPlatformWeb_property_blazium/social_headers/image:
+
+.. rst-class:: classref-property
+
+:ref:`String<class_String>` **blazium/social_headers/image** :ref:`🔗<class_EditorExportPlatformWeb_property_blazium/social_headers/image>`
+
+The image meta property of the web page.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_EditorExportPlatformWeb_property_blazium/social_headers/site:
+
+.. rst-class:: classref-property
+
+:ref:`String<class_String>` **blazium/social_headers/site** :ref:`🔗<class_EditorExportPlatformWeb_property_blazium/social_headers/site>`
+
+The site meta property of the web page.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_EditorExportPlatformWeb_property_blazium/social_headers/title:
+
+.. rst-class:: classref-property
+
+:ref:`String<class_String>` **blazium/social_headers/title** :ref:`🔗<class_EditorExportPlatformWeb_property_blazium/social_headers/title>`
+
+The title meta property of the web page.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_EditorExportPlatformWeb_property_blazium/social_headers/url:
+
+.. rst-class:: classref-property
+
+:ref:`String<class_String>` **blazium/social_headers/url** :ref:`🔗<class_EditorExportPlatformWeb_property_blazium/social_headers/url>`
+
+The url meta property of the web page.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_EditorExportPlatformWeb_property_blazium/web_headers/description:
+
+.. rst-class:: classref-property
+
+:ref:`String<class_String>` **blazium/web_headers/description** :ref:`🔗<class_EditorExportPlatformWeb_property_blazium/web_headers/description>`
+
+The description open graph property of the web page.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_EditorExportPlatformWeb_property_blazium/web_headers/enabled:
+
+.. rst-class:: classref-property
+
+:ref:`bool<class_bool>` **blazium/web_headers/enabled** :ref:`🔗<class_EditorExportPlatformWeb_property_blazium/web_headers/enabled>`
+
+Enable if you want to use web headers.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_EditorExportPlatformWeb_property_blazium/web_headers/image:
+
+.. rst-class:: classref-property
+
+:ref:`String<class_String>` **blazium/web_headers/image** :ref:`🔗<class_EditorExportPlatformWeb_property_blazium/web_headers/image>`
+
+The image open graph property of the web page.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_EditorExportPlatformWeb_property_blazium/web_headers/site_name:
+
+.. rst-class:: classref-property
+
+:ref:`String<class_String>` **blazium/web_headers/site_name** :ref:`🔗<class_EditorExportPlatformWeb_property_blazium/web_headers/site_name>`
+
+The site name open graph property of the web page.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_EditorExportPlatformWeb_property_blazium/web_headers/title:
+
+.. rst-class:: classref-property
+
+:ref:`String<class_String>` **blazium/web_headers/title** :ref:`🔗<class_EditorExportPlatformWeb_property_blazium/web_headers/title>`
+
+The title open graph property of the web page.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_EditorExportPlatformWeb_property_blazium/web_headers/type:
+
+.. rst-class:: classref-property
+
+:ref:`String<class_String>` **blazium/web_headers/type** :ref:`🔗<class_EditorExportPlatformWeb_property_blazium/web_headers/type>`
+
+The type open graph property of the web page.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_EditorExportPlatformWeb_property_blazium/web_headers/url:
+
+.. rst-class:: classref-property
+
+:ref:`String<class_String>` **blazium/web_headers/url** :ref:`🔗<class_EditorExportPlatformWeb_property_blazium/web_headers/url>`
+
+The url open graph property of the web page.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_EditorExportPlatformWeb_property_blazium/youtube_playable/enabled:
+
+.. rst-class:: classref-property
+
+:ref:`bool<class_bool>` **blazium/youtube_playable/enabled** :ref:`🔗<class_EditorExportPlatformWeb_property_blazium/youtube_playable/enabled>`
+
+Enable if you want to use youtube playables feature.
+
+.. rst-class:: classref-item-separator
+
+----
 
 .. _class_EditorExportPlatformWeb_property_custom_template/debug:
 

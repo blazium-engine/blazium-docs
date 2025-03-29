@@ -25,6 +25,8 @@ Base class for all UI-related nodes. **Control** features a bounding rectangle t
 
 For more information on Godot's UI system, anchors, offsets, and containers, see the related tutorials in the manual. To build flexible UIs, you'll need a mix of UI elements that inherit from **Control** and :ref:`Container<class_Container>` nodes.
 
+\ **Note:** Since both :ref:`Node2D<class_Node2D>` and **Control** inherit from :ref:`CanvasItem<class_CanvasItem>`, they share several concepts from the class such as the :ref:`CanvasItem.z_index<class_CanvasItem_property_z_index>` and :ref:`CanvasItem.visible<class_CanvasItem_property_visible>` properties.
+
 \ **User Interface nodes and input**\ 
 
 Godot propagates input events via viewports. Each :ref:`Viewport<class_Viewport>` is responsible for propagating :ref:`InputEvent<class_InputEvent>`\ s to their child nodes. As the :ref:`SceneTree.root<class_SceneTree_property_root>` is a :ref:`Window<class_Window>`, this already happens automatically for all UI elements in your game.
@@ -37,7 +39,7 @@ Only one **Control** node can be in focus. Only the node in focus will receive e
 
 Sets :ref:`mouse_filter<class_Control_property_mouse_filter>` to :ref:`MOUSE_FILTER_IGNORE<class_Control_constant_MOUSE_FILTER_IGNORE>` to tell a **Control** node to ignore mouse or touch events. You'll need it if you place an icon on top of a button.
 
-\ :ref:`Theme<class_Theme>` resources change the Control's appearance. If you change the :ref:`Theme<class_Theme>` on a **Control** node, it affects all of its children. To override some of the theme's parameters, call one of the ``add_theme_*_override`` methods, like :ref:`add_theme_font_override<class_Control_method_add_theme_font_override>`. You can override the theme with the Inspector.
+\ :ref:`Theme<class_Theme>` resources change the control's appearance. The :ref:`theme<class_Control_property_theme>` of a **Control** node affects all of its direct and indirect children (as long as a chain of controls is uninterrupted). To override some of the theme items, call one of the ``add_theme_*_override`` methods, like :ref:`add_theme_font_override<class_Control_method_add_theme_font_override>`. You can also override theme items in the Inspector.
 
 \ **Note:** Theme items are *not* :ref:`Object<class_Object>` properties. This means you can't access their values using :ref:`Object.get<class_Object_method_get>` and :ref:`Object.set<class_Object_method_set>`. Instead, use the ``get_theme_*`` and ``add_theme_*_override`` methods provided by this class.
 
@@ -142,6 +144,8 @@ Properties
    | :ref:`Theme<class_Theme>`                                           | :ref:`theme<class_Control_property_theme>`                                                   |                                                                               |
    +---------------------------------------------------------------------+----------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------+
    | :ref:`StringName<class_StringName>`                                 | :ref:`theme_type_variation<class_Control_property_theme_type_variation>`                     | ``&""``                                                                       |
+   +---------------------------------------------------------------------+----------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------+
+   | :ref:`AutoTranslateMode<enum_Node_AutoTranslateMode>`               | :ref:`tooltip_auto_translate_mode<class_Control_property_tooltip_auto_translate_mode>`       | ``0``                                                                         |
    +---------------------------------------------------------------------+----------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------+
    | :ref:`String<class_String>`                                         | :ref:`tooltip_text<class_Control_property_tooltip_text>`                                     | ``""``                                                                        |
    +---------------------------------------------------------------------+----------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------+
@@ -992,11 +996,11 @@ enum **LayoutDirection**: :ref:`🔗<enum_Control_LayoutDirection>`
 
 Automatic layout direction, determined from the parent control layout direction.
 
-.. _class_Control_constant_LAYOUT_DIRECTION_LOCALE:
+.. _class_Control_constant_LAYOUT_DIRECTION_APPLICATION_LOCALE:
 
 .. rst-class:: classref-enumeration-constant
 
-:ref:`LayoutDirection<enum_Control_LayoutDirection>` **LAYOUT_DIRECTION_LOCALE** = ``1``
+:ref:`LayoutDirection<enum_Control_LayoutDirection>` **LAYOUT_DIRECTION_APPLICATION_LOCALE** = ``1``
 
 Automatic layout direction, determined from the current locale.
 
@@ -1015,6 +1019,32 @@ Left-to-right layout direction.
 :ref:`LayoutDirection<enum_Control_LayoutDirection>` **LAYOUT_DIRECTION_RTL** = ``3``
 
 Right-to-left layout direction.
+
+.. _class_Control_constant_LAYOUT_DIRECTION_SYSTEM_LOCALE:
+
+.. rst-class:: classref-enumeration-constant
+
+:ref:`LayoutDirection<enum_Control_LayoutDirection>` **LAYOUT_DIRECTION_SYSTEM_LOCALE** = ``4``
+
+Automatic layout direction, determined from the system locale.
+
+.. _class_Control_constant_LAYOUT_DIRECTION_MAX:
+
+.. rst-class:: classref-enumeration-constant
+
+:ref:`LayoutDirection<enum_Control_LayoutDirection>` **LAYOUT_DIRECTION_MAX** = ``5``
+
+Represents the size of the :ref:`LayoutDirection<enum_Control_LayoutDirection>` enum.
+
+.. _class_Control_constant_LAYOUT_DIRECTION_LOCALE:
+
+.. rst-class:: classref-enumeration-constant
+
+:ref:`LayoutDirection<enum_Control_LayoutDirection>` **LAYOUT_DIRECTION_LOCALE** = ``1``
+
+**Deprecated:** Use :ref:`LAYOUT_DIRECTION_APPLICATION_LOCALE<class_Control_constant_LAYOUT_DIRECTION_APPLICATION_LOCALE>` instead.
+
+
 
 .. rst-class:: classref-item-separator
 
@@ -1581,9 +1611,11 @@ Controls whether the control will be able to receive mouse button input events t
 - |void| **set_force_pass_scroll_events**\ (\ value\: :ref:`bool<class_bool>`\ )
 - :ref:`bool<class_bool>` **is_force_pass_scroll_events**\ (\ )
 
-When enabled, scroll wheel events processed by :ref:`_gui_input<class_Control_private_method__gui_input>` will be passed to the parent control even if :ref:`mouse_filter<class_Control_property_mouse_filter>` is set to :ref:`MOUSE_FILTER_STOP<class_Control_constant_MOUSE_FILTER_STOP>`. As it defaults to true, this allows nested scrollable containers to work out of the box.
+When enabled, scroll wheel events processed by :ref:`_gui_input<class_Control_private_method__gui_input>` will be passed to the parent control even if :ref:`mouse_filter<class_Control_property_mouse_filter>` is set to :ref:`MOUSE_FILTER_STOP<class_Control_constant_MOUSE_FILTER_STOP>`.
 
 You should disable it on the root of your UI if you do not want scroll events to go to the :ref:`Node._unhandled_input<class_Node_private_method__unhandled_input>` processing.
+
+\ **Note:** Because this property defaults to ``true``, this allows nested scrollable containers to work out of the box.
 
 .. rst-class:: classref-item-separator
 
@@ -1883,6 +1915,25 @@ When set, this property gives the highest priority to the type of the specified 
 
 ----
 
+.. _class_Control_property_tooltip_auto_translate_mode:
+
+.. rst-class:: classref-property
+
+:ref:`AutoTranslateMode<enum_Node_AutoTranslateMode>` **tooltip_auto_translate_mode** = ``0`` :ref:`🔗<class_Control_property_tooltip_auto_translate_mode>`
+
+.. rst-class:: classref-property-setget
+
+- |void| **set_tooltip_auto_translate_mode**\ (\ value\: :ref:`AutoTranslateMode<enum_Node_AutoTranslateMode>`\ )
+- :ref:`AutoTranslateMode<enum_Node_AutoTranslateMode>` **get_tooltip_auto_translate_mode**\ (\ )
+
+Defines if tooltip text should automatically change to its translated version depending on the current locale. Uses the same auto translate mode as this control when set to :ref:`Node.AUTO_TRANSLATE_MODE_INHERIT<class_Node_constant_AUTO_TRANSLATE_MODE_INHERIT>`.
+
+\ **Note:** Tooltips customized using :ref:`_make_custom_tooltip<class_Control_private_method__make_custom_tooltip>` do not use this auto translate mode automatically.
+
+.. rst-class:: classref-item-separator
+
+----
+
 .. _class_Control_property_tooltip_text:
 
 .. rst-class:: classref-property
@@ -1894,7 +1945,9 @@ When set, this property gives the highest priority to the type of the specified 
 - |void| **set_tooltip_text**\ (\ value\: :ref:`String<class_String>`\ )
 - :ref:`String<class_String>` **get_tooltip_text**\ (\ )
 
-The default tooltip text. The tooltip appears when the user's mouse cursor stays idle over this control for a few moments, provided that the :ref:`mouse_filter<class_Control_property_mouse_filter>` property is not :ref:`MOUSE_FILTER_IGNORE<class_Control_constant_MOUSE_FILTER_IGNORE>`. The time required for the tooltip to appear can be changed with the :ref:`ProjectSettings.gui/timers/tooltip_delay_sec<class_ProjectSettings_property_gui/timers/tooltip_delay_sec>` option. See also :ref:`get_tooltip<class_Control_method_get_tooltip>`.
+The default tooltip text. The tooltip appears when the user's mouse cursor stays idle over this control for a few moments, provided that the :ref:`mouse_filter<class_Control_property_mouse_filter>` property is not :ref:`MOUSE_FILTER_IGNORE<class_Control_constant_MOUSE_FILTER_IGNORE>`. The time required for the tooltip to appear can be changed with the :ref:`ProjectSettings.gui/timers/tooltip_delay_sec<class_ProjectSettings_property_gui/timers/tooltip_delay_sec>` setting.
+
+This string is the default return value of :ref:`get_tooltip<class_Control_method_get_tooltip>`. Override :ref:`_get_tooltip<class_Control_private_method__get_tooltip>` to generate tooltip text dynamically. Override :ref:`_make_custom_tooltip<class_Control_private_method__make_custom_tooltip>` to customize the tooltip interface and behavior.
 
 The tooltip popup will use either a default implementation, or a custom one that you can provide by overriding :ref:`_make_custom_tooltip<class_Control_private_method__make_custom_tooltip>`. The default tooltip includes a :ref:`PopupPanel<class_PopupPanel>` and :ref:`Label<class_Label>` whose theme properties can be customized using :ref:`Theme<class_Theme>` methods with the ``"TooltipPanel"`` and ``"TooltipLabel"`` respectively. For example:
 
@@ -2061,7 +2114,7 @@ If not overridden, defaults to :ref:`Vector2.ZERO<class_Vector2_constant_ZERO>`.
 
 Virtual method to be implemented by the user. Returns the tooltip text for the position ``at_position`` in control's local coordinates, which will typically appear when the cursor is resting over this control. See :ref:`get_tooltip<class_Control_method_get_tooltip>`.
 
-\ **Note:** If this method returns an empty :ref:`String<class_String>`, no tooltip is displayed.
+\ **Note:** If this method returns an empty :ref:`String<class_String>` and :ref:`_make_custom_tooltip<class_Control_private_method__make_custom_tooltip>` is not overridden, no tooltip is displayed.
 
 .. rst-class:: classref-item-separator
 
@@ -2073,9 +2126,9 @@ Virtual method to be implemented by the user. Returns the tooltip text for the p
 
 |void| **_gui_input**\ (\ event\: :ref:`InputEvent<class_InputEvent>`\ ) |virtual| :ref:`🔗<class_Control_private_method__gui_input>`
 
-Virtual method to be implemented by the user. Use this method to process and accept inputs on UI elements. See :ref:`accept_event<class_Control_method_accept_event>`.
+Virtual method to be implemented by the user. Override this method to handle and accept inputs on UI elements. See also :ref:`accept_event<class_Control_method_accept_event>`.
 
-\ **Example usage for clicking a control:**\ 
+\ **Example:** Click on the control to print a message:
 
 
 .. tabs::
@@ -2102,19 +2155,19 @@ Virtual method to be implemented by the user. Use this method to process and acc
 
 
 
-The event won't trigger if:
+If the ``event`` inherits :ref:`InputEventMouse<class_InputEventMouse>`, this method will **not** be called when:
 
-\* clicking outside the control (see :ref:`_has_point<class_Control_private_method__has_point>`);
+- the control's :ref:`mouse_filter<class_Control_property_mouse_filter>` is set to :ref:`MOUSE_FILTER_IGNORE<class_Control_constant_MOUSE_FILTER_IGNORE>`;
 
-\* control has :ref:`mouse_filter<class_Control_property_mouse_filter>` set to :ref:`MOUSE_FILTER_IGNORE<class_Control_constant_MOUSE_FILTER_IGNORE>`;
+- the control is obstructed by another control on top, that doesn't have :ref:`mouse_filter<class_Control_property_mouse_filter>` set to :ref:`MOUSE_FILTER_IGNORE<class_Control_constant_MOUSE_FILTER_IGNORE>`;
 
-\* control is obstructed by another **Control** on top of it, which doesn't have :ref:`mouse_filter<class_Control_property_mouse_filter>` set to :ref:`MOUSE_FILTER_IGNORE<class_Control_constant_MOUSE_FILTER_IGNORE>`;
+- the control's parent has :ref:`mouse_filter<class_Control_property_mouse_filter>` set to :ref:`MOUSE_FILTER_STOP<class_Control_constant_MOUSE_FILTER_STOP>` or has accepted the event;
 
-\* control's parent has :ref:`mouse_filter<class_Control_property_mouse_filter>` set to :ref:`MOUSE_FILTER_STOP<class_Control_constant_MOUSE_FILTER_STOP>` or has accepted the event;
+- the control's parent has :ref:`clip_contents<class_Control_property_clip_contents>` enabled and the ``event``'s position is outside the parent's rectangle;
 
-\* it happens outside the parent's rectangle and the parent has either :ref:`clip_contents<class_Control_property_clip_contents>` enabled.
+- the ``event``'s position is outside the control (see :ref:`_has_point<class_Control_private_method__has_point>`).
 
-\ **Note:** Event position is relative to the control origin.
+\ **Note:** The ``event``'s position is relative to this control's origin.
 
 .. rst-class:: classref-item-separator
 
@@ -2142,7 +2195,7 @@ If not overridden, default behavior is checking if the point is within control's
 
 :ref:`Object<class_Object>` **_make_custom_tooltip**\ (\ for_text\: :ref:`String<class_String>`\ ) |virtual| |const| :ref:`🔗<class_Control_private_method__make_custom_tooltip>`
 
-Virtual method to be implemented by the user. Returns a **Control** node that should be used as a tooltip instead of the default one. The ``for_text`` includes the contents of the :ref:`tooltip_text<class_Control_property_tooltip_text>` property.
+Virtual method to be implemented by the user. Returns a **Control** node that should be used as a tooltip instead of the default one. ``for_text`` is the return value of :ref:`get_tooltip<class_Control_method_get_tooltip>`.
 
 The returned node must be of type **Control** or Control-derived. It can have child nodes of any type. It is freed when the tooltip disappears, so make sure you always provide a new instance (if you want to use a pre-existing node from your scene tree, you can duplicate it and pass the duplicated instance). When ``null`` or a non-Control node is returned, the default tooltip will be used instead.
 
@@ -2150,9 +2203,11 @@ The returned node will be added as child to a :ref:`PopupPanel<class_PopupPanel>
 
 \ **Note:** The tooltip is shrunk to minimal size. If you want to ensure it's fully visible, you might want to set its :ref:`custom_minimum_size<class_Control_property_custom_minimum_size>` to some non-zero value.
 
-\ **Note:** The node (and any relevant children) should be :ref:`CanvasItem.visible<class_CanvasItem_property_visible>` when returned, otherwise, the viewport that instantiates it will not be able to calculate its minimum size reliably.
+\ **Note:** The node (and any relevant children) should have their :ref:`CanvasItem.visible<class_CanvasItem_property_visible>` set to ``true`` when returned, otherwise, the viewport that instantiates it will not be able to calculate its minimum size reliably.
 
-\ **Example of usage with a custom-constructed node:**\ 
+\ **Note:** If overridden, this method is called even if :ref:`get_tooltip<class_Control_method_get_tooltip>` returns an empty string. When this happens with the default tooltip, it is not displayed. To copy this behavior, return ``null`` in this method when ``for_text`` is empty.
+
+\ **Example:** Use a constructed node as a tooltip:
 
 
 .. tabs::
@@ -2175,7 +2230,7 @@ The returned node will be added as child to a :ref:`PopupPanel<class_PopupPanel>
 
 
 
-\ **Example of usage with a custom scene instance:**\ 
+\ **Example:** Usa a scene instance as a tooltip:
 
 
 .. tabs::
@@ -2240,7 +2295,7 @@ Creates a local override for a theme :ref:`Color<class_Color>` with the specifie
 
 See also :ref:`get_theme_color<class_Control_method_get_theme_color>`.
 
-\ **Example of overriding a label's color and resetting it later:**\ 
+\ **Example:** Override a :ref:`Label<class_Label>`'s color and reset it later:
 
 
 .. tabs::
@@ -2335,14 +2390,14 @@ Creates a local override for a theme :ref:`StyleBox<class_StyleBox>` with the sp
 
 See also :ref:`get_theme_stylebox<class_Control_method_get_theme_stylebox>`.
 
-\ **Example of modifying a property in a StyleBox by duplicating it:**\ 
+\ **Example:** Modify a property in a :ref:`StyleBox<class_StyleBox>` by duplicating it:
 
 
 .. tabs::
 
  .. code-tab:: gdscript
 
-    # The snippet below assumes the child node MyButton has a StyleBoxFlat assigned.
+    # The snippet below assumes the child node "MyButton" has a StyleBoxFlat assigned.
     # Resources are shared across instances, so we need to duplicate it
     # to avoid modifying the appearance of all other buttons.
     var new_stylebox_normal = $MyButton.get_theme_stylebox("normal").duplicate()
@@ -2354,7 +2409,7 @@ See also :ref:`get_theme_stylebox<class_Control_method_get_theme_stylebox>`.
 
  .. code-tab:: csharp
 
-    // The snippet below assumes the child node MyButton has a StyleBoxFlat assigned.
+    // The snippet below assumes the child node "MyButton" has a StyleBoxFlat assigned.
     // Resources are shared across instances, so we need to duplicate it
     // to avoid modifying the appearance of all other buttons.
     StyleBoxFlat newStyleboxNormal = GetNode<Button>("MyButton").GetThemeStylebox("normal").Duplicate() as StyleBoxFlat;
@@ -2610,7 +2665,7 @@ Returns the position of this **Control** in global screen coordinates (i.e. taki
 
 Equals to :ref:`global_position<class_Control_property_global_position>` if the window is embedded (see :ref:`Viewport.gui_embed_subwindows<class_Viewport_property_gui_embed_subwindows>`).
 
-\ **Example usage for showing a popup:**\ 
+\ **Example:** Show a popup at the mouse position:
 
 ::
 
@@ -2781,7 +2836,7 @@ Returns the tooltip text for the position ``at_position`` in control's local coo
 
 This method can be overridden to customize its behavior. See :ref:`_get_tooltip<class_Control_private_method__get_tooltip>`.
 
-\ **Note:** If this method returns an empty :ref:`String<class_String>`, no tooltip is displayed.
+\ **Note:** If this method returns an empty :ref:`String<class_String>` and :ref:`_make_custom_tooltip<class_Control_private_method__make_custom_tooltip>` is not overridden, no tooltip is displayed.
 
 .. rst-class:: classref-item-separator
 
@@ -2793,7 +2848,7 @@ This method can be overridden to customize its behavior. See :ref:`_get_tooltip<
 
 |void| **grab_click_focus**\ (\ ) :ref:`🔗<class_Control_method_grab_click_focus>`
 
-Creates an :ref:`InputEventMouseButton<class_InputEventMouseButton>` that attempts to click the control. If the event is received, the control acquires focus.
+Creates an :ref:`InputEventMouseButton<class_InputEventMouseButton>` that attempts to click the control. If the event is received, the control gains focus.
 
 
 .. tabs::

@@ -41,6 +41,8 @@ Properties
    +----------------------------------------------------+----------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------+
    | :ref:`bool<class_bool>`                            | clip_contents                                                                                      | ``true`` (overrides :ref:`Control<class_Control_property_clip_contents>`) |
    +----------------------------------------------------+----------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------+
+   | :ref:`bool<class_bool>`                            | :ref:`draw_focus_border<class_ScrollContainer_property_draw_focus_border>`                         | ``false``                                                                 |
+   +----------------------------------------------------+----------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------+
    | :ref:`bool<class_bool>`                            | :ref:`follow_focus<class_ScrollContainer_property_follow_focus>`                                   | ``false``                                                                 |
    +----------------------------------------------------+----------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------+
    | :ref:`ScrollMode<enum_ScrollContainer_ScrollMode>` | :ref:`horizontal_scroll_mode<class_ScrollContainer_property_horizontal_scroll_mode>`               | ``1``                                                                     |
@@ -86,6 +88,8 @@ Theme Properties
    | :ref:`int<class_int>`           | :ref:`h_scroll_bar_separation<class_ScrollContainer_theme_constant_h_scroll_bar_separation>` | ``0`` |
    +---------------------------------+----------------------------------------------------------------------------------------------+-------+
    | :ref:`int<class_int>`           | :ref:`v_scroll_bar_separation<class_ScrollContainer_theme_constant_v_scroll_bar_separation>` | ``0`` |
+   +---------------------------------+----------------------------------------------------------------------------------------------+-------+
+   | :ref:`StyleBox<class_StyleBox>` | :ref:`focus<class_ScrollContainer_theme_style_focus>`                                        |       |
    +---------------------------------+----------------------------------------------------------------------------------------------+-------+
    | :ref:`StyleBox<class_StyleBox>` | :ref:`panel<class_ScrollContainer_theme_style_panel>`                                        |       |
    +---------------------------------+----------------------------------------------------------------------------------------------+-------+
@@ -170,6 +174,14 @@ Scrolling enabled, scrollbar will be always visible.
 
 Scrolling enabled, scrollbar will be hidden.
 
+.. _class_ScrollContainer_constant_SCROLL_MODE_RESERVE:
+
+.. rst-class:: classref-enumeration-constant
+
+:ref:`ScrollMode<enum_ScrollContainer_ScrollMode>` **SCROLL_MODE_RESERVE** = ``4``
+
+Combines :ref:`SCROLL_MODE_AUTO<class_ScrollContainer_constant_SCROLL_MODE_AUTO>` and :ref:`SCROLL_MODE_SHOW_ALWAYS<class_ScrollContainer_constant_SCROLL_MODE_SHOW_ALWAYS>`. The scrollbar is only visible if necessary, but the content size is adjusted as if it was always visible. It's useful for ensuring that content size stays the same regardless if the scrollbar is visible.
+
 .. rst-class:: classref-section-separator
 
 ----
@@ -178,6 +190,23 @@ Scrolling enabled, scrollbar will be hidden.
 
 Property Descriptions
 ---------------------
+
+.. _class_ScrollContainer_property_draw_focus_border:
+
+.. rst-class:: classref-property
+
+:ref:`bool<class_bool>` **draw_focus_border** = ``false`` :ref:`🔗<class_ScrollContainer_property_draw_focus_border>`
+
+.. rst-class:: classref-property-setget
+
+- |void| **set_draw_focus_border**\ (\ value\: :ref:`bool<class_bool>`\ )
+- :ref:`bool<class_bool>` **get_draw_focus_border**\ (\ )
+
+If ``true``, :ref:`focus<class_ScrollContainer_theme_style_focus>` is drawn when the ScrollContainer or one of its descendant nodes is focused.
+
+.. rst-class:: classref-item-separator
+
+----
 
 .. _class_ScrollContainer_property_follow_focus:
 
@@ -406,6 +435,18 @@ The vertical separation applied when the horizontal scroll bar is visible.
 :ref:`int<class_int>` **v_scroll_bar_separation** = ``0`` :ref:`🔗<class_ScrollContainer_theme_constant_v_scroll_bar_separation>`
 
 The horizontal separation applied when the vertical scroll bar is visible.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_ScrollContainer_theme_style_focus:
+
+.. rst-class:: classref-themeproperty
+
+:ref:`StyleBox<class_StyleBox>` **focus** :ref:`🔗<class_ScrollContainer_theme_style_focus>`
+
+The focus border :ref:`StyleBox<class_StyleBox>` of the **ScrollContainer**. Only used if :ref:`draw_focus_border<class_ScrollContainer_property_draw_focus_border>` is ``true``.
 
 .. rst-class:: classref-item-separator
 

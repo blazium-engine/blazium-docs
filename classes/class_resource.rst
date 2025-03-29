@@ -12,7 +12,7 @@ Resource
 
 **Inherits:** :ref:`RefCounted<class_RefCounted>` **<** :ref:`Object<class_Object>`
 
-**Inherited By:** :ref:`Animation<class_Animation>`, :ref:`AnimationLibrary<class_AnimationLibrary>`, :ref:`AnimationNode<class_AnimationNode>`, :ref:`AnimationNodeStateMachinePlayback<class_AnimationNodeStateMachinePlayback>`, :ref:`AnimationNodeStateMachineTransition<class_AnimationNodeStateMachineTransition>`, :ref:`AudioBusLayout<class_AudioBusLayout>`, :ref:`AudioEffect<class_AudioEffect>`, :ref:`AudioStream<class_AudioStream>`, :ref:`BitMap<class_BitMap>`, :ref:`BoneMap<class_BoneMap>`, :ref:`ButtonGroup<class_ButtonGroup>`, :ref:`CameraAttributes<class_CameraAttributes>`, :ref:`Compositor<class_Compositor>`, :ref:`CompositorEffect<class_CompositorEffect>`, :ref:`CryptoKey<class_CryptoKey>`, :ref:`Curve<class_Curve>`, :ref:`Curve2D<class_Curve2D>`, :ref:`Curve3D<class_Curve3D>`, :ref:`EditorNode3DGizmoPlugin<class_EditorNode3DGizmoPlugin>`, :ref:`EditorSettings<class_EditorSettings>`, :ref:`Environment<class_Environment>`, :ref:`Font<class_Font>`, :ref:`GameServerInfo<class_GameServerInfo>`, :ref:`GDExtension<class_GDExtension>`, :ref:`GLTFAccessor<class_GLTFAccessor>`, :ref:`GLTFAnimation<class_GLTFAnimation>`, :ref:`GLTFBufferView<class_GLTFBufferView>`, :ref:`GLTFCamera<class_GLTFCamera>`, :ref:`GLTFDocument<class_GLTFDocument>`, :ref:`GLTFDocumentExtension<class_GLTFDocumentExtension>`, :ref:`GLTFLight<class_GLTFLight>`, :ref:`GLTFMesh<class_GLTFMesh>`, :ref:`GLTFNode<class_GLTFNode>`, :ref:`GLTFPhysicsBody<class_GLTFPhysicsBody>`, :ref:`GLTFPhysicsShape<class_GLTFPhysicsShape>`, :ref:`GLTFSkeleton<class_GLTFSkeleton>`, :ref:`GLTFSkin<class_GLTFSkin>`, :ref:`GLTFSpecGloss<class_GLTFSpecGloss>`, :ref:`GLTFState<class_GLTFState>`, :ref:`GLTFTexture<class_GLTFTexture>`, :ref:`GLTFTextureSampler<class_GLTFTextureSampler>`, :ref:`Gradient<class_Gradient>`, :ref:`Image<class_Image>`, :ref:`ImporterMesh<class_ImporterMesh>`, :ref:`InputEvent<class_InputEvent>`, :ref:`JSON<class_JSON>`, :ref:`LabelSettings<class_LabelSettings>`, :ref:`LightmapGIData<class_LightmapGIData>`, :ref:`LobbyInfo<class_LobbyInfo>`, :ref:`LobbyPeer<class_LobbyPeer>`, :ref:`Material<class_Material>`, :ref:`Mesh<class_Mesh>`, :ref:`MeshLibrary<class_MeshLibrary>`, :ref:`MissingResource<class_MissingResource>`, :ref:`MultiMesh<class_MultiMesh>`, :ref:`NavigationMesh<class_NavigationMesh>`, :ref:`NavigationMeshSourceGeometryData2D<class_NavigationMeshSourceGeometryData2D>`, :ref:`NavigationMeshSourceGeometryData3D<class_NavigationMeshSourceGeometryData3D>`, :ref:`NavigationPolygon<class_NavigationPolygon>`, :ref:`Noise<class_Noise>`, :ref:`Occluder3D<class_Occluder3D>`, :ref:`OccluderPolygon2D<class_OccluderPolygon2D>`, :ref:`OggPacketSequence<class_OggPacketSequence>`, :ref:`OpenXRAction<class_OpenXRAction>`, :ref:`OpenXRActionMap<class_OpenXRActionMap>`, :ref:`OpenXRActionSet<class_OpenXRActionSet>`, :ref:`OpenXRInteractionProfile<class_OpenXRInteractionProfile>`, :ref:`OpenXRIPBinding<class_OpenXRIPBinding>`, :ref:`PackedDataContainer<class_PackedDataContainer>`, :ref:`PackedScene<class_PackedScene>`, :ref:`PhysicsMaterial<class_PhysicsMaterial>`, :ref:`PolygonPathFinder<class_PolygonPathFinder>`, :ref:`RDShaderFile<class_RDShaderFile>`, :ref:`RDShaderSPIRV<class_RDShaderSPIRV>`, :ref:`RichTextEffect<class_RichTextEffect>`, :ref:`SceneReplicationConfig<class_SceneReplicationConfig>`, :ref:`Script<class_Script>`, :ref:`Shader<class_Shader>`, :ref:`ShaderInclude<class_ShaderInclude>`, :ref:`Shape2D<class_Shape2D>`, :ref:`Shape3D<class_Shape3D>`, :ref:`Shortcut<class_Shortcut>`, :ref:`SkeletonModification2D<class_SkeletonModification2D>`, :ref:`SkeletonModificationStack2D<class_SkeletonModificationStack2D>`, :ref:`SkeletonProfile<class_SkeletonProfile>`, :ref:`Skin<class_Skin>`, :ref:`Sky<class_Sky>`, :ref:`SpriteFrames<class_SpriteFrames>`, :ref:`StyleBox<class_StyleBox>`, :ref:`SyntaxHighlighter<class_SyntaxHighlighter>`, :ref:`Texture<class_Texture>`, :ref:`Theme<class_Theme>`, :ref:`TileMapPattern<class_TileMapPattern>`, :ref:`TileSet<class_TileSet>`, :ref:`TileSetSource<class_TileSetSource>`, :ref:`Translation<class_Translation>`, :ref:`VideoStream<class_VideoStream>`, :ref:`VideoStreamPlayback<class_VideoStreamPlayback>`, :ref:`VisualShaderNode<class_VisualShaderNode>`, :ref:`VoxelGIData<class_VoxelGIData>`, :ref:`World2D<class_World2D>`, :ref:`World3D<class_World3D>`, :ref:`X509Certificate<class_X509Certificate>`
+**Inherited By:** :ref:`Animation<class_Animation>`, :ref:`AnimationLibrary<class_AnimationLibrary>`, :ref:`AnimationNode<class_AnimationNode>`, :ref:`AnimationNodeStateMachinePlayback<class_AnimationNodeStateMachinePlayback>`, :ref:`AnimationNodeStateMachineTransition<class_AnimationNodeStateMachineTransition>`, :ref:`AudioBusLayout<class_AudioBusLayout>`, :ref:`AudioEffect<class_AudioEffect>`, :ref:`AudioStream<class_AudioStream>`, :ref:`BitMap<class_BitMap>`, :ref:`BoneMap<class_BoneMap>`, :ref:`ButtonGroup<class_ButtonGroup>`, :ref:`CameraAttributes<class_CameraAttributes>`, :ref:`Compositor<class_Compositor>`, :ref:`CompositorEffect<class_CompositorEffect>`, :ref:`CryptoKey<class_CryptoKey>`, :ref:`CSV<class_CSV>`, :ref:`Curve<class_Curve>`, :ref:`Curve2D<class_Curve2D>`, :ref:`Curve3D<class_Curve3D>`, :ref:`EditorNode3DGizmoPlugin<class_EditorNode3DGizmoPlugin>`, :ref:`EditorSettings<class_EditorSettings>`, :ref:`Environment<class_Environment>`, :ref:`FoldableGroup<class_FoldableGroup>`, :ref:`Font<class_Font>`, :ref:`GameServerInfo<class_GameServerInfo>`, :ref:`GDExtension<class_GDExtension>`, :ref:`GLTFAccessor<class_GLTFAccessor>`, :ref:`GLTFAnimation<class_GLTFAnimation>`, :ref:`GLTFBufferView<class_GLTFBufferView>`, :ref:`GLTFCamera<class_GLTFCamera>`, :ref:`GLTFDocument<class_GLTFDocument>`, :ref:`GLTFDocumentExtension<class_GLTFDocumentExtension>`, :ref:`GLTFLight<class_GLTFLight>`, :ref:`GLTFMesh<class_GLTFMesh>`, :ref:`GLTFNode<class_GLTFNode>`, :ref:`GLTFPhysicsBody<class_GLTFPhysicsBody>`, :ref:`GLTFPhysicsShape<class_GLTFPhysicsShape>`, :ref:`GLTFSkeleton<class_GLTFSkeleton>`, :ref:`GLTFSkin<class_GLTFSkin>`, :ref:`GLTFSpecGloss<class_GLTFSpecGloss>`, :ref:`GLTFState<class_GLTFState>`, :ref:`GLTFTexture<class_GLTFTexture>`, :ref:`GLTFTextureSampler<class_GLTFTextureSampler>`, :ref:`Gradient<class_Gradient>`, :ref:`Image<class_Image>`, :ref:`ImporterMesh<class_ImporterMesh>`, :ref:`InputEvent<class_InputEvent>`, :ref:`JSON<class_JSON>`, :ref:`LabelSettings<class_LabelSettings>`, :ref:`LightmapGIData<class_LightmapGIData>`, :ref:`LobbyInfo<class_LobbyInfo>`, :ref:`LobbyPeer<class_LobbyPeer>`, :ref:`Material<class_Material>`, :ref:`Mesh<class_Mesh>`, :ref:`MeshLibrary<class_MeshLibrary>`, :ref:`MissingResource<class_MissingResource>`, :ref:`MultiMesh<class_MultiMesh>`, :ref:`NavigationMesh<class_NavigationMesh>`, :ref:`NavigationMeshSourceGeometryData2D<class_NavigationMeshSourceGeometryData2D>`, :ref:`NavigationMeshSourceGeometryData3D<class_NavigationMeshSourceGeometryData3D>`, :ref:`NavigationPolygon<class_NavigationPolygon>`, :ref:`Noise<class_Noise>`, :ref:`Occluder3D<class_Occluder3D>`, :ref:`OccluderPolygon2D<class_OccluderPolygon2D>`, :ref:`OggPacketSequence<class_OggPacketSequence>`, :ref:`OpenXRAction<class_OpenXRAction>`, :ref:`OpenXRActionMap<class_OpenXRActionMap>`, :ref:`OpenXRActionSet<class_OpenXRActionSet>`, :ref:`OpenXRBindingModifier<class_OpenXRBindingModifier>`, :ref:`OpenXRHapticBase<class_OpenXRHapticBase>`, :ref:`OpenXRInteractionProfile<class_OpenXRInteractionProfile>`, :ref:`OpenXRIPBinding<class_OpenXRIPBinding>`, :ref:`PackedDataContainer<class_PackedDataContainer>`, :ref:`PackedScene<class_PackedScene>`, :ref:`PhysicsMaterial<class_PhysicsMaterial>`, :ref:`PolygonPathFinder<class_PolygonPathFinder>`, :ref:`RDShaderFile<class_RDShaderFile>`, :ref:`RDShaderSPIRV<class_RDShaderSPIRV>`, :ref:`RichTextEffect<class_RichTextEffect>`, :ref:`SceneReplicationConfig<class_SceneReplicationConfig>`, :ref:`Script<class_Script>`, :ref:`Shader<class_Shader>`, :ref:`ShaderInclude<class_ShaderInclude>`, :ref:`Shape2D<class_Shape2D>`, :ref:`Shape3D<class_Shape3D>`, :ref:`Shortcut<class_Shortcut>`, :ref:`SkeletonModification2D<class_SkeletonModification2D>`, :ref:`SkeletonModificationStack2D<class_SkeletonModificationStack2D>`, :ref:`SkeletonProfile<class_SkeletonProfile>`, :ref:`Skin<class_Skin>`, :ref:`Sky<class_Sky>`, :ref:`SpriteFrames<class_SpriteFrames>`, :ref:`SQLiteDatabase<class_SQLiteDatabase>`, :ref:`StyleBox<class_StyleBox>`, :ref:`SyntaxHighlighter<class_SyntaxHighlighter>`, :ref:`Texture<class_Texture>`, :ref:`Theme<class_Theme>`, :ref:`TileMapPattern<class_TileMapPattern>`, :ref:`TileSet<class_TileSet>`, :ref:`TileSetSource<class_TileSetSource>`, :ref:`Translation<class_Translation>`, :ref:`VideoStream<class_VideoStream>`, :ref:`VideoStreamPlayback<class_VideoStreamPlayback>`, :ref:`VisualShaderNode<class_VisualShaderNode>`, :ref:`VoxelGIData<class_VoxelGIData>`, :ref:`World2D<class_World2D>`, :ref:`World3D<class_World3D>`, :ref:`X509Certificate<class_X509Certificate>`
 
 Base class for serializable objects.
 
@@ -64,25 +64,39 @@ Methods
 .. table::
    :widths: auto
 
-   +---------------------------------+-----------------------------------------------------------------------------------------------------------------+
-   | :ref:`RID<class_RID>`           | :ref:`_get_rid<class_Resource_private_method__get_rid>`\ (\ ) |virtual|                                         |
-   +---------------------------------+-----------------------------------------------------------------------------------------------------------------+
-   | |void|                          | :ref:`_setup_local_to_scene<class_Resource_private_method__setup_local_to_scene>`\ (\ ) |virtual|               |
-   +---------------------------------+-----------------------------------------------------------------------------------------------------------------+
-   | :ref:`Resource<class_Resource>` | :ref:`duplicate<class_Resource_method_duplicate>`\ (\ subresources\: :ref:`bool<class_bool>` = false\ ) |const| |
-   +---------------------------------+-----------------------------------------------------------------------------------------------------------------+
-   | |void|                          | :ref:`emit_changed<class_Resource_method_emit_changed>`\ (\ )                                                   |
-   +---------------------------------+-----------------------------------------------------------------------------------------------------------------+
-   | :ref:`String<class_String>`     | :ref:`generate_scene_unique_id<class_Resource_method_generate_scene_unique_id>`\ (\ ) |static|                  |
-   +---------------------------------+-----------------------------------------------------------------------------------------------------------------+
-   | :ref:`Node<class_Node>`         | :ref:`get_local_scene<class_Resource_method_get_local_scene>`\ (\ ) |const|                                     |
-   +---------------------------------+-----------------------------------------------------------------------------------------------------------------+
-   | :ref:`RID<class_RID>`           | :ref:`get_rid<class_Resource_method_get_rid>`\ (\ ) |const|                                                     |
-   +---------------------------------+-----------------------------------------------------------------------------------------------------------------+
-   | |void|                          | :ref:`setup_local_to_scene<class_Resource_method_setup_local_to_scene>`\ (\ )                                   |
-   +---------------------------------+-----------------------------------------------------------------------------------------------------------------+
-   | |void|                          | :ref:`take_over_path<class_Resource_method_take_over_path>`\ (\ path\: :ref:`String<class_String>`\ )           |
-   +---------------------------------+-----------------------------------------------------------------------------------------------------------------+
+   +---------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`RID<class_RID>`           | :ref:`_get_rid<class_Resource_private_method__get_rid>`\ (\ ) |virtual| |const|                                                           |
+   +---------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------+
+   | |void|                          | :ref:`_reset_state<class_Resource_private_method__reset_state>`\ (\ ) |virtual|                                                           |
+   +---------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------+
+   | |void|                          | :ref:`_set_path_cache<class_Resource_private_method__set_path_cache>`\ (\ path\: :ref:`String<class_String>`\ ) |virtual| |const|         |
+   +---------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------+
+   | |void|                          | :ref:`_setup_local_to_scene<class_Resource_private_method__setup_local_to_scene>`\ (\ ) |virtual|                                         |
+   +---------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`Resource<class_Resource>` | :ref:`duplicate<class_Resource_method_duplicate>`\ (\ subresources\: :ref:`bool<class_bool>` = false\ ) |const|                           |
+   +---------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------+
+   | |void|                          | :ref:`emit_changed<class_Resource_method_emit_changed>`\ (\ )                                                                             |
+   +---------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`String<class_String>`     | :ref:`generate_scene_unique_id<class_Resource_method_generate_scene_unique_id>`\ (\ ) |static|                                            |
+   +---------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`String<class_String>`     | :ref:`get_id_for_path<class_Resource_method_get_id_for_path>`\ (\ path\: :ref:`String<class_String>`\ ) |const|                           |
+   +---------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`Node<class_Node>`         | :ref:`get_local_scene<class_Resource_method_get_local_scene>`\ (\ ) |const|                                                               |
+   +---------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`RID<class_RID>`           | :ref:`get_rid<class_Resource_method_get_rid>`\ (\ ) |const|                                                                               |
+   +---------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`bool<class_bool>`         | :ref:`is_built_in<class_Resource_method_is_built_in>`\ (\ ) |const|                                                                       |
+   +---------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------+
+   | |void|                          | :ref:`reset_state<class_Resource_method_reset_state>`\ (\ )                                                                               |
+   +---------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------+
+   | |void|                          | :ref:`set_id_for_path<class_Resource_method_set_id_for_path>`\ (\ path\: :ref:`String<class_String>`, id\: :ref:`String<class_String>`\ ) |
+   +---------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------+
+   | |void|                          | :ref:`set_path_cache<class_Resource_method_set_path_cache>`\ (\ path\: :ref:`String<class_String>`\ )                                     |
+   +---------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------+
+   | |void|                          | :ref:`setup_local_to_scene<class_Resource_method_setup_local_to_scene>`\ (\ )                                                             |
+   +---------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------+
+   | |void|                          | :ref:`take_over_path<class_Resource_method_take_over_path>`\ (\ path\: :ref:`String<class_String>`\ )                                     |
+   +---------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------+
 
 .. rst-class:: classref-section-separator
 
@@ -215,9 +229,33 @@ Method Descriptions
 
 .. rst-class:: classref-method
 
-:ref:`RID<class_RID>` **_get_rid**\ (\ ) |virtual| :ref:`🔗<class_Resource_private_method__get_rid>`
+:ref:`RID<class_RID>` **_get_rid**\ (\ ) |virtual| |const| :ref:`🔗<class_Resource_private_method__get_rid>`
 
 Override this method to return a custom :ref:`RID<class_RID>` when :ref:`get_rid<class_Resource_method_get_rid>` is called.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_Resource_private_method__reset_state:
+
+.. rst-class:: classref-method
+
+|void| **_reset_state**\ (\ ) |virtual| :ref:`🔗<class_Resource_private_method__reset_state>`
+
+For resources that use a variable number of properties, either via :ref:`Object._validate_property<class_Object_private_method__validate_property>` or :ref:`Object._get_property_list<class_Object_private_method__get_property_list>`, this method should be implemented to correctly clear the resource's state.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_Resource_private_method__set_path_cache:
+
+.. rst-class:: classref-method
+
+|void| **_set_path_cache**\ (\ path\: :ref:`String<class_String>`\ ) |virtual| |const| :ref:`🔗<class_Resource_private_method__set_path_cache>`
+
+Sets the resource's path to ``path`` without involving the resource cache.
 
 .. rst-class:: classref-item-separator
 
@@ -231,7 +269,7 @@ Override this method to return a custom :ref:`RID<class_RID>` when :ref:`get_rid
 
 Override this method to customize the newly duplicated resource created from :ref:`PackedScene.instantiate<class_PackedScene_method_instantiate>`, if the original's :ref:`resource_local_to_scene<class_Resource_property_resource_local_to_scene>` is set to ``true``.
 
-\ **Example:** Set a random ``damage`` value to every local resource from an instantiated scene.
+\ **Example:** Set a random ``damage`` value to every local resource from an instantiated scene:
 
 ::
 
@@ -304,6 +342,20 @@ Generates a unique identifier for a resource to be contained inside a :ref:`Pack
 
 ----
 
+.. _class_Resource_method_get_id_for_path:
+
+.. rst-class:: classref-method
+
+:ref:`String<class_String>` **get_id_for_path**\ (\ path\: :ref:`String<class_String>`\ ) |const| :ref:`🔗<class_Resource_method_get_id_for_path>`
+
+Returns the unique identifier for the resource with the given ``path`` from the resource cache. If the resource is not loaded and cached, an empty string is returned.
+
+\ **Note:** This method is only implemented when running in an editor context. At runtime, it returns an empty string.
+
+.. rst-class:: classref-item-separator
+
+----
+
 .. _class_Resource_method_get_local_scene:
 
 .. rst-class:: classref-method
@@ -323,6 +375,56 @@ If :ref:`resource_local_to_scene<class_Resource_property_resource_local_to_scene
 :ref:`RID<class_RID>` **get_rid**\ (\ ) |const| :ref:`🔗<class_Resource_method_get_rid>`
 
 Returns the :ref:`RID<class_RID>` of this resource (or an empty RID). Many resources (such as :ref:`Texture2D<class_Texture2D>`, :ref:`Mesh<class_Mesh>`, and so on) are high-level abstractions of resources stored in a specialized server (:ref:`DisplayServer<class_DisplayServer>`, :ref:`RenderingServer<class_RenderingServer>`, etc.), so this function will return the original :ref:`RID<class_RID>`.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_Resource_method_is_built_in:
+
+.. rst-class:: classref-method
+
+:ref:`bool<class_bool>` **is_built_in**\ (\ ) |const| :ref:`🔗<class_Resource_method_is_built_in>`
+
+Returns ``true`` if the resource is built-in (from the engine) or ``false`` if it is user-defined.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_Resource_method_reset_state:
+
+.. rst-class:: classref-method
+
+|void| **reset_state**\ (\ ) :ref:`🔗<class_Resource_method_reset_state>`
+
+For resources that use a variable number of properties, either via :ref:`Object._validate_property<class_Object_private_method__validate_property>` or :ref:`Object._get_property_list<class_Object_private_method__get_property_list>`, override :ref:`_reset_state<class_Resource_private_method__reset_state>` to correctly clear the resource's state.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_Resource_method_set_id_for_path:
+
+.. rst-class:: classref-method
+
+|void| **set_id_for_path**\ (\ path\: :ref:`String<class_String>`, id\: :ref:`String<class_String>`\ ) :ref:`🔗<class_Resource_method_set_id_for_path>`
+
+Sets the unique identifier to ``id`` for the resource with the given ``path`` in the resource cache. If the unique identifier is empty, the cache entry using ``path`` is removed if it exists.
+
+\ **Note:** This method is only implemented when running in an editor context.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_Resource_method_set_path_cache:
+
+.. rst-class:: classref-method
+
+|void| **set_path_cache**\ (\ path\: :ref:`String<class_String>`\ ) :ref:`🔗<class_Resource_method_set_path_cache>`
+
+Sets the resource's path to ``path`` without involving the resource cache.
 
 .. rst-class:: classref-item-separator
 

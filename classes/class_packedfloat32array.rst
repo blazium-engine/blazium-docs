@@ -68,6 +68,8 @@ Methods
    +-----------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`int<class_int>`                               | :ref:`find<class_PackedFloat32Array_method_find>`\ (\ value\: :ref:`float<class_float>`, from\: :ref:`int<class_int>` = 0\ ) |const|       |
    +-----------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`float<class_float>`                           | :ref:`get<class_PackedFloat32Array_method_get>`\ (\ index\: :ref:`int<class_int>`\ ) |const|                                               |
+   +-----------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`bool<class_bool>`                             | :ref:`has<class_PackedFloat32Array_method_has>`\ (\ value\: :ref:`float<class_float>`\ ) |const|                                           |
    +-----------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`int<class_int>`                               | :ref:`insert<class_PackedFloat32Array_method_insert>`\ (\ at_index\: :ref:`int<class_int>`, value\: :ref:`float<class_float>`\ )           |
@@ -263,6 +265,18 @@ Searches the array for a value and returns its index or ``-1`` if not found. Opt
 
 ----
 
+.. _class_PackedFloat32Array_method_get:
+
+.. rst-class:: classref-method
+
+:ref:`float<class_float>` **get**\ (\ index\: :ref:`int<class_int>`\ ) |const| :ref:`🔗<class_PackedFloat32Array_method_get>`
+
+Returns the 32-bit float at the given ``index`` in the array. This is the same as using the ``[]`` operator (``array[index]``).
+
+.. rst-class:: classref-item-separator
+
+----
+
 .. _class_PackedFloat32Array_method_has:
 
 .. rst-class:: classref-method
@@ -423,7 +437,7 @@ Sorts the elements of the array in ascending order.
 
 :ref:`PackedByteArray<class_PackedByteArray>` **to_byte_array**\ (\ ) |const| :ref:`🔗<class_PackedFloat32Array_method_to_byte_array>`
 
-Returns a copy of the data converted to a :ref:`PackedByteArray<class_PackedByteArray>`, where each element have been encoded as 4 bytes.
+Returns a copy of the data converted to a :ref:`PackedByteArray<class_PackedByteArray>`, where each element has been encoded as 4 bytes.
 
 The size of the new array will be ``float32_array.size() * 4``.
 

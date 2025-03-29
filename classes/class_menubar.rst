@@ -12,14 +12,14 @@ MenuBar
 
 **Inherits:** :ref:`Control<class_Control>` **<** :ref:`CanvasItem<class_CanvasItem>` **<** :ref:`Node<class_Node>` **<** :ref:`Object<class_Object>`
 
-A horizontal menu bar that creates a :ref:`MenuButton<class_MenuButton>` for each :ref:`PopupMenu<class_PopupMenu>` child.
+A horizontal menu bar that creates a menu for each :ref:`PopupMenu<class_PopupMenu>` child.
 
 .. rst-class:: classref-introduction-group
 
 Description
 -----------
 
-A horizontal menu bar that creates a :ref:`MenuButton<class_MenuButton>` for each :ref:`PopupMenu<class_PopupMenu>` child. New items are created by adding :ref:`PopupMenu<class_PopupMenu>`\ s to this node.
+A horizontal menu bar that creates a menu for each :ref:`PopupMenu<class_PopupMenu>` child. New items are created by adding :ref:`PopupMenu<class_PopupMenu>`\ s to this node.
 
 .. rst-class:: classref-reftable-group
 
@@ -86,19 +86,19 @@ Theme Properties
    :widths: auto
 
    +---------------------------------+-------------------------------------------------------------------------------------+-------------------------------------+
-   | :ref:`Color<class_Color>`       | :ref:`font_color<class_MenuBar_theme_color_font_color>`                             | ``Color(0.875, 0.875, 0.875, 1)``   |
+   | :ref:`Color<class_Color>`       | :ref:`font_color<class_MenuBar_theme_color_font_color>`                             | ``Color(0.875, 0.875, 0.875, 0.8)`` |
    +---------------------------------+-------------------------------------------------------------------------------------+-------------------------------------+
-   | :ref:`Color<class_Color>`       | :ref:`font_disabled_color<class_MenuBar_theme_color_font_disabled_color>`           | ``Color(0.875, 0.875, 0.875, 0.5)`` |
+   | :ref:`Color<class_Color>`       | :ref:`font_disabled_color<class_MenuBar_theme_color_font_disabled_color>`           | ``Color(0.875, 0.875, 0.875, 0.4)`` |
    +---------------------------------+-------------------------------------------------------------------------------------+-------------------------------------+
-   | :ref:`Color<class_Color>`       | :ref:`font_focus_color<class_MenuBar_theme_color_font_focus_color>`                 | ``Color(0.95, 0.95, 0.95, 1)``      |
+   | :ref:`Color<class_Color>`       | :ref:`font_focus_color<class_MenuBar_theme_color_font_focus_color>`                 | ``Color(0.875, 0.875, 0.875, 0.9)`` |
    +---------------------------------+-------------------------------------------------------------------------------------+-------------------------------------+
-   | :ref:`Color<class_Color>`       | :ref:`font_hover_color<class_MenuBar_theme_color_font_hover_color>`                 | ``Color(0.95, 0.95, 0.95, 1)``      |
+   | :ref:`Color<class_Color>`       | :ref:`font_hover_color<class_MenuBar_theme_color_font_hover_color>`                 | ``Color(0.875, 0.875, 0.875, 1)``   |
    +---------------------------------+-------------------------------------------------------------------------------------+-------------------------------------+
-   | :ref:`Color<class_Color>`       | :ref:`font_hover_pressed_color<class_MenuBar_theme_color_font_hover_pressed_color>` | ``Color(1, 1, 1, 1)``               |
+   | :ref:`Color<class_Color>`       | :ref:`font_hover_pressed_color<class_MenuBar_theme_color_font_hover_pressed_color>` | ``Color(0.875, 0.875, 0.875, 1)``   |
    +---------------------------------+-------------------------------------------------------------------------------------+-------------------------------------+
    | :ref:`Color<class_Color>`       | :ref:`font_outline_color<class_MenuBar_theme_color_font_outline_color>`             | ``Color(0, 0, 0, 1)``               |
    +---------------------------------+-------------------------------------------------------------------------------------+-------------------------------------+
-   | :ref:`Color<class_Color>`       | :ref:`font_pressed_color<class_MenuBar_theme_color_font_pressed_color>`             | ``Color(1, 1, 1, 1)``               |
+   | :ref:`Color<class_Color>`       | :ref:`font_pressed_color<class_MenuBar_theme_color_font_pressed_color>`             | ``Color(0.226, 0.478, 0.921, 1)``   |
    +---------------------------------+-------------------------------------------------------------------------------------+-------------------------------------+
    | :ref:`int<class_int>`           | :ref:`h_separation<class_MenuBar_theme_constant_h_separation>`                      | ``4``                               |
    +---------------------------------+-------------------------------------------------------------------------------------+-------------------------------------+
@@ -185,6 +185,10 @@ Language code used for line-breaking and text shaping algorithms, if left empty 
 
 If ``true``, **MenuBar** will use system global menu when supported.
 
+\ **Note:** If ``true`` and global menu is supported, this node is not displayed, has zero size, and all its child nodes except :ref:`PopupMenu<class_PopupMenu>`\ s are inaccessible.
+
+\ **Note:** This property overrides the value of the :ref:`PopupMenu.prefer_native_menu<class_PopupMenu_property_prefer_native_menu>` property of the child nodes.
+
 .. rst-class:: classref-item-separator
 
 ----
@@ -200,7 +204,7 @@ If ``true``, **MenuBar** will use system global menu when supported.
 - |void| **set_start_index**\ (\ value\: :ref:`int<class_int>`\ )
 - :ref:`int<class_int>` **get_start_index**\ (\ )
 
-Position in the global menu to insert first **MenuBar** item at.
+Position order in the global menu to insert **MenuBar** items at. All menu items in the **MenuBar** are always inserted as a continuous range. Menus with lower :ref:`start_index<class_MenuBar_property_start_index>` are inserted first. Menus with :ref:`start_index<class_MenuBar_property_start_index>` equal to ``-1`` are inserted last.
 
 .. rst-class:: classref-item-separator
 
@@ -398,7 +402,7 @@ Theme Property Descriptions
 
 .. rst-class:: classref-themeproperty
 
-:ref:`Color<class_Color>` **font_color** = ``Color(0.875, 0.875, 0.875, 1)`` :ref:`🔗<class_MenuBar_theme_color_font_color>`
+:ref:`Color<class_Color>` **font_color** = ``Color(0.875, 0.875, 0.875, 0.8)`` :ref:`🔗<class_MenuBar_theme_color_font_color>`
 
 Default text :ref:`Color<class_Color>` of the menu item.
 
@@ -410,7 +414,7 @@ Default text :ref:`Color<class_Color>` of the menu item.
 
 .. rst-class:: classref-themeproperty
 
-:ref:`Color<class_Color>` **font_disabled_color** = ``Color(0.875, 0.875, 0.875, 0.5)`` :ref:`🔗<class_MenuBar_theme_color_font_disabled_color>`
+:ref:`Color<class_Color>` **font_disabled_color** = ``Color(0.875, 0.875, 0.875, 0.4)`` :ref:`🔗<class_MenuBar_theme_color_font_disabled_color>`
 
 Text :ref:`Color<class_Color>` used when the menu item is disabled.
 
@@ -422,7 +426,7 @@ Text :ref:`Color<class_Color>` used when the menu item is disabled.
 
 .. rst-class:: classref-themeproperty
 
-:ref:`Color<class_Color>` **font_focus_color** = ``Color(0.95, 0.95, 0.95, 1)`` :ref:`🔗<class_MenuBar_theme_color_font_focus_color>`
+:ref:`Color<class_Color>` **font_focus_color** = ``Color(0.875, 0.875, 0.875, 0.9)`` :ref:`🔗<class_MenuBar_theme_color_font_focus_color>`
 
 Text :ref:`Color<class_Color>` used when the menu item is focused. Only replaces the normal text color of the menu item. Disabled, hovered, and pressed states take precedence over this color.
 
@@ -434,7 +438,7 @@ Text :ref:`Color<class_Color>` used when the menu item is focused. Only replaces
 
 .. rst-class:: classref-themeproperty
 
-:ref:`Color<class_Color>` **font_hover_color** = ``Color(0.95, 0.95, 0.95, 1)`` :ref:`🔗<class_MenuBar_theme_color_font_hover_color>`
+:ref:`Color<class_Color>` **font_hover_color** = ``Color(0.875, 0.875, 0.875, 1)`` :ref:`🔗<class_MenuBar_theme_color_font_hover_color>`
 
 Text :ref:`Color<class_Color>` used when the menu item is being hovered.
 
@@ -446,7 +450,7 @@ Text :ref:`Color<class_Color>` used when the menu item is being hovered.
 
 .. rst-class:: classref-themeproperty
 
-:ref:`Color<class_Color>` **font_hover_pressed_color** = ``Color(1, 1, 1, 1)`` :ref:`🔗<class_MenuBar_theme_color_font_hover_pressed_color>`
+:ref:`Color<class_Color>` **font_hover_pressed_color** = ``Color(0.875, 0.875, 0.875, 1)`` :ref:`🔗<class_MenuBar_theme_color_font_hover_pressed_color>`
 
 Text :ref:`Color<class_Color>` used when the menu item is being hovered and pressed.
 
@@ -470,7 +474,7 @@ The tint of text outline of the menu item.
 
 .. rst-class:: classref-themeproperty
 
-:ref:`Color<class_Color>` **font_pressed_color** = ``Color(1, 1, 1, 1)`` :ref:`🔗<class_MenuBar_theme_color_font_pressed_color>`
+:ref:`Color<class_Color>` **font_pressed_color** = ``Color(0.226, 0.478, 0.921, 1)`` :ref:`🔗<class_MenuBar_theme_color_font_pressed_color>`
 
 Text :ref:`Color<class_Color>` used when the menu item is being pressed.
 

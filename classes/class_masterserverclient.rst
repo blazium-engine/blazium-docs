@@ -31,11 +31,13 @@ Properties
 .. table::
    :widths: auto
 
-   +-----------------------------+-----------------------------------------------------------------+-----------------------------------------------+
-   | :ref:`String<class_String>` | :ref:`game_id<class_MasterServerClient_property_game_id>`       | ``""``                                        |
-   +-----------------------------+-----------------------------------------------------------------+-----------------------------------------------+
-   | :ref:`String<class_String>` | :ref:`server_url<class_MasterServerClient_property_server_url>` | ``"https://masterserver.blazium.app/api/v1"`` |
-   +-----------------------------+-----------------------------------------------------------------+-----------------------------------------------+
+   +-----------------------------+-----------------------------------------------------------------------------------------------+-----------------------------------------------+
+   | :ref:`String<class_String>` | :ref:`discord_embedded_app/path<class_MasterServerClient_property_discord_embedded_app/path>` | ``"blazium/masterserver/api/v1"``             |
+   +-----------------------------+-----------------------------------------------------------------------------------------------+-----------------------------------------------+
+   | :ref:`String<class_String>` | :ref:`game_id<class_MasterServerClient_property_game_id>`                                     | ``""``                                        |
+   +-----------------------------+-----------------------------------------------------------------------------------------------+-----------------------------------------------+
+   | :ref:`String<class_String>` | :ref:`server_url<class_MasterServerClient_property_server_url>`                               | ``"https://masterserver.blazium.app/api/v1"`` |
+   +-----------------------------+-----------------------------------------------------------------------------------------------+-----------------------------------------------+
 
 .. rst-class:: classref-reftable-group
 
@@ -61,6 +63,23 @@ Methods
 
 Property Descriptions
 ---------------------
+
+.. _class_MasterServerClient_property_discord_embedded_app/path:
+
+.. rst-class:: classref-property
+
+:ref:`String<class_String>` **discord_embedded_app/path** = ``"blazium/masterserver/api/v1"`` :ref:`🔗<class_MasterServerClient_property_discord_embedded_app/path>`
+
+.. rst-class:: classref-property-setget
+
+- |void| **set_override_discord_path**\ (\ value\: :ref:`String<class_String>`\ )
+- :ref:`String<class_String>` **get_override_discord_path**\ (\ )
+
+Set to what path this client should use when connecting to the discord embedded app.
+
+.. rst-class:: classref-item-separator
+
+----
 
 .. _class_MasterServerClient_property_game_id:
 
@@ -93,6 +112,8 @@ Can only contain alphanumeric characters.
 - :ref:`String<class_String>` **get_server_url**\ (\ )
 
 Set to what url this client should connect to.
+
+For discord embedded app environment, replaces the url with `client_id.discordsays.com/.proxy/blazium/masterserver/api/v1 <https://client_id.discordsays.com/.proxy/blazium/masterserver/api/v1>`__ if left default, where client_id is the client id from the discord embedded app url (automatically detected).
 
 .. rst-class:: classref-section-separator
 

@@ -31,6 +31,33 @@ The normal flow is as follows:
 
 \ **Note:** All methods are non blocking and can be awaited in order to get the result.
 
+
+
+For tags parameter, valid tags are:
+
+
+.. tabs::
+
+ .. code-tab:: gdscript
+
+    var valid_tags = ["steam_id", "twitch_id", "association_id", "pogr_game_session", "xbox_id", "battlenet_id", "twitter_id", "linkedin_id", "pogr_player_id", "discord_id", "override_timestamp"]
+
+
+
+.. rst-class:: classref-reftable-group
+
+Properties
+----------
+
+.. table::
+   :widths: auto
+
+   +-----------------------------+-------------------------------------------------------+--------+
+   | :ref:`String<class_String>` | :ref:`build_id<class_POGRClient_property_build_id>`   | ``""`` |
+   +-----------------------------+-------------------------------------------------------+--------+
+   | :ref:`String<class_String>` | :ref:`client_id<class_POGRClient_property_client_id>` | ``""`` |
+   +-----------------------------+-------------------------------------------------------+--------+
+
 .. rst-class:: classref-reftable-group
 
 Methods
@@ -39,29 +66,81 @@ Methods
 .. table::
    :widths: auto
 
-   +-----------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | :ref:`POGRResponse<class_POGRResponse>` | :ref:`data<class_POGRClient_method_data>`\ (\ data\: :ref:`Dictionary<class_Dictionary>`\ )                                                                                                                                                                                                                                              |
-   +-----------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | :ref:`POGRResponse<class_POGRResponse>` | :ref:`end<class_POGRClient_method_end>`\ (\ )                                                                                                                                                                                                                                                                                            |
-   +-----------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | :ref:`POGRResponse<class_POGRResponse>` | :ref:`event<class_POGRClient_method_event>`\ (\ event_name\: :ref:`String<class_String>`, event_data\: :ref:`Dictionary<class_Dictionary>`, event_flag\: :ref:`String<class_String>`, event_key\: :ref:`String<class_String>`, event_type\: :ref:`String<class_String>`, event_sub_type\: :ref:`String<class_String>`\ )                 |
-   +-----------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | :ref:`String<class_String>`             | :ref:`get_build_id<class_POGRClient_method_get_build_id>`\ (\ ) |const|                                                                                                                                                                                                                                                                  |
-   +-----------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | :ref:`String<class_String>`             | :ref:`get_client_id<class_POGRClient_method_get_client_id>`\ (\ ) |const|                                                                                                                                                                                                                                                                |
-   +-----------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | :ref:`String<class_String>`             | :ref:`get_pogr_url<class_POGRClient_method_get_pogr_url>`\ (\ ) |const|                                                                                                                                                                                                                                                                  |
-   +-----------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | :ref:`String<class_String>`             | :ref:`get_session_id<class_POGRClient_method_get_session_id>`\ (\ )                                                                                                                                                                                                                                                                      |
-   +-----------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | :ref:`POGRResponse<class_POGRResponse>` | :ref:`init<class_POGRClient_method_init>`\ (\ )                                                                                                                                                                                                                                                                                          |
-   +-----------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | :ref:`POGRResponse<class_POGRResponse>` | :ref:`logs<class_POGRClient_method_logs>`\ (\ tags\: :ref:`Dictionary<class_Dictionary>`, data\: :ref:`Dictionary<class_Dictionary>`, environment\: :ref:`String<class_String>`, log\: :ref:`String<class_String>`, service\: :ref:`String<class_String>`, severity\: :ref:`String<class_String>`, type\: :ref:`String<class_String>`\ ) |
-   +-----------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | :ref:`POGRResponse<class_POGRResponse>` | :ref:`metrics<class_POGRClient_method_metrics>`\ (\ tags\: :ref:`Dictionary<class_Dictionary>`, environment\: :ref:`String<class_String>`, metrics\: :ref:`Dictionary<class_Dictionary>`, service\: :ref:`String<class_String>`\ )                                                                                                       |
-   +-----------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | :ref:`POGRResponse<class_POGRResponse>` | :ref:`monitor<class_POGRClient_method_monitor>`\ (\ settings\: :ref:`Dictionary<class_Dictionary>`\ )                                                                                                                                                                                                                                    |
-   +-----------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   +-----------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`POGRResponse<class_POGRResponse>` | :ref:`data<class_POGRClient_method_data>`\ (\ tags\: :ref:`Dictionary<class_Dictionary>`, data\: :ref:`Dictionary<class_Dictionary>`\ )                                                                                                                                                                                                                                                           |
+   +-----------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`POGRResponse<class_POGRResponse>` | :ref:`end<class_POGRClient_method_end>`\ (\ )                                                                                                                                                                                                                                                                                                                                                     |
+   +-----------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`POGRResponse<class_POGRResponse>` | :ref:`event<class_POGRClient_method_event>`\ (\ event_name\: :ref:`String<class_String>`, sub_event\: :ref:`String<class_String>`, event_key\: :ref:`String<class_String>`, flag\: :ref:`String<class_String>`, type\: :ref:`String<class_String>` = "user-event", tags\: :ref:`Dictionary<class_Dictionary>` = {}, data\: :ref:`Dictionary<class_Dictionary>` = {}\ )                            |
+   +-----------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`String<class_String>`             | :ref:`get_pogr_url<class_POGRClient_method_get_pogr_url>`\ (\ ) |const|                                                                                                                                                                                                                                                                                                                           |
+   +-----------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`String<class_String>`             | :ref:`get_session_id<class_POGRClient_method_get_session_id>`\ (\ )                                                                                                                                                                                                                                                                                                                               |
+   +-----------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`POGRResponse<class_POGRResponse>` | :ref:`init<class_POGRClient_method_init>`\ (\ association_id\: :ref:`String<class_String>`\ )                                                                                                                                                                                                                                                                                                     |
+   +-----------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`POGRResponse<class_POGRResponse>` | :ref:`logs<class_POGRClient_method_logs>`\ (\ log\: :ref:`String<class_String>`, severity\: :ref:`String<class_String>` = "info", environment\: :ref:`String<class_String>` = "dev", service\: :ref:`String<class_String>` = "gameclient", type\: :ref:`String<class_String>` = "user-event", tags\: :ref:`Dictionary<class_Dictionary>` = {}, data\: :ref:`Dictionary<class_Dictionary>` = {}\ ) |
+   +-----------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`POGRResponse<class_POGRResponse>` | :ref:`metrics<class_POGRClient_method_metrics>`\ (\ metrics\: :ref:`Dictionary<class_Dictionary>`, environment\: :ref:`String<class_String>` = "dev", service\: :ref:`String<class_String>` = "gameclient", tags\: :ref:`Dictionary<class_Dictionary>` = {}\ )                                                                                                                                    |
+   +-----------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`POGRResponse<class_POGRResponse>` | :ref:`monitor<class_POGRClient_method_monitor>`\ (\ settings\: :ref:`Dictionary<class_Dictionary>`\ )                                                                                                                                                                                                                                                                                             |
+   +-----------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+.. rst-class:: classref-section-separator
+
+----
+
+.. rst-class:: classref-descriptions-group
+
+Signals
+-------
+
+.. _class_POGRClient_signal_log_updated:
+
+.. rst-class:: classref-signal
+
+**log_updated**\ (\ command\: :ref:`String<class_String>`, logs\: :ref:`String<class_String>`\ ) :ref:`🔗<class_POGRClient_signal_log_updated>`
+
+Signals a log from a command.
+
+.. rst-class:: classref-section-separator
+
+----
+
+.. rst-class:: classref-descriptions-group
+
+Property Descriptions
+---------------------
+
+.. _class_POGRClient_property_build_id:
+
+.. rst-class:: classref-property
+
+:ref:`String<class_String>` **build_id** = ``""`` :ref:`🔗<class_POGRClient_property_build_id>`
+
+.. rst-class:: classref-property-setget
+
+- |void| **set_build_id**\ (\ value\: :ref:`String<class_String>`\ )
+- :ref:`String<class_String>` **get_build_id**\ (\ )
+
+The build ID obtained from the pogr Game Client page.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_POGRClient_property_client_id:
+
+.. rst-class:: classref-property
+
+:ref:`String<class_String>` **client_id** = ``""`` :ref:`🔗<class_POGRClient_property_client_id>`
+
+.. rst-class:: classref-property-setget
+
+- |void| **set_client_id**\ (\ value\: :ref:`String<class_String>`\ )
+- :ref:`String<class_String>` **get_client_id**\ (\ )
+
+The client ID obtained from the pogr Game Client page.
 
 .. rst-class:: classref-section-separator
 
@@ -76,11 +155,24 @@ Method Descriptions
 
 .. rst-class:: classref-method
 
-:ref:`POGRResponse<class_POGRResponse>` **data**\ (\ data\: :ref:`Dictionary<class_Dictionary>`\ ) :ref:`🔗<class_POGRClient_method_data>`
+:ref:`POGRResponse<class_POGRResponse>` **data**\ (\ tags\: :ref:`Dictionary<class_Dictionary>`, data\: :ref:`Dictionary<class_Dictionary>`\ ) :ref:`🔗<class_POGRClient_method_data>`
 
-Send unstructured data.
+Send unstructured data. Call :ref:`init<class_POGRClient_method_init>` first.
 
 Returns a :ref:`POGRResponse<class_POGRResponse>` object that has a :ref:`POGRResponse.finished<class_POGRResponse_signal_finished>` signal that is emitted when finished.
+
+
+
+
+.. tabs::
+
+ .. code-tab:: gdscript
+
+    var res :POGRResult = await data({"custom_data": "my_data"}).finished
+    if res.has_error():
+        print(res.error)
+
+
 
 .. rst-class:: classref-item-separator
 
@@ -92,9 +184,22 @@ Returns a :ref:`POGRResponse<class_POGRResponse>` object that has a :ref:`POGRRe
 
 :ref:`POGRResponse<class_POGRResponse>` **end**\ (\ ) :ref:`🔗<class_POGRClient_method_end>`
 
-Send end request.
+Send end request. Call :ref:`init<class_POGRClient_method_init>` first.
 
 Returns a :ref:`POGRResponse<class_POGRResponse>` object that has a :ref:`POGRResponse.finished<class_POGRResponse_signal_finished>` signal that is emitted when finished.
+
+
+
+
+.. tabs::
+
+ .. code-tab:: gdscript
+
+    var res :POGRResult = await end().finished
+    if res.has_error():
+        print(res.error)
+
+
 
 .. rst-class:: classref-item-separator
 
@@ -104,35 +209,24 @@ Returns a :ref:`POGRResponse<class_POGRResponse>` object that has a :ref:`POGRRe
 
 .. rst-class:: classref-method
 
-:ref:`POGRResponse<class_POGRResponse>` **event**\ (\ event_name\: :ref:`String<class_String>`, event_data\: :ref:`Dictionary<class_Dictionary>`, event_flag\: :ref:`String<class_String>`, event_key\: :ref:`String<class_String>`, event_type\: :ref:`String<class_String>`, event_sub_type\: :ref:`String<class_String>`\ ) :ref:`🔗<class_POGRClient_method_event>`
+:ref:`POGRResponse<class_POGRResponse>` **event**\ (\ event_name\: :ref:`String<class_String>`, sub_event\: :ref:`String<class_String>`, event_key\: :ref:`String<class_String>`, flag\: :ref:`String<class_String>`, type\: :ref:`String<class_String>` = "user-event", tags\: :ref:`Dictionary<class_Dictionary>` = {}, data\: :ref:`Dictionary<class_Dictionary>` = {}\ ) :ref:`🔗<class_POGRClient_method_event>`
 
-Send event with unstructured data.
+Send event with unstructured data. Call :ref:`init<class_POGRClient_method_init>` first.
 
 Returns a :ref:`POGRResponse<class_POGRResponse>` object that has a :ref:`POGRResponse.finished<class_POGRResponse_signal_finished>` signal that is emitted when finished.
 
-.. rst-class:: classref-item-separator
 
-----
 
-.. _class_POGRClient_method_get_build_id:
 
-.. rst-class:: classref-method
+.. tabs::
 
-:ref:`String<class_String>` **get_build_id**\ (\ ) |const| :ref:`🔗<class_POGRClient_method_get_build_id>`
+ .. code-tab:: gdscript
 
-Get the build id.
+    var res :POGRResult = await event("combat", "enemy_killed", "attack", "completed", "user-event").finished
+    if res.has_error():
+        print(res.error)
 
-.. rst-class:: classref-item-separator
 
-----
-
-.. _class_POGRClient_method_get_client_id:
-
-.. rst-class:: classref-method
-
-:ref:`String<class_String>` **get_client_id**\ (\ ) |const| :ref:`🔗<class_POGRClient_method_get_client_id>`
-
-Get the client id.
 
 .. rst-class:: classref-item-separator
 
@@ -166,11 +260,24 @@ Get the session id. This is a unique identifier for the current session generate
 
 .. rst-class:: classref-method
 
-:ref:`POGRResponse<class_POGRResponse>` **init**\ (\ ) :ref:`🔗<class_POGRClient_method_init>`
+:ref:`POGRResponse<class_POGRResponse>` **init**\ (\ association_id\: :ref:`String<class_String>`\ ) :ref:`🔗<class_POGRClient_method_init>`
 
-Send init request. Needs to be called first.
+Send init request. Needs to be called first. Needs to have set before :ref:`client_id<class_POGRClient_property_client_id>` and :ref:`build_id<class_POGRClient_property_build_id>`.
 
 Returns a :ref:`POGRResponse<class_POGRResponse>` object that has a :ref:`POGRResponse.finished<class_POGRResponse_signal_finished>` signal that is emitted when finished.
+
+
+
+
+.. tabs::
+
+ .. code-tab:: gdscript
+
+    var res :POGRResult = await init().finished
+    if res.has_error():
+        print(res.error)
+
+
 
 .. rst-class:: classref-item-separator
 
@@ -180,11 +287,24 @@ Returns a :ref:`POGRResponse<class_POGRResponse>` object that has a :ref:`POGRRe
 
 .. rst-class:: classref-method
 
-:ref:`POGRResponse<class_POGRResponse>` **logs**\ (\ tags\: :ref:`Dictionary<class_Dictionary>`, data\: :ref:`Dictionary<class_Dictionary>`, environment\: :ref:`String<class_String>`, log\: :ref:`String<class_String>`, service\: :ref:`String<class_String>`, severity\: :ref:`String<class_String>`, type\: :ref:`String<class_String>`\ ) :ref:`🔗<class_POGRClient_method_logs>`
+:ref:`POGRResponse<class_POGRResponse>` **logs**\ (\ log\: :ref:`String<class_String>`, severity\: :ref:`String<class_String>` = "info", environment\: :ref:`String<class_String>` = "dev", service\: :ref:`String<class_String>` = "gameclient", type\: :ref:`String<class_String>` = "user-event", tags\: :ref:`Dictionary<class_Dictionary>` = {}, data\: :ref:`Dictionary<class_Dictionary>` = {}\ ) :ref:`🔗<class_POGRClient_method_logs>`
 
-Add logs to the analytics.
+Add logs to the analytics. Call :ref:`init<class_POGRClient_method_init>` first.
 
 Returns a :ref:`POGRResponse<class_POGRResponse>` object that has a :ref:`POGRResponse.finished<class_POGRResponse_signal_finished>` signal that is emitted when finished.
+
+
+
+
+.. tabs::
+
+ .. code-tab:: gdscript
+
+    var res :POGRResult = await logs("logs 123").finished
+    if res.has_error():
+        print(res.error)
+
+
 
 .. rst-class:: classref-item-separator
 
@@ -194,11 +314,24 @@ Returns a :ref:`POGRResponse<class_POGRResponse>` object that has a :ref:`POGRRe
 
 .. rst-class:: classref-method
 
-:ref:`POGRResponse<class_POGRResponse>` **metrics**\ (\ tags\: :ref:`Dictionary<class_Dictionary>`, environment\: :ref:`String<class_String>`, metrics\: :ref:`Dictionary<class_Dictionary>`, service\: :ref:`String<class_String>`\ ) :ref:`🔗<class_POGRClient_method_metrics>`
+:ref:`POGRResponse<class_POGRResponse>` **metrics**\ (\ metrics\: :ref:`Dictionary<class_Dictionary>`, environment\: :ref:`String<class_String>` = "dev", service\: :ref:`String<class_String>` = "gameclient", tags\: :ref:`Dictionary<class_Dictionary>` = {}\ ) :ref:`🔗<class_POGRClient_method_metrics>`
 
-Add metrics to the analytics.
+Add metrics to the analytics. Call :ref:`init<class_POGRClient_method_init>` first.
 
 Returns a :ref:`POGRResponse<class_POGRResponse>` object that has a :ref:`POGRResponse.finished<class_POGRResponse_signal_finished>` signal that is emitted when finished.
+
+
+
+
+.. tabs::
+
+ .. code-tab:: gdscript
+
+    var res :POGRResult = await metrics({"FPS": Engine.get_frames_per_second()}).finished
+    if res.has_error():
+        print(res.error)
+
+
 
 .. rst-class:: classref-item-separator
 
@@ -213,6 +346,19 @@ Returns a :ref:`POGRResponse<class_POGRResponse>` object that has a :ref:`POGRRe
 Send monitor request.
 
 Returns a :ref:`POGRResponse<class_POGRResponse>` object that has a :ref:`POGRResponse.finished<class_POGRResponse_signal_finished>` signal that is emitted when finished.
+
+
+
+
+.. tabs::
+
+ .. code-tab:: gdscript
+
+    var res :POGRResult = await monitor({"my_setting": "test"}).finished
+    if res.has_error():
+        print(res.error)
+
+
 
 .. |virtual| replace:: :abbr:`virtual (This method should typically be overridden by the user to have any effect.)`
 .. |const| replace:: :abbr:`const (This method has no side effects. It doesn't modify any of the instance's member variables.)`

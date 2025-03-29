@@ -286,7 +286,9 @@ Constructor Descriptions
 
 :ref:`Projection<class_Projection>` **Projection**\ (\ ) :ref:`🔗<class_Projection_constructor_Projection>`
 
-Constructs a default-initialized **Projection** set to :ref:`IDENTITY<class_Projection_constant_IDENTITY>`.
+Constructs a default-initialized **Projection** identical to :ref:`IDENTITY<class_Projection_constant_IDENTITY>`.
+
+\ **Note:** In C#, this constructs a **Projection** identical to :ref:`ZERO<class_Projection_constant_ZERO>`.
 
 .. rst-class:: classref-item-separator
 
@@ -528,6 +530,8 @@ Returns the horizontal field of view of the projection (in degrees).
 :ref:`float<class_float>` **get_fovy**\ (\ fovx\: :ref:`float<class_float>`, aspect\: :ref:`float<class_float>`\ ) |static| :ref:`🔗<class_Projection_method_get_fovy>`
 
 Returns the vertical field of view of the projection (in degrees) associated with the given horizontal field of view (in degrees) and aspect ratio.
+
+\ **Note:** Unlike most methods of **Projection**, ``aspect`` is expected to be 1 divided by the X:Y aspect ratio.
 
 .. rst-class:: classref-item-separator
 

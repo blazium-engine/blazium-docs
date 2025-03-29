@@ -69,17 +69,17 @@ Theme Properties
 .. table::
    :widths: auto
 
-   +---------------------------------+--------------------------------------------------------------------------+-----------------------------------+
-   | :ref:`Color<class_Color>`       | :ref:`resizer_color<class_GraphFrame_theme_color_resizer_color>`         | ``Color(0.875, 0.875, 0.875, 1)`` |
-   +---------------------------------+--------------------------------------------------------------------------+-----------------------------------+
-   | :ref:`StyleBox<class_StyleBox>` | :ref:`panel<class_GraphFrame_theme_style_panel>`                         |                                   |
-   +---------------------------------+--------------------------------------------------------------------------+-----------------------------------+
-   | :ref:`StyleBox<class_StyleBox>` | :ref:`panel_selected<class_GraphFrame_theme_style_panel_selected>`       |                                   |
-   +---------------------------------+--------------------------------------------------------------------------+-----------------------------------+
-   | :ref:`StyleBox<class_StyleBox>` | :ref:`titlebar<class_GraphFrame_theme_style_titlebar>`                   |                                   |
-   +---------------------------------+--------------------------------------------------------------------------+-----------------------------------+
-   | :ref:`StyleBox<class_StyleBox>` | :ref:`titlebar_selected<class_GraphFrame_theme_style_titlebar_selected>` |                                   |
-   +---------------------------------+--------------------------------------------------------------------------+-----------------------------------+
+   +---------------------------------+--------------------------------------------------------------------------+-------------------------------------+
+   | :ref:`Color<class_Color>`       | :ref:`resizer_color<class_GraphFrame_theme_color_resizer_color>`         | ``Color(0.875, 0.875, 0.875, 0.9)`` |
+   +---------------------------------+--------------------------------------------------------------------------+-------------------------------------+
+   | :ref:`StyleBox<class_StyleBox>` | :ref:`panel<class_GraphFrame_theme_style_panel>`                         |                                     |
+   +---------------------------------+--------------------------------------------------------------------------+-------------------------------------+
+   | :ref:`StyleBox<class_StyleBox>` | :ref:`panel_selected<class_GraphFrame_theme_style_panel_selected>`       |                                     |
+   +---------------------------------+--------------------------------------------------------------------------+-------------------------------------+
+   | :ref:`StyleBox<class_StyleBox>` | :ref:`titlebar<class_GraphFrame_theme_style_titlebar>`                   |                                     |
+   +---------------------------------+--------------------------------------------------------------------------+-------------------------------------+
+   | :ref:`StyleBox<class_StyleBox>` | :ref:`titlebar_selected<class_GraphFrame_theme_style_titlebar_selected>` |                                     |
+   +---------------------------------+--------------------------------------------------------------------------+-------------------------------------+
 
 .. rst-class:: classref-section-separator
 
@@ -237,7 +237,7 @@ Theme Property Descriptions
 
 .. rst-class:: classref-themeproperty
 
-:ref:`Color<class_Color>` **resizer_color** = ``Color(0.875, 0.875, 0.875, 1)`` :ref:`🔗<class_GraphFrame_theme_color_resizer_color>`
+:ref:`Color<class_Color>` **resizer_color** = ``Color(0.875, 0.875, 0.875, 0.9)`` :ref:`🔗<class_GraphFrame_theme_color_resizer_color>`
 
 The color modulation applied to the resizer icon.
 

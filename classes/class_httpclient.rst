@@ -35,7 +35,7 @@ For more information on HTTP, see `MDN's documentation on HTTP <https://develope
 
 \ **Note:** When performing HTTP requests from a project exported to Web, keep in mind the remote server may not allow requests from foreign origins due to `CORS <https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS>`__. If you host the server in question, you should modify its backend to allow requests from foreign origins by adding the ``Access-Control-Allow-Origin: *`` HTTP header.
 
-\ **Note:** TLS support is currently limited to TLS 1.0, TLS 1.1, and TLS 1.2. Attempting to connect to a TLS 1.3-only server will return an error.
+\ **Note:** TLS support is currently limited to TLSv1.2 and TLSv1.3. Attempting to connect to a server that only supports older (insecure) TLS versions will return an error.
 
 \ **Warning:** TLS certificate revocation and certificate pinning are currently not supported. Revoked certificates are accepted as long as they are otherwise valid. If this is a concern, you may want to use automatically managed certificates with a short validity period.
 
@@ -938,9 +938,7 @@ Returns the response headers.
 
 :ref:`Dictionary<class_Dictionary>` **get_response_headers_as_dictionary**\ (\ ) :ref:`🔗<class_HTTPClient_method_get_response_headers_as_dictionary>`
 
-Returns all response headers as a Dictionary of structure ``{ "key": "value1; value2" }`` where the case-sensitivity of the keys and values is kept like the server delivers it. A value is a simple String, this string can have more than one value where "; " is used as separator.
-
-\ **Example:**\ 
+Returns all response headers as a :ref:`Dictionary<class_Dictionary>`. Each entry is composed by the header name, and a :ref:`String<class_String>` containing the values separated by ``"; "``. The casing is kept the same as the headers were received.
 
 ::
 

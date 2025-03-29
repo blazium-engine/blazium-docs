@@ -52,6 +52,8 @@ Properties
    +-----------------------------------------------------------------+-----------------------------------------------------------------------------------+--------------------------+
    | :ref:`int<class_int>`                                           | :ref:`current_screen<class_Window_property_current_screen>`                       |                          |
    +-----------------------------------------------------------------+-----------------------------------------------------------------------------------+--------------------------+
+   | :ref:`bool<class_bool>`                                         | :ref:`exclude_from_capture<class_Window_property_exclude_from_capture>`           | ``false``                |
+   +-----------------------------------------------------------------+-----------------------------------------------------------------------------------+--------------------------+
    | :ref:`bool<class_bool>`                                         | :ref:`exclusive<class_Window_property_exclusive>`                                 | ``false``                |
    +-----------------------------------------------------------------+-----------------------------------------------------------------------------------+--------------------------+
    | :ref:`bool<class_bool>`                                         | :ref:`extend_to_title<class_Window_property_extend_to_title>`                     | ``false``                |
@@ -75,6 +77,8 @@ Properties
    | :ref:`bool<class_bool>`                                         | :ref:`popup_window<class_Window_property_popup_window>`                           | ``false``                |
    +-----------------------------------------------------------------+-----------------------------------------------------------------------------------+--------------------------+
    | :ref:`Vector2i<class_Vector2i>`                                 | :ref:`position<class_Window_property_position>`                                   | ``Vector2i(0, 0)``       |
+   +-----------------------------------------------------------------+-----------------------------------------------------------------------------------+--------------------------+
+   | :ref:`bool<class_bool>`                                         | :ref:`sharp_corners<class_Window_property_sharp_corners>`                         | ``false``                |
    +-----------------------------------------------------------------+-----------------------------------------------------------------------------------+--------------------------+
    | :ref:`Vector2i<class_Vector2i>`                                 | :ref:`size<class_Window_property_size>`                                           | ``Vector2i(100, 100)``   |
    +-----------------------------------------------------------------+-----------------------------------------------------------------------------------+--------------------------+
@@ -252,6 +256,10 @@ Methods
    +-----------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | |void|                                              | :ref:`show<class_Window_method_show>`\ (\ )                                                                                                                                                                                                             |
    +-----------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | |void|                                              | :ref:`start_drag<class_Window_method_start_drag>`\ (\ )                                                                                                                                                                                                 |
+   +-----------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | |void|                                              | :ref:`start_resize<class_Window_method_start_resize>`\ (\ edge\: :ref:`WindowResizeEdge<enum_DisplayServer_WindowResizeEdge>`\ )                                                                                                                        |
+   +-----------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 .. rst-class:: classref-reftable-group
 
@@ -261,33 +269,33 @@ Theme Properties
 .. table::
    :widths: auto
 
-   +-----------------------------------+--------------------------------------------------------------------------------------+-----------------------------------+
-   | :ref:`Color<class_Color>`         | :ref:`title_color<class_Window_theme_color_title_color>`                             | ``Color(0.875, 0.875, 0.875, 1)`` |
-   +-----------------------------------+--------------------------------------------------------------------------------------+-----------------------------------+
-   | :ref:`Color<class_Color>`         | :ref:`title_outline_modulate<class_Window_theme_color_title_outline_modulate>`       | ``Color(0, 0, 0, 1)``             |
-   +-----------------------------------+--------------------------------------------------------------------------------------+-----------------------------------+
-   | :ref:`int<class_int>`             | :ref:`close_h_offset<class_Window_theme_constant_close_h_offset>`                    | ``18``                            |
-   +-----------------------------------+--------------------------------------------------------------------------------------+-----------------------------------+
-   | :ref:`int<class_int>`             | :ref:`close_v_offset<class_Window_theme_constant_close_v_offset>`                    | ``24``                            |
-   +-----------------------------------+--------------------------------------------------------------------------------------+-----------------------------------+
-   | :ref:`int<class_int>`             | :ref:`resize_margin<class_Window_theme_constant_resize_margin>`                      | ``4``                             |
-   +-----------------------------------+--------------------------------------------------------------------------------------+-----------------------------------+
-   | :ref:`int<class_int>`             | :ref:`title_height<class_Window_theme_constant_title_height>`                        | ``36``                            |
-   +-----------------------------------+--------------------------------------------------------------------------------------+-----------------------------------+
-   | :ref:`int<class_int>`             | :ref:`title_outline_size<class_Window_theme_constant_title_outline_size>`            | ``0``                             |
-   +-----------------------------------+--------------------------------------------------------------------------------------+-----------------------------------+
-   | :ref:`Font<class_Font>`           | :ref:`title_font<class_Window_theme_font_title_font>`                                |                                   |
-   +-----------------------------------+--------------------------------------------------------------------------------------+-----------------------------------+
-   | :ref:`int<class_int>`             | :ref:`title_font_size<class_Window_theme_font_size_title_font_size>`                 |                                   |
-   +-----------------------------------+--------------------------------------------------------------------------------------+-----------------------------------+
-   | :ref:`Texture2D<class_Texture2D>` | :ref:`close<class_Window_theme_icon_close>`                                          |                                   |
-   +-----------------------------------+--------------------------------------------------------------------------------------+-----------------------------------+
-   | :ref:`Texture2D<class_Texture2D>` | :ref:`close_pressed<class_Window_theme_icon_close_pressed>`                          |                                   |
-   +-----------------------------------+--------------------------------------------------------------------------------------+-----------------------------------+
-   | :ref:`StyleBox<class_StyleBox>`   | :ref:`embedded_border<class_Window_theme_style_embedded_border>`                     |                                   |
-   +-----------------------------------+--------------------------------------------------------------------------------------+-----------------------------------+
-   | :ref:`StyleBox<class_StyleBox>`   | :ref:`embedded_unfocused_border<class_Window_theme_style_embedded_unfocused_border>` |                                   |
-   +-----------------------------------+--------------------------------------------------------------------------------------+-----------------------------------+
+   +-----------------------------------+--------------------------------------------------------------------------------------+-------------------------------------+
+   | :ref:`Color<class_Color>`         | :ref:`title_color<class_Window_theme_color_title_color>`                             | ``Color(0.875, 0.875, 0.875, 0.9)`` |
+   +-----------------------------------+--------------------------------------------------------------------------------------+-------------------------------------+
+   | :ref:`Color<class_Color>`         | :ref:`title_outline_modulate<class_Window_theme_color_title_outline_modulate>`       | ``Color(0, 0, 0, 1)``               |
+   +-----------------------------------+--------------------------------------------------------------------------------------+-------------------------------------+
+   | :ref:`int<class_int>`             | :ref:`close_h_offset<class_Window_theme_constant_close_h_offset>`                    | ``18``                              |
+   +-----------------------------------+--------------------------------------------------------------------------------------+-------------------------------------+
+   | :ref:`int<class_int>`             | :ref:`close_v_offset<class_Window_theme_constant_close_v_offset>`                    | ``24``                              |
+   +-----------------------------------+--------------------------------------------------------------------------------------+-------------------------------------+
+   | :ref:`int<class_int>`             | :ref:`resize_margin<class_Window_theme_constant_resize_margin>`                      | ``4``                               |
+   +-----------------------------------+--------------------------------------------------------------------------------------+-------------------------------------+
+   | :ref:`int<class_int>`             | :ref:`title_height<class_Window_theme_constant_title_height>`                        | ``36``                              |
+   +-----------------------------------+--------------------------------------------------------------------------------------+-------------------------------------+
+   | :ref:`int<class_int>`             | :ref:`title_outline_size<class_Window_theme_constant_title_outline_size>`            | ``0``                               |
+   +-----------------------------------+--------------------------------------------------------------------------------------+-------------------------------------+
+   | :ref:`Font<class_Font>`           | :ref:`title_font<class_Window_theme_font_title_font>`                                |                                     |
+   +-----------------------------------+--------------------------------------------------------------------------------------+-------------------------------------+
+   | :ref:`int<class_int>`             | :ref:`title_font_size<class_Window_theme_font_size_title_font_size>`                 |                                     |
+   +-----------------------------------+--------------------------------------------------------------------------------------+-------------------------------------+
+   | :ref:`Texture2D<class_Texture2D>` | :ref:`close<class_Window_theme_icon_close>`                                          |                                     |
+   +-----------------------------------+--------------------------------------------------------------------------------------+-------------------------------------+
+   | :ref:`Texture2D<class_Texture2D>` | :ref:`close_pressed<class_Window_theme_icon_close_pressed>`                          |                                     |
+   +-----------------------------------+--------------------------------------------------------------------------------------+-------------------------------------+
+   | :ref:`StyleBox<class_StyleBox>`   | :ref:`embedded_border<class_Window_theme_style_embedded_border>`                     |                                     |
+   +-----------------------------------+--------------------------------------------------------------------------------------+-------------------------------------+
+   | :ref:`StyleBox<class_StyleBox>`   | :ref:`embedded_unfocused_border<class_Window_theme_style_embedded_unfocused_border>` |                                     |
+   +-----------------------------------+--------------------------------------------------------------------------------------+-------------------------------------+
 
 .. rst-class:: classref-section-separator
 
@@ -346,17 +354,15 @@ Emitted when the **Window**'s DPI changes as a result of OS-level changes (e.g. 
 
 Emitted when files are dragged from the OS file manager and dropped in the game window. The argument is a list of file paths.
 
-Note that this method only works with native windows, i.e. the main window and **Window**-derived nodes when :ref:`Viewport.gui_embed_subwindows<class_Viewport_property_gui_embed_subwindows>` is disabled in the main viewport.
-
-Example usage:
-
 ::
 
     func _ready():
-        get_viewport().files_dropped.connect(on_files_dropped)
+        get_window().files_dropped.connect(on_files_dropped)
     
     func on_files_dropped(files):
         print(files)
+
+\ **Note:** This signal only works with native windows, i.e. the main window and **Window**-derived nodes when :ref:`Viewport.gui_embed_subwindows<class_Viewport_property_gui_embed_subwindows>` is disabled in the main viewport.
 
 .. rst-class:: classref-item-separator
 
@@ -515,6 +521,8 @@ Full screen mode with full multi-window support.
 
 Full screen window covers the entire display area of a screen and has no decorations. The display's video mode is not changed.
 
+\ **On Android:** This enables immersive mode.
+
 \ **On Windows:** Multi-window full-screen mode has a 1px border of the :ref:`ProjectSettings.rendering/environment/defaults/default_clear_color<class_ProjectSettings_property_rendering/environment/defaults/default_clear_color>` color.
 
 \ **On macOS:** A new desktop is used to display the running project.
@@ -530,6 +538,8 @@ Full screen window covers the entire display area of a screen and has no decorat
 A single window full screen mode. This mode has less overhead, but only one window can be open on a given screen at a time (opening a child window or application switching will trigger a full screen transition).
 
 Full screen window covers the entire display area of a screen and has no border or decorations. The display's video mode is not changed.
+
+\ **On Android:** This enables immersive mode.
 
 \ **On Windows:** Depending on video driver, full screen transition might cause screens to go black for a moment.
 
@@ -623,11 +633,35 @@ All mouse events are passed to the underlying window of the same application.
 
 \ **Note:** This flag has no effect in embedded windows.
 
+.. _class_Window_constant_FLAG_SHARP_CORNERS:
+
+.. rst-class:: classref-enumeration-constant
+
+:ref:`Flags<enum_Window_Flags>` **FLAG_SHARP_CORNERS** = ``8``
+
+Window style is overridden, forcing sharp corners.
+
+\ **Note:** This flag has no effect in embedded windows.
+
+\ **Note:** This flag is implemented only on Windows (11).
+
+.. _class_Window_constant_FLAG_EXCLUDE_FROM_CAPTURE:
+
+.. rst-class:: classref-enumeration-constant
+
+:ref:`Flags<enum_Window_Flags>` **FLAG_EXCLUDE_FROM_CAPTURE** = ``9``
+
+Windows is excluded from screenshots taken by :ref:`DisplayServer.screen_get_image<class_DisplayServer_method_screen_get_image>`, :ref:`DisplayServer.screen_get_image_rect<class_DisplayServer_method_screen_get_image_rect>`, and :ref:`DisplayServer.screen_get_pixel<class_DisplayServer_method_screen_get_pixel>`.
+
+\ **Note:** This flag is implemented on macOS and Windows.
+
+\ **Note:** Setting this flag will **NOT** prevent other apps from capturing an image, it should not be used as a security measure.
+
 .. _class_Window_constant_FLAG_MAX:
 
 .. rst-class:: classref-enumeration-constant
 
-:ref:`Flags<enum_Window_Flags>` **FLAG_MAX** = ``8``
+:ref:`Flags<enum_Window_Flags>` **FLAG_MAX** = ``10``
 
 Max value of the :ref:`Flags<enum_Window_Flags>`.
 
@@ -759,11 +793,11 @@ enum **LayoutDirection**: :ref:`🔗<enum_Window_LayoutDirection>`
 
 Automatic layout direction, determined from the parent window layout direction.
 
-.. _class_Window_constant_LAYOUT_DIRECTION_LOCALE:
+.. _class_Window_constant_LAYOUT_DIRECTION_APPLICATION_LOCALE:
 
 .. rst-class:: classref-enumeration-constant
 
-:ref:`LayoutDirection<enum_Window_LayoutDirection>` **LAYOUT_DIRECTION_LOCALE** = ``1``
+:ref:`LayoutDirection<enum_Window_LayoutDirection>` **LAYOUT_DIRECTION_APPLICATION_LOCALE** = ``1``
 
 Automatic layout direction, determined from the current locale.
 
@@ -782,6 +816,32 @@ Left-to-right layout direction.
 :ref:`LayoutDirection<enum_Window_LayoutDirection>` **LAYOUT_DIRECTION_RTL** = ``3``
 
 Right-to-left layout direction.
+
+.. _class_Window_constant_LAYOUT_DIRECTION_SYSTEM_LOCALE:
+
+.. rst-class:: classref-enumeration-constant
+
+:ref:`LayoutDirection<enum_Window_LayoutDirection>` **LAYOUT_DIRECTION_SYSTEM_LOCALE** = ``4``
+
+Automatic layout direction, determined from the system locale.
+
+.. _class_Window_constant_LAYOUT_DIRECTION_MAX:
+
+.. rst-class:: classref-enumeration-constant
+
+:ref:`LayoutDirection<enum_Window_LayoutDirection>` **LAYOUT_DIRECTION_MAX** = ``5``
+
+Represents the size of the :ref:`LayoutDirection<enum_Window_LayoutDirection>` enum.
+
+.. _class_Window_constant_LAYOUT_DIRECTION_LOCALE:
+
+.. rst-class:: classref-enumeration-constant
+
+:ref:`LayoutDirection<enum_Window_LayoutDirection>` **LAYOUT_DIRECTION_LOCALE** = ``1``
+
+**Deprecated:** Use :ref:`LAYOUT_DIRECTION_APPLICATION_LOCALE<class_Window_constant_LAYOUT_DIRECTION_APPLICATION_LOCALE>` instead.
+
+
 
 .. rst-class:: classref-item-separator
 
@@ -964,7 +1024,7 @@ Specifies how the content's aspect behaves when the **Window** is resized. The b
 - |void| **set_content_scale_factor**\ (\ value\: :ref:`float<class_float>`\ )
 - :ref:`float<class_float>` **get_content_scale_factor**\ (\ )
 
-Specifies the base scale of **Window**'s content when its :ref:`size<class_Window_property_size>` is equal to :ref:`content_scale_size<class_Window_property_content_scale_size>`.
+Specifies the base scale of **Window**'s content when its :ref:`size<class_Window_property_size>` is equal to :ref:`content_scale_size<class_Window_property_content_scale_size>`. See also :ref:`Viewport.get_stretch_transform<class_Viewport_method_get_stretch_transform>`.
 
 .. rst-class:: classref-item-separator
 
@@ -1033,6 +1093,23 @@ The policy to use to determine the final scale factor for 2D elements. This affe
 - :ref:`int<class_int>` **get_current_screen**\ (\ )
 
 The screen the window is currently on.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_Window_property_exclude_from_capture:
+
+.. rst-class:: classref-property
+
+:ref:`bool<class_bool>` **exclude_from_capture** = ``false`` :ref:`🔗<class_Window_property_exclude_from_capture>`
+
+.. rst-class:: classref-property-setget
+
+- |void| **set_flag**\ (\ flag\: :ref:`Flags<enum_Window_Flags>`, enabled\: :ref:`bool<class_bool>`\ )
+- :ref:`bool<class_bool>` **get_flag**\ (\ flag\: :ref:`Flags<enum_Window_Flags>`\ ) |const|
+
+Windows is excluded from screenshots taken by :ref:`DisplayServer.screen_get_image<class_DisplayServer_method_screen_get_image>`, :ref:`DisplayServer.screen_get_image_rect<class_DisplayServer_method_screen_get_image_rect>`, and :ref:`DisplayServer.screen_get_pixel<class_DisplayServer_method_screen_get_pixel>`.
 
 .. rst-class:: classref-item-separator
 
@@ -1241,13 +1318,13 @@ Passing an empty array will disable passthrough support (all mouse events will b
  .. code-tab:: csharp
 
     // Set region, using Path2D node.
-    GetNode<Window>("Window").MousePassthrough = GetNode<Path2D>("Path2D").Curve.GetBakedPoints();
+    GetNode<Window>("Window").MousePassthroughPolygon = GetNode<Path2D>("Path2D").Curve.GetBakedPoints();
     
     // Set region, using Polygon2D node.
-    GetNode<Window>("Window").MousePassthrough = GetNode<Polygon2D>("Polygon2D").Polygon;
+    GetNode<Window>("Window").MousePassthroughPolygon = GetNode<Polygon2D>("Polygon2D").Polygon;
     
     // Reset region to default.
-    GetNode<Window>("Window").MousePassthrough = new Vector2[] {};
+    GetNode<Window>("Window").MousePassthroughPolygon = new Vector2[] {};
 
 
 
@@ -1296,6 +1373,27 @@ The window's position in pixels.
 If :ref:`ProjectSettings.display/window/subwindows/embed_subwindows<class_ProjectSettings_property_display/window/subwindows/embed_subwindows>` is ``false``, the position is in absolute screen coordinates. This typically applies to editor plugins. If the setting is ``true``, the window's position is in the coordinates of its parent :ref:`Viewport<class_Viewport>`.
 
 \ **Note:** This property only works if :ref:`initial_position<class_Window_property_initial_position>` is set to :ref:`WINDOW_INITIAL_POSITION_ABSOLUTE<class_Window_constant_WINDOW_INITIAL_POSITION_ABSOLUTE>`.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_Window_property_sharp_corners:
+
+.. rst-class:: classref-property
+
+:ref:`bool<class_bool>` **sharp_corners** = ``false`` :ref:`🔗<class_Window_property_sharp_corners>`
+
+.. rst-class:: classref-property-setget
+
+- |void| **set_flag**\ (\ flag\: :ref:`Flags<enum_Window_Flags>`, enabled\: :ref:`bool<class_bool>`\ )
+- :ref:`bool<class_bool>` **get_flag**\ (\ flag\: :ref:`Flags<enum_Window_Flags>`\ ) |const|
+
+If ``true``, the **Window** will override the OS window style to display sharp corners.
+
+\ **Note:** This property is implemented only on Windows (11).
+
+\ **Note:** This property only works with native windows.
 
 .. rst-class:: classref-item-separator
 
@@ -2449,6 +2547,30 @@ Enables font oversampling. This makes fonts look better when they are scaled up.
 
 Makes the **Window** appear. This enables interactions with the **Window** and doesn't change any of its property other than visibility (unlike e.g. :ref:`popup<class_Window_method_popup>`).
 
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_Window_method_start_drag:
+
+.. rst-class:: classref-method
+
+|void| **start_drag**\ (\ ) :ref:`🔗<class_Window_method_start_drag>`
+
+Starts an interactive drag operation on the window, using the current mouse position. Call this method when handling a mouse button being pressed to simulate a pressed event on the window's title bar. Using this method allows the window to participate in space switching, tiling, and other system features.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_Window_method_start_resize:
+
+.. rst-class:: classref-method
+
+|void| **start_resize**\ (\ edge\: :ref:`WindowResizeEdge<enum_DisplayServer_WindowResizeEdge>`\ ) :ref:`🔗<class_Window_method_start_resize>`
+
+Starts an interactive resize operation on the window, using the current mouse position. Call this method when handling a mouse button being pressed to simulate a pressed event on the window's edge.
+
 .. rst-class:: classref-section-separator
 
 ----
@@ -2462,7 +2584,7 @@ Theme Property Descriptions
 
 .. rst-class:: classref-themeproperty
 
-:ref:`Color<class_Color>` **title_color** = ``Color(0.875, 0.875, 0.875, 1)`` :ref:`🔗<class_Window_theme_color_title_color>`
+:ref:`Color<class_Color>` **title_color** = ``Color(0.875, 0.875, 0.875, 0.9)`` :ref:`🔗<class_Window_theme_color_title_color>`
 
 The color of the title's text.
 

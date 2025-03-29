@@ -794,7 +794,7 @@ Returns the result of the linear interpolation between this vector and ``to`` by
 
 :ref:`Vector3<class_Vector3>` **limit_length**\ (\ length\: :ref:`float<class_float>` = 1.0\ ) |const| :ref:`🔗<class_Vector3_method_limit_length>`
 
-Returns the vector with a maximum length by limiting its length to ``length``.
+Returns the vector with a maximum length by limiting its length to ``length``. If the vector is non-finite, the result is undefined.
 
 .. rst-class:: classref-item-separator
 
@@ -1167,7 +1167,7 @@ Multiplies each component of the **Vector3** by the components of the given **Ve
 
 ::
 
-    print(Vector3(10, 20, 30) * Vector3(3, 4, 5)) # Prints "(30, 80, 150)"
+    print(Vector3(10, 20, 30) * Vector3(3, 4, 5)) # Prints (30.0, 80.0, 150.0)
 
 .. rst-class:: classref-item-separator
 
@@ -1207,7 +1207,7 @@ Adds each component of the **Vector3** by the components of the given **Vector3*
 
 ::
 
-    print(Vector3(10, 20, 30) + Vector3(3, 4, 5)) # Prints "(13, 24, 35)"
+    print(Vector3(10, 20, 30) + Vector3(3, 4, 5)) # Prints (13.0, 24.0, 35.0)
 
 .. rst-class:: classref-item-separator
 
@@ -1223,7 +1223,7 @@ Subtracts each component of the **Vector3** by the components of the given **Vec
 
 ::
 
-    print(Vector3(10, 20, 30) - Vector3(3, 4, 5)) # Prints "(7, 16, 25)"
+    print(Vector3(10, 20, 30) - Vector3(3, 4, 5)) # Prints (7.0, 16.0, 25.0)
 
 .. rst-class:: classref-item-separator
 
@@ -1239,7 +1239,7 @@ Divides each component of the **Vector3** by the components of the given **Vecto
 
 ::
 
-    print(Vector3(10, 20, 30) / Vector3(2, 5, 3)) # Prints "(5, 4, 10)"
+    print(Vector3(10, 20, 30) / Vector3(2, 5, 3)) # Prints (5.0, 4.0, 10.0)
 
 .. rst-class:: classref-item-separator
 

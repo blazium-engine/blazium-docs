@@ -73,6 +73,8 @@ Properties
    +-------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------+
    | :ref:`bool<class_bool>`                                           | :ref:`editable<class_TextEdit_property_editable>`                                                           | ``true``                                                                            |
    +-------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------+
+   | :ref:`bool<class_bool>`                                           | :ref:`empty_selection_clipboard_enabled<class_TextEdit_property_empty_selection_clipboard_enabled>`         | ``true``                                                                            |
+   +-------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------+
    | :ref:`FocusMode<enum_Control_FocusMode>`                          | focus_mode                                                                                                  | ``2`` (overrides :ref:`Control<class_Control_property_focus_mode>`)                 |
    +-------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------+
    | :ref:`bool<class_bool>`                                           | :ref:`highlight_all_occurrences<class_TextEdit_property_highlight_all_occurrences>`                         | ``false``                                                                           |
@@ -94,6 +96,8 @@ Properties
    | :ref:`String<class_String>`                                       | :ref:`placeholder_text<class_TextEdit_property_placeholder_text>`                                           | ``""``                                                                              |
    +-------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------+
    | :ref:`bool<class_bool>`                                           | :ref:`scroll_fit_content_height<class_TextEdit_property_scroll_fit_content_height>`                         | ``false``                                                                           |
+   +-------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------+
+   | :ref:`bool<class_bool>`                                           | :ref:`scroll_fit_content_width<class_TextEdit_property_scroll_fit_content_width>`                           | ``false``                                                                           |
    +-------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------+
    | :ref:`int<class_int>`                                             | :ref:`scroll_horizontal<class_TextEdit_property_scroll_horizontal>`                                         | ``0``                                                                               |
    +-------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------+
@@ -460,53 +464,53 @@ Theme Properties
 .. table::
    :widths: auto
 
-   +-----------------------------------+------------------------------------------------------------------------------------------+-------------------------------------+
-   | :ref:`Color<class_Color>`         | :ref:`background_color<class_TextEdit_theme_color_background_color>`                     | ``Color(0, 0, 0, 0)``               |
-   +-----------------------------------+------------------------------------------------------------------------------------------+-------------------------------------+
-   | :ref:`Color<class_Color>`         | :ref:`caret_background_color<class_TextEdit_theme_color_caret_background_color>`         | ``Color(0, 0, 0, 1)``               |
-   +-----------------------------------+------------------------------------------------------------------------------------------+-------------------------------------+
-   | :ref:`Color<class_Color>`         | :ref:`caret_color<class_TextEdit_theme_color_caret_color>`                               | ``Color(0.875, 0.875, 0.875, 1)``   |
-   +-----------------------------------+------------------------------------------------------------------------------------------+-------------------------------------+
-   | :ref:`Color<class_Color>`         | :ref:`current_line_color<class_TextEdit_theme_color_current_line_color>`                 | ``Color(0.25, 0.25, 0.26, 0.8)``    |
-   +-----------------------------------+------------------------------------------------------------------------------------------+-------------------------------------+
-   | :ref:`Color<class_Color>`         | :ref:`font_color<class_TextEdit_theme_color_font_color>`                                 | ``Color(0.875, 0.875, 0.875, 1)``   |
-   +-----------------------------------+------------------------------------------------------------------------------------------+-------------------------------------+
-   | :ref:`Color<class_Color>`         | :ref:`font_outline_color<class_TextEdit_theme_color_font_outline_color>`                 | ``Color(0, 0, 0, 1)``               |
-   +-----------------------------------+------------------------------------------------------------------------------------------+-------------------------------------+
-   | :ref:`Color<class_Color>`         | :ref:`font_placeholder_color<class_TextEdit_theme_color_font_placeholder_color>`         | ``Color(0.875, 0.875, 0.875, 0.6)`` |
-   +-----------------------------------+------------------------------------------------------------------------------------------+-------------------------------------+
-   | :ref:`Color<class_Color>`         | :ref:`font_readonly_color<class_TextEdit_theme_color_font_readonly_color>`               | ``Color(0.875, 0.875, 0.875, 0.5)`` |
-   +-----------------------------------+------------------------------------------------------------------------------------------+-------------------------------------+
-   | :ref:`Color<class_Color>`         | :ref:`font_selected_color<class_TextEdit_theme_color_font_selected_color>`               | ``Color(0, 0, 0, 0)``               |
-   +-----------------------------------+------------------------------------------------------------------------------------------+-------------------------------------+
-   | :ref:`Color<class_Color>`         | :ref:`search_result_border_color<class_TextEdit_theme_color_search_result_border_color>` | ``Color(0.3, 0.3, 0.3, 0.4)``       |
-   +-----------------------------------+------------------------------------------------------------------------------------------+-------------------------------------+
-   | :ref:`Color<class_Color>`         | :ref:`search_result_color<class_TextEdit_theme_color_search_result_color>`               | ``Color(0.3, 0.3, 0.3, 1)``         |
-   +-----------------------------------+------------------------------------------------------------------------------------------+-------------------------------------+
-   | :ref:`Color<class_Color>`         | :ref:`selection_color<class_TextEdit_theme_color_selection_color>`                       | ``Color(0.5, 0.5, 0.5, 1)``         |
-   +-----------------------------------+------------------------------------------------------------------------------------------+-------------------------------------+
-   | :ref:`Color<class_Color>`         | :ref:`word_highlighted_color<class_TextEdit_theme_color_word_highlighted_color>`         | ``Color(0.5, 0.5, 0.5, 0.25)``      |
-   +-----------------------------------+------------------------------------------------------------------------------------------+-------------------------------------+
-   | :ref:`int<class_int>`             | :ref:`caret_width<class_TextEdit_theme_constant_caret_width>`                            | ``1``                               |
-   +-----------------------------------+------------------------------------------------------------------------------------------+-------------------------------------+
-   | :ref:`int<class_int>`             | :ref:`line_spacing<class_TextEdit_theme_constant_line_spacing>`                          | ``4``                               |
-   +-----------------------------------+------------------------------------------------------------------------------------------+-------------------------------------+
-   | :ref:`int<class_int>`             | :ref:`outline_size<class_TextEdit_theme_constant_outline_size>`                          | ``0``                               |
-   +-----------------------------------+------------------------------------------------------------------------------------------+-------------------------------------+
-   | :ref:`Font<class_Font>`           | :ref:`font<class_TextEdit_theme_font_font>`                                              |                                     |
-   +-----------------------------------+------------------------------------------------------------------------------------------+-------------------------------------+
-   | :ref:`int<class_int>`             | :ref:`font_size<class_TextEdit_theme_font_size_font_size>`                               |                                     |
-   +-----------------------------------+------------------------------------------------------------------------------------------+-------------------------------------+
-   | :ref:`Texture2D<class_Texture2D>` | :ref:`space<class_TextEdit_theme_icon_space>`                                            |                                     |
-   +-----------------------------------+------------------------------------------------------------------------------------------+-------------------------------------+
-   | :ref:`Texture2D<class_Texture2D>` | :ref:`tab<class_TextEdit_theme_icon_tab>`                                                |                                     |
-   +-----------------------------------+------------------------------------------------------------------------------------------+-------------------------------------+
-   | :ref:`StyleBox<class_StyleBox>`   | :ref:`focus<class_TextEdit_theme_style_focus>`                                           |                                     |
-   +-----------------------------------+------------------------------------------------------------------------------------------+-------------------------------------+
-   | :ref:`StyleBox<class_StyleBox>`   | :ref:`normal<class_TextEdit_theme_style_normal>`                                         |                                     |
-   +-----------------------------------+------------------------------------------------------------------------------------------+-------------------------------------+
-   | :ref:`StyleBox<class_StyleBox>`   | :ref:`read_only<class_TextEdit_theme_style_read_only>`                                   |                                     |
-   +-----------------------------------+------------------------------------------------------------------------------------------+-------------------------------------+
+   +-----------------------------------+------------------------------------------------------------------------------------------+-----------------------------------------+
+   | :ref:`Color<class_Color>`         | :ref:`background_color<class_TextEdit_theme_color_background_color>`                     | ``Color(0, 0, 0, 0)``                   |
+   +-----------------------------------+------------------------------------------------------------------------------------------+-----------------------------------------+
+   | :ref:`Color<class_Color>`         | :ref:`caret_background_color<class_TextEdit_theme_color_caret_background_color>`         | ``Color(0.875, 0.875, 0.875, 1)``       |
+   +-----------------------------------+------------------------------------------------------------------------------------------+-----------------------------------------+
+   | :ref:`Color<class_Color>`         | :ref:`caret_color<class_TextEdit_theme_color_caret_color>`                               | ``Color(0.875, 0.875, 0.875, 0.8)``     |
+   +-----------------------------------+------------------------------------------------------------------------------------------+-----------------------------------------+
+   | :ref:`Color<class_Color>`         | :ref:`current_line_color<class_TextEdit_theme_color_current_line_color>`                 | ``Color(0.16544, 0.16544, 0.16544, 1)`` |
+   +-----------------------------------+------------------------------------------------------------------------------------------+-----------------------------------------+
+   | :ref:`Color<class_Color>`         | :ref:`font_color<class_TextEdit_theme_color_font_color>`                                 | ``Color(0.875, 0.875, 0.875, 0.8)``     |
+   +-----------------------------------+------------------------------------------------------------------------------------------+-----------------------------------------+
+   | :ref:`Color<class_Color>`         | :ref:`font_outline_color<class_TextEdit_theme_color_font_outline_color>`                 | ``Color(0, 0, 0, 1)``                   |
+   +-----------------------------------+------------------------------------------------------------------------------------------+-----------------------------------------+
+   | :ref:`Color<class_Color>`         | :ref:`font_placeholder_color<class_TextEdit_theme_color_font_placeholder_color>`         | ``Color(0.875, 0.875, 0.875, 0.6)``     |
+   +-----------------------------------+------------------------------------------------------------------------------------------+-----------------------------------------+
+   | :ref:`Color<class_Color>`         | :ref:`font_readonly_color<class_TextEdit_theme_color_font_readonly_color>`               | ``Color(0.875, 0.875, 0.875, 0.6)``     |
+   +-----------------------------------+------------------------------------------------------------------------------------------+-----------------------------------------+
+   | :ref:`Color<class_Color>`         | :ref:`font_selected_color<class_TextEdit_theme_color_font_selected_color>`               | ``Color(0.875, 0.875, 0.875, 1)``       |
+   +-----------------------------------+------------------------------------------------------------------------------------------+-----------------------------------------+
+   | :ref:`Color<class_Color>`         | :ref:`search_result_border_color<class_TextEdit_theme_color_search_result_border_color>` | ``Color(0.875, 0.875, 0.875, 0.4)``     |
+   +-----------------------------------+------------------------------------------------------------------------------------------+-----------------------------------------+
+   | :ref:`Color<class_Color>`         | :ref:`search_result_color<class_TextEdit_theme_color_search_result_color>`               | ``Color(0.226, 0.478, 0.921, 0.6)``     |
+   +-----------------------------------+------------------------------------------------------------------------------------------+-----------------------------------------+
+   | :ref:`Color<class_Color>`         | :ref:`selection_color<class_TextEdit_theme_color_selection_color>`                       | ``Color(0.12032, 0.12032, 0.12032, 1)`` |
+   +-----------------------------------+------------------------------------------------------------------------------------------+-----------------------------------------+
+   | :ref:`Color<class_Color>`         | :ref:`word_highlighted_color<class_TextEdit_theme_color_word_highlighted_color>`         | ``Color(0.21056, 0.21056, 0.21056, 1)`` |
+   +-----------------------------------+------------------------------------------------------------------------------------------+-----------------------------------------+
+   | :ref:`int<class_int>`             | :ref:`caret_width<class_TextEdit_theme_constant_caret_width>`                            | ``1``                                   |
+   +-----------------------------------+------------------------------------------------------------------------------------------+-----------------------------------------+
+   | :ref:`int<class_int>`             | :ref:`line_spacing<class_TextEdit_theme_constant_line_spacing>`                          | ``4``                                   |
+   +-----------------------------------+------------------------------------------------------------------------------------------+-----------------------------------------+
+   | :ref:`int<class_int>`             | :ref:`outline_size<class_TextEdit_theme_constant_outline_size>`                          | ``0``                                   |
+   +-----------------------------------+------------------------------------------------------------------------------------------+-----------------------------------------+
+   | :ref:`Font<class_Font>`           | :ref:`font<class_TextEdit_theme_font_font>`                                              |                                         |
+   +-----------------------------------+------------------------------------------------------------------------------------------+-----------------------------------------+
+   | :ref:`int<class_int>`             | :ref:`font_size<class_TextEdit_theme_font_size_font_size>`                               |                                         |
+   +-----------------------------------+------------------------------------------------------------------------------------------+-----------------------------------------+
+   | :ref:`Texture2D<class_Texture2D>` | :ref:`space<class_TextEdit_theme_icon_space>`                                            |                                         |
+   +-----------------------------------+------------------------------------------------------------------------------------------+-----------------------------------------+
+   | :ref:`Texture2D<class_Texture2D>` | :ref:`tab<class_TextEdit_theme_icon_tab>`                                                |                                         |
+   +-----------------------------------+------------------------------------------------------------------------------------------+-----------------------------------------+
+   | :ref:`StyleBox<class_StyleBox>`   | :ref:`focus<class_TextEdit_theme_style_focus>`                                           |                                         |
+   +-----------------------------------+------------------------------------------------------------------------------------------+-----------------------------------------+
+   | :ref:`StyleBox<class_StyleBox>`   | :ref:`normal<class_TextEdit_theme_style_normal>`                                         |                                         |
+   +-----------------------------------+------------------------------------------------------------------------------------------+-----------------------------------------+
+   | :ref:`StyleBox<class_StyleBox>`   | :ref:`read_only<class_TextEdit_theme_style_read_only>`                                   |                                         |
+   +-----------------------------------+------------------------------------------------------------------------------------------+-----------------------------------------+
 
 .. rst-class:: classref-section-separator
 
@@ -1200,7 +1204,7 @@ If ``false``, the context menu ignores mouse location.
 - |void| **set_multiple_carets_enabled**\ (\ value\: :ref:`bool<class_bool>`\ )
 - :ref:`bool<class_bool>` **is_multiple_carets_enabled**\ (\ )
 
-Sets if multiple carets are allowed.
+If ``true``, multiple carets are allowed. Left-clicking with :kbd:`Alt` adds a new caret. See :ref:`add_caret<class_TextEdit_method_add_caret>` and :ref:`get_caret_count<class_TextEdit_method_get_caret_count>`.
 
 .. rst-class:: classref-item-separator
 
@@ -1359,6 +1363,23 @@ If ``false``, existing text cannot be modified and new text cannot be added.
 
 ----
 
+.. _class_TextEdit_property_empty_selection_clipboard_enabled:
+
+.. rst-class:: classref-property
+
+:ref:`bool<class_bool>` **empty_selection_clipboard_enabled** = ``true`` :ref:`🔗<class_TextEdit_property_empty_selection_clipboard_enabled>`
+
+.. rst-class:: classref-property-setget
+
+- |void| **set_empty_selection_clipboard_enabled**\ (\ value\: :ref:`bool<class_bool>`\ )
+- :ref:`bool<class_bool>` **is_empty_selection_clipboard_enabled**\ (\ )
+
+If ``true``, copying or cutting without a selection is performed on all lines with a caret. Otherwise, copy and cut require a selection.
+
+.. rst-class:: classref-item-separator
+
+----
+
 .. _class_TextEdit_property_highlight_all_occurrences:
 
 .. rst-class:: classref-property
@@ -1508,7 +1529,24 @@ Text shown when the **TextEdit** is empty. It is **not** the **TextEdit**'s defa
 - |void| **set_fit_content_height_enabled**\ (\ value\: :ref:`bool<class_bool>`\ )
 - :ref:`bool<class_bool>` **is_fit_content_height_enabled**\ (\ )
 
-If ``true``, **TextEdit** will disable vertical scroll and fit minimum height to the number of visible lines.
+If ``true``, **TextEdit** will disable vertical scroll and fit minimum height to the number of visible lines. When both this property and :ref:`scroll_fit_content_width<class_TextEdit_property_scroll_fit_content_width>` are ``true``, no scrollbars will be displayed.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_TextEdit_property_scroll_fit_content_width:
+
+.. rst-class:: classref-property
+
+:ref:`bool<class_bool>` **scroll_fit_content_width** = ``false`` :ref:`🔗<class_TextEdit_property_scroll_fit_content_width>`
+
+.. rst-class:: classref-property-setget
+
+- |void| **set_fit_content_width_enabled**\ (\ value\: :ref:`bool<class_bool>`\ )
+- :ref:`bool<class_bool>` **is_fit_content_width_enabled**\ (\ )
+
+If ``true``, **TextEdit** will disable horizontal scroll and fit minimum width to the widest line in the text. When both this property and :ref:`scroll_fit_content_height<class_TextEdit_property_scroll_fit_content_height>` are ``true``, no scrollbars will be displayed.
 
 .. rst-class:: classref-item-separator
 
@@ -1680,7 +1718,9 @@ Set additional options for BiDi override.
 - |void| **set_syntax_highlighter**\ (\ value\: :ref:`SyntaxHighlighter<class_SyntaxHighlighter>`\ )
 - :ref:`SyntaxHighlighter<class_SyntaxHighlighter>` **get_syntax_highlighter**\ (\ )
 
-Sets the :ref:`SyntaxHighlighter<class_SyntaxHighlighter>` to use.
+The syntax highlighter to use.
+
+\ **Note:** A :ref:`SyntaxHighlighter<class_SyntaxHighlighter>` instance should not be used across multiple **TextEdit** nodes.
 
 .. rst-class:: classref-item-separator
 
@@ -1985,8 +2025,6 @@ Starts a multipart edit. All edits will be treated as one action until :ref:`end
 
 Starts an edit for multiple carets. The edit must be ended with :ref:`end_multicaret_edit<class_TextEdit_method_end_multicaret_edit>`. Multicaret edits can be used to edit text at multiple carets and delay merging the carets until the end, so the caret indexes aren't affected immediately. :ref:`begin_multicaret_edit<class_TextEdit_method_begin_multicaret_edit>` and :ref:`end_multicaret_edit<class_TextEdit_method_end_multicaret_edit>` can be nested, and the merge will happen at the last :ref:`end_multicaret_edit<class_TextEdit_method_end_multicaret_edit>`.
 
-Example usage:
-
 ::
 
     begin_complex_operation()
@@ -2232,7 +2270,7 @@ Returns the wrap index the editing caret is on.
 
 :ref:`int<class_int>` **get_first_non_whitespace_column**\ (\ line\: :ref:`int<class_int>`\ ) |const| :ref:`🔗<class_TextEdit_method_get_first_non_whitespace_column>`
 
-Returns the first column containing a non-whitespace character.
+Returns the first column containing a non-whitespace character on the given line. If there is only whitespace, returns the number of characters.
 
 .. rst-class:: classref-item-separator
 
@@ -2316,7 +2354,7 @@ Returns the :ref:`HScrollBar<class_HScrollBar>` used by **TextEdit**.
 
 :ref:`int<class_int>` **get_indent_level**\ (\ line\: :ref:`int<class_int>`\ ) |const| :ref:`🔗<class_TextEdit_method_get_indent_level>`
 
-Returns the number of spaces and ``tab * tab_size`` before the first char.
+Returns the indent level of the given line. This is the number of spaces and tabs at the beginning of the line, with the tabs taking the tab size into account (see :ref:`get_tab_size<class_TextEdit_method_get_tab_size>`).
 
 .. rst-class:: classref-item-separator
 
@@ -2376,7 +2414,7 @@ Returns the text of a specific line.
 
 :ref:`Color<class_Color>` **get_line_background_color**\ (\ line\: :ref:`int<class_int>`\ ) |const| :ref:`🔗<class_TextEdit_method_get_line_background_color>`
 
-Returns the current background color of the line. ``Color(0, 0, 0, 0)`` is returned if no color is set.
+Returns the custom background color of the given line. If no color is set, returns ``Color(0, 0, 0, 0)``.
 
 .. rst-class:: classref-item-separator
 
@@ -2512,7 +2550,7 @@ Returns the number of times the given line is wrapped.
 
 :ref:`int<class_int>` **get_line_wrap_index_at_column**\ (\ line\: :ref:`int<class_int>`, column\: :ref:`int<class_int>`\ ) |const| :ref:`🔗<class_TextEdit_method_get_line_wrap_index_at_column>`
 
-Returns the wrap index of the given line column.
+Returns the wrap index of the given column on the given line. This ranges from ``0`` to :ref:`get_line_wrap_count<class_TextEdit_method_get_line_wrap_count>`.
 
 .. rst-class:: classref-item-separator
 
@@ -2883,7 +2921,7 @@ Returns the total width of all gutters and internal padding.
 
 :ref:`int<class_int>` **get_total_visible_line_count**\ (\ ) |const| :ref:`🔗<class_TextEdit_method_get_total_visible_line_count>`
 
-Returns the number of lines that may be drawn.
+Returns the total number of lines in the text. This includes wrapped lines and excludes folded lines. If :ref:`wrap_mode<class_TextEdit_property_wrap_mode>` is set to :ref:`LINE_WRAPPING_NONE<class_TextEdit_constant_LINE_WRAPPING_NONE>` and no lines are folded (see :ref:`CodeEdit.is_line_folded<class_CodeEdit_method_is_line_folded>`) then this is equivalent to :ref:`get_line_count<class_TextEdit_method_get_line_count>`. See :ref:`get_visible_line_count_in_range<class_TextEdit_method_get_visible_line_count_in_range>` for a limited range of lines.
 
 .. rst-class:: classref-item-separator
 
@@ -2919,7 +2957,7 @@ Returns the current version of the **TextEdit**. The version is a count of recor
 
 :ref:`int<class_int>` **get_visible_line_count**\ (\ ) |const| :ref:`🔗<class_TextEdit_method_get_visible_line_count>`
 
-Returns the number of visible lines, including wrapped text.
+Returns the number of lines that can visually fit, rounded down, based on this control's height.
 
 .. rst-class:: classref-item-separator
 
@@ -2931,7 +2969,7 @@ Returns the number of visible lines, including wrapped text.
 
 :ref:`int<class_int>` **get_visible_line_count_in_range**\ (\ from_line\: :ref:`int<class_int>`, to_line\: :ref:`int<class_int>`\ ) |const| :ref:`🔗<class_TextEdit_method_get_visible_line_count_in_range>`
 
-Returns the total number of visible + wrapped lines between the two lines.
+Returns the total number of lines between ``from_line`` and ``to_line`` (inclusive) in the text. This includes wrapped lines and excludes folded lines. If the range covers all lines it is equivalent to :ref:`get_total_visible_line_count<class_TextEdit_method_get_total_visible_line_count>`.
 
 .. rst-class:: classref-item-separator
 
@@ -3067,7 +3105,9 @@ Returns ``true`` if the caret of the selection is after the selection origin. Th
 
 :ref:`bool<class_bool>` **is_caret_visible**\ (\ caret_index\: :ref:`int<class_int>` = 0\ ) |const| :ref:`🔗<class_TextEdit_method_is_caret_visible>`
 
-Returns ``true`` if the caret is visible on the screen.
+Returns ``true`` if the caret is visible, ``false`` otherwise. A caret will be considered hidden if it is outside the scrollable area when scrolling is enabled.
+
+\ **Note:** :ref:`is_caret_visible<class_TextEdit_method_is_caret_visible>` does not account for a caret being off-screen if it is still within the scrollable area. It will return ``true`` even if the caret is off-screen as long as it meets **TextEdit**'s own conditions for being visible. This includes uses of :ref:`scroll_fit_content_width<class_TextEdit_property_scroll_fit_content_width>` and :ref:`scroll_fit_content_height<class_TextEdit_property_scroll_fit_content_height>` that cause the **TextEdit** to expand beyond the viewport's bounds.
 
 .. rst-class:: classref-item-separator
 
@@ -3091,7 +3131,7 @@ Returns ``true`` if the user is dragging their mouse for scrolling, selecting, o
 
 :ref:`bool<class_bool>` **is_gutter_clickable**\ (\ gutter\: :ref:`int<class_int>`\ ) |const| :ref:`🔗<class_TextEdit_method_is_gutter_clickable>`
 
-Returns whether the gutter is clickable.
+Returns ``true`` if the gutter at the given index is clickable. See :ref:`set_gutter_clickable<class_TextEdit_method_set_gutter_clickable>`.
 
 .. rst-class:: classref-item-separator
 
@@ -3103,7 +3143,7 @@ Returns whether the gutter is clickable.
 
 :ref:`bool<class_bool>` **is_gutter_drawn**\ (\ gutter\: :ref:`int<class_int>`\ ) |const| :ref:`🔗<class_TextEdit_method_is_gutter_drawn>`
 
-Returns whether the gutter is currently drawn.
+Returns ``true`` if the gutter at the given index is currently drawn. See :ref:`set_gutter_draw<class_TextEdit_method_set_gutter_draw>`.
 
 .. rst-class:: classref-item-separator
 
@@ -3115,7 +3155,7 @@ Returns whether the gutter is currently drawn.
 
 :ref:`bool<class_bool>` **is_gutter_overwritable**\ (\ gutter\: :ref:`int<class_int>`\ ) |const| :ref:`🔗<class_TextEdit_method_is_gutter_overwritable>`
 
-Returns whether the gutter is overwritable.
+Returns ``true`` if the gutter at the given index is overwritable. See :ref:`set_gutter_overwritable<class_TextEdit_method_set_gutter_overwritable>`.
 
 .. rst-class:: classref-item-separator
 
@@ -3139,7 +3179,7 @@ Returns ``true`` if a :ref:`begin_multicaret_edit<class_TextEdit_method_begin_mu
 
 :ref:`bool<class_bool>` **is_line_gutter_clickable**\ (\ line\: :ref:`int<class_int>`, gutter\: :ref:`int<class_int>`\ ) |const| :ref:`🔗<class_TextEdit_method_is_line_gutter_clickable>`
 
-Returns whether the gutter on the given line is clickable.
+Returns ``true`` if the gutter at the given index on the given line is clickable. See :ref:`set_line_gutter_clickable<class_TextEdit_method_set_line_gutter_clickable>`.
 
 .. rst-class:: classref-item-separator
 
@@ -3163,7 +3203,7 @@ Returns if the given line is wrapped.
 
 :ref:`bool<class_bool>` **is_menu_visible**\ (\ ) |const| :ref:`🔗<class_TextEdit_method_is_menu_visible>`
 
-Returns whether the menu is visible. Use this instead of ``get_menu().visible`` to improve performance (so the creation of the menu is avoided).
+Returns ``true`` if the menu is visible. Use this instead of ``get_menu().visible`` to improve performance (so the creation of the menu is avoided). See :ref:`get_menu<class_TextEdit_method_get_menu>`.
 
 .. rst-class:: classref-item-separator
 
@@ -3175,7 +3215,7 @@ Returns whether the menu is visible. Use this instead of ``get_menu().visible`` 
 
 :ref:`bool<class_bool>` **is_mouse_over_selection**\ (\ edges\: :ref:`bool<class_bool>`, caret_index\: :ref:`int<class_int>` = -1\ ) |const| :ref:`🔗<class_TextEdit_method_is_mouse_over_selection>`
 
-Returns whether the mouse is over selection. If ``edges`` is ``true``, the edges are considered part of the selection.
+Returns ``true`` if the mouse is over a selection. If ``edges`` is ``true``, the edges are considered part of the selection.
 
 .. rst-class:: classref-item-separator
 
@@ -3187,7 +3227,7 @@ Returns whether the mouse is over selection. If ``edges`` is ``true``, the edges
 
 :ref:`bool<class_bool>` **is_overtype_mode_enabled**\ (\ ) |const| :ref:`🔗<class_TextEdit_method_is_overtype_mode_enabled>`
 
-Returns whether the user is in overtype mode.
+Returns ``true`` if overtype mode is enabled. See :ref:`set_overtype_mode_enabled<class_TextEdit_method_set_overtype_mode_enabled>`.
 
 .. rst-class:: classref-item-separator
 
@@ -3211,7 +3251,7 @@ Executes a given action as defined in the :ref:`MenuItems<enum_TextEdit_MenuItem
 
 |void| **merge_gutters**\ (\ from_line\: :ref:`int<class_int>`, to_line\: :ref:`int<class_int>`\ ) :ref:`🔗<class_TextEdit_method_merge_gutters>`
 
-Merge the gutters from ``from_line`` into ``to_line``. Only overwritable gutters will be copied.
+Merge the gutters from ``from_line`` into ``to_line``. Only overwritable gutters will be copied. See :ref:`set_gutter_overwritable<class_TextEdit_method_set_gutter_overwritable>`.
 
 .. rst-class:: classref-item-separator
 
@@ -3303,7 +3343,7 @@ Removes the given caret index.
 
 |void| **remove_gutter**\ (\ gutter\: :ref:`int<class_int>`\ ) :ref:`🔗<class_TextEdit_method_remove_gutter>`
 
-Removes the gutter from this **TextEdit**.
+Removes the gutter at the given index.
 
 .. rst-class:: classref-item-separator
 
@@ -3468,7 +3508,7 @@ If ``wrap_index`` is ``-1``, the caret column will be clamped to the ``line``'s 
 
 |void| **set_gutter_clickable**\ (\ gutter\: :ref:`int<class_int>`, clickable\: :ref:`bool<class_bool>`\ ) :ref:`🔗<class_TextEdit_method_set_gutter_clickable>`
 
-Sets the gutter as clickable. This will change the mouse cursor to a pointing hand when hovering over the gutter.
+If ``true``, the mouse cursor will change to a pointing hand (:ref:`Control.CURSOR_POINTING_HAND<class_Control_constant_CURSOR_POINTING_HAND>`) when hovering over the gutter at the given index. See :ref:`is_gutter_clickable<class_TextEdit_method_is_gutter_clickable>` and :ref:`set_line_gutter_clickable<class_TextEdit_method_set_line_gutter_clickable>`.
 
 .. rst-class:: classref-item-separator
 
@@ -3480,7 +3520,7 @@ Sets the gutter as clickable. This will change the mouse cursor to a pointing ha
 
 |void| **set_gutter_custom_draw**\ (\ column\: :ref:`int<class_int>`, draw_callback\: :ref:`Callable<class_Callable>`\ ) :ref:`🔗<class_TextEdit_method_set_gutter_custom_draw>`
 
-Set a custom draw method for the gutter. The callback method must take the following args: ``line: int, gutter: int, Area: Rect2``. This only works when the gutter type is :ref:`GUTTER_TYPE_CUSTOM<class_TextEdit_constant_GUTTER_TYPE_CUSTOM>` (see :ref:`set_gutter_type<class_TextEdit_method_set_gutter_type>`).
+Set a custom draw callback for the gutter at the given index. ``draw_callback`` must take the following arguments: A line index :ref:`int<class_int>`, a gutter index :ref:`int<class_int>`, and an area :ref:`Rect2<class_Rect2>`. This callback only works when the gutter type is :ref:`GUTTER_TYPE_CUSTOM<class_TextEdit_constant_GUTTER_TYPE_CUSTOM>` (see :ref:`set_gutter_type<class_TextEdit_method_set_gutter_type>`).
 
 .. rst-class:: classref-item-separator
 
@@ -3492,7 +3532,7 @@ Set a custom draw method for the gutter. The callback method must take the follo
 
 |void| **set_gutter_draw**\ (\ gutter\: :ref:`int<class_int>`, draw\: :ref:`bool<class_bool>`\ ) :ref:`🔗<class_TextEdit_method_set_gutter_draw>`
 
-Sets whether the gutter should be drawn.
+If ``true``, the gutter at the given index is drawn. The gutter type (:ref:`set_gutter_type<class_TextEdit_method_set_gutter_type>`) determines how it is drawn. See :ref:`is_gutter_drawn<class_TextEdit_method_is_gutter_drawn>`.
 
 .. rst-class:: classref-item-separator
 
@@ -3504,7 +3544,7 @@ Sets whether the gutter should be drawn.
 
 |void| **set_gutter_name**\ (\ gutter\: :ref:`int<class_int>`, name\: :ref:`String<class_String>`\ ) :ref:`🔗<class_TextEdit_method_set_gutter_name>`
 
-Sets the name of the gutter.
+Sets the name of the gutter at the given index.
 
 .. rst-class:: classref-item-separator
 
@@ -3516,7 +3556,7 @@ Sets the name of the gutter.
 
 |void| **set_gutter_overwritable**\ (\ gutter\: :ref:`int<class_int>`, overwritable\: :ref:`bool<class_bool>`\ ) :ref:`🔗<class_TextEdit_method_set_gutter_overwritable>`
 
-Sets the gutter to overwritable. See :ref:`merge_gutters<class_TextEdit_method_merge_gutters>`.
+If ``true``, the line data of the gutter at the given index can be overridden when using :ref:`merge_gutters<class_TextEdit_method_merge_gutters>`. See :ref:`is_gutter_overwritable<class_TextEdit_method_is_gutter_overwritable>`.
 
 .. rst-class:: classref-item-separator
 
@@ -3528,7 +3568,7 @@ Sets the gutter to overwritable. See :ref:`merge_gutters<class_TextEdit_method_m
 
 |void| **set_gutter_type**\ (\ gutter\: :ref:`int<class_int>`, type\: :ref:`GutterType<enum_TextEdit_GutterType>`\ ) :ref:`🔗<class_TextEdit_method_set_gutter_type>`
 
-Sets the type of gutter. Gutters can contain icons, text, or custom visuals. See :ref:`GutterType<enum_TextEdit_GutterType>` for options.
+Sets the type of gutter at the given index. Gutters can contain icons, text, or custom visuals. See :ref:`GutterType<enum_TextEdit_GutterType>` for options.
 
 .. rst-class:: classref-item-separator
 
@@ -3540,7 +3580,7 @@ Sets the type of gutter. Gutters can contain icons, text, or custom visuals. See
 
 |void| **set_gutter_width**\ (\ gutter\: :ref:`int<class_int>`, width\: :ref:`int<class_int>`\ ) :ref:`🔗<class_TextEdit_method_set_gutter_width>`
 
-Set the width of the gutter.
+Set the width of the gutter at the given index.
 
 .. rst-class:: classref-item-separator
 
@@ -3602,7 +3642,7 @@ Positions the ``wrap_index`` of ``line`` at the bottom of the viewport.
 
 |void| **set_line_background_color**\ (\ line\: :ref:`int<class_int>`, color\: :ref:`Color<class_Color>`\ ) :ref:`🔗<class_TextEdit_method_set_line_background_color>`
 
-Sets the current background color of the line. Set to ``Color(0, 0, 0, 0)`` for no color.
+Sets the custom background color of the given line. If transparent, this color is applied on top of the default background color (See :ref:`background_color<class_TextEdit_theme_color_background_color>`). If set to ``Color(0, 0, 0, 0)``, no additional color is applied.
 
 .. rst-class:: classref-item-separator
 
@@ -3614,7 +3654,7 @@ Sets the current background color of the line. Set to ``Color(0, 0, 0, 0)`` for 
 
 |void| **set_line_gutter_clickable**\ (\ line\: :ref:`int<class_int>`, gutter\: :ref:`int<class_int>`, clickable\: :ref:`bool<class_bool>`\ ) :ref:`🔗<class_TextEdit_method_set_line_gutter_clickable>`
 
-If ``clickable`` is ``true``, makes the ``gutter`` on ``line`` clickable. See :ref:`gutter_clicked<class_TextEdit_signal_gutter_clicked>`.
+If ``clickable`` is ``true``, makes the ``gutter`` on the given ``line`` clickable. This is like :ref:`set_gutter_clickable<class_TextEdit_method_set_gutter_clickable>`, but for a single line. If :ref:`is_gutter_clickable<class_TextEdit_method_is_gutter_clickable>` is ``true``, this will not have any effect. See :ref:`is_line_gutter_clickable<class_TextEdit_method_is_line_gutter_clickable>` and :ref:`gutter_clicked<class_TextEdit_signal_gutter_clicked>`.
 
 .. rst-class:: classref-item-separator
 
@@ -3674,7 +3714,7 @@ Sets the text for ``gutter`` on ``line`` to ``text``. This only works when the g
 
 |void| **set_overtype_mode_enabled**\ (\ enabled\: :ref:`bool<class_bool>`\ ) :ref:`🔗<class_TextEdit_method_set_overtype_mode_enabled>`
 
-If ``true``, sets the user into overtype mode. When the user types in this mode, it will override existing text.
+If ``true``, enables overtype mode. In this mode, typing overrides existing text instead of inserting text. The :ref:`ProjectSettings.input/ui_text_toggle_insert_mode<class_ProjectSettings_property_input/ui_text_toggle_insert_mode>` action toggles overtype mode. See :ref:`is_overtype_mode_enabled<class_TextEdit_method_is_overtype_mode_enabled>`.
 
 .. rst-class:: classref-item-separator
 
@@ -3851,7 +3891,7 @@ Sets the background :ref:`Color<class_Color>` of this **TextEdit**.
 
 .. rst-class:: classref-themeproperty
 
-:ref:`Color<class_Color>` **caret_background_color** = ``Color(0, 0, 0, 1)`` :ref:`🔗<class_TextEdit_theme_color_caret_background_color>`
+:ref:`Color<class_Color>` **caret_background_color** = ``Color(0.875, 0.875, 0.875, 1)`` :ref:`🔗<class_TextEdit_theme_color_caret_background_color>`
 
 :ref:`Color<class_Color>` of the text behind the caret when using a block caret.
 
@@ -3863,7 +3903,7 @@ Sets the background :ref:`Color<class_Color>` of this **TextEdit**.
 
 .. rst-class:: classref-themeproperty
 
-:ref:`Color<class_Color>` **caret_color** = ``Color(0.875, 0.875, 0.875, 1)`` :ref:`🔗<class_TextEdit_theme_color_caret_color>`
+:ref:`Color<class_Color>` **caret_color** = ``Color(0.875, 0.875, 0.875, 0.8)`` :ref:`🔗<class_TextEdit_theme_color_caret_color>`
 
 :ref:`Color<class_Color>` of the caret. This can be set to a fully transparent color to hide the caret entirely.
 
@@ -3875,7 +3915,7 @@ Sets the background :ref:`Color<class_Color>` of this **TextEdit**.
 
 .. rst-class:: classref-themeproperty
 
-:ref:`Color<class_Color>` **current_line_color** = ``Color(0.25, 0.25, 0.26, 0.8)`` :ref:`🔗<class_TextEdit_theme_color_current_line_color>`
+:ref:`Color<class_Color>` **current_line_color** = ``Color(0.16544, 0.16544, 0.16544, 1)`` :ref:`🔗<class_TextEdit_theme_color_current_line_color>`
 
 Background :ref:`Color<class_Color>` of the line containing the caret.
 
@@ -3887,7 +3927,7 @@ Background :ref:`Color<class_Color>` of the line containing the caret.
 
 .. rst-class:: classref-themeproperty
 
-:ref:`Color<class_Color>` **font_color** = ``Color(0.875, 0.875, 0.875, 1)`` :ref:`🔗<class_TextEdit_theme_color_font_color>`
+:ref:`Color<class_Color>` **font_color** = ``Color(0.875, 0.875, 0.875, 0.8)`` :ref:`🔗<class_TextEdit_theme_color_font_color>`
 
 Sets the font :ref:`Color<class_Color>`.
 
@@ -3923,7 +3963,7 @@ Font color for :ref:`placeholder_text<class_TextEdit_property_placeholder_text>`
 
 .. rst-class:: classref-themeproperty
 
-:ref:`Color<class_Color>` **font_readonly_color** = ``Color(0.875, 0.875, 0.875, 0.5)`` :ref:`🔗<class_TextEdit_theme_color_font_readonly_color>`
+:ref:`Color<class_Color>` **font_readonly_color** = ``Color(0.875, 0.875, 0.875, 0.6)`` :ref:`🔗<class_TextEdit_theme_color_font_readonly_color>`
 
 Sets the font :ref:`Color<class_Color>` when :ref:`editable<class_TextEdit_property_editable>` is disabled.
 
@@ -3935,7 +3975,7 @@ Sets the font :ref:`Color<class_Color>` when :ref:`editable<class_TextEdit_prope
 
 .. rst-class:: classref-themeproperty
 
-:ref:`Color<class_Color>` **font_selected_color** = ``Color(0, 0, 0, 0)`` :ref:`🔗<class_TextEdit_theme_color_font_selected_color>`
+:ref:`Color<class_Color>` **font_selected_color** = ``Color(0.875, 0.875, 0.875, 1)`` :ref:`🔗<class_TextEdit_theme_color_font_selected_color>`
 
 Sets the :ref:`Color<class_Color>` of the selected text. If equal to ``Color(0, 0, 0, 0)``, it will be ignored.
 
@@ -3947,7 +3987,7 @@ Sets the :ref:`Color<class_Color>` of the selected text. If equal to ``Color(0, 
 
 .. rst-class:: classref-themeproperty
 
-:ref:`Color<class_Color>` **search_result_border_color** = ``Color(0.3, 0.3, 0.3, 0.4)`` :ref:`🔗<class_TextEdit_theme_color_search_result_border_color>`
+:ref:`Color<class_Color>` **search_result_border_color** = ``Color(0.875, 0.875, 0.875, 0.4)`` :ref:`🔗<class_TextEdit_theme_color_search_result_border_color>`
 
 :ref:`Color<class_Color>` of the border around text that matches the search query.
 
@@ -3959,7 +3999,7 @@ Sets the :ref:`Color<class_Color>` of the selected text. If equal to ``Color(0, 
 
 .. rst-class:: classref-themeproperty
 
-:ref:`Color<class_Color>` **search_result_color** = ``Color(0.3, 0.3, 0.3, 1)`` :ref:`🔗<class_TextEdit_theme_color_search_result_color>`
+:ref:`Color<class_Color>` **search_result_color** = ``Color(0.226, 0.478, 0.921, 0.6)`` :ref:`🔗<class_TextEdit_theme_color_search_result_color>`
 
 :ref:`Color<class_Color>` behind the text that matches the search query.
 
@@ -3971,7 +4011,7 @@ Sets the :ref:`Color<class_Color>` of the selected text. If equal to ``Color(0, 
 
 .. rst-class:: classref-themeproperty
 
-:ref:`Color<class_Color>` **selection_color** = ``Color(0.5, 0.5, 0.5, 1)`` :ref:`🔗<class_TextEdit_theme_color_selection_color>`
+:ref:`Color<class_Color>` **selection_color** = ``Color(0.12032, 0.12032, 0.12032, 1)`` :ref:`🔗<class_TextEdit_theme_color_selection_color>`
 
 Sets the highlight :ref:`Color<class_Color>` of text selections.
 
@@ -3983,7 +4023,7 @@ Sets the highlight :ref:`Color<class_Color>` of text selections.
 
 .. rst-class:: classref-themeproperty
 
-:ref:`Color<class_Color>` **word_highlighted_color** = ``Color(0.5, 0.5, 0.5, 0.25)`` :ref:`🔗<class_TextEdit_theme_color_word_highlighted_color>`
+:ref:`Color<class_Color>` **word_highlighted_color** = ``Color(0.21056, 0.21056, 0.21056, 1)`` :ref:`🔗<class_TextEdit_theme_color_word_highlighted_color>`
 
 Sets the highlight :ref:`Color<class_Color>` of multiple occurrences. :ref:`highlight_all_occurrences<class_TextEdit_property_highlight_all_occurrences>` has to be enabled.
 
@@ -4009,7 +4049,7 @@ The caret's width in pixels. Greater values can be used to improve accessibility
 
 :ref:`int<class_int>` **line_spacing** = ``4`` :ref:`🔗<class_TextEdit_theme_constant_line_spacing>`
 
-Sets the spacing between the lines.
+Additional vertical spacing between lines (in pixels), spacing is added to line descent. This value can be negative.
 
 .. rst-class:: classref-item-separator
 

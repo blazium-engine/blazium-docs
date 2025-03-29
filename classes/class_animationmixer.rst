@@ -55,6 +55,8 @@ Properties
    +-----------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------+--------------------+
    | :ref:`bool<class_bool>`                                                                 | :ref:`reset_on_save<class_AnimationMixer_property_reset_on_save>`                   | ``true``           |
    +-----------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------+--------------------+
+   | :ref:`bool<class_bool>`                                                                 | :ref:`root_motion_local<class_AnimationMixer_property_root_motion_local>`           |                    |
+   +-----------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------+--------------------+
    | :ref:`NodePath<class_NodePath>`                                                         | :ref:`root_motion_track<class_AnimationMixer_property_root_motion_track>`           | ``NodePath("")``   |
    +-----------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------+--------------------+
    | :ref:`NodePath<class_NodePath>`                                                         | :ref:`root_node<class_AnimationMixer_property_root_node>`                           | ``NodePath("..")`` |
@@ -302,7 +304,31 @@ An :ref:`Animation.UPDATE_CONTINUOUS<class_Animation_constant_UPDATE_CONTINUOUS>
 
 Always treat the :ref:`Animation.UPDATE_DISCRETE<class_Animation_constant_UPDATE_DISCRETE>` track value as :ref:`Animation.UPDATE_CONTINUOUS<class_Animation_constant_UPDATE_CONTINUOUS>` with :ref:`Animation.INTERPOLATION_NEAREST<class_Animation_constant_INTERPOLATION_NEAREST>`. This is the default behavior for :ref:`AnimationTree<class_AnimationTree>`.
 
-If a value track has non-numeric type key values, it is internally converted to use :ref:`ANIMATION_CALLBACK_MODE_DISCRETE_RECESSIVE<class_AnimationMixer_constant_ANIMATION_CALLBACK_MODE_DISCRETE_RECESSIVE>` with :ref:`Animation.UPDATE_DISCRETE<class_Animation_constant_UPDATE_DISCRETE>`.
+If a value track has un-interpolatable type key values, it is internally converted to use :ref:`ANIMATION_CALLBACK_MODE_DISCRETE_RECESSIVE<class_AnimationMixer_constant_ANIMATION_CALLBACK_MODE_DISCRETE_RECESSIVE>` with :ref:`Animation.UPDATE_DISCRETE<class_Animation_constant_UPDATE_DISCRETE>`.
+
+Un-interpolatable type list:
+
+- :ref:`@GlobalScope.TYPE_NIL<class_@GlobalScope_constant_TYPE_NIL>`\ 
+
+- :ref:`@GlobalScope.TYPE_NODE_PATH<class_@GlobalScope_constant_TYPE_NODE_PATH>`\ 
+
+- :ref:`@GlobalScope.TYPE_RID<class_@GlobalScope_constant_TYPE_RID>`\ 
+
+- :ref:`@GlobalScope.TYPE_OBJECT<class_@GlobalScope_constant_TYPE_OBJECT>`\ 
+
+- :ref:`@GlobalScope.TYPE_CALLABLE<class_@GlobalScope_constant_TYPE_CALLABLE>`\ 
+
+- :ref:`@GlobalScope.TYPE_SIGNAL<class_@GlobalScope_constant_TYPE_SIGNAL>`\ 
+
+- :ref:`@GlobalScope.TYPE_DICTIONARY<class_@GlobalScope_constant_TYPE_DICTIONARY>`\ 
+
+- :ref:`@GlobalScope.TYPE_PACKED_BYTE_ARRAY<class_@GlobalScope_constant_TYPE_PACKED_BYTE_ARRAY>`\ 
+
+\ :ref:`@GlobalScope.TYPE_BOOL<class_@GlobalScope_constant_TYPE_BOOL>` and :ref:`@GlobalScope.TYPE_INT<class_@GlobalScope_constant_TYPE_INT>` are treated as :ref:`@GlobalScope.TYPE_FLOAT<class_@GlobalScope_constant_TYPE_FLOAT>` during blending and rounded when the result is retrieved.
+
+It is same for arrays and vectors with them such as :ref:`@GlobalScope.TYPE_PACKED_INT32_ARRAY<class_@GlobalScope_constant_TYPE_PACKED_INT32_ARRAY>` or :ref:`@GlobalScope.TYPE_VECTOR2I<class_@GlobalScope_constant_TYPE_VECTOR2I>`, they are treated as :ref:`@GlobalScope.TYPE_PACKED_FLOAT32_ARRAY<class_@GlobalScope_constant_TYPE_PACKED_FLOAT32_ARRAY>` or :ref:`@GlobalScope.TYPE_VECTOR2<class_@GlobalScope_constant_TYPE_VECTOR2>`. Also note that for arrays, the size is also interpolated.
+
+\ :ref:`@GlobalScope.TYPE_STRING<class_@GlobalScope_constant_TYPE_STRING>` and :ref:`@GlobalScope.TYPE_STRING_NAME<class_@GlobalScope_constant_TYPE_STRING_NAME>` are interpolated between character codes and lengths, but note that there is a difference in algorithm between interpolation between keys and interpolation by blending.
 
 .. rst-class:: classref-section-separator
 
@@ -445,6 +471,23 @@ For example, if :ref:`AnimationNodeAdd2<class_AnimationNodeAdd2>` blends two nod
 This is used by the editor. If set to ``true``, the scene will be saved with the effects of the reset animation (the animation with the key ``"RESET"``) applied as if it had been seeked to time 0, with the editor keeping the values that the scene had before saving.
 
 This makes it more convenient to preview and edit animations in the editor, as changes to the scene will not be saved as long as they are set in the reset animation.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_AnimationMixer_property_root_motion_local:
+
+.. rst-class:: classref-property
+
+:ref:`bool<class_bool>` **root_motion_local** :ref:`🔗<class_AnimationMixer_property_root_motion_local>`
+
+.. rst-class:: classref-property-setget
+
+- |void| **set_root_motion_local**\ (\ value\: :ref:`bool<class_bool>`\ )
+- :ref:`bool<class_bool>` **is_root_motion_local**\ (\ )
+
+If ``true``, :ref:`get_root_motion_position<class_AnimationMixer_method_get_root_motion_position>` value is extracted as a local translation value before blending. In other words, it is treated like the translation is done after the rotation.
 
 .. rst-class:: classref-item-separator
 
@@ -660,13 +703,13 @@ The most basic example is applying position to :ref:`CharacterBody3D<class_Chara
 
  .. code-tab:: gdscript
 
-    var current_rotation: Quaternion
+    var current_rotation
     
     func _process(delta):
         if Input.is_action_just_pressed("animate"):
             current_rotation = get_quaternion()
             state_machine.travel("Animate")
-        var velocity: Vector3 = current_rotation * animation_tree.get_root_motion_position() / delta
+        var velocity = current_rotation * animation_tree.get_root_motion_position() / delta
         set_velocity(velocity)
         move_and_slide()
 
@@ -683,7 +726,26 @@ By using this in combination with :ref:`get_root_motion_rotation_accumulator<cla
         if Input.is_action_just_pressed("animate"):
             state_machine.travel("Animate")
         set_quaternion(get_quaternion() * animation_tree.get_root_motion_rotation())
-        var velocity: Vector3 = (animation_tree.get_root_motion_rotation_accumulator().inverse() * get_quaternion()) * animation_tree.get_root_motion_position() / delta
+        var velocity = (animation_tree.get_root_motion_rotation_accumulator().inverse() * get_quaternion()) * animation_tree.get_root_motion_position() / delta
+        set_velocity(velocity)
+        move_and_slide()
+
+
+
+If :ref:`root_motion_local<class_AnimationMixer_property_root_motion_local>` is ``true``, return the pre-multiplied translation value with the inverted rotation.
+
+In this case, the code can be written as follows:
+
+
+.. tabs::
+
+ .. code-tab:: gdscript
+
+    func _process(delta):
+        if Input.is_action_just_pressed("animate"):
+            state_machine.travel("Animate")
+        set_quaternion(get_quaternion() * animation_tree.get_root_motion_rotation())
+        var velocity = get_quaternion() * animation_tree.get_root_motion_position() / delta
         set_velocity(velocity)
         move_and_slide()
 
@@ -710,13 +772,13 @@ For example, if an animation with only one key ``Vector3(0, 0, 0)`` is played in
 
  .. code-tab:: gdscript
 
-    var prev_root_motion_position_accumulator: Vector3
+    var prev_root_motion_position_accumulator
     
     func _process(delta):
         if Input.is_action_just_pressed("animate"):
             state_machine.travel("Animate")
-        var current_root_motion_position_accumulator: Vector3 = animation_tree.get_root_motion_position_accumulator()
-        var difference: Vector3 = current_root_motion_position_accumulator - prev_root_motion_position_accumulator
+        var current_root_motion_position_accumulator = animation_tree.get_root_motion_position_accumulator()
+        var difference = current_root_motion_position_accumulator - prev_root_motion_position_accumulator
         prev_root_motion_position_accumulator = current_root_motion_position_accumulator
         transform.origin += difference
 
@@ -777,13 +839,13 @@ For example, if an animation with only one key ``Quaternion(0, 0, 0, 1)`` is pla
 
  .. code-tab:: gdscript
 
-    var prev_root_motion_rotation_accumulator: Quaternion
+    var prev_root_motion_rotation_accumulator
     
     func _process(delta):
         if Input.is_action_just_pressed("animate"):
             state_machine.travel("Animate")
-        var current_root_motion_rotation_accumulator: Quaternion = animation_tree.get_root_motion_rotation_accumulator()
-        var difference: Quaternion = prev_root_motion_rotation_accumulator.inverse() * current_root_motion_rotation_accumulator
+        var current_root_motion_rotation_accumulator = animation_tree.get_root_motion_rotation_accumulator()
+        var difference = prev_root_motion_rotation_accumulator.inverse() * current_root_motion_rotation_accumulator
         prev_root_motion_rotation_accumulator = current_root_motion_rotation_accumulator
         transform.basis *=  Basis(difference)
 
@@ -814,8 +876,8 @@ The most basic example is applying scale to :ref:`CharacterBody3D<class_Characte
 
  .. code-tab:: gdscript
 
-    var current_scale: Vector3 = Vector3(1, 1, 1)
-    var scale_accum: Vector3 = Vector3(1, 1, 1)
+    var current_scale = Vector3(1, 1, 1)
+    var scale_accum = Vector3(1, 1, 1)
     
     func _process(delta):
         if Input.is_action_just_pressed("animate"):
@@ -846,13 +908,13 @@ For example, if an animation with only one key ``Vector3(1, 1, 1)`` is played in
 
  .. code-tab:: gdscript
 
-    var prev_root_motion_scale_accumulator: Vector3
+    var prev_root_motion_scale_accumulator
     
     func _process(delta):
         if Input.is_action_just_pressed("animate"):
             state_machine.travel("Animate")
-        var current_root_motion_scale_accumulator: Vector3 = animation_tree.get_root_motion_scale_accumulator()
-        var difference: Vector3 = current_root_motion_scale_accumulator - prev_root_motion_scale_accumulator
+        var current_root_motion_scale_accumulator = animation_tree.get_root_motion_scale_accumulator()
+        var difference = current_root_motion_scale_accumulator - prev_root_motion_scale_accumulator
         prev_root_motion_scale_accumulator = current_root_motion_scale_accumulator
         transform.basis = transform.basis.scaled(difference)
 

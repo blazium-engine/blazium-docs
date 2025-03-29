@@ -42,6 +42,8 @@ Properties
    +---------------------------------------------------+-----------------------------------------------------------------------------+------------------------------------------------------------------------------------------+
    | :ref:`FileMode<enum_FileDialog_FileMode>`         | :ref:`file_mode<class_FileDialog_property_file_mode>`                       | ``4``                                                                                    |
    +---------------------------------------------------+-----------------------------------------------------------------------------+------------------------------------------------------------------------------------------+
+   | :ref:`String<class_String>`                       | :ref:`filename_filter<class_FileDialog_property_filename_filter>`           | ``""``                                                                                   |
+   +---------------------------------------------------+-----------------------------------------------------------------------------+------------------------------------------------------------------------------------------+
    | :ref:`PackedStringArray<class_PackedStringArray>` | :ref:`filters<class_FileDialog_property_filters>`                           | ``PackedStringArray()``                                                                  |
    +---------------------------------------------------+-----------------------------------------------------------------------------+------------------------------------------------------------------------------------------+
    | :ref:`bool<class_bool>`                           | :ref:`mode_overrides_title<class_FileDialog_property_mode_overrides_title>` | ``true``                                                                                 |
@@ -51,6 +53,8 @@ Properties
    | :ref:`String<class_String>`                       | :ref:`root_subfolder<class_FileDialog_property_root_subfolder>`             | ``""``                                                                                   |
    +---------------------------------------------------+-----------------------------------------------------------------------------+------------------------------------------------------------------------------------------+
    | :ref:`bool<class_bool>`                           | :ref:`show_hidden_files<class_FileDialog_property_show_hidden_files>`       | ``false``                                                                                |
+   +---------------------------------------------------+-----------------------------------------------------------------------------+------------------------------------------------------------------------------------------+
+   | :ref:`Vector2i<class_Vector2i>`                   | size                                                                        | ``Vector2i(640, 360)`` (overrides :ref:`Window<class_Window_property_size>`)             |
    +---------------------------------------------------+-----------------------------------------------------------------------------+------------------------------------------------------------------------------------------+
    | :ref:`String<class_String>`                       | title                                                                       | ``"Save a File"`` (overrides :ref:`Window<class_Window_property_title>`)                 |
    +---------------------------------------------------+-----------------------------------------------------------------------------+------------------------------------------------------------------------------------------+
@@ -69,6 +73,8 @@ Methods
    | |void|                                            | :ref:`add_filter<class_FileDialog_method_add_filter>`\ (\ filter\: :ref:`String<class_String>`, description\: :ref:`String<class_String>` = ""\ )                                                        |
    +---------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | |void|                                            | :ref:`add_option<class_FileDialog_method_add_option>`\ (\ name\: :ref:`String<class_String>`, values\: :ref:`PackedStringArray<class_PackedStringArray>`, default_value_index\: :ref:`int<class_int>`\ ) |
+   +---------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | |void|                                            | :ref:`clear_filename_filter<class_FileDialog_method_clear_filename_filter>`\ (\ )                                                                                                                        |
    +---------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | |void|                                            | :ref:`clear_filters<class_FileDialog_method_clear_filters>`\ (\ )                                                                                                                                        |
    +---------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -103,29 +109,31 @@ Theme Properties
 .. table::
    :widths: auto
 
-   +-----------------------------------+------------------------------------------------------------------------------+--------------------------+
-   | :ref:`Color<class_Color>`         | :ref:`file_disabled_color<class_FileDialog_theme_color_file_disabled_color>` | ``Color(1, 1, 1, 0.25)`` |
-   +-----------------------------------+------------------------------------------------------------------------------+--------------------------+
-   | :ref:`Color<class_Color>`         | :ref:`file_icon_color<class_FileDialog_theme_color_file_icon_color>`         | ``Color(1, 1, 1, 1)``    |
-   +-----------------------------------+------------------------------------------------------------------------------+--------------------------+
-   | :ref:`Color<class_Color>`         | :ref:`folder_icon_color<class_FileDialog_theme_color_folder_icon_color>`     | ``Color(1, 1, 1, 1)``    |
-   +-----------------------------------+------------------------------------------------------------------------------+--------------------------+
-   | :ref:`Texture2D<class_Texture2D>` | :ref:`back_folder<class_FileDialog_theme_icon_back_folder>`                  |                          |
-   +-----------------------------------+------------------------------------------------------------------------------+--------------------------+
-   | :ref:`Texture2D<class_Texture2D>` | :ref:`create_folder<class_FileDialog_theme_icon_create_folder>`              |                          |
-   +-----------------------------------+------------------------------------------------------------------------------+--------------------------+
-   | :ref:`Texture2D<class_Texture2D>` | :ref:`file<class_FileDialog_theme_icon_file>`                                |                          |
-   +-----------------------------------+------------------------------------------------------------------------------+--------------------------+
-   | :ref:`Texture2D<class_Texture2D>` | :ref:`folder<class_FileDialog_theme_icon_folder>`                            |                          |
-   +-----------------------------------+------------------------------------------------------------------------------+--------------------------+
-   | :ref:`Texture2D<class_Texture2D>` | :ref:`forward_folder<class_FileDialog_theme_icon_forward_folder>`            |                          |
-   +-----------------------------------+------------------------------------------------------------------------------+--------------------------+
-   | :ref:`Texture2D<class_Texture2D>` | :ref:`parent_folder<class_FileDialog_theme_icon_parent_folder>`              |                          |
-   +-----------------------------------+------------------------------------------------------------------------------+--------------------------+
-   | :ref:`Texture2D<class_Texture2D>` | :ref:`reload<class_FileDialog_theme_icon_reload>`                            |                          |
-   +-----------------------------------+------------------------------------------------------------------------------+--------------------------+
-   | :ref:`Texture2D<class_Texture2D>` | :ref:`toggle_hidden<class_FileDialog_theme_icon_toggle_hidden>`              |                          |
-   +-----------------------------------+------------------------------------------------------------------------------+--------------------------+
+   +-----------------------------------+-----------------------------------------------------------------------------------+-------------------------------------+
+   | :ref:`Color<class_Color>`         | :ref:`file_disabled_color<class_FileDialog_theme_color_file_disabled_color>`      | ``Color(0.875, 0.875, 0.875, 0.4)`` |
+   +-----------------------------------+-----------------------------------------------------------------------------------+-------------------------------------+
+   | :ref:`Color<class_Color>`         | :ref:`file_icon_color<class_FileDialog_theme_color_file_icon_color>`              | ``Color(0.875, 0.875, 0.875, 0.8)`` |
+   +-----------------------------------+-----------------------------------------------------------------------------------+-------------------------------------+
+   | :ref:`Color<class_Color>`         | :ref:`folder_icon_color<class_FileDialog_theme_color_folder_icon_color>`          | ``Color(0.875, 0.875, 0.875, 0.8)`` |
+   +-----------------------------------+-----------------------------------------------------------------------------------+-------------------------------------+
+   | :ref:`Texture2D<class_Texture2D>` | :ref:`back_folder<class_FileDialog_theme_icon_back_folder>`                       |                                     |
+   +-----------------------------------+-----------------------------------------------------------------------------------+-------------------------------------+
+   | :ref:`Texture2D<class_Texture2D>` | :ref:`create_folder<class_FileDialog_theme_icon_create_folder>`                   |                                     |
+   +-----------------------------------+-----------------------------------------------------------------------------------+-------------------------------------+
+   | :ref:`Texture2D<class_Texture2D>` | :ref:`file<class_FileDialog_theme_icon_file>`                                     |                                     |
+   +-----------------------------------+-----------------------------------------------------------------------------------+-------------------------------------+
+   | :ref:`Texture2D<class_Texture2D>` | :ref:`folder<class_FileDialog_theme_icon_folder>`                                 |                                     |
+   +-----------------------------------+-----------------------------------------------------------------------------------+-------------------------------------+
+   | :ref:`Texture2D<class_Texture2D>` | :ref:`forward_folder<class_FileDialog_theme_icon_forward_folder>`                 |                                     |
+   +-----------------------------------+-----------------------------------------------------------------------------------+-------------------------------------+
+   | :ref:`Texture2D<class_Texture2D>` | :ref:`parent_folder<class_FileDialog_theme_icon_parent_folder>`                   |                                     |
+   +-----------------------------------+-----------------------------------------------------------------------------------+-------------------------------------+
+   | :ref:`Texture2D<class_Texture2D>` | :ref:`reload<class_FileDialog_theme_icon_reload>`                                 |                                     |
+   +-----------------------------------+-----------------------------------------------------------------------------------+-------------------------------------+
+   | :ref:`Texture2D<class_Texture2D>` | :ref:`toggle_filename_filter<class_FileDialog_theme_icon_toggle_filename_filter>` |                                     |
+   +-----------------------------------+-----------------------------------------------------------------------------------+-------------------------------------+
+   | :ref:`Texture2D<class_Texture2D>` | :ref:`toggle_hidden<class_FileDialog_theme_icon_toggle_hidden>`                   |                                     |
+   +-----------------------------------+-----------------------------------------------------------------------------------+-------------------------------------+
 
 .. rst-class:: classref-section-separator
 
@@ -155,6 +163,18 @@ Emitted when the user selects a directory.
 **file_selected**\ (\ path\: :ref:`String<class_String>`\ ) :ref:`🔗<class_FileDialog_signal_file_selected>`
 
 Emitted when the user selects a file by double-clicking it or pressing the **OK** button.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_FileDialog_signal_filename_filter_changed:
+
+.. rst-class:: classref-signal
+
+**filename_filter_changed**\ (\ filter\: :ref:`String<class_String>`\ ) :ref:`🔗<class_FileDialog_signal_filename_filter_changed>`
+
+Emitted when the filter for file names changes.
 
 .. rst-class:: classref-item-separator
 
@@ -355,6 +375,25 @@ The dialog's open or save mode, which affects the selection behavior. See :ref:`
 
 ----
 
+.. _class_FileDialog_property_filename_filter:
+
+.. rst-class:: classref-property
+
+:ref:`String<class_String>` **filename_filter** = ``""`` :ref:`🔗<class_FileDialog_property_filename_filter>`
+
+.. rst-class:: classref-property-setget
+
+- |void| **set_filename_filter**\ (\ value\: :ref:`String<class_String>`\ )
+- :ref:`String<class_String>` **get_filename_filter**\ (\ )
+
+The filter for file names (case-insensitive). When set to a non-empty string, only files that contains the substring will be shown. :ref:`filename_filter<class_FileDialog_property_filename_filter>` can be edited by the user with the filter button at the top of the file dialog.
+
+See also :ref:`filters<class_FileDialog_property_filters>`, which should be used to restrict the file types that can be selected instead of :ref:`filename_filter<class_FileDialog_property_filename_filter>` which is meant to be set by the user.
+
+.. rst-class:: classref-item-separator
+
+----
+
 .. _class_FileDialog_property_filters:
 
 .. rst-class:: classref-property
@@ -367,6 +406,8 @@ The dialog's open or save mode, which affects the selection behavior. See :ref:`
 - :ref:`PackedStringArray<class_PackedStringArray>` **get_filters**\ (\ )
 
 The available file type filters. Each filter string in the array should be formatted like this: ``*.txt,*.doc;Text Files``. The description text of the filter is optional and can be omitted.
+
+\ **Note:** For android native dialog, MIME types are used like this: ``image/*, application/pdf``.
 
 **Note:** The returned array is *copied* and any changes to it will not update the original property value. See :ref:`PackedStringArray<class_PackedStringArray>` for more details.
 
@@ -440,7 +481,7 @@ If non-empty, the given sub-folder will be "root" of this **FileDialog**, i.e. u
 
 If ``true``, the dialog will show hidden files.
 
-\ **Note:** This property is ignored by native file dialogs on Linux.
+\ **Note:** This property is ignored by native file dialogs on Android and Linux.
 
 .. rst-class:: classref-item-separator
 
@@ -458,6 +499,8 @@ If ``true``, the dialog will show hidden files.
 - :ref:`bool<class_bool>` **get_use_native_dialog**\ (\ )
 
 If ``true``, and if supported by the current :ref:`DisplayServer<class_DisplayServer>`, OS native dialog will be used instead of custom one.
+
+\ **Note:** On Android, it is only supported when using :ref:`ACCESS_FILESYSTEM<class_FileDialog_constant_ACCESS_FILESYSTEM>`. For access mode :ref:`ACCESS_RESOURCES<class_FileDialog_constant_ACCESS_RESOURCES>` and :ref:`ACCESS_USERDATA<class_FileDialog_constant_ACCESS_USERDATA>`, the system will fall back to custom FileDialog.
 
 \ **Note:** On Linux and macOS, sandboxed apps always use native dialogs to access the host file system.
 
@@ -499,6 +542,18 @@ For example, a ``filter`` of ``"*.png, *.jpg"`` and a ``description`` of ``"Imag
 Adds an additional :ref:`OptionButton<class_OptionButton>` to the file dialog. If ``values`` is empty, a :ref:`CheckBox<class_CheckBox>` is added instead.
 
 \ ``default_value_index`` should be an index of the value in the ``values``. If ``values`` is empty it should be either ``1`` (checked), or ``0`` (unchecked).
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_FileDialog_method_clear_filename_filter:
+
+.. rst-class:: classref-method
+
+|void| **clear_filename_filter**\ (\ ) :ref:`🔗<class_FileDialog_method_clear_filename_filter>`
+
+Clear the filter for file names.
 
 .. rst-class:: classref-item-separator
 
@@ -665,7 +720,7 @@ Theme Property Descriptions
 
 .. rst-class:: classref-themeproperty
 
-:ref:`Color<class_Color>` **file_disabled_color** = ``Color(1, 1, 1, 0.25)`` :ref:`🔗<class_FileDialog_theme_color_file_disabled_color>`
+:ref:`Color<class_Color>` **file_disabled_color** = ``Color(0.875, 0.875, 0.875, 0.4)`` :ref:`🔗<class_FileDialog_theme_color_file_disabled_color>`
 
 The color tint for disabled files (when the **FileDialog** is used in open folder mode).
 
@@ -677,7 +732,7 @@ The color tint for disabled files (when the **FileDialog** is used in open folde
 
 .. rst-class:: classref-themeproperty
 
-:ref:`Color<class_Color>` **file_icon_color** = ``Color(1, 1, 1, 1)`` :ref:`🔗<class_FileDialog_theme_color_file_icon_color>`
+:ref:`Color<class_Color>` **file_icon_color** = ``Color(0.875, 0.875, 0.875, 0.8)`` :ref:`🔗<class_FileDialog_theme_color_file_icon_color>`
 
 The color modulation applied to the file icon.
 
@@ -689,7 +744,7 @@ The color modulation applied to the file icon.
 
 .. rst-class:: classref-themeproperty
 
-:ref:`Color<class_Color>` **folder_icon_color** = ``Color(1, 1, 1, 1)`` :ref:`🔗<class_FileDialog_theme_color_folder_icon_color>`
+:ref:`Color<class_Color>` **folder_icon_color** = ``Color(0.875, 0.875, 0.875, 0.8)`` :ref:`🔗<class_FileDialog_theme_color_folder_icon_color>`
 
 The color modulation applied to the folder icon.
 
@@ -776,6 +831,18 @@ Custom icon for the parent folder arrow.
 :ref:`Texture2D<class_Texture2D>` **reload** :ref:`🔗<class_FileDialog_theme_icon_reload>`
 
 Custom icon for the reload button.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_FileDialog_theme_icon_toggle_filename_filter:
+
+.. rst-class:: classref-themeproperty
+
+:ref:`Texture2D<class_Texture2D>` **toggle_filename_filter** :ref:`🔗<class_FileDialog_theme_icon_toggle_filename_filter>`
+
+Custom icon for the toggle button for the filter for file names.
 
 .. rst-class:: classref-item-separator
 

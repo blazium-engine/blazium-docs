@@ -30,6 +30,8 @@ Methods
    :widths: auto
 
    +----------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`Array<class_Array>`\[:ref:`Vector2i<class_Vector2i>`\]                     | :ref:`bresenham_line<class_Geometry2D_method_bresenham_line>`\ (\ from\: :ref:`Vector2i<class_Vector2i>`, to\: :ref:`Vector2i<class_Vector2i>`\ )                                                                                                                                                           |
+   +----------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`Array<class_Array>`\[:ref:`PackedVector2Array<class_PackedVector2Array>`\] | :ref:`clip_polygons<class_Geometry2D_method_clip_polygons>`\ (\ polygon_a\: :ref:`PackedVector2Array<class_PackedVector2Array>`, polygon_b\: :ref:`PackedVector2Array<class_PackedVector2Array>`\ )                                                                                                         |
    +----------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`Array<class_Array>`\[:ref:`PackedVector2Array<class_PackedVector2Array>`\] | :ref:`clip_polyline_with_polygon<class_Geometry2D_method_clip_polyline_with_polygon>`\ (\ polyline\: :ref:`PackedVector2Array<class_PackedVector2Array>`, polygon\: :ref:`PackedVector2Array<class_PackedVector2Array>`\ )                                                                                  |
@@ -216,6 +218,26 @@ Endpoints are rounded off and extended by ``delta`` units.
 
 Method Descriptions
 -------------------
+
+.. _class_Geometry2D_method_bresenham_line:
+
+.. rst-class:: classref-method
+
+:ref:`Array<class_Array>`\[:ref:`Vector2i<class_Vector2i>`\] **bresenham_line**\ (\ from\: :ref:`Vector2i<class_Vector2i>`, to\: :ref:`Vector2i<class_Vector2i>`\ ) :ref:`🔗<class_Geometry2D_method_bresenham_line>`
+
+Returns the `Bresenham line <https://en.wikipedia.org/wiki/Bresenham%27s_line_algorithm>`__ between the ``from`` and ``to`` points. A Bresenham line is a series of pixels that draws a line and is always 1-pixel thick on every row and column of the drawing (never more, never less).
+
+Example code to draw a line between two :ref:`Marker2D<class_Marker2D>` nodes using a series of :ref:`CanvasItem.draw_rect<class_CanvasItem_method_draw_rect>` calls:
+
+::
+
+    func _draw():
+        for pixel in Geometry2D.bresenham_line($MarkerA.position, $MarkerB.position):
+            draw_rect(Rect2(pixel, Vector2.ONE), Color.WHITE)
+
+.. rst-class:: classref-item-separator
+
+----
 
 .. _class_Geometry2D_method_clip_polygons:
 
@@ -474,14 +496,14 @@ The operation may result in an outer polygon (boundary) and inner polygon (hole)
     var polygon = PackedVector2Array([Vector2(0, 0), Vector2(100, 0), Vector2(100, 100), Vector2(0, 100)])
     var offset = Vector2(50, 50)
     polygon = Transform2D(0, offset) * polygon
-    print(polygon) # prints [(50, 50), (150, 50), (150, 150), (50, 150)]
+    print(polygon) # Prints [(50.0, 50.0), (150.0, 50.0), (150.0, 150.0), (50.0, 150.0)]
 
  .. code-tab:: csharp
 
     var polygon = new Vector2[] { new Vector2(0, 0), new Vector2(100, 0), new Vector2(100, 100), new Vector2(0, 100) };
     var offset = new Vector2(50, 50);
     polygon = new Transform2D(0, offset) * polygon;
-    GD.Print((Variant)polygon); // prints [(50, 50), (150, 50), (150, 150), (50, 150)]
+    GD.Print((Variant)polygon); // Prints [(50, 50), (150, 50), (150, 150), (50, 150)]
 
 
 

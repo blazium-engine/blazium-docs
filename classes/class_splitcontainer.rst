@@ -23,6 +23,8 @@ Description
 
 A container that accepts only two child controls, then arranges them horizontally or vertically and creates a divisor between them. The divisor can be dragged around to change the size relation between the child controls.
 
+Children can be collapsed/expanded at runtime if you drag against their half minimum size. See :ref:`collapse_mode<class_SplitContainer_property_collapse_mode>` for more info.
+
 .. rst-class:: classref-introduction-group
 
 Tutorials
@@ -38,15 +40,21 @@ Properties
 .. table::
    :widths: auto
 
-   +-----------------------------------------------------------------+-----------------------------------------------------------------------------+-----------+
-   | :ref:`bool<class_bool>`                                         | :ref:`collapsed<class_SplitContainer_property_collapsed>`                   | ``false`` |
-   +-----------------------------------------------------------------+-----------------------------------------------------------------------------+-----------+
-   | :ref:`DraggerVisibility<enum_SplitContainer_DraggerVisibility>` | :ref:`dragger_visibility<class_SplitContainer_property_dragger_visibility>` | ``0``     |
-   +-----------------------------------------------------------------+-----------------------------------------------------------------------------+-----------+
-   | :ref:`int<class_int>`                                           | :ref:`split_offset<class_SplitContainer_property_split_offset>`             | ``0``     |
-   +-----------------------------------------------------------------+-----------------------------------------------------------------------------+-----------+
-   | :ref:`bool<class_bool>`                                         | :ref:`vertical<class_SplitContainer_property_vertical>`                     | ``false`` |
-   +-----------------------------------------------------------------+-----------------------------------------------------------------------------+-----------+
+   +-----------------------------------------------------------------+---------------------------------------------------------------------------------------------------+-----------+
+   | :ref:`CollapseMode<enum_SplitContainer_CollapseMode>`           | :ref:`collapse_mode<class_SplitContainer_property_collapse_mode>`                                 | ``0``     |
+   +-----------------------------------------------------------------+---------------------------------------------------------------------------------------------------+-----------+
+   | :ref:`bool<class_bool>`                                         | :ref:`collapsed<class_SplitContainer_property_collapsed>`                                         | ``false`` |
+   +-----------------------------------------------------------------+---------------------------------------------------------------------------------------------------+-----------+
+   | :ref:`bool<class_bool>`                                         | :ref:`drag_area_highlight_in_editor<class_SplitContainer_property_drag_area_highlight_in_editor>` | ``false`` |
+   +-----------------------------------------------------------------+---------------------------------------------------------------------------------------------------+-----------+
+   | :ref:`DraggerVisibility<enum_SplitContainer_DraggerVisibility>` | :ref:`dragger_visibility<class_SplitContainer_property_dragger_visibility>`                       | ``0``     |
+   +-----------------------------------------------------------------+---------------------------------------------------------------------------------------------------+-----------+
+   | :ref:`bool<class_bool>`                                         | :ref:`dragging_enabled<class_SplitContainer_property_dragging_enabled>`                           | ``true``  |
+   +-----------------------------------------------------------------+---------------------------------------------------------------------------------------------------+-----------+
+   | :ref:`int<class_int>`                                           | :ref:`split_offset<class_SplitContainer_property_split_offset>`                                   | ``0``     |
+   +-----------------------------------------------------------------+---------------------------------------------------------------------------------------------------+-----------+
+   | :ref:`bool<class_bool>`                                         | :ref:`vertical<class_SplitContainer_property_vertical>`                                           | ``false`` |
+   +-----------------------------------------------------------------+---------------------------------------------------------------------------------------------------+-----------+
 
 .. rst-class:: classref-reftable-group
 
@@ -56,9 +64,11 @@ Methods
 .. table::
    :widths: auto
 
-   +--------+---------------------------------------------------------------------------------+
-   | |void| | :ref:`clamp_split_offset<class_SplitContainer_method_clamp_split_offset>`\ (\ ) |
-   +--------+---------------------------------------------------------------------------------+
+   +-------------------------------+-----------------------------------------------------------------------------------------------+
+   | |void|                        | :ref:`clamp_split_offset<class_SplitContainer_method_clamp_split_offset>`\ (\ )               |
+   +-------------------------------+-----------------------------------------------------------------------------------------------+
+   | :ref:`Control<class_Control>` | :ref:`get_drag_area_control<class_SplitContainer_method_get_drag_area_control>`\ (\ ) |const| |
+   +-------------------------------+-----------------------------------------------------------------------------------------------+
 
 .. rst-class:: classref-reftable-group
 
@@ -68,19 +78,35 @@ Theme Properties
 .. table::
    :widths: auto
 
-   +-----------------------------------+-------------------------------------------------------------------------------------------+--------+
-   | :ref:`int<class_int>`             | :ref:`autohide<class_SplitContainer_theme_constant_autohide>`                             | ``1``  |
-   +-----------------------------------+-------------------------------------------------------------------------------------------+--------+
-   | :ref:`int<class_int>`             | :ref:`minimum_grab_thickness<class_SplitContainer_theme_constant_minimum_grab_thickness>` | ``6``  |
-   +-----------------------------------+-------------------------------------------------------------------------------------------+--------+
-   | :ref:`int<class_int>`             | :ref:`separation<class_SplitContainer_theme_constant_separation>`                         | ``12`` |
-   +-----------------------------------+-------------------------------------------------------------------------------------------+--------+
-   | :ref:`Texture2D<class_Texture2D>` | :ref:`grabber<class_SplitContainer_theme_icon_grabber>`                                   |        |
-   +-----------------------------------+-------------------------------------------------------------------------------------------+--------+
-   | :ref:`Texture2D<class_Texture2D>` | :ref:`h_grabber<class_SplitContainer_theme_icon_h_grabber>`                               |        |
-   +-----------------------------------+-------------------------------------------------------------------------------------------+--------+
-   | :ref:`Texture2D<class_Texture2D>` | :ref:`v_grabber<class_SplitContainer_theme_icon_v_grabber>`                               |        |
-   +-----------------------------------+-------------------------------------------------------------------------------------------+--------+
+   +-----------------------------------+-------------------------------------------------------------------------------------------+-------------------------------------+
+   | :ref:`Color<class_Color>`         | :ref:`grabber_icon_normal<class_SplitContainer_theme_color_grabber_icon_normal>`          | ``Color(0.875, 0.875, 0.875, 0.6)`` |
+   +-----------------------------------+-------------------------------------------------------------------------------------------+-------------------------------------+
+   | :ref:`Color<class_Color>`         | :ref:`grabber_icon_pressed<class_SplitContainer_theme_color_grabber_icon_pressed>`        | ``Color(0.226, 0.478, 0.921, 1)``   |
+   +-----------------------------------+-------------------------------------------------------------------------------------------+-------------------------------------+
+   | :ref:`int<class_int>`             | :ref:`autohide<class_SplitContainer_theme_constant_autohide>`                             | ``1``                               |
+   +-----------------------------------+-------------------------------------------------------------------------------------------+-------------------------------------+
+   | :ref:`int<class_int>`             | :ref:`autohide_split_bar<class_SplitContainer_theme_constant_autohide_split_bar>`         | ``1``                               |
+   +-----------------------------------+-------------------------------------------------------------------------------------------+-------------------------------------+
+   | :ref:`int<class_int>`             | :ref:`draw_grabber_icon<class_SplitContainer_theme_constant_draw_grabber_icon>`           | ``1``                               |
+   +-----------------------------------+-------------------------------------------------------------------------------------------+-------------------------------------+
+   | :ref:`int<class_int>`             | :ref:`draw_split_bar<class_SplitContainer_theme_constant_draw_split_bar>`                 | ``0``                               |
+   +-----------------------------------+-------------------------------------------------------------------------------------------+-------------------------------------+
+   | :ref:`int<class_int>`             | :ref:`minimum_grab_thickness<class_SplitContainer_theme_constant_minimum_grab_thickness>` | ``6``                               |
+   +-----------------------------------+-------------------------------------------------------------------------------------------+-------------------------------------+
+   | :ref:`int<class_int>`             | :ref:`separation<class_SplitContainer_theme_constant_separation>`                         | ``6``                               |
+   +-----------------------------------+-------------------------------------------------------------------------------------------+-------------------------------------+
+   | :ref:`Texture2D<class_Texture2D>` | :ref:`grabber<class_SplitContainer_theme_icon_grabber>`                                   |                                     |
+   +-----------------------------------+-------------------------------------------------------------------------------------------+-------------------------------------+
+   | :ref:`Texture2D<class_Texture2D>` | :ref:`h_grabber<class_SplitContainer_theme_icon_h_grabber>`                               |                                     |
+   +-----------------------------------+-------------------------------------------------------------------------------------------+-------------------------------------+
+   | :ref:`Texture2D<class_Texture2D>` | :ref:`v_grabber<class_SplitContainer_theme_icon_v_grabber>`                               |                                     |
+   +-----------------------------------+-------------------------------------------------------------------------------------------+-------------------------------------+
+   | :ref:`StyleBox<class_StyleBox>`   | :ref:`h_split_bar_background<class_SplitContainer_theme_style_h_split_bar_background>`    |                                     |
+   +-----------------------------------+-------------------------------------------------------------------------------------------+-------------------------------------+
+   | :ref:`StyleBox<class_StyleBox>`   | :ref:`split_bar_background<class_SplitContainer_theme_style_split_bar_background>`        |                                     |
+   +-----------------------------------+-------------------------------------------------------------------------------------------+-------------------------------------+
+   | :ref:`StyleBox<class_StyleBox>`   | :ref:`v_split_bar_background<class_SplitContainer_theme_style_v_split_bar_background>`    |                                     |
+   +-----------------------------------+-------------------------------------------------------------------------------------------+-------------------------------------+
 
 .. rst-class:: classref-section-separator
 
@@ -90,6 +116,30 @@ Theme Properties
 
 Signals
 -------
+
+.. _class_SplitContainer_signal_drag_ended:
+
+.. rst-class:: classref-signal
+
+**drag_ended**\ (\ ) :ref:`🔗<class_SplitContainer_signal_drag_ended>`
+
+Emitted when the user ends dragging.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_SplitContainer_signal_drag_started:
+
+.. rst-class:: classref-signal
+
+**drag_started**\ (\ ) :ref:`🔗<class_SplitContainer_signal_drag_started>`
+
+Emitted when the user starts dragging.
+
+.. rst-class:: classref-item-separator
+
+----
 
 .. _class_SplitContainer_signal_dragged:
 
@@ -138,6 +188,54 @@ The split dragger is never visible.
 
 The split dragger is never visible and its space collapsed.
 
+.. rst-class:: classref-item-separator
+
+----
+
+.. _enum_SplitContainer_CollapseMode:
+
+.. rst-class:: classref-enumeration
+
+enum **CollapseMode**: :ref:`🔗<enum_SplitContainer_CollapseMode>`
+
+.. _class_SplitContainer_constant_COLLAPSE_NONE:
+
+.. rst-class:: classref-enumeration-constant
+
+:ref:`CollapseMode<enum_SplitContainer_CollapseMode>` **COLLAPSE_NONE** = ``0``
+
+Hiding the first or second sortable control child will result in hiding the dragger and the other control child will fill the visible area.
+
+.. _class_SplitContainer_constant_COLLAPSE_FIRST:
+
+.. rst-class:: classref-enumeration-constant
+
+:ref:`CollapseMode<enum_SplitContainer_CollapseMode>` **COLLAPSE_FIRST** = ``1``
+
+Hiding the first sortable control child will keep the dragger visible and you will be able to drag again to show it.
+
+\ **Note:** hiding the second sortable control will also hide the dragger.
+
+.. _class_SplitContainer_constant_COLLAPSE_SECOND:
+
+.. rst-class:: classref-enumeration-constant
+
+:ref:`CollapseMode<enum_SplitContainer_CollapseMode>` **COLLAPSE_SECOND** = ``2``
+
+Hiding the second sortable control child will keep the dragger visible and you will be able to drag again to show it.
+
+\ **Note:** hiding the first sortable control will also hide the dragger.
+
+.. _class_SplitContainer_constant_COLLAPSE_ALL:
+
+.. rst-class:: classref-enumeration-constant
+
+:ref:`CollapseMode<enum_SplitContainer_CollapseMode>` **COLLAPSE_ALL** = ``3``
+
+Hiding the first or second sortable control child will keep the dragger visible and you will be able to drag again to show them.
+
+\ **Note:** only one sortable control can be collapsed at time.
+
 .. rst-class:: classref-section-separator
 
 ----
@@ -146,6 +244,25 @@ The split dragger is never visible and its space collapsed.
 
 Property Descriptions
 ---------------------
+
+.. _class_SplitContainer_property_collapse_mode:
+
+.. rst-class:: classref-property
+
+:ref:`CollapseMode<enum_SplitContainer_CollapseMode>` **collapse_mode** = ``0`` :ref:`🔗<class_SplitContainer_property_collapse_mode>`
+
+.. rst-class:: classref-property-setget
+
+- |void| **set_collapse_mode**\ (\ value\: :ref:`CollapseMode<enum_SplitContainer_CollapseMode>`\ )
+- :ref:`CollapseMode<enum_SplitContainer_CollapseMode>` **get_collapse_mode**\ (\ )
+
+Can allow the first child or second child or both of them to be collapsed when they are not visible. See :ref:`CollapseMode<enum_SplitContainer_CollapseMode>` for details.
+
+Children can be visible/hidden while dragging, if the mouse position becomes greater than their half size, they will hide otherwise they will show if they are hidden.
+
+.. rst-class:: classref-item-separator
+
+----
 
 .. _class_SplitContainer_property_collapsed:
 
@@ -164,6 +281,23 @@ If ``true``, the dragger will be disabled and the children will be sized as if t
 
 ----
 
+.. _class_SplitContainer_property_drag_area_highlight_in_editor:
+
+.. rst-class:: classref-property
+
+:ref:`bool<class_bool>` **drag_area_highlight_in_editor** = ``false`` :ref:`🔗<class_SplitContainer_property_drag_area_highlight_in_editor>`
+
+.. rst-class:: classref-property-setget
+
+- |void| **set_drag_area_highlight_in_editor**\ (\ value\: :ref:`bool<class_bool>`\ )
+- :ref:`bool<class_bool>` **is_drag_area_highlight_in_editor_enabled**\ (\ )
+
+Highlights the drag area :ref:`Rect2<class_Rect2>` so you can see where it is during development. The drag area is gold if :ref:`dragging_enabled<class_SplitContainer_property_dragging_enabled>` is ``true``, and red if ``false``.
+
+.. rst-class:: classref-item-separator
+
+----
+
 .. _class_SplitContainer_property_dragger_visibility:
 
 .. rst-class:: classref-property
@@ -176,6 +310,23 @@ If ``true``, the dragger will be disabled and the children will be sized as if t
 - :ref:`DraggerVisibility<enum_SplitContainer_DraggerVisibility>` **get_dragger_visibility**\ (\ )
 
 Determines the dragger's visibility. See :ref:`DraggerVisibility<enum_SplitContainer_DraggerVisibility>` for details.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_SplitContainer_property_dragging_enabled:
+
+.. rst-class:: classref-property
+
+:ref:`bool<class_bool>` **dragging_enabled** = ``true`` :ref:`🔗<class_SplitContainer_property_dragging_enabled>`
+
+.. rst-class:: classref-property-setget
+
+- |void| **set_dragging_enabled**\ (\ value\: :ref:`bool<class_bool>`\ )
+- :ref:`bool<class_bool>` **is_dragging_enabled**\ (\ )
+
+Enables or disables split dragging.
 
 .. rst-class:: classref-item-separator
 
@@ -230,6 +381,26 @@ Method Descriptions
 
 Clamps the :ref:`split_offset<class_SplitContainer_property_split_offset>` value to not go outside the currently possible minimal and maximum values.
 
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_SplitContainer_method_get_drag_area_control:
+
+.. rst-class:: classref-method
+
+:ref:`Control<class_Control>` **get_drag_area_control**\ (\ ) |const| :ref:`🔗<class_SplitContainer_method_get_drag_area_control>`
+
+Returns the drag area :ref:`Control<class_Control>`. For example, you can move a pre-configured button into the drag area :ref:`Control<class_Control>` so that it rides along with the split bar. Try setting the :ref:`Button<class_Button>` anchors to ``center`` prior to the ``reparent()`` call.
+
+::
+
+    $BarnacleButton.reparent($SplitContainer.get_drag_area_control())
+
+\ **Note:** The drag area :ref:`Control<class_Control>` is drawn over the **SplitContainer**'s children, so :ref:`CanvasItem<class_CanvasItem>` draw objects called from the :ref:`Control<class_Control>` and children added to the :ref:`Control<class_Control>` will also appear over the **SplitContainer**'s children. Try setting :ref:`Control.mouse_filter<class_Control_property_mouse_filter>` of custom children to :ref:`Control.MOUSE_FILTER_IGNORE<class_Control_constant_MOUSE_FILTER_IGNORE>` to prevent blocking the mouse from dragging if desired.
+
+\ **Warning:** This is a required internal node, removing and freeing it may cause a crash.
+
 .. rst-class:: classref-section-separator
 
 ----
@@ -239,13 +410,73 @@ Clamps the :ref:`split_offset<class_SplitContainer_property_split_offset>` value
 Theme Property Descriptions
 ---------------------------
 
+.. _class_SplitContainer_theme_color_grabber_icon_normal:
+
+.. rst-class:: classref-themeproperty
+
+:ref:`Color<class_Color>` **grabber_icon_normal** = ``Color(0.875, 0.875, 0.875, 0.6)`` :ref:`🔗<class_SplitContainer_theme_color_grabber_icon_normal>`
+
+The grabber icon normal color.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_SplitContainer_theme_color_grabber_icon_pressed:
+
+.. rst-class:: classref-themeproperty
+
+:ref:`Color<class_Color>` **grabber_icon_pressed** = ``Color(0.226, 0.478, 0.921, 1)`` :ref:`🔗<class_SplitContainer_theme_color_grabber_icon_pressed>`
+
+The grabber icon pressed color.
+
+.. rst-class:: classref-item-separator
+
+----
+
 .. _class_SplitContainer_theme_constant_autohide:
 
 .. rst-class:: classref-themeproperty
 
 :ref:`int<class_int>` **autohide** = ``1`` :ref:`🔗<class_SplitContainer_theme_constant_autohide>`
 
-Boolean value. If 1 (``true``), the grabber will hide automatically when it isn't under the cursor. If 0 (``false``), it's always visible.
+Boolean value. If 1 (``true``), the grabber icon will hide automatically when it isn't under the cursor. If 0 (``false``), it's always visible.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_SplitContainer_theme_constant_autohide_split_bar:
+
+.. rst-class:: classref-themeproperty
+
+:ref:`int<class_int>` **autohide_split_bar** = ``1`` :ref:`🔗<class_SplitContainer_theme_constant_autohide_split_bar>`
+
+Boolean value. If 1 (``true``), the split bar background will hide automatically when it isn't under the cursor. If 0 (``false``), it's always visible.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_SplitContainer_theme_constant_draw_grabber_icon:
+
+.. rst-class:: classref-themeproperty
+
+:ref:`int<class_int>` **draw_grabber_icon** = ``1`` :ref:`🔗<class_SplitContainer_theme_constant_draw_grabber_icon>`
+
+If 1 (``true``), the grabber icon will be visible. If 0 (``false``), it will be hidden.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_SplitContainer_theme_constant_draw_split_bar:
+
+.. rst-class:: classref-themeproperty
+
+:ref:`int<class_int>` **draw_split_bar** = ``0`` :ref:`🔗<class_SplitContainer_theme_constant_draw_split_bar>`
+
+If 1 (``true``), the split bar background will be visible. If 0 (``false``), it will be hidden.
 
 .. rst-class:: classref-item-separator
 
@@ -267,7 +498,7 @@ The minimum thickness of the area users can click on to grab the splitting line.
 
 .. rst-class:: classref-themeproperty
 
-:ref:`int<class_int>` **separation** = ``12`` :ref:`🔗<class_SplitContainer_theme_constant_separation>`
+:ref:`int<class_int>` **separation** = ``6`` :ref:`🔗<class_SplitContainer_theme_constant_separation>`
 
 The space between sides of the container.
 
@@ -306,6 +537,42 @@ The icon used for the grabber drawn in the middle area when :ref:`vertical<class
 :ref:`Texture2D<class_Texture2D>` **v_grabber** :ref:`🔗<class_SplitContainer_theme_icon_v_grabber>`
 
 The icon used for the grabber drawn in the middle area when :ref:`vertical<class_SplitContainer_property_vertical>` is ``true``.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_SplitContainer_theme_style_h_split_bar_background:
+
+.. rst-class:: classref-themeproperty
+
+:ref:`StyleBox<class_StyleBox>` **h_split_bar_background** :ref:`🔗<class_SplitContainer_theme_style_h_split_bar_background>`
+
+Determines the background of the split bar when :ref:`vertical<class_SplitContainer_property_vertical>` is ``false``.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_SplitContainer_theme_style_split_bar_background:
+
+.. rst-class:: classref-themeproperty
+
+:ref:`StyleBox<class_StyleBox>` **split_bar_background** :ref:`🔗<class_SplitContainer_theme_style_split_bar_background>`
+
+Determines the background of the split bar. Can have expand margins to draw outside the bounds.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_SplitContainer_theme_style_v_split_bar_background:
+
+.. rst-class:: classref-themeproperty
+
+:ref:`StyleBox<class_StyleBox>` **v_split_bar_background** :ref:`🔗<class_SplitContainer_theme_style_v_split_bar_background>`
+
+Determines the background of the split bar when :ref:`vertical<class_SplitContainer_property_vertical>` is ``true``.
 
 .. |virtual| replace:: :abbr:`virtual (This method should typically be overridden by the user to have any effect.)`
 .. |const| replace:: :abbr:`const (This method has no side effects. It doesn't modify any of the instance's member variables.)`
