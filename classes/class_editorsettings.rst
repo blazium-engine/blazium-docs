@@ -213,6 +213,8 @@ Properties
    +---------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`Color<class_Color>`                         | :ref:`editors/3d_gizmos/gizmo_colors/fog_volume<class_EditorSettings_property_editors/3d_gizmos/gizmo_colors/fog_volume>`                                                                                         |
    +---------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`Color<class_Color>`                         | :ref:`editors/3d_gizmos/gizmo_colors/gridmap_grid<class_EditorSettings_property_editors/3d_gizmos/gizmo_colors/gridmap_grid>`                                                                                     |
+   +---------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`Color<class_Color>`                         | :ref:`editors/3d_gizmos/gizmo_colors/instantiated<class_EditorSettings_property_editors/3d_gizmos/gizmo_colors/instantiated>`                                                                                     |
    +---------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`Color<class_Color>`                         | :ref:`editors/3d_gizmos/gizmo_colors/joint<class_EditorSettings_property_editors/3d_gizmos/gizmo_colors/joint>`                                                                                                   |
@@ -240,6 +242,12 @@ Properties
    | :ref:`Color<class_Color>`                         | :ref:`editors/3d_gizmos/gizmo_colors/selected_bone<class_EditorSettings_property_editors/3d_gizmos/gizmo_colors/selected_bone>`                                                                                   |
    +---------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`Color<class_Color>`                         | :ref:`editors/3d_gizmos/gizmo_colors/skeleton<class_EditorSettings_property_editors/3d_gizmos/gizmo_colors/skeleton>`                                                                                             |
+   +---------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`Color<class_Color>`                         | :ref:`editors/3d_gizmos/gizmo_colors/spring_bone_collision<class_EditorSettings_property_editors/3d_gizmos/gizmo_colors/spring_bone_collision>`                                                                   |
+   +---------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`Color<class_Color>`                         | :ref:`editors/3d_gizmos/gizmo_colors/spring_bone_inside_collision<class_EditorSettings_property_editors/3d_gizmos/gizmo_colors/spring_bone_inside_collision>`                                                     |
+   +---------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`Color<class_Color>`                         | :ref:`editors/3d_gizmos/gizmo_colors/spring_bone_joint<class_EditorSettings_property_editors/3d_gizmos/gizmo_colors/spring_bone_joint>`                                                                           |
    +---------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`Color<class_Color>`                         | :ref:`editors/3d_gizmos/gizmo_colors/stream_player_3d<class_EditorSettings_property_editors/3d_gizmos/gizmo_colors/stream_player_3d>`                                                                             |
    +---------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -619,8 +627,6 @@ Properties
    +---------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`int<class_int>`                             | :ref:`run/window_placement/game_embed_mode<class_EditorSettings_property_run/window_placement/game_embed_mode>`                                                                                                   |
    +---------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | :ref:`int<class_int>`                             | :ref:`run/window_placement/play_window_pip_mode<class_EditorSettings_property_run/window_placement/play_window_pip_mode>`                                                                                         |
-   +---------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`int<class_int>`                             | :ref:`run/window_placement/rect<class_EditorSettings_property_run/window_placement/rect>`                                                                                                                         |
    +---------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`Vector2<class_Vector2>`                     | :ref:`run/window_placement/rect_custom_position<class_EditorSettings_property_run/window_placement/rect_custom_position>`                                                                                         |
@@ -676,6 +682,10 @@ Properties
    | :ref:`int<class_int>`                             | :ref:`text_editor/behavior/files/autosave_interval_secs<class_EditorSettings_property_text_editor/behavior/files/autosave_interval_secs>`                                                                         |
    +---------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`bool<class_bool>`                           | :ref:`text_editor/behavior/files/convert_indent_on_save<class_EditorSettings_property_text_editor/behavior/files/convert_indent_on_save>`                                                                         |
+   +---------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`bool<class_bool>`                           | :ref:`text_editor/behavior/files/drop_preload_resources_as_uid<class_EditorSettings_property_text_editor/behavior/files/drop_preload_resources_as_uid>`                                                           |
+   +---------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`bool<class_bool>`                           | :ref:`text_editor/behavior/files/drop_regular_resources_as_uid<class_EditorSettings_property_text_editor/behavior/files/drop_regular_resources_as_uid>`                                                           |
    +---------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`bool<class_bool>`                           | :ref:`text_editor/behavior/files/open_dominant_script_on_scene_change<class_EditorSettings_property_text_editor/behavior/files/open_dominant_script_on_scene_change>`                                             |
    +---------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -1909,6 +1919,18 @@ The 3D editor gizmo color for :ref:`FogVolume<class_FogVolume>` nodes.
 
 ----
 
+.. _class_EditorSettings_property_editors/3d_gizmos/gizmo_colors/gridmap_grid:
+
+.. rst-class:: classref-property
+
+:ref:`Color<class_Color>` **editors/3d_gizmos/gizmo_colors/gridmap_grid** :ref:`🔗<class_EditorSettings_property_editors/3d_gizmos/gizmo_colors/gridmap_grid>`
+
+The 3D editor gizmo color for the :ref:`GridMap<class_GridMap>` grid.
+
+.. rst-class:: classref-item-separator
+
+----
+
 .. _class_EditorSettings_property_editors/3d_gizmos/gizmo_colors/instantiated:
 
 .. rst-class:: classref-property
@@ -2072,6 +2094,42 @@ The 3D editor gizmo color used for the currently selected :ref:`Skeleton3D<class
 :ref:`Color<class_Color>` **editors/3d_gizmos/gizmo_colors/skeleton** :ref:`🔗<class_EditorSettings_property_editors/3d_gizmos/gizmo_colors/skeleton>`
 
 The 3D editor gizmo color used for :ref:`Skeleton3D<class_Skeleton3D>` nodes.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_EditorSettings_property_editors/3d_gizmos/gizmo_colors/spring_bone_collision:
+
+.. rst-class:: classref-property
+
+:ref:`Color<class_Color>` **editors/3d_gizmos/gizmo_colors/spring_bone_collision** :ref:`🔗<class_EditorSettings_property_editors/3d_gizmos/gizmo_colors/spring_bone_collision>`
+
+The 3D editor gizmo color used for :ref:`SpringBoneCollision3D<class_SpringBoneCollision3D>` nodes.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_EditorSettings_property_editors/3d_gizmos/gizmo_colors/spring_bone_inside_collision:
+
+.. rst-class:: classref-property
+
+:ref:`Color<class_Color>` **editors/3d_gizmos/gizmo_colors/spring_bone_inside_collision** :ref:`🔗<class_EditorSettings_property_editors/3d_gizmos/gizmo_colors/spring_bone_inside_collision>`
+
+The 3D editor gizmo color used for :ref:`SpringBoneCollision3D<class_SpringBoneCollision3D>` nodes with inside mode.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_EditorSettings_property_editors/3d_gizmos/gizmo_colors/spring_bone_joint:
+
+.. rst-class:: classref-property
+
+:ref:`Color<class_Color>` **editors/3d_gizmos/gizmo_colors/spring_bone_joint** :ref:`🔗<class_EditorSettings_property_editors/3d_gizmos/gizmo_colors/spring_bone_joint>`
+
+The 3D editor gizmo color used for :ref:`SpringBoneSimulator3D<class_SpringBoneSimulator3D>` nodes.
 
 .. rst-class:: classref-item-separator
 
@@ -4517,8 +4575,6 @@ Specifies how the Play window is launched relative to the Android editor.
 
 - **Side-by-side with Editor** will launch the Play window side-by-side with the Editor window.
 
-- **Launch in PiP mode** will launch the Play window directly in picture-in-picture (PiP) mode if PiP mode is supported and enabled. When maximized, the Play window will occupy the same window as the Editor.
-
 \ **Note:** Only available in the Android editor.
 
 .. rst-class:: classref-item-separator
@@ -4532,26 +4588,6 @@ Specifies how the Play window is launched relative to the Android editor.
 :ref:`int<class_int>` **run/window_placement/game_embed_mode** :ref:`🔗<class_EditorSettings_property_run/window_placement/game_embed_mode>`
 
 Overrides game embedding setting for all newly opened projects. If enabled, game embedding settings are not saved.
-
-.. rst-class:: classref-item-separator
-
-----
-
-.. _class_EditorSettings_property_run/window_placement/play_window_pip_mode:
-
-.. rst-class:: classref-property
-
-:ref:`int<class_int>` **run/window_placement/play_window_pip_mode** :ref:`🔗<class_EditorSettings_property_run/window_placement/play_window_pip_mode>`
-
-Specifies the picture-in-picture (PiP) mode for the Play window.
-
-- **Disabled:** PiP is disabled for the Play window.
-
-- **Enabled:** If the device supports it, PiP is always enabled for the Play window. The Play window will contain a button to enter PiP mode.
-
-- **Enabled when Play window is same as Editor** (default for Android editor): If the device supports it, PiP is enabled when the Play window is the same as the Editor. The Play window will contain a button to enter PiP mode.
-
-\ **Note:** Only available in the Android editor.
 
 .. rst-class:: classref-item-separator
 
@@ -4890,6 +4926,34 @@ If set to a value greater than ``0``, automatically saves the current script fol
 :ref:`bool<class_bool>` **text_editor/behavior/files/convert_indent_on_save** :ref:`🔗<class_EditorSettings_property_text_editor/behavior/files/convert_indent_on_save>`
 
 If ``true``, converts indentation to match the script editor's indentation settings when saving a script. See also :ref:`text_editor/behavior/indent/type<class_EditorSettings_property_text_editor/behavior/indent/type>`.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_EditorSettings_property_text_editor/behavior/files/drop_preload_resources_as_uid:
+
+.. rst-class:: classref-property
+
+:ref:`bool<class_bool>` **text_editor/behavior/files/drop_preload_resources_as_uid** :ref:`🔗<class_EditorSettings_property_text_editor/behavior/files/drop_preload_resources_as_uid>`
+
+If ``true``, when dropping a :ref:`Resource<class_Resource>` file to script editor while :kbd:`Ctrl` is held, the resource will be preloaded with a UID. If ``false``, the resource will be preloaded with a path.
+
+When you hold :kbd:`Ctrl+Shift`, the behavior is reversed.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_EditorSettings_property_text_editor/behavior/files/drop_regular_resources_as_uid:
+
+.. rst-class:: classref-property
+
+:ref:`bool<class_bool>` **text_editor/behavior/files/drop_regular_resources_as_uid** :ref:`🔗<class_EditorSettings_property_text_editor/behavior/files/drop_regular_resources_as_uid>`
+
+If ``true``, when dropping a :ref:`Resource<class_Resource>` file to script editor while :kbd:`Ctrl` is not held, the resource will be dropped with a UID. If ``false``, the resource will be dropped with a path.
+
+When you hold :kbd:`Shift`, the behavior is reversed.
 
 .. rst-class:: classref-item-separator
 

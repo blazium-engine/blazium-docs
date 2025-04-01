@@ -1874,7 +1874,7 @@ Shows a text input dialog which uses the operating system's native look-and-feel
 
 Shows a text dialog which uses the operating system's native look-and-feel. ``callback`` should accept a single :ref:`int<class_int>` parameter which corresponds to the index of the pressed button.
 
-\ **Note:** This method is implemented if the display server has the :ref:`FEATURE_NATIVE_DIALOG<class_DisplayServer_constant_FEATURE_NATIVE_DIALOG>` feature. Supported platforms include macOS and Windows.
+\ **Note:** This method is implemented if the display server has the :ref:`FEATURE_NATIVE_DIALOG<class_DisplayServer_constant_FEATURE_NATIVE_DIALOG>` feature. Supported platforms include macOS, Windows, and Android.
 
 .. rst-class:: classref-item-separator
 

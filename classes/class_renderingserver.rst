@@ -551,6 +551,8 @@ Methods
    +----------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | |void|                                                                           | :ref:`light_set_shadow<class_RenderingServer_method_light_set_shadow>`\ (\ light\: :ref:`RID<class_RID>`, enabled\: :ref:`bool<class_bool>`\ )                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
    +----------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | |void|                                                                           | :ref:`light_set_shadow_caster_mask<class_RenderingServer_method_light_set_shadow_caster_mask>`\ (\ light\: :ref:`RID<class_RID>`, mask\: :ref:`int<class_int>`\ )                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+   +----------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`RID<class_RID>`                                                            | :ref:`lightmap_create<class_RenderingServer_method_lightmap_create>`\ (\ )                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
    +----------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | :ref:`PackedInt32Array<class_PackedInt32Array>`                                  | :ref:`lightmap_get_probe_capture_bsp_tree<class_RenderingServer_method_lightmap_get_probe_capture_bsp_tree>`\ (\ lightmap\: :ref:`RID<class_RID>`\ ) |const|                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
@@ -4207,6 +4209,14 @@ Use the filmic tonemapper. This avoids clipping bright highlights, with a result
 Use the Academy Color Encoding System tonemapper. ACES is slightly more expensive than other options, but it handles bright lighting in a more realistic fashion by desaturating it as it becomes brighter. ACES typically has a more contrasted output compared to :ref:`ENV_TONE_MAPPER_REINHARD<class_RenderingServer_constant_ENV_TONE_MAPPER_REINHARD>` and :ref:`ENV_TONE_MAPPER_FILMIC<class_RenderingServer_constant_ENV_TONE_MAPPER_FILMIC>`.
 
 \ **Note:** This tonemapping operator is called "ACES Fitted" in Godot 3.x.
+
+.. _class_RenderingServer_constant_ENV_TONE_MAPPER_AGX:
+
+.. rst-class:: classref-enumeration-constant
+
+:ref:`EnvironmentToneMapper<enum_RenderingServer_EnvironmentToneMapper>` **ENV_TONE_MAPPER_AGX** = ``4``
+
+Use the AgX tonemapper. AgX is slightly more expensive than other options, but it handles bright lighting in a more realistic fashion by desaturating it as it becomes brighter. AgX is less likely to darken parts of the scene compared to :ref:`ENV_TONE_MAPPER_ACES<class_RenderingServer_constant_ENV_TONE_MAPPER_ACES>`, and can match :ref:`ENV_TONE_MAPPER_FILMIC<class_RenderingServer_constant_ENV_TONE_MAPPER_FILMIC>` more closely.
 
 .. rst-class:: classref-item-separator
 
@@ -9005,6 +9015,18 @@ If ``true``, reverses the backface culling of the mesh. This can be useful when 
 |void| **light_set_shadow**\ (\ light\: :ref:`RID<class_RID>`, enabled\: :ref:`bool<class_bool>`\ ) :ref:`🔗<class_RenderingServer_method_light_set_shadow>`
 
 If ``true``, light will cast shadows. Equivalent to :ref:`Light3D.shadow_enabled<class_Light3D_property_shadow_enabled>`.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_RenderingServer_method_light_set_shadow_caster_mask:
+
+.. rst-class:: classref-method
+
+|void| **light_set_shadow_caster_mask**\ (\ light\: :ref:`RID<class_RID>`, mask\: :ref:`int<class_int>`\ ) :ref:`🔗<class_RenderingServer_method_light_set_shadow_caster_mask>`
+
+Sets the shadow caster mask for this 3D light. Shadows will only be cast using objects in the selected layers. Equivalent to :ref:`Light3D.shadow_caster_mask<class_Light3D_property_shadow_caster_mask>`.
 
 .. rst-class:: classref-item-separator
 
