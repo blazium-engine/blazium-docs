@@ -1,13 +1,13 @@
 :allow_comments: False
 
-Godot Docs – *4.4* branch
-=========================
+Blazium Documentation
+=====================
 
-.. only:: not i18n
+.. .. only:: not i18n
 
-  .. note:: Godot's documentation is available in various languages and versions.
-            Expand the "Read the Docs" panel at the bottom of the sidebar to see
-            the list.
+..   .. note:: Godot's documentation is available in various languages and versions.
+..             Expand the "Read the Docs" panel at the bottom of the sidebar to see
+..             the list.
 
 .. only:: i18n
 
@@ -45,10 +45,10 @@ by letting us know!
 
 We haven't set up translated docs yet, so either submit an issue or pull request on the `GitHub repository <https://github.com/blazium-engine/blazium-docs/issues>`_
 or check the `Godot translated documentation <https://hosted.weblate.org/engage/godot-engine/>`_.
-Help them and us translate docs into your language over there or talk to us on the ``#documentation`` channel on the
+Help them and us translate docs into your language over there or talk to us on the on the
 `Blazium Discord <https://chat.blazium.app/>`_!
 
-.. centered:: |weblate_widget|
+.. .. centered:: |weblate_widget|
 
 .. Offline documentation
 .. ---------------------
