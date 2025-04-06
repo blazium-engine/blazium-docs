@@ -52,3 +52,5 @@ With the exception of the `classes/` folder, all the content of this repository 
 See [LICENSE.txt](/LICENSE.txt) for details.
 
 The files in the `classes/` folder are derived from [Blazium's main source repository](https://github.com/blazium-engine/blazium) and are distributed under the MIT license, with the same authors as above.
+
+[![DigitalOcean Referral Badge](https://web-platforms.sfo2.cdn.digitaloceanspaces.com/WWW/Badge%201.svg)](https://www.digitalocean.com/?refcode=c9796b8f52e2&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge)

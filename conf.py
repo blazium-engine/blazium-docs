@@ -53,7 +53,8 @@ notfound_context = {
 }
 
 # on_rtd is whether we are on readthedocs.org, this line of code grabbed from docs.readthedocs.org
-on_rtd = os.environ.get("READTHEDOCS", None) == "True"
+# on_rtd = os.environ.get("READTHEDOCS", None) == "True"
+on_rtd = True # We on DigitalOcean
 
 # Don't add `/en/latest` prefix during local development.
 # This makes it easier to test the custom 404 page by loading `/404.html`
@@ -172,8 +173,6 @@ html_theme_options = {
     "display_version": False,
 }
 
-html_title = supported_languages[language] % ( "(" + version + ")" )
-
 # VCS options: https://docs.readthedocs.io/en/latest/vcs.html#github
 html_context = {
     "display_github": not is_i18n,  # Integrate GitHub
@@ -195,18 +194,21 @@ html_context = {
     # that they are not reading the `stable` documentation.
     "godot_is_latest": False,
     "godot_version": "4.3",
+    "blazium_version": "0.4.90",
     # Enables a banner that displays the up-to-date status of each article.
     "godot_show_article_status": True,
     # Display user-contributed notes at the bottom of pages that don't have `:allow_comments: False` at the top.
     "godot_show_article_comments": on_rtd and not is_i18n,
 }
 
+html_title = supported_languages[language] % ( html_context["blazium_version"] + " (" + version + ")" )
+
 html_logo = "img/docs_logo.svg"
 
 # These folders are copied to the documentation's HTML output
 html_static_path = ["_static"]
 
-html_extra_path = ["robots.txt"]
+html_extra_path = ["robots.txt", "img/favicon.ico"]
 
 # These paths are either relative to html_static_path
 # or fully qualified paths (e.g. https://...)

@@ -12,6 +12,7 @@
 {% endblock -%}
 
 {% block linktags -%}
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
   <meta name="theme-color" content="#3d8fcc" />
   {% if godot_inject_language_links -%}
   {% for alternate_lang in godot_docs_supported_languages -%}
@@ -57,8 +58,8 @@
       {% else %}
       <p class="first admonition-title">Up to date</p>
       <p>
-        This page is <strong>up to date</strong> for Godot <code class="docutils literal notranslate">{{ godot_version }}</code>.
-        If you still find outdated information, please <a href="https://github.com/blazium-engine/blazium-docs">open an issue</a>.
+        This page is <strong>up to date</strong> for Blazium <code class="docutils literal notranslate">{{ blazium_version}} ({{ godot_version }})</code>.
+        If you still find outdated information, please <a href="https://github.com/blazium-engine/blazium-docs/issues">open an issue</a>.
       </p>
       {% endif %}
     </div>
