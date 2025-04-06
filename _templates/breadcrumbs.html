@@ -3,7 +3,7 @@
 {% block breadcrumbs %}
 <li>
 	<div style="font-size: 105%;font-weight: 600;">
-		{{ godot_docs_title | replace("%s", godot_version) }}
+		{{ godot_docs_title | replace("%s", blazium_version + " (" + godot_version + ")") }}
 	</div>
 	<ul class="wy-breadcrumbs">
 		{{ super() }}

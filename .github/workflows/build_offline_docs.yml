@@ -18,9 +18,7 @@ jobs:
       fail-fast: false
       matrix:
         branch:
-          - master
-          - stable
-          - 3.6
+          - 4.3
     permissions:
       contents: write
     steps:
@@ -60,7 +58,7 @@ jobs:
 
       - uses: actions/upload-artifact@v4
         with:
-          name: godot-docs-html-${{ matrix.branch }}
+          name: blazium-docs-html-${{ matrix.branch }}
           path: _build/html
           # Keep the current build and the previous build (in case a scheduled build failed).
           # This makes it more likely to have at least one successful build available at all times.
@@ -82,8 +80,8 @@ jobs:
 
       - uses: actions/upload-artifact@v4
         with:
-          name: godot-docs-epub-${{ matrix.branch }}
-          path: _build/epub/GodotEngine.epub
+          name: blazium-docs-epub-${{ matrix.branch }}
+          path: _build/epub/BlaziumEngine.epub
           # Keep the current build and the previous build (in case a scheduled build failed).
           # This makes it more likely to have at least one successful build available at all times.
           retention-days: 15
