@@ -662,4 +662,4 @@ See :ref:`doc_ways_to_contribute`.
 Who is working on Blazium? How can I contact you?
 -------------------------------------------------
 
-`Join our discord <https://chat.blazium>`.
+`Join our discord <https://chat.blazium>`__.
