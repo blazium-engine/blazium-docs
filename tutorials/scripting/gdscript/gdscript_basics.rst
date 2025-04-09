@@ -1965,7 +1965,7 @@ in other scripts without the need to ``load`` or ``preload`` them:
 
 .. warning::
 
-    The Godot editor will hide these custom classes with names that begin with the prefix
+    The Blazium editor will hide these custom classes with names that begin with the prefix
     "Editor" in the 'Create New Node' or 'Create New Scene' dialog windows. The classes
     are available for instantiation at runtime via their class names, but are
     automatically hidden by the editor windows along with the built-in editor nodes used
