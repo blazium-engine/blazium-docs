@@ -10,7 +10,7 @@ concurrency:
 
 jobs:
   build:
-    name: Update class reference files based on the lateste engine release tag
+    name: Update class reference files based on the latest engine release tag
     runs-on: ubuntu-24.04
     timeout-minutes: 10
     permissions:
