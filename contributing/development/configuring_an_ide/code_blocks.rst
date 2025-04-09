@@ -128,4 +128,4 @@ Under **General Settings**, on the **Editor Settings** tab, under **Tab Options*
 
 That's it. You're ready to start contributing to Blazium using the Code::Blocks
 IDE. Remember to save the project file and the **Workspace**. If you run into
-any issues, ask for help on `Blazium's offical Discord server <https://chat.blazium.app/>`__.
+any issues, ask for help on `Blazium's official Discord server <https://chat.blazium.app/>`__.
