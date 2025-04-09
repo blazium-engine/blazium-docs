@@ -21,7 +21,7 @@ Some reasons to create custom platform ports might be:
 - You want to port Blazium to an exotic platform that isn't currently supported.
 
 If you have questions about creating a custom platform port, feel free to ask in
-`Blazium's offical Discord server <https://chat.blazium.app>`__.
+`Blazium's official Discord server <https://chat.blazium.app>`__.
 
 .. note::
 
