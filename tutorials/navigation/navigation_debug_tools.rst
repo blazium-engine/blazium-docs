@@ -24,6 +24,11 @@ In Blazium debug builds the navigation debug can also be toggled through the Nav
     NavigationServer2D.set_debug_enabled(false)
     NavigationServer3D.set_debug_enabled(true)
 
+ .. code-tab:: csharp
+
+    NavigationServer2D.SetDebugEnabled(false);
+    NavigationServer3D.SetDebugEnabled(true);
+
 Debug visualizations are currently based on Nodes in the SceneTree. If the :ref:`NavigationServer2D<class_NavigationServer2D>` or :ref:`NavigationServer3D<class_NavigationServer3D>`
 APIs are used exclusively then changes will not be reflected by the debug navigation tools.
 
