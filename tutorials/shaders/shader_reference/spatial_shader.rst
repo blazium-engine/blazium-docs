@@ -396,14 +396,14 @@ these properties, and if you don't write to them, Blazium will optimize away the
 +----------------------------------------+--------------------------------------------------------------------------------------------------+
 | out float **ROUGHNESS**                | Roughness (range of ``[0.0, 1.0]``).                                                             |
 +----------------------------------------+--------------------------------------------------------------------------------------------------+
-| out float **RIM**                      | Rim (range of ``[0.0, 1.0]``). If used, Godot calculates rim lighting.                           |
+| out float **RIM**                      | Rim (range of ``[0.0, 1.0]``). If used, Blazium calculates rim lighting.                         |
 |                                        | Rim size depends on ``ROUGHNESS``.                                                               |
 +----------------------------------------+--------------------------------------------------------------------------------------------------+
-| out float **RIM_TINT**                 | Rim Tint, range of ``0.0`` (white) to ``1.0`` (albedo). If used, Godot calculates rim lighting.  |
+| out float **RIM_TINT**                 | Rim Tint, range of ``0.0`` (white) to ``1.0`` (albedo). If used, Blazium calculates rim lighting.|
 +----------------------------------------+--------------------------------------------------------------------------------------------------+
-| out float **CLEARCOAT**                | Small specular blob added on top of the existing one. If used, Godot calculates clearcoat.       |
+| out float **CLEARCOAT**                | Small specular blob added on top of the existing one. If used, Blazium calculates clearcoat.     |
 +----------------------------------------+--------------------------------------------------------------------------------------------------+
-| out float **CLEARCOAT_GLOSS**          | Gloss of clearcoat. If used, Godot calculates clearcoat.                                         |
+| out float **CLEARCOAT_GLOSS**          | Gloss of clearcoat. If used, Blazium calculates clearcoat.                                       |
 +----------------------------------------+--------------------------------------------------------------------------------------------------+
 | out float **ANISOTROPY**               | For distorting the specular blob according to tangent space.                                     |
 +----------------------------------------+--------------------------------------------------------------------------------------------------+
@@ -449,7 +449,7 @@ Light built-ins
 ---------------
 
 Writing light processor functions is completely optional. You can skip the ``light()`` function by using
-the ``unshaded`` render mode. If no light function is written, Godot will use the material properties
+the ``unshaded`` render mode. If no light function is written, Blazium will use the material properties
 written to in the ``fragment()`` function to calculate the lighting for you (subject to the render mode).
 
 The ``light()`` function is called for every light in every pixel. It is called within a loop for each light type.

@@ -20,7 +20,7 @@ what the object *is*. In the upper-left corner, in the "Scene" tab, click the
 
 .. image:: img/add_node.webp
 
-When you add the ``Area2D`` node, Godot will display the following **warning icon**
+When you add the ``Area2D`` node, Blazium will display the following **warning icon**
 next to it in the scene tree:
 
 .. image:: img/no_shape_warning.webp

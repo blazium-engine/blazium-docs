@@ -64,15 +64,14 @@ Technical contributions
 Community support
 -----------------
 
-- **Call for Moderators**
-  With a community of our size, we need people to step up as volunteer moderators in all kinds of places.
-  These teams are organized by the Godot Foundation, but would not function without the dedication of active community members like you.
+.. - **Call for Moderators**
+..   With a community of our size, we need people to step up as volunteer moderators in all kinds of places.
+..   These teams are organized by the Godot Foundation, but would not function without the dedication of active community members like you.
 
-  Have a look around your favorite community platform and you might come across open application calls.
+..   Have a look around your favorite community platform and you might come across open application calls.
 
 - **Answer tech-support questions**
   With many new people discovering the Blazium Engine recently, the need for peer-to-peer tech-support has never been greater.
-  .. See the `Blazium Official Discord server <https://chat.blazium.app>`_ for a list of official and user-supported Blazium communities.
 
 - **Create tutorials & more**
   How did you get started with the Blazium Engine?

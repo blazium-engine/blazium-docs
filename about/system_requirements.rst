@@ -256,7 +256,7 @@ Desktop or laptop PC - Minimum
 
     Vulkan drivers for these Windows versions are known to have issues with
     memory leaks. As a result, it's recommended to stick to the Compatibility
-    renderer when running Godot on a Windows version older than 10.
+    renderer when running Blazium on a Windows version older than 10.
 
 Mobile device (smartphone/tablet) - Minimum
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -298,7 +298,7 @@ Mobile device (smartphone/tablet) - Minimum
 +----------------------+-----------------------------------------------------------------------------------------+
 
 These are the **recommended** specifications to get a smooth experience with a
-simple 2D or 3D project exported with Godot:
+simple 2D or 3D project exported with Blazium:
 
 Desktop or laptop PC - Recommended
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

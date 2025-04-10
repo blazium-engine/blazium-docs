@@ -6,10 +6,9 @@ Using Jolt Physics
 Introduction
 ------------
 
-The Jolt physics engine was added as an alternative to the existing Godot Physics
-physics engine in 4.4. Jolt is developed by Jorrit Rouwe with a focus on games and
+Jolt is developed by Jorrit Rouwe with a focus on games and
 VR applications. Previously it was available as a extension but is now built into
-Godot.
+Blazium.
 
 It is important to note that the built-in Jolt Physics module is considered
 **not finished**, **experimental**, and **lacks feature parity** with both
@@ -17,7 +16,7 @@ Godot Physics and the Godot Jolt extension. Behavior may change as it is develop
 further. Please keep that in mind when choosing what to use for your project.
 
 The existing extension is now considered in maintenance mode. That means bug fixes
-will be merged, and it will be kept compatible with new versions of Godot until
+will be merged, and it will be kept compatible with new versions of Blazium until
 the built-in module has feature parity with the extension. The extension can be
 found `here on GitHub <https://github.com/godot-jolt/godot-jolt>`_ and in Godot's asset
 library.
@@ -87,11 +86,11 @@ Collision margins
 Jolt (and other similar physics engines) uses something that Jolt refers to as
 "convex radius" to help improve the performance and behavior of the types of
 collision detection that Jolt relies on for convex shapes. Other physics engines
-(Godot included) might refer to these as "collision margins" instead. Godot exposes
+(Blazium included) might refer to these as "collision margins" instead. Blazium exposes
 these as the ``margin`` property on every Shape3D-derived class, but Godot Physics
 itself does not use them for anything.
 
-What these collision margins sometimes do in other engines (as described in Godot's
+What these collision margins sometimes do in other engines (as described in Blazium's
 documentation) is effectively add a "shell" around the shape, slightly increasing
 its size while also rounding off any edges/corners. In Jolt however, these margins
 are first used to shrink the shape, and then the "shell" is applied, resulting in

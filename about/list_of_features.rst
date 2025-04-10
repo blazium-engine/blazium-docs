@@ -23,16 +23,8 @@ Platforms
 - Windows (x86 and ARM, 64-bit and 32-bit).
 - macOS (x86 and ARM, 64-bit only).
 - Linux (x86 and ARM, 64-bit and 32-bit).
-
-   - Binaries are statically linked and can run on any distribution if compiled
-     on an old enough base distribution.
-   - Official binaries are compiled using the
-     `Godot Engine buildroot <https://github.com/godotengine/buildroot>`__,
-     allowing for binaries that work across common Linux distributions.
-
 - Android (editor support is experimental).
-- :ref:`Web browsers <doc_using_the_web_editor>`. Experimental in 4.0,
-  using Godot 3.x is recommended instead when targeting HTML5.
+- :ref:`Web browsers <doc_using_the_web_editor>`.
 
 **Runs exported projects:**
 
@@ -93,7 +85,7 @@ Editor
 Rendering
 ---------
 
-Godot 4 includes three renderers:
+Blaziu includes three renderers:
 
 - **Forward+**. The most advanced renderer, suited for desktop platforms only.
   Used by default on desktop platforms. This renderer uses **Vulkan**, **Direct3D 12**,
@@ -776,6 +768,6 @@ Miscellaneous
 
 .. seealso::
 
-    The `Godot proposals repository <https://github.com/godotengine/godot-proposals>`__
+    The `Blazium proposals <https://github.com/godotengine/godot-proposals>`__
     lists features that have been requested by the community and may be implemented
-    in future Godot releases.
+    in future Blazium releases.

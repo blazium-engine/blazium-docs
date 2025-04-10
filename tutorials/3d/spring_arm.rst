@@ -9,7 +9,7 @@ Introduction
 3D games will often have a third-person camera that follows and
 rotates around something such as a player character or a vehicle.
 
-In Godot, this can be done by setting a :ref:`Camera3D <class_Camera3D>` as a child of a node.
+In Blazium, this can be done by setting a :ref:`Camera3D <class_Camera3D>` as a child of a node.
 However, if you try this without any extra steps, you'll notice that the camera clips through geometry and hides the scene.
 
 This is where the :ref:`SpringArm3D <class_SpringArm3D>` node comes in.

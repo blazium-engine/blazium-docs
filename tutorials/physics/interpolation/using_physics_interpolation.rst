@@ -3,7 +3,7 @@
 Using physics interpolation
 ===========================
 
-How do we incorporate physics interpolation into a Godot game? Are there any
+How do we incorporate physics interpolation into a Blazium game? Are there any
 caveats?
 
 We have tried to make the system as easy to use as possible, and many existing
@@ -49,7 +49,7 @@ longer run on every rendered frame.
           incorrect, and you will get jitter. This jitter may not be visible on
           your machine, but it *will* occur for some players. For this reason,
           setting the transform of interpolated objects should be avoided outside
-          of the physics tick. Godot will attempt to produce warnings in the editor
+          of the physics tick. Blazium will attempt to produce warnings in the editor
           if this case is detected.
 
 .. tip:: This is only a *soft rule*. There are some occasions where you might want
@@ -61,7 +61,7 @@ longer run on every rendered frame.
 Ensure that all indirect movement happens during physics ticks
 --------------------------------------------------------------
 
-Consider that in Godot, nodes can be moved not just directly in your own scripts,
+Consider that in Blazium, nodes can be moved not just directly in your own scripts,
 but also by automatic methods such as tweening, animation, and navigation. All
 these methods should also have their timing set to operate on the physics tick
 rather than each frame ("idle"), **if** you are using them to move objects (*these
