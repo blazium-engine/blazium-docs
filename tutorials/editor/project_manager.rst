@@ -35,7 +35,7 @@ To create a new project:
 1. Click the **Create** button on the top-left of the window.
 2. Give the project a name, then open the file browser using the **Browse** button,
    and choose an empty folder on your computer to save the files. Alternatively,
-   you can enable **Create Folder** option to automatically createa new sub-folder
+   you can enable **Create Folder** option to automatically create a new sub-folder
    with the project name, following the directory naming convention set in the
    settings. An empty folder will show a green tick on the right.
 3. Select one of the renderers (this can also be changed later).
