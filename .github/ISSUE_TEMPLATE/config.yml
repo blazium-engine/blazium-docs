@@ -1,14 +1,14 @@
 blank_issues_enabled: false
 
 contact_links:
-  - name: Godot community channels
-    url: https://godotengine.org/community
+  - name: Blazium Discord Server
+    url: https://chat.blazium.app
     about: Please ask for technical support on one of the other community channels, not here.
 
-  - name: Godot proposals
-    url: https://github.com/godotengine/godot-proposals
-    about: Please submit engine feature proposals on the Godot proposals repository, not here.
+  - name: Blazium proposals
+    url: https://github.com/blazium-engine/blazium/issues
+    about: Please submit engine feature proposals on the Blazium engine repository, not here.
 
-  - name: Main Godot repository
+  - name: Main Blazium repository
     url: https://github.com/blazium-engine/blazium
-    about: Report engine bugs on the main Godot repository
+    about: Report engine bugs on the main Blazium repository

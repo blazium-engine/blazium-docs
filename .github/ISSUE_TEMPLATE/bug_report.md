@@ -6,7 +6,7 @@ labels: ''
 assignees: ''
 ---
 
-**Your Godot version:**
+**Your Blazium version:**
 
 **Issue description:**
 

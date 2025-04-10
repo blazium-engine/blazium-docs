@@ -29,7 +29,7 @@ Logos and icons are generally under the same Creative Commons license. Note
 that some third-party libraries included with Blazium's source code may have
 different licenses.
 
-For full details, look at the `COPYRIGHT.txt <https://github.com/blazium-engine/blazium/blob/master/COPYRIGHT.txt>`_
+For full details, look at the `COPYRIGHT.txt <https://github.com/blazium-engine/blazium/blob/blazium-dev/COPYRIGHT.txt>`_
 as well as the `LICENSE.txt <https://github.com/blazium-engine/blazium/blob/blazium-dev/LICENSE.txt>`_
 and `LOGO_LICENSE.txt <https://github.com/blazium-engine/blazium/blob/blazium-dev/LOGO_LICENSE.txt>`_ files
 in the Blazium repository.
@@ -45,7 +45,7 @@ Which platforms are supported by Blazium?
 * macOS
 * Linux, \*BSD
 * Android (experimental)
-* `Web <https://editor-nightly.blazium.app/>`__ (experimental)
+* `Web <https://editor.blazium.app/>`__ (experimental)
 
 **For exporting your games:**
 
@@ -175,7 +175,7 @@ Which programming language is fastest?
 In most games, the *scripting language* itself is not the cause of performance
 problems. Instead, performance is slowed by inefficient algorithms (which are
 slow in all languages), by GPU performance, or by the common C++ engine code
-like physics or navigation. All languages supported by Godot are fast enough for
+like physics or navigation. All languages supported by Blazium are fast enough for
 general-purpose scripting. You should choose a language based on other factors,
 like ease-of-use, familiarity, platform support, or language features.
 
@@ -184,11 +184,11 @@ magnitude, and C++ is faster than both.
 
 Comparing GDScript performance to C# is tricky, since C# can be faster in some
 specific cases. The C# *language* itself tends to be faster than GDScript, which
-means that C# can be faster in situations with few calls to Godot engine code.
-However, C# can be slower than GDScript when making many Godot API calls, due
+means that C# can be faster in situations with few calls to Blazium engine code.
+However, C# can be slower than GDScript when making many Blazium API calls, due
 to the cost of *marshalling*. C#'s performance can also be brought down by garbage
 collection which occurs at random and unpredictable moments. This can result in
-stuttering issues in complex projects, and is not exclusive to Godot.
+stuttering issues in complex projects, and is not exclusive to Blazium.
 
 C++, using :ref:`GDExtension <doc_what_is_gdextension>`, will almost always be
 faster than either C# or GDScript. However, C++ is less easy to use than C# or

@@ -43,7 +43,7 @@ so long as it is drawing to the canvas, so for this tutorial we will use a Sprit
 as it is the easiest CanvasItem to start drawing with.
 
 In the Inspector, click beside "Texture" where it says "[empty]" and select
-"Load", then select "icon.svg". For new projects, this is the Godot icon. You
+"Load", then select "icon.svg". For new projects, this is the Blazium icon. You
 should now see the icon in the viewport.
 
 Next, look down in the Inspector, under the CanvasItem section, click beside

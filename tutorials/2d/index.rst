@@ -1,8 +1,8 @@
 :allow_comments: False
 
-Godot includes a dedicated 2D renderer and 2D physics engine, as well as
+Blazium includes a dedicated 2D renderer and 2D physics engine, as well as
 2D-specific features like tilemaps, particles, and animation systems. This
-section covers most 2D-specific topics in Godot.
+section covers most 2D-specific topics in Blazium.
 
 For 2D topics not covered in this section, see also :ref:`doc_2d_skeletons` and
 :ref:`doc_navigation_overview_2d`. For using physics in 2D, see

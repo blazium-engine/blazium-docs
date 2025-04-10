@@ -226,12 +226,12 @@ What are the criteria for compatibility across engine versions?
 
     This section is intended to be used by contributors to determine which
     changes are safe for a given release. The list is not exhaustive; it only
-    outlines the most common situations encountered during Godot's development.
+    outlines the most common situations encountered during Blazium's development.
 
 The following changes are acceptable in patch releases:
 
 - Fixing a bug in a way that has no major negative impact on most projects, such
-  as a visual or physics bug. Godot's physics engine is not deterministic, so
+  as a visual or physics bug. Blazium's physics engine is not deterministic, so
   physics bug fixes are not considered to break compatibility. If fixing a bug
   has a negative impact that could impact a lot of projects, it should be made
   optional (e.g. using a project setting or separate method).

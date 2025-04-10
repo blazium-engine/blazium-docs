@@ -1,7 +1,7 @@
 :allow_comments: False
 
-Godot file formats
-==================
+Blazium file formats
+====================
 
 .. toctree::
    :maxdepth: 1

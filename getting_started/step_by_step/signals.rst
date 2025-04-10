@@ -37,7 +37,7 @@ what you can do with the Signal type directly.
     observer pattern. You can learn more about it in
     `Game Programming Patterns <https://gameprogrammingpatterns.com/observer.html>`__.
 
-We will now use a signal to make our Godot icon from the previous lesson
+We will now use a signal to make our Blazium icon from the previous lesson
 (:ref:`doc_scripting_player_input`) move and stop by pressing a button.
 
 .. note:: For this project, we will be following the Blazium naming conventions.
@@ -519,7 +519,7 @@ names between parentheses:
 
 .. note::
 
-    The signal arguments show up in the editor's node dock, and Godot can use
+    The signal arguments show up in the editor's node dock, and Blazium can use
     them to generate callback functions for you. However, you can still emit any
     number of arguments when you emit signals. So it's up to you to emit the
     correct values.

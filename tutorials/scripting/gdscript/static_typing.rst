@@ -392,7 +392,7 @@ Warning system
     Detailed documentation about the GDScript warning system has been moved to
     :ref:`doc_gdscript_warning_system`.
 
-Godot gives you warnings about your code as you write it. The engine identifies
+Blazium gives you warnings about your code as you write it. The engine identifies
 sections of your code that may lead to issues at runtime, but lets you decide
 whether or not you want to leave the code as it is.
 

@@ -22,7 +22,7 @@ the ZIP archive then open the `GodotEngine.epub` file in an e-book reader applic
 
 ## Theming
 
-The Godot documentation uses the default `sphinx_rtd_theme` with many
+The Blazium documentation uses the default `sphinx_rtd_theme` with many
 [customizations](_static/) applied on top. It will automatically switch between
 the light and dark theme depending on your browser/OS' theming preference.
 
