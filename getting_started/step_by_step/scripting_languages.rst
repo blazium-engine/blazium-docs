@@ -115,7 +115,7 @@ should be aware of its garbage collector.
           can download it on the Godot website's `download
           <https://blazium.app/download/>`_ page.
 
-Since Blazium uses .NET 8, in theory, you can use any third-party .NET library or
+Since Blazium uses .NET 6, in theory, you can use any third-party .NET library or
 framework in Blazium, as well as any Common Language Infrastructure-compliant
 programming language, such as F#, Boo, or ClojureCLR. However, C# is the only
 officially supported .NET option.
