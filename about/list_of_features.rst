@@ -453,12 +453,14 @@ Scripting
 :ref:`C#: <doc_c_sharp>`
 
 - Packaged in a separate binary to keep file sizes and dependencies down.
-- Supports .NET 8 and higher.
+- Supports .NET 6 and higher.
 
-   - Full support for the C# 12.0 syntax and features.
+   - Full support for the C# 10.0 syntax and features.
 
-- Supports Windows, Linux, and macOS. Since Godot 4.2, experimental support for Android and iOS is also available.
+- Supports Windows, Linux, and macOS. As of 4.2 experimental support for Android
+  and iOS is also available (requires a .NET 7.0 project for Android and 8.0 for iOS).
 
+   - On the Android platform only some architectures are supported: ``arm64`` and ``x64``.
    - On the iOS platform only some architectures are supported: ``arm64``.
    - The web platform is currently unsupported. To use C# on that platform,
      consider Godot 3 instead.
