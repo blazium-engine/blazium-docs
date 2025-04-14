@@ -49,10 +49,10 @@ contribute, you should also read:
 Contributing changes
 --------------------
 
-**Pull requests should use the** ``master`` **branch by default.** Only make pull
+**Pull requests should use the** ``blazium-dev`` **branch by default.** Only make pull
 requests against other branches (e.g. ``3.6`` or ``4.2``) if your changes only
 apply to that specific version of Blazium. After a pull request is merged into
-``master``, it will usually be cherry-picked into the current stable branch by
+``blazium-dev``, it will usually be cherry-picked into the current stable branch by
 documentation maintainers.
 
 Though less convenient to edit than a wiki, this Git repository is where we
@@ -66,7 +66,7 @@ To edit an existing page, locate its ``.rst`` source file and open it in your
 favorite text editor. You can then commit the changes, push them to your fork,
 and make a pull request. **Note that the pages in** ``classes/`` **should not be
 edited here.** They are automatically generated from Blazium's `XML class
-reference <https://github.com/blazium-engine/blazium/tree/master/doc/classes>`__.
+reference <https://github.com/blazium-engine/blazium/tree/blazium-dev/doc/classes>`__.
 See :ref:`doc_updating_the_class_reference` for details.
 
 .. seealso:: To build the manual and test changes on your computer, see
@@ -83,7 +83,7 @@ and to log in to use it. Once logged in, you can propose change like so:
 
 1. Click the **Edit on GitHub** button.
 
-2. On the GitHub page you're taken to, make sure the current branch is "master".
+2. On the GitHub page you're taken to, make sure the current branch is "blazium-dev".
    Click the pencil icon in the top-right corner
    near the **Raw**, **Blame**, and **Delete** buttons.
    It has the tooltip "Fork this project and edit the file".
@@ -96,15 +96,15 @@ and to log in to use it. Once logged in, you can propose change like so:
    Click the button **Propose changes**.
 
 5. On the following screens, click the **Create pull request** button until you
-   see a message like *Username wants to merge 1 commit into blazium-engine:master
+   see a message like *Username wants to merge 1 commit into blazium-engine:blazium-dev
    from Username:patch-1*.
 
 .. note::
 
    If there are more commits than your own in the pull request
    it is likely that your branch was created using the wrong origin,
-   due to "master" not being the current branch in step 2.
-   You will need to rebase your branch to "master" or create a new branch.
+   due to "blazium-dev" not being the current branch in step 2.
+   You will need to rebase your branch to "blazium-dev" or create a new branch.
 
 Another contributor will review your changes and merge them into the docs if
 they're good. They may also make changes or ask you to do so before merging.

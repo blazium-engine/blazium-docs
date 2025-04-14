@@ -154,7 +154,7 @@ license text in the final product's documentation.
 
 Given the scope of the Blazium project, this is fairly difficult to do thoroughly.
 For the Blazium editor, the full documentation of third-party copyrights and
-licenses is provided in the `COPYRIGHT.txt <https://github.com/godotengine/godot/blob/master/COPYRIGHT.txt>`_
+licenses is provided in the `COPYRIGHT.txt <https://github.com/blazium-engine/blazium/blob/blazium-dev/COPYRIGHT.txt>`_
 file.
 
 A good option for end users to document third-party licenses is to include this

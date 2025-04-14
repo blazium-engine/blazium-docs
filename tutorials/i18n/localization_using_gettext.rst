@@ -235,7 +235,7 @@ never compiled in the MO file in the first place.
 Extracting localizable strings from GDScript files
 --------------------------------------------------
 
-The built-in `editor plugin <https://github.com/godotengine/godot/blob/master/modules/gdscript/editor/gdscript_translation_parser_plugin.h>`_
+The built-in `editor plugin <https://github.com/blazium-engine/blazium/blob/blazium-dev/modules/gdscript/editor/gdscript_translation_parser_plugin.h>`_
 recognizes a variety of patterns in source code to extract localizable strings
 from GDScript files, including but not limited to the following:
 

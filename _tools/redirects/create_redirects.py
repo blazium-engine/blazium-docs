@@ -18,7 +18,7 @@ Example:
 
 This would add all files that were renamed in latest from stable to redirects.csv,
 and then create the redirects on RTD accordingly.
-Make sure to use the old branch first, then the more recent branch (i.e., stable > master).
+Make sure to use the old branch first, then the more recent branch (i.e., stable > blazium-dev).
 You need to have both branches or revisions available and up to date locally.
 Care is taken to not add redirects that already exist on RTD.
 """

@@ -46,7 +46,7 @@ of C++ with little effort. Become a friend of Variant today.
 References
 ~~~~~~~~~~
 
--  `core/variant/variant.h <https://github.com/blazium-engine/blaziumg/blob/master/core/variant/variant.h>`__
+-  `core/variant/variant.h <https://github.com/blazium-engine/blaziumg/blob/blazium-dev/core/variant/variant.h>`__
 
 List of variant types
 ---------------------
@@ -150,5 +150,5 @@ it. A Mutex should be created to lock it if
 References
 ~~~~~~~~~~
 
--  `core/variant/dictionary.h <https://github.com/blazium-engine/blazium/blob/master/core/variant/dictionary.h>`__
--  `core/variant/array.h <https://github.com/blazium-engine/blazium/blob/master/core/variant/array.h>`__
+-  `core/variant/dictionary.h <https://github.com/blazium-engine/blazium/blob/blazium-dev/core/variant/dictionary.h>`__
+-  `core/variant/array.h <https://github.com/blazium-engine/blazium/blob/blazium-dev/core/variant/array.h>`__

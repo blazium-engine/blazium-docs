@@ -34,7 +34,7 @@ directly to wchar_t.
 References:
 ~~~~~~~~~~~
 
--  `core/typedefs.h <https://github.com/blazium-engine/blazium/blob/master/core/typedefs.h>`__
+-  `core/typedefs.h <https://github.com/blazium-engine/blazium/blob/blazium-dev/core/typedefs.h>`__
 
 Memory model
 ------------
@@ -131,7 +131,7 @@ fragmentation tend to be more important with small collections.
 References:
 ~~~~~~~~~~~
 
--  `core/os/memory.h <https://github.com/godotengine/godot/blob/master/core/os/memory.h>`__
+-  `core/os/memory.h <https://github.com/blazium-engine/blazium/blob/blazium-dev/core/os/memory.h>`__
 
 Containers
 ----------
@@ -164,10 +164,10 @@ The Vector<> class also has a few nice features:
 References:
 ~~~~~~~~~~~
 
--  `core/templates/vector.h <https://github.com/blazium-engine/blazium/blob/master/core/templates/vector.h>`__
--  `core/templates/list.h <https://github.com/blazium-engine/blazium/blob/master/core/templates/list.h>`__
--  `core/templates/set.h <https://github.com/blazium-engine/blazium/blob/master/core/templates/hash_set.h>`__
--  `core/templates/map.h <https://github.com/blazium-engine/blazium/blob/master/core/templates/hash_map.h>`__
+-  `core/templates/vector.h <https://github.com/blazium-engine/blazium/blob/blazium-dev/core/templates/vector.h>`__
+-  `core/templates/list.h <https://github.com/blazium-engine/blazium/blob/blazium-dev/core/templates/list.h>`__
+-  `core/templates/set.h <https://github.com/blazium-engine/blazium/blob/blazium-dev/core/templates/hash_set.h>`__
+-  `core/templates/map.h <https://github.com/blazium-engine/blazium/blob/blazium-dev/core/templates/hash_map.h>`__
 
 String
 ------
@@ -180,7 +180,7 @@ conversion and visualization.
 References:
 ~~~~~~~~~~~
 
--  `core/string/ustring.h <https://github.com/blazium-engine/blazium/blob/master/core/string/ustring.h>`__
+-  `core/string/ustring.h <https://github.com/blazium-engine/blazium/blob/blazium-dev/core/string/ustring.h>`__
 
 StringName
 ----------
@@ -196,7 +196,7 @@ is fast.
 References:
 ~~~~~~~~~~~
 
--  `core/string/string_name.h <https://github.com/blazium-engine/blazium/blob/master/core/string/string_name.h>`__
+-  `core/string/string_name.h <https://github.com/blazium-engine/blazium/blob/blazium-dev/core/string/string_name.h>`__
 
 Math types
 ----------
@@ -207,7 +207,7 @@ directory.
 References:
 ~~~~~~~~~~~
 
--  `core/math <https://github.com/blazium-engine/blazium/tree/master/core/math>`__
+-  `core/math <https://github.com/blazium-engine/blazium/tree/blazium-dev/core/math>`__
 
 NodePath
 --------
@@ -218,7 +218,7 @@ referencing them fast.
 References:
 ~~~~~~~~~~~
 
--  `core/string/node_path.h <https://github.com/blazium-engine/blazium/blob/master/core/string/node_path.h>`__
+-  `core/string/node_path.h <https://github.com/blazium-engine/blazium/blob/blazium-dev/core/string/node_path.h>`__
 
 RID
 ---
@@ -231,4 +231,4 @@ referenced data.
 References:
 ~~~~~~~~~~~
 
--  `core/templates/rid.h <https://github.com/blazium-engine/blazium/blob/master/core/templates/rid.h>`__
+-  `core/templates/rid.h <https://github.com/blazium-engine/blazium/blob/blazium-dev/core/templates/rid.h>`__

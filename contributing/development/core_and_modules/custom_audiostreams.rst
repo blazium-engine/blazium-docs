@@ -22,8 +22,8 @@ This guide assumes the reader knows how to create C++ modules. If not, refer to 
 References:
 ~~~~~~~~~~~
 
--  `servers/audio/audio_stream.h <https://github.com/blazium-engine/blazium/blob/master/servers/audio/audio_stream.h>`__
--  `scene/audio/audio_stream_player.cpp <https://github.com/blazium-engine/blazium/blob/master/scene/audio/audio_stream_player.cpp>`__
+-  `servers/audio/audio_stream.h <https://github.com/blazium-engine/blazium/blob/blazium-dev/servers/audio/audio_stream.h>`__
+-  `scene/audio/audio_stream_player.cpp <https://github.com/blazium-engine/blazium/blob/blazium-dev/scene/audio/audio_stream_player.cpp>`__
 
 What for?
 ---------
@@ -114,7 +114,7 @@ Therefore, playback state must be self-contained in AudioStreamPlayback.
 References:
 ~~~~~~~~~~~
 
--  `servers/audio/audio_stream.h <https://github.com/blazium-engine/blazium/blob/master/servers/audio/audio_stream.h>`__
+-  `servers/audio/audio_stream.h <https://github.com/blazium-engine/blazium/blob/blazium-dev/servers/audio/audio_stream.h>`__
 
 
 Create an AudioStreamPlayback
@@ -344,6 +344,6 @@ query AudioFrames and ``get_stream_sampling_rate`` to query current mix rate.
 
 References:
 ~~~~~~~~~~~
--  `core/math/audio_frame.h <https://github.com/blazium-engine/blazium/blob/master/core/math/audio_frame.h>`__
--  `servers/audio/audio_stream.h <https://github.com/blazium-engine/blazium/blob/master/servers/audio/audio_stream.h>`__
--  `scene/audio/audio_stream_player.cpp <https://github.com/blazium-engine/blazium/blob/master/scene/audio/audio_stream_player.cpp>`__
+-  `core/math/audio_frame.h <https://github.com/blazium-engine/blazium/blob/blazium-dev/core/math/audio_frame.h>`__
+-  `servers/audio/audio_stream.h <https://github.com/blazium-engine/blazium/blob/blazium-dev/servers/audio/audio_stream.h>`__
+-  `scene/audio/audio_stream_player.cpp <https://github.com/blazium-engine/blazium/blob/blazium-dev/scene/audio/audio_stream_player.cpp>`__

@@ -16,7 +16,7 @@ this same wrapper.
 
 Blazium will try to use the TLS certificate bundle provided by the operating system,
 but also includes the
-`TLS certificate bundle from Mozilla <https://github.com/godotengine/godot/blob/master/thirdparty/certs/ca-certificates.crt>`__
+`TLS certificate bundle from Mozilla <https://github.com/blazium-engine/blazium/blob/blazium-dev/thirdparty/certs/ca-certificates.crt>`__
 as a fallback.
 
 You can alternatively force your own certificate bundle in the Project Settings:

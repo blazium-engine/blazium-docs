@@ -26,7 +26,7 @@ To name a few:
 - See further down regarding header includes
 
 The rules used by clang-format are outlined in the
-`.clang-format <https://github.com/blazium-engine/blazium/blob/master/.clang-format>`__
+`.clang-format <https://github.com/blazium-engine/blazium/blob/blazium-dev/.clang-format>`__
 file of the Blazium repository.
 
 As long as you ensure that your style matches the surrounding code and that you're

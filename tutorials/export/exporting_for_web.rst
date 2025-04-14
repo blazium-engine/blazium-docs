@@ -402,7 +402,7 @@ supported on your web server for further file size savings.
 .. tip::
 
     The Godot repository includes a
-    `Python script to host a local web server <https://raw.githubusercontent.com/godotengine/godot/master/platform/web/serve.py>`__.
+    `Python script to host a local web server <https://raw.githubusercontent.com/blazium-engine/blazium/blazium-dev/platform/web/serve.py>`__.
     This script is intended for testing the web editor, but it can also be used to test exported projects.
 
     Save the linked script to a file called ``serve.py``, move this file to the

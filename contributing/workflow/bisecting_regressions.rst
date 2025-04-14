@@ -74,7 +74,7 @@ the "bad" and "good" build. "bad" refers to the build that exhibits the bug,
 whereas "good" refers to the version that doesn't exhibit the bug. 
 
 You can use either a commit hash (like ``06acfccf8``), the tag of a stable
-release (like ``4.2.1-stable``), or a branch like ``master``.
+release (like ``4.2.1-stable``), or a branch like ``blazium-dev``.
 
 If you're using a pre-release build as the "good" or "bad" build, you can find
 the commit hash in the Project Manager in the lower-right corner, or in in the
@@ -97,9 +97,9 @@ list of release tags is available `on GitHub
 <https://github.com/godotengine/godot/tags>`__, and you can also find the actual
 commit hash that corresponds to a stable release there.
 
-To refer to the latest state of the master branch, you can use ``master``
+To refer to the latest state of the blazium-dev branch, you can use ``blazium-dev``
 instead of a commit hash. Note that unlike tagged releases or snapshot commit
-hashes, ``master`` is a perpetually moving target.
+hashes, ``blazium-dev`` is a perpetually moving target.
 
 Build the engine
 ~~~~~~~~~~~~~~~~

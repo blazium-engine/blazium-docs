@@ -8,7 +8,7 @@ community. For resources, remember that there is the official
 `Godot Asset Library <https://godotengine.org/asset-library/asset>`_ full of
 official and community resources too!
 
-Think there is something missing here? Feel free to submit a `Pull Request <https://github.com/blazium-engine/blazium-docs/blob/master/community/tutorials.rst>`_ as always.
+Think there is something missing here? Feel free to submit a `Pull Request <https://github.com/blazium-engine/blazium-docs/blob/blazium-dev/community/tutorials.rst>`_ as always.
 
 Where to start
 --------------

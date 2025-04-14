@@ -181,11 +181,11 @@ The most important step is to build reStructuredText (``.rst``) files from your 
 .. code-block:: bash
 
     # You need a version.py file, so download it first.
-    curl -sSLO https://raw.githubusercontent.com/godotengine/godot/refs/heads/master/version.py
+    curl -sSLO https://raw.githubusercontent.com/blazium-engine/blazium/refs/heads/blazium-dev/version.py
 
     # Edit version.py according to your project before proceeding.
     # Then, run the rst generator. You'll need to have Python installed for this command to work.
-    curl -sSL https://raw.githubusercontent.com/godotengine/godot/master/doc/tools/make_rst.py | python3 - -o "docs/classes" -l "en" doc_classes
+    curl -sSL https://raw.githubusercontent.com/blazium-engine/blazium/blazium-dev/doc/tools/make_rst.py | python3 - -o "docs/classes" -l "en" doc_classes
 
 Your ``.rst`` files will now be available in ``docs/classes/``. From here, you can use
 any documentation builder that supports reStructuredText syntax to create a website from them.

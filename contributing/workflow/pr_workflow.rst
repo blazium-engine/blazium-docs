@@ -7,7 +7,7 @@ Pull request workflow
 
 The so-called "PR workflow" used by Blazium is common to many projects using
 Git, and should be familiar to veteran free software contributors. The idea
-is that only a small number (if any) commit directly to the *master* branch.
+is that only a small number (if any) commit directly to the *blazium-dev* branch.
 Instead, contributors *fork* the project (i.e. create a copy of it, which
 they can modify as they wish), and then use the GitHub interface to request
 a *pull* from one of their fork's branches to one branch of the original
@@ -17,7 +17,7 @@ The resulting *pull request* (PR) can then be reviewed by other contributors,
 which might approve it, reject it, or most often request that modifications
 be done. Once approved, the PR can then be merged by one of the core
 developers, and its commit(s) will become part of the target branch (usually
-the *master* branch).
+the *blazium-dev* branch).
 
 We will go together through an example to show the typical workflow and
 associated Git commands. But first, let's have a quick look at the
@@ -51,22 +51,22 @@ which quickly leads to PRs with an unreadable Git history (especially after peer
 
 The branches on the Git repository are organized as follows:
 
--  The ``master`` branch is where the development of the next major version
+-  The ``blazium-dev`` branch is where the development of the next major version
    occurs. As a development branch, it can be unstable
    and is not meant for use in production. This is where PRs should be done
    in priority.
 -  The stable branches are named after their version, e.g. ``3.1`` and ``2.1``.
-   They are used to backport bugfixes and enhancements from the ``master``
+   They are used to backport bugfixes and enhancements from the ``blazium-dev``
    branch to the currently maintained stable release (e.g. 3.1.2 or 2.1.6).
    As a rule of thumb, the last stable branch is maintained until the next
    minor version (e.g. the ``3.0`` branch was maintained until the release of
    Godot 3.1).
    If you want to make PRs against a maintained stable branch, please check
-   first if your changes are also relevant for the ``master`` branch, and if so
-   make the PR for the ``master`` branch in priority. Release managers can then
+   first if your changes are also relevant for the ``blazium-dev`` branch, and if so
+   make the PR for the ``blazium-dev`` branch in priority. Release managers can then
    cherry-pick the fix to a stable branch if relevant.
 -  There might occasionally be feature branches, usually meant to be merged into
-   the ``master`` branch at some time.
+   the ``blazium-dev`` branch at some time.
 
 Forking and cloning
 -------------------
@@ -114,7 +114,7 @@ We will start by setting up a reference to the original repository that we forke
 
 This will create a reference named ``upstream`` pointing to the original
 ``blazium-engine/blazium`` repository. This will be useful when you want to pull new
-commits from its ``master`` branch to update your fork. You have another
+commits from its ``blazium-dev`` branch to update your fork. You have another
 remote reference named ``origin``, which points to your fork (``USERNAME/blazium``).
 
 You only need to do the above steps once, as long as you keep that local
@@ -139,13 +139,13 @@ file.
 Branching
 ---------
 
-By default, the ``git clone`` should have put you on the ``master`` branch of
+By default, the ``git clone`` should have put you on the ``blazium-dev`` branch of
 your fork (``origin``). To start your own feature development, we will create
 a feature branch:
 
 ::
 
-    # Create the branch based on the current branch (master)
+    # Create the branch based on the current branch (blazium-dev)
     git branch better-project-manager
 
     # Change the current branch to the new one
@@ -158,11 +158,11 @@ This command is equivalent:
     # Change the current branch to a new named one, based on the current branch
     git checkout -b better-project-manager
 
-If you want to go back to the ``master`` branch, you'd use:
+If you want to go back to the ``blazium-dev`` branch, you'd use:
 
 ::
 
-    git checkout master
+    git checkout blazium-dev
 
 You can see which branch you are currently on with the ``git branch``
 command:
@@ -172,37 +172,37 @@ command:
     git branch
       2.1
     * better-project-manager
-      master
+      blazium-dev
 
-Be sure to always go back to the ``master`` branch before creating a new branch,
+Be sure to always go back to the ``blazium-dev`` branch before creating a new branch,
 as your current branch will be used as the base for the new one. Alternatively,
 you can specify a custom base branch after the new branch's name:
 
 ::
 
-    git checkout -b my-new-feature master
+    git checkout -b my-new-feature blazium-dev
 
 Updating your branch
 --------------------
 
 This would not be needed the first time (just after you forked the upstream
 repository). However, the next time you want to work on something, you will
-notice that your fork's ``master`` is several commits behind the upstream
-``master`` branch: pull requests from other contributors would have been merged
+notice that your fork's ``blazium-dev`` is several commits behind the upstream
+``blazium-dev`` branch: pull requests from other contributors would have been merged
 in the meantime.
 
 To ensure there won't be conflicts between the feature you develop and the
-current upstream ``master`` branch, you will have to update your branch by
+current upstream ``blazium-dev`` branch, you will have to update your branch by
 *pulling* the upstream branch.
 
 ::
 
-    git pull --rebase upstream master
+    git pull --rebase upstream blazium-dev
 
 The ``--rebase`` argument will ensure that any local changes that you committed
 will be re-applied *on top* of the pulled branch, which is usually what we want
 in our PR workflow. This way, when you open a pull request, your own commits will
-be the only difference with the upstream ``master`` branch.
+be the only difference with the upstream ``blazium-dev`` branch.
 
 While rebasing, conflicts may arise if your commits modified code that has been
 changed in the upstream branch in the meantime. If that happens, Git will stop at
@@ -238,7 +238,7 @@ section <doc_pr_workflow_rebase>` for instructions.
 
 .. tip:: If at any time you want to *reset* a local branch to a given commit or branch,
          you can do so with ``git reset --hard <commit ID>`` or
-         ``git reset --hard <remote>/<branch>`` (e.g. ``git reset --hard upstream/master``).
+         ``git reset --hard <remote>/<branch>`` (e.g. ``git reset --hard upstream/blazium-dev``).
 
          Be warned that this will remove any changes that you might have committed in
          this branch. If you ever lose commits by mistake, use the ``git reflog`` command
@@ -321,7 +321,7 @@ Here's how the shell history could look like on our example:
     git log
 
 With this, we should have two new commits in our ``better-project-manager``
-branch which were not in the ``master`` branch. They are still only local
+branch which were not in the ``blazium-dev`` branch. They are still only local
 though, the remote fork does not know about them, nor does the upstream repo.
 
 Pushing changes to a remote
@@ -359,9 +359,9 @@ Issuing a pull request
 ----------------------
 
 When you load your fork's branch on GitHub, you should see a line saying
-*"This branch is 2 commits ahead of blazium-engine:master."* (and potentially some
-commits behind, if your ``master`` branch was out of sync with the upstream
-``master`` branch).
+*"This branch is 2 commits ahead of blazium-engine:blazium-dev."* (and potentially some
+commits behind, if your ``blazium-dev`` branch was out of sync with the upstream
+``blazium-dev`` branch).
 
 .. image:: img/github_fork_make_pr.png
 
@@ -453,25 +453,25 @@ the so-called ``HEAD``.
 
 While you can give any commit ID to ``git rebase -i`` and review everything in
 between, the most common and convenient workflow involves rebasing on the
-upstream ``master`` branch, which you can do with:
+upstream ``blazium-dev`` branch, which you can do with:
 
 ::
 
-    git rebase -i upstream/master
+    git rebase -i upstream/blazium-dev
 
 .. note:: Referencing branches in Git is a bit tricky due to the distinction
-          between remote and local branches. Here, ``upstream/master`` (with a
+          between remote and local branches. Here, ``upstream/blazium-dev`` (with a
           `/`) is a local branch which has been pulled from the ``upstream``
-          remote's ``master`` branch.
+          remote's ``blazium-dev`` branch.
 
           Interactive rebases can only be done on local branches, so the `/`
           is important here. As the upstream remote changes frequently, your
-          local ``upstream/master`` branch may become outdated, so you can
-          update it with ``git fetch upstream master``. Contrarily to
-          ``git pull --rebase upstream master`` which would update your
+          local ``upstream/blazium-dev`` branch may become outdated, so you can
+          update it with ``git fetch upstream blazium-dev``. Contrarily to
+          ``git pull --rebase upstream blazium-dev`` which would update your
           currently checked out branch, ``fetch`` will only update the
-          ``upstream/master`` reference (which is distinct from your local
-          ``master`` branch... yes it's confusing, but you'll become familiar
+          ``upstream/blazium-dev`` reference (which is distinct from your local
+          ``blazium-dev`` branch... yes it's confusing, but you'll become familiar
           with this little by little).
 
 This will open a text editor (``vi`` by default, see
@@ -532,18 +532,18 @@ Rebasing onto another branch
 
 If you have accidentally opened your PR on the wrong branch, or need to target another branch
 for some reason, you might need to filter out a lot of commits that differ between the old branch
-(for example ``4.2``) and the new branch (for example ``master``). This can make rebasing difficult
+(for example ``4.2``) and the new branch (for example ``blazium-dev``). This can make rebasing difficult
 and tedious. Fortunately ``git`` has a command just for this situation, ``git rebase --onto``.
 
-If your PR was created from the ``4.2`` branch and you want to update it to instead start at ``master``
+If your PR was created from the ``4.2`` branch and you want to update it to instead start at ``blazium-dev``
 the following steps *should* fix this in one step:
 
 .. code-block:: text
 
-    git rebase -i --onto master 4.2
+    git rebase -i --onto blazium-dev 4.2
 
-This will take all the commits on your branch *after* the ``4.2`` branch, and then splice them on top of ``master``,
-ignoring any commits from the ``4.2`` branch not on the ``master`` branch. You may still need to do some fixing, but
+This will take all the commits on your branch *after* the ``4.2`` branch, and then splice them on top of ``blazium-dev``,
+ignoring any commits from the ``4.2`` branch not on the ``blazium-dev`` branch. You may still need to do some fixing, but
 this command should save you a lot of tedious work removing commits.
 
 Just like above for the interactive rebase you need to force push your branch to handle the different changes:

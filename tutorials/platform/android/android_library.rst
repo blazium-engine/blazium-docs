@@ -113,8 +113,8 @@ Below we break-down the steps used to create the GLTF Viewer app.
 
 - Create / update the application's Activity that will be hosting the Blazium Engine instance. For the sample app, this is `MainActivity <https://github.com/m4gr3d/Godot-Android-Samples/blob/master/apps/gltf_viewer/src/main/java/fhuyakou/godot/app/android/gltfviewer/MainActivity.kt>`_
 
-  - The host Activity should implement the `GodotHost interface <https://github.com/godotengine/godot/blob/master/platform/android/java/lib/src/org/godotengine/godot/GodotHost.java>`_
-  - The sample app uses `Fragments <https://developer.android.com/guide/fragments>`_ to organize its UI, so it uses `GodotFragment <https://github.com/godotengine/godot/blob/master/platform/android/java/lib/src/org/godotengine/godot/GodotFragment.java>`_, a fragment component provided by the Blazium Android library to automatically host and manage the Blazium Engine instance.
+  - The host Activity should implement the `GodotHost interface <https://github.com/blazium-engine/blazium/blob/blazium-dev/platform/android/java/lib/src/org/godotengine/godot/GodotHost.java>`_
+  - The sample app uses `Fragments <https://developer.android.com/guide/fragments>`_ to organize its UI, so it uses `GodotFragment <https://github.com/blazium-engine/blazium/blob/blazium-dev/platform/android/java/lib/src/org/godotengine/godot/GodotFragment.java>`_, a fragment component provided by the Blazium Android library to automatically host and manage the Blazium Engine instance.
 
   .. code-block:: kotlin
 
@@ -139,9 +139,9 @@ Below we break-down the steps used to create the GLTF Viewer app.
 
 .. note::
 
-  The Godot Android library also provide `GodotActivity <https://github.com/godotengine/godot/blob/master/platform/android/java/lib/src/org/godotengine/godot/GodotActivity.kt>`_, an Activity component that can be extended to automatically host and manage the Godot Engine instance.
+  The Godot Android library also provide `GodotActivity <https://github.com/blazium-engine/blazium/blob/blazium-dev/platform/android/java/lib/src/org/godotengine/godot/GodotActivity.kt>`_, an Activity component that can be extended to automatically host and manage the Godot Engine instance.
 
-  Alternatively, applications can directly create a `Godot <https://github.com/godotengine/godot/blob/master/platform/android/java/lib/src/org/godotengine/godot/Godot.kt>`_ instance, host and manage it themselves.
+  Alternatively, applications can directly create a `Godot <https://github.com/blazium-engine/blazium/blob/blazium-dev/platform/android/java/lib/src/org/godotengine/godot/Godot.kt>`_ instance, host and manage it themselves.
 
 - Using `GodotHost#getHostPlugins(...) <https://github.com/m4gr3d/Godot-Android-Samples/blob/0e3440f357f8be5b4c63a4fe75766793199a99d0/apps/gltf_viewer/src/main/java/fhuyakou/godot/app/android/gltfviewer/MainActivity.kt#L55>`_, the sample app creates a `runtime GodotPlugin instance <https://github.com/m4gr3d/Godot-Android-Samples/blob/master/apps/gltf_viewer/src/main/java/fhuyakou/godot/app/android/gltfviewer/AppPlugin.kt>`_ that's used to send :ref:`signals <doc_signals>` to the ``gdscript`` logic
 

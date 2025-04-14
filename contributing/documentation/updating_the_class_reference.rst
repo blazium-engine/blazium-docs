@@ -34,7 +34,7 @@ is picked as the source of truth, and the documentation for the class reference 
 
 In the main repository the class reference is stored in XML files, one for each exposed
 class or global object. The majority of these files is located in `doc/classes/
-<https://github.com/blazium-engine/blazium/tree/master/doc/classes>`_, but some modules
+<https://github.com/blazium-engine/blazium/tree/blazium-dev/doc/classes>`_, but some modules
 contain their own documentation as well. You will find it in the ``modules/<module_name>/doc_classes/``
 directory. To learn more about editing XML files refer to :ref:`doc_class_reference_primer`.
 

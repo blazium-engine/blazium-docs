@@ -291,7 +291,7 @@ RenderingDevice presents a similar level of abstraction as WebGPU.
 
 **Metal RenderingDevice implementation:**
 
-- `drivers/metal/rendering_device_driver_metal.mm <https://github.com/godotengine/godot/blob/master/drivers/metal/rendering_device_driver_metal.mm>`__
+- `drivers/metal/rendering_device_driver_metal.mm <https://github.com/blazium-engine/blazium/blob/blazium-dev/drivers/metal/rendering_device_driver_metal.mm>`__
 
 Core rendering classes architecture
 -----------------------------------
