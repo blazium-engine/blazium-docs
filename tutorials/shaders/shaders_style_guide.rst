@@ -11,7 +11,7 @@ auto-formatting tools.
 Since the Blazium shader language is close to C-style languages and GLSL, this
 guide is inspired by Blazium's own GLSL formatting. You can view examples of
 GLSL files in Blazium's source code
-`here <https://github.com/blazium-engine/blazium/blob/master/drivers/gles3/shaders/>`__.
+`here <https://github.com/blazium-engine/blazium/tree/blazium-dev/drivers/gles3/shaders>`__.
 
 Style guides aren't meant as hard rulebooks. At times, you may not be able to
 apply some of the guidelines below. When that happens, use your best judgment,

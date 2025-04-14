@@ -68,7 +68,7 @@ and MSVC compilers:
 Linking becomes much slower and more RAM-consuming with this option,
 so it should be used only for release builds:
 
-- When compiling the ``master`` branch, you need to have at least 8 GB of RAM
+- When compiling the ``blazium-dev`` branch, you need to have at least 8 GB of RAM
   available for successful linking with LTO enabled.
 - When compiling the ``3.x`` branch, you need to have at least 6 GB of RAM
   available for successful linking with LTO enabled.

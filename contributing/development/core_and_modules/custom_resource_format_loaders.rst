@@ -18,7 +18,7 @@ References
 ~~~~~~~~~~
 
 - :ref:`ResourceLoader<class_resourceloader>`
-- `core/io/resource_loader.cpp <https://github.com/blazium-engine/blazium/blob/master/core/io/resource_loader.cpp>`_
+- `core/io/resource_loader.cpp <https://github.com/blazium-engine/blazium/blob/blazium-dev/core/io/resource_loader.cpp>`_
 
 What for?
 ---------
@@ -38,7 +38,7 @@ ImageFormatLoader should be used to load images.
 References
 ~~~~~~~~~~
 
-- `core/io/image_loader.h <https://github.com/blazium-engine/blazium/blob/master/core/io/image_loader.h>`_
+- `core/io/image_loader.h <https://github.com/blazium-engine/blazium/blob/blazium-dev/core/io/image_loader.h>`_
 
 
 Creating a ResourceFormatLoader
@@ -298,7 +298,7 @@ References
 
 - `istream <https://cplusplus.com/reference/istream/istream/>`_
 - `streambuf <https://cplusplus.com/reference/streambuf/streambuf/?kw=streambuf>`_
-- `core/io/file_access.h <https://github.com/blazium-engine/blazium/blob/master/core/io/file_access.h>`_
+- `core/io/file_access.h <https://github.com/blazium-engine/blazium/blob/blazium-dev/core/io/file_access.h>`_
 
 Registering the new file format
 -------------------------------
@@ -347,7 +347,7 @@ when ``load`` is called.
 References
 ~~~~~~~~~~
 
-- `core/io/resource_loader.cpp <https://github.com/blazium-engine/blazium/blob/master/core/io/resource_loader.cpp>`_
+- `core/io/resource_loader.cpp <https://github.com/blazium-engine/blazium/blob/blazium-dev/core/io/resource_loader.cpp>`_
 
 Loading it on GDScript
 ----------------------

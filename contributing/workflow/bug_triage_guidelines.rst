@@ -45,7 +45,7 @@ currently defined in the Blazium repository:
    compatibility with existing projects.
 -  *Bug*: describes something that is not working properly.
 -  *Cherrypick*: describes something that can be backported to a stable branch
-   after being merged in the ``master`` branch.
+   after being merged in the ``blazium-dev`` branch.
 -  *Confirmed*: has been confirmed by at least one other contributor
    than the bug reporter (typically for *Bug* reports).
    The purpose of this label is to let developers know which issues are
@@ -166,7 +166,7 @@ use the following `labels <https://github.com/blazium-engine/blaizum-docs/labels
 -  *Bug*: Incorrect information in an existing page. Not to be used for
    *missing* information.
 -  *Cherrypick*: describes something that can be backported to a stable branch
-   after being merged in the ``master`` branch.
+   after being merged in the ``blazium-dev`` branch.
 -  *Dependencies*: describes pull requests that update a dependency file.
 -  *Discussion*: the issue is not consensual and needs further
    discussion to define what exactly should be done to address the

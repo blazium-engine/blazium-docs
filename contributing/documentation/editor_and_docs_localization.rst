@@ -263,11 +263,11 @@ external links, etc. Here are some examples::
     `Have a look here <https://docs.blazium.app>`_.
 
     # "|supported|" is an inline reference to an image and should stay unchanged.
-    # "master" uses the markup for inline code, and will be styled as such.
+    # "blazium-dev" uses the markup for inline code, and will be styled as such.
     # Note: Inline code in RST uses 2 backticks on each side, unlike Markdown.
     # Single backticks are used for hyperlinks.
 
-    |supported| Backwards-compatible new features (backported from the ``master``
+    |supported| Backwards-compatible new features (backported from the ``blazium-dev``
     branch) as well as bug, security, and platform support fixes.
 
     # The :ref: Sphinx "role" is used for internal references to other pages of
@@ -359,11 +359,11 @@ can use the downloaded PO file and :ref:`compile Blazium from source <toc-devel-
 
 Rename the editor translation PO file to ``<lang>.po`` (e.g. ``eo.po`` for
 Esperanto) and place it in the ``editor/translations/`` folder
-(`GitHub <https://github.com/blazium-engine/blazium/tree/master/editor/translations>`__).
+(`GitHub <https://github.com/blazium-engine/blazium/tree/blazium-dev/editor/translations>`__).
 
 You can also test class reference changes the same way by renaming the PO file
 similarly and placing it in the ``doc/translations/`` folder
-(`GitHub <https://github.com/blazium-engine/blazium/tree/master/doc/translations>`__).
+(`GitHub <https://github.com/blazium-engine/blazium/tree/blazium-dev/doc/translations>`__).
 
 Localizing documentation images
 -------------------------------

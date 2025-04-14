@@ -183,12 +183,12 @@ the last commit (``sed`` is used to put them on the same line).
 
     make html FILELIST="$(git diff HEAD --name-only | sed -z 's/\n/ /g')"
 
-You can replace ``HEAD`` with ``master`` to return all files changed from the
-``master`` branch:
+You can replace ``HEAD`` with ``blazium-dev`` to return all files changed from the
+``blazium-dev`` branch:
 
 .. code:: sh
 
-    make html FILELIST="$(git diff master --name-only | sed -z 's/\n/ /g')"
+    make html FILELIST="$(git diff blazium-dev --name-only | sed -z 's/\n/ /g')"
 
 If any images were modified, the output will contain some warnings about them,
 but the build will proceed correctly.

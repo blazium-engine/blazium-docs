@@ -826,7 +826,7 @@ See this image for a list of color constants:
 
 .. image:: /img/color_constants.png
 
-`View at full size <https://raw.githubusercontent.com/godotengine/godot-docs/master/img/color_constants.png>`__
+`View at full size <https://raw.githubusercontent.com/blazium-engine/blazium-docs/blazium-dev/img/color_constants.png>`__
 
 .. _doc_bbcode_in_richtextlabel_hex_colors:
 

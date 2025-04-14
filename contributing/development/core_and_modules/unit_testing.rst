@@ -142,7 +142,7 @@ writing test cases themselves.
 
 .. seealso::
 
-    `tests/test_macros.h <https://github.com/blazium-engine/blazium/blob/master/tests/test_macros.h>`_
+    `tests/test_macros.h <https://github.com/blazium-engine/blazium/blob/blazium-dev/tests/test_macros.h>`_
     source code for currently implemented macros and aliases for them.
 
 Test cases are created using ``TEST_CASE`` function-like macro. Each test case

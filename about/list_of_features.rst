@@ -749,7 +749,7 @@ Miscellaneous
 - :ref:`Command line interface <doc_command_line_tutorial>` for automation.
 
    - Export and deploy projects using continuous integration platforms.
-   - `Shell completion scripts <https://github.com/godotengine/godot/tree/master/misc/dist/shell>`__
+   - `Shell completion scripts <https://github.com/blazium-engine/blazium/tree/blazium-dev/misc/dist/shell>`__
      are available for Bash, zsh and fish.
    - Print colored text to standard output on all platforms using
      :ref:`print_rich <class_@GlobalScope_method_print_rich>`.
