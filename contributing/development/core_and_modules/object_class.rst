@@ -35,7 +35,7 @@ This adds a lot of functionality to Objects. For example:
 References:
 ~~~~~~~~~~~
 
--  `core/object/object.h <https://github.com/blazium-engine/blazium/blob/master/core/object/object.h>`__
+-  `core/object/object.h <https://github.com/blazium-engine/blazium/blob/blazium-dev/core/object/object.h>`__
 
 Registering an Object
 ---------------------
@@ -97,7 +97,7 @@ string passing the name can be passed for brevity.
 References:
 ~~~~~~~~~~~
 
--  `core/object/class_db.h <https://github.com/blazium-engine/blazium/blob/master/core/object/class_db.h>`__
+-  `core/object/class_db.h <https://github.com/blazium-engine/blazium/blob/blazium-dev/core/object/class_db.h>`__
 
 Constants
 ---------
@@ -269,7 +269,7 @@ templates point to it.
 References:
 ~~~~~~~~~~~
 
--  `core/object/reference.h <https://github.com/blazium-engine/blazium/blob/master/core/object/ref_counted.h>`__
+-  `core/object/reference.h <https://github.com/blazium-engine/blazium/blob/blazium-dev/core/object/ref_counted.h>`__
 
 Resources
 ----------
@@ -285,7 +285,7 @@ Resources without a path are fine too.
 References:
 ~~~~~~~~~~~
 
--  `core/io/resource.h <https://github.com/blazium-engine/blazium/blob/master/core/io/resource.h>`__
+-  `core/io/resource.h <https://github.com/blazium-engine/blazium/blob/blazium-dev/core/io/resource.h>`__
 
 Resource loading
 ----------------
@@ -306,7 +306,7 @@ the same time.
 References:
 ~~~~~~~~~~~
 
--  `core/io/resource_loader.h <https://github.com/blazium-engine/blazium/blob/master/core/io/resource_loader.h>`__
+-  `core/io/resource_loader.h <https://github.com/blazium-engine/blazium/blob/blazium-dev/core/io/resource_loader.h>`__
 
 Resource saving
 ---------------
@@ -325,4 +325,4 @@ be bundled with the saved resource and assigned sub-IDs, like
 References:
 ~~~~~~~~~~~
 
--  `core/io/resource_saver.h <https://github.com/blazium-engine/blazium/blob/master/core/io/resource_saver.h>`__
+-  `core/io/resource_saver.h <https://github.com/blazium-engine/blazium/blob/blazium-dev/core/io/resource_saver.h>`__

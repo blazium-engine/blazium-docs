@@ -72,7 +72,7 @@ originally published by Khronos Group under the
 `Open Publication License <https://opencontent.org/openpub>`__.
 Each function description links to the corresponding official OpenGL
 documentation. Modification history for this page can be found on
-`GitHub <https://github.com/godotengine/godot-docs/blob/master/tutorials/shaders/shader_reference/shader_functions.rst>`__.
+`GitHub <https://github.com/blazium-engine/blazium-docs/blob/blazium-dev/tutorials/shaders/shader_reference/shader_functions.rst>`__.
 
 .. rst-class:: classref-section-separator
 

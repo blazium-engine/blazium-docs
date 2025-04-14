@@ -104,7 +104,7 @@ editor binary built with ``dev_build=yes``::
 
 .. note::
 
-    If you are building the ``master`` branch, you also need to include support
+    If you are building the ``blazium-dev`` branch, you also need to include support
     for the MoltenVK Vulkan portability library. By default, it will be linked
     statically from your installation of the Vulkan SDK for macOS.
     You can also choose to link it dynamically by passing ``use_volk=yes`` and

@@ -37,7 +37,7 @@ Technical contributions
   .. `List of teams <https://godotengine.org/teams/>`_
 
 - **Review Code Contributions**
-  All pull requests need to be thoroughly reviewed before they can be merged into the master branch.
+  All pull requests need to be thoroughly reviewed before they can be merged into the blazium-dev branch.
   Help us get a headstart by participating in the code review process.
 
   To get started, chose any `open pull request <https://github.com/blazium-engine/blazium/pulls>`_ and reference our **style guide**: :ref:`doc_pr_review_guidelines`

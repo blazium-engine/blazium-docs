@@ -327,7 +327,7 @@ out more broadly to ask for help reviewing. Consider asking:
 * **Make sure that the PR has no merge conflicts.**
 
   Contributors may need to rebase their changes on top of the relevant branch
-  (e.g. ``master`` or ``3.x``) and manually fix merge conflicts. Even if there
+  (e.g. ``blazium-dev`` or ``3.x``) and manually fix merge conflicts. Even if there
   are no merge conflicts, contributors may need to rebase especially old PRs as
   the GitHub conflict checker may not catch all conflicts, or the CI may have
   changed since it was originally run.
@@ -352,7 +352,7 @@ out more broadly to ask for help reviewing. Consider asking:
   maintainer you've probably written them enough times to know how to make one,
   but for a general template think about *"Fix <issue> in <part of codebase>"*.
   For a more detailed recommendation see the `contributing.md
-  <https://github.com/blazium-engine/blazium/blob/master/CONTRIBUTING.md#format-your-commit-messages-with-readability-in-mind>`_
+  <https://github.com/blazium-engine/blazium/blob/blazium-dev/CONTRIBUTING.md#format-your-commit-messages-with-readability-in-mind>`_
   page in the main Blazium repository.
 
 4. GitHub checklist
@@ -365,7 +365,7 @@ out more broadly to ask for help reviewing. Consider asking:
   backported to other branches. Be wary of people making PRs on the version they
   are using (e.g, ``3.3``) and guide them to make a change against a
   higher-order branch (e.g. ``3.x``). If the change is not applicable for the
-  ``master`` branch, the initial PR can be made against the current maintenance
+  ``blazium-dev`` branch, the initial PR can be made against the current maintenance
   branch, such as ``3.x``. It's okay for people to make multiple PRs for each
   target branch, especially if the changes cannot be easily backported.
   Cherry-picking is also an option, if possible. Use the appropriate labels if
@@ -398,7 +398,7 @@ out more broadly to ask for help reviewing. Consider asking:
 
   These link the PR and the referenced issue together and allow GitHub to
   auto-close the latter when you merge the changes. Note, that this only works
-  for the PRs that target the ``master`` branch. For others you need to pay
+  for the PRs that target the ``blazium-dev`` branch. For others you need to pay
   attention and close the related issues manually. Do it with *"Fixed by #..."*
   or *"Resolved by #..."* comment to clearly indicate the act for future
   contributors.
@@ -406,7 +406,7 @@ out more broadly to ask for help reviewing. Consider asking:
 * **For the issues that get closed by the PR add the closest
   relevant milestone.**
 
-  In other words, if the PR is targeting the ``master`` branch, but is then also
+  In other words, if the PR is targeting the ``blazium-dev`` branch, but is then also
   cherrypicked for ``3.x``, the next ``3.x`` release would be the appropriate
   milestone for the closed issue.
 

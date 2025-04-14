@@ -516,7 +516,7 @@ repositories, so you will have to install its binaries manually.
 Using system libraries for faster development
 ---------------------------------------------
 
-`Blazium bundles the source code of various third-party libraries. <https://github.com/blazium-engine/blazium/tree/master/thirdparty>`__
+`Blazium bundles the source code of various third-party libraries. <https://github.com/blazium-engine/blazium/tree/blazium-dev/thirdparty>`__
 You can choose to use system versions of third-party libraries instead.
 This makes the Blazium binary faster to link, as third-party libraries are
 dynamically linked. Therefore, they don't need to be statically linked
@@ -589,7 +589,7 @@ After installing all required packages, use the following command to build Blazi
     scons platform=linuxbsd builtin_embree=no builtin_enet=no builtin_freetype=no builtin_graphite=no builtin_harfbuzz=no builtin_libogg=no builtin_libpng=no builtin_libtheora=no builtin_libvorbis=no builtin_libwebp=no builtin_mbedtls=no builtin_miniupnpc=no builtin_pcre2=no builtin_zlib=no builtin_zstd=no
 
 On Debian stable, you will need to remove `builtin_embree=no` as the system-provided
-Embree version is too old to work with Blazium's latest `master` branch
+Embree version is too old to work with Blazium's latest `blazium-dev` branch
 (which requires Embree 4).
 
 You can view a list of all built-in libraries that have system alternatives by

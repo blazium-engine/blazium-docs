@@ -140,7 +140,7 @@ keywords are reserved words (tokens), they can't be used as identifiers.
 Operators (like ``in``, ``not``, ``and`` or ``or``) and names of built-in types
 as listed in the following sections are also reserved.
 
-Keywords are defined in the `GDScript tokenizer <https://github.com/blazium-engine/blazium/blob/master/modules/gdscript/gdscript_tokenizer.cpp>`_
+Keywords are defined in the `GDScript tokenizer <https://github.com/blazium-engine/blazium/blob/blazium-dev/modules/gdscript/gdscript_tokenizer.cpp>`_
 in case you want to take a look under the hood.
 
 +------------+---------------------------------------------------------------------------------------------------------------------------------------------------+

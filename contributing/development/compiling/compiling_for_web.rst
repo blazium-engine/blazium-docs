@@ -108,7 +108,7 @@ server requirements.
 .. tip::
 
     The Blazium repository includes a
-    `Python script to host a local web server <https://raw.githubusercontent.com/godotengine/godot/master/platform/web/serve.py>`__.
+    `Python script to host a local web server <https://raw.githubusercontent.com/blazium-engine/blazium/blazium-dev/platform/web/serve.py>`__.
     This can be used to test the web editor locally.
 
     After compiling the editor, extract the ZIP archive that was created in the
