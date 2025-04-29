@@ -246,7 +246,7 @@ repository.
 Roadmaps
 ~~~~~~~~~~
 
-We have a set of `Roadmaps <https://blazium.app/roadmaps>` showing what we have done and what we ahve planned.
+We have a set of `Roadmaps <https://blazium.app/roadmaps>` showing what we have done and what we have planned.
 .. `Milestones <https://github.com/godotengine/godot/milestones>`_ are used for
 .. some issues and all PRs.
 
