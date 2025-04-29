@@ -12,7 +12,7 @@ and (re)visit the :ref:`Scripting section <doc_scripting>` of the
 step-by-step tutorial.
 
 C# is a high-level programming language developed by Microsoft. In Blazium,
-it is implemented with .NET 6.0.
+it is implemented with .NET 8.0.
 
 .. attention::
 
