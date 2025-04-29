@@ -36,6 +36,11 @@ Editor
 
 - :ref:`doc_using_the_xr_editor`
 
+Performance
+~~~~~~~~~~~
+
+- :ref:`doc_pipeline_compilations`
+
 Physics
 ~~~~~~~
 
