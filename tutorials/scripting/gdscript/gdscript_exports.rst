@@ -213,7 +213,7 @@ the `"radians_as_degrees"` hint:
 
 This performs automatic conversion when the value is displayed or modified in
 the inspector and also displays a degree (``°``) suffix. This approach is used
-by Godot's own `rotation` properties throughout the editor.
+by Blazium's own `rotation` properties throughout the editor.
 
 If the angle is stored in degrees instead, use the `"degrees"` hint to display
 the degree symbol while disabling the automatic degrees-to-radians conversion

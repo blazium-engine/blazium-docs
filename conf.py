@@ -195,7 +195,7 @@ html_context = {
     # that they are not reading the `stable` documentation.
     "godot_is_latest": False,
     "godot_version": "4.3.2",
-    "blazium_version": "0.4.90",
+    "blazium_version": "0.5.68",
     # Enables a banner that displays the up-to-date status of each article.
     "godot_show_article_status": True,
     # Display user-contributed notes at the bottom of pages that don't have `:allow_comments: False` at the top.
