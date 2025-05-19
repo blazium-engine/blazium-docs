@@ -18,7 +18,7 @@ jobs:
       fail-fast: false
       matrix:
         branch:
-          - 4.3
+          - blazium-dev
     permissions:
       contents: write
     steps:
